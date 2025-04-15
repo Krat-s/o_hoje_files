@@ -3,7 +3,7 @@ import time
 import pyautogui as pg
 import csv
 
-pg.PAUSE = 0.5
+pg.PAUSE = 0.3
 pg.FAILSAFE = True
 
 time.sleep(1)
@@ -20,31 +20,35 @@ def gerar_edicoes(inicial, quantidade):
 
 # Lendo e-mails do CSV
 emails = []
-with open("emails.csv", newline="", encoding="utf-8") as arquivo:
+with open("emails_alterado.csv", newline="", encoding="utf-8") as arquivo:
     leitor = csv.reader(arquivo)
-    next(leitor, None)  # Ignorar cabeçalho, caso exista
     for linha in leitor:
-        emails.append(linha[1])  # Pegando apenas a coluna de e-mail
+        emails.append(linha[0])
+        time.sleep(0.2)  # Pegando apenas a coluna de e-mail
 
 # Exemplo de uso
-numero_inicial = 6710
-quantidade_semanal = 3
+numero_inicial = 6730 
+quantidade_semanal = 1
 
 edicoes_geradas = gerar_edicoes(numero_inicial, quantidade_semanal)
 
+pg.hotkey('win', '2')
+
 for edicao in edicoes_geradas:
     pg.press('c')  
-    time.sleep(1)  # Atalho para abrir menu de mensagem no Gmail
-    pg.hotkey('ctrl', 'shift', 'b')  # Atalho para abrir menu de contatos em sigilo
+    time.sleep(1.5)  # Atalho para abrir menu de mensagem no Gmail
+    pg.hotkey('ctrl', 'shift', 'b') # Atalho para abrir menu de contatos em sigilo
 
     # Adicionando os e-mails automaticamente
     for email in emails:
-        kb.write(email + "; ")  # Adiciona os e-mails separados por ponto e vírgula
-    pg.press('enter')
+        kb.write(email + "; ")
+        time.sleep(0.2)
+        pg.press('tab')
+        time.sleep(0.2)  # Adiciona os e-mails separados por ponto e vírgula
 
     # Adicionando a mensagem com a edição
+    time.sleep(0.5)
     pg.press('tab')  
-    time.sleep(0.3)
     kb.write(f"Segue PDF completo da edição {edicao} do jornal O Hoje")
-    pg.press('enter')
     pg.press('esc')
+    time.sleep(1)
