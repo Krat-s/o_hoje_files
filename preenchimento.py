@@ -22,7 +22,7 @@ def gerar_edicoes(inicial, quantidade):
 # Configuração inicial
 numero_inicial = 6727
 quantidade_semanal = 5
-quantidade_repeticoes = 2  # Número de repetições
+quantidade_repeticoes = 5  # Número de repetições
 
 pg.hotkey('ctrl', 'p')
 kb.write('emails_alterado.csv')
@@ -38,24 +38,31 @@ for _ in range(quantidade_repeticoes):
     edicoes_geradas = gerar_edicoes(numero_inicial, quantidade_semanal)
     
     for edicao in edicoes_geradas:
+        pg.press('esc')
         pg.press('c')  
-        time.sleep(1.5)  # Atalho para abrir menu de mensagem no Gmail
-        pg.hotkey('ctrl', 'shift', 'b')  # Atalho para abrir menu de contatos em sigilo
+        pg.hotkey('ctrl', 'shift', 'b')
         pg.hotkey('ctrl', 'v')
         pg.press('tab') 
-        time.sleep(0.5)
         kb.write(f"Segue PDF completo da edição {edicao} do jornal O Hoje")
         pg.press('esc')
-        time.sleep(1)
-        numero_inicial += quantidade_semanal
+        time.sleep(0.3)
+        pg.press('c')  
+        kb.write('graficaohoje@gmail.com, contasapagar@ohoje.com.br')
+        pg.press('esc')
+        pg.press('tab')
+        kb.write(f"Segue essência e classificados da {edicao} do jornal O Hoje")
+        pg.press('esc')
+        pg.press('c')  
+        kb.write('graficaohoje@gmail.com, contasapagar@ohoje.com.br')
+        pg.press('esc')
+        pg.press('tab')
+        kb.write(f"Segue resto da edição {edicao} do jornal O Hoje")
+        pg.press('esc')
+        print(f"rascunhos para a edição {edicao} criados com sucesso!")
+    numero_inicial += quantidade_semanal + 2
 
 
 # ----Backup
-#     import keyboard as kb
-# import time
-# import pyautogui as pg
-# import csv
-
 # pg.PAUSE = 0.3
 # pg.FAILSAFE = True
 
