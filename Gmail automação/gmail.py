@@ -1,26 +1,26 @@
-import keyboard as kb
 import time
+import keyboard as kb
 import pyautogui as pg
-from datetime import timedelta
+from Modulos.edicao_formatador import gerar_edicoes
 
+# ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.3
 pg.FAILSAFE = True
-
 time.sleep(1)
 
 largura, altura = pg.size()
 centro_x = largura / 2
 centro_y = altura / 2
 
-EDICAO_DE_INICIO = 6794
+edicao_inicial = 6794
+quantidade_por_semana = 5
+quantidade_repeticoes = 2
 
-quantidade_semanal = 5  # Número de edições por semana 5
-quantidade_repeticoes = 2  # quantidade de semanas que vai repetir o ciclo
-
-# ----------------------------------------------------- Functions
+# ---------------------------- FUNÇÕES DE AUTOMAÇÃO ----------------------------
 def take_emails():
+    """Captura os emails de um arquivo no VSCode"""
     pg.hotkey('win', 's')
-    pg.hotkey('win', '3') #verificar se é o app certo (VScode)
+    pg.hotkey('win', '3')  # Verificar se é o app certo (VSCode)
     pg.hotkey('ctrl', 'o')
     pg.write('ar')
     pg.press('down')
@@ -29,69 +29,64 @@ def take_emails():
     pg.press('down')
     pg.press('enter')
     time.sleep(0.5)
-    pg.click(y=centro_y, x=centro_x)
+    pg.click(x=centro_x, y=centro_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.5)
- 
-def Shortcut_send_emails():
+
+def shortcut_send_emails():
+    """Atalho para abrir campo de envio no Gmail"""
     pg.press('esc')
-    pg.press('c')  # Atalho para abrir menu de mensagem no Gmail
-    time.sleep(1.5)  
+    pg.press('c')  # Abrir menu de mensagem
+    time.sleep(1.5)
     pg.hotkey('ctrl', 'shift', 'b')
     time.sleep(0.5)
 
 def open_gmail():
+    """Atalho para abrir navegador no Gmail"""
     pg.hotkey('win', 's')
-    pg.hotkey('win', '2') #verificar se é o app e página certo (Navegador - Gmail)
+    pg.hotkey('win', '2')  # Verificar se é o navegador correto
     time.sleep(0.5)
 
-def gerar_edicoes(inicial, quantidade):
-    edicoes = []
-    for _ in range(quantidade_semanal):
-        edicoes.append(str(inicial))
-        inicial += 1
-    
-    edicoes.append(f"{int(inicial):,}-{int(inicial+1):,}".replace(',', '.'))
-    return edicoes
+def enviar_emails_para_leitores(edicao):
+    """Simula envio de emails com conteúdo da edição"""
+    open_gmail()
+    shortcut_send_emails()
+    pg.hotkey('ctrl', 'v')  # Cola emails
+    pg.press('tab')
+    kb.write(f"Segue PDF completo da edição {edicao} do jornal O Hoje")
+    pg.press('esc')
+    time.sleep(1)
 
-# take_emails()
-for _ in range(quantidade_repeticoes):
-    edicoes_geradas = gerar_edicoes(EDICAO_DE_INICIO, quantidade_semanal)
-    
-    for edicao in edicoes_geradas:
-        inical = int(edicao)
-        # open_gmail()
-        # pg.press('c')  # Cola os emails copiados
-        # Shortcut_send_emails()
-        # pg.hotkey('ctrl', 'v')  # Cola os emails copiados
-        # pg.press('tab')  
-        # kb.write(f"Segue PDF completo da edição {edicao} do jornal O Hoje")
-        # pg.press('esc')
-        # time.sleep(1)
+def enviar_para_grafica(edicao, parte):
+    """Simula envio para gráfica com parte específica da edição"""
+    pg.press('c')
+    shortcut_send_emails()
+    kb.write('contas')
+    pg.press('enter')
+    pg.write('grafica')
+    pg.press('enter')
+    time.sleep(0.3)
+    pg.press('tab')
+    kb.write(f"Segue {parte} da edição {edicao} do jornal O Hoje")
+    pg.press('esc')
+    time.sleep(1)
 
-        # # ----------------------------------------------------- Para a Gráfica
-        # pg.press('c')
-        # Shortcut_send_emails()
-        # kb.write('contas')
-        # pg.press('enter')
-        # pg.write('grafica')
-        # pg.press('enter')
-        # time.sleep(0.3)
-        # pg.press('tab')  
-        # kb.write(f"Segue essência e classificados da edição {edicao} do jornal O Hoje")
-        # pg.press('esc')
-        # time.sleep(1)
-        # Shortcut_send_emails()
-        # kb.write('contas')
-        # pg.press('enter')
-        # pg.write('grafica')
-        # pg.press('enter')
-        # time.sleep(0.3)
-        # pg.press('tab')  
-        # kb.write(f"Segue resto da edição {edicao} do jornal O Hoje")
-        # pg.press('esc')
-        # time.sleep(1)
-        print(edicao)
+# ---------------------------- ROTINA PRINCIPAL ----------------------------
+def main():
+    print("📦 Edições geradas:")
+    edicao = edicao_inicial
 
-    EDICAO_DE_INICIO += quantidade_semanal + 2
+    for _ in range(quantidade_repeticoes):
+        edicoes = gerar_edicoes(edicao, quantidade_por_semana)
+
+        for ed in edicoes:
+            print(f"→ {ed}")
+            enviar_emails_para_leitores(ed)
+            enviar_para_grafica(ed, "essência e classificados")
+            enviar_para_grafica(ed, "resto")
+
+        edicao += quantidade_por_semana + 2
+
+if __name__ == "__main__":
+    main()

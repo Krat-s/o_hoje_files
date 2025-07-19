@@ -47,6 +47,6 @@ if __name__ == "__main__":
     for _ in range(quantidade_repeticoes):
         edicoes = gerar_edicoes(edicao_inicial, edicoes_por_semana)
         for edicao in edicoes:
-            print(f"→ {edicao}")
+            print(f"teste: {edicao}")
 
         edicao_inicial += edicoes_por_semana + 2
