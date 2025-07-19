@@ -1,4 +1,4 @@
-from Modulos.__data_personalizada__ import formatar_data
+from Modulos.data_formatador import formatar_data
 import pyautogui as pg
 import locale
 from datetime import datetime, timedelta
