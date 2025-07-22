@@ -1,4 +1,5 @@
 from Modulos.data_formatador import formatar_data
+from Modulos.edicao_formatador import gerar_edicoes
 import pyautogui as pg
 import locale
 from datetime import datetime, timedelta
@@ -6,16 +7,27 @@ import keyboard as kb
 import time
 import os
 
-# ---------------------------- Configurações gerais
+# ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
+time.sleep(1)
+
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
+
 screen_width, screen_height = pg.size()
 center_x, center_y = screen_width / 2, screen_height / 2
 
+edicao_inicial = 6794
+quantidade_por_semana = 5
+quantidade_repeticoes = 2
+data_inicial = datetime(2025, 7, 21)
+
+data_da_edicao = data_inicial - timedelta(days=1)
+data_formatada = formatar_data(data_da_edicao)
+
 # ---------------------------- Constantes
 EDICAO_INICIAL = 6794
-DATA_INICIAL = datetime(2025, 7, 21)
+
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
 EDD_PADRAO = "0000 - TESTE"
@@ -96,74 +108,74 @@ def preencher_data():
 def aplicar_autodata(numero):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
-    nome_arquivo = f"{edicao.replace('.', '')} - {formatar_data(data_da_edicao, tipo='dia_semana')}"
-    kb.write(f"{CAMINHO_ADIANTO}\\{nome_arquivo}")
-    pg.press('enter')
-    pg.write(str(numero))
-    time.sleep(0.3)
-    pg.press('down')
-    time.sleep(0.3)
-    pg.press('enter')
-    time.sleep(TEMPO_ABERTURA)
-    preencher_data()
-    time.sleep(0.4)
-    pg.press('esc')
-    pg.hotkey('ctrl', 's')
+#     nome_arquivo = f"{ed.replace('.', '')} - {formatar_data(data_da_edicao, tipo='dia_semana')}"
+#     kb.write(f"{CAMINHO_ADIANTO}\\{nome_arquivo}")
+#     pg.press('enter')
+#     pg.write(str(numero))
+#     time.sleep(0.3)
+#     pg.press('down')
+#     time.sleep(0.3)
+#     pg.press('enter')
+#     time.sleep(TEMPO_ABERTURA)
+#     preencher_data()
+#     time.sleep(0.4)
+#     pg.press('esc')
+#     pg.hotkey('ctrl', 's')
 
-def fechar_pagina():
-    pg.hotkey('ctrl', 'f4')
-    time.sleep(TEMPO_FECHAMENTO)
+# def fechar_pagina():
+#     pg.hotkey('ctrl', 'f4')
+#     time.sleep(TEMPO_FECHAMENTO)
 
-def autodata_paginas():
-    for i in range(20, 1, -1):
-        if i == 17:
-            continue
-        aplicar_autodata(i)
-        fechar_pagina()
+# def autodata_paginas():
+#     for i in range(20, 1, -1):
+#         if i == 17:
+#             continue
+#         aplicar_autodata(i)
+#         fechar_pagina()
 
-def autodata_edicao_17():
-    aplicar_autodata(17)
-    selecionar_ferramenta("v")
-    pg.hotkey('ctrl', '0')
-    pg.click(x_edicao_17, y_edicao_17)
-    pg.hotkey('ctrl', 'a')
-    kb.write(f"Ano 21 - nº {edicao_formatada}")
-    time.sleep(0.2)
-    pg.hotkey('ctrl', 's')
-    time.sleep(0.2)
-    pg.press('esc', presses=3)
-    pg.hotkey('ctrl', 'f4')
-    time.sleep(TEMPO_FECHAMENTO)
+# def autodata_edicao_17():
+#     aplicar_autodata(17)
+#     selecionar_ferramenta("v")
+#     pg.hotkey('ctrl', '0')
+#     pg.click(x_edicao_17, y_edicao_17)
+#     pg.hotkey('ctrl', 'a')
+#     kb.write(f"Ano 21 - nº {edicao_formatada}")
+#     time.sleep(0.2)
+#     pg.hotkey('ctrl', 's')
+#     time.sleep(0.2)
+#     pg.press('esc', presses=3)
+#     pg.hotkey('ctrl', 'f4')
+#     time.sleep(TEMPO_FECHAMENTO)
 
-def autodata_edicao_1():
-    pg.press('esc', presses=3)
-    pg.hotkey('ctrl', 'o')
-    kb.write(f"{CAMINHO_ADIANTO}\\{EDD_PADRAO}")
-    pg.press('enter')
-    pg.write('1')
-    time.sleep(0.2)
-    pg.press('down')
-    time.sleep(0.2)
-    pg.press('enter')
-    time.sleep(TEMPO_ABERTURA + 3)
-    selecionar_ferramenta("v")
-    pg.click(x_edicao_capa, y_edicao_capa)
-    selecionar_ferramenta("t")
-    pg.press('t', presses=4)
-    time.sleep(0.3)
-    pg.press('Backspace', presses=5)
-    kb.write(f"nº {edicao_formatada}")
-    time.sleep(0.4)
-    pg.press('right')
-    time.sleep(0.4)
-    pg.press('del')
-    time.sleep(0.4)
-    kb.write(f" | {data_formatada} ")
+# def autodata_edicao_1():
+#     pg.press('esc', presses=3)
+#     pg.hotkey('ctrl', 'o')
+#     kb.write(f"{CAMINHO_ADIANTO}\\{EDD_PADRAO}")
+#     pg.press('enter')
+#     pg.write('1')
+#     time.sleep(0.2)
+#     pg.press('down')
+#     time.sleep(0.2)
+#     pg.press('enter')
+#     time.sleep(TEMPO_ABERTURA + 3)
+#     selecionar_ferramenta("v")
+#     pg.click(x_edicao_capa, y_edicao_capa)
+#     selecionar_ferramenta("t")
+#     pg.press('t', presses=4)
+#     time.sleep(0.3)
+#     pg.press('Backspace', presses=5)
+#     kb.write(f"nº {edicao_formatada}")
+#     time.sleep(0.4)
+#     pg.press('right')
+#     time.sleep(0.4)
+#     pg.press('del')
+#     time.sleep(0.4)
+#     kb.write(f" | {data_formatada} ")
 
-def cabeçalho():
-    autodata_paginas()
-    autodata_edicao_1()
-    autodata_edicao_17()
+# def cabeçalho():
+#     autodata_paginas()
+#     autodata_edicao_1()
+#     autodata_edicao_17()
 
 def abrir_pasta():
     os.startfile(CAMINHO_ADIANTO)
@@ -181,26 +193,27 @@ def voltar_pasta():
     time.sleep(0.5)
 
 # ---------------------------- Execução principal
-data_da_edicao = DATA_INICIAL - timedelta(days=1)
+
 
 # abrir_pasta()
+        
+        
+        # data_da_edicao += timedelta(days=1)
+        # data_da_edicao = ajustar_data(data_da_edicao)
 
-for _ in range(REPETICOES):
-    edicoes_geradas = gerar_edicoes(EDICAO_INICIAL, QTD_SEMANAL)
 
-    for edicao in edicoes_geradas:
-        EDD = edicao
-        data_da_edicao += timedelta(days=1)
-        data_da_edicao = ajustar_data(data_da_edicao)
-        data_formatada = formatar_data(data_da_edicao)
-        edicao_formatada = (
-            f"{int(edicao):,}".replace(",", ".")
-            if data_da_edicao.weekday() != 5 else edicao
-        )
 
+
+def main():
+    print("📦 Edições geradas:")
+    edicao = edicao_inicial
+    for _ in range(quantidade_repeticoes):
+        edicoes = gerar_edicoes(edicao, quantidade_por_semana)
+
+        for ed in edicoes:
+            print(f"→ {ed}")
         # nome_pasta = f"{edicao.replace('.', '')} - {formatar_data(data_da_edicao, tipo='dia_semana')}"
         # criar_pasta(nome_pasta)
-
         # modelo_path = {
         #     0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
         #     5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
@@ -227,8 +240,13 @@ for _ in range(REPETICOES):
         # Se quiser aplicar cabeçalho apenas nos dias úteis:
         # if data_da_edicao.weekday() < 5:
         #     cabeçalho()
-
-        print(edicao_formatada)
         # print(edicao_formatada.replace(".", ""))
+        edicao += quantidade_por_semana + 2
 
-    EDICAO_INICIAL += QTD_SEMANAL + 2
+# def main():
+#   
+
+
+
+# if __name__ == "__main__":
+#     main()
