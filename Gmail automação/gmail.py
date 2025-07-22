@@ -82,9 +82,9 @@ def main():
 
         for ed in edicoes:
             print(f"→ {ed}")
-            enviar_emails_para_leitores(ed)
-            enviar_para_grafica(ed, "essência e classificados")
-            enviar_para_grafica(ed, "resto")
+            # enviar_emails_para_leitores(ed)
+            # enviar_para_grafica(ed, "essência e classificados")
+            # enviar_para_grafica(ed, "resto")
 
         edicao += quantidade_por_semana + 2
 

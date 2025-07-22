@@ -41,7 +41,7 @@ def gerar_edicoes(inicial, quantidade_por_semana):
 if __name__ == "__main__":
     edicao_inicial = 6794
     edicoes_por_semana = 5
-    quantidade_repeticoes = 50
+    quantidade_repeticoes = 5
 
     print("📦 Edições geradas:")
     for _ in range(quantidade_repeticoes):
