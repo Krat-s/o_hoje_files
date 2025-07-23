@@ -21,10 +21,10 @@ center_y = screen_height / 2
 edicao_inicial = 6794
 quantidade_por_semana = 5
 quantidade_repeticoes = 2
-data_inicial = datetime(2025, 7, 21)
+data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
 
-data_da_edicao = data_inicial - timedelta(days=1)
-data_formatada = formatar_data(data_da_edicao)
+
+
 
 # ---------------------------- CONSTANTES ----------------------------
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
@@ -75,7 +75,7 @@ def copiar_modelo_para_pasta(edicao, data_formatada):
     pg.press('enter')
     pg.hotkey('ctrl', 'v')
 
-def preencher_data():
+def preencher_data(data_formatada):
     selecionar_ferramenta("v")
     pg.click(x_data, y_data)
     selecionar_ferramenta("t")
@@ -85,10 +85,10 @@ def preencher_data():
     time.sleep(0.3)
     kb.write(data_formatada)
 
-def aplicar_autodata(numero, edicao_formatada):
+def aplicar_autodata(numero, edicao_formatada, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
-    nome_arquivo = f"{edicao_formatada.replace('.', '')} - {formatar_data(data_da_edicao, tipo='dia_semana')}"
+    nome_arquivo = f"{edicao_formatada.replace('.', '')} - {formatar_data(data_formatada, tipo='dia_semana')}"
     kb.write(f"{CAMINHO_ADIANTO}\\{nome_arquivo}")
     pg.press('enter')
     pg.write(str(numero))
@@ -114,7 +114,7 @@ def autodata_paginas(edicao_formatada):
             aplicar_autodata(i, edicao_formatada)
             fechar_pagina()
 
-def autodata_edicao_1(edicao_formatada):
+def autodata_edicao_1(edicao_formatada, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     kb.write(f"{CAMINHO_ADIANTO}\\{EDD_PADRAO}")
@@ -134,7 +134,7 @@ def autodata_edicao_1(edicao_formatada):
     pg.press('right')
     pg.press('del')
     kb.write(f" | {data_formatada} ")
-
+    
 def autodata_edicao_17(edicao_formatada):
     aplicar_autodata(17)
     selecionar_ferramenta("v")
@@ -154,12 +154,8 @@ def cabeçalho(edicao_formatada):
     autodata_edicao_1(edicao_formatada)
     autodata_edicao_17(edicao_formatada)
 
-def teste(data_formatada, edicao_formatada):
-    print(edicao_formatada)
-    print(data_formatada)
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
-
 def abrir_pasta():
     os.startfile(CAMINHO_ADIANTO)
     maximizar_janela()
@@ -173,22 +169,74 @@ def voltar_pasta():
     pg.click(center_x, center_y)
     pg.hotkey('alt', 'up')
 
+
+
+# ---------------------------- TESTE ----------------------------
+def teste(edicao_formatada, data_formatada):
+    
+    # print(f"{data_formatada}, {edicao_formatada}")
+    # print(data_formatada)
+    print(edicao_formatada, data_formatada)
+
+
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
+
+# abrir_pasta()
+# pg.hotkey('win', 's')
+# pg.hotkey('win', '1')
+
+# aplicar_autodata(5)
 
 def main():
     print("📦 Edições geradas:")
     edicao = edicao_inicial
+    data = data_inicial
 
     for _ in range(quantidade_repeticoes):
         edicoes = gerar_edicoes(edicao, quantidade_por_semana)
+
         for ed in edicoes:
-            # print(f"→ {ed}")
-            # autodata_edicao_17(ed)
-            teste(data_formatada, ed)
+            data_formatada = formatar_data(data)
+            print(f"📦 {ed} - {data_formatada}")
+            
+
+            #----------------------------------------------------Verificar parte de baixo e adaptar para última sugestão do copilot
 
 
-            # Aqui você pode reativar chamadas para `cabeçalho(ed)` ou cópias de modelo se quiser
+                # nome_pasta = f"{edicao.replace('.', '')} - {formatar_data(data_da_edicao, tipo='dia_semana')}"
+            # criar_pasta(nome_pasta)
 
+            # modelo_path = {
+            #     0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
+            #     5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
+            # }.get(data_da_edicao.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
+
+            # time.sleep(0.3)
+            # pg.hotkey('alt', 'd')
+            # kb.write(modelo_path)
+            # pg.press('enter')
+            # copiar_modelo_para_pasta(edicao, data_da_edicao)
+            # voltar_pasta()
+            # time.sleep(0.3)
+
+            # time.sleep(0.5)
+            # abrir_quark()
+            # time.sleep(0.5)
+            # pg.press('esc', presses=3)
+            # time.sleep(0.5)
+            # autodata_edicao_17()
+            # abrir_software(4)  # Explorer
+            # pg.hotkey('alt', 'up')
+            # pg.click(center_x, center_y)
+
+            # Se quiser aplicar cabeçalho apenas nos dias úteis:
+            # if data_da_edicao.weekday() < 5:
+            #     cabeçalho()
+        
+                      
+            
+            data += timedelta(days=1)
+            data = ajustar_data(data)
         edicao += quantidade_por_semana + 2
 
 if __name__ == "__main__":
