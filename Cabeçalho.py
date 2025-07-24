@@ -23,9 +23,6 @@ quantidade_por_semana = 5
 quantidade_repeticoes = 2
 data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
 
-
-
-
 # ---------------------------- CONSTANTES ----------------------------
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 EDD_PADRAO = "0000 - TESTE"
@@ -64,8 +61,8 @@ def criar_pasta(nome):
     kb.write(nome)
     pg.press('enter')
 
-def copiar_modelo_para_pasta(edicao, data_formatada):
-    nome_pasta = f"{edicao.replace('.', '')} - {formatar_data(data_formatada, tipo='dia_semana')}"
+def copiar_modelo_para_pasta(ed, data_formatada):
+    nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
     pg.click(center_x, center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
@@ -88,8 +85,8 @@ def preencher_data(data_formatada):
 def aplicar_autodata(numero, edicao_formatada, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
-    nome_arquivo = f"{edicao_formatada.replace('.', '')} - {formatar_data(data_formatada, tipo='dia_semana')}"
-    kb.write(f"{CAMINHO_ADIANTO}\\{nome_arquivo}")
+    nome_pasta = f"{edicao_formatada.replace('.', '')} - {formatar_data(data_formatada, tipo='dia_semana')}"
+    kb.write(f"{CAMINHO_ADIANTO}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
     time.sleep(0.3)
@@ -107,11 +104,10 @@ def fechar_pagina():
     time.sleep(TEMPO_FECHAMENTO)
 
 # ---------------------------- AUTODATA ----------------------------
-
-def autodata_paginas(edicao_formatada):
+def autodata_paginas():
     for i in range(20, 1, -1):
         if i != 17:
-            aplicar_autodata(i, edicao_formatada)
+            aplicar_autodata(i)
             fechar_pagina()
 
 def autodata_edicao_1(edicao_formatada, data_formatada):
@@ -173,19 +169,19 @@ def voltar_pasta():
 
 # ---------------------------- TESTE ----------------------------
 def teste(edicao_formatada, data_formatada):
-    
     # print(f"{data_formatada}, {edicao_formatada}")
     # print(data_formatada)
-    print(edicao_formatada, data_formatada)
+    print(str(edicao_formatada).replace('.', ''), data_formatada)
 
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-
 # abrir_pasta()
 # pg.hotkey('win', 's')
 # pg.hotkey('win', '1')
 
 # aplicar_autodata(5)
+abrir_pasta()
+
 
 def main():
     print("📦 Edições geradas:")
@@ -197,27 +193,38 @@ def main():
 
         for ed in edicoes:
             data_formatada = formatar_data(data)
-            print(f"📦 {ed} - {data_formatada}")
+            info = {
+            "edicao_formatada": ed,
+            "data_formatada": formatar_data(data)
+            }
+            modelo_path = {
+            0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
+            5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
+            }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
+
+            # teste(**info)
+
+#--------------------------------------------------------------------------Criando modelo da edicão
+            criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+          
+            time.sleep(0.3)
+            pg.hotkey('alt', 'd')
+            kb.write(modelo_path)
+            pg.press('enter')
+            copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
+            voltar_pasta()
+            time.sleep(0.3)
+          
+
+
+
+            # autodata_edicao_17()
+
+            # autodata_paginas()
             
 
-            #----------------------------------------------------Verificar parte de baixo e adaptar para última sugestão do copilot
-
-
-                # nome_pasta = f"{edicao.replace('.', '')} - {formatar_data(data_da_edicao, tipo='dia_semana')}"
-            # criar_pasta(nome_pasta)
-
-            # modelo_path = {
-            #     0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
-            #     5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
-            # }.get(data_da_edicao.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
-
-            # time.sleep(0.3)
-            # pg.hotkey('alt', 'd')
-            # kb.write(modelo_path)
-            # pg.press('enter')
-            # copiar_modelo_para_pasta(edicao, data_da_edicao)
-            # voltar_pasta()
-            # time.sleep(0.3)
+#----------------------------------------------------Verificar parte de baixo e adaptar para última sugestão do copilot
+            # 
 
             # time.sleep(0.5)
             # abrir_quark()
@@ -234,7 +241,7 @@ def main():
             #     cabeçalho()
         
                       
-            
+            # print(f"📦 {ed} - {data_formatada}")
             data += timedelta(days=1)
             data = ajustar_data(data)
         edicao += quantidade_por_semana + 2
