@@ -38,9 +38,14 @@ x_edicao_capa = int(screen_width * 0.1740)
 y_edicao_capa = int(screen_height * 0.4648)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
-
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
+
+def abrir_software(numero):
+    pg.hotkey('win', 's')
+    pg.hotkey('win', str(numero))
+    pg.press('enter')
+    time.sleep(0.5)
 
 def maximizar_janela():
     kb.press_and_release('alt+space')
@@ -85,7 +90,7 @@ def preencher_data(data_formatada):
 def aplicar_autodata(numero, edicao_formatada, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
-    nome_pasta = f"{edicao_formatada.replace('.', '')} - {formatar_data(data_formatada, tipo='dia_semana')}"
+    nome_pasta = f"{edicao_formatada.replace('.', '')} - {str(data_formatada, tipo='dia_semana')}"
     kb.write(f"{CAMINHO_ADIANTO}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
@@ -131,8 +136,8 @@ def autodata_edicao_1(edicao_formatada, data_formatada):
     pg.press('del')
     kb.write(f" | {data_formatada} ")
     
-def autodata_edicao_17(edicao_formatada):
-    aplicar_autodata(17)
+def autodata_edicao_17(edicao_formatada, data_formatada):
+    aplicar_autodata(17, edicao_formatada, data_formatada)
     selecionar_ferramenta("v")
     pg.hotkey('ctrl', '0')
     pg.click(x_edicao_17, y_edicao_17)
@@ -146,14 +151,13 @@ def autodata_edicao_17(edicao_formatada):
     time.sleep(TEMPO_FECHAMENTO)
 
 def cabeçalho(edicao_formatada):
+    autodata_edicao_17(edicao_formatada)
     autodata_paginas(edicao_formatada)
     autodata_edicao_1(edicao_formatada)
-    autodata_edicao_17(edicao_formatada)
-
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
-def abrir_pasta():
-    os.startfile(CAMINHO_ADIANTO)
+def abrir_pasta(endereco):
+    os.startfile(endereco)
     maximizar_janela()
     pg.click(center_x, center_y)
 
@@ -165,14 +169,11 @@ def voltar_pasta():
     pg.click(center_x, center_y)
     pg.hotkey('alt', 'up')
 
-
-
 # ---------------------------- TESTE ----------------------------
 def teste(edicao_formatada, data_formatada):
     # print(f"{data_formatada}, {edicao_formatada}")
     # print(data_formatada)
     print(str(edicao_formatada).replace('.', ''), data_formatada)
-
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 # abrir_pasta()
@@ -180,7 +181,7 @@ def teste(edicao_formatada, data_formatada):
 # pg.hotkey('win', '1')
 
 # aplicar_autodata(5)
-abrir_pasta()
+abrir_pasta(CAMINHO_ADIANTO)
 
 
 def main():
@@ -205,20 +206,30 @@ def main():
             # teste(**info)
 
 #--------------------------------------------------------------------------Criando modelo da edicão
-            criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-          
-            time.sleep(0.3)
-            pg.hotkey('alt', 'd')
-            kb.write(modelo_path)
-            pg.press('enter')
-            copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
-            voltar_pasta()
-            time.sleep(0.3)
-          
+            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            # time.sleep(0.3)
+            # pg.hotkey('alt', 'd')
+            # kb.write(modelo_path)
+            # pg.press('enter')
+            # copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
+            # voltar_pasta()
+            # time.sleep(0.3)
+
+#--------------------------------------------------------------------------Preprarando area de operação
+            abrir_software(1)
+            time.sleep(0.5)
+            # pg.press('esc', presses=3)
+            # pg.hotkey('ctrl', '0')
+            # pg.hotkey('ctrl', 'o')
+            # kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            # time.sleep(0.3)
+            # pg.press('enter')
+            # pg.press('esc', presses=3)
+            autodata_edicao_17(**info)
 
 
 
-            # autodata_edicao_17()
+
 
             # autodata_paginas()
             
@@ -226,12 +237,7 @@ def main():
 #----------------------------------------------------Verificar parte de baixo e adaptar para última sugestão do copilot
             # 
 
-            # time.sleep(0.5)
-            # abrir_quark()
-            # time.sleep(0.5)
-            # pg.press('esc', presses=3)
-            # time.sleep(0.5)
-            # autodata_edicao_17()
+            #  autodata_edicao_17()
             # abrir_software(4)  # Explorer
             # pg.hotkey('alt', 'up')
             # pg.click(center_x, center_y)
@@ -249,3 +255,7 @@ def main():
 if __name__ == "__main__":
     main()
     
+
+
+
+    # \\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\6794 - Segunda-feira
