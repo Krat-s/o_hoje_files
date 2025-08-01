@@ -182,7 +182,7 @@ def teste(edicao_formatada, data_formatada):
 
 # aplicar_autodata(5)
 
-# abrir_pasta(CAMINHO_ADIANTO)
+abrir_pasta(CAMINHO_ADIANTO)
 
 def main():
     print("📦 Edições geradas:")
@@ -196,7 +196,8 @@ def main():
             data_formatada = formatar_data(data)
             info = {
             "edicao_formatada": ed,
-            "data_formatada": formatar_data(data)
+            "data_formatada": formatar_data(data),
+            "data_dia_semana": formatar_data(data, tipo='dia_semana'),
             }
             modelo_path = {
             0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
@@ -220,9 +221,10 @@ def main():
             pg.press('esc', presses=3)
             pg.hotkey('ctrl', '0')
             pg.hotkey('ctrl', 'o')
-            time.sleep(0.3)
-            kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-            time.sleep(0.3)
+            time.sleep(0.5)
+            kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')}")
+            time.sleep(0.5)
+            
             pg.press('enter')
             pg.press('esc', presses=3)
             # autodata_edicao_17(**info)
