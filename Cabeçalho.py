@@ -87,10 +87,10 @@ def preencher_data(data_formatada):
     time.sleep(0.3)
     kb.write(data_formatada)
 
-def aplicar_autodata(numero, edicao_formatada, data_formatada):
+def aplicar_autodata(numero, edicao_formatada, dia_semana):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
-    nome_pasta = f"{edicao_formatada.replace('.', '')} - {data_formatada}"
+    nome_pasta = f"{edicao_formatada.replace('.', '')} - {dia_semana}"
     kb.write(f"{CAMINHO_ADIANTO}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
@@ -197,7 +197,7 @@ def main():
             info = {
             "edicao_formatada": ed,
             "data_formatada": formatar_data(data),
-            "data_dia_semana": formatar_data(data, tipo='dia_semana'),
+            "dia_semana": formatar_data(data, tipo='dia_semana'),
             }
             modelo_path = {
             0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
@@ -222,12 +222,11 @@ def main():
             pg.hotkey('ctrl', '0')
             pg.hotkey('ctrl', 'o')
             time.sleep(0.5)
-            kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')}")
-            time.sleep(0.5)
-            
+            kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            time.sleep(0,5)
             pg.press('enter')
             pg.press('esc', presses=3)
-            # autodata_edicao_17(**info)
+            autodata_edicao_17(**info)
         
 
 
