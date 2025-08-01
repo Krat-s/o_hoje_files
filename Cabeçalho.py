@@ -90,7 +90,7 @@ def preencher_data(data_formatada):
 def aplicar_autodata(numero, edicao_formatada, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
-    nome_pasta = f"{edicao_formatada.replace('.', '')} - {str(data_formatada, tipo='dia_semana')}"
+    nome_pasta = f"{edicao_formatada.replace('.', '')} - {data_formatada}"
     kb.write(f"{CAMINHO_ADIANTO}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
@@ -181,8 +181,8 @@ def teste(edicao_formatada, data_formatada):
 # pg.hotkey('win', '1')
 
 # aplicar_autodata(5)
-abrir_pasta(CAMINHO_ADIANTO)
 
+# abrir_pasta(CAMINHO_ADIANTO)
 
 def main():
     print("📦 Edições geradas:")
@@ -217,16 +217,16 @@ def main():
 
 #--------------------------------------------------------------------------Preprarando area de operação
             abrir_software(1)
-            time.sleep(0.5)
-            # pg.press('esc', presses=3)
-            # pg.hotkey('ctrl', '0')
-            # pg.hotkey('ctrl', 'o')
-            # kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-            # time.sleep(0.3)
-            # pg.press('enter')
-            # pg.press('esc', presses=3)
-            autodata_edicao_17(**info)
-
+            pg.press('esc', presses=3)
+            pg.hotkey('ctrl', '0')
+            pg.hotkey('ctrl', 'o')
+            time.sleep(0.3)
+            kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            time.sleep(0.3)
+            pg.press('enter')
+            pg.press('esc', presses=3)
+            # autodata_edicao_17(**info)
+        
 
 
 

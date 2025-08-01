@@ -13,7 +13,7 @@ locale.setlocale(locale.LC_TIME, "pt_BR.utf8")
 
 # Ajustando datas
 def formatar_data(data, tipo="completo"):
-    dia = str(data.strftime('%d'))
+    dia = int(data.strftime('%d')) 
     proximo_dia = int((data + timedelta(days=1)).strftime('%d'))
     proximo_dia_formatado = f"{proximo_dia}º" if proximo_dia == 1 else f"{proximo_dia}"
     dia_formatado = f"{dia}º" if dia == 1 else f"{dia}"
