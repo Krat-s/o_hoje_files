@@ -136,8 +136,8 @@ def autodata_edicao_1(edicao_formatada, data_formatada):
     pg.press('del')
     kb.write(f" | {data_formatada} ")
     
-def autodata_edicao_17(edicao_formatada, data_formatada):
-    aplicar_autodata(17, edicao_formatada, data_formatada)
+def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana=None):
+    preencher_data(data_formatada)
     selecionar_ferramenta("v")
     pg.hotkey('ctrl', '0')
     pg.click(x_edicao_17, y_edicao_17)
@@ -149,11 +149,6 @@ def autodata_edicao_17(edicao_formatada, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'f4')
     time.sleep(TEMPO_FECHAMENTO)
-
-def cabeçalho(edicao_formatada):
-    autodata_edicao_17(edicao_formatada)
-    autodata_paginas(edicao_formatada)
-    autodata_edicao_1(edicao_formatada)
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def abrir_pasta(endereco):
@@ -182,7 +177,8 @@ def teste(edicao_formatada, data_formatada):
 
 # aplicar_autodata(5)
 
-abrir_pasta(CAMINHO_ADIANTO)
+# abrir_pasta(CAMINHO_ADIANTO)
+
 
 def main():
     print("📦 Edições geradas:")
@@ -197,14 +193,12 @@ def main():
             info = {
             "edicao_formatada": ed,
             "data_formatada": formatar_data(data),
-            "dia_semana": formatar_data(data, tipo='dia_semana'),
+            "dia_semana": formatar_data(data, tipo='dia_semana')
             }
             modelo_path = {
             0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
             }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
-
-            # teste(**info)
 
 #--------------------------------------------------------------------------Criando modelo da edicão
             # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
@@ -221,16 +215,21 @@ def main():
             pg.press('esc', presses=3)
             pg.hotkey('ctrl', '0')
             pg.hotkey('ctrl', 'o')
-            time.sleep(0.5)
+            time.sleep(0.3)
             kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-            time.sleep(0,5)
             pg.press('enter')
+            time.sleep(0.5)
+            kb.write('17')
+            pg.press('down')
+            pg.press('enter')
+            time.sleep(TEMPO_ABERTURA)
             pg.press('esc', presses=3)
             autodata_edicao_17(**info)
-        
+            
 
+            print('.')
 
-
+            # teste(**info)
 
             # autodata_paginas()
             
