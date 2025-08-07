@@ -109,10 +109,10 @@ def fechar_pagina():
     time.sleep(TEMPO_FECHAMENTO)
 
 # ---------------------------- AUTODATA ----------------------------
-def autodata_paginas(dia_semana):
+def autodata_paginas(edicao_formatada, dia_semana):
     for i in range(20, 1, -1):
         if i != 17:
-            aplicar_autodata(i, dia_semana)
+            aplicar_autodata(i, edicao_formatada, dia_semana)
             fechar_pagina()
 
 def autodata_edicao_1(edicao_formatada, data_formatada):
@@ -136,7 +136,19 @@ def autodata_edicao_1(edicao_formatada, data_formatada):
     pg.press('del')
     kb.write(f" | {data_formatada} ")
     
-def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana=None):
+def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
+    pg.press('esc', presses=3)
+    pg.hotkey('ctrl', '0')
+    pg.hotkey('ctrl', 'o')
+    time.sleep(0.3)
+    kb.write(CAMINHO_ADIANTO + '\\' + f"{edicao_formatada.replace('.', '')} - {dia_semana}")
+    pg.press('enter')
+    time.sleep(0.5)
+    kb.write('17')
+    pg.press('down')
+    pg.press('enter')
+    time.sleep(TEMPO_ABERTURA)
+    pg.press('esc', presses=3)
     preencher_data(data_formatada)
     time.sleep(0.3)
     pg.press('esc', presses=3)
@@ -192,6 +204,7 @@ def main():
 
         for ed in edicoes:
             data_formatada = formatar_data(data)
+            dia_semana = formatar_data(data, tipo='dia_semana')
             info = {
             "edicao_formatada": ed,
             "data_formatada": formatar_data(data),
@@ -212,20 +225,8 @@ def main():
             # voltar_pasta()
             # time.sleep(0.3)
 
-#--------------------------------------------------------------------------Preprarando area de operação
+#--------------------------------------------------------------------------Pre
             abrir_software(1)
-            pg.press('esc', presses=3)
-            pg.hotkey('ctrl', '0')
-            pg.hotkey('ctrl', 'o')
-            time.sleep(0.3)
-            kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-            pg.press('enter')
-            time.sleep(0.5)
-            kb.write('17')
-            pg.press('down')
-            pg.press('enter')
-            time.sleep(TEMPO_ABERTURA)
-            pg.press('esc', presses=3)
             # autodata_edicao_17(**info)
             autodata_paginas(**info)
             
