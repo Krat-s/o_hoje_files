@@ -82,9 +82,9 @@ def preencher_data(data_formatada):
     pg.click(x_data, y_data)
     selecionar_ferramenta("t")
     pg.press('t', presses=2)
-    time.sleep(0.3)
+    time.sleep(0.4)
     pg.hotkey('ctrl', 'a')
-    time.sleep(0.3)
+    time.sleep(0.4)
     kb.write(data_formatada)
 
 def aplicar_autodata(numero, edicao_formatada, dia_semana):
@@ -109,10 +109,10 @@ def fechar_pagina():
     time.sleep(TEMPO_FECHAMENTO)
 
 # ---------------------------- AUTODATA ----------------------------
-def autodata_paginas():
+def autodata_paginas(dia_semana):
     for i in range(20, 1, -1):
         if i != 17:
-            aplicar_autodata(i)
+            aplicar_autodata(i, dia_semana)
             fechar_pagina()
 
 def autodata_edicao_1(edicao_formatada, data_formatada):
@@ -138,6 +138,8 @@ def autodata_edicao_1(edicao_formatada, data_formatada):
     
 def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana=None):
     preencher_data(data_formatada)
+    time.sleep(0.3)
+    pg.press('esc', presses=3)
     selecionar_ferramenta("v")
     pg.hotkey('ctrl', '0')
     pg.click(x_edicao_17, y_edicao_17)
@@ -224,7 +226,8 @@ def main():
             pg.press('enter')
             time.sleep(TEMPO_ABERTURA)
             pg.press('esc', presses=3)
-            autodata_edicao_17(**info)
+            # autodata_edicao_17(**info)
+            autodata_paginas(**info)
             
 
             print('.')
