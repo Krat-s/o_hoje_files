@@ -10,7 +10,7 @@ from Modulos.edicao_formatador import gerar_edicoes
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
-time.sleep(1)
+time.sleep(0.5)
 
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 
@@ -34,8 +34,8 @@ x_data = int(screen_width * 0.6428)
 y_data = int(screen_height * 0.3255)
 x_edicao_17 = int(screen_width * 0.4173)
 y_edicao_17 = int(screen_height * 0.1536)
-x_edicao_capa = int(screen_width * 0.1740)
-y_edicao_capa = int(screen_height * 0.4648)
+x_edicao_capa = int(screen_width * 0.1962) #FALTA CALIBRAR
+y_edicao_capa = int(screen_height * 0.5690)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 def ajustar_data(data):
@@ -132,10 +132,11 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
     pg.press('backspace', presses=5)
     kb.write(f"nº {edicao_formatada}")
     time.sleep(0.4)
-    pg.press('right')
-    pg.press('del')
-    kb.write(f" | {data_formatada} ")
-    
+    pg.press('right', presses=4)
+    kb.write(data_formatada)
+    time.sleep(0.4)
+    pg.press('esc', presses=3)
+
 def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', '0')
@@ -185,16 +186,8 @@ def teste(edicao_formatada, data_formatada):
     print(str(edicao_formatada).replace('.', ''), data_formatada)
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-# abrir_pasta()
-# pg.hotkey('win', 's')
-# pg.hotkey('win', '1')
-
-# aplicar_autodata(5)
-
-# abrir_pasta(CAMINHO_ADIANTO)
-
-
 def main():
+    abrir_pasta(CAMINHO_ADIANTO)
     print("📦 Edições geradas:")
     edicao = edicao_inicial
     data = data_inicial
@@ -225,11 +218,12 @@ def main():
             # voltar_pasta()
             # time.sleep(0.3)
 
-#--------------------------------------------------------------------------Pre
+#---------------------------------------------------------------------------
             abrir_software(1)
-            autodata_edicao_17(**info)
+            # autodata_edicao_17(**info)
             # autodata_paginas(**info)
             autodata_edicao_1(**info)
+            
             
 
         
