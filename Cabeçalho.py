@@ -111,15 +111,15 @@ def fechar_pagina():
 # ---------------------------- AUTODATA ----------------------------
 def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
     for i in range(20, 1, -1):
-        if i != [17, 18, 19]:
+        if i in [17, 18, 19]:
+            continue
+        else:
             aplicar_autodata(i, edicao_formatada, dia_semana, data_formatada)
             fechar_pagina()
-        
-def autodata_edicao_1(edicao_formatada, data_formatada):
+           
+def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
-    kb.write(f"{CAMINHO_ADIANTO}\\{EDD_PADRAO}")
-    pg.press('enter')
     pg.write('1')
     pg.press('down')
     pg.press('enter')
@@ -227,11 +227,12 @@ def main():
 
 #--------------------------------------------------------------------------Pre
             abrir_software(1)
-            # autodata_edicao_17(**info)
-            autodata_paginas(**info)
+            autodata_edicao_17(**info)
+            # autodata_paginas(**info)
+            autodata_edicao_1(**info)
             
 
-            print('.')
+        
 
             # teste(**info)
 
