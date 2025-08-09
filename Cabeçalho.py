@@ -30,11 +30,17 @@ TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
 
 # ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
+# def mover_para_percentual(x_percent, y_percent):
+#     screen_width, screen_height = pg.size()
+#     x = int((x_percent / 100) * screen_width)
+#     y = int((y_percent / 100) * screen_height)
+
+
 x_data = int(screen_width * 0.6428)
 y_data = int(screen_height * 0.3255)
 x_edicao_17 = int(screen_width * 0.4173)
 y_edicao_17 = int(screen_height * 0.1536)
-x_edicao_capa = int(screen_width * 0.1962) #FALTA CALIBRAR
+x_edicao_capa = int(screen_width * 0.1962) 
 y_edicao_capa = int(screen_height * 0.5690)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
@@ -56,6 +62,7 @@ def selecionar_ferramenta(tecla):
     pg.click(center_x, 10)
     kb.press(tecla)
 
+# ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def criar_pasta(nome):
     time.sleep(0.5)
     maximizar_janela()
@@ -77,6 +84,21 @@ def copiar_modelo_para_pasta(ed, data_formatada):
     pg.press('enter')
     pg.hotkey('ctrl', 'v')
 
+def abrir_pasta(endereco):
+    os.startfile(endereco)
+    maximizar_janela()
+    pg.click(center_x, center_y)
+
+def fechar_explorer():
+    pg.click(center_x, center_y)
+    pg.hotkey('alt', 'f4')
+
+def voltar_pasta():
+    pg.click(center_x, center_y)
+    pg.hotkey('alt', 'up')
+
+
+# ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def preencher_data(data_formatada):
     selecionar_ferramenta("v")
     pg.click(x_data, y_data)
@@ -135,7 +157,10 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
     pg.press('right', presses=4)
     kb.write(data_formatada)
     time.sleep(0.4)
-    pg.press('esc', presses=3)
+    pg.press('esc', presses=2)
+    pg.hotkey('ctrl', 's')
+    pg.hotkey('ctrl', 'f4')
+    time.sleep(TEMPO_FECHAMENTO)
 
 def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
@@ -165,25 +190,6 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.hotkey('ctrl', 'f4')
     time.sleep(TEMPO_FECHAMENTO)
 
-# ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
-def abrir_pasta(endereco):
-    os.startfile(endereco)
-    maximizar_janela()
-    pg.click(center_x, center_y)
-
-def fechar_explorer():
-    pg.click(center_x, center_y)
-    pg.hotkey('alt', 'f4')
-
-def voltar_pasta():
-    pg.click(center_x, center_y)
-    pg.hotkey('alt', 'up')
-
-# ---------------------------- TESTE ----------------------------
-def teste(edicao_formatada, data_formatada):
-    # print(f"{data_formatada}, {edicao_formatada}")
-    # print(data_formatada)
-    print(str(edicao_formatada).replace('.', ''), data_formatada)
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def main():
@@ -208,7 +214,7 @@ def main():
             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
             }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
-#--------------------------------------------------------------------------Criando modelo da edicão
+            #--------------------------------------------------------------------------Criando pasta da edicão e copiando modelo
             # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
             # time.sleep(0.3)
             # pg.hotkey('alt', 'd')
@@ -218,35 +224,13 @@ def main():
             # voltar_pasta()
             # time.sleep(0.3)
 
-#---------------------------------------------------------------------------
+            # -------------------------------------------------------------------------Aplicando autodata
             abrir_software(1)
-            # autodata_edicao_17(**info)
+            # autodata_edicao_17(**info) #prepara o local no quark
             # autodata_paginas(**info)
             autodata_edicao_1(**info)
-            
-            
-
-        
-
-            # teste(**info)
-
-            # autodata_paginas()
-            
-
-#----------------------------------------------------Verificar parte de baixo e adaptar para última sugestão do copilot
-            # 
-
-            #  autodata_edicao_17()
-            # abrir_software(4)  # Explorer
-            # pg.hotkey('alt', 'up')
-            # pg.click(center_x, center_y)
-
-            # Se quiser aplicar cabeçalho apenas nos dias úteis:
-            # if data_da_edicao.weekday() < 5:
-            #     cabeçalho()
-        
-                      
-            # print(f"📦 {ed} - {data_formatada}")
+                                 
+            print(f"📦 {ed} - {data_formatada}")
             data += timedelta(days=1)
             data = ajustar_data(data)
         edicao += quantidade_por_semana + 2
