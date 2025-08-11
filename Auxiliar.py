@@ -1,5 +1,6 @@
 import pyautogui as pg
 import time
+import os
 
 # time.sleep(3)
 
@@ -21,7 +22,7 @@ import time
 
 
 
-time.sleep(3)  # Tempo para posicionar o cursor
+time.sleep(0.5)  # Tempo para posicionar o cursor
 x, y = pg.position()  # Captura a posição atual do cursor
 
 # Obtendo tamanho da tela
@@ -45,8 +46,14 @@ print("\nCopie e cole o código abaixo:")
 print(codigo_gerado)
 # Move o cursor para a posição capturada
 
+DATA = 64.28
+EDICAO = 90
 
-def mover_para_percentual(x_percent, y_percent):
+screen_width, screen_height = pg.size()
+center_x = screen_width / 2
+center_y = screen_height / 2
+
+def click(x_percent, y_percent):
     screen_width, screen_height = pg.size()
     x = int((x_percent / 100) * screen_width)
     y = int((y_percent / 100) * screen_height)
@@ -54,4 +61,12 @@ def mover_para_percentual(x_percent, y_percent):
     print(f"Movido para ({x}, {y}) que corresponde a {x_percent}% do eixo X e {y_percent}% do eixo Y.")
 
 # Exemplo de uso
-mover_para_percentual(20, 20)
+# click(DATA)
+
+CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+
+def abrir_pasta(endereco):
+    os.startfile(endereco)
+    pg.click(center_x, center_y)
+
+abrir_pasta(CAMINHO_ADIANTO)
