@@ -54,4 +54,4 @@ def mover_para_percentual(x_percent, y_percent):
     print(f"Movido para ({x}, {y}) que corresponde a {x_percent}% do eixo X e {y_percent}% do eixo Y.")
 
 # Exemplo de uso
-mover_para_percentual(20, 20)
+mover_para_percentual(50, 50)
