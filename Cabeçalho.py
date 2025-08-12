@@ -6,6 +6,7 @@ import pyautogui as pg
 import keyboard as kb
 from Modulos.data_formatador import formatar_data
 from Modulos.edicao_formatador import gerar_edicoes
+from pywinauto import Desktop
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -30,22 +31,29 @@ TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
 
 # ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
-# def mover_para_percentual(x_percent, y_percent):
-#     screen_width, screen_height = pg.size()
-#     x = int((x_percent / 100) * screen_width)
-#     y = int((y_percent / 100) * screen_height)
+x_data = 64.28
+y_data = 32.55
+x_edicao_17 = 41.73
+y_edicao_17 = 15.36
+x_edicao_capa = 19.62
+y_edicao_capa = 56.90
 
-
-x_data = int(screen_width * 0.6428)
-y_data = int(screen_height * 0.3255)
-x_edicao_17 = int(screen_width * 0.4173)
-y_edicao_17 = int(screen_height * 0.1536)
-x_edicao_capa = int(screen_width * 0.1962) 
-y_edicao_capa = int(screen_height * 0.5690)
+# x_data = int(screen_width * 0.6428)
+# y_data = int(screen_height * 0.3255)
+# x_edicao_17 = int(screen_width * 0.4173)
+# y_edicao_17 = int(screen_height * 0.1536)
+# x_edicao_capa = int(screen_width * 0.1962) 
+# y_edicao_capa = int(screen_height * 0.5690)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
+
+def click(x_percent, y_percent):
+    screen_width, screen_height = pg.size()
+    x = int((x_percent / 100) * screen_width)
+    y = int((y_percent / 100) * screen_height)
+    pg.click(x, y)
 
 def abrir_software(numero):
     pg.hotkey('win', 's')
@@ -61,6 +69,15 @@ def maximizar_janela():
 def selecionar_ferramenta(tecla):
     pg.click(center_x, 10)
     kb.press(tecla)
+
+def pasta_esta_aberta(nome_pasta):
+    janelas = Desktop(backend="uia").windows()
+    for janela in janelas:
+        if janela.class_name() == "CabinetWClass":
+            titulo = janela.window_text()
+            if nome_pasta.lower() in titulo.lower():
+                return True
+    return False
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def criar_pasta(nome):
@@ -97,11 +114,10 @@ def voltar_pasta():
     pg.click(center_x, center_y)
     pg.hotkey('alt', 'up')
 
-
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def preencher_data(data_formatada):
     selecionar_ferramenta("v")
-    pg.click(x_data, y_data)
+    click(x_data, y_data)
     selecionar_ferramenta("t")
     pg.press('t', presses=2)
     time.sleep(0.4)
@@ -147,7 +163,7 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
     pg.press('enter')
     time.sleep(TEMPO_ABERTURA + 3)
     selecionar_ferramenta("v")
-    pg.click(x_edicao_capa, y_edicao_capa)
+    click(x_edicao_capa, y_edicao_capa)
     selecionar_ferramenta("t")
     pg.press('t', presses=4)
     time.sleep(0.3)
@@ -180,7 +196,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
     selecionar_ferramenta("v")
     pg.hotkey('ctrl', '0')
-    pg.click(x_edicao_17, y_edicao_17)
+    click(x_edicao_17, y_edicao_17)
     pg.hotkey('ctrl', 'a')
     kb.write(f"Ano 21 - nº {edicao_formatada}")
     time.sleep(0.2)
@@ -193,7 +209,6 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def main():
-    abrir_pasta(CAMINHO_ADIANTO)
     print("📦 Edições geradas:")
     edicao = edicao_inicial
     data = data_inicial
@@ -215,6 +230,11 @@ def main():
             }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
             #--------------------------------------------------------------------------Criando pasta da edicão e copiando modelo
+
+            if pasta_esta_aberta("4 Adianto de novas edições"):
+                print()
+            else:
+                abrir_pasta(CAMINHO_ADIANTO)
             # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
             # time.sleep(0.3)
             # pg.hotkey('alt', 'd')
@@ -228,7 +248,8 @@ def main():
             abrir_software(1)
             # autodata_edicao_17(**info) #prepara o local no quark
             # autodata_paginas(**info)
-            autodata_edicao_1(**info)
+            # autodata_edicao_1(**info)
+            abrir_software(4)
                                  
             print(f"📦 {ed} - {data_formatada}")
             data += timedelta(days=1)
