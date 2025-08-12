@@ -1,32 +1,31 @@
 import os
-import pygetwindow as gw
-import pyautogui as pg
 from pywinauto import Desktop
-import time
 
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+NOME_PASTA = "4 Adianto de novas edições"
 
 def abrir_pasta(endereco):
-    os.startfile(endereco) 
+    """Abre a pasta no Explorer."""
+    os.startfile(endereco)
 
-# abrir_pasta(CAMINHO_ADIANTO)
-
-# for i in range (5):
-#     abrir_pasta(CAMINHO_ADIANTO)
-
-
-
-def pasta_esta_aberta(nome_pasta):
+def verificar_explorer(nome_pasta=None):
+    """Verifica se o Explorer está aberto e se a pasta está entre as janelas."""
     janelas = Desktop(backend="uia").windows()
+    explorer_aberto = False
+    pasta_encontrada = False
+
     for janela in janelas:
         if janela.class_name() == "CabinetWClass":
-            titulo = janela.window_text()
-            if nome_pasta.lower() in titulo.lower():
-                return True
-    return False
+            explorer_aberto = True
+            if nome_pasta and nome_pasta.lower() in janela.window_text().lower():
+                pasta_encontrada = True
 
-if pasta_esta_aberta("4 Adianto de novas edições"):
-    continue
-else:
-    abrir_pasta(CAMINHO_ADIANTO)
+    return explorer_aberto, pasta_encontrada
 
+# Verificação
+explorer, pasta = verificar_explorer(NOME_PASTA)
+
+verificar_explorer(NOME_PASTA) 
+if True: print(f"Explorer aberto: {explorer}, Pasta encontrada: {pasta}")
+if not explorer:
+        print("Explorer não está aberto. Abrindo pasta...")

@@ -8,7 +8,7 @@
 # from Modulos.data_formatador import formatar_data
 # from Modulos.edicao_formatador import gerar_edicoes
 
-# # ---------------------------- CONFIGURAÇÕES ----------------------------
+# ---------------------------- CONFIGURAÇÕES ----------------------------
 # pg.PAUSE = 0.5
 # pg.FAILSAFE = True
 # time.sleep(1)
@@ -24,13 +24,13 @@
 # quantidade_repeticoes = 2
 # data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
 
-# # ---------------------------- CONSTANTES ----------------------------
+# ---------------------------- CONSTANTES ----------------------------
 # CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 # EDD_PADRAO = "0000 - TESTE"
 # TEMPO_ABERTURA = 4
 # TEMPO_FECHAMENTO = 3
 
-# # ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
+# ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
 # x_data = int(screen_width * 0.6428)
 # y_data = int(screen_height * 0.3255)
 # x_edicao_17 = int(screen_width * 0.4173)
@@ -38,7 +38,7 @@
 # x_edicao_capa = int(screen_width * 0.1740)
 # y_edicao_capa = int(screen_height * 0.4648)
 
-# # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
+# ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 # def ajustar_data(data):
 #     return data + timedelta(days=1) if data.weekday() == 6 else data
 
@@ -109,7 +109,7 @@
 #     pg.hotkey('ctrl', 'f4')
 #     time.sleep(TEMPO_FECHAMENTO)
 
-# # ---------------------------- AUTODATA ----------------------------
+# ---------------------------- AUTODATA ----------------------------
 # def autodata_paginas():
 #     for i in range(20, 1, -1):
 #         if i != 17:
@@ -156,7 +156,7 @@
 #     autodata_paginas(edicao_formatada)
 #     autodata_edicao_1(edicao_formatada)
 
-# # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
+# ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 # def abrir_pasta(endereco):
 #     os.startfile(endereco)
 #     maximizar_janela()
@@ -170,18 +170,18 @@
 #     pg.click(center_x, center_y)
 #     pg.hotkey('alt', 'up')
 
-# # ---------------------------- TESTE ----------------------------
+# ---------------------------- TESTE ----------------------------
 # def teste(edicao_formatada, data_formatada):
-#     # print(f"{data_formatada}, {edicao_formatada}")
-#     # print(data_formatada)
+#     print(f"{data_formatada}, {edicao_formatada}")
+#     print(data_formatada)
 #     print(str(edicao_formatada).replace('.', ''), data_formatada)
 
-# # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-# # abrir_pasta()
-# # pg.hotkey('win', 's')
-# # pg.hotkey('win', '1')
+# ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
+# abrir_pasta()
+# pg.hotkey('win', 's')
+# pg.hotkey('win', '1')
 
-# # aplicar_autodata(5)
+# aplicar_autodata(5)
 # abrir_pasta(CAMINHO_ADIANTO)
 
 
@@ -204,51 +204,51 @@
 #             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
 #             }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
-#             # teste(**info)
+#             teste(**info)
 
-# #--------------------------------------------------------------------------Criando modelo da edicão
-#             # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-#             # time.sleep(0.3)
-#             # pg.hotkey('alt', 'd')
-#             # kb.write(modelo_path)
-#             # pg.press('enter')
-#             # copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
-#             # voltar_pasta()
-#             # time.sleep(0.3)
+# --------------------------------------------------------------------------Criando modelo da edicão
+#             criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+#             time.sleep(0.3)
+#             pg.hotkey('alt', 'd')
+#             kb.write(modelo_path)
+#             pg.press('enter')
+#             copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
+#             voltar_pasta()
+#             time.sleep(0.3)
 
-# #--------------------------------------------------------------------------Preprarando area de operação
+# --------------------------------------------------------------------------Preprarando area de operação
 #             abrir_software(1)
 #             time.sleep(0.5)
-#             # pg.press('esc', presses=3)
-#             # pg.hotkey('ctrl', '0')
-#             # pg.hotkey('ctrl', 'o')
-#             # kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-#             # time.sleep(0.3)
-#             # pg.press('enter')
-#             # pg.press('esc', presses=3)
+#             pg.press('esc', presses=3)
+#             pg.hotkey('ctrl', '0')
+#             pg.hotkey('ctrl', 'o')
+#             kb.write(CAMINHO_ADIANTO + '\\' + f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+#             time.sleep(0.3)
+#             pg.press('enter')
+#             pg.press('esc', presses=3)
 #             autodata_edicao_17(**info)
 
 
 
 
 
-#             # autodata_paginas()
+#             autodata_paginas()
             
 
-# #----------------------------------------------------Verificar parte de baixo e adaptar para última sugestão do copilot
-#             # 
+# ----------------------------------------------------Verificar parte de baixo e adaptar para última sugestão do copilot
+            
 
-#             #  autodata_edicao_17()
-#             # abrir_software(4)  # Explorer
-#             # pg.hotkey('alt', 'up')
-#             # pg.click(center_x, center_y)
+#              autodata_edicao_17()
+#             abrir_software(4)  # Explorer
+#             pg.hotkey('alt', 'up')
+#             pg.click(center_x, center_y)
 
-#             # Se quiser aplicar cabeçalho apenas nos dias úteis:
-#             # if data_da_edicao.weekday() < 5:
-#             #     cabeçalho()
+#             Se quiser aplicar cabeçalho apenas nos dias úteis:
+#             if data_da_edicao.weekday() < 5:
+#                 cabeçalho()
         
                       
-#             # print(f"📦 {ed} - {data_formatada}")
+#             print(f"📦 {ed} - {data_formatada}")
 #             data += timedelta(days=1)
 #             data = ajustar_data(data)
 #         edicao += quantidade_por_semana + 2
@@ -259,4 +259,45 @@
 
 
 
-#     # \\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\6794 - Segunda-feira
+#     \\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\6794 - Segunda-feira
+
+
+
+
+# -------explorer_verifiquer
+# import os
+# import pygetwindow as gw
+# import pyautogui as pg
+# from pywinauto import Desktop
+# import time
+
+# CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+
+# def abrir_pasta(endereco):
+#     os.startfile(endereco) 
+
+# def explorer_aberto():
+#     janelas = Desktop(backend="uia").windows()
+#     for janela in janelas:
+#         if janela.class_name() == "CabinetWClass":
+#                 return True
+#     return False
+
+# def pasta_esta_aberta(nome_pasta):
+#     janelas = Desktop(backend="uia").windows()
+#     for janela in janelas:
+#         if janela.class_name() == "CabinetWClass":
+#             titulo = janela.window_text()
+#             if nome_pasta.lower() in titulo.lower():
+#                 return True
+#     return False
+
+# if pasta_esta_aberta("4 Adianto de novas edições"):
+#     print("CAMINHO_ADIANTO está aberto.")
+# else:
+#     print("CAMINHO_ADIANTO não está aberto.")
+
+# if explorer_aberto():
+#         print("explorer já está aberto.")
+# else:
+#         print("explorer não está aberto.")

@@ -5,21 +5,11 @@ import time
 
 # print(pyautogui.position())
 
-
-# # conversão para %%
-
-
-# screen_width, screen_height = pyautogui.size()
-# x = 959
-# y = 252
-
 # # Calculando a posição em porcentagem
 # x_percent = (x / screen_width) * 100
 # y_percent = (y / screen_height) * 100
 
 # print(f"Posição ({x}, {y}) corresponde a aproximadamente {x_percent:.2f}% do eixo X e {y_percent:.2f}% do eixo Y.")
-
-
 
 time.sleep(3)  # Tempo para posicionar o cursor
 x, y = pg.position()  # Captura a posição atual do cursor
@@ -44,7 +34,6 @@ x_percent, y_percent = {x_percent:.2f}, {y_percent:.2f}
 print("\nCopie e cole o código abaixo:")
 print(codigo_gerado)
 # Move o cursor para a posição capturada
-
 
 def mover_para_percentual(x_percent, y_percent):
     screen_width, screen_height = pg.size()

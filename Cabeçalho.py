@@ -233,6 +233,7 @@ def main():
 
             if pasta_esta_aberta("4 Adianto de novas edições"):
                 print()
+                abrir_pasta(CAMINHO_ADIANTO)
             else:
                 abrir_pasta(CAMINHO_ADIANTO)
             # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
@@ -246,9 +247,9 @@ def main():
 
             # -------------------------------------------------------------------------Aplicando autodata
             abrir_software(1)
-            # autodata_edicao_17(**info) #prepara o local no quark
-            # autodata_paginas(**info)
-            # autodata_edicao_1(**info)
+            autodata_edicao_17(**info) #prepara o local no quark
+            autodata_paginas(**info)
+            autodata_edicao_1(**info)
             abrir_software(4)
                                  
             print(f"📦 {ed} - {data_formatada}")
