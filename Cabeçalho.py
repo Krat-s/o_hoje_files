@@ -28,21 +28,13 @@ data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 EDD_PADRAO = "0000 - TESTE"
 TEMPO_ABERTURA = 4
-TEMPO_FECHAMENTO = 3| Segunda-feira, 21 de julho de 2025v
+TEMPO_FECHAMENTO = 3
 
-nº 6.794
-| Terça-feira, 22 de julho 2025
-
-
-
-
-
-
- ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
-x_data = 64.28nº 6.795 
-y_data = 32.55
-x_edicao_17 = 41.73
-y_edicao_17 = 15.36
+# ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
+x_data = 49.48
+y_data = 23.06
+x_edicao_17 = 44.17
+y_edicao_17 = 12.41
 x_edicao_capa = 13.91
 y_edicao_capa = 41.30
 
@@ -73,10 +65,6 @@ def maximizar_janela():
     kb.press_and_release('alt+space')
     time.sleep(0.2)
     kb.press_and_release('x')
-
-def selecionar_ferramenta(tecla):
-    pg.click(center_x, 10)
-    kb.press(tecla)
 
 def pasta_esta_aberta(nome_pasta):
     janelas = Desktop(backend="uia").windows()
@@ -123,6 +111,10 @@ def voltar_pasta():
     pg.hotkey('alt', 'up')
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
+def selecionar_ferramenta(tecla):
+    pg.click(center_x, 10)
+    kb.press(tecla)
+
 def preencher_data(data_formatada):
     selecionar_ferramenta("v")
     click(x_data, y_data)
@@ -164,11 +156,11 @@ def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
             fechar_pagina()
            
 def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
-    # pg.press('esc', presses=3)
-    # pg.hotkey('ctrl', 'o')
-    # pg.write('1')
-    # pg.press('down')
-    # pg.press('enter')
+    pg.press('esc', presses=3)
+    pg.hotkey('ctrl', 'o')
+    pg.write('1')
+    pg.press('down')
+    pg.press('enter')
     time.sleep(TEMPO_ABERTURA + 3)
     selecionar_ferramenta("v")
     click(x_edicao_capa, y_edicao_capa)
@@ -178,13 +170,11 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
     kb.write(f"nº {edicao_formatada} ")
     pg.press('right', presses=2)
     pg.press('backspace')
-    kb.write(f"| {data_formatada}")
+    kb.write(f"|  {data_formatada}")
     pg.press('esc', presses=2)
-    # pg.hotkey('ctrl', 's')
-    # pg.hotkey('ctrl', 'f4')
-    # time.sleep(TEMPO_FECHAMENTO)
-
-    
+    pg.hotkey('ctrl', 's')
+    time.sleep(0.2)
+    fechar_pagina()
 
 def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
@@ -211,8 +201,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.hotkey('ctrl', 's')
     time.sleep(0.2)
     pg.press('esc', presses=3)
-    pg.hotkey('ctrl', 'f4')
-    time.sleep(TEMPO_FECHAMENTO)
+    fechar_pagina()
 
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
@@ -255,8 +244,9 @@ def main():
 
             # -------------------------------------------------------------------------Aplicando autodata
             abrir_software(1)
-            # autodata_edicao_17(**info) #prepara o local no quark
-            # autodata_paginas(**info)
+            selecionar_ferramenta("v")
+            autodata_edicao_17(**info) #prepara o local no quark
+            autodata_paginas(**info)
             autodata_edicao_1(**info)
             abrir_software(4)
                                  
