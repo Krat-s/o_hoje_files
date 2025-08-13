@@ -31,13 +31,23 @@ TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
 
 # ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
-x_data = 49.48
-y_data = 23.06
-x_edicao_17 = 44.17
-y_edicao_17 = 12.41
-x_edicao_capa = 13.91
-y_edicao_capa = 41.30
+# --MARKETING 1
+# x_data = 49.48
+# y_data = 23.06
+# x_edicao_17 = 44.17
+# y_edicao_17 = 12.41
+# x_edicao_capa = 13.91
+# y_edicao_capa = 41.30
 
+# --COMERCIAL 3
+x_data = 68.45
+y_data = 33.20
+x_edicao_17 = 41.14
+y_edicao_17 = 15.40
+x_edicao_capa = 18.74
+y_edicao_capa = 58.07
+
+# --LIXO?
 # x_data = int(screen_width * 0.6428)
 # y_data = int(screen_height * 0.3255)
 # x_edicao_17 = int(screen_width * 0.4173)
@@ -112,7 +122,10 @@ def voltar_pasta():
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def selecionar_ferramenta(tecla):
+    time.sleep(0.2)
     pg.click(center_x, 10)
+    time.sleep(0.2)
+    pg.press("v")
     kb.press(tecla)
 
 def preencher_data(data_formatada):
@@ -195,6 +208,8 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     selecionar_ferramenta("v")
     pg.hotkey('ctrl', '0')
     click(x_edicao_17, y_edicao_17)
+    selecionar_ferramenta("t")
+    pg.press('t', presses=4)
     pg.hotkey('ctrl', 'a')
     kb.write(f"Ano 21 - nº {edicao_formatada}")
     time.sleep(0.2)
@@ -202,7 +217,6 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     time.sleep(0.2)
     pg.press('esc', presses=3)
     fechar_pagina()
-
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def main():
@@ -215,7 +229,7 @@ def main():
 
         for ed in edicoes:
             data_formatada = formatar_data(data)
-            dia_semana = formatar_data(data, tipo='dia_semana')
+            # dia_semana = formatar_data(data, tipo='dia_semana')
             info = {
             "edicao_formatada": ed,
             "data_formatada": formatar_data(data),
@@ -229,18 +243,17 @@ def main():
             #--------------------------------------------------------------------------Criando pasta da edicão e copiando modelo
 
             # if pasta_esta_aberta("4 Adianto de novas edições"):
-            #     print()
             #     abrir_pasta(CAMINHO_ADIANTO)
             # else:
             #     abrir_pasta(CAMINHO_ADIANTO)
-            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-            # time.sleep(0.3)
-            # pg.hotkey('alt', 'd')
-            # kb.write(modelo_path)
-            # pg.press('enter')
-            # copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
-            # voltar_pasta()
-            # time.sleep(0.3)
+            criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            time.sleep(0.3)
+            pg.hotkey('alt', 'd')
+            kb.write(modelo_path)
+            pg.press('enter')
+            copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
+            voltar_pasta()
+            time.sleep(0.3)
 
             # -------------------------------------------------------------------------Aplicando autodata
             abrir_software(1)
@@ -257,8 +270,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-
-
-
-    # \\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\6794 - Segunda-feira
