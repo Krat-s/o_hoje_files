@@ -19,16 +19,16 @@ screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
 
-edicao_inicial = 6794
+edicao_inicial = 6867
 quantidade_por_semana = 5
-quantidade_repeticoes = 2
-data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
+quantidade_repeticoes = 4
+data_inicial = datetime(2025, 9, 1) #Precisa ser uma segunda-feira
 
 # ---------------------------- CONSTANTES ----------------------------
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 EDD_PADRAO = "0000 - TESTE"
-TEMPO_ABERTURA = 4
-TEMPO_FECHAMENTO = 3
+TEMPO_ABERTURA = 5
+TEMPO_FECHAMENTO = 4
 
 # ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
 # --MARKETING 1
@@ -129,7 +129,9 @@ def selecionar_ferramenta(tecla):
     kb.press(tecla)
 
 def preencher_data(data_formatada):
+    time.sleep(0.2)
     selecionar_ferramenta("v")
+    time.sleep(0.2)
     click(x_data, y_data)
     selecionar_ferramenta("t")
     pg.press('t', presses=2)
@@ -137,6 +139,7 @@ def preencher_data(data_formatada):
     pg.hotkey('ctrl', 'a')
     time.sleep(0.4)
     kb.write(data_formatada)
+    time.sleep(0.2)
 
 def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
     pg.press('esc', presses=3)
@@ -242,10 +245,10 @@ def main():
 
             #--------------------------------------------------------------------------Criando pasta da edicão e copiando modelo
 
-            # if pasta_esta_aberta("4 Adianto de novas edições"):
-            #     abrir_pasta(CAMINHO_ADIANTO)
-            # else:
-            #     abrir_pasta(CAMINHO_ADIANTO)
+            if pasta_esta_aberta("4 Adianto de novas edições"):
+                abrir_pasta(CAMINHO_ADIANTO)
+            else:
+                abrir_pasta(CAMINHO_ADIANTO)
             criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
             time.sleep(0.3)
             pg.hotkey('alt', 'd')
