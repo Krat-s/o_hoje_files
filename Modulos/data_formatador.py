@@ -95,9 +95,15 @@ def main():
     print(teste_3)
     print(teste_2)
 
+    
+    print(hoje)
+    print(data_de_hoje)
+
 
 if __name__ == "__main__":  
     main()
+
+
 
 
 

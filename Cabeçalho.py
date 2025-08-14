@@ -19,7 +19,7 @@ screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
 
-edicao_inicial = 6794
+edicao_inicial = 6600
 quantidade_por_semana = 5
 quantidade_repeticoes = 2
 data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
@@ -32,20 +32,20 @@ TEMPO_FECHAMENTO = 3
 
 # ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
 # --MARKETING 1
-# x_data = 49.48
-# y_data = 23.06
-# x_edicao_17 = 44.17
-# y_edicao_17 = 12.41
-# x_edicao_capa = 13.91
-# y_edicao_capa = 41.30
+x_data = 49.48
+y_data = 23.06
+x_edicao_17 = 44.17
+y_edicao_17 = 12.41
+x_edicao_capa = 13.91
+y_edicao_capa = 41.30
 
 # --COMERCIAL 3
-x_data = 68.45
-y_data = 33.20
-x_edicao_17 = 41.14
-y_edicao_17 = 15.40
-x_edicao_capa = 18.74
-y_edicao_capa = 58.07
+# x_data = 68.45
+# y_data = 33.20
+# x_edicao_17 = 41.14
+# y_edicao_17 = 15.40
+# x_edicao_capa = 18.74
+# y_edicao_capa = 58.07
 
 # --LIXO?
 # x_data = int(screen_width * 0.6428)
@@ -242,10 +242,10 @@ def main():
 
             #--------------------------------------------------------------------------Criando pasta da edicão e copiando modelo
 
-            # if pasta_esta_aberta("4 Adianto de novas edições"):
-            #     abrir_pasta(CAMINHO_ADIANTO)
-            # else:
-            #     abrir_pasta(CAMINHO_ADIANTO)
+            if pasta_esta_aberta("4 Adianto de novas edições"):
+                abrir_pasta(CAMINHO_ADIANTO)
+            else:
+                abrir_pasta(CAMINHO_ADIANTO)
             criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
             time.sleep(0.3)
             pg.hotkey('alt', 'd')
