@@ -4,9 +4,10 @@ import locale
 from datetime import datetime, timedelta
 import pyautogui as pg
 import keyboard as kb
-from Modulos.data_formatador import formatar_data
-from Modulos.edicao_formatador import gerar_edicoes
+from Modulos_quark.data_formatador import formatar_data
+from Modulos_quark.edicao_formatador import gerar_edicoes
 from pywinauto import Desktop
+from Modulos_quark.explorer_utils import verificar_windows, explorer_esta_aberto, janela_esta_aberta
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -15,13 +16,14 @@ time.sleep(0.5)
 
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 
+windows = verificar_windows()
 screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
 
 edicao_inicial = 6867
 quantidade_por_semana = 5
-quantidade_repeticoes = 4
+quantidade_repeticoes = 2
 data_inicial = datetime(2025, 9, 1) #Precisa ser uma segunda-feira
 
 # ---------------------------- CONSTANTES ----------------------------
@@ -46,14 +48,6 @@ x_edicao_17 = 41.14
 y_edicao_17 = 15.40
 x_edicao_capa = 18.74
 y_edicao_capa = 58.07
-
-# --LIXO?
-# x_data = int(screen_width * 0.6428)
-# y_data = int(screen_height * 0.3255)
-# x_edicao_17 = int(screen_width * 0.4173)
-# y_edicao_17 = int(screen_height * 0.1536)
-# x_edicao_capa = int(screen_width * 0.1962) 
-# y_edicao_capa = int(screen_height * 0.5690)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 def ajustar_data(data):
@@ -86,6 +80,13 @@ def pasta_esta_aberta(nome_pasta):
     return False
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
+def acessar_barra_endereco():
+    windows = verificar_windows()
+    if "Windows 11" in windows:
+        pg.hotkey('alt', 'd')
+    elif "Windows 10" in windows:
+        pg.hotkey('alt', 'l')
+
 def criar_pasta(nome):
     time.sleep(0.5)
     maximizar_janela()
@@ -245,26 +246,26 @@ def main():
 
             #--------------------------------------------------------------------------Criando pasta da edicão e copiando modelo
 
-            if pasta_esta_aberta("4 Adianto de novas edições"):
-                abrir_pasta(CAMINHO_ADIANTO)
-            else:
-                abrir_pasta(CAMINHO_ADIANTO)
-            criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-            time.sleep(0.3)
-            pg.hotkey('alt', 'd')
-            kb.write(modelo_path)
-            pg.press('enter')
-            copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
-            voltar_pasta()
-            time.sleep(0.3)
+            # if pasta_esta_aberta("4 Adianto de novas edições"):
+            #     abrir_pasta(CAMINHO_ADIANTO)
+            # else:
+            #     abrir_pasta(CAMINHO_ADIANTO)
+            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            # time.sleep(0.3)
+            # pg.hotkey('alt', 'd')
+            # kb.write(modelo_path)
+            # pg.press('enter')
+            # copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
+            # voltar_pasta()
+            # time.sleep(0.3)
 
-            # -------------------------------------------------------------------------Aplicando autodata
-            abrir_software(1)
-            selecionar_ferramenta("v")
-            autodata_edicao_17(**info) #prepara o local no quark
-            autodata_paginas(**info)
-            autodata_edicao_1(**info)
-            abrir_software(4)
+            # # -------------------------------------------------------------------------Aplicando autodata
+            # abrir_software(1)
+            # selecionar_ferramenta("v")
+            # autodata_edicao_17(**info) #prepara o local no quark
+            # autodata_paginas(**info)
+            # autodata_edicao_1(**info)
+            # abrir_software(4)
                                  
             print(f"📦 {ed} - {data_formatada}")
             data += timedelta(days=1)

@@ -1,7 +1,7 @@
 import time
 import keyboard as kb
 import pyautogui as pg
-from Modulos.edicao_formatador import gerar_edicoes
+from Modulos_gmail.edicao_formatador import gerar_edicoes
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.3
