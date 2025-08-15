@@ -12,16 +12,18 @@ largura, altura = pg.size()
 centro_x = largura / 2
 centro_y = altura / 2
 
-edicao_inicial = 6794
+edicao_inicial = 6853 #Precisa ser uma edição de segunda-feira
 quantidade_por_semana = 5
-quantidade_repeticoes = 2
+quantidade_repeticoes = 4
 
 # ---------------------------- FUNÇÕES DE AUTOMAÇÃO ----------------------------
 def take_emails():
     """Captura os emails de um arquivo no VSCode"""
     pg.hotkey('win', 's')
     pg.hotkey('win', '3')  # Verificar se é o app certo (VSCode)
+    time.sleep(0.2)
     pg.hotkey('ctrl', 'o')
+    time.sleep(0.3)
     pg.write('ar')
     pg.press('down')
     pg.press('enter')
@@ -73,6 +75,8 @@ def enviar_para_grafica(edicao, parte):
     time.sleep(1)
 
 # ---------------------------- ROTINA PRINCIPAL ----------------------------
+# take_emails()
+  # Captura os emails antes de iniciar o envio
 def main():
     print("📦 Edições geradas:")
     edicao = edicao_inicial
@@ -82,9 +86,9 @@ def main():
 
         for ed in edicoes:
             print(f"→ {ed}")
-            # enviar_emails_para_leitores(ed)
-            # enviar_para_grafica(ed, "essência e classificados")
-            # enviar_para_grafica(ed, "resto")
+            enviar_emails_para_leitores(ed)
+            enviar_para_grafica(ed, "essência e classificados")
+            enviar_para_grafica(ed, "resto")
 
         edicao += quantidade_por_semana + 2
 
