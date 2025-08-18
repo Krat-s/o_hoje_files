@@ -21,11 +21,14 @@ def take_emails():
     """Captura os emails de um arquivo no VSCode"""
     pg.hotkey('win', 's')
     pg.hotkey('win', '3')  # Verificar se é o app certo (VSCode)
-    time.sleep(0.2)
+    pg.click(x=centro_x, y=centro_y)
+    time.sleep(0.3)
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
     pg.write('ar')
+    time.sleep(0.3)
     pg.press('down')
+    time.sleep(0.3)
     pg.press('enter')
     pg.write('ema')
     pg.press('down')
@@ -77,7 +80,7 @@ def enviar_para_grafica(edicao, parte):
     time.sleep(1)
 
 # ---------------------------- ROTINA PRINCIPAL ----------------------------
-# take_emails()
+take_emails()
   # Captura os emails antes de iniciar o envio
 def main():
     print("📦 Edições geradas:")
@@ -88,9 +91,9 @@ def main():
 
         for ed in edicoes:
             print(f"→ {ed}")
-            enviar_emails_para_leitores(ed)
-            enviar_para_grafica(ed, "essência e classificados")
-            enviar_para_grafica(ed, "resto")
+            # enviar_emails_para_leitores(ed)
+            # enviar_para_grafica(ed, "essência e classificados")
+            # enviar_para_grafica(ed, "resto")
 
         edicao += quantidade_por_semana + 2
 
