@@ -4,7 +4,7 @@ import pyautogui as pg
 from Modulos_gmail.edicao_formatador import gerar_edicoes
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
-pg.PAUSE = 0.3
+pg.PAUSE = 0.4
 pg.FAILSAFE = True
 time.sleep(1)
 
@@ -54,8 +54,10 @@ def enviar_emails_para_leitores(edicao):
     """Simula envio de emails com conteúdo da edição"""
     open_gmail()
     shortcut_send_emails()
-    pg.hotkey('ctrl', 'v')  # Cola emails
+    pg.hotkey('ctrl', 'v') # Cola emails
+    time.sleep(0.3)  
     pg.press('tab')
+    time.sleep(0.3)  
     kb.write(f"Segue PDF completo da edição {edicao} do jornal O Hoje")
     pg.press('esc')
     time.sleep(1)
