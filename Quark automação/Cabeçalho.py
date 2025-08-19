@@ -4,8 +4,8 @@ import locale
 from datetime import datetime, timedelta
 import pyautogui as pg
 import keyboard as kb
-from Modulos.data_formatador import formatar_data
-from Modulos.edicao_formatador import gerar_edicoes
+from Modulos_quark.data_formatador import formatar_data
+from Modulos_quark.edicao_formatador import gerar_edicoes
 from pywinauto import Desktop
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
@@ -56,6 +56,11 @@ y_edicao_capa = 41.30
 # y_edicao_capa = int(screen_height * 0.5690)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
+def verificar_windows():
+    #importar módulo
+
+   print("importar módulo...")
+
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
 
@@ -76,6 +81,7 @@ def maximizar_janela():
     time.sleep(0.2)
     kb.press_and_release('x')
 
+# ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def pasta_esta_aberta(nome_pasta):
     janelas = Desktop(backend="uia").windows()
     for janela in janelas:
@@ -85,7 +91,6 @@ def pasta_esta_aberta(nome_pasta):
                 return True
     return False
 
-# ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def criar_pasta(nome):
     time.sleep(0.5)
     maximizar_janela()
