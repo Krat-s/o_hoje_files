@@ -55,7 +55,6 @@ def open_gmail():
 
 def enviar_emails_para_leitores(edicao):
     """Simula envio de emails com conteúdo da edição"""
-    open_gmail()
     shortcut_send_emails()
     pg.hotkey('ctrl', 'v') # Cola emails
     time.sleep(0.3)  
@@ -85,6 +84,7 @@ take_emails()
 def main():
     print("📦 Edições geradas:")
     edicao = edicao_inicial
+    open_gmail()
 
     for _ in range(quantidade_repeticoes):
         edicoes = gerar_edicoes(edicao, quantidade_por_semana)

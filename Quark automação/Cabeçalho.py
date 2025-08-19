@@ -6,6 +6,7 @@ import pyautogui as pg
 import keyboard as kb
 from Modulos_quark.data_formatador import formatar_data
 from Modulos_quark.edicao_formatador import gerar_edicoes
+from Modulos_quark.explorer_utils import verificar_windows 
 from pywinauto import Desktop
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
@@ -19,14 +20,16 @@ screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
 
-edicao_inicial = 6600
+edicao_inicial = 8888
 quantidade_por_semana = 5
-quantidade_repeticoes = 2
+quantidade_repeticoes = 1
 data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
 
 # ---------------------------- CONSTANTES ----------------------------
+CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-EDD_PADRAO = "0000 - TESTE"
+CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
+CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
 TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
 
@@ -56,11 +59,22 @@ y_edicao_capa = 41.30
 # y_edicao_capa = int(screen_height * 0.5690)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
-def verificar_windows():
-    #importar módulo
 
-   print("importar módulo...")
+def acessar_busca(especial=None): 
+    windows = verificar_windows()
+    if "Windows 10" in windows:
+        pg.hotkey('ctrl', 'd')
+        time.sleep(0.2)
+        kb.write(especial)
+    elif "Windows 11" in windows:
+        pg.hotkey('ctrl', 'l')
+        time.sleep(0.2)
+        kb.write(especial)
 
+    else:
+        print("Sistema operacional não suportado para acessar a busca.")
+        return
+    
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
 
@@ -92,14 +106,15 @@ def pasta_esta_aberta(nome_pasta):
     return False
 
 def criar_pasta(nome):
-    time.sleep(0.5)
+    time.sleep(0.3)
     maximizar_janela()
-    time.sleep(0.5)
+    time.sleep(0.3)
     pg.click(center_x, center_y)
     pg.hotkey('ctrl', 'shift', 'n')
-    time.sleep(0.5)
+    time.sleep(0.3)
     kb.write(nome)
     pg.press('enter')
+    time.sleep(0.3)
 
 def copiar_modelo_para_pasta(ed, data_formatada):
     nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
@@ -107,7 +122,7 @@ def copiar_modelo_para_pasta(ed, data_formatada):
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.3)
-    pg.hotkey('ctrl', 'l')
+    acessar_busca()
     kb.write(f"{CAMINHO_ADIANTO}\\{nome_pasta}")
     pg.press('enter')
     pg.hotkey('ctrl', 'v')
@@ -245,29 +260,51 @@ def main():
             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
             }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
-            #--------------------------------------------------------------------------Criando pasta da edicão e copiando modelo
+            #--------------------------------------------------------------------------Criando pastaS da edicão e copiando modelo
+            # if pasta_esta_aberta("4 Adianto de novas edições"):
+            #     abrir_pasta(CAMINHO_ADIANTO)
+            #     acessar_busca(CAMINHO_PAGFLIP)
+            #     pg.press('enter')
+            #     time.sleep(0.1)
 
-            if pasta_esta_aberta("4 Adianto de novas edições"):
-                abrir_pasta(CAMINHO_ADIANTO)
-            else:
-                abrir_pasta(CAMINHO_ADIANTO)
-            criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-            time.sleep(0.4)
-            pg.hotkey('ctrl', 'l')
-            kb.write(modelo_path)
-            pg.press('enter')
-            copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
-            voltar_pasta()
-            time.sleep(0.3)
+            # elif pasta_esta_aberta("00 Pagflip"):
+            #     abrir_pasta(CAMINHO_PAGFLIP)
+            #     pg.press('enter')
+            #     time.sleep(0.1)
 
-            # -------------------------------------------------------------------------Aplicando autodata
-            abrir_software(1)
-            selecionar_ferramenta("v")
-            autodata_edicao_17(**info) #prepara o local no quark
-            autodata_paginas(**info)
-            autodata_edicao_1(**info)
-            abrir_software(4)
-                                 
+            # else:
+            #     abrir_pasta(CAMINHO_PAGFLIP)
+            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+
+            # acessar_busca(CAMINHO_WEB)
+            # pg.press('enter')
+            # time.sleep(0.1)
+            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+
+            # acessar_busca(CAMINHO_FOTOS)
+            # pg.press('enter')
+            # time.sleep(0.1)
+            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+
+            # acessar_busca(CAMINHO_ADIANTO)
+            # pg.press('enter')
+            # time.sleep(0.1)
+            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            # time.sleep(0.4)
+            # # acessar_busca()
+            # # kb.write(modelo_path)
+            # # pg.press('enter')
+            # # copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
+            # # voltar_pasta()
+            # # time.sleep(0.3)
+
+            # # -------------------------------------------------------------------------Aplicando autodata
+            # abrir_software(1)
+            # selecionar_ferramenta("v")
+            # autodata_edicao_17(**info) #prepara o local no quark
+            # autodata_paginas(**info)
+            # autodata_edicao_1(**info)
+                                       
             print(f"📦 {ed} - {data_formatada}")
             data += timedelta(days=1)
             data = ajustar_data(data)
@@ -275,3 +312,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print(f"Você executou o código no {verificar_windows()}")

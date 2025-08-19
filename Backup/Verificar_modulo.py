@@ -15,9 +15,9 @@ if janela_esta_aberta(nome_da_pasta):
 else:
     print(f"A janela '{nome_da_pasta}' não está aberta.")
 
-    if verificar_windows() == "Windows 11":
-        print("Você está usando o Windows 11.")
-    elif verificar_windows() == "Windows 11": print("Você não está usando o Windows 11.")
+if verificar_windows() == "Windows 11":
+    print("Você está usando o Windows 11.")
+elif verificar_windows() == "Windows 11": print("Você não está usando o Windows 11.")
 
 
 
