@@ -1,10 +1,10 @@
 import time
 import keyboard as kb
 import pyautogui as pg
-from Modulos.edicao_formatador import gerar_edicoes
+from Modulos_gmail.edicao_formatador import gerar_edicoes
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
-pg.PAUSE = 0.3
+pg.PAUSE = 0.4
 pg.FAILSAFE = True
 time.sleep(1)
 
@@ -12,18 +12,23 @@ largura, altura = pg.size()
 centro_x = largura / 2
 centro_y = altura / 2
 
-edicao_inicial = 6794
+edicao_inicial = 6853 #Precisa ser uma edição de segunda-feira
 quantidade_por_semana = 5
-quantidade_repeticoes = 2
+quantidade_repeticoes = 4
 
 # ---------------------------- FUNÇÕES DE AUTOMAÇÃO ----------------------------
 def take_emails():
     """Captura os emails de um arquivo no VSCode"""
     pg.hotkey('win', 's')
     pg.hotkey('win', '3')  # Verificar se é o app certo (VSCode)
+    pg.click(x=centro_x, y=centro_y)
+    time.sleep(0.3)
     pg.hotkey('ctrl', 'o')
+    time.sleep(0.3)
     pg.write('ar')
+    time.sleep(0.3)
     pg.press('down')
+    time.sleep(0.3)
     pg.press('enter')
     pg.write('ema')
     pg.press('down')
@@ -52,8 +57,10 @@ def enviar_emails_para_leitores(edicao):
     """Simula envio de emails com conteúdo da edição"""
     open_gmail()
     shortcut_send_emails()
-    pg.hotkey('ctrl', 'v')  # Cola emails
+    pg.hotkey('ctrl', 'v') # Cola emails
+    time.sleep(0.3)  
     pg.press('tab')
+    time.sleep(0.3)  
     kb.write(f"Segue PDF completo da edição {edicao} do jornal O Hoje")
     pg.press('esc')
     time.sleep(1)
@@ -73,6 +80,8 @@ def enviar_para_grafica(edicao, parte):
     time.sleep(1)
 
 # ---------------------------- ROTINA PRINCIPAL ----------------------------
+take_emails()
+  # Captura os emails antes de iniciar o envio
 def main():
     print("📦 Edições geradas:")
     edicao = edicao_inicial
