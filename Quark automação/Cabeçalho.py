@@ -12,7 +12,7 @@ from pywinauto import Desktop
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
-time.sleep(0.5)
+time.sleep(1)
 
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 
@@ -26,9 +26,11 @@ quantidade_repeticoes = 1
 data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
 
 # ---------------------------- CONSTANTES ----------------------------
+SISTEMA_OPERACIONAL = verificar_windows()
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
+CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
 TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
@@ -50,53 +52,49 @@ y_edicao_capa = 41.30
 # x_edicao_capa = 18.74
 # y_edicao_capa = 58.07
 
-# --LIXO?
-# x_data = int(screen_width * 0.6428)
-# y_data = int(screen_height * 0.3255)
-# x_edicao_17 = int(screen_width * 0.4173)
-# y_edicao_17 = int(screen_height * 0.1536)
-# x_edicao_capa = int(screen_width * 0.1962) 
-# y_edicao_capa = int(screen_height * 0.5690)
-
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
+def log(mensagem): 
+    """Função para registrar mensagens com timestamp. (Não necessário para o funcionamento do script, mas útil para depuração)"""
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] {mensagem}")
 
-def acessar_busca(especial=None): 
-    windows = verificar_windows()
-    if "Windows 10" in windows:
-        pg.hotkey('ctrl', 'd')
-        time.sleep(0.2)
-        kb.write(especial)
-    elif "Windows 11" in windows:
-        pg.hotkey('ctrl', 'l')
-        time.sleep(0.2)
-        kb.write(especial)
+def atalho_endereço():
+    """Retorna o atalho de teclado para acessar a barra de endereços do explorador de arquivos, dependendo do sistema operacional."""
+    windows = SISTEMA_OPERACIONAL
+    return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'd')
 
-    else:
-        print("Sistema operacional não suportado para acessar a busca.")
-        return
-    
+def acessar_busca(específico=None):
+    """Acessa a barra de endereços do explorador de arquivos e, opcionalmente, escreve um caminho específico.""" 
+    pg.hotkey(*atalho_endereço())
+    time.sleep(0.2)
+    if específico:
+        kb.write(específico) 
+
 def ajustar_data(data):
+    """Ajusta a data para o dia seguinte se for domingo, caso contrário, retorna a data original."""
     return data + timedelta(days=1) if data.weekday() == 6 else data
 
 def click(x_percent, y_percent):
-    screen_width, screen_height = pg.size()
+    """Clica em uma posição específica da tela baseada em porcentagens da largura e altura da tela."""
     x = int((x_percent / 100) * screen_width)
     y = int((y_percent / 100) * screen_height)
     pg.click(x, y)
 
 def abrir_software(numero):
+    """Abre um software específico usando o atalho do Windows."""
     pg.hotkey('win', 's')
     pg.hotkey('win', str(numero))
     pg.press('enter')
     time.sleep(0.5)
 
 def maximizar_janela():
+    """Maximiza a janela ativa usando atalhos de teclado."""
     kb.press_and_release('alt+space')
     time.sleep(0.2)
     kb.press_and_release('x')
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def pasta_esta_aberta(nome_pasta):
+    """Verifica se uma pasta específica está aberta no explorador de arquivos do Windows."""
     janelas = Desktop(backend="uia").windows()
     for janela in janelas:
         if janela.class_name() == "CabinetWClass":
@@ -106,6 +104,7 @@ def pasta_esta_aberta(nome_pasta):
     return False
 
 def criar_pasta(nome):
+    """Cria uma nova pasta com o nome especificado no local atual do explorador de arquivos."""
     time.sleep(0.3)
     maximizar_janela()
     time.sleep(0.3)
@@ -117,6 +116,7 @@ def criar_pasta(nome):
     time.sleep(0.3)
 
 def copiar_modelo_para_pasta(ed, data_formatada):
+    """Copia o modelo para a pasta recém-criada."""
     nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
     pg.click(center_x, center_y)
     pg.hotkey('ctrl', 'a')
@@ -128,20 +128,14 @@ def copiar_modelo_para_pasta(ed, data_formatada):
     pg.hotkey('ctrl', 'v')
 
 def abrir_pasta(endereco):
+    """Abre uma pasta específica no explorador de arquivos do Windows."""
     os.startfile(endereco)
     maximizar_janela()
     pg.click(center_x, center_y)
 
-def fechar_explorer():
-    pg.click(center_x, center_y)
-    pg.hotkey('alt', 'f4')
-
-def voltar_pasta():
-    pg.click(center_x, center_y)
-    pg.hotkey('alt', 'up')
-
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def selecionar_ferramenta(tecla):
+    """Seleciona uma ferramenta específica no Quark usando a tecla fornecida."""
     time.sleep(0.2)
     pg.click(center_x, 10)
     time.sleep(0.2)
@@ -149,6 +143,7 @@ def selecionar_ferramenta(tecla):
     kb.press(tecla)
 
 def preencher_data(data_formatada):
+    """Preenche a data da edição atual no Quark usando a ferramenta de texto."""
     selecionar_ferramenta("v")
     click(x_data, y_data)
     selecionar_ferramenta("t")
@@ -159,6 +154,7 @@ def preencher_data(data_formatada):
     kb.write(data_formatada)
 
 def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
+    """Aplica a autodata para uma edição específica no Quark."""
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     nome_pasta = f"{edicao_formatada.replace('.', '')} - {dia_semana}"
@@ -181,6 +177,7 @@ def fechar_pagina():
 
 # ---------------------------- AUTODATA ----------------------------
 def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
+    """Aplica a autodata e edição para todas as páginas da edição no quark, exceto 1, 17, 18 e 19."""
     for i in range(20, 1, -1):
         if i in [17, 18, 19]:
             continue
@@ -189,6 +186,7 @@ def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
             fechar_pagina()
            
 def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
+    """Aplica a autodata e edição para a capa da edição no quark."""
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     pg.write('1')
@@ -210,6 +208,7 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
     fechar_pagina()
 
 def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
+    """Aplica a autodata e edição para a página 17 da edição no quark."""
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
@@ -239,17 +238,18 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     fechar_pagina()
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-def main():
-    print("📦 Edições geradas:")
+def Modelo_diário():
+    """Função principal para gerar edições diárias no Quark."""
+    log(f"📦 Gerando edições...")
     edicao = edicao_inicial
     data = data_inicial
-
+    
     for _ in range(quantidade_repeticoes):
         edicoes = gerar_edicoes(edicao, quantidade_por_semana)
 
         for ed in edicoes:
             data_formatada = formatar_data(data)
-            # dia_semana = formatar_data(data, tipo='dia_semana')
+            dia_semana = formatar_data(data, tipo='dia_semana')
             info = {
             "edicao_formatada": ed,
             "data_formatada": formatar_data(data),
@@ -260,56 +260,65 @@ def main():
             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
             }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
-            #--------------------------------------------------------------------------Criando pastaS da edicão e copiando modelo
-            # if pasta_esta_aberta("4 Adianto de novas edições"):
-            #     abrir_pasta(CAMINHO_ADIANTO)
-            #     acessar_busca(CAMINHO_PAGFLIP)
-            #     pg.press('enter')
-            #     time.sleep(0.1)
+            # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
+            if pasta_esta_aberta("4 Adianto de novas edições"):
+                abrir_pasta(CAMINHO_ADIANTO)
+                acessar_busca(CAMINHO_PAGFLIP)
+                pg.press('enter')
+                time.sleep(0.1)
 
-            # elif pasta_esta_aberta("00 Pagflip"):
-            #     abrir_pasta(CAMINHO_PAGFLIP)
-            #     pg.press('enter')
-            #     time.sleep(0.1)
+            elif pasta_esta_aberta("00 Pagflip"):
+                abrir_pasta(CAMINHO_PAGFLIP)
+                pg.press('enter')
+                time.sleep(0.1)
 
-            # else:
-            #     abrir_pasta(CAMINHO_PAGFLIP)
-            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            else:
+                abrir_pasta(CAMINHO_PAGFLIP)
 
-            # acessar_busca(CAMINHO_WEB)
-            # pg.press('enter')
-            # time.sleep(0.1)
-            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            criar_pasta(f"{ed.replace('.', '')} - {dia_semana}")
+            acessar_busca(CAMINHO_WEB)
+            pg.press('enter')
+            time.sleep(0.1)
+            criar_pasta(f"{ed.replace('.', '')} - {dia_semana}")
+            acessar_busca(CAMINHO_MODELO_WEB)
+            pg.press('enter')
+            pg.click(center_x, center_y)
+            pg.hotkey('ctrl', 'a')
+            pg.hotkey('ctrl', 'c')
+            pg.hotkey('alt', 'up')
+            acessar_busca(f"{CAMINHO_WEB}\\{ed.replace('.', '')} - {dia_semana}")     
+            pg.press('enter')
+            pg.hotkey('ctrl', 'v')    
 
-            # acessar_busca(CAMINHO_FOTOS)
-            # pg.press('enter')
-            # time.sleep(0.1)
-            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
+            acessar_busca(CAMINHO_FOTOS)
+            pg.press('enter')
+            time.sleep(0.1)
+            criar_pasta(f"{ed.replace('.', '')} - {dia_semana}")
 
-            # acessar_busca(CAMINHO_ADIANTO)
-            # pg.press('enter')
-            # time.sleep(0.1)
-            # criar_pasta(f"{ed.replace('.', '')} - {formatar_data(data, tipo='dia_semana')}")
-            # time.sleep(0.4)
-            # # acessar_busca()
-            # # kb.write(modelo_path)
-            # # pg.press('enter')
-            # # copiar_modelo_para_pasta(ed, formatar_data(data, tipo='dia_semana'))
-            # # voltar_pasta()
-            # # time.sleep(0.3)
+            abrir_pasta(CAMINHO_ADIANTO)
+            acessar_busca(CAMINHO_ADIANTO)
+            pg.press('enter')
+            time.sleep(0.1)
+            criar_pasta(f"{ed.replace('.', '')} - {dia_semana}")
+            time.sleep(0.4)
+            acessar_busca()
+            kb.write(modelo_path)
+            pg.press('enter')
+            copiar_modelo_para_pasta(ed, dia_semana)
+            pg.hotkey('alt', 'up')
+            time.sleep(0.3)
 
-            # # -------------------------------------------------------------------------Aplicando autodata
-            # abrir_software(1)
-            # selecionar_ferramenta("v")
-            # autodata_edicao_17(**info) #prepara o local no quark
-            # autodata_paginas(**info)
-            # autodata_edicao_1(**info)
+            # -------------------------------------------------------------------------Aplicando autodata
+            abrir_software(1)
+            selecionar_ferramenta("v")
+            autodata_edicao_17(**info) #prepara o local no quark
+            autodata_paginas(**info)
+            autodata_edicao_1(**info)
                                        
-            print(f"📦 {ed} - {data_formatada}")
+            log(f"📦 Edição {ed} gerada com sucesso.")
             data += timedelta(days=1)
             data = ajustar_data(data)
         edicao += quantidade_por_semana + 2
 
 if __name__ == "__main__":
-    main()
-    print(f"Você executou o código no {verificar_windows()}")
+    Modelo_diário()
