@@ -54,7 +54,7 @@ y_edicao_capa = 41.30
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 def log(mensagem): 
-    """Função para registrar mensagens com timestamp. (Não necessário para o funcionamento do script, mas útil para depuração)"""
+    """Função para registrar mensagens com timestamp."""
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {mensagem}")
 
 def atalho_endereço():
@@ -68,6 +68,8 @@ def acessar_busca(específico=None):
     time.sleep(0.2)
     if específico:
         kb.write(específico) 
+    pg.press('enter')
+    time.sleep(0.2)
 
 def ajustar_data(data):
     """Ajusta a data para o dia seguinte se for domingo, caso contrário, retorna a data original."""
@@ -87,7 +89,7 @@ def abrir_software(numero):
     time.sleep(0.5)
 
 def maximizar_janela():
-    """Maximiza a janela ativa usando atalhos de teclado."""
+    """Maximiza a janela ativa"""
     kb.press_and_release('alt+space')
     time.sleep(0.2)
     kb.press_and_release('x')
@@ -104,7 +106,7 @@ def pasta_esta_aberta(nome_pasta):
     return False
 
 def criar_pasta(nome):
-    """Cria uma nova pasta com o nome especificado no local atual do explorador de arquivos."""
+    """Cria uma nova pasta com o nome especificado"""
     time.sleep(0.3)
     maximizar_janela()
     time.sleep(0.3)
@@ -115,27 +117,33 @@ def criar_pasta(nome):
     pg.press('enter')
     time.sleep(0.3)
 
-def copiar_modelo_para_pasta(ed, data_formatada):
-    """Copia o modelo para a pasta recém-criada."""
+def copiar_modelo_para_pasta(caminho, ed, data_formatada):
+    """Copia o modelo"""
     nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
     pg.click(center_x, center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
-    time.sleep(0.3)
-    acessar_busca()
-    kb.write(f"{CAMINHO_ADIANTO}\\{nome_pasta}")
-    pg.press('enter')
+    time.sleep(0.1)
+    acessar_busca(f"{caminho}\\{nome_pasta}")
     pg.hotkey('ctrl', 'v')
+    time.sleep(0.1)
 
 def abrir_pasta(endereco):
-    """Abre uma pasta específica no explorador de arquivos do Windows."""
+    """Abre uma pasta específica"""
     os.startfile(endereco)
     maximizar_janela()
     pg.click(center_x, center_y)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
+def abrir_sugestão():
+    time.sleep(0.2)
+    pg.press('down')
+    time.sleep(0.2)
+    pg.press('enter')
+    time.sleep(TEMPO_ABERTURA)
+
 def selecionar_ferramenta(tecla):
-    """Seleciona uma ferramenta específica no Quark usando a tecla fornecida."""
+    """Seleciona uma ferramenta específica no Quark"""
     time.sleep(0.2)
     pg.click(center_x, 10)
     time.sleep(0.2)
@@ -154,30 +162,29 @@ def preencher_data(data_formatada):
     kb.write(data_formatada)
 
 def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
-    """Aplica a autodata para uma edição específica no Quark."""
+    """Aplica a autodata"""
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     nome_pasta = f"{edicao_formatada.replace('.', '')} - {dia_semana}"
     kb.write(f"{CAMINHO_ADIANTO}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
-    time.sleep(0.3)
-    pg.press('down')
-    time.sleep(0.3)
-    pg.press('enter')
-    time.sleep(TEMPO_ABERTURA)
+    abrir_sugestão()
     preencher_data(data_formatada)
-    time.sleep(0.4)
-    pg.press('esc')
-    pg.hotkey('ctrl', 's')
 
 def fechar_pagina():
+    pg.press('esc', presses=3)
+    time.sleep(0.2)
+    pg.hotkey('ctrl', 's')
+    time.sleep(0.2)
+    pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'f4')
     time.sleep(TEMPO_FECHAMENTO)
+   
 
 # ---------------------------- AUTODATA ----------------------------
 def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
-    """Aplica a autodata e edição para todas as páginas da edição no quark, exceto 1, 17, 18 e 19."""
+    """Aplica cabeçalho para todas as páginas, exceto 1, 17, 18 e 19."""
     for i in range(20, 1, -1):
         if i in [17, 18, 19]:
             continue
@@ -186,13 +193,12 @@ def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
             fechar_pagina()
            
 def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
-    """Aplica a autodata e edição para a capa da edição no quark."""
+    """Aplica cabeçalho para a capa"""
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     pg.write('1')
-    pg.press('down')
-    pg.press('enter')
-    time.sleep(TEMPO_ABERTURA + 3)
+    abrir_sugestão()
+    time.sleep(3)
     selecionar_ferramenta("v")
     click(x_edicao_capa, y_edicao_capa)
     selecionar_ferramenta("t")
@@ -202,13 +208,10 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
     pg.press('right', presses=2)
     pg.press('backspace')
     kb.write(f"|  {data_formatada}")
-    pg.press('esc', presses=2)
-    pg.hotkey('ctrl', 's')
-    time.sleep(0.2)
     fechar_pagina()
 
 def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
-    """Aplica a autodata e edição para a página 17 da edição no quark."""
+    """Aplica cabeçalho para a página 17"""
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
@@ -217,9 +220,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('enter')
     time.sleep(0.5)
     kb.write('17')
-    pg.press('down')
-    pg.press('enter')
-    time.sleep(TEMPO_ABERTURA)
+    abrir_sugestão()
     pg.press('esc', presses=3)
     preencher_data(data_formatada)
     time.sleep(0.3)
@@ -231,15 +232,11 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('t', presses=4)
     pg.hotkey('ctrl', 'a')
     kb.write(f"Ano 21 - nº {edicao_formatada}")
-    time.sleep(0.2)
-    pg.hotkey('ctrl', 's')
-    time.sleep(0.2)
-    pg.press('esc', presses=3)
     fechar_pagina()
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def Modelo_diário():
-    """Função principal para gerar edições diárias no Quark."""
+    """Função principal"""
     log(f"📦 Gerando edições...")
     edicao = edicao_inicial
     data = data_inicial
@@ -248,8 +245,8 @@ def Modelo_diário():
         edicoes = gerar_edicoes(edicao, quantidade_por_semana)
 
         for ed in edicoes:
-            data_formatada = formatar_data(data)
             dia_semana = formatar_data(data, tipo='dia_semana')
+            pasta_nome = f"{ed.replace('.', '')} - {dia_semana}"
             info = {
             "edicao_formatada": ed,
             "data_formatada": formatar_data(data),
@@ -264,49 +261,28 @@ def Modelo_diário():
             if pasta_esta_aberta("4 Adianto de novas edições"):
                 abrir_pasta(CAMINHO_ADIANTO)
                 acessar_busca(CAMINHO_PAGFLIP)
-                pg.press('enter')
-                time.sleep(0.1)
 
             elif pasta_esta_aberta("00 Pagflip"):
                 abrir_pasta(CAMINHO_PAGFLIP)
-                pg.press('enter')
-                time.sleep(0.1)
-
+                
             else:
                 abrir_pasta(CAMINHO_PAGFLIP)
 
-            criar_pasta(f"{ed.replace('.', '')} - {dia_semana}")
+            criar_pasta(pasta_nome)
             acessar_busca(CAMINHO_WEB)
-            pg.press('enter')
-            time.sleep(0.1)
-            criar_pasta(f"{ed.replace('.', '')} - {dia_semana}")
+            criar_pasta(pasta_nome)
             acessar_busca(CAMINHO_MODELO_WEB)
-            pg.press('enter')
-            pg.click(center_x, center_y)
-            pg.hotkey('ctrl', 'a')
-            pg.hotkey('ctrl', 'c')
-            pg.hotkey('alt', 'up')
-            acessar_busca(f"{CAMINHO_WEB}\\{ed.replace('.', '')} - {dia_semana}")     
-            pg.press('enter')
-            pg.hotkey('ctrl', 'v')    
-
+            copiar_modelo_para_pasta(CAMINHO_WEB, ed, dia_semana)
+             
             acessar_busca(CAMINHO_FOTOS)
-            pg.press('enter')
-            time.sleep(0.1)
-            criar_pasta(f"{ed.replace('.', '')} - {dia_semana}")
+            criar_pasta(pasta_nome)
 
             abrir_pasta(CAMINHO_ADIANTO)
             acessar_busca(CAMINHO_ADIANTO)
-            pg.press('enter')
-            time.sleep(0.1)
-            criar_pasta(f"{ed.replace('.', '')} - {dia_semana}")
-            time.sleep(0.4)
-            acessar_busca()
-            kb.write(modelo_path)
-            pg.press('enter')
-            copiar_modelo_para_pasta(ed, dia_semana)
+            criar_pasta(pasta_nome)
+            acessar_busca(modelo_path)
+            copiar_modelo_para_pasta(CAMINHO_ADIANTO, ed, dia_semana)
             pg.hotkey('alt', 'up')
-            time.sleep(0.3)
 
             # -------------------------------------------------------------------------Aplicando autodata
             abrir_software(1)
