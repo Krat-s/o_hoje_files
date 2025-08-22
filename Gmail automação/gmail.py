@@ -60,7 +60,7 @@ def enviar_emails_para_leitores(edicao):
     time.sleep(0.3)  
     pg.press('tab')
     time.sleep(0.3)  
-    kb.write(f"Segue PDF completo da edição {edicao} do jornal O Hoje")
+    kb.write(f"Segue edição {edicao} do jornal O Hoje")
     pg.press('esc')
     time.sleep(1)
 
@@ -74,7 +74,7 @@ def enviar_para_grafica(edicao, parte):
     pg.press('enter')
     time.sleep(0.3)
     pg.press('tab')
-    kb.write(f"Segue {parte} da edição {edicao} do jornal O Hoje")
+    kb.write(f"Segue {parte} da edição {edicao}")
     pg.press('esc')
     time.sleep(1)
 

@@ -301,3 +301,44 @@
 #         print("explorer já está aberto.")
 # else:
 #         print("explorer não está aberto.")
+
+
+
+
+# def fazer_w():
+#     messagebox.showinfo("Qual o número da ", "EDIÇÃO?", "?")
+#     # process_casamento_basico()
+
+# def fazer_x():
+#     messagebox.showinfo("Escolha", "Você escolheu fazer o básico.")
+#     # process_casamento_basico()
+
+# def fazer_y():
+#     messagebox.showinfo("Escolha", "Você escolheu fazer o 'miolo'.")
+#     # process_casamento_miolo()
+
+# def fazer_z():
+#     messagebox.showinfo("Escolha", "Você escolheu fazer a capa.")
+#     # process_casamento_capa()
+
+# Criar janela principal
+# janela = tk.Tk()
+# janela.title("Escolha uma opção")
+# janela.geometry("800x600")
+
+# # Texto de instrução
+# label = tk.Label(janela, text="Vc quer:", font=("Arial", 35))
+# label.pack(pady=25)
+
+# # Botões de escolha
+# btn_x = tk.Button(janela, text="Básico", font=("Arial", 25), command=fazer_x)
+# btn_x.pack(pady=15)
+
+# btn_y = tk.Button(janela, text="Miolo", font=("Arial", 25), command=fazer_y)
+# btn_y.pack(pady=15)
+
+# btn_z = tk.Button(janela, text="Capa", font=("Arial", 25), command=fazer_z)
+# btn_z.pack(pady=15)
+
+# # Iniciar a interface
+# janela.mainloop()
