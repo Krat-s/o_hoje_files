@@ -8,6 +8,7 @@ from Modulos_quark.data_formatador import formatar_data
 from Modulos_quark.edicao_formatador import gerar_edicoes
 from Modulos_quark.explorer_utils import verificar_windows 
 from pywinauto import Desktop
+import Modulos_quark.config as cfg
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -27,11 +28,7 @@ data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
 
 # ---------------------------- CONSTANTES ----------------------------
 SISTEMA_OPERACIONAL = verificar_windows()
-CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
-CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
-CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
-CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
+
 TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
 
@@ -166,7 +163,7 @@ def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     nome_pasta = f"{edicao_formatada.replace('.', '')} - {dia_semana}"
-    kb.write(f"{CAMINHO_ADIANTO}\\{nome_pasta}")
+    kb.write(f"{cfg.CAMINHO_ADIANTO}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
     abrir_sugestão()
@@ -180,7 +177,6 @@ def fechar_pagina():
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'f4')
     time.sleep(TEMPO_FECHAMENTO)
-   
 
 # ---------------------------- AUTODATA ----------------------------
 def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
@@ -216,7 +212,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
-    kb.write(CAMINHO_ADIANTO + '\\' + f"{edicao_formatada.replace('.', '')} - {dia_semana}")
+    kb.write(cfg.CAMINHO_ADIANTO + '\\' + f"{edicao_formatada.replace('.', '')} - {dia_semana}")
     pg.press('enter')
     time.sleep(0.5)
     kb.write('17')
@@ -259,29 +255,29 @@ def Modelo_diário():
 
             # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
             if pasta_esta_aberta("4 Adianto de novas edições"):
-                abrir_pasta(CAMINHO_ADIANTO)
-                acessar_busca(CAMINHO_PAGFLIP)
+                abrir_pasta(cfg.CAMINHO_ADIANTO)
+                acessar_busca(cfg.CAMINHO_PAGFLIP)
 
             elif pasta_esta_aberta("00 Pagflip"):
-                abrir_pasta(CAMINHO_PAGFLIP)
+                abrir_pasta(cfg.CAMINHO_PAGFLIP)
                 
             else:
-                abrir_pasta(CAMINHO_PAGFLIP)
+                abrir_pasta(cfg.CAMINHO_PAGFLIP)
 
             criar_pasta(pasta_nome)
-            acessar_busca(CAMINHO_WEB)
+            acessar_busca(cfg.CAMINHO_WEB)
             criar_pasta(pasta_nome)
-            acessar_busca(CAMINHO_MODELO_WEB)
-            copiar_modelo_para_pasta(CAMINHO_WEB, ed, dia_semana)
+            acessar_busca(cfg.CAMINHO_MODELO_WEB)
+            copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana)
              
-            acessar_busca(CAMINHO_FOTOS)
+            acessar_busca(cfg.CAMINHO_FOTOS)
             criar_pasta(pasta_nome)
 
-            abrir_pasta(CAMINHO_ADIANTO)
-            acessar_busca(CAMINHO_ADIANTO)
+            abrir_pasta(cfg.CAMINHO_ADIANTO)
+            acessar_busca(cfg.CAMINHO_ADIANTO)
             criar_pasta(pasta_nome)
             acessar_busca(modelo_path)
-            copiar_modelo_para_pasta(CAMINHO_ADIANTO, ed, dia_semana)
+            copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, ed, dia_semana)
             pg.hotkey('alt', 'up')
 
             # -------------------------------------------------------------------------Aplicando autodata
