@@ -3,11 +3,12 @@ import pyautogui as pg
 
 # Caminhos de rede
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
+CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\Modelo'
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
 CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
-CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
-CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
+
 
 # Dados de edição
 edicao_inicial = 8888

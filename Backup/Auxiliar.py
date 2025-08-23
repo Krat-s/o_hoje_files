@@ -44,4 +44,22 @@ def mover_para_percentual(x_percent, y_percent):
 
 # Exemplo de uso
 if __name__ == "__main__":
-    mover_para_percentual(50, 50)
+    mover_para_percentual(49.48, 23.00)
+
+
+
+
+
+x_data = 49.48
+y_data = 23.06
+x_edicao_17 = 44.17
+y_edicao_17 = 12.41
+x_edicao_capa = 13.91
+y_edicao_capa = 41.30
+
+x_data = 68.45
+y_data = 33.20
+x_edicao_17 = 41.14
+y_edicao_17 = 15.40
+x_edicao_capa = 18.74
+y_edicao_capa = 58.07

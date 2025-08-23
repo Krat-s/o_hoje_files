@@ -28,21 +28,12 @@ quantidade_repeticoes = 1
 data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
 
 # ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
-# marketing
-# x_data = 49.48
-# y_data = 23.06
-# x_edicao_17 = 44.17
-# y_edicao_17 = 12.41
-# x_edicao_capa = 13.91
-# y_edicao_capa = 41.30
-
-# comercial-3 1366, 768
-x_data = 68.45
-y_data = 33.20
-x_edicao_17 = 41.14
-y_edicao_17 = 15.40
-x_edicao_capa = 18.74
-y_edicao_capa = 58.07
+x_data = 49.48
+y_data = 23.06
+x_edicao_17 = 44.17
+y_edicao_17 = 12.41
+x_edicao_capa = 13.91
+y_edicao_capa = 41.30
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 def log(mensagem): 
@@ -50,7 +41,7 @@ def log(mensagem):
 
 def atalho_endereço():
     windows = SISTEMA_OPERACIONAL
-    return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'd')
+    return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'l')
 
 def ir_para(específico=None):
     pg.hotkey(*atalho_endereço())
@@ -244,6 +235,9 @@ def Modelo_diário():
             else:
                 abrir_pasta(cg.CAMINHO_PAGFLIP)
             criar_pasta(pasta_nome)
+
+            copiar_modelo_para_pasta(cg.CAMINHO_PAGFLIP, ed, dia_semana, cg.CAMINHO_MODELO_PAGFLIP)
+
             criar_pasta(pasta_nome, cg.CAMINHO_WEB)
             copiar_modelo_para_pasta(cg.CAMINHO_WEB, ed, dia_semana, cg.CAMINHO_MODELO_WEB)
             criar_pasta(pasta_nome, cg.CAMINHO_FOTOS)
