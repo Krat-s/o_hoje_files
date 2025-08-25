@@ -23,7 +23,7 @@ WAY_WEB = r'\\192.168.1.249\redacao\web'
 # WAY_WEB = r'C:\Users\Kratos\Downloads\Fazer de casa\6735 - Terça-feira\Web'
 
 #variáveis
-EDD = r"6857 - sexta-feira" 
+EDD = r"6860 - segunda-feira" 
 
 #funções
 def max_windows():
@@ -137,17 +137,17 @@ def process_casamento(nome_arquivo, paginas):
 
 def process_casamento_basico():
     process_casamento("13_16", [13, 16])
-
-def process_casamento_miolo():
     process_casamento("14_15", [14, 15])
     process_casamento("17_20", [17, 20])
     process_casamento("10_11", [10, 11])
     process_casamento("9_12", [9, 12])
+
+def process_casamento_miolo():
     process_casamento("4_5", [4, 5])
     process_casamento("3_6", [3, 6])
-    process_casamento("2_7", [2, 7])    
 
 def process_casamento_capa():
+    process_casamento("2_7", [2, 7])    
     process_casamento("1_8", [1, 8])
 
 def process_casamento_primeiro_caderno():
@@ -161,44 +161,46 @@ def process_casamento_completo():
 # --------------------------Executando 
 
 
-def fazer_escolha(opcao):
-    EDD = entrada_edicao.get()
-    if EDD.strip() == "":
-        messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
-        return
-    messagebox.showinfo("Escolha", f"Edição {EDD} selecionada.\nVocê escolheu fazer {opcao}.")
+# def fazer_escolha(opcao):
+#     EDD = entrada_edicao.get()
+#     if EDD.strip() == "":
+#         messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
+#         return
+#     messagebox.showinfo("Escolha", f"Edição {EDD} selecionada.\nVocê escolheu fazer {opcao}.")
 
-# Criar janela principal
-janela = tk.Tk() 
-janela.title("Escolha uma opção")
-janela.geometry("300x250")
-
-
-# Texto de instrução
-label = tk.Label(janela, text="Vc quer:", font=("Arial", 35))
-label.pack(pady=10)
+# # Criar janela principal
+# janela = tk.Tk() 
+# janela.title("Escolha uma opção")
+# janela.geometry("300x250")
 
 
-# Caixa de entrada para número da edição
-label_edicao = tk.Label(janela, text="Digite o número da edição:")
-label_edicao.pack()
-entrada_edicao = tk.Entry(janela)
-entrada_edicao.pack(pady=5)
+# # Texto de instrução
+# label = tk.Label(janela, text="Vc quer:", font=("Arial", 35))
+# label.pack(pady=10)
 
-# Botões de escolha
-btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"))
-btn_x.pack(pady=5)
 
-btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"))
-btn_y.pack(pady=5)
+# # Caixa de entrada para número da edição
+# label_edicao = tk.Label(janela, text="Digite o número da edição:")
+# label_edicao.pack()
+# entrada_edicao = tk.Entry(janela)
+# entrada_edicao.pack(pady=5)
 
-btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"))
-btn_z.pack(pady=5)
+# # Botões de escolha
+# btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"))
+# btn_x.pack(pady=5)
 
-# Iniciar a interface
-janela.mainloop()
+# btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"))
+# btn_y.pack(pady=5)
 
-# process_casamento_miolo() 
+# btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"))
+# btn_z.pack(pady=5)
+
+# # Iniciar a interface
+# janela.mainloop()
+
+
+# process_casamento_basico()
+process_casamento_miolo() 
 pg.hotkey('win', 's')
 pg.hotkey('win', '3')
 print("ACABOU XD")
