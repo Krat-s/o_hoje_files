@@ -12,18 +12,14 @@ pg.FAILSAFE = True
 largura, altura = pg.size()
 centro_x = largura / 2
 centro_y = altura / 2
-FRAME2 = 0.1
-FRAME3 = 0.3
 TIME1 = 5
 TIME2 = 4
 TIMETOCLOSE = 6
 WAY_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 WAY_WEB = r'\\192.168.1.249\redacao\web'
-# WAY_EDD = r'C:\Users\Kratos\Downloads\Fazer de casa'
-# WAY_WEB = r'C:\Users\Kratos\Downloads\Fazer de casa\6735 - Terça-feira\Web'
 
 #variáveis
-EDD = r"6860 - segunda-feira" 
+EDD = r"6861 - terça-feira" 
 
 #funções
 def max_windows():
@@ -68,43 +64,43 @@ def open_paste_page_done():
     take_tool("v")
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     kb.write(WAY_EDD + "\\" + EDD + "\\" + 'Páginas prontas')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     pg.press('enter')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     
 def agrupar_e_fechar_agora():
     take_tool("v")
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'g')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     pg.hotkey('ctrl', 's')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     pg.press('enter')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     pg.hotkey('ctrl', 'c')
     pg.hotkey('ctrl', 'f4')
     time.sleep(TIME2)
 
 def move_page(left, right):
     pg.hotkey('ctrl', 'shift', 'alt', 'm')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     kb.write(str(left))
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     pg.press('tab')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     kb.write(str(right))
     pg.press('enter')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     pg.press('down')
-    time.sleep(FRAME2)
+    time.sleep(0.2)
     pg.press('up')
     
 def process_page(page_number, is_even):
-    time.sleep(FRAME3)
+    time.sleep(0.3)
     open_paste_page_done()
     pg.write(str(page_number))
     confirmancia()
@@ -112,7 +108,7 @@ def process_page(page_number, is_even):
     agrupar_e_fechar_agora()
     time.sleep(TIMETOCLOSE)
     time.sleep(TIMETOCLOSE)
-    time.sleep(FRAME3)
+    time.sleep(0.3)
     pg.hotkey('ctrl', '0')
     pg.click(centro_x, centro_y)
     pg.hotkey('ctrl', 'v')
@@ -123,7 +119,7 @@ def process_page(page_number, is_even):
     else: 
         move_page(290, 20)
     pg.hotkey('ctrl', 's')
-    time.sleep(FRAME3)
+    time.sleep(0.3)
 
 def process_casamento(nome_arquivo, paginas):
     open_web()
@@ -133,7 +129,7 @@ def process_casamento(nome_arquivo, paginas):
     for page_number in paginas:
         is_even = page_number % 2 == 0
         process_page(page_number, is_even)
-    time.sleep(FRAME3)
+    time.sleep(0.3)
 
 def process_casamento_basico():
     process_casamento("13_16", [13, 16])
