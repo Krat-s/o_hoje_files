@@ -18,8 +18,8 @@ TIMETOCLOSE = 6
 WAY_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 WAY_WEB = r'\\192.168.1.249\redacao\web'
 
-#variáveis
 EDD = r"6861 - terça-feira" 
+#variáveis
 
 #funções
 def max_windows():
@@ -83,7 +83,7 @@ def agrupar_e_fechar_agora():
     time.sleep(0.2)
     pg.hotkey('ctrl', 'c')
     pg.hotkey('ctrl', 'f4')
-    time.sleep(TIME2)
+    time.sleep(TIMETOCLOSE)
 
 def move_page(left, right):
     pg.hotkey('ctrl', 'shift', 'alt', 'm')
@@ -129,7 +129,7 @@ def process_casamento(nome_arquivo, paginas):
     for page_number in paginas:
         is_even = page_number % 2 == 0
         process_page(page_number, is_even)
-    time.sleep(0.3)
+    time.sleep(0.5)
 
 def process_casamento_basico():
     process_casamento("13_16", [13, 16])
@@ -139,12 +139,12 @@ def process_casamento_basico():
     process_casamento("9_12", [9, 12])
 
 def process_casamento_miolo():
-    process_casamento("4_5", [4, 5])
     process_casamento("3_6", [3, 6])
+    process_casamento("2_7", [2, 7])    
 
 def process_casamento_capa():
-    process_casamento("2_7", [2, 7])    
     process_casamento("1_8", [1, 8])
+    process_casamento("4_5", [4, 5])
 
 def process_casamento_primeiro_caderno():
     process_casamento_miolo()
