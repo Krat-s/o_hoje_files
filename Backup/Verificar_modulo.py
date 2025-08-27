@@ -1,2 +1,2 @@
-import Auxiliar_3_responsividade
+# import Auxiliar_3_responsividade
 
