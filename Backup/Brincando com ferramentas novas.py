@@ -35,3 +35,6 @@ def esperar_texto(texto_alvo, timeout=10):
 
     # Se o tempo limite for atingido sem encontrar o texto, retorna falso
 esperar_texto(str('ABOBRINHA'))
+
+while esperar_texto(True):
+        print('achou')

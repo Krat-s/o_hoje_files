@@ -18,7 +18,7 @@ TIMETOCLOSE = 6
 WAY_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 WAY_WEB = r'\\192.168.1.249\redacao\web'
 
-EDD = r"6861 - terça-feira" 
+EDD = r"6862 - quarta-feira" 
 #variáveis
 
 #funções
@@ -135,17 +135,17 @@ def process_casamento_basico():
     process_casamento("13_16", [13, 16])
     process_casamento("14_15", [14, 15])
     process_casamento("17_20", [17, 20])
-    process_casamento("10_11", [10, 11])
-    process_casamento("9_12", [9, 12])
 
 def process_casamento_miolo():
+    process_casamento("10_11", [10, 11])
+    process_casamento("9_12", [9, 12])
     process_casamento("3_6", [3, 6])
     process_casamento("2_7", [2, 7])    
+    process_casamento("4_5", [4, 5])
+    process_casamento("1_8", [8, 1])
 
 def process_casamento_capa():
-    process_casamento("1_8", [1, 8])
-    process_casamento("4_5", [4, 5])
-
+    print('capa')
 def process_casamento_primeiro_caderno():
     process_casamento_miolo()
     process_casamento_capa()
