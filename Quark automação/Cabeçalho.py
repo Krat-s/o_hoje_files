@@ -9,10 +9,6 @@ from Modulos_quark.edicao_formatador import gerar_edicoes
 from Modulos_quark.explorer_utils import verificar_windows 
 from pywinauto import Desktop
 import Modulos_quark.config as cg
-import pytesseract
-
-
-
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -125,7 +121,7 @@ def abrir_sugestão():
 
 def selecionar_ferramenta(tecla):
     time.sleep(0.2)
-    pg.click(center_x, 10)
+    pg.click(center_x, 10)   
     time.sleep(0.2)
     pg.press("v")
     kb.press(tecla)
