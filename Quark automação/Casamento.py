@@ -18,7 +18,7 @@ TIMETOCLOSE = 6
 WAY_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 WAY_WEB = r'\\192.168.1.249\redacao\web'
 
-EDD = r"6862 - quarta-feira" 
+EDD = r"6868 - terça-feira" 
 #variáveis
 
 #funções
@@ -139,15 +139,17 @@ def process_casamento_basico():
     process_casamento("17_20", [17, 20])
 
 def process_casamento_miolo():
+    print('miolo')
     process_casamento("10_11", [10, 11])
     process_casamento("9_12", [9, 12])
     process_casamento("3_6", [3, 6])
     process_casamento("2_7", [2, 7])    
     process_casamento("4_5", [4, 5])
-    process_casamento("1_8", [8, 1])
 
 def process_casamento_capa():
     print('capa')
+    process_casamento("1_8", [8, 1])
+
 def process_casamento_primeiro_caderno():
     process_casamento_miolo()
     process_casamento_capa()
@@ -158,22 +160,30 @@ def process_casamento_completo():
 
 # --------------------------Executando 
 
+# process_casamento_basico()
+process_casamento_miolo() 
+pg.hotkey('win', 's')
+pg.hotkey('win', '3')
+print("ACABOU XD")
+
 
 # def fazer_escolha(opcao):
 #     EDD = entrada_edicao.get()
 #     if EDD.strip() == "":
 #         messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
-#         return
+#         return EDD
 #     messagebox.showinfo("Escolha", f"Edição {EDD} selecionada.\nVocê escolheu fazer {opcao}.")
+#     print(EDD)
+
 
 # # Criar janela principal
 # janela = tk.Tk() 
-# janela.title("Escolha uma opção")
+# janela.title("Casamento")
 # janela.geometry("300x250")
 
 
 # # Texto de instrução
-# label = tk.Label(janela, text="Vc quer:", font=("Arial", 35))
+# label = tk.Label(janela, text="Edição:", font=("Noto Serif", 20))
 # label.pack(pady=10)
 
 
@@ -187,18 +197,11 @@ def process_casamento_completo():
 # btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"))
 # btn_x.pack(pady=5)
 
-# btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"))
-# btn_y.pack(pady=5)
+# # btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"))
+# # btn_y.pack(pady=5)
 
-# btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"))
-# btn_z.pack(pady=5)
+# # btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"))
+# # btn_z.pack(pady=5)
 
 # # Iniciar a interface
 # janela.mainloop()
-
-
-# process_casamento_basico()
-process_casamento_miolo() 
-pg.hotkey('win', 's')
-pg.hotkey('win', '3')
-print("ACABOU XD")

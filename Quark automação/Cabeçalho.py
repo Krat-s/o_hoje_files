@@ -22,10 +22,10 @@ screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
 
-edicao_inicial = 8888
+edicao_inicial = 6881
 quantidade_por_semana = 5
-quantidade_repeticoes = 1
-data_inicial = datetime(2025, 7, 21) #Precisa ser uma segunda-feira
+quantidade_repeticoes = 3
+data_inicial = datetime(2025, 9, 15) #Precisa ser uma segunda-feira
 
 # ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
 x_data = 49.48
@@ -104,7 +104,7 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
     time.sleep(0.2)
     ir_para(f"{caminho}\\{nome_pasta}")
     pg.hotkey('ctrl', 'v')
-    time.sleep(0.2)
+    time.sleep(0.5)
 
 def abrir_pasta(endereco):
     os.startfile(endereco)
@@ -164,7 +164,7 @@ def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
             aplicar_autodata(i, edicao_formatada, dia_semana, data_formatada)
             fechar_pagina()
            
-def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana):
+def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana=None):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     pg.write('1')
@@ -230,27 +230,32 @@ def Modelo_diário():
             if pasta_esta_aberta("4 Adianto de novas edições"):
                 abrir_pasta(cg.CAMINHO_ADIANTO)
                 ir_para(cg.CAMINHO_PAGFLIP)
+            elif pasta_esta_aberta("fotos"):
+                abrir_pasta(cg.CAMINHO_FOTOS)
+                ir_para(cg.CAMINHO_PAGFLIP)
             elif pasta_esta_aberta("00 Pagflip"):
                 abrir_pasta(cg.CAMINHO_PAGFLIP)
             else:
                 abrir_pasta(cg.CAMINHO_PAGFLIP)
+            
             criar_pasta(pasta_nome)
-
             copiar_modelo_para_pasta(cg.CAMINHO_PAGFLIP, ed, dia_semana, cg.CAMINHO_MODELO_PAGFLIP)
 
             criar_pasta(pasta_nome, cg.CAMINHO_WEB)
             copiar_modelo_para_pasta(cg.CAMINHO_WEB, ed, dia_semana, cg.CAMINHO_MODELO_WEB)
+
             criar_pasta(pasta_nome, cg.CAMINHO_FOTOS)
-            criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO)
-            copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
-            pg.hotkey('alt', 'up')
+        
+            # criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO)
+            # copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+            # pg.hotkey('alt', 'up')
 
             # -------------------------------------------------------------------------Aplicando autodata
-            abrir_software(1)
-            selecionar_ferramenta("v")
-            autodata_edicao_17(**info) #prepara o local no quark
-            autodata_paginas(**info)
-            autodata_edicao_1(**info)
+            # abrir_software(1)
+            # selecionar_ferramenta("v")
+            # autodata_edicao_17(**info) #prepara o local no quark
+            # autodata_paginas(**info)
+            # autodata_edicao_1(**info)
                                        
             log(f"📦 Edição {ed} gerada com sucesso.")
             data += timedelta(days=1)
@@ -259,3 +264,5 @@ def Modelo_diário():
 
 if __name__ == "__main__":
     Modelo_diário()
+    abrir_software(3)
+    print('acabou')
