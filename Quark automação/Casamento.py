@@ -18,7 +18,9 @@ TIMETOCLOSE = 6
 WAY_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 WAY_WEB = r'\\192.168.1.249\redacao\web'
 
-EDD = r"6868 - terça-feira" 
+EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
+
+# EDD = r"6868 - terça-feira" 
 #variáveis
 
 #funções
