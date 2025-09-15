@@ -1,6 +1,6 @@
 import pyautogui as pg
 import time
-from Modulos_quark.index_numeros import gerar_numeros
+from Modulos.index_numeros import gerar_numeros
 
 time.sleep(1)
 pg.PAUSE = 0.3 
@@ -28,3 +28,7 @@ def pedidos():
     
 
 pedidos()
+
+
+
+

@@ -246,16 +246,16 @@ def Modelo_diário():
 
             criar_pasta(pasta_nome, cg.CAMINHO_FOTOS)
         
-            # criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO)
-            # copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
-            # pg.hotkey('alt', 'up')
+            criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO)
+            copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+            pg.hotkey('alt', 'up')
 
             # -------------------------------------------------------------------------Aplicando autodata
-            # abrir_software(1)
-            # selecionar_ferramenta("v")
-            # autodata_edicao_17(**info) #prepara o local no quark
-            # autodata_paginas(**info)
-            # autodata_edicao_1(**info)
+            abrir_software(1)
+            selecionar_ferramenta("v")
+            autodata_edicao_17(**info) #prepara o local no quark
+            autodata_paginas(**info)
+            autodata_edicao_1(**info)
                                        
             log(f"📦 Edição {ed} gerada com sucesso.")
             data += timedelta(days=1)
@@ -266,3 +266,6 @@ if __name__ == "__main__":
     Modelo_diário()
     abrir_software(3)
     print('acabou')
+
+def create_models():
+    Modelo_diário()

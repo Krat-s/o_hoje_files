@@ -12,9 +12,10 @@ largura, altura = pg.size()
 centro_x = largura / 2
 centro_y = altura / 2
 
-edicao_inicial = 6853 #Precisa ser uma edição de segunda-feira
+# ---------------------------- VARIÁVEIS ----------------------------
 quantidade_por_semana = 5
-quantidade_repeticoes = 4
+quantidade_repeticoes = 2
+edicao_inicial = 6881 #Precisa ser uma edição de segunda-feira
 
 # ---------------------------- FUNÇÕES DE AUTOMAÇÃO ----------------------------
 def take_emails():
@@ -79,23 +80,31 @@ def enviar_para_grafica(edicao, parte):
     time.sleep(1)
 
 # ---------------------------- ROTINA PRINCIPAL ----------------------------
-take_emails()
-  # Captura os emails antes de iniciar o envio
-def main():
+
+"""Captura os emails antes de iniciar o envio""" 
+def create_draft():
     print("📦 Edições geradas:")
     edicao = edicao_inicial
-    open_gmail()
-
+   
     for _ in range(quantidade_repeticoes):
         edicoes = gerar_edicoes(edicao, quantidade_por_semana)
 
         for ed in edicoes:
             print(f"→ {ed}")
-            # enviar_emails_para_leitores(ed)
-            # enviar_para_grafica(ed, "essência e classificados")
+            # enviar_para_grafica(ed, "básico")
             # enviar_para_grafica(ed, "resto")
+            # enviar_emails_para_leitores(ed)
 
         edicao += quantidade_por_semana + 2
 
+def create_drafts():
+    take_emails()
+    open_gmail()
+    create_draft()
+
+
 if __name__ == "__main__":
-    main()
+    print("teste")
+    # take_emails()
+    # open_gmail()
+    # create_draft()
