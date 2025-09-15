@@ -8,7 +8,7 @@ modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Glo
 sys.path.append(modulo_path)
 
 # Importa o módulo
-import teste
+from Global_modulos import teste
 
 # Testa a função
 teste.fteste()

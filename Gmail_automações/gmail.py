@@ -39,6 +39,7 @@ def take_emails():
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.5)
+    pg.hotkey('ctrl', 'f4')
 
 def shortcut_send_emails():
     """Atalho para abrir campo de envio no Gmail"""
@@ -91,9 +92,9 @@ def create_draft():
 
         for ed in edicoes:
             print(f"→ {ed}")
-            # enviar_para_grafica(ed, "básico")
-            # enviar_para_grafica(ed, "resto")
-            # enviar_emails_para_leitores(ed)
+            enviar_para_grafica(ed, "básico")
+            enviar_para_grafica(ed, "resto")
+            enviar_emails_para_leitores(ed)
 
         edicao += quantidade_por_semana + 2
 
@@ -108,3 +109,5 @@ if __name__ == "__main__":
     # take_emails()
     # open_gmail()
     # create_draft()
+
+    create_drafts()
