@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import locale
 from datetime import datetime, timedelta
@@ -8,12 +9,15 @@ from Modulos_quark.data_formatador import formatar_data
 from Modulos_quark.edicao_formatador import gerar_edicoes
 from Modulos_quark.explorer_utils import verificar_windows 
 from pywinauto import Desktop
-import Modulos_quark.config as cg
+import Global_modulos.settings as cg
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
 time.sleep(1)
+
+modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Global_modulos'))
+sys.path.append(modulo_path)
 
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 SISTEMA_OPERACIONAL = verificar_windows()
