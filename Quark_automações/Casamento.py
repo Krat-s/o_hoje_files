@@ -18,9 +18,9 @@ TIMETOCLOSE = 6
 WAY_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 WAY_WEB = r'\\192.168.1.249\redacao\web'
 
-EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
+# EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
 
-# EDD = r"6868 - terça-feira" 
+EDD = r"6882 - terça-feira" 
 #variáveis
 
 #funções
@@ -161,7 +161,7 @@ def process_casamento_completo():
     process_casamento_primeiro_caderno()
 
 # --------------------------Executando 
-
+time.sleep(5)
 # process_casamento_basico()
 process_casamento_miolo() 
 pg.hotkey('win', 's')

@@ -1,2 +1,0 @@
-def fteste():
-    print('logggg')
