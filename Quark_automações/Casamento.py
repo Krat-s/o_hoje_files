@@ -20,7 +20,7 @@ WAY_WEB = r'\\192.168.1.249\redacao\web'
 
 # EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
 
-EDD = r"6882 - terça-feira" 
+EDD = r"6883 - quarta-feira" 
 #variáveis
 
 #funções
@@ -142,15 +142,15 @@ def process_casamento_basico():
 
 def process_casamento_miolo():
     print('miolo')
-    process_casamento("10_11", [10, 11])
-    process_casamento("9_12", [9, 12])
     process_casamento("3_6", [3, 6])
     process_casamento("2_7", [2, 7])    
     process_casamento("4_5", [4, 5])
+    process_casamento("1_8", [8, 1])
 
 def process_casamento_capa():
+    process_casamento("10_11", [10, 11])
+    process_casamento("9_12", [9, 12])
     print('capa')
-    process_casamento("1_8", [8, 1])
 
 def process_casamento_primeiro_caderno():
     process_casamento_miolo()

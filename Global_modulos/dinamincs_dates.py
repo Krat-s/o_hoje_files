@@ -1,20 +1,13 @@
 import os
 import sys
 import time
-import keyboard as kb
 import pyautogui as pg
-# from datetime import datetime, timedelta
-from edicao_formatador import gerar_edicoes
-
-# from Quark_automações.Modulos_quark.data_formatador import formatar_data
-
-import sys
-import os
-
-# Caminho até a subpasta onde está o módulo
-subpasta_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Quartk_automações', 'Modulos_quark'))
-sys.path.append(subpasta_path)
-
+import keyboard as kb
+from datetime import datetime, timedelta
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
+from Quark_automações.Modulos_quark.data_formatador import formatar_data
+from Quark_automações.Modulos_quark.edicao_formatador import gerar_edicoes
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.4
