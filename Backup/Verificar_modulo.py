@@ -2,13 +2,14 @@ import sys
 import os
 
 # Caminho absoluto para a pasta Global_modulos
-modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Global_modulos'))
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
 
+
+from Global_modulos.teste import tesasdas
 # Adiciona ao sys.path
-sys.path.append(modulo_path)
 
 # Importa o módulo
-from Global_modulos import teste
 
 # Testa a função
-teste.fteste()
+tesasdas()

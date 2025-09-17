@@ -5,3 +5,5 @@ modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Glo
 
 from .Gmail_automações.gmail import create_drafts
 from .Quark_automações.Cabeçalho import Modelo_diário
+
+
