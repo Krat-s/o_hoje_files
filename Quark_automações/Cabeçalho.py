@@ -9,6 +9,8 @@ from Modulos_quark.data_formatador import formatar_data
 from Modulos_quark.edicao_formatador import gerar_edicoes
 from Modulos_quark.explorer_utils import verificar_windows 
 from pywinauto import Desktop
+modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(modulo_path)
 import Global_modulos.settings as cg
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
@@ -16,28 +18,8 @@ pg.PAUSE = 0.5
 pg.FAILSAFE = True
 time.sleep(1)
 
-modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Global_modulos'))
-sys.path.append(modulo_path)
-
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 SISTEMA_OPERACIONAL = verificar_windows()
-
-screen_width, screen_height = pg.size()
-center_x = screen_width / 2
-center_y = screen_height / 2
-
-edicao_inicial = 6881
-quantidade_por_semana = 5
-quantidade_repeticoes = 3
-data_inicial = datetime(2025, 9, 15) #Precisa ser uma segunda-feira
-
-# ---------------------------- POSIÇÕES DE CLIQUE ----------------------------
-x_data = 49.48
-y_data = 23.06
-x_edicao_17 = 44.17
-y_edicao_17 = 12.41
-x_edicao_capa = 13.91
-y_edicao_capa = 41.30
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 def log(mensagem): 
@@ -59,8 +41,8 @@ def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
 
 def click(x_percent, y_percent):
-    x = int((x_percent / 100) * screen_width)
-    y = int((y_percent / 100) * screen_height)
+    x = int((x_percent / 100) * cg.screen_width)
+    y = int((y_percent / 100) * cg.screen_height)
     pg.click(x, y)
 
 def abrir_software(numero):
@@ -91,7 +73,7 @@ def criar_pasta(nome, em=None):
     time.sleep(0.3)
     maximizar_janela()
     time.sleep(0.3)
-    pg.click(center_x, center_y)
+    pg.click(cg.center_x, cg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
     time.sleep(0.3)
     kb.write(nome)
@@ -102,7 +84,7 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
     if de:
         ir_para(de)
     nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
-    pg.click(center_x, center_y)
+    pg.click(cg.center_x, cg.center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.2)
@@ -113,7 +95,7 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
 def abrir_pasta(endereco):
     os.startfile(endereco)
     maximizar_janela()
-    pg.click(center_x, center_y)
+    pg.click(cg.center_x, cg.center_y)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def abrir_sugestão():
@@ -125,14 +107,14 @@ def abrir_sugestão():
 
 def selecionar_ferramenta(tecla):
     time.sleep(0.2)
-    pg.click(center_x, 10)   
+    pg.click(cg.center_x, 10)   
     time.sleep(0.2)
     pg.press("v")
     kb.press(tecla)
 
 def preencher_data(data_formatada):
     selecionar_ferramenta("v")
-    click(x_data, y_data)
+    click(cg.x_data, cg.y_data)
     selecionar_ferramenta("t")
     pg.press('t', presses=2)
     time.sleep(0.4)
@@ -175,7 +157,7 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana=None):
     abrir_sugestão()
     time.sleep(3)
     selecionar_ferramenta("v")
-    click(x_edicao_capa, y_edicao_capa)
+    click(cg.x_edicao_capa, cg.y_edicao_capa)
     selecionar_ferramenta("t")
     pg.press('t', presses=4)
     pg.press('backspace', presses=5)
@@ -201,7 +183,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
     selecionar_ferramenta("v")
     pg.hotkey('ctrl', '0')
-    click(x_edicao_17, y_edicao_17)
+    click(cg.x_edicao_17, cg.y_edicao_17)
     selecionar_ferramenta("t")
     pg.press('t', presses=4)
     pg.hotkey('ctrl', 'a')
@@ -211,11 +193,11 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def Modelo_diário():
     log(f"📦 Gerando edições...")
-    edicao = edicao_inicial
-    data = data_inicial
+    edicao = cg.edicao_inicial
+    data = cg.data_inicial
     
-    for _ in range(quantidade_repeticoes):
-        edicoes = gerar_edicoes(edicao, quantidade_por_semana)
+    for _ in range(cg.quantidade_repeticoes):
+        edicoes = gerar_edicoes(edicao, cg.quantidade_por_semana)
 
         for ed in edicoes:
             dia_semana = formatar_data(data, tipo='dia_semana')
@@ -260,16 +242,16 @@ def Modelo_diário():
             autodata_edicao_17(**info) #prepara o local no quark
             autodata_paginas(**info)
             autodata_edicao_1(**info)
-                                       
-            log(f"📦 Edição {ed} gerada com sucesso.")
+                                   
+            # log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {formatar_data(data)}")
             data += timedelta(days=1)
             data = ajustar_data(data)
-        edicao += quantidade_por_semana + 2
+        edicao += cg.quantidade_por_semana + 2
 
 if __name__ == "__main__":
     Modelo_diário()
     abrir_software(3)
     print('acabou')
 
-def create_models():
+def create_models(): #vou exportar essa função para o all_in_one para executar tudo de uma vez
     Modelo_diário()

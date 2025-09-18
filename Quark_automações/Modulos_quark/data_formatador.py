@@ -4,13 +4,6 @@ from datetime import datetime, timedelta
 
 locale.setlocale(locale.LC_TIME, "pt_BR.utf8")
 
-#arrumando datas
-import locale
-import datetime
-from datetime import datetime, timedelta
-
-locale.setlocale(locale.LC_TIME, "pt_BR.utf8")
-
 # Ajustando datas
 def formatar_data(data, tipo="completo"):
     dia = int(data.strftime('%d')) 
