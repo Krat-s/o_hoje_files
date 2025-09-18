@@ -53,8 +53,6 @@ def close_and_open_quark():
     pg.hotkey('win', '1')
     time.sleep(TIME2)
 
-
-
 def take_tool(tool):
     pg.click(centro_x, 10)
     kb.press(str(tool))
