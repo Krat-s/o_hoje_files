@@ -1,6 +1,7 @@
 import ctypes
 import pyautogui as pg
 import time
+import keyboard as kb
 from pywinauto import Desktop
 
 def abrir_software(numero):
@@ -8,6 +9,11 @@ def abrir_software(numero):
     pg.hotkey('win', str(numero))
     pg.press('enter')
     time.sleep(0.5)
+
+def max_windows():
+    kb.press_and_release('alt+space')
+    time.sleep(0.2)
+    kb.press_and_release('x')
 
 
 def verificar_windows() -> str:
