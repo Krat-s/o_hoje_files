@@ -20,7 +20,7 @@ WAY_WEB = r'\\192.168.1.249\redacao\web'
 
 # EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
 
-EDD = r"6883 - quarta-feira" 
+EDD = r"6885 - sexta-feira" 
 #variáveis
 
 #funções
@@ -52,8 +52,6 @@ def close_and_open_quark():
     pg.hotkey('win', 's')
     pg.hotkey('win', '1')
     time.sleep(TIME2)
-
-
 
 def take_tool(tool):
     pg.click(centro_x, 10)
@@ -142,14 +140,14 @@ def process_casamento_basico():
 
 def process_casamento_miolo():
     print('miolo')
-    process_casamento("3_6", [3, 6])
     process_casamento("2_7", [2, 7])    
-    process_casamento("4_5", [4, 5])
-    process_casamento("1_8", [8, 1])
 
 def process_casamento_capa():
+    process_casamento("1_8", [8, 1])
     process_casamento("10_11", [10, 11])
     process_casamento("9_12", [9, 12])
+    process_casamento("3_6", [3, 6])
+    process_casamento("4_5", [4, 5])
     print('capa')
 
 def process_casamento_primeiro_caderno():
@@ -167,6 +165,7 @@ process_casamento_miolo()
 pg.hotkey('win', 's')
 pg.hotkey('win', '3')
 print("ACABOU XD")
+
 
 
 # def fazer_escolha(opcao):
