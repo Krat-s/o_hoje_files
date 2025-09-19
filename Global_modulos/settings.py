@@ -8,6 +8,7 @@ CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas e
 CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
 CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
+CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 
 screen_width, screen_height = pg.size()
 center_x = screen_width / 2
@@ -37,8 +38,9 @@ elif pg.size() == (1920, 1080):
     y_edicao_capa = 58.07
 
 # Tempos de espera
-TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
+TEMPO_ABERTURA = 4
+TIMETOCLOSE = 6
 
 #Ativar isso se quiser usar posições absolutas(essas funcionam na maquina do comercial)
 x_data = 49.48

@@ -1,22 +1,19 @@
-import pyautogui as pg
-import time
-import keyboard as kb
 import os
+import sys
+import time
+import pyautogui as pg
+import keyboard as kb
 import tkinter as tk
 from tkinter import messagebox
+
+modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(modulo_path)
+import Global_modulos.settings as cg
+from Global_modulos.utils import abrir_software, verificar_windows, max_windows
 
 #Contantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
-
-largura, altura = pg.size()
-centro_x = largura / 2
-centro_y = altura / 2
-TIME1 = 5
-TIME2 = 4
-TIMETOCLOSE = 6
-WAY_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
-WAY_WEB = r'\\192.168.1.249\redacao\web'
 
 # EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
 
@@ -24,17 +21,12 @@ EDD = r"6885 - sexta-feira"
 #variáveis
 
 #funções
-def max_windows():
-    kb.press_and_release('alt+space')
-    time.sleep(0.2)
-    kb.press_and_release('x')
-
 def take_file(arquivo):
     kb.press_and_release('ctrl+f')
     time.sleep(0.5)
     kb.write(str(arquivo))
     time.sleep(2)
-    pg.click(centro_x, centro_y)
+    pg.click(cg.centro_x, cg.centro_y)
     pg.press('down')
     time.sleep(0.3)
     pg.press('down')
@@ -42,7 +34,7 @@ def take_file(arquivo):
     kb.press_and_release('enter')
 
 def open_web():
-    os.startfile(WAY_WEB + "\\" + EDD)
+    os.startfile(cg.CAMINHO_WEB + "\\" + EDD)
     time.sleep(0.3)
     max_windows()
 
@@ -51,10 +43,10 @@ def close_and_open_quark():
     pg.hotkey('alt', 'f4')
     pg.hotkey('win', 's')
     pg.hotkey('win', '1')
-    time.sleep(TIME2)
+    time.sleep(4)
 
 def take_tool(tool):
-    pg.click(centro_x, 10)
+    pg.click(cg.centro_x, 10)
     kb.press(str(tool))
 
 def confirmancia():
@@ -69,7 +61,7 @@ def open_paste_page_done():
     time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
     time.sleep(0.2)
-    kb.write(WAY_EDD + "\\" + EDD + "\\" + 'Páginas prontas')
+    kb.write(cg.CAMINHO_EDD + "\\" + EDD + "\\" + 'Páginas prontas')
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(0.2)
@@ -85,7 +77,7 @@ def agrupar_e_fechar_agora():
     time.sleep(0.2)
     pg.hotkey('ctrl', 'c')
     pg.hotkey('ctrl', 'f4')
-    time.sleep(TIMETOCLOSE)
+    time.sleep(cg.TIMETOCLOSE)
 
 def move_page(left, right):
     pg.hotkey('ctrl', 'shift', 'alt', 'm')
@@ -106,15 +98,15 @@ def process_page(page_number, is_even):
     open_paste_page_done()
     pg.write(str(page_number))
     confirmancia()
-    time.sleep(TIME1)
+    time.sleep(5)
     agrupar_e_fechar_agora()
-    time.sleep(TIMETOCLOSE)
-    time.sleep(TIMETOCLOSE)
+    time.sleep(cg.TIMETOCLOSE)
+    time.sleep(cg.TIMETOCLOSE)
     time.sleep(0.3)
     pg.hotkey('ctrl', '0')
-    pg.click(centro_x, centro_y)
+    pg.click(cg.centro_x, cg.centro_y)
     pg.hotkey('ctrl', 'v')
-    time.sleep(TIME1)
+    time.sleep(5)
     time.sleep(2)
     if is_even: 
         move_page(10, 20) 

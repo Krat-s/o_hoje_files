@@ -1,5 +1,14 @@
 import ctypes
+import pyautogui as pg
+import time
 from pywinauto import Desktop
+
+def abrir_software(numero):
+    pg.hotkey('win', 's')
+    pg.hotkey('win', str(numero))
+    pg.press('enter')
+    time.sleep(0.5)
+
 
 def verificar_windows() -> str:
     """

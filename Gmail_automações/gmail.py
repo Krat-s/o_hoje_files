@@ -1,7 +1,16 @@
 import time
 import keyboard as kb
 import pyautogui as pg
+import sys
+import os
+
+modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(modulo_path)
+import Global_modulos.settings as cg
+from Global_modulos.utils import abrir_software, verificar_windows, max_windows
 from Modulos_gmail.edicao_formatador import gerar_edicoes
+
+
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.4

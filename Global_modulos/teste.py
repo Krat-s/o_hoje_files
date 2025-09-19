@@ -1,5 +1,0 @@
-
-
-def tesasdas():
-    print("ok")
-
