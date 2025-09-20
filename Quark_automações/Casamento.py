@@ -15,10 +15,9 @@ from Global_modulos.utils import abrir_software, verificar_windows, max_windows
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-# EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
-
-EDD = r"6885 - sexta-feira" 
 #variáveis
+# EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
+EDD = r"6885 - sexta-feira" 
 
 #funções
 def take_file(arquivo):
