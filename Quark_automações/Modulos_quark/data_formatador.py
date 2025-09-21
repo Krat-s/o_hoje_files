@@ -4,16 +4,9 @@ from datetime import datetime, timedelta
 
 locale.setlocale(locale.LC_TIME, "pt_BR.utf8")
 
-#arrumando datas
-import locale
-import datetime
-from datetime import datetime, timedelta
-
-locale.setlocale(locale.LC_TIME, "pt_BR.utf8")
-
 # Ajustando datas
 def formatar_data(data, tipo="completo"):
-    dia = int(data.strftime('%d'))
+    dia = int(data.strftime('%d')) 
     proximo_dia = int((data + timedelta(days=1)).strftime('%d'))
     proximo_dia_formatado = f"{proximo_dia}º" if proximo_dia == 1 else f"{proximo_dia}"
     dia_formatado = f"{dia}º" if dia == 1 else f"{dia}"
@@ -83,16 +76,21 @@ teste_3 = formatar_data(teste_3, tipo="completo")
 virada_ano = formatar_data(datetime(2033, 12, 31), tipo="completo")
 
 # --------------------testes---------------------
-# print("Ontem:", ontem)
-# print("Hoje:", data_de_hoje)
-# print("Amanhã:", data_de_amanha)
-# print("virada de mar/abr:", data_especifica)
-# print("virada de ano:", virada_ano)
-# print("virada de mês random:", data_especifica_2)
-# print("tests", teste)
+def main():
+    print("Ontem:", ontem)
+    print("Hoje:", data_de_hoje)
+    print("Amanhã:", data_de_amanha)
+    print("virada de mar/abr:", data_especifica)
+    print("virada de ano:", virada_ano)
+    print("virada de mês random:", data_especifica_2)
+    print("tests", teste)
 
-# print(teste_3)
-# print(teste_2)
+    print(teste_3)
+    print(teste_2)
+
+
+if __name__ == "__main__":  
+    main()
 
 
 
