@@ -8,6 +8,8 @@ CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas e
 CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
 CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
+CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
+
 
 screen_width, screen_height = pg.size()
 center_x = screen_width / 2
@@ -16,7 +18,7 @@ center_y = screen_height / 2
 # Dados de edição
 quantidade_por_semana = 5
 quantidade_repeticoes = 2
-edicao_inicial = 8888
+edicao_inicial = 6888
 data_inicial = datetime(2025, 8, 11)  # Precisa ser uma segunda-feira
 
 # Posições de clique (em porcentagem da tela)
@@ -39,6 +41,7 @@ elif pg.size() == (1920, 1080):
 # Tempos de espera
 TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
+TIMETOCLOSE = 6
 
 #Ativar isso se quiser usar posições absolutas(essas funcionam na maquina do comercial)
 x_data = 49.48
