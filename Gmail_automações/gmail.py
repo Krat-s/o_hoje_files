@@ -2,27 +2,26 @@ import time
 import keyboard as kb
 import pyautogui as pg
 from Modulos_gmail.edicao_formatador import gerar_edicoes
+import os
+import sys
 
-# ---------------------------- CONFIGURAÇÕES ----------------------------
+modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(modulo_path)
+
+import Global_modulos.settings as cg
+import Global_modulos.utils as ut
+
+# ------------------------------------------------------------------------- CONFIGURAÇÕES
 pg.PAUSE = 0.4
 pg.FAILSAFE = True
 time.sleep(1)
 
-largura, altura = pg.size()
-centro_x = largura / 2
-centro_y = altura / 2
-
-# ---------------------------- VARIÁVEIS ----------------------------
-quantidade_por_semana = 5
-quantidade_repeticoes = 2
-edicao_inicial = 6881 #Precisa ser uma edição de segunda-feira
-
-# ---------------------------- FUNÇÕES DE AUTOMAÇÃO ----------------------------
+# ------------------------------------------------------------------------- FUNÇÕES DE AUTOMAÇÃO 
 def take_emails():
     """Captura os emails de um arquivo no VSCode"""
     pg.hotkey('win', 's')
     pg.hotkey('win', '3')  # Verificar se é o app certo (VSCode)
-    pg.click(x=centro_x, y=centro_y)
+    pg.click(cg.center_x, cg.center_y)
     time.sleep(0.3)
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
@@ -35,7 +34,7 @@ def take_emails():
     pg.press('down')
     pg.press('enter')
     time.sleep(0.5)
-    pg.click(x=centro_x, y=centro_y)
+    pg.click(cg.center_x, cg.center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.5)
@@ -47,12 +46,6 @@ def shortcut_send_emails():
     pg.press('c')  # Abrir menu de mensagem
     time.sleep(1.5)
     pg.hotkey('ctrl', 'shift', 'b')
-    time.sleep(0.5)
-
-def open_gmail():
-    """Atalho para abrir navegador no Gmail"""
-    pg.hotkey('win', 's')
-    pg.hotkey('win', '2')  # Verificar se é o navegador correto
     time.sleep(0.5)
 
 def enviar_emails_para_leitores(edicao):
@@ -80,29 +73,27 @@ def enviar_para_grafica(edicao, parte):
     pg.press('esc')
     time.sleep(1)
 
-# ---------------------------- ROTINA PRINCIPAL ----------------------------
+# ------------------------------------------------------------------------- ROTINA PRINCIPAL
 
-"""Captura os emails antes de iniciar o envio""" 
 def create_draft():
     print("📦 Edições geradas:")
-    edicao = edicao_inicial
+    edicao = cg.edicao_inicial
    
-    for _ in range(quantidade_repeticoes):
-        edicoes = gerar_edicoes(edicao, quantidade_por_semana)
+    for _ in range(cg.quantidade_repeticoes):
+        edicoes = gerar_edicoes(edicao, cg.quantidade_por_semana)
 
         for ed in edicoes:
             print(f"→ {ed}")
-            enviar_para_grafica(ed, "básico")
-            enviar_para_grafica(ed, "resto")
-            enviar_emails_para_leitores(ed)
+            # enviar_para_grafica(ed, "básico")
+            # enviar_para_grafica(ed, "resto")
+            # enviar_emails_para_leitores(ed)
 
-        edicao += quantidade_por_semana + 2
+        edicao += cg.quantidade_por_semana + 2
 
 def create_drafts():
     take_emails()
-    open_gmail()
+    cg.open_software(2) #Abrindo Gmail -- ATENÇÃO -- Verificar se está na aba certa do navegador
     create_draft()
-
 
 if __name__ == "__main__":
     print("teste")

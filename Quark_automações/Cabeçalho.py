@@ -9,9 +9,11 @@ from Modulos_quark.data_formatador import formatar_data
 from Modulos_quark.edicao_formatador import gerar_edicoes
 from Modulos_quark.explorer_utils import verificar_windows 
 from pywinauto import Desktop
+
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 import Global_modulos.settings as cg
+import Global_modulos.utils as ut
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -45,17 +47,6 @@ def click(x_percent, y_percent):
     y = int((y_percent / 100) * cg.screen_height)
     pg.click(x, y)
 
-def abrir_software(numero):
-    pg.hotkey('win', 's')
-    pg.hotkey('win', str(numero))
-    pg.press('enter')
-    time.sleep(0.5)
-
-def maximizar_janela():
-    kb.press_and_release('alt+space')
-    time.sleep(0.2)
-    kb.press_and_release('x')
-
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def pasta_esta_aberta(*nomes):
     janelas = Desktop(backend="uia").windows()
@@ -71,7 +62,7 @@ def criar_pasta(nome, em=None):
     if em:
         ir_para(em)
     time.sleep(0.3)
-    maximizar_janela()
+    cg.max_windows()
     time.sleep(0.3)
     pg.click(cg.center_x, cg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
@@ -94,7 +85,7 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
 
 def abrir_pasta(endereco):
     os.startfile(endereco)
-    maximizar_janela()
+    cg.max_windows()
     pg.click(cg.center_x, cg.center_y)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
@@ -237,7 +228,7 @@ def Modelo_diário():
             pg.hotkey('alt', 'up')
 
             # -------------------------------------------------------------------------Aplicando autodata
-            abrir_software(1)
+            cg.open_software(1) #Abrindo Quark
             selecionar_ferramenta("v")
             autodata_edicao_17(**info) #prepara o local no quark
             autodata_paginas(**info)
@@ -250,7 +241,7 @@ def Modelo_diário():
 
 if __name__ == "__main__":
     Modelo_diário()
-    abrir_software(3)
+    cg.open_software(3) #Abrindo Vscode
     print('acabou')
 
 def create_models(): #vou exportar essa função para o all_in_one para executar tudo de uma vez

@@ -71,3 +71,9 @@ def max_windows():
     kb.press_and_release('alt+space')
     time.sleep(0.2)
     kb.press_and_release('x')
+
+def open_software(numero):
+    pg.hotkey('win', 's')
+    pg.hotkey('win', str(numero))
+    pg.press('enter')
+    time.sleep(0.5)

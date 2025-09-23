@@ -8,33 +8,26 @@ from tkinter import messagebox
 
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
-
 import Global_modulos.settings as cg
 import Global_modulos.utils as ut
 
-
-#Contantes
+# ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
+time.sleep(1)
 
-# Variavels
+# ------------------------------------------------------------------------- Variáveis
 # EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
-EDD = f"{cg.edicao_inicial} - segunda-feira" 
+# EDD = f"{cg.edicao_inicial} - terça-feira" 
+EDD = r'6889 - terça-feira'
 
-
-#funções
-
-# def max_windows():
-#     kb.press_and_release('alt+space')
-#     time.sleep(0.2)
-#     kb.press_and_release('x')
-
+# ------------------------------------------------------------------------- Funções
 def take_file(arquivo):
     kb.press_and_release('ctrl+f')
     time.sleep(0.5)
     kb.write(str(arquivo))
     time.sleep(2)
-    pg.click(cg.centro_x, cg.centro_y)
+    pg.click(cg.center_x, cg.center_y)
     pg.press('down')
     time.sleep(0.3)
     pg.press('down')
@@ -46,7 +39,7 @@ def open_web():
     time.sleep(0.3)
     ut.max_windows()
 
-#funções-específicas
+# ------------------------------------------------------------------------- Funções específicas
 def close_and_open_quark():
     pg.hotkey('alt', 'f4')
     pg.hotkey('win', 's')
@@ -54,7 +47,7 @@ def close_and_open_quark():
     time.sleep(4)
 
 def take_tool(tool):
-    pg.click(cg.centro_x, 10)
+    pg.click(cg.center_x, 10)
     kb.press(str(tool))
 
 def confirmancia():
@@ -112,7 +105,7 @@ def process_page(page_number, is_even):
     time.sleep(cg.TIMETOCLOSE)
     time.sleep(0.3)
     pg.hotkey('ctrl', '0')
-    pg.click(cg.centro_x, cg.centro_y)
+    pg.click(cg.center_x, cg.center_y)
     pg.hotkey('ctrl', 'v')
     time.sleep(5)
     time.sleep(2)
@@ -139,14 +132,14 @@ def process_casamento_basico():
 
 def process_casamento_miolo():
     print('miolo')
-    process_casamento("3_6", [3, 6])
-    process_casamento("2_7", [2, 7])    
-    process_casamento("4_5", [4, 5])
-    process_casamento("1_8", [8, 1])
-
-def process_casamento_capa():
     process_casamento("10_11", [10, 11])
     process_casamento("9_12", [9, 12])
+    process_casamento("3_6", [3, 6])
+    process_casamento("4_5", [4, 5])
+
+def process_casamento_capa():
+    process_casamento("2_7", [2, 7])    
+    process_casamento("1_8", [8, 1])
     print('capa')
 
 def process_casamento_primeiro_caderno():
@@ -157,15 +150,13 @@ def process_casamento_completo():
     process_casamento_basico()
     process_casamento_primeiro_caderno()
 
-# --------------------------Executando 
+# ------------------------------------------------------------------------- Executando 
 # time.sleep(5)
 # process_casamento_basico()
-# process_casamento_miolo() 
+process_casamento_miolo() 
 pg.hotkey('win', 's')
 pg.hotkey('win', '3')
 print("ACABOU XD")
-print(EDD)
-open_web()
 
 
 # def fazer_escolha(opcao):

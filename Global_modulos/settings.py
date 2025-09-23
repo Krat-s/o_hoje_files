@@ -1,7 +1,7 @@
 from datetime import datetime
 import pyautogui as pg
 
-# Caminhos de rede
+# ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
 CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\Modelo'
 CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
@@ -10,19 +10,17 @@ CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 
-
 screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
 
-# Dados de edição
+# ------------------------------------------------------------------------- Dados de edição
 quantidade_por_semana = 5
 quantidade_repeticoes = 2
-edicao_inicial = 6888
+edicao_inicial = 6889
 data_inicial = datetime(2025, 8, 11)  # Precisa ser uma segunda-feira
 
-# Posições de clique (em porcentagem da tela)
-# screen_width, screen_height = pyautogui.size()
+# ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)
 if pg.size() == (1366, 768):
     x_data = 49.48
     y_data = 23.06
@@ -38,12 +36,12 @@ elif pg.size() == (1920, 1080):
     x_edicao_capa = 18.74
     y_edicao_capa = 58.07
 
-# Tempos de espera
+# ------------------------------------------------------------------------- Tempos de espera
 TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
 TIMETOCLOSE = 6
 
-#Ativar isso se quiser usar posições absolutas(essas funcionam na maquina do comercial)
+# ------------------------------------------------------------------------- Ativar isso se quiser usar posições absolutas(essas funcionam na maquina do comercial)
 x_data = 49.48
 y_data = 23.06
 x_edicao_17 = 44.17
