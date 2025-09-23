@@ -15,10 +15,8 @@ center_x = screen_width / 2
 center_y = screen_height / 2
 
 # ------------------------------------------------------------------------- Dados de edição
-quantidade_por_semana = 5
 quantidade_repeticoes = 2
-edicao_inicial = 6889
-data_inicial = datetime(2025, 8, 11)  # Precisa ser uma segunda-feira
+edicao_inicial = 6888
 
 # ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)
 if pg.size() == (1366, 768):
