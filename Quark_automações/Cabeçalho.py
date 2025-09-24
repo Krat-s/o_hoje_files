@@ -216,7 +216,6 @@ def Modelo_diário():
                 abrir_pasta(cg.CAMINHO_PAGFLIP)
             
             criar_pasta(pasta_nome)
-            copiar_modelo_para_pasta(cg.CAMINHO_PAGFLIP, ed, dia_semana, cg.CAMINHO_MODELO_PAGFLIP)
 
             criar_pasta(pasta_nome, cg.CAMINHO_WEB)
             copiar_modelo_para_pasta(cg.CAMINHO_WEB, ed, dia_semana, cg.CAMINHO_MODELO_WEB)
