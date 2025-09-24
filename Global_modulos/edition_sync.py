@@ -1,8 +1,6 @@
 import os
 import sys
-import time
 import pyautogui as pg
-import keyboard as kb
 from datetime import datetime, timedelta
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
@@ -12,13 +10,8 @@ from Quark_automações.Modulos_quark.edicao_formatador import gerar_edicoes
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.4
-pg.FAILSAFE = True
-time.sleep(1)
 
 # ---------------------------- VARIÁVEIS ----------------------------
-
-from datetime import datetime, timedelta
-
 def obter_data_por_edicao(edi_numero, edi_inicial_base=6496, data_inicial=datetime(2024, 8, 26)):
     """
     Retorna a data correspondente à edição informada.
@@ -52,26 +45,25 @@ def obter_data_por_edicao(edi_numero, edi_inicial_base=6496, data_inicial=dateti
 edicao_ini = cg.edicao_inicial #Precisa ser uma segunda-feira
 data_edicao = obter_data_por_edicao(edicao_ini)
 quantidade_por_semana = 5
-
-print(f"A edição {edicao_ini} cai em {formatar_data(data_edicao)}..........................")
-
 data = data_edicao
     
-for _ in range(cg.quantidade_repeticoes):
-    edicoes = gerar_edicoes(edicao_ini, quantidade_por_semana)
+def data():
+    
+    for _ in range(cg.quantidade_repeticoes):
+        edicoes = gerar_edicoes(edicao_ini, quantidade_por_semana)
 
-    for ed in edicoes:
-        dia_semana = formatar_data(data, tipo='dia_semana')
-        pasta_nome = f"{ed.replace('.', '')} - {dia_semana}"
-        info = {
-        "edicao_formatada": ed,
-        "data_formatada": formatar_data(data),
-        "dia_semana": formatar_data(data, tipo='dia_semana')
-        }
+        for ed in edicoes:
+            dia_semana = formatar_data(data, tipo='dia_semana')
+            pasta_nome = f"{ed.replace('.', '')} - {dia_semana}"
+            info = {
+            "edicao_formatada": ed,
+            "data_formatada": formatar_data(data),
+            "dia_semana": formatar_data(data, tipo='dia_semana')
+            }
+            # print(f"📦 Criando: {pasta_nome}")
+            # print(f"📦 Criando: {ed}, que corresponde a data {formatar_data(data)}")
+            data += timedelta(days=1)
+        edicao_ini += quantidade_por_semana + 2
 
-        # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
-                                        
-        # print(f"📦 Criando: {pasta_nome}")
-        print(f"📦 Criando: {ed}, que corresponde a data {formatar_data(data)}")
-        data += timedelta(days=1)
-    edicao_ini += quantidade_por_semana + 2
+
+print(data)

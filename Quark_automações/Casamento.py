@@ -10,11 +10,12 @@ modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 import Global_modulos.settings as cg
 import Global_modulos.utils as ut
+import Global_modulos.edition_sync as sc
+from Quark_automações.Modulos_quark.data_formatador import formatar_data
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
-time.sleep(1)
 
 # ------------------------------------------------------------------------- Variáveis
 # EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
@@ -153,10 +154,13 @@ def process_casamento_completo():
 # ------------------------------------------------------------------------- Executando 
 # time.sleep(5)
 # process_casamento_basico()
-process_casamento_miolo() 
-pg.hotkey('win', 's')
-pg.hotkey('win', '3')
+# process_casamento_miolo() 
+# pg.hotkey('win', 's')
+# pg.hotkey('win', '3')
 print("ACABOU XD")
+print(formatar_data(sc.data, tipo='dia_semana'))
+print(formatar_data(sc.data))
+
 
 
 # def fazer_escolha(opcao):

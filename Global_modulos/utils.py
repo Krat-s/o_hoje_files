@@ -4,6 +4,8 @@ import keyboard as kb
 import time
 from pywinauto import Desktop
 
+
+# ---------------------------- Funções ----------------------------
 def abrir_software(numero):
     pg.hotkey('win', 's')
     pg.hotkey('win', str(numero))

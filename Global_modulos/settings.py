@@ -1,4 +1,3 @@
-from datetime import datetime
 import pyautogui as pg
 
 # ------------------------------------------------------------------------- Caminhos de rede
@@ -48,5 +47,7 @@ x_edicao_capa = 13.91
 y_edicao_capa = 41.30
 
 if __name__ == "__main__":
-    print(f"Tamanho da tela: {pg.size()}")
-    print(f"Centro da tela: ({center_x}, {center_y})")
+    # print(f"Tamanho da tela: {pg.size()}")
+    # print(f"Centro da tela: ({center_x}, {center_y})")
+    
+    print(f"Edição inicial: {edicao_inicial}")
