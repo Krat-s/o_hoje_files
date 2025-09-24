@@ -3,7 +3,7 @@ import pyautogui as pg
 import keyboard as kb
 import time
 from pywinauto import Desktop
-
+from datetime import datetime, timedelta
 
 # ---------------------------- Funções ----------------------------
 def abrir_software(numero):
@@ -11,6 +11,9 @@ def abrir_software(numero):
     pg.hotkey('win', str(numero))
     pg.press('enter')
     time.sleep(0.5)
+
+def ajustar_data(data):
+    return data + timedelta(days=1) if data.weekday() == 6 else data
 
 def verificar_windows() -> str:
     """

@@ -158,8 +158,8 @@ def process_casamento_completo():
 # pg.hotkey('win', 's')
 # pg.hotkey('win', '3')
 print("ACABOU XD")
-print(formatar_data(sc.data, tipo='dia_semana'))
-print(formatar_data(sc.data))
+# print(formatar_data(sc.data, tipo='dia_semana'))
+# print(formatar_data(sc.data))
 
 
 
