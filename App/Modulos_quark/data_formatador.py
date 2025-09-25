@@ -44,8 +44,8 @@ def formatar_data(data, tipo="completo"):
     elif data.month == 3:
         return f"{data.strftime('%A')}, {dia_formatado} de {marco_babugado} de {data.strftime('%Y')}" if data.weekday() not in formatos else formatos_marco_var[data.weekday()](data)   
 
-    # elif data.weekday() != 5 and mes_de_data != proximo_mes:
-    #     return 
+    elif data.weekday() != 5 and data
+        return 
 
     elif mes_de_data != proximo_mes and data.month != 3:    
         return f"fim de semana, {dia_formatado} de {mes_de_data} e {proximo_dia_formatado} de {proximo_mes} de {data.strftime('%Y')}" if data.weekday() in formatos else f"{data.strftime('%A')}, {dia_formatado} de {mes_de_data} de {data.strftime('%Y')}"
