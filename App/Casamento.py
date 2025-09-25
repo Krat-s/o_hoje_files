@@ -8,10 +8,10 @@ from tkinter import messagebox
 
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
-import Global_modulos.settings as cg
-import Global_modulos.utils as ut
-import Global_modulos.edition_sync as sc
-from Quark_automações.Modulos_quark.data_formatador import formatar_data
+import Global.settings as cg
+import Global.utils as ut
+import Global.edition_sync as sc
+from App.Modulos_quark.data_formatador import formatar_data
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 

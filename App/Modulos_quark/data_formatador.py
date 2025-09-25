@@ -74,6 +74,7 @@ teste = formatar_data(teste)
 teste_2 = formatar_data(teste_2, tipo="mes")
 teste_3 = formatar_data(teste_3, tipo="completo")
 virada_ano = formatar_data(datetime(2033, 12, 31), tipo="completo")
+teste = formatar_data()
 
 # --------------------testes---------------------
 def main():

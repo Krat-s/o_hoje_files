@@ -4,9 +4,10 @@ import pyautogui as pg
 from datetime import datetime, timedelta
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
-import Global_modulos.settings as cg
-from Quark_automações.Modulos_quark.data_formatador import formatar_data
-from Quark_automações.Modulos_quark.edicao_formatador import gerar_edicoes
+import Global.settings as cg
+import Global.utils as ut
+from App.Modulos_quark.data_formatador import formatar_data
+from App.Modulos_quark.edicao_formatador import gerar_edicoes
 
 # function
 def obter_data_por_edicao(edi_numero, edi_inicial=6496, data_inicial=datetime(2024, 8, 26)):
@@ -39,15 +40,16 @@ def obter_data_por_edicao(edi_numero, edi_inicial=6496, data_inicial=datetime(20
     return data_inicial + timedelta(days=offset_total)
 
 edi = cg.edicao_inicial
-data_edicao = obter_data_por_edicao(edi)
+data_edicao = obter_data_por_edicao(8900)
 quantidade_por_semana = 5
 
-print(f"A data correspondente à edição {edi} é {data_edicao.strftime('%A, %d/%m/%Y')}")
-print(f"A data correspondente à edição {edi} é {formatar_data(data_edicao)}")
+print(f"EDITION SYNC: {edi} é {data_edicao.strftime('%A, %d/%m/%Y')}")
+print(f"EDITION SYNC: {edi} é {formatar_data(data_edicao)}")
 
 def main():
     edicao_ini = cg.edicao_inicial
     data = obter_data_por_edicao(edicao_ini)
+    
 
     for _ in range(cg.quantidade_repeticoes):
         edicoes = gerar_edicoes(edicao_ini, quantidade_por_semana)
@@ -60,13 +62,35 @@ def main():
             "data_formatada": formatar_data(data),
             "dia_semana": formatar_data(data, tipo='dia_semana')
             }
-            print(f"📦 Criando: {ed}, que corresponde à data {formatar_data(data)}")
-            data += timedelta(days=1)
+            print(f"📦 EDITION SYNC: {ed}, {formatar_data(data)}")
+            
         edicao_ini += quantidade_por_semana + 2
         
+def main2():
+    edicao_ini = cg.edicao_inicial
+    data_atual = obter_data_por_edicao(edicao_ini)
+
+    for _ in range(cg.quantidade_repeticoes):
+        edicoes = gerar_edicoes(edicao_ini, quantidade_por_semana)
+
+        for ed in edicoes:
+
+            # Extrai o número inteiro da edição:
+            num = int(ed.replace('.', '').split('-')[0])
+            # Recalcula a data exata para essa edição:
+            data_atual = obter_data_por_edicao(num)
+            print(f"📦 EDITION SYNC: {ed}, {formatar_data(data_atual)}")
+
+            # Se for edição de fim de semana (p.ex., contém "-"), pula 2 dias; senão, 1 dia:
+            passo = 2 if '-' in ed else 1
+            data_atual += timedelta(days=passo)
+        edicao_ini += quantidade_por_semana + 2
+
 
 if __name__ == "__main__":
-    main()
+    main2()
+
+
 
 
 
