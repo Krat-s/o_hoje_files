@@ -66,15 +66,35 @@ def main2():
             num = int(ed.replace('.', '').split('-')[0])
             # Recalcula a data exata para essa edição:
             data_atual = obter_data_por_edicao(num)
-            print(f"📦 EDITION SYNC: {ed}, {formatar_data(data_atual).capitalize()}")
-            print(dia_semana)
-            print(pasta_nome) 
+            # print(f"📦 EDITION SYNC: {ed}, {formatar_data(data_atual).capitalize()}")
+            # print(dia_semana)
+            # print(pasta_nome) 
             # Se for edição de fim de semana (p.ex., contém "-"), pula 2 dias; senão, 1 dia:
             passo = 2 if '-' in ed else 1
             data_atual += timedelta(days=passo)
         edicao_ini += quantidade_por_semana + 2
 
+def obter_edicao_por_data(data_alvo, edi_inicial=6496, data_inicial=datetime(2024, 8, 26)):
+    if data_alvo < data_inicial:
+        raise ValueError("A data não pode ser anterior à data inicial.")
+
+    dias_passados = (data_alvo - data_inicial).days
+    edicao_numero = edi_inicial
+
+    while True:
+        data_edicao = obter_data_por_edicao(edicao_numero, edi_inicial, data_inicial)
+        if data_edicao.date() == data_alvo.date():
+            return edicao_numero
+        elif data_edicao > data_alvo:
+            break
+        edicao_numero += 1
+
+    raise ValueError("Data não corresponde a nenhuma edição válida.")
+
+data_edicao
 
 if __name__ == "__main__":
-    teste()
-    main2()
+    # teste()
+    # main2()
+    obter_edicao_por_data(datetime.now())
+    print(obter_edicao_por_data(datetime.now()))

@@ -5,22 +5,47 @@ import os
 import sys
 import tkinter as tk
 from tkinter import messagebox
+from datetime import datetime, timedelta
 
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
+
+import Global.data_edition_sync as scde
+
 import Global.settings as cg
 import Global.utils as ut
 import Global.edition_sync as sc
+import Global.data_sync as scd
 from App.Modulos_quark.data_formatador import formatar_data
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
+# sync = scde.EdicaoDataSync(edicao_inicial=6496, data_inicial=datetime(2024, 8, 26))
+
+
+# data = sync.obter_data_por_edicao(6893)
+# # ut.ajustar_data(data)
+# print("📅 Data da amanhã:", formatar_data(data))
+
+# amanha = datetime.now() + timedelta(days=1)
+# print(amanha)
+# edicao = sync.obter_edicao_por_data(amanha)
+
+# print(edicao)
+
+hoje = datetime.now()
+data_amanha = hoje + timedelta(days=1)
+print("📅 Data da edição de amanha:", formatar_data(data_amanha, tipo="dia_semana"))
+
+
 # ------------------------------------------------------------------------- Variáveis
 # EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
 # EDD = f"{cg.edicao_inicial} - terça-feira" 
-EDD = r'6889 - terça-feira'
+EDD = f"6892 - {formatar_data(data_amanha, tipo="dia_semana")}"
+print(EDD)
+
 
 # ------------------------------------------------------------------------- Funções
 def take_file(arquivo):
