@@ -189,47 +189,47 @@ def Modelo_diário():
         edicoes = gerar_edicoes(edicao, sc.quantidade_por_semana)
 
         for ed in edicoes:
-            # dia_semana = formatar_data(data, tipo='dia_semana')
-            # pasta_nome = f"{ed.replace('.', '')} - {dia_semana}"
-            # info = {
-            # "edicao_formatada": ed,
-            # "data_formatada": formatar_data(data),
-            # "dia_semana": formatar_data(data, tipo='dia_semana')
-            # }
-            # modelo_path = {
-            # 0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
-            # 5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
-            # }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
+            dia_semana = formatar_data(data, tipo='dia_semana')
+            pasta_nome = f"{ed.replace('.', '')} - {dia_semana}"
+            info = {
+            "edicao_formatada": ed,
+            "data_formatada": formatar_data(data),
+            "dia_semana": formatar_data(data, tipo='dia_semana')
+            }
+            modelo_path = {
+            0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
+            5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
+            }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
-            # # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
-            # if pasta_esta_aberta("4 Adianto de novas edições"):
-            #     abrir_pasta(cg.CAMINHO_ADIANTO)
-            #     ir_para(cg.CAMINHO_PAGFLIP)
-            # elif pasta_esta_aberta("fotos"):
-            #     abrir_pasta(cg.CAMINHO_FOTOS)
-            #     ir_para(cg.CAMINHO_PAGFLIP)
-            # elif pasta_esta_aberta("00 Pagflip"):
-            #     abrir_pasta(cg.CAMINHO_PAGFLIP)
-            # else:
-            #     abrir_pasta(cg.CAMINHO_PAGFLIP)
+            # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
+            if pasta_esta_aberta("4 Adianto de novas edições"):
+                abrir_pasta(cg.CAMINHO_ADIANTO)
+                ir_para(cg.CAMINHO_PAGFLIP)
+            elif pasta_esta_aberta("fotos"):
+                abrir_pasta(cg.CAMINHO_FOTOS)
+                ir_para(cg.CAMINHO_PAGFLIP)
+            elif pasta_esta_aberta("00 Pagflip"):
+                abrir_pasta(cg.CAMINHO_PAGFLIP)
+            else:
+                abrir_pasta(cg.CAMINHO_PAGFLIP)
             
-            # criar_pasta(pasta_nome)
+            criar_pasta(pasta_nome)
 
-            # criar_pasta(pasta_nome, cg.CAMINHO_WEB)
-            # copiar_modelo_para_pasta(cg.CAMINHO_WEB, ed, dia_semana, cg.CAMINHO_MODELO_WEB)
+            criar_pasta(pasta_nome, cg.CAMINHO_WEB)
+            copiar_modelo_para_pasta(cg.CAMINHO_WEB, ed, dia_semana, cg.CAMINHO_MODELO_WEB)
 
-            # criar_pasta(pasta_nome, cg.CAMINHO_FOTOS)
+            criar_pasta(pasta_nome, cg.CAMINHO_FOTOS)
         
-            # criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO)
-            # copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
-            # pg.hotkey('alt', 'up')
+            criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO)
+            copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+            pg.hotkey('alt', 'up')
 
-            # # -------------------------------------------------------------------------Aplicando autodata
-            # cg.open_software(1) #Abrindo Quark
-            # selecionar_ferramenta("v")
-            # autodata_edicao_17(**info) #prepara o local no quark
-            # autodata_paginas(**info)
-            # autodata_edicao_1(**info)
+            # -------------------------------------------------------------------------Aplicando autodata
+            cg.open_software(1) #Abrindo Quark
+            selecionar_ferramenta("v")
+            autodata_edicao_17(**info) #prepara o local no quark
+            autodata_paginas(**info)
+            autodata_edicao_1(**info)
                                    
             log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {formatar_data(data)}")
             data += timedelta(days=1)

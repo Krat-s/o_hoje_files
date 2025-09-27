@@ -50,6 +50,7 @@ class EdicaoDataSync:
         """
         if data_alvo < self.data_inicial:
             raise ValueError("A data não pode ser anterior à data inicial.")
+        
 
         dias_passados = (data_alvo - self.data_inicial).days
         edicao_numero = self.edicao_inicial
@@ -58,6 +59,7 @@ class EdicaoDataSync:
             data_edicao = self.obter_data_por_edicao(edicao_numero)
             if data_edicao.date() == data_alvo.date():
                 return edicao_numero
+            
             elif data_edicao > data_alvo:
                 break
             edicao_numero += 1

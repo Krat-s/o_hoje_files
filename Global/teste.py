@@ -17,7 +17,7 @@ data = sync.obter_data_por_edicao(8900)
 print("📅 Data da edição 8900:", data.strftime('%d/%m/%Y'))
 
 # Obter edição por data
-edicao = sync.obter_edicao_por_data(datetime(2025, 9, 26))
+edicao = sync.obter_edicao_por_data(datetime(2025, 9, 24))
 edicao_amanha = sync.obter_edicao_por_data(datetime.now() + timedelta(days=1))
 print("📰 Edição correspondente à data:", edicao_amanha)
 
@@ -35,3 +35,4 @@ data = sync.obter_data_por_edicao(6895)
 hoje = datetime.now()
 data_amanha = hoje + timedelta(days=1)
 print("📅 Data da edição de amanha:", formatar_data(data_amanha, tipo="dia_semana"))
+
