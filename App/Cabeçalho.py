@@ -40,11 +40,6 @@ def ir_para(específico=None):
     pg.press('enter')
     time.sleep(0.2)
 
-def click(x_percent, y_percent):
-    x = int((x_percent / 100) * cg.screen_width)
-    y = int((y_percent / 100) * cg.screen_height)
-    pg.click(x, y)
-
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def pasta_esta_aberta(*nomes):
     janelas = Desktop(backend="uia").windows()
@@ -60,7 +55,7 @@ def criar_pasta(nome, em=None):
     if em:
         ir_para(em)
     time.sleep(0.3)
-    cg.max_windows()
+    ut.max_windows()
     time.sleep(0.3)
     pg.click(cg.center_x, cg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
@@ -83,7 +78,7 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
 
 def abrir_pasta(endereco):
     os.startfile(endereco)
-    cg.max_windows()
+    ut.max_windows()
     pg.click(cg.center_x, cg.center_y)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
@@ -103,7 +98,7 @@ def selecionar_ferramenta(tecla):
 
 def preencher_data(data_formatada):
     selecionar_ferramenta("v")
-    click(cg.x_data, cg.y_data)
+    pg.click(cg.x_data, cg.y_data)
     selecionar_ferramenta("t")
     pg.press('t', presses=2)
     time.sleep(0.4)
@@ -146,7 +141,7 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana=None):
     abrir_sugestão()
     time.sleep(3)
     selecionar_ferramenta("v")
-    click(cg.x_edicao_capa, cg.y_edicao_capa)
+    pg.click(cg.x_edicao_capa, cg.y_edicao_capa)
     selecionar_ferramenta("t")
     pg.press('t', presses=4)
     pg.press('backspace', presses=5)
@@ -172,7 +167,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
     selecionar_ferramenta("v")
     pg.hotkey('ctrl', '0')
-    click(cg.x_edicao_17, cg.y_edicao_17)
+    pg.click(cg.x_edicao_17, cg.y_edicao_17)
     selecionar_ferramenta("t")
     pg.press('t', presses=4)
     pg.hotkey('ctrl', 'a')
@@ -225,7 +220,7 @@ def Modelo_diário():
             pg.hotkey('alt', 'up')
 
             # -------------------------------------------------------------------------Aplicando autodata
-            cg.open_software(1) #Abrindo Quark
+            ut.open_software(1) #Abrindo Quark
             selecionar_ferramenta("v")
             autodata_edicao_17(**info) #prepara o local no quark
             autodata_paginas(**info)
