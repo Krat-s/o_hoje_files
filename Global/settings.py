@@ -7,7 +7,6 @@ sys.path.append(raiz_projeto)
 import Global.settings as cg
 import Global.utils as ut
 from App.Modulos_quark.data_formatador import formatar_data
-from Global.data_edition_sync import EdicaoDataSync
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
@@ -23,46 +22,49 @@ center_x = screen_width / 2
 center_y = screen_height / 2
 
 # ------------------------------------------------------------------------- Dados para Casamento
-sync = EdicaoDataSync(edicao_inicial=6496, data_inicial=datetime(2024, 8, 26))
-hoje = datetime.now()
-amanha = hoje + timedelta(days=1)
-
 print(f"...settings loading sucess")
 print(f"...")
-proxima_edicao = sync.obter_edicao_por_data(datetime.now() + timedelta(days=1))
 
 # ------------------------------------------------------------------------- Dados de edição
 quantidade_repeticoes = 2
 edicao_inicial = 6888
 
 # ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)
-if pg.size() == (1366, 768):
-    x_data = 49.48
-    y_data = 23.06
-    x_edicao_17 = 44.17
-    y_edicao_17 = 12.41
-    x_edicao_capa = 13.91
-    y_edicao_capa = 41.30
-elif pg.size() == (1920, 1080):
-    x_data = 68.45
-    y_data = 33.20
-    x_edicao_17 = 41.14
-    y_edicao_17 = 15.40
-    x_edicao_capa = 18.74
-    y_edicao_capa = 58.07
+# if pg.size() == (1366, 768):
+#     x_data = 49.48
+#     y_data = 23.06
+#     x_edicao_17 = 44.17
+#     y_edicao_17 = 12.41
+#     x_edicao_capa = 13.91
+#     y_edicao_capa = 41.30
+# elif pg.size() == (1920, 1080):
+#     x_data = 68.45
+#     y_data = 33.20
+#     x_edicao_17 = 41.14
+#     y_edicao_17 = 15.40
+#     x_edicao_capa = 18.74
+#     y_edicao_capa = 58.07
 
 # ------------------------------------------------------------------------- Tempos de espera
 TEMPO_ABERTURA = 4
 TEMPO_FECHAMENTO = 3
 TIMETOCLOSE = 6
 
+
+# x_data = 49.48
+# y_data = 23.06
+# x_edicao_17 = 44.17
+# y_edicao_17 = 12.41
+# x_edicao_capa = 13.91
+# y_edicao_capa = 41.30
+
 # ------------------------------------------------------------------------- Ativar isso se quiser usar posições absolutas(essas funcionam na maquina do comercial)
-x_data = 49.48
-y_data = 23.06
-x_edicao_17 = 44.17
-y_edicao_17 = 12.41
-x_edicao_capa = 13.91
-y_edicao_capa = 41.30
+x_data = 850
+y_data = 259
+x_edicao_17 = 560
+y_edicao_17 = 121
+x_edicao_capa = 346
+y_edicao_capa = 448
 
 if __name__ == "__main__":
     # print(f"Tamanho da tela: {pg.size()}")

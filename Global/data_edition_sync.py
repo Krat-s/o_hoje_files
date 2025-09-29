@@ -1,87 +1,97 @@
-# edicao_data_sync.py
 from datetime import datetime, timedelta
+
 import os
 import sys
-from datetime import datetime, timedelta
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
+
+from App.Modulos_quark.data_formatador import formatar_data
 import Global.settings as cg
 import Global.utils as ut
+from App.Modulos_quark.edicao_formatador import gerar_edicoes
 from App.Modulos_quark.data_formatador import formatar_data
 
+# Base fixa para cálculo de data
+EDICAO_BASE = 6496
+DATA_BASE = datetime(2024, 8, 26)  # Segunda-feira
 
+# Parâmetros padrão de geração
+QUANTIDADE_POR_SEMANA = 5
+REPETICOES_PADRAO = cg.quantidade_repeticoes
 
-def ajustar_data(data):
-    return data + timedelta(days=1) if data.weekday() == 6 else data
+def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
+    if edi_numero < edi_inicial:
+        raise ValueError("O número da edição não pode ser menor que a edição inicial.")
 
-class EdicaoDataSync:
+    diff = edi_numero - edi_inicial
+    ciclos = diff // 7
+    resto = diff % 7
+
+    dias_extra = resto if resto < 5 else 5
+    offset_total = ciclos * 7 + dias_extra
+
+    return data_inicial + timedelta(days=offset_total)
+
+def obter_edicao_por_data(data_alvo, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     """
-    Classe para sincronizar edições com datas e vice-versa.
+    Retorna o número da edição correspondente à data informada.
     """
+    if data_alvo < data_inicial:
+        raise ValueError("A data não pode ser anterior à data inicial.")
 
-    def __init__(self, edicao_inicial=6496, data_inicial=datetime(2024, 8, 26)):
-        """
-        Inicializa com uma edição base e sua data correspondente.
+    edicao_numero = edi_inicial
 
-        edicao_inicial: número da edição base (int)
-        data_inicial: data da edição base (datetime)
-        """
-        self.edicao_inicial = edicao_inicial
-        self.data_inicial = data_inicial
+    # Busca progressiva até encontrar a data exata ou ultrapassar
+    while True:
+        data_edicao = obter_data_por_edicao(edicao_numero)
+        if data_edicao.date() == data_alvo.date():
+            return edicao_numero
+        elif data_edicao > data_alvo:
+            break
+        edicao_numero += 1
 
-    def obter_data_por_edicao(self, edi_numero):
-        """
-        Retorna a data correspondente à edição informada.
-        """
-        
+    raise ValueError("Data não corresponde a nenhuma edição válida.")
 
-        if edi_numero < self.edicao_inicial:
-            raise ValueError("O número da edição não pode ser menor que a edição inicial.")
+def gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
+    resultados = []
+    data_atual = obter_data_por_edicao(edicao_inicial)
 
-        diff = edi_numero - self.edicao_inicial
-        ciclos = diff // 7
-        resto = diff % 7
-        dias_extra = resto if resto < 5 else 5
-        offset_total = ciclos * 7 + dias_extra
-        ajustar_data(self.data_inicial)
-        return self.data_inicial + timedelta(days=offset_total)
+    for _ in range(repeticoes):
+        edicoes = gerar_edicoes(edicao_inicial, quantidade_por_semana)
 
-    def obter_edicao_por_data(self, data_alvo):
-        """
-        Retorna o número da edição correspondente à data informada.
-        """
-        if data_alvo < self.data_inicial:
-            raise ValueError("A data não pode ser anterior à data inicial.")
-        
+        for ed in edicoes:
+            dia_semana = formatar_data(data_atual, tipo='dia_semana')
+            pasta_nome = f"{ed.replace('.', '')} - {dia_semana}"
 
-        dias_passados = (data_alvo - self.data_inicial).days
-        edicao_numero = self.edicao_inicial
+            info = {
+                "edicao_formatada": ed,
+                "data_formatada": formatar_data(data_atual),
+                "dia_semana": dia_semana,
+                "pasta_nome": pasta_nome
+            }
 
-        while True:
-            data_edicao = self.obter_data_por_edicao(edicao_numero)
-            if data_edicao.date() == data_alvo.date():
-                return edicao_numero
-            
-            elif data_edicao > data_alvo:
-                break
-            edicao_numero += 1
+            resultados.append(info)
 
-        raise ValueError("Data não corresponde a nenhuma edição válida.")
+            num = int(ed.replace('.', '').split('-')[0])
+            data_atual = obter_data_por_edicao(num)
+            passo = 2 if '-' in ed else 1
+            data_atual += timedelta(days=passo)
 
-    def gerar_edicoes_e_datas(self, quantidade, passo=1):
-        """
-        Gera uma lista de edições e suas datas correspondentes.
+        edicao_inicial += quantidade_por_semana + 2
 
-        quantidade: número de edições a gerar
-        passo: incremento entre edições (default 1)
-        """
-        edicoes_datas = []
-        for i in range(quantidade):
-            edicao = self.edicao_inicial + i * passo
-            data = self.obter_data_por_edicao(edicao)
-            edicoes_datas.append((edicao, data))
-        return edicoes_datas
-       
+    return resultados
+
+def para_cada_edicao(fazer_algo, edicao_inicial, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
+    for item in gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana, repeticoes):
+        fazer_algo(item)
+
+
+def obter_data_formatada(nume):
+    return formatar_data(obter_data_por_edicao(nume))
     
-
-
+# obter_data_por_edicao = formatar_data(obter_data_por_edicao(6896))
+def teste_syed():
+    print(obter_data_formatada(6897))
+    
+if __name__ == "__main__":
+    teste_syed()

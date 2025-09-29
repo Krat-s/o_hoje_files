@@ -5,11 +5,11 @@ from Modulos_gmail.edicao_formatador import gerar_edicoes
 import os
 import sys
 
-modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(modulo_path)
+raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_path)
 
-import Global_modulos.settings as cg
-import Global_modulos.utils as ut
+import Global.settings as cg
+import Global.utils as ut
 
 # ------------------------------------------------------------------------- CONFIGURAÇÕES
 pg.PAUSE = 0.4
@@ -83,22 +83,18 @@ def create_draft():
         edicoes = gerar_edicoes(edicao, cg.quantidade_por_semana)
 
         for ed in edicoes:
-            print(f"→ {ed}")
-            # enviar_para_grafica(ed, "básico")
-            # enviar_para_grafica(ed, "resto")
-            # enviar_emails_para_leitores(ed)
+            enviar_para_grafica(ed, "básico")
+            enviar_para_grafica(ed, "resto")
+            enviar_emails_para_leitores(ed)
+            # print(f"→ {ed}")
 
         edicao += cg.quantidade_por_semana + 2
 
 def create_drafts():
     take_emails()
-    cg.open_software(2) #Abrindo Gmail -- ATENÇÃO -- Verificar se está na aba certa do navegador
+    ut.open_software(2) #Abrindo Gmail -- ATENÇÃO -- Verificar se está na aba certa do navegador
     create_draft()
 
 if __name__ == "__main__":
     print("teste")
-    # take_emails()
-    # open_gmail()
-    # create_draft()
-
     create_drafts()
