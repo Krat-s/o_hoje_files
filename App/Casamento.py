@@ -7,44 +7,23 @@ import tkinter as tk
 from tkinter import messagebox
 from datetime import datetime, timedelta
 
-modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(modulo_path)
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
 
-import Global.data_edition_sync as scde
-
+from App.Modulos_quark.data_formatador import formatar_data
 import Global.settings as cg
 import Global.utils as ut
-import Global.edition_sync as sc
-import Global.data_sync as scd
-from App.Modulos_quark.data_formatador import formatar_data
+import Global.data_edition_sync as syde
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-# sync = scde.EdicaoDataSync(edicao_inicial=6496, data_inicial=datetime(2024, 8, 26))
-
-
-# data = sync.obter_data_por_edicao(6893)
-# # ut.ajustar_data(data)
-# print("📅 Data da amanhã:", formatar_data(data))
-
-# amanha = datetime.now() + timedelta(days=1)
-# print(amanha)
-# edicao = sync.obter_edicao_por_data(amanha)
-
-# print(edicao)
-
-hoje = datetime.now()
-data_amanha = hoje + timedelta(days=1)
-print("📅 Data da edição de amanha:", formatar_data(data_amanha, tipo="dia_semana"))
-
-
-# ------------------------------------------------------------------------- Variáveis
-# EDD = input("qual o número da edição? Exemplo: 6868 - terça-feira: ")
-# EDD = f"{cg.edicao_inicial} - terça-feira" 
-EDD = f"6892 - {formatar_data(data_amanha, tipo="dia_semana")}"
-print(EDD)
+sync = syde.EdicaoDataSync(edicao_inicial=6496, data_inicial=datetime(2024, 8, 26))
+amanha = datetime.now() + timedelta(days=1)
+dia_x = formatar_data(amanha, tipo="dia_semana")
+edicao_x = sync.obter_edicao_por_data(amanha)
+EDD = f"{edicao_x} - {dia_x}" 
 
 
 # ------------------------------------------------------------------------- Funções

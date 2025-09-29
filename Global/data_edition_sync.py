@@ -9,6 +9,8 @@ import Global.settings as cg
 import Global.utils as ut
 from App.Modulos_quark.data_formatador import formatar_data
 
+
+
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
 

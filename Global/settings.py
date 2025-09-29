@@ -1,4 +1,13 @@
 import pyautogui as pg
+import os
+import sys
+from datetime import datetime, timedelta
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
+import Global.settings as cg
+import Global.utils as ut
+from App.Modulos_quark.data_formatador import formatar_data
+from Global.data_edition_sync import EdicaoDataSync
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
@@ -12,6 +21,15 @@ CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
+
+# ------------------------------------------------------------------------- Dados para Casamento
+sync = EdicaoDataSync(edicao_inicial=6496, data_inicial=datetime(2024, 8, 26))
+hoje = datetime.now()
+amanha = hoje + timedelta(days=1)
+
+print(f"...settings loading sucess")
+print(f"...")
+proxima_edicao = sync.obter_edicao_por_data(datetime.now() + timedelta(days=1))
 
 # ------------------------------------------------------------------------- Dados de edição
 quantidade_repeticoes = 2
