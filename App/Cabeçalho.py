@@ -178,14 +178,14 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
 def Modelo_diário():
     log(f"📦 Gerando edições...")
     edicao = cg.edicao_inicial
-    data = sc.data_edicao
+    data = datetime.now() + timedelta(days=1)
     
     for _ in range(cg.quantidade_repeticoes):
-        edicoes = gerar_edicoes(edicao, sc.quantidade_por_semana)
+        edicoes = gerar_edicoes(edicao, 5)
 
         for ed in edicoes:
             dia_semana = formatar_data(data, tipo='dia_semana')
-            pasta_nome = f"{ed.replace('.', '')} - {dia_semana}"
+            pasta_nome = f"{ed.replace('.', '')} - {dia_semana.capitalize()}"
             info = {
             "edicao_formatada": ed,
             "data_formatada": formatar_data(data),
@@ -197,45 +197,45 @@ def Modelo_diário():
             }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
             # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
-            if pasta_esta_aberta("4 Adianto de novas edições"):
-                abrir_pasta(cg.CAMINHO_ADIANTO)
-                ir_para(cg.CAMINHO_PAGFLIP)
-            elif pasta_esta_aberta("fotos"):
-                abrir_pasta(cg.CAMINHO_FOTOS)
-                ir_para(cg.CAMINHO_PAGFLIP)
-            elif pasta_esta_aberta("00 Pagflip"):
-                abrir_pasta(cg.CAMINHO_PAGFLIP)
-            else:
-                abrir_pasta(cg.CAMINHO_PAGFLIP)
+            # if pasta_esta_aberta("4 Adianto de novas edições"):
+            #     abrir_pasta(cg.CAMINHO_ADIANTO)
+            #     ir_para(cg.CAMINHO_PAGFLIP)
+            # elif pasta_esta_aberta("fotos"):
+            #     abrir_pasta(cg.CAMINHO_FOTOS)
+            #     ir_para(cg.CAMINHO_PAGFLIP)
+            # elif pasta_esta_aberta("00 Pagflip"):
+            #     abrir_pasta(cg.CAMINHO_PAGFLIP)
+            # else:
+            #     abrir_pasta(cg.CAMINHO_PAGFLIP)
             
-            criar_pasta(pasta_nome)
+            # criar_pasta(pasta_nome)
 
-            criar_pasta(pasta_nome, cg.CAMINHO_WEB)
-            copiar_modelo_para_pasta(cg.CAMINHO_WEB, ed, dia_semana, cg.CAMINHO_MODELO_WEB)
+            # criar_pasta(pasta_nome, cg.CAMINHO_WEB)
+            # copiar_modelo_para_pasta(cg.CAMINHO_WEB, ed, dia_semana, cg.CAMINHO_MODELO_WEB)
 
-            criar_pasta(pasta_nome, cg.CAMINHO_FOTOS)
+            # criar_pasta(pasta_nome, cg.CAMINHO_FOTOS)
         
-            criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO)
-            copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
-            pg.hotkey('alt', 'up')
+            # criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO).capitalize()
+            # copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+            # pg.hotkey('alt', 'up')
 
-            # -------------------------------------------------------------------------Aplicando autodata
-            ut.open_software(1) #Abrindo Quark
-            selecionar_ferramenta("v")
-            autodata_edicao_17(**info) #prepara o local no quark
-            autodata_paginas(**info)
-            autodata_edicao_1(**info)
-                                   
+            # # -------------------------------------------------------------------------Aplicando autodata
+            # ut.open_software(1) #Abrindo Quark
+            # selecionar_ferramenta("v")
+            # autodata_edicao_17(**info) #prepara o local no quark
+            # autodata_paginas(**info)
+            # autodata_edicao_1(**info)
+            print(pasta_nome)                 
             log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {formatar_data(data)}")
             data += timedelta(days=1)
             data = ut.ajustar_data(data)
-        edicao += sc.quantidade_por_semana + 2
+        edicao += 7
 
 if __name__ == "__main__":
     Modelo_diário()
-
-    ut.open_software(3) #Abrindo Vscode
+    ut.open_software(4) #Abrindo Vscode
     print('acabou')
+    
 
 def create_models(): #vou exportar essa função para o all_in_one para executar tudo de uma vez
     Modelo_diário()

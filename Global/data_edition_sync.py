@@ -19,6 +19,8 @@ DATA_BASE = datetime(2024, 8, 26)  # Segunda-feira
 QUANTIDADE_POR_SEMANA = 5
 REPETICOES_PADRAO = cg.quantidade_repeticoes
 
+EDICAO_INI = cg.edicao_inicial #testar
+
 def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     if edi_numero < edi_inicial:
         raise ValueError("O número da edição não pode ser menor que a edição inicial.")
@@ -52,7 +54,7 @@ def obter_edicao_por_data(data_alvo, edi_inicial=EDICAO_BASE, data_inicial=DATA_
 
     raise ValueError("Data não corresponde a nenhuma edição válida.")
 
-def gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
+def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
     resultados = []
     data_atual = obter_data_por_edicao(edicao_inicial)
 
@@ -60,8 +62,8 @@ def gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana=QUANTIDADE_PO
         edicoes = gerar_edicoes(edicao_inicial, quantidade_por_semana)
 
         for ed in edicoes:
-            dia_semana = formatar_data(data_atual, tipo='dia_semana')
-            pasta_nome = f"{ed.replace('.', '')} - {dia_semana}"
+            dia_semana = formatar_data(data_atual, tipo='dia_semana').capitalize()
+            pasta_nome = f"{ed.replace('.', '')} - {dia_semana.capitalize()}"
 
             info = {
                 "edicao_formatada": ed,
@@ -76,20 +78,25 @@ def gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana=QUANTIDADE_PO
             data_atual = obter_data_por_edicao(num)
             passo = 2 if '-' in ed else 1
             data_atual += timedelta(days=passo)
-
+        
         edicao_inicial += quantidade_por_semana + 2
 
     return resultados
 
-def para_cada_edicao(fazer_algo, edicao_inicial, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
+def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
     for item in gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana, repeticoes):
         fazer_algo(item)
 
-
 def obter_data_formatada(nume):
-    return formatar_data(obter_data_por_edicao(nume))
+    return formatar_data(obter_data_por_edicao(nume)).capitalize()
     
 # obter_data_por_edicao = formatar_data(obter_data_por_edicao(6896))
+
+
+
+#Meus testes
+
+
 def teste_syed():
     print(obter_data_formatada(6897))
     
