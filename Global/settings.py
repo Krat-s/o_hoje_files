@@ -69,8 +69,7 @@ y_edicao_17 = 121
 x_edicao_capa = 346
 y_edicao_capa = 448
 
-# if __name__ == "__main__":
-#     # print(f"Tamanho da tela: {pg.size()}")
-#     # print(f"Centro da tela: ({center_x}, {center_y})")
-    
-#     print(f"Edição inicial: {edicao_inicial}")
+if __name__ == "__main__":
+    print(f"Tamanho da tela: {pg.size()}")
+    print(f"Centro da tela: ({center_x}, {center_y})")
+    print(f"Edição inicial: {edicao_inicial}")

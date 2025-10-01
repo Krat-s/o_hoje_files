@@ -91,8 +91,6 @@ def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
     
 
-
-
 #Meus testes
 
 def teste_syed():

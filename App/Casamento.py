@@ -19,11 +19,6 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-# sync = syde.EdicaoDataSync(edicao_inicial=6496, data_inicial=datetime(2024, 8, 26))
-# amanha = datetime.now() + timedelta(days=1)
-# dia_x = formatar_data(amanha, tipo="dia_semana")
-# edicao_x = sync.obter_edicao_por_data(amanha)
-# EDD = f"{edicao_x} - {dia_x}" 
 EDD = f"6897 - Quarta-feira"
 
 # ------------------------------------------------------------------------- Funções
