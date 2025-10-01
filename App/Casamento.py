@@ -19,7 +19,10 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-EDD = f"6897 - Quarta-feira"
+edicao_c = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
+
+EDD = f"{edicao_c} - {formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")}"
+print(EDD)
 
 # ------------------------------------------------------------------------- Funções
 def take_file(arquivo):
@@ -150,12 +153,12 @@ def process_casamento_completo():
     process_casamento_primeiro_caderno()
 
 # ------------------------------------------------------------------------- Executando 
-time.sleep(5)
-process_casamento_basico()
+# time.sleep(5)
+# process_casamento_basico()
 # process_casamento_miolo() 
 # pg.hotkey('win', 's')
 # pg.hotkey('win', '3')
-print("ACABOU XD")
+# print("ACABOU XD")
 # print(formatar_data(sc.data, tipo='dia_semana'))
 # print(formatar_data(sc.data))
 

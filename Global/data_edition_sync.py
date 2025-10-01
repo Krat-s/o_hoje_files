@@ -64,12 +64,14 @@ def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QU
         for ed in edicoes:
             dia_semana = formatar_data(data_atual, tipo='dia_semana').capitalize()
             pasta_nome = f"{ed.replace('.', '')} - {dia_semana.capitalize()}"
+            ed = ed
 
             info = {
                 "edicao_formatada": ed,
                 "data_formatada": formatar_data(data_atual),
                 "dia_semana": dia_semana,
-                "pasta_nome": pasta_nome
+                "pasta_nome": pasta_nome,
+
             }
 
             resultados.append(info)
@@ -96,7 +98,10 @@ def obter_data_formatada(nume):
 def teste_syed():
     # dados = gerar_edicoes_formatadas()
     for item in gerar_edicoes_formatadas():
-        print(f'{item["pasta_nome"]},    {item["edicao_formatada"]},    {item["data_formatada"].capitalize()},   {item["dia_semana"]}  ')
+        # ed = item["ed"] 
+        # print(f'{item["pasta_nome"]},    {item["edicao_formatada"]},    {item["data_formatada"].capitalize()},   {item["dia_semana"]}  ')
+        print(item["edicao_formatada"])
+
 
     
 if __name__ == "__main__":

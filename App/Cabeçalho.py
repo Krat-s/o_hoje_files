@@ -13,7 +13,7 @@ from pywinauto import Desktop
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 import Global.edition_sync as sc
-import Global.settings as cg
+import Global.settings as cfg
 import Global.utils as ut
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
@@ -57,7 +57,7 @@ def criar_pasta(nome, em=None):
     time.sleep(0.3)
     ut.max_windows()
     time.sleep(0.3)
-    pg.click(cg.center_x, cg.center_y)
+    pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
     time.sleep(0.3)
     kb.write(nome)
@@ -68,7 +68,7 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
     if de:
         ir_para(de)
     nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
-    pg.click(cg.center_x, cg.center_y)
+    pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.2)
@@ -79,7 +79,7 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
 def abrir_pasta(endereco):
     os.startfile(endereco)
     ut.max_windows()
-    pg.click(cg.center_x, cg.center_y)
+    pg.click(cfg.center_x, cfg.center_y)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def abrir_sugestão():
@@ -87,18 +87,18 @@ def abrir_sugestão():
     pg.press('down')
     time.sleep(0.2)
     pg.press('enter')
-    time.sleep(cg.TEMPO_ABERTURA)
+    time.sleep(cfg.TEMPO_ABERTURA)
 
 def selecionar_ferramenta(tecla):
     time.sleep(0.2)
-    pg.click(cg.center_x, 10)   
+    pg.click(cfg.center_x, 10)   
     time.sleep(0.2)
     pg.press("v")
     kb.press(tecla)
 
 def preencher_data(data_formatada):
     selecionar_ferramenta("v")
-    pg.click(cg.x_data, cg.y_data)
+    pg.click(cfg.x_data, cfg.y_data)
     selecionar_ferramenta("t")
     pg.press('t', presses=2)
     time.sleep(0.4)
@@ -110,7 +110,7 @@ def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     nome_pasta = f"{edicao_formatada.replace('.', '')} - {dia_semana}"
-    kb.write(f"{cg.CAMINHO_ADIANTO}\\{nome_pasta}")
+    kb.write(f"{cfg.CAMINHO_ADIANTO}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
     abrir_sugestão()
@@ -123,7 +123,7 @@ def fechar_pagina():
     time.sleep(0.2)
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'f4')
-    time.sleep(cg.TEMPO_FECHAMENTO)
+    time.sleep(cfg.TEMPO_FECHAMENTO)
 
 # ---------------------------- AUTODATA ----------------------------
 def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
@@ -141,7 +141,7 @@ def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana=None):
     abrir_sugestão()
     time.sleep(3)
     selecionar_ferramenta("v")
-    pg.click(cg.x_edicao_capa, cg.y_edicao_capa)
+    pg.click(cfg.x_edicao_capa, cfg.y_edicao_capa)
     selecionar_ferramenta("t")
     pg.press('t', presses=4)
     pg.press('backspace', presses=5)
@@ -156,7 +156,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
-    kb.write(cg.CAMINHO_ADIANTO + '\\' + f"{edicao_formatada.replace('.', '')} - {dia_semana}")
+    kb.write(cfg.CAMINHO_ADIANTO + '\\' + f"{edicao_formatada.replace('.', '')} - {dia_semana}")
     pg.press('enter')
     time.sleep(0.5)
     kb.write('17')
@@ -167,7 +167,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
     selecionar_ferramenta("v")
     pg.hotkey('ctrl', '0')
-    pg.click(cg.x_edicao_17, cg.y_edicao_17)
+    pg.click(cfg.x_edicao_17, cfg.y_edicao_17)
     selecionar_ferramenta("t")
     pg.press('t', presses=4)
     pg.hotkey('ctrl', 'a')
@@ -177,11 +177,10 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def Modelo_diário():
     log(f"📦 Gerando edições...")
-    edicao = cg.edicao_inicial
     data = datetime.now() + timedelta(days=1)
     
-    for _ in range(cg.quantidade_repeticoes):
-        edicoes = gerar_edicoes(edicao, 5)
+    for _ in range(cfg.quantidade_repeticoes):
+        edicoes = gerar_edicoes(cfg.edicao_inicial, 5)
 
         for ed in edicoes:
             dia_semana = formatar_data(data, tipo='dia_semana')
@@ -198,25 +197,25 @@ def Modelo_diário():
 
             # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
             # if pasta_esta_aberta("4 Adianto de novas edições"):
-            #     abrir_pasta(cg.CAMINHO_ADIANTO)
-            #     ir_para(cg.CAMINHO_PAGFLIP)
+            #     abrir_pasta(cfg.CAMINHO_ADIANTO)
+            #     ir_para(cfg.CAMINHO_PAGFLIP)
             # elif pasta_esta_aberta("fotos"):
-            #     abrir_pasta(cg.CAMINHO_FOTOS)
-            #     ir_para(cg.CAMINHO_PAGFLIP)
+            #     abrir_pasta(cfg.CAMINHO_FOTOS)
+            #     ir_para(cfg.CAMINHO_PAGFLIP)
             # elif pasta_esta_aberta("00 Pagflip"):
-            #     abrir_pasta(cg.CAMINHO_PAGFLIP)
+            #     abrir_pasta(cfg.CAMINHO_PAGFLIP)
             # else:
-            #     abrir_pasta(cg.CAMINHO_PAGFLIP)
+            #     abrir_pasta(cfg.CAMINHO_PAGFLIP)
             
             # criar_pasta(pasta_nome)
 
-            # criar_pasta(pasta_nome, cg.CAMINHO_WEB)
-            # copiar_modelo_para_pasta(cg.CAMINHO_WEB, ed, dia_semana, cg.CAMINHO_MODELO_WEB)
+            # criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+            # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
 
-            # criar_pasta(pasta_nome, cg.CAMINHO_FOTOS)
+            # criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
         
-            # criar_pasta(pasta_nome, cg.CAMINHO_ADIANTO).capitalize()
-            # copiar_modelo_para_pasta(cg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+            # criar_pasta(pasta_nome, cfg.CAMINHO_ADIANTO).capitalize()
+            # copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
             # pg.hotkey('alt', 'up')
 
             # # -------------------------------------------------------------------------Aplicando autodata
@@ -224,12 +223,11 @@ def Modelo_diário():
             # selecionar_ferramenta("v")
             # autodata_edicao_17(**info) #prepara o local no quark
             # autodata_paginas(**info)
-            # autodata_edicao_1(**info)
-            print(pasta_nome)                 
-            log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {formatar_data(data)}")
+            # autodata_edicao_1(**info)               
+            log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {formatar_data(data).capitalize()}")
             data += timedelta(days=1)
             data = ut.ajustar_data(data)
-        edicao += 7
+        cfg.edicao_inicial += 7
 
 if __name__ == "__main__":
     Modelo_diário()
