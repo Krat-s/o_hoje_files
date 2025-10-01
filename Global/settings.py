@@ -1,13 +1,13 @@
 import pyautogui as pg
 import os
 import sys
+import keyboard
 from datetime import datetime, timedelta
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
-import Global.settings as cg
-import Global.utils as ut
-from App.Modulos_quark.data_formatador import formatar_data
 
+import Global.utils as ut
+import time
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
 CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\Modelo'
@@ -22,12 +22,15 @@ center_x = screen_width / 2
 center_y = screen_height / 2
 
 # ------------------------------------------------------------------------- Dados para Casamento
-print(f"...settings loading sucess")
+pg.FAILSAFE = True
+print(f"...")
+print(f"...     Failsafe on")
+print(f"...     Settings loading sucess")
 print(f"...")
 
 # ------------------------------------------------------------------------- Dados de edição
 quantidade_repeticoes = 2
-edicao_inicial = 6888
+edicao_inicial = 6895
 
 # ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)
 # if pg.size() == (1366, 768):
@@ -66,8 +69,8 @@ y_edicao_17 = 121
 x_edicao_capa = 346
 y_edicao_capa = 448
 
-if __name__ == "__main__":
-    # print(f"Tamanho da tela: {pg.size()}")
-    # print(f"Centro da tela: ({center_x}, {center_y})")
+# if __name__ == "__main__":
+#     # print(f"Tamanho da tela: {pg.size()}")
+#     # print(f"Centro da tela: ({center_x}, {center_y})")
     
-    print(f"Edição inicial: {edicao_inicial}")
+#     print(f"Edição inicial: {edicao_inicial}")

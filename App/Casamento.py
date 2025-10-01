@@ -11,20 +11,20 @@ raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
 from App.Modulos_quark.data_formatador import formatar_data
-import Global.settings as cg
-import Global.utils as ut
-import Global.data_edition_sync as syde
+import Global.settings as cfg
+import Global.utils as utl
+import Global.data_edition_sync as sy_de
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-sync = syde.EdicaoDataSync(edicao_inicial=6496, data_inicial=datetime(2024, 8, 26))
-amanha = datetime.now() + timedelta(days=1)
-dia_x = formatar_data(amanha, tipo="dia_semana")
-edicao_x = sync.obter_edicao_por_data(amanha)
-EDD = f"{edicao_x} - {dia_x}" 
-
+# sync = syde.EdicaoDataSync(edicao_inicial=6496, data_inicial=datetime(2024, 8, 26))
+# amanha = datetime.now() + timedelta(days=1)
+# dia_x = formatar_data(amanha, tipo="dia_semana")
+# edicao_x = sync.obter_edicao_por_data(amanha)
+# EDD = f"{edicao_x} - {dia_x}" 
+EDD = f"6897 - Quarta-feira"
 
 # ------------------------------------------------------------------------- Funções
 def take_file(arquivo):
@@ -32,7 +32,7 @@ def take_file(arquivo):
     time.sleep(0.5)
     kb.write(str(arquivo))
     time.sleep(2)
-    pg.click(cg.center_x, cg.center_y)
+    pg.click(cfg.center_x, cfg.center_y)
     pg.press('down')
     time.sleep(0.3)
     pg.press('down')
@@ -40,10 +40,9 @@ def take_file(arquivo):
     kb.press_and_release('enter')
 
 def open_web():
-    os.startfile(cg.CAMINHO_WEB + "\\" + EDD)
+    os.startfile(cfg.CAMINHO_WEB + "\\" + EDD)
     time.sleep(0.3)
-    ut.max_windows()
-
+    utl
 # ------------------------------------------------------------------------- Funções específicas
 def close_and_open_quark():
     pg.hotkey('alt', 'f4')
@@ -52,7 +51,7 @@ def close_and_open_quark():
     time.sleep(4)
 
 def take_tool(tool):
-    pg.click(cg.center_x, 10)
+    pg.click(cfg.center_x, 10)
     kb.press(str(tool))
 
 def confirmancia():
@@ -67,7 +66,7 @@ def open_paste_page_done():
     time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
     time.sleep(0.2)
-    kb.write(cg.CAMINHO_EDD + "\\" + EDD + "\\" + 'Páginas prontas')
+    kb.write(cfg.CAMINHO_EDD + "\\" + EDD + "\\" + 'Páginas prontas')
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(0.2)
@@ -83,7 +82,7 @@ def agrupar_e_fechar_agora():
     time.sleep(0.2)
     pg.hotkey('ctrl', 'c')
     pg.hotkey('ctrl', 'f4')
-    time.sleep(cg.TIMETOCLOSE)
+    time.sleep(cfg.TIMETOCLOSE)
 
 def move_page(left, right):
     pg.hotkey('ctrl', 'shift', 'alt', 'm')
@@ -106,11 +105,11 @@ def process_page(page_number, is_even):
     confirmancia()
     time.sleep(5)
     agrupar_e_fechar_agora()
-    time.sleep(cg.TIMETOCLOSE)
-    time.sleep(cg.TIMETOCLOSE)
+    time.sleep(cfg.TIMETOCLOSE)
+    time.sleep(cfg.TIMETOCLOSE)
     time.sleep(0.3)
     pg.hotkey('ctrl', '0')
-    pg.click(cg.center_x, cg.center_y)
+    pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'v')
     time.sleep(5)
     time.sleep(2)
@@ -156,8 +155,8 @@ def process_casamento_completo():
     process_casamento_primeiro_caderno()
 
 # ------------------------------------------------------------------------- Executando 
-# time.sleep(5)
-# process_casamento_basico()
+time.sleep(5)
+process_casamento_basico()
 # process_casamento_miolo() 
 # pg.hotkey('win', 's')
 # pg.hotkey('win', '3')

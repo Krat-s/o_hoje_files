@@ -90,15 +90,16 @@ def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_seman
 def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
     
-# obter_data_por_edicao = formatar_data(obter_data_por_edicao(6896))
 
 
 
 #Meus testes
 
-
 def teste_syed():
-    print(obter_data_formatada(6897))
+    # dados = gerar_edicoes_formatadas()
+    for item in gerar_edicoes_formatadas():
+        print(f'{item["pasta_nome"]},    {item["edicao_formatada"]},    {item["data_formatada"].capitalize()},   {item["dia_semana"]}  ')
+
     
 if __name__ == "__main__":
     teste_syed()
