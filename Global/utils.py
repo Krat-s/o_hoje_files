@@ -5,6 +5,14 @@ import time
 from pywinauto import Desktop
 from datetime import datetime, timedelta
 
+import os
+import sys
+
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
+
+import Global.settings as cfg
+
 # ---------------------------- Funções ----------------------------
 def abrir_software(numero):
     pg.hotkey('win', 's')
@@ -82,3 +90,15 @@ def open_software(numero):
     pg.hotkey('win', str(numero))
     pg.press('enter')
     time.sleep(0.5)
+
+def take_file(arquivo):
+    kb.press_and_release('ctrl+f')
+    time.sleep(0.5)
+    kb.write(str(arquivo))
+    time.sleep(2)
+    pg.click(cfg.center_x, cfg.center_y)
+    pg.press('down')
+    time.sleep(0.3)
+    pg.press('down')
+    time.sleep(0.3)
+    kb.press_and_release('enter')

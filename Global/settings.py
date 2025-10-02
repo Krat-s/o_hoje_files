@@ -1,13 +1,6 @@
-import pyautogui as pg
-import os
-import sys
-import keyboard
 from datetime import datetime, timedelta
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
+import pyautogui as pg
 
-import Global.utils as ut
-import time
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
 CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\Modelo'

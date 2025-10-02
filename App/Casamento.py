@@ -19,31 +19,21 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-edicao_x = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
-data_x = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
-EDD = f"{edicao_x} - {data_x}"
-print(f"...   CASAMENTO LOG - Process casamento edd: {EDD}")
+
+
+edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
+data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
+EDD = f"{edicao_0} - {data_0}"
+print(f"...   CASAMENTO - Process edd: {EDD}")
 print("...")
 
 
 # ------------------------------------------------------------------------- Funções
-def take_file(arquivo):
-    kb.press_and_release('ctrl+f')
-    time.sleep(0.5)
-    kb.write(str(arquivo))
-    time.sleep(2)
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.press('down')
-    time.sleep(0.3)
-    pg.press('down')
-    time.sleep(0.3)
-    kb.press_and_release('enter')
-
 def open_web():
     os.startfile(cfg.CAMINHO_WEB + "\\" + EDD)
     time.sleep(0.3)
-    utl
-# ------------------------------------------------------------------------- Funções específicas
+    utl.max_windows()
+
 def close_and_open_quark():
     pg.hotkey('alt', 'f4')
     pg.hotkey('win', 's')
@@ -122,7 +112,7 @@ def process_page(page_number, is_even):
 
 def process_casamento(nome_arquivo, paginas):
     open_web()
-    take_file(nome_arquivo)
+    utl.take_file(nome_arquivo)
     close_and_open_quark()
     for page_number in paginas:
         is_even = page_number % 2 == 0
@@ -161,8 +151,6 @@ def process_casamento_completo():
 # pg.hotkey('win', 's')
 # pg.hotkey('win', '3')
 # print("ACABOU XD")
-# print(formatar_data(sc.data, tipo='dia_semana'))
-# print(formatar_data(sc.data))
 
 
 

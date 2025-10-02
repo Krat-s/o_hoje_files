@@ -5,8 +5,7 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from App.Modulos_quark.data_formatador import formatar_data
-import Global.settings as cg
+import Global.settings as cfg
 import Global.utils as ut
 from App.Modulos_quark.edicao_formatador import gerar_edicoes
 from App.Modulos_quark.data_formatador import formatar_data
@@ -17,9 +16,9 @@ DATA_BASE = datetime(2024, 8, 26)  # Segunda-feira
 
 # Parâmetros padrão de geração
 QUANTIDADE_POR_SEMANA = 5
-REPETICOES_PADRAO = cg.quantidade_repeticoes
+REPETICOES_PADRAO = cfg.quantidade_repeticoes
 
-EDICAO_INI = cg.edicao_inicial #testar
+EDICAO_INI = cfg.edicao_inicial #testar
 
 def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     if edi_numero < edi_inicial:
