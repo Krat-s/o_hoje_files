@@ -19,10 +19,12 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-edicao_c = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
+edicao_x = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
+data_x = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
+EDD = f"{edicao_x} - {data_x}"
+print(f"...   CASAMENTO LOG - Process casamento edd: {EDD}")
+print("...")
 
-EDD = f"{edicao_c} - {formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")}"
-print(EDD)
 
 # ------------------------------------------------------------------------- Funções
 def take_file(arquivo):
