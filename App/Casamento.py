@@ -21,7 +21,7 @@ pg.FAILSAFE = True
 
 edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
 data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
-EDD = f"{edicao_0} - {data_0}"
+EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 print(f"...   CASAMENTO - Process edd: {EDD}")
 print("...")
 
@@ -120,12 +120,12 @@ def process_casamento(nome_arquivo, paginas):
 
 
 def process_casamento_basico():
+    print('miolo')
+
+def process_casamento_miolo():
     process_casamento("13_16", [13, 16])
     process_casamento("14_15", [14, 15])
     process_casamento("17_20", [17, 20])
-
-def process_casamento_miolo():
-    print('miolo')
     process_casamento("10_11", [10, 11])
     process_casamento("9_12", [9, 12])
     process_casamento("3_6", [3, 6])
@@ -146,7 +146,7 @@ def process_casamento_completo():
 
 # ------------------------------------------------------------------------- Executando 
 # time.sleep(5)
-process_casamento_basico()
+# process_casamento_basico()
 # process_casamento_miolo() 
 # pg.hotkey('win', 's')
 # pg.hotkey('win', '3')
@@ -154,41 +154,52 @@ process_casamento_basico()
 
 
 
-# def fazer_escolha(opcao):
-#     EDD = entrada_edicao.get()
-#     if EDD.strip() == "":
-#         messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
-#         return EDD
-#     messagebox.showinfo("Escolha", f"Edição {EDD} selecionada.\nVocê escolheu fazer {opcao}.")
-#     print(EDD)
+def fazer_escolha(opcao):
+    if EDD.strip() == "":
+        messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
+        return EDD
+    messagebox.showinfo("Escolha", f"Edição {EDD} selecionada.\nVocê escolheu fazer {opcao}.")
+    if opcao == "o básico":
+        process_casamento_basico()
+    elif opcao == "o miolo":
+        print('prumiolo')
+    elif opcao == "a capa":
+        print('prucapa')
+    else:
+        messagebox.showerror("Erro", "Opção inválida.")
+    # print(EDD)
 
 
-# # Criar janela principal
-# janela = tk.Tk() 
-# janela.title("Casamento")
-# janela.geometry("300x250")
+# Criar janela principal
+janela = tk.Tk() 
+janela.title("Casamento")
+janela.geometry("500x250")
 
 
-# # Texto de instrução
-# label = tk.Label(janela, text="Edição:", font=("Noto Serif", 20))
-# label.pack(pady=10)
+# Texto de instrução
+label = tk.Label(janela, text="Edição:", font=("Noto Serif", 20))
+label.pack(pady=10)
 
 
-# # Caixa de entrada para número da edição
-# label_edicao = tk.Label(janela, text="Digite o número da edição:")
-# label_edicao.pack()
-# entrada_edicao = tk.Entry(janela)
-# entrada_edicao.pack(pady=5)
+# Botões de escolha
+btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"))
+btn_x.pack(pady=5)
 
-# # Botões de escolha
-# btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"))
-# btn_x.pack(pady=5)
+btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"))
+btn_y.pack(pady=5)
 
-# # btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"))
-# # btn_y.pack(pady=5)
+btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"))
+btn_z.pack(pady=5)
 
-# # btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"))
-# # btn_z.pack(pady=5)
+# Iniciar a interface
+janela.mainloop()
 
-# # Iniciar a interface
-# janela.mainloop()
+
+
+
+from PyQt5.QtWidgets import QApplication, QLabel
+
+app = QApplication([])
+label = QLabel("Olá, PyQt!")
+label.show()
+app.exec_()

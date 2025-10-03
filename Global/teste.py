@@ -45,3 +45,9 @@
 # edicao_hoje = sync.obter_edicao_por_data(datetime.now() + timedelta(days=1))
 # # print("📰 Edição correspondente à data:", edicao_hoje)
 
+
+
+
+
+import sys
+print(sys.executable)
