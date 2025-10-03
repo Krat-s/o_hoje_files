@@ -19,14 +19,11 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-
-
 edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
 data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
 EDD = f"{edicao_0} - {data_0}"
 print(f"...   CASAMENTO - Process edd: {EDD}")
 print("...")
-
 
 # ------------------------------------------------------------------------- Funções
 def open_web():
@@ -118,6 +115,9 @@ def process_casamento(nome_arquivo, paginas):
         is_even = page_number % 2 == 0
         process_page(page_number, is_even)
     time.sleep(0.5)
+    pg.hotkey('ctrl', 'f4')
+    time.sleep(0.5)
+
 
 def process_casamento_basico():
     process_casamento("13_16", [13, 16])
@@ -146,7 +146,7 @@ def process_casamento_completo():
 
 # ------------------------------------------------------------------------- Executando 
 # time.sleep(5)
-# process_casamento_basico()
+process_casamento_basico()
 # process_casamento_miolo() 
 # pg.hotkey('win', 's')
 # pg.hotkey('win', '3')
