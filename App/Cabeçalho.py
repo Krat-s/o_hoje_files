@@ -5,16 +5,16 @@ import locale
 from datetime import datetime, timedelta
 import pyautogui as pg
 import keyboard as kb
-from Modulos_quark.data_formatador import formatar_data
-from Modulos_quark.edicao_formatador import gerar_edicoes
-from Modulos_quark.explorer_utils import verificar_windows 
 from pywinauto import Desktop
 
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
-import Global.edition_sync as sc
+
+from Modulos_quark.data_formatador import formatar_data
+from Modulos_quark.edicao_formatador import gerar_edicoes
 import Global.settings as cfg
 import Global.utils as ut
+import Global.data_edition_sync as desync
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -22,7 +22,7 @@ pg.FAILSAFE = True
 time.sleep(1)
 
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
-SISTEMA_OPERACIONAL = verificar_windows()
+SISTEMA_OPERACIONAL = ut.verificar_windows()
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 def log(mensagem): 
@@ -229,11 +229,17 @@ def Modelo_diário():
             data = ut.ajustar_data(data)
         cfg.edicao_inicial += 7
 
+for item in desync.gerar_edicoes_formatadas():
+
+
+
 if __name__ == "__main__":
     Modelo_diário()
     ut.open_software(4) #Abrindo Vscode
     print('acabou')
     
+
+
 
 def create_models(): #vou exportar essa função para o all_in_one para executar tudo de uma vez
     Modelo_diário()

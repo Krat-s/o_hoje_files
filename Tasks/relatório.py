@@ -1,6 +1,12 @@
 import pyautogui as pg
 import time
-from Modulos.index_numeros import gerar_numeros
+import os
+import sys
+
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
+
+from Tasks.Modulos import index_numeros as ni
 
 time.sleep(1)
 pg.PAUSE = 0.3 
@@ -23,11 +29,11 @@ def vigencia(dia):
 
 
 def pedidos():
-    edicoes = gerar_numeros()
-    
-    
+    ni.gerar_n(36400)
 
 pedidos()
+
+
 
 
 
