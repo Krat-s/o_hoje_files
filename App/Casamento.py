@@ -118,23 +118,22 @@ def process_casamento(nome_arquivo, paginas):
     pg.hotkey('ctrl', 'f4')
     time.sleep(0.5)
 
-
 def process_casamento_basico():
-    print('miolo')
-
-def process_casamento_miolo():
     process_casamento("13_16", [13, 16])
     process_casamento("14_15", [14, 15])
     process_casamento("17_20", [17, 20])
+
+def process_casamento_cidades():
     process_casamento("10_11", [10, 11])
     process_casamento("9_12", [9, 12])
+
+def process_casamento_miolo():
     process_casamento("3_6", [3, 6])
     process_casamento("4_5", [4, 5])
+    process_casamento("2_7", [2, 7])    
 
 def process_casamento_capa():
-    process_casamento("2_7", [2, 7])    
     process_casamento("1_8", [8, 1])
-    print('capa')
 
 def process_casamento_primeiro_caderno():
     process_casamento_miolo()
@@ -159,12 +158,21 @@ def fazer_escolha(opcao):
         messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
         return EDD
     messagebox.showinfo("Escolha", f"Edição {EDD} selecionada.\nVocê escolheu fazer {opcao}.")
+    messagebox.CANCEL
+    time.sleep(3)
     if opcao == "o básico":
         process_casamento_basico()
+    elif opcao == "cidades":
+        process_casamento_cidades()
     elif opcao == "o miolo":
-        print('prumiolo')
+        process_casamento_miolo()
     elif opcao == "a capa":
-        print('prucapa')
+        process_casamento_capa()
+    elif opcao == "primeiro caderno":
+        process_casamento_primeiro_caderno()
+    elif opcao == "tudo":
+            # process_casamento_completo()
+            print('teste')
     else:
         messagebox.showerror("Erro", "Opção inválida.")
     # print(EDD)
@@ -173,23 +181,35 @@ def fazer_escolha(opcao):
 # Criar janela principal
 janela = tk.Tk() 
 janela.title("Casamento")
-janela.geometry("500x250")
+janela.geometry("600x450")
+janela.configure(bg="#747474")
+janela.iconbitmap(r'App\archives\favicon.ico')
 
+estilo_títulos = {"font": ("Helvetica", 19, "bold"), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "solid"}
+estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
 
 # Texto de instrução
-label = tk.Label(janela, text="Edição:", font=("Noto Serif", 20))
+label = tk.Label(janela, text="Edição:", **estilo_títulos)
 label.pack(pady=10)
 
-
 # Botões de escolha
-btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"))
+btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"), **estilo_escolhas)
 btn_x.pack(pady=5)
 
-btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"))
+btn_v = tk.Button(janela, text="Caderno de cidades", command=lambda: fazer_escolha("cidades"), **estilo_escolhas)
+btn_v.pack(pady=5)
+
+btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"), **estilo_escolhas)
 btn_y.pack(pady=5)
 
-btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"))
+btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"), **estilo_escolhas)
 btn_z.pack(pady=5)
+
+btn_w = tk.Button(janela, text="Primeiro caderno", command=lambda: fazer_escolha("primeiro caderno"), **estilo_escolhas)
+btn_w.pack(pady=5)
+
+btn_u = tk.Button(janela, text="Tudo", command=lambda: fazer_escolha("tudo"), **estilo_escolhas)
+btn_u.pack(pady=5)
 
 # Iniciar a interface
 janela.mainloop()
@@ -197,9 +217,9 @@ janela.mainloop()
 
 
 
-from PyQt5.QtWidgets import QApplication, QLabel
+# from PyQt5.QtWidgets import QApplication, QLabel
 
-app = QApplication([])
-label = QLabel("Olá, PyQt!")
-label.show()
-app.exec_()
+# app = QApplication([])
+# label = QLabel("Olá, PyQt!")
+# label.show()
+# app.exec_()
