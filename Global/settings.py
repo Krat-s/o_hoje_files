@@ -2,13 +2,13 @@ from datetime import datetime, timedelta
 import pyautogui as pg
 
 # ------------------------------------------------------------------------- Caminhos de rede
-CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
-CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\Modelo'
-CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
-CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
-CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
+CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
+CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
+CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
+CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
+CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
+CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
 
 screen_width, screen_height = pg.size()
 center_x = screen_width / 2
