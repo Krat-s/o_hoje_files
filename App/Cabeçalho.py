@@ -235,42 +235,50 @@ def Modelo_antigo():
         cfg.edicao_inicial += 7
 
 
-def Criar_pastas():
-    criar_pasta()
-    criar_pasta(item["pasta_nome"], cfg.CAMINHO_WEB)
-    copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
+def testesss():
+    for item in desync.gerar_edicoes_formatadas():
+        ed = item["edicao_formatada"]
+        dia_semana = item["dia_semana"]
+        data_formatada = item["data_formatada"]
+    # criar_pasta()
+    # criar_pasta(item["pasta_nome"], cfg.CAMINHO_WEB)
+    # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
 
-    criar_pasta(item["pasta_nome"], cfg.CAMINHO_FOTOS)
+    # criar_pasta(item["pasta_nome"], cfg.CAMINHO_FOTOS)
 
-    criar_pasta(item["pasta_nome"], cfg.CAMINHO_ADIANTO).capitalize()
-    copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, item[""], dia_semana, modelo_path)
-    pg.hotkey('alt', 'up')
+    # criar_pasta(item["pasta_nome"], cfg.CAMINHO_ADIANTO).capitalize()
+    # copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, item[""], dia_semana, modelo_path)
+    # pg.hotkey('alt', 'up')
+    print(f'criou pastas {item["pasta_nome"]}')
     
     
 
     
 def main():
-    
-    
-    
-
     for item in desync.gerar_edicoes_formatadas():
-        info = {
+        db = {
                     "ed": item["edicao_formatada"],
                     "data_formatada": item["data_formatada"],
                     "dia_semana": item["dia_semana"],
                     "pasta": item["pasta_nome"],
                 }
+        
+        ed = db["ed"]
+        dia_semana = db["dia_semana"]
+        data_formatada = db["data_formatada"]
+        pasta_nome = db["pasta"]
+
         # print(str(info["edicao_formatada"]) + " - " + str(info["data_formatada"]) + " - " + str(info["dia_semana"]) + " - " + str(info["pasta_nome"]))
 
-        print(info["ed"])
+        print(ed)
 
 
 if __name__ == "__main__":
     # Modelo_antigo()
     # ut.open_software(4) #Abrindo Vscode
-    # criar_pasta()
+    # testesss()
     main()
+
     print('acabou')
     
 
