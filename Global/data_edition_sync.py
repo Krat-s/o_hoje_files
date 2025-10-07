@@ -126,6 +126,6 @@ def teste_syed():
 if __name__ == "__main__":
     # teste_syed()
     teste1 = datetime.now() + timedelta(days=1)
-    teste2 = 6900
+    teste2 = 8001
     print(obter_edicao_por_data(teste1))
-    print(obter_data_por_edicao(teste2))
+    print(formatar_data(obter_data_por_edicao(teste2)))

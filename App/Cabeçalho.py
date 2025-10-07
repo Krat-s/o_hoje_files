@@ -189,7 +189,7 @@ def abrir_janela_unica():
     
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-def Modelo_diário():
+def Modelo_antigo():
     log(f"📦 Gerando edições...")
     data = datetime.now() + timedelta(days=1)
     
@@ -235,38 +235,42 @@ def Modelo_diário():
         cfg.edicao_inicial += 7
 
 
-
-    
-    
 def Criar_pastas():
-    criar_pasta(pasta_nome)
-    criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+    criar_pasta()
+    criar_pasta(item["pasta_nome"], cfg.CAMINHO_WEB)
     copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
 
-    criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+    criar_pasta(item["pasta_nome"], cfg.CAMINHO_FOTOS)
 
-    criar_pasta(pasta_nome, cfg.CAMINHO_ADIANTO).capitalize()
-    copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+    criar_pasta(item["pasta_nome"], cfg.CAMINHO_ADIANTO).capitalize()
+    copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, item[""], dia_semana, modelo_path)
     pg.hotkey('alt', 'up')
     
-
-for item in desync.gerar_edicoes_formatadas():
     
 
-    info = {
-                "edicao_formatada": item["edicao_formatada"],
-                "data_formatada": item["data_formatada"],
-                "dia_semana": item["dia_semana"],
-                "pasta_nome": item["pasta_nome"],
-            }
-    print(str(info["edicao_formatada"]) + " - " + str(info["data_formatada"]) + " - " + str(info["dia_semana"]) + " - " + str(info["pasta_nome"]))
+    
+def main():
+    
+    
+    
 
+    for item in desync.gerar_edicoes_formatadas():
+        info = {
+                    "ed": item["edicao_formatada"],
+                    "data_formatada": item["data_formatada"],
+                    "dia_semana": item["dia_semana"],
+                    "pasta": item["pasta_nome"],
+                }
+        # print(str(info["edicao_formatada"]) + " - " + str(info["data_formatada"]) + " - " + str(info["dia_semana"]) + " - " + str(info["pasta_nome"]))
 
+        print(info["ed"])
 
 
 if __name__ == "__main__":
-    # Modelo_diário()
+    # Modelo_antigo()
     # ut.open_software(4) #Abrindo Vscode
+    # criar_pasta()
+    main()
     print('acabou')
     
 

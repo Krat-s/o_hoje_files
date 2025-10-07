@@ -14,8 +14,8 @@ center_x = screen_width / 2
 center_y = screen_height / 2
 
 # ------------------------------------------------------------------------- Dados de edição
-quantidade_repeticoes = 10
-edicao_inicial = 6909
+quantidade_repeticoes = 1
+edicao_inicial = 8001
 
 # ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)
 # if pg.size() == (1366, 768):
@@ -58,3 +58,6 @@ if __name__ == "__main__":
     # print(f"Centro da tela: ({center_x}, {center_y})")
     print(f"Edição inicial: {edicao_inicial}")
     pg.moveTo(x_data, y_data)
+
+
+    

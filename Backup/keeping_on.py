@@ -5,6 +5,7 @@ pg.FAILSAFE = True
 
 def manter_pc_ligado():
     while True:
+        print('...')
         pg.moveRel(50, 0)  # Move o mouse 2 pixels para a direita
         time.sleep(5)  # Espera 30 segundos
         pg.moveRel(-50, 0)  # Move o mouse 2 pixels para a esquerda
