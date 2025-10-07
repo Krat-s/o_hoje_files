@@ -174,6 +174,20 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     kb.write(f"Ano 21 - nº {edicao_formatada}")
     fechar_pagina()
 
+
+def abrir_janela_unica():
+    if pasta_esta_aberta("4 Adianto de novas edições"):
+        abrir_pasta(cfg.CAMINHO_ADIANTO)
+        ir_para(cfg.CAMINHO_PAGFLIP)
+    elif pasta_esta_aberta("fotos"):
+        abrir_pasta(cfg.CAMINHO_FOTOS)
+        ir_para(cfg.CAMINHO_PAGFLIP)
+    elif pasta_esta_aberta("00 Pagflip"):
+        abrir_pasta(cfg.CAMINHO_PAGFLIP)
+    else:
+        abrir_pasta(cfg.CAMINHO_PAGFLIP)
+    
+
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def Modelo_diário():
     log(f"📦 Gerando edições...")
@@ -196,50 +210,67 @@ def Modelo_diário():
             }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
             # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
-            # if pasta_esta_aberta("4 Adianto de novas edições"):
-            #     abrir_pasta(cfg.CAMINHO_ADIANTO)
-            #     ir_para(cfg.CAMINHO_PAGFLIP)
-            # elif pasta_esta_aberta("fotos"):
-            #     abrir_pasta(cfg.CAMINHO_FOTOS)
-            #     ir_para(cfg.CAMINHO_PAGFLIP)
-            # elif pasta_esta_aberta("00 Pagflip"):
-            #     abrir_pasta(cfg.CAMINHO_PAGFLIP)
-            # else:
-            #     abrir_pasta(cfg.CAMINHO_PAGFLIP)
+            abrir_janela_unica()
             
-            # criar_pasta(pasta_nome)
+            criar_pasta(pasta_nome)
 
-            # criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
-            # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
+            criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+            copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
 
-            # criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+            criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
         
-            # criar_pasta(pasta_nome, cfg.CAMINHO_ADIANTO).capitalize()
-            # copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
-            # pg.hotkey('alt', 'up')
+            criar_pasta(pasta_nome, cfg.CAMINHO_ADIANTO).capitalize()
+            copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+            pg.hotkey('alt', 'up')
 
-            # # -------------------------------------------------------------------------Aplicando autodata
-            # ut.open_software(1) #Abrindo Quark
-            # selecionar_ferramenta("v")
-            # autodata_edicao_17(**info) #prepara o local no quark
-            # autodata_paginas(**info)
-            # autodata_edicao_1(**info)               
+            # -------------------------------------------------------------------------Aplicando autodata
+            ut.open_software(1) #Abrindo Quark
+            selecionar_ferramenta("v")
+            autodata_edicao_17(**info) #prepara o local no quark
+            autodata_paginas(**info)
+            autodata_edicao_1(**info)               
             log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {formatar_data(data).capitalize()}")
             data += timedelta(days=1)
             data = ut.ajustar_data(data)
         cfg.edicao_inicial += 7
 
+
+
+    
+    
+def Criar_pastas():
+    criar_pasta(pasta_nome)
+    criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+    copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
+
+    criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+
+    criar_pasta(pasta_nome, cfg.CAMINHO_ADIANTO).capitalize()
+    copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+    pg.hotkey('alt', 'up')
+    
+
 for item in desync.gerar_edicoes_formatadas():
+    
+
+    info = {
+                "edicao_formatada": item["edicao_formatada"],
+                "data_formatada": item["data_formatada"],
+                "dia_semana": item["dia_semana"],
+                "pasta_nome": item["pasta_nome"],
+            }
+    print(str(info["edicao_formatada"]) + " - " + str(info["data_formatada"]) + " - " + str(info["dia_semana"]) + " - " + str(info["pasta_nome"]))
+
 
 
 
 if __name__ == "__main__":
-    Modelo_diário()
-    ut.open_software(4) #Abrindo Vscode
+    # Modelo_diário()
+    # ut.open_software(4) #Abrindo Vscode
     print('acabou')
     
 
 
 
-def create_models(): #vou exportar essa função para o all_in_one para executar tudo de uma vez
-    Modelo_diário()
+# def create_models(): #vou exportar essa função para o all_in_one para executar tudo de uma vez
+    # Modelo_diário()

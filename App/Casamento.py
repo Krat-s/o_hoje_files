@@ -154,12 +154,10 @@ def process_casamento_completo():
 
 
 def fazer_escolha(opcao):
-    if EDD.strip() == "":
-        messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
-        return EDD
-    messagebox.showinfo("Escolha", f"Edição {EDD} selecionada.\nVocê escolheu fazer {opcao}.")
-    messagebox.CANCEL
-    time.sleep(3)
+    # if EDD.strip() == "":
+    #     messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
+    #     return EDD
+    # time.sleep(3)
     if opcao == "o básico":
         process_casamento_basico()
     elif opcao == "cidades":
