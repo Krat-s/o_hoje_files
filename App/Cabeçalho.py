@@ -235,12 +235,15 @@ def Modelo_antigo():
         cfg.edicao_inicial += 7
 
 
+
+
 def testesss():
     for item in desync.gerar_edicoes_formatadas():
         ed = item["edicao_formatada"]
         dia_semana = item["dia_semana"]
         data_formatada = item["data_formatada"]
-    # criar_pasta()
+        print(f'criou pastas {item["pasta_nome"]}')
+        criar_pasta()
     # criar_pasta(item["pasta_nome"], cfg.CAMINHO_WEB)
     # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
 
@@ -249,7 +252,7 @@ def testesss():
     # criar_pasta(item["pasta_nome"], cfg.CAMINHO_ADIANTO).capitalize()
     # copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, item[""], dia_semana, modelo_path)
     # pg.hotkey('alt', 'up')
-    print(f'criou pastas {item["pasta_nome"]}')
+    
     
     
 
@@ -276,8 +279,8 @@ def main():
 if __name__ == "__main__":
     # Modelo_antigo()
     # ut.open_software(4) #Abrindo Vscode
-    # testesss()
-    main()
+    testesss()
+    # main()
 
     print('acabou')
     
