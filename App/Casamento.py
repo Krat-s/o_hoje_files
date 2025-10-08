@@ -144,37 +144,29 @@ def process_casamento_completo():
     process_casamento_primeiro_caderno()
 
 # ------------------------------------------------------------------------- Executando 
-# time.sleep(5)
-# process_casamento_basico()
-# process_casamento_miolo() 
-# pg.hotkey('win', 's')
-# pg.hotkey('win', '3')
-# print("ACABOU XD")
-
-
-
 def fazer_escolha(opcao):
-    # if EDD.strip() == "":
-    #     messagebox.showwarning("Atenção", "Por favor, digite o número da edição.")
-    #     return EDD
-    # time.sleep(3)
     if opcao == "o básico":
+        time.sleep(5)
         process_casamento_basico()
     elif opcao == "cidades":
+        time.sleep(5)
         process_casamento_cidades()
     elif opcao == "o miolo":
+        time.sleep(5)
         process_casamento_miolo()
     elif opcao == "a capa":
+        time.sleep(5)
         process_casamento_capa()
     elif opcao == "primeiro caderno":
+        time.sleep(5)
         process_casamento_primeiro_caderno()
     elif opcao == "tudo":
+            time.sleep(5)
             # process_casamento_completo()
             print('teste')
+                    
     else:
         messagebox.showerror("Erro", "Opção inválida.")
-    # print(EDD)
-
 
 # Criar janela principal
 janela = tk.Tk() 
@@ -183,11 +175,11 @@ janela.geometry("600x450")
 janela.configure(bg="#747474")
 janela.iconbitmap(r'App\archives\favicon.ico')
 
-estilo_títulos = {"font": ("Helvetica", 19, "bold"), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "solid"}
+estilo_títulos = {"font": ("Helvetica", 19, "bold"), "bg": "#585858", "fg": "white", "width": 30, "borderwidth": 3, "relief": "solid"}
 estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
 
 # Texto de instrução
-label = tk.Label(janela, text="Edição:", **estilo_títulos)
+label = tk.Label(janela, text=f"Edição: {EDD}", **estilo_títulos)
 label.pack(pady=10)
 
 # Botões de escolha
