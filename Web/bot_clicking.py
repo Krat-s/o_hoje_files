@@ -4,72 +4,28 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from threading import Thread
 import time
+import schedule
 
-# Configurações
-URL_JORNAL = "https://ohoje.com"
-BOTAO_ID_1 = "placement_1013993_0"
-BOTAO_ID_2 = "placement_1013994_0_i"
-BOTAO_ID_3 = "placement_1026570_0_i"
-NUM_NAVEGADORES = 4   
+import os
+import sys
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
 
-# Função que cada navegador executa
-def abrir_navegador_e_clickar():
-    # Configurações do Chrome (opcional: modo headless)
-    chrome_options = Options()
-    # chrome_options.add_argument("--headless")  # Descomente se quiser rodar sem abrir janela
-
-    # Inicializa o driver
-    driver = webdriver.Chrome(options=chrome_options)
-    driver.get(URL_JORNAL)
-
-    try:
-        # Espera a página carregar
-        time.sleep(3)
-
-        # Localiza o botão
-        botao = driver.find_element(By.ID, BOTAO_ID_3)
-
-        # Faz scroll até o botão
-        driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao)
-        time.sleep(1)  # Dá tempo para o scroll e animações
-
-        # Clica no botão
-        # botao.click()
-        print("✅ Botão 1 com sucesso!")
-
-    
-
-    except Exception as e:
-        print(f"⚠️ Erro ao clicar no botão: {e}")
-
-    finally:
-        time.sleep(5)  # Tempo para visualizar o resultado
-        driver.quit()
-
-# Cria e inicia as threads
-threads = []
-check = 0
-
-for _ in range(NUM_NAVEGADORES):
-    t = Thread(target=abrir_navegador_e_clickar)
-    t.start()
-    threads.append(t)
-    check += 1
-    
-
-# Aguarda todas as threads terminarem
-for t in threads:
-    t.join()
-
-print("🏁 Automação finalizada!")
-print(f'Número de acessos --> {check}')
+from Global.daily_task import abrir_navegador_e_clickar, gerar_horarios
 
 
+# 1. Gere todos os horários do dia
+agendas = []
+agendas += gerar_horarios(6,  9, 5)   # manhã
+agendas += gerar_horarios(12, 17, 8)  # tarde
+agendas += gerar_horarios(18, 22, 3)  # noite
 
+# 2. Agende cada execução
+for dt in agendas:
+    marcacao = dt.strftime("%H:%M")
+    schedule.every().day.at(marcacao).do(abrir_navegador_e_clickar)
 
-
-
-
-        #2 repetir o mesmo processo com os outros botões
-#         fazer em outros navegadors  
-# tentar descobrir link do relatório
+# 3. Loop principal
+while True:
+    schedule.run_pending()
+    time.sleep(30)
