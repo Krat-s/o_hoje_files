@@ -13,10 +13,9 @@ sys.path.append(raiz_projeto)
 
 from Global.daily_task import abrir_navegador_e_clickar, gerar_horarios
 
-
 # 1. Gere todos os horários do dia
 agendas = []
-agendas += gerar_horarios(6,  9, 5)   # manhã
+agendas += gerar_horarios(6,  9, 8)   # manhã
 agendas += gerar_horarios(12, 17, 8)  # tarde
 agendas += gerar_horarios(18, 22, 3)  # noite
 

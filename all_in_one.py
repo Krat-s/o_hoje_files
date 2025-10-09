@@ -1,14 +1,21 @@
-import os
-import sys
-# raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) ??????
-# sys.path.append(raiz_projeto)
+from Global import utils as ut
+from App import Casamento as cm
+# from Mail import gmail as gm
+# from App import Cabeçalho as cç
+# from Tasks import relatorio as rl
 
+# 📌 envio de emails
+# gm.auto_drafts()
 
+# 📌 relatório
+# rl.auto_relatório()
 
-# from Quark_automações.Cabeçalho import abrir_software ????????
+# 📌 Casamento
+# cm.auto_casamento()
+# cç.Modelo_antigo()
+# Importar aplicações
+# 📌 relatório
+# 📌 click_farmer
+# 📌 Drive Daily
 
-# from Gmail_automações.gmail import create_draft
-# from Quark_automações.Cabeçalho import Modelo_diário
-
-
-# abrir_software(1)
+# Gerar interfaçe gráfica de opções de automações

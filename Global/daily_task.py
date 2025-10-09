@@ -13,7 +13,7 @@ URL_JORNAL = "https://ohoje.com"
 BOTAO_ID_1 = "placement_1013993_0"
 BOTAO_ID_2 = "placement_1013994_0_i"
 BOTAO_ID_3 = "placement_1026570_0_i"
-NUM_NAVEGADORES = 4   
+NUM_NAVEGADORES = 8   
 
 # Função que cada navegador executa
 def gerar_horarios(inicio_h, fim_h, n_acessos):
@@ -26,6 +26,7 @@ def gerar_horarios(inicio_h, fim_h, n_acessos):
         start + timedelta(seconds=random.randint(0, total_s))
         for _ in range(n_acessos)
     )
+    print(horarios)
     return horarios
 
 def abrir_navegador_e_clickar():
@@ -71,7 +72,6 @@ for _ in range(NUM_NAVEGADORES):
     t.start()
     threads.append(t)
     check += 1
-    
 
 # Aguarda todas as threads terminarem
 for t in threads:

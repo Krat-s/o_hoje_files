@@ -90,11 +90,11 @@ def create_draft():
 
         edicao += cg.quantidade_por_semana + 2
 
-def create_drafts():
+def auto_drafts():
     take_emails()
     ut.open_software(2) #Abrindo Gmail -- ATENÇÃO -- Verificar se está na aba certa do navegador
     create_draft()
 
 if __name__ == "__main__":
     print("teste")
-    create_drafts()
+    # auto_drafts()

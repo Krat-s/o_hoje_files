@@ -27,13 +27,13 @@ def vigencia(dia):
         pg.write(str(dia))
         pg.press("tab")
 
-
 def pedidos():
     ni.gerar_n(36400)
 
-pedidos()
 
 
+if __name__ == "__main__":
+    print()
 
 
 

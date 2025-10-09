@@ -16,6 +16,12 @@ center_y = screen_height / 2
 # ------------------------------------------------------------------------- Dados de edição
 quantidade_repeticoes = 1
 edicao_inicial = 8001
+print(".....")
+print("Settings loaded ✔️")
+print(f".. Tamanho da tela: {pg.size()}")
+print(f".. Quantidade de repetições: {quantidade_repeticoes}")
+print(f".. Edição inicial: {edicao_inicial}")
+print(".....")
 
 # ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)
 # if pg.size() == (1366, 768):

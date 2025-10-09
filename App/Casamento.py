@@ -22,8 +22,9 @@ pg.FAILSAFE = True
 edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
 data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
 EDD = f"{edicao_0.replace('.', '')} - {data_0}"
-print(f"...   CASAMENTO - Process edd: {EDD}")
-print("...")
+print("Casamento Loaded ✔️")
+print(f".. CASAMENTO - Process edd: {EDD}")
+print(".....")
 
 # ------------------------------------------------------------------------- Funções
 def open_web():
@@ -144,68 +145,71 @@ def process_casamento_completo():
     process_casamento_primeiro_caderno()
 
 # ------------------------------------------------------------------------- Executando 
-def fazer_escolha(opcao):
-    if opcao == "o básico":
-        time.sleep(5)
-        process_casamento_basico()
-    elif opcao == "cidades":
-        time.sleep(5)
-        process_casamento_cidades()
-    elif opcao == "o miolo":
-        time.sleep(5)
-        process_casamento_miolo()
-    elif opcao == "a capa":
-        time.sleep(5)
-        process_casamento_capa()
-    elif opcao == "primeiro caderno":
-        time.sleep(5)
-        process_casamento_primeiro_caderno()
-    elif opcao == "tudo":
+def auto_casamento():
+    def fazer_escolha(opcao):
+        if opcao == "o básico":
             time.sleep(5)
-            # process_casamento_completo()
-            print('teste')
-                    
-    else:
-        messagebox.showerror("Erro", "Opção inválida.")
+            process_casamento_basico()
+        elif opcao == "cidades":
+            time.sleep(5)
+            process_casamento_cidades()
+        elif opcao == "o miolo":
+            time.sleep(5)
+            process_casamento_miolo()
+        elif opcao == "a capa":
+            time.sleep(5)
+            process_casamento_capa()
+        elif opcao == "primeiro caderno":
+            time.sleep(5)
+            process_casamento_primeiro_caderno()
+        elif opcao == "tudo":
+                time.sleep(5)
+                process_casamento_completo()
+                print('teste')
+                        
+        else:
+            messagebox.showerror("Erro", "Opção inválida.")
 
-# Criar janela principal
-janela = tk.Tk() 
-janela.title("Casamento")
-janela.geometry("600x450")
-janela.configure(bg="#747474")
-janela.iconbitmap(r'App\archives\favicon.ico')
+    # Criar janela principal
+    janela = tk.Tk() 
+    janela.title("Casamento")
+    janela.geometry("600x450")
+    janela.configure(bg="#747474")
+    janela.iconbitmap(r'App\archives\favicon.ico')
 
-estilo_títulos = {"font": ("Helvetica", 19, "bold"), "bg": "#585858", "fg": "white", "width": 30, "borderwidth": 3, "relief": "solid"}
-estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
+    estilo_títulos = {"font": ("Helvetica", 19, "bold"), "bg": "#585858", "fg": "white", "width": 30, "borderwidth": 3, "relief": "solid"}
+    estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
 
-# Texto de instrução
-label = tk.Label(janela, text=f"Edição: {EDD}", **estilo_títulos)
-label.pack(pady=10)
+    # Texto de instrução
+    label = tk.Label(janela, text=f"Edição: {EDD}", **estilo_títulos)
+    label.pack(pady=10)
 
-# Botões de escolha
-btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"), **estilo_escolhas)
-btn_x.pack(pady=5)
+    # Botões de escolha
+    btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"), **estilo_escolhas)
+    btn_x.pack(pady=5)
 
-btn_v = tk.Button(janela, text="Caderno de cidades", command=lambda: fazer_escolha("cidades"), **estilo_escolhas)
-btn_v.pack(pady=5)
+    btn_v = tk.Button(janela, text="Caderno de cidades", command=lambda: fazer_escolha("cidades"), **estilo_escolhas)
+    btn_v.pack(pady=5)
 
-btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"), **estilo_escolhas)
-btn_y.pack(pady=5)
+    btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"), **estilo_escolhas)
+    btn_y.pack(pady=5)
 
-btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"), **estilo_escolhas)
-btn_z.pack(pady=5)
+    btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"), **estilo_escolhas)
+    btn_z.pack(pady=5)
 
-btn_w = tk.Button(janela, text="Primeiro caderno", command=lambda: fazer_escolha("primeiro caderno"), **estilo_escolhas)
-btn_w.pack(pady=5)
+    btn_w = tk.Button(janela, text="Primeiro caderno", command=lambda: fazer_escolha("primeiro caderno"), **estilo_escolhas)
+    btn_w.pack(pady=5)
 
-btn_u = tk.Button(janela, text="Tudo", command=lambda: fazer_escolha("tudo"), **estilo_escolhas)
-btn_u.pack(pady=5)
+    btn_u = tk.Button(janela, text="Tudo", command=lambda: fazer_escolha("tudo"), **estilo_escolhas)
+    btn_u.pack(pady=5)
 
-# Iniciar a interface
-janela.mainloop()
+    # Iniciar a interface
+    janela.mainloop()
 
 
 
+
+# ------------------------------------------------------------------------- Testes
 
 # from PyQt5.QtWidgets import QApplication, QLabel
 
@@ -213,3 +217,8 @@ janela.mainloop()
 # label = QLabel("Olá, PyQt!")
 # label.show()
 # app.exec_()
+
+
+
+if __name__ == "__main__":
+    auto_casamento()

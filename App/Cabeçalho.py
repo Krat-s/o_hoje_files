@@ -283,9 +283,3 @@ if __name__ == "__main__":
     # main()
 
     print('acabou')
-    
-
-
-
-# def create_models(): #vou exportar essa função para o all_in_one para executar tudo de uma vez
-    # Modelo_diário()
