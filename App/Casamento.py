@@ -131,9 +131,9 @@ def process_casamento_cidades():
 def process_casamento_miolo():
     process_casamento("3_6", [3, 6])
     process_casamento("4_5", [4, 5])
-    process_casamento("2_7", [2, 7])    
 
 def process_casamento_capa():
+    process_casamento("2_7", [2, 7])    
     process_casamento("1_8", [8, 1])
 
 def process_casamento_primeiro_caderno():
