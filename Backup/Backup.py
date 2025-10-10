@@ -1581,3 +1581,180 @@
 #         #2 repetir o mesmo processo com os outros botões
 # #         fazer em outros navegadors  
 # # tentar descobrir link do relatório
+
+
+
+
+
+# Bot-click
+# # Importações principais do Selenium e utilitários do Chrome
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.options import Options
+
+# # Permite rodar funções em paralelo (não usado diretamente aqui, mas importado)
+# from threading import Thread
+
+# # Módulos para controle de tempo e agendamento de tarefas
+# import time
+# import schedule
+
+# # --- CONFIGURAÇÃO DE IMPORTAÇÃO PERSONALIZADA ---
+# # Adiciona o diretório raiz do projeto ao sys.path,
+# # permitindo importar módulos que estão em pastas "acima"
+# import os
+# import sys
+# raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# sys.path.append(raiz_projeto)
+
+# # Importa funções do módulo auxiliar `Global/daily_task.py`
+# from Global.daily_task import abrir_navegador_e_clickar, gerar_horarios
+
+
+# # ===========================================================
+# # 1️⃣ GERA TODOS OS HORÁRIOS DO DIA
+# # ===========================================================
+# agendas = []
+
+# # Gera horários aleatórios entre 6h e 12h (manhã)
+# agendas += gerar_horarios(6, 12, 2)
+
+# # Gera horários aleatórios entre 12h e 17h (tarde)
+# agendas += gerar_horarios(12, 17, 2)
+
+# # Gera horários aleatórios entre 18h e 24h (noite)
+# agendas += gerar_horarios(18, 24, 2)
+
+
+# # ===========================================================
+# # 2️⃣ AGENDA CADA EXECUÇÃO
+# # ===========================================================
+# # Para cada horário gerado, agenda uma execução da função
+# # abrir_navegador_e_clickar() no horário correspondente
+# for dt in agendas:
+#     marcacao = dt.strftime("%H:%M")
+#     schedule.every().day.at(marcacao).do(abrir_navegador_e_clickar)
+
+
+# # ===========================================================
+# # 3️⃣ LOOP PRINCIPAL
+# # ===========================================================
+# # Fica rodando indefinidamente, verificando a cada 30 segundos
+# # se há alguma tarefa agendada para executar
+# while True:
+#     schedule.run_pending()  # Executa tarefas agendadas no horário correto
+#     time.sleep(30)
+
+# # Importações do Selenium para controle do navegador
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.options import Options
+
+# # Permite executar várias instâncias de navegador em paralelo
+# from threading import Thread
+
+# # Utilitários para tempo e aleatoriedade
+# import random
+# from datetime import datetime, timedelta
+# import time
+
+# # ===========================================================
+# # CONFIGURAÇÕES GERAIS
+# # ===========================================================
+# URL_JORNAL = "https://ohoje.com"      # Site a ser acessado
+# BOTAO_ID_1 = "placement_1013993_0"    # ID possível de um botão
+# BOTAO_ID_2 = "placement_1013994_0_i"
+# BOTAO_ID_3 = "placement_1026570_0_i"  # ID realmente usado no script
+# NUM_NAVEGADORES = 8                   # Quantidade de janelas Chrome a abrir simultaneamente
+
+
+# # ===========================================================
+# # FUNÇÃO 1️⃣ → Gera horários aleatórios em um intervalo
+# # ===========================================================
+# def gerar_horarios(inicio_h, fim_h, n_acessos):
+#     # Define o horário inicial do dia (zerando minutos e segundos)
+#     hoje = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+
+#     # Cria os limites de início e fim do intervalo
+#     start = hoje + timedelta(hours=inicio_h)
+#     end = hoje + timedelta(hours=fim_h)
+
+#     # Calcula o total de segundos entre início e fim
+#     total_s = int((end - start).total_seconds())
+
+#     # Gera uma lista com N horários aleatórios dentro do intervalo
+#     horarios = sorted(
+#         start + timedelta(seconds=random.randint(0, total_s))
+#         for _ in range(n_acessos)
+#     )
+
+#     return horarios
+
+
+# # ===========================================================
+# # FUNÇÃO 2️⃣ → Abre o navegador e clica em um botão específico
+# # ===========================================================
+# def abrir_navegador_e_clickar():
+#     # Configura o Chrome (pode rodar em modo invisível descomentando a linha abaixo)
+#     chrome_options = Options()
+#     # chrome_options.add_argument("--headless")  # Rodar sem abrir a janela
+
+#     # Inicializa o navegador Chrome
+#     driver = webdriver.Chrome(options=chrome_options)
+#     driver.get(URL_JORNAL)  # Abre o site alvo
+
+#     try:
+#         # Espera 3 segundos para o site carregar
+#         time.sleep(3)
+
+#         # Localiza o botão pelo seu ID
+#         botao = driver.find_element(By.ID, BOTAO_ID_3)
+
+#         # Faz o scroll até o botão (centraliza na tela)
+#         driver.execute_script(
+#             "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao
+#         )
+
+#         # Espera 1 segundo para a rolagem e possíveis animações terminarem
+#         time.sleep(1)
+
+#         # Realiza o clique (linha comentada, então não clica de fato)
+#         # botao.click()
+#         print("✅ Botão 1 com sucesso!")
+
+#     except Exception as e:
+#         # Caso algo dê errado (por exemplo, ID inexistente)
+#         print(f"⚠️ Erro ao clicar no botão: {e}")
+
+#     finally:
+#         # Espera 5 segundos para visualizar o resultado e fecha o navegador
+#         time.sleep(5)
+#         driver.quit()
+
+
+# # ===========================================================
+# # EXECUÇÃO DIRETA (quando o módulo é rodado isoladamente)
+# # ===========================================================
+# threads = []
+# check = 0
+
+# # Cria várias threads (cada uma abre um navegador separado)
+# for _ in range(NUM_NAVEGADORES):
+#     t = Thread(target=abrir_navegador_e_clickar)
+#     t.start()
+#     threads.append(t)
+#     check += 1
+
+# # Aguarda todas as threads terminarem antes de prosseguir
+# for t in threads:
+#     t.join()
+
+# print("🏁 Automação finalizada!")
+# print(f'Número de acessos --> {check}')
+
+
+
+if __name__ == "__main__":
+    print('cuidado!!!')

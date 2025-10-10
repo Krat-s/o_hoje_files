@@ -3,10 +3,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from threading import Thread
-
-import random
 from datetime import datetime, timedelta
 import time
+import schedule
+import random
+
 
 # Configurações
 URL_JORNAL = "https://ohoje.com"
@@ -26,42 +27,42 @@ def gerar_horarios(inicio_h, fim_h, n_acessos):
         start + timedelta(seconds=random.randint(0, total_s))
         for _ in range(n_acessos)
     )
-    print(horarios)
     return horarios
 
 def abrir_navegador_e_clickar():
-    # # Configurações do Chrome (opcional: modo headless)
-    # chrome_options = Options()
-    # # chrome_options.add_argument("--headless")  # Descomente se quiser rodar sem abrir janela
+    print(f"🌐 Acessando {URL_JORNAL}")
+    # Configurações do Chrome (opcional: modo headless)
+    chrome_options = Options()
+    # chrome_options.add_argument("--headless")  # Descomente se quiser rodar sem abrir janela
 
-    # # Inicializa o driver
+    # Inicializa o driver
     # driver = webdriver.Chrome(options=chrome_options)
     # driver.get(URL_JORNAL)
 
-    # try:
-    #     # Espera a página carregar
-    #     time.sleep(3)
+    try:
+        # # Espera a página carregar
+        # time.sleep(3)
 
-    #     # Localiza o botão
-    #     botao = driver.find_element(By.ID, BOTAO_ID_3)
+        # # Localiza o botão
+        # botao = driver.find_element(By.ID, BOTAO_ID_3)
 
-    #     # Faz scroll até o botão
-    #     driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao)
-    #     time.sleep(1)  # Dá tempo para o scroll e animações
+        # # Faz scroll até o botão
+        # driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao)
+        # time.sleep(1)  # Dá tempo para o scroll e animações
 
-    #     # Clica no botão
-    #     # botao.click()
-    #     print("✅ Botão 1 com sucesso!")
+        # # Clica no botão
+        # # botao.click()
+        print("✅ Botão 1 com sucesso!")
 
     
 
-    # except Exception as e:
-    #     print(f"⚠️ Erro ao clicar no botão: {e}")
+    except Exception as e:
+        print(f"⚠️ Erro ao clicar no botão: {e}")
 
-    # finally:
-    #     time.sleep(5)  # Tempo para visualizar o resultado
-    #     driver.quit()
-    print("Simulando clique no botão...")
+    finally:
+        # time.sleep(5)  # Tempo para visualizar o resultado
+        # driver.quit()
+        print("🔒 Navegador fechado.")
 
 # Cria e inicia as threads
 threads = []
@@ -79,3 +80,22 @@ for t in threads:
 
 print("🏁 Automação finalizada!")
 print(f'Número de acessos --> {check}')
+
+# 1. Gere todos os horários do dia
+agendas = []
+agendas += gerar_horarios(6,  12, 2)   # manhã
+agendas += gerar_horarios(12, 17, 2)  # tarde
+agendas += gerar_horarios(18, 24, 2)  # noite
+
+# 2. Agende cada execução
+for dt in agendas:
+    marcacao = dt.strftime("%H:%M")
+    schedule.every().day.at(marcacao).do(abrir_navegador_e_clickar)
+    print(f"Agendado para: {marcacao}")
+
+# 3. Loop principal
+# while True:
+#     # schedule.run_pending()
+#     # time.sleep(30)
+#     print(agendas)
+# print(agendas)
