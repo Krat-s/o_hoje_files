@@ -4,7 +4,6 @@ import keyboard as kb
 import time
 from pywinauto import Desktop
 from datetime import datetime, timedelta
-
 import os
 import sys
 
@@ -13,16 +12,7 @@ sys.path.append(raiz_projeto)
 
 import Global.settings as cfg
 
-# ---------------------------- Funções ----------------------------
-def abrir_software(numero):
-    pg.hotkey('win', 's')
-    pg.hotkey('win', str(numero))
-    pg.press('enter')
-    time.sleep(0.5)
-
-def ajustar_data(data):
-    return data + timedelta(days=1) if data.weekday() == 6 else data
-
+# ---------------------------- Funções passivas ----------------------------
 def verificar_windows() -> str:
     """
     Detecta corretamente se é Windows 10 ou 11 usando a API nativa.
@@ -58,6 +48,22 @@ def verificar_windows() -> str:
         return "Windows 10"
     else:
         return f"Windows {major}"
+
+def atalho_endereço():
+    ''''Retorna o atalho correto para a barra de endereço do Explorador de Arquivos'''
+    windows = verificar_windows()
+    return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'l')
+
+
+# ---------------------------- Funções ----------------------------
+def ajustar_data(data):
+    return data + timedelta(days=1) if data.weekday() == 6 else data
+
+def abrir_software(numero):
+    pg.hotkey('win', 's')
+    pg.hotkey('win', str(numero))
+    pg.press('enter')
+    time.sleep(0.5)
 
 def explorer_esta_aberto() -> bool:
     """
@@ -102,3 +108,37 @@ def take_file(arquivo):
     pg.press('down')
     time.sleep(0.3)
     kb.press_and_release('enter')
+
+def ir_para(específico=None):
+    pg.hotkey(*atalho_endereço())
+    time.sleep(0.2)
+    if específico:
+        kb.write(específico) 
+    pg.press('enter')
+    time.sleep(0.2)
+
+def criar_pasta(nome, em=None):
+    if em:
+        ir_para(em)
+    time.sleep(0.3)
+    max_windows()
+    time.sleep(0.3)
+    pg.click(cfg.center_x, cfg.center_y)
+    pg.hotkey('ctrl', 'shift', 'n')
+    time.sleep(0.3)
+    kb.write(nome)
+    pg.press('enter')
+    time.sleep(0.3)
+
+def abrir_pasta(endereco):
+    os.startfile(endereco)
+    max_windows()
+    pg.click(cfg.center_x, cfg.center_y)
+
+
+if __name__ == "__main__":
+    # print(f"Tamanho da tela: {pg.size()}")
+    # print(f"Centro da tela: ({center_x}, {center_y})")
+    # print(f"Teste Utils: {}")
+
+    print(f"Sistema Operacional: {verificar_windows()}")

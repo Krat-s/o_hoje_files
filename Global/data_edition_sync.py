@@ -88,11 +88,12 @@ def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QU
             ed = ed
 
             info = {
+                "edição_sem_ponto": ed.replace('.', ''),
                 "edicao_formatada": ed,
                 "data_formatada": formatar_data(data_atual),
                 "dia_semana": dia_semana,
+                "dia_semana_padrão": data_atual.weekday(),
                 "pasta_nome": pasta_nome,
-
             }
 
             resultados.append(info)
@@ -114,18 +115,23 @@ def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
     
 
-#Meus testes
 
-def teste_syed():
+
+
+#Apagar testes quando acabar
+def teste_desync():
     # dados = gerar_edicoes_formatadas()
     for item in gerar_edicoes_formatadas():
         # ed = item["ed"] 
         # print(f'{item["pasta_nome"]},    {item["edicao_formatada"]},    {item["data_formatada"].capitalize()},   {item["dia_semana"]}  ')
-        print(item["edicao_formatada"])
+        print(item["dia_semana_padrão"])
+       
 
 if __name__ == "__main__":
-    # teste_syed()
     teste1 = datetime.now() + timedelta(days=1)
     teste2 = 8001
     print(obter_edicao_por_data(teste1))
     print(formatar_data(obter_data_por_edicao(teste2)))
+    print('...')
+
+    teste_desync()

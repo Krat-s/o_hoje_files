@@ -21,24 +21,11 @@ pg.PAUSE = 0.5
 pg.FAILSAFE = True
 time.sleep(1)
 
-locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
-SISTEMA_OPERACIONAL = ut.verificar_windows()
-
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
+ver = "v1.1.0"
 def log(mensagem): 
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {mensagem}")
 
-def atalho_endereço():
-    windows = SISTEMA_OPERACIONAL
-    return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'l')
-
-def ir_para(específico=None):
-    pg.hotkey(*atalho_endereço())
-    time.sleep(0.2)
-    if específico:
-        kb.write(específico) 
-    pg.press('enter')
-    time.sleep(0.2)
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def pasta_esta_aberta(*nomes):
@@ -51,35 +38,19 @@ def pasta_esta_aberta(*nomes):
                     return True
     return False
 
-def criar_pasta(nome, em=None):
-    if em:
-        ir_para(em)
-    time.sleep(0.3)
-    ut.max_windows()
-    time.sleep(0.3)
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.hotkey('ctrl', 'shift', 'n')
-    time.sleep(0.3)
-    kb.write(nome)
-    pg.press('enter')
-    time.sleep(0.3)
-
 def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
     if de:
-        ir_para(de)
+        ut.ir_para(de)
     nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.2)
-    ir_para(f"{caminho}\\{nome_pasta}")
+    ut.ir_para(f"{caminho}\\{nome_pasta}")
     pg.hotkey('ctrl', 'v')
     time.sleep(0.5)
 
-def abrir_pasta(endereco):
-    os.startfile(endereco)
-    ut.max_windows()
-    pg.click(cfg.center_x, cfg.center_y)
+
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def abrir_sugestão():
@@ -110,7 +81,7 @@ def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     nome_pasta = f"{edicao_formatada.replace('.', '')} - {dia_semana}"
-    kb.write(f"{cfg.CAMINHO_ADIANTO}\\{nome_pasta}")
+    kb.write(f"{cfg.CAMINHO_MODELO_EDD}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
     abrir_sugestão()
@@ -156,7 +127,7 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
-    kb.write(cfg.CAMINHO_ADIANTO + '\\' + f"{edicao_formatada.replace('.', '')} - {dia_semana}")
+    kb.write(cfg.CAMINHO_MODELO_EDD + '\\' + f"{edicao_formatada.replace('.', '')} - {dia_semana}")
     pg.press('enter')
     time.sleep(0.5)
     kb.write('17')
@@ -177,15 +148,15 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
 
 def abrir_janela_unica():
     if pasta_esta_aberta("4 Adianto de novas edições"):
-        abrir_pasta(cfg.CAMINHO_ADIANTO)
-        ir_para(cfg.CAMINHO_PAGFLIP)
+        ut.abrir_pasta(cfg.CAMINHO_MODELO_EDD)
+        ut.ir_para(cfg.CAMINHO_PAGFLIP)
     elif pasta_esta_aberta("fotos"):
-        abrir_pasta(cfg.CAMINHO_FOTOS)
-        ir_para(cfg.CAMINHO_PAGFLIP)
+        ut.abrir_pasta(cfg.CAMINHO_FOTOS)
+        ut.ir_para(cfg.CAMINHO_PAGFLIP)
     elif pasta_esta_aberta("00 Pagflip"):
-        abrir_pasta(cfg.CAMINHO_PAGFLIP)
+        ut.abrir_pasta(cfg.CAMINHO_PAGFLIP)
     else:
-        abrir_pasta(cfg.CAMINHO_PAGFLIP)
+        ut.abrir_pasta(cfg.CAMINHO_PAGFLIP)
     
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
@@ -212,19 +183,19 @@ def Modelo_antigo():
             # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
             abrir_janela_unica()
             
-            criar_pasta(pasta_nome)
+            ut.criar_pasta(pasta_nome)
 
-            criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+            ut.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
             copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
 
-            criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+            ut.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
         
-            criar_pasta(pasta_nome, cfg.CAMINHO_ADIANTO).capitalize()
-            copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, ed, dia_semana, modelo_path)
+            ut.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD).capitalize()
+            copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, ed, dia_semana, modelo_path)
             pg.hotkey('alt', 'up')
 
             # -------------------------------------------------------------------------Aplicando autodata
-            ut.open_software(1) #Abrindo Quark
+            ut.open_software(cfg.Quark)
             selecionar_ferramenta("v")
             autodata_edicao_17(**info) #prepara o local no quark
             autodata_paginas(**info)
@@ -238,48 +209,66 @@ def Modelo_antigo():
 
 
 def testesss():
+    log(f"📦 Gerando edições ({ver})...")
     for item in desync.gerar_edicoes_formatadas():
+        #----------------------📌verificar se existe uma forma melhor de chamar as variaveis
         ed = item["edicao_formatada"]
         dia_semana = item["dia_semana"]
         data_formatada = item["data_formatada"]
-        print(f'criou pastas {item["pasta_nome"]}')
-        criar_pasta()
+        pasta_nome = item["pasta_nome"]
+        weekday = item["dia_semana_padrão"]
+        print(f'criou pastas {pasta_nome}')
+
+        modelo_path = {
+            0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
+            5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
+            }.get(weekday, r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
+
+
+        # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
+        # abrir_janela_unica() #Preparando o explorer
+        # ut.criar_pasta(pasta_nome)
+
+        # ut.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+        # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
+
+        # ut.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+    
+        # ut.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD).capitalize()
+        # copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, ed, dia_semana, modelo_path)
+        ut.ir_para(modelo_path)
+        print(f'foi para {modelo_path}')
+        # pg.hotkey('alt', 'up')
     # criar_pasta(item["pasta_nome"], cfg.CAMINHO_WEB)
     # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
 
     # criar_pasta(item["pasta_nome"], cfg.CAMINHO_FOTOS)
 
-    # criar_pasta(item["pasta_nome"], cfg.CAMINHO_ADIANTO).capitalize()
-    # copiar_modelo_para_pasta(cfg.CAMINHO_ADIANTO, item[""], dia_semana, modelo_path)
+    # criar_pasta(item["pasta_nome"], cfg.CAMINHO_MODELO_EDD).capitalize()
+    # copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, item[""], dia_semana, modelo_path)
     # pg.hotkey('alt', 'up')
     
+        # print(f'edição: {ed} --- Dia da semana {dia_semana} --- Data formatada {data_formatada} --- Nome da pasta {pasta_nome}')
     
     
 
     
 def main():
     for item in desync.gerar_edicoes_formatadas():
-        db = {
-                    "ed": item["edicao_formatada"],
-                    "data_formatada": item["data_formatada"],
-                    "dia_semana": item["dia_semana"],
-                    "pasta": item["pasta_nome"],
-                }
-        
-        ed = db["ed"]
-        dia_semana = db["dia_semana"]
-        data_formatada = db["data_formatada"]
-        pasta_nome = db["pasta"]
+        ed = item["edicao_formatada"]
+        dia_semana = item["dia_semana"]
+        data_formatada = item["data_formatada"]
+        pasta_nome = item["pasta_nome"]
+        print(f'tente {ed}')
 
-        # print(str(info["edicao_formatada"]) + " - " + str(info["data_formatada"]) + " - " + str(info["dia_semana"]) + " - " + str(info["pasta_nome"]))
-
-        print(ed)
 
 
 if __name__ == "__main__":
     # Modelo_antigo()
-    # ut.open_software(4) #Abrindo Vscode
+    # ut.open_software(cfg.vscode) #Abrindo Vscode
+
+    ut.open_software(cfg.explorer)
     testesss()
     # main()
-
-    print('acabou')
+    # main()
+    # data = formatar_data(datetime.now())

@@ -1,17 +1,26 @@
 import pyautogui as pg
+import locale
 
 # ------------------------------------------------------------------------- Caminhos de rede
+CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
-CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\Modelo'
-CAMINHO_ADIANTO = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
 CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
-CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
+CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\Modelo'
+CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
 
+# ------------------------------------------------------------------------- Barra de tarefas
+quark = 1
+opera = 2 # Navegador padrão
+vscode = 3
+explorer = 4
+
+# ------------------------------------------------------------------------- Configurações gerais
 screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
+locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 
 # ------------------------------------------------------------------------- Dados de edição
 quantidade_repeticoes = 1
@@ -24,6 +33,7 @@ print(f".. Edição inicial: {edicao_inicial}")
 print(".....")
 
 # ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)
+# arrumar uma forma de fazer isso de forma dinamica. Opções: 1 calcular sempre que rodar o script, 2 criar um arquivo de configuração para cada resolução de tela de acordo com o dispositivo
 # if pg.size() == (1366, 768):
 #     x_data = 49.48
 #     y_data = 23.06
@@ -60,10 +70,6 @@ x_edicao_capa = 346
 y_edicao_capa = 448
 
 if __name__ == "__main__":
-    # print(f"Tamanho da tela: {pg.size()}")
-    # print(f"Centro da tela: ({center_x}, {center_y})")
+    print(f"Centro da tela: ({center_x}, {center_y})")
     print(f"Edição inicial: {edicao_inicial}")
     pg.moveTo(x_data, y_data)
-
-
-    
