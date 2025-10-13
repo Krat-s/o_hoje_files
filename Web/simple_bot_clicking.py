@@ -14,32 +14,20 @@ NUM_NAVEGADORES = 6
 
 # Função que cada navegador executa
 def abrir_navegador_e_clickar():
-    # Configurações do Chrome (opcional: modo headless)
     chrome_options = Options()
-    # chrome_options.add_argument("--headless")  # Descomente se quiser rodar sem abrir janela
+    # chrome_options.add_argument("--headless") # Executa em modo headless (sem interface gráfica)
 
-    # Inicializa o driver
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(URL_JORNAL)
 
     try:
-        # Aguarda a página carregar
         time.sleep(3)
-
-        # Localiza o botão
         botao = driver.find_element(By.ID, BOTAO_ID_1)
-
-        # Faz scroll até o botão
         driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao)
-        time.sleep(1)  # Dá tempo para o scroll e animações
-
-        # Clica no botão
+        time.sleep(1)
         botao.click()
         print("✅ Botão clicado com sucesso!")
-
-        #2
     
-
     except Exception as e:
         print(f"⚠️ Erro ao clicar no botão: {e}")
 
@@ -60,5 +48,5 @@ for t in threads:
 
 print("🏁 Automação finalizada!")
 
-
+# 📌 Falta: ajustar com o tempo de carregamento da página usando o método drive.web
 
