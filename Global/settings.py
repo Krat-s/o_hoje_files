@@ -23,10 +23,10 @@ center_y = screen_height / 2
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 
 # ------------------------------------------------------------------------- Dados de edição
-quantidade_repeticoes = 1
+quantidade_repeticoes = 2
 edicao_inicial = 8001
 print(".....")
-print("Settings loaded ✔️")
+print("⚙️ Settings loaded ✔️")
 print(f".. Tamanho da tela: {pg.size()}")
 print(f".. Quantidade de repetições: {quantidade_repeticoes}")
 print(f".. Edição inicial: {edicao_inicial}")

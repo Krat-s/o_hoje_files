@@ -50,8 +50,6 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
     pg.hotkey('ctrl', 'v')
     time.sleep(0.5)
 
-
-
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def abrir_sugestão():
     time.sleep(0.2)
@@ -206,69 +204,56 @@ def Modelo_antigo():
         cfg.edicao_inicial += 7
 
 
-
-
-def testesss():
+def auto_cabecalho():
     log(f"📦 Gerando edições ({ver})...")
     for item in desync.gerar_edicoes_formatadas():
         #----------------------📌verificar se existe uma forma melhor de chamar as variaveis
         ed = item["edicao_formatada"]
-        dia_semana = item["dia_semana"]
         data_formatada = item["data_formatada"]
-        pasta_nome = item["pasta_nome"]
         weekday = item["dia_semana_padrão"]
-        print(f'criou pastas {pasta_nome}')
+        dia_semana = item["dia_semana"]
+        pasta_nome = item["pasta_nome"]
 
+        info = {
+            "edicao_formatada": ed,
+            "data_formatada": data_formatada,
+            "dia_semana": dia_semana
+            }
+        
         modelo_path = {
             0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
             }.get(weekday, r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
-
         # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
         # abrir_janela_unica() #Preparando o explorer
         # ut.criar_pasta(pasta_nome)
 
+        # ut.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+
         # ut.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
         # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
-
-        # ut.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
     
         # ut.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD).capitalize()
         # copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, ed, dia_semana, modelo_path)
-        ut.ir_para(modelo_path)
-        print(f'foi para {modelo_path}')
         # pg.hotkey('alt', 'up')
-    # criar_pasta(item["pasta_nome"], cfg.CAMINHO_WEB)
-    # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
 
-    # criar_pasta(item["pasta_nome"], cfg.CAMINHO_FOTOS)
-
-    # criar_pasta(item["pasta_nome"], cfg.CAMINHO_MODELO_EDD).capitalize()
-    # copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, item[""], dia_semana, modelo_path)
-    # pg.hotkey('alt', 'up')
-    
-        # print(f'edição: {ed} --- Dia da semana {dia_semana} --- Data formatada {data_formatada} --- Nome da pasta {pasta_nome}')
-    
-    
-
-    
-def main():
-    for item in desync.gerar_edicoes_formatadas():
-        ed = item["edicao_formatada"]
-        dia_semana = item["dia_semana"]
-        data_formatada = item["data_formatada"]
-        pasta_nome = item["pasta_nome"]
-        print(f'tente {ed}')
-
-
+        # # -------------------------------------------------------------------------Aplicando autodata
+        # ut.open_software(cfg.quark)
+        # selecionar_ferramenta("v")
+        # autodata_edicao_17(**info) #prepara o local no quark
+        # autodata_paginas(**info)
+        # autodata_edicao_1(**info)               
+      
+        log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {data_formatada}")
+        
 
 if __name__ == "__main__":
     # Modelo_antigo()
     # ut.open_software(cfg.vscode) #Abrindo Vscode
 
-    ut.open_software(cfg.explorer)
-    testesss()
+    # ut.open_software(cfg.explorer)
+    auto_cabecalho()
     # main()
     # main()
     # data = formatar_data(datetime.now())

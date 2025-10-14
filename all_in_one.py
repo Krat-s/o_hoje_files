@@ -16,6 +16,6 @@ from App import Casamento as cm
 # Importar aplicações
 # 📌 relatório
 # 📌 click_farmer
-# 📌 Drive Daily
+# 📌 Drive Daily 
 
 # Gerar interfaçe gráfica de opções de automações
