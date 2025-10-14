@@ -113,25 +113,10 @@ def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_seman
 
 def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
-    
-
-
-
-
-#Apagar testes quando acabar
-def teste_desync():
-    # dados = gerar_edicoes_formatadas()
-    for item in gerar_edicoes_formatadas():
-        # ed = item["ed"] 
-        # print(f'{item["pasta_nome"]},    {item["edicao_formatada"]},    {item["data_formatada"].capitalize()},   {item["dia_semana"]}  ')
-        print(item["dia_semana_padrão"])
-       
-
+         
 if __name__ == "__main__":
     teste1 = datetime.now() + timedelta(days=1)
     teste2 = 8001
     print(obter_edicao_por_data(teste1))
     print(formatar_data(obter_data_por_edicao(teste2)))
     print('...')
-
-    teste_desync()

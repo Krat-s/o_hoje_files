@@ -7,8 +7,8 @@ CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
 CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\Modelo'
-CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\Modelo páginas casadas'
+CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
+CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
 
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
@@ -23,13 +23,15 @@ center_y = screen_height / 2
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 
 # ------------------------------------------------------------------------- Dados de edição
-quantidade_repeticoes = 2
+quantidade_repeticoes = 1
 edicao_inicial = 8001
+total_edicoes = quantidade_repeticoes * 6
 print(".....")
-print("⚙️ Settings loaded ✔️")
+print("⚙️  Settings loaded ✔️")
 print(f".. Tamanho da tela: {pg.size()}")
-print(f".. Quantidade de repetições: {quantidade_repeticoes}")
 print(f".. Edição inicial: {edicao_inicial}")
+print(f".. Quantidade de repetições: {quantidade_repeticoes}")
+print(f".. Criando modelo de {total_edicoes} edições")
 print(".....")
 
 # ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)

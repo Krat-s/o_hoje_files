@@ -1,7 +1,6 @@
 import os
 import sys
 import time
-import locale
 from datetime import datetime, timedelta
 import pyautogui as pg
 import keyboard as kb
@@ -22,10 +21,9 @@ pg.FAILSAFE = True
 time.sleep(1)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
-ver = "v1.1.0"
+ver = "v1.2.1"
 def log(mensagem): 
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {mensagem}")
-
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def pasta_esta_aberta(*nomes):
@@ -48,7 +46,7 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
     time.sleep(0.2)
     ut.ir_para(f"{caminho}\\{nome_pasta}")
     pg.hotkey('ctrl', 'v')
-    time.sleep(0.5)
+    time.sleep(1)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def abrir_sugestão():
@@ -143,7 +141,6 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     kb.write(f"Ano 21 - nº {edicao_formatada}")
     fechar_pagina()
 
-
 def abrir_janela_unica():
     if pasta_esta_aberta("4 Adianto de novas edições"):
         ut.abrir_pasta(cfg.CAMINHO_MODELO_EDD)
@@ -156,104 +153,50 @@ def abrir_janela_unica():
     else:
         ut.abrir_pasta(cfg.CAMINHO_PAGFLIP)
     
+def auto_pastas(pasta_nome, ed, dia_semana, modelo_path):
+    abrir_janela_unica()
+    ut.criar_pasta(pasta_nome)
+    ut.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+    copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
+    ut.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+    ut.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD)
+    copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, ed, dia_semana, modelo_path)
+    pg.hotkey('alt', 'up')
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-def Modelo_antigo():
-    log(f"📦 Gerando edições...")
-    data = datetime.now() + timedelta(days=1)
-    
-    for _ in range(cfg.quantidade_repeticoes):
-        edicoes = gerar_edicoes(cfg.edicao_inicial, 5)
-
-        for ed in edicoes:
-            dia_semana = formatar_data(data, tipo='dia_semana')
-            pasta_nome = f"{ed.replace('.', '')} - {dia_semana.capitalize()}"
-            info = {
-            "edicao_formatada": ed,
-            "data_formatada": formatar_data(data),
-            "dia_semana": formatar_data(data, tipo='dia_semana')
-            }
-            modelo_path = {
-            0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
-            5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
-            }.get(data.weekday(), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
-
-            # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
-            abrir_janela_unica()
-            
-            ut.criar_pasta(pasta_nome)
-
-            ut.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
-            copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
-
-            ut.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
-        
-            ut.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD).capitalize()
-            copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, ed, dia_semana, modelo_path)
-            pg.hotkey('alt', 'up')
-
-            # -------------------------------------------------------------------------Aplicando autodata
-            ut.open_software(cfg.Quark)
-            selecionar_ferramenta("v")
-            autodata_edicao_17(**info) #prepara o local no quark
-            autodata_paginas(**info)
-            autodata_edicao_1(**info)               
-            log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {formatar_data(data).capitalize()}")
-            data += timedelta(days=1)
-            data = ut.ajustar_data(data)
-        cfg.edicao_inicial += 7
-
-
 def auto_cabecalho():
     log(f"📦 Gerando edições ({ver})...")
     for item in desync.gerar_edicoes_formatadas():
-        #----------------------📌verificar se existe uma forma melhor de chamar as variaveis
+        #----------------------------------------📌verificar se existe uma forma melhor de chamar as variaveis
         ed = item["edicao_formatada"]
         data_formatada = item["data_formatada"]
         weekday = item["dia_semana_padrão"]
         dia_semana = item["dia_semana"]
         pasta_nome = item["pasta_nome"]
 
-        info = {
-            "edicao_formatada": ed,
-            "data_formatada": data_formatada,
-            "dia_semana": dia_semana
-            }
-        
         modelo_path = {
             0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
             }.get(weekday, r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
-        # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
-        # abrir_janela_unica() #Preparando o explorer
-        # ut.criar_pasta(pasta_nome)
-
-        # ut.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
-
-        # ut.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
-        # copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
-    
-        # ut.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD).capitalize()
-        # copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, ed, dia_semana, modelo_path)
-        # pg.hotkey('alt', 'up')
-
-        # # -------------------------------------------------------------------------Aplicando autodata
-        # ut.open_software(cfg.quark)
-        # selecionar_ferramenta("v")
-        # autodata_edicao_17(**info) #prepara o local no quark
-        # autodata_paginas(**info)
-        # autodata_edicao_1(**info)               
-      
-        log(f"📦 Edição {ed} gerada com sucesso. Data referente -->> {data_formatada}")
+        info = {
+            "edicao_formatada": ed,
+            "data_formatada": data_formatada,
+            "dia_semana": dia_semana,
+            }
         
+        # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
+        auto_pastas(pasta_nome, ed, dia_semana, modelo_path)
+
+        # -------------------------------------------------------------------------Aplicando autodata
+        ut.open_software(cfg.quark)
+        selecionar_ferramenta("v")
+        autodata_edicao_17(**info) #prepara o local no quark
+        autodata_paginas(**info)
+        autodata_edicao_1(**info)               
+        
+        log(f"📦 Modelos da edição {ed} gerados. -->> {data_formatada.capitalize()}, {dia_semana}")        
 
 if __name__ == "__main__":
-    # Modelo_antigo()
-    # ut.open_software(cfg.vscode) #Abrindo Vscode
-
-    # ut.open_software(cfg.explorer)
-    auto_cabecalho()
-    # main()
-    # main()
-    # data = formatar_data(datetime.now())
+    print('hello')
+    auto_cabecalho()  

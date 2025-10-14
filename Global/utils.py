@@ -54,7 +54,6 @@ def atalho_endereço():
     windows = verificar_windows()
     return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'l')
 
-
 # ---------------------------- Funções ----------------------------
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
@@ -120,15 +119,15 @@ def ir_para(específico=None):
 def criar_pasta(nome, em=None):
     if em:
         ir_para(em)
-    time.sleep(0.3)
+    time.sleep(0.4)
     max_windows()
-    time.sleep(0.3)
+    time.sleep(0.4)
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
-    time.sleep(0.3)
+    time.sleep(0.4)
     kb.write(nome)
     pg.press('enter')
-    time.sleep(0.3)
+    time.sleep(0.4)
 
 def abrir_pasta(endereco):
     os.startfile(endereco)
@@ -136,9 +135,8 @@ def abrir_pasta(endereco):
     pg.click(cfg.center_x, cfg.center_y)
 
 
-if __name__ == "__main__":
-    # print(f"Tamanho da tela: {pg.size()}")
-    # print(f"Centro da tela: ({center_x}, {center_y})")
-    # print(f"Teste Utils: {}")
 
-    print(f"Sistema Operacional: {verificar_windows()}")
+
+
+if __name__ == "__main__":
+    print(None)
