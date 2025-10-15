@@ -1,5 +1,5 @@
 from Global import utils as ut
-from App import Casamento as cm
+from App import casamento as cm
 # from Mail import gmail as gm
 # from App import Cabeçalho as cç
 # from Tasks import relatorio as rl
@@ -11,7 +11,7 @@ from App import Casamento as cm
 # rl.auto_relatório()
 
 # 📌 Casamento
-# cm.auto_casamento()
+cm.auto_casamento()
 # cç.Modelo_antigo()
 # Importar aplicações
 # 📌 relatório
@@ -19,3 +19,4 @@ from App import Casamento as cm
 # 📌 Drive Daily 
 
 # Gerar interfaçe gráfica de opções de automações
+print('cabo')
