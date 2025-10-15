@@ -10,12 +10,11 @@ URL_JORNAL = "https://ohoje.com"
 BOTAO_ID_1 = "placement_1013993_0"
 BOTAO_ID_2 = "placement_1013994_0_i"
 BOTAO_ID_3 = "placement_1026570_0_i"
-NUM_NAVEGADORES = 6   
+NUM_NAVEGADORES = 2   
 
 # Função que cada navegador executa
 def abrir_navegador_e_clickar():
     chrome_options = Options()
-    # chrome_options.add_argument("--headless") # Executa em modo headless (sem interface gráfica)
 
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(URL_JORNAL)
@@ -47,6 +46,4 @@ for t in threads:
     t.join()
 
 print("🏁 Automação finalizada!")
-
-# 📌 Falta: ajustar com o tempo de carregamento da página usando o método drive.web
 

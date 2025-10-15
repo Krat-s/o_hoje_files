@@ -30,10 +30,8 @@ def vigencia(dia):
 def pedidos():
     ni.gerar_n(36400)
 
-
-
 if __name__ == "__main__":
-    print()
+    print(ni.gerar_n(37000))
 
 
 

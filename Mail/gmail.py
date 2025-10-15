@@ -1,21 +1,19 @@
 import time
 import keyboard as kb
 import pyautogui as pg
-from Modulos_gmail.edicao_formatador import gerar_edicoes
 import os
 import sys
 
 raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_path)
 
-import Global.data_edition_sync as desync
+from Global.data_edition_sync import gerar_edicoes_formatadas
 import Global.settings as cfg
 import Global.utils as ut
 
 # ------------------------------------------------------------------------- CONFIGURAÇÕES
 pg.PAUSE = 0.4
 pg.FAILSAFE = True
-time.sleep(1)
 
 # ------------------------------------------------------------------------- FUNÇÕES DE AUTOMAÇÃO 
 def take_emails():
@@ -77,7 +75,7 @@ def enviar_para_grafica(edicao, parte):
 def auto_rascunhos():
     take_emails()
     ut.open_software(cfg.opera) 
-    for item in desync.gerar_edicoes_formatadas():
+    for item in gerar_edicoes_formatadas():
         ed = item["edicao_formatada"]
         enviar_para_grafica(ed, "básico")
         enviar_para_grafica(ed, "resto")

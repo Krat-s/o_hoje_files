@@ -1,3 +1,5 @@
+from ..relatório import quantidade_de_numeros
+
 def formatar_numero(num):
     """Formata número com ponto como separador de milhar: 6794 → 6.794"""
     return f"{num:,}".replace(",", ".")
