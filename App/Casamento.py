@@ -132,14 +132,18 @@ def process_casamento_miolo():
     process_casamento("3_6", [3, 6])
     process_casamento("4_5", [4, 5])
 
-def process_casamento_capa():
+def process_casamento_miolo_completo():
     process_casamento("2_7", [2, 7])    
+    process_casamento("3_6", [3, 6])
+    process_casamento("4_5", [4, 5])
+    
+def process_casamento_capa():
     process_casamento("1_8", [8, 1])
 
 def process_casamento_primeiro_caderno():
-    process_casamento_miolo()
+    process_casamento_miolo_completo()
     process_casamento_capa()
-    
+
 def process_casamento_completo():
     process_casamento_basico()
     process_casamento_primeiro_caderno()
@@ -156,17 +160,15 @@ def auto_casamento():
         elif opcao == "o miolo":
             time.sleep(5)
             process_casamento_miolo()
-        elif opcao == "a capa":
+        elif opcao == "miolo completo":
             time.sleep(5)
-            process_casamento_capa()
+            process_casamento_miolo_completo()
         elif opcao == "primeiro caderno":
             time.sleep(5)
             process_casamento_primeiro_caderno()
         elif opcao == "tudo":
                 time.sleep(5)
-                process_casamento_completo()
-                print('teste')
-                        
+                process_casamento_completo()         
         else:
             messagebox.showerror("Erro", "Opção inválida.")
 
@@ -194,7 +196,7 @@ def auto_casamento():
     btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"), **estilo_escolhas)
     btn_y.pack(pady=5)
 
-    btn_z = tk.Button(janela, text="Capa", command=lambda: fazer_escolha("a capa"), **estilo_escolhas)
+    btn_z = tk.Button(janela, text="miolo completo", command=lambda: fazer_escolha("2_7 + miolo"), **estilo_escolhas)
     btn_z.pack(pady=5)
 
     btn_w = tk.Button(janela, text="Primeiro caderno", command=lambda: fazer_escolha("primeiro caderno"), **estilo_escolhas)
@@ -205,20 +207,6 @@ def auto_casamento():
 
     # Iniciar a interface
     janela.mainloop()
-
-
-
-
-# ------------------------------------------------------------------------- Testes
-
-# from PyQt5.QtWidgets import QApplication, QLabel
-
-# app = QApplication([])
-# label = QLabel("Olá, PyQt!")
-# label.show()
-# app.exec_()
-
-
 
 if __name__ == "__main__":
     auto_casamento()

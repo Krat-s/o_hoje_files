@@ -199,4 +199,4 @@ def auto_cabecalho():
 
 if __name__ == "__main__":
     print('hello')
-    auto_cabecalho()  
+    auto_cabecalho()

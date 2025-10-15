@@ -1,18 +1,18 @@
 from Global import utils as ut
 from App import casamento as cm
+from App import cabeçalho as cç
+from Mail import gmail as gm
 # from Mail import gmail as gm
-# from App import Cabeçalho as cç
 # from Tasks import relatorio as rl
 
-# 📌 envio de emails
-# gm.auto_drafts()
+# 📌 ------------------------------------------ envio de emails
+gm.auto_emails()
 
-# 📌 relatório
-# rl.auto_relatório()
-
-# 📌 Casamento
+# 📌 ------------------------------------------ casamento
 cm.auto_casamento()
-# cç.Modelo_antigo()
+
+# 📌 ------------------------------------------ cabeçalho
+cç.auto_cabecalho()
 # Importar aplicações
 # 📌 relatório
 # 📌 click_farmer

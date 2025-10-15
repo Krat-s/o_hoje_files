@@ -8,7 +8,8 @@ import sys
 raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_path)
 
-import Global.settings as cg
+import Global.data_edition_sync as desync
+import Global.settings as cfg
 import Global.utils as ut
 
 # ------------------------------------------------------------------------- CONFIGURAÇÕES
@@ -21,7 +22,7 @@ def take_emails():
     """Captura os emails de um arquivo no VSCode"""
     pg.hotkey('win', 's')
     pg.hotkey('win', '3')  # Verificar se é o app certo (VSCode)
-    pg.click(cg.center_x, cg.center_y)
+    pg.click(cfg.center_x, cfg.center_y)
     time.sleep(0.3)
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
@@ -34,7 +35,7 @@ def take_emails():
     pg.press('down')
     pg.press('enter')
     time.sleep(0.5)
-    pg.click(cg.center_x, cg.center_y)
+    pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.5)
@@ -73,28 +74,15 @@ def enviar_para_grafica(edicao, parte):
     pg.press('esc')
     time.sleep(1)
 
-# ------------------------------------------------------------------------- ROTINA PRINCIPAL
-
-def create_draft():
-    print("📦 Edições geradas:")
-    edicao = cg.edicao_inicial
-   
-    for _ in range(cg.quantidade_repeticoes):
-        edicoes = gerar_edicoes(edicao, cg.quantidade_por_semana)
-
-        for ed in edicoes:
-            enviar_para_grafica(ed, "básico")
-            enviar_para_grafica(ed, "resto")
-            enviar_emails_para_leitores(ed)
-            # print(f"→ {ed}")
-
-        edicao += cg.quantidade_por_semana + 2
-
-def auto_drafts():
+def auto_rascunhos():
     take_emails()
-    ut.open_software(2) #Abrindo Gmail -- ATENÇÃO -- Verificar se está na aba certa do navegador
-    create_draft()
+    ut.open_software(cfg.opera) 
+    for item in desync.gerar_edicoes_formatadas():
+        ed = item["edicao_formatada"]
+        enviar_para_grafica(ed, "básico")
+        enviar_para_grafica(ed, "resto")
+        enviar_emails_para_leitores(ed)
 
 if __name__ == "__main__":
     print("teste")
-    # auto_drafts()
+    auto_rascunhos()
