@@ -18,3 +18,7 @@ for _ in range(max_execucoes):
     acao = random.choices(acoes, weights=pesos, k=1)[0]
     print(f"Ação aleatória: {acao}")
     time.sleep(random.uniform(0.5, 2))
+
+
+
+    

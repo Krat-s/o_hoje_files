@@ -10,6 +10,15 @@ CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de nova
 CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
 
+# ------------------------------------------------------------------------- Web_botting
+acessos_B1 = 8
+acessos_B2 = 3
+acessos_B3 = 3
+url_target = "https://ohoje.com"
+botão_1 = "placement_1013993_0"
+botão_2 = "placement_1013994_0_i"
+botão_3 = "placement_1026570_0_i"
+
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
 opera = 2 # Navegador padrão
@@ -26,13 +35,15 @@ locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 quantidade_repeticoes = 1
 edicao_inicial = 8001
 total_edicoes = quantidade_repeticoes * 6
-print(".....")
-print("⚙️  Settings loaded ✔️")
-print(f".. Tamanho da tela: {pg.size()}")
-print(f".. Edição inicial: {edicao_inicial}")
-print(f".. Quantidade de repetições: {quantidade_repeticoes}")
-print(f".. Criando modelo de {total_edicoes} edições")
-print(".....")
+
+def stats():
+    print(".....")
+    print("⚙️  Settings loaded ✔️")
+    print(f".. Tamanho da tela: {pg.size()}")
+    print(f".. Edição inicial: {edicao_inicial}")
+    print(f".. Quantidade de repetições: {quantidade_repeticoes}")
+    print(f".. Criando modelo de {total_edicoes} edições")
+    print(".....")
 
 # ------------------------------------------------------------------------- Posições de clique (em porcentagem da tela)
 # arrumar uma forma de fazer isso de forma dinamica. Opções: 1 calcular sempre que rodar o script, 2 criar um arquivo de configuração para cada resolução de tela de acordo com o dispositivo
@@ -75,3 +86,5 @@ if __name__ == "__main__":
     print(f"Centro da tela: ({center_x}, {center_y})")
     print(f"Edição inicial: {edicao_inicial}")
     pg.moveTo(x_data, y_data)
+    stats()
+    print()
