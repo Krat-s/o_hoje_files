@@ -100,7 +100,6 @@ def process_page(page_number, is_even):
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'v')
     time.sleep(5)
-    time.sleep(2)
     if is_even: 
         move_page(10, 20) 
     else: 
