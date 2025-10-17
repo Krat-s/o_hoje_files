@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from App.Modulos_quark.data_formatador import formatar_data
+from App.modulos_quark.data_formatador import formatar_data
 import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as sy_de

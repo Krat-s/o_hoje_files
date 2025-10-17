@@ -46,8 +46,8 @@ def abrir_navegador_e_clickar():
         print(f"⚠️ Erro ao clicar no botão: {e}")
 
     finally:
-        # time.sleep(5)  # Tempo para visualizar o resultado
-        # driver.quit()
+        time.sleep(5)  # Tempo para visualizar o resultado
+        driver.quit()
         print("🔒 Navegador fechado.")
 
 # Cria e inicia as threads

@@ -1,6 +1,10 @@
 import pyautogui as pg
 import locale
 
+import Web.modulos_web
+from Web.modulos_web.simply_randon_number import acao
+
+
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
@@ -11,9 +15,12 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
 
 # ------------------------------------------------------------------------- Web_botting
-acessos_B1 = 8
-acessos_B2 = 3
-acessos_B3 = 3
+
+
+
+acessos_B1 = 7
+acessos_B2 = int(acessos_B1 / 2)
+acessos_B3 = int(acessos_B2 / 2 + 1)
 url_target = "https://ohoje.com"
 botão_1 = "placement_1013993_0"
 botão_2 = "placement_1013994_0_i"

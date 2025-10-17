@@ -6,12 +6,11 @@ import pyautogui as pg
 import keyboard as kb
 from pywinauto import Desktop
 
-
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
-from App.Modulos_quark.data_formatador import formatar_data
-from App.Modulos_quark.edicao_formatador import gerar_edicoes
+from App.modulos_quark.data_formatador import formatar_data
+from App.modulos_quark.edicao_formatador import gerar_edicoes
 import Global.settings as cfg
 import Global.utils as ut
 import Global.data_edition_sync as desync

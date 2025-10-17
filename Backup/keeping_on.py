@@ -12,4 +12,4 @@ def manter_pc_ligado():
         time.sleep(2)  # Espera mais 30 segundos
 
 manter_pc_ligado()
-False
+False   
