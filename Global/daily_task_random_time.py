@@ -8,7 +8,8 @@ import time
 import schedule
 import random
 
-from settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
+from .settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
+from ..Web.modulos_web import simply_randon_number as rn
 
 def gerar_horarios(inicio_h, fim_h, n_acessos):
     """Gera horários aleatórios em um intervalo"""
@@ -23,7 +24,7 @@ def gerar_horarios(inicio_h, fim_h, n_acessos):
     )
     return horarios
 
-def abrir_navegador_e_clickar():
+def task():
     """Abre o navegador e clica em um botão específico"""    
     print(f"🌐 Acessando {url_target}")
     # Configurações do Chrome (opcional: modo headless)
@@ -54,15 +55,15 @@ def abrir_navegador_e_clickar():
 threads = []
 check = 0
 
-for _ in range(NUM_NAVEGADORES):
-    t = Thread(target=abrir_navegador_e_clickar)
-    t.start()
-    threads.append(t)
-    check += 1
+# for _ in range(NUM_NAVEGADORES):
+#     t = Thread(target=task)
+#     t.start()
+#     threads.append(t)
+#     check += 1
 
-# Aguarda todas as threads terminarem
-for t in threads:
-    t.join()
+# # Aguarda todas as threads terminarem
+# for t in threads:
+#     t.join()
 
 print("🏁 Automação finalizada!")
 print(f'Número de acessos --> {check}')
