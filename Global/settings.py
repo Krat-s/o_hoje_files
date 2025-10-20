@@ -1,8 +1,12 @@
 import pyautogui as pg
 import locale
+import os
+import sys
 
-import Web.modulos_web
-from Web.modulos_web.simply_randon_number import acao
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
+
+from Web.modulos_web import simply_randon_number as srn
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
@@ -15,11 +19,9 @@ CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
 
 # ------------------------------------------------------------------------- Web_botting
 
-
-
-acessos_B1 = 7
-acessos_B2 = int(acessos_B1 / 2)
-acessos_B3 = int(acessos_B2 / 2 + 1)
+acessos_B1 = int(srn.gen_num)
+acessos_B2 = int(acessos_B1 / 2 + 1)
+acessos_B3 = int(acessos_B2 / 2)
 url_target = "https://ohoje.com"
 botão_1 = "placement_1013993_0"
 botão_2 = "placement_1013994_0_i"
@@ -91,6 +93,10 @@ y_edicao_capa = 448
 if __name__ == "__main__":
     print(f"Centro da tela: ({center_x}, {center_y})")
     print(f"Edição inicial: {edicao_inicial}")
-    pg.moveTo(x_data, y_data)
+    # pg.moveTo(x_data, y_data)
     stats()
-    print()
+    print(acessos_B1)
+    print(acessos_B2)
+    print(acessos_B3)
+
+

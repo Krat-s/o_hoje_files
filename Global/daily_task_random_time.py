@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 import time
 import schedule
 import random
+
 import os
 import sys
 
@@ -63,7 +64,6 @@ check = 0
 #     t = Thread(target=task)
 #     t.start()
 #     threads.append(t)
-#     check += 1
 
 # # Aguarda todas as threads terminarem
 # for t in threads:
@@ -74,9 +74,9 @@ print(f'Número de acessos --> {check}')
 
 # 1. Gere todos os horários do dia
 agendas = []
-agendas += gerar_horarios(6,  12, 2)   # manhã
-agendas += gerar_horarios(12, 17, 5)  # tarde
-agendas += gerar_horarios(18, 24, 2)  # noite
+agendas += gerar_horarios(6,  12, acessos_B1)   # manhã
+agendas += gerar_horarios(12, 17, acessos_B2)  # tarde
+agendas += gerar_horarios(18, 24, acessos_B3)  # noite
 
 # 2. Agende cada execução
 for dt in agendas:
