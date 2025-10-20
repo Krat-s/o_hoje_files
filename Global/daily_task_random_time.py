@@ -7,9 +7,13 @@ from datetime import datetime, timedelta
 import time
 import schedule
 import random
+import os
+import sys
 
-from .settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
-from ..Web.modulos_web import simply_randon_number as rn
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(raiz_projeto)
+
+from Global.settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
 
 def gerar_horarios(inicio_h, fim_h, n_acessos):
     """Gera horários aleatórios em um intervalo"""

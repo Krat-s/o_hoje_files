@@ -4,7 +4,6 @@ import locale
 import Web.modulos_web
 from Web.modulos_web.simply_randon_number import acao
 
-
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
