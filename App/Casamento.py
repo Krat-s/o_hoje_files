@@ -166,8 +166,8 @@ def auto_casamento():
             time.sleep(5)
             process_casamento_primeiro_caderno()
         elif opcao == "tudo":
-                time.sleep(5)
-                process_casamento_completo()         
+            time.sleep(5)
+            process_casamento_completo()         
         else:
             messagebox.showerror("Erro", "Opção inválida.")
 

@@ -9,12 +9,8 @@ import schedule
 import random
 import csv
 import os
-import sys
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
-
-from Global.settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
+from settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3, acessos_H1, acessos_H2, acessos_H3
 
 def esperar(driver, by, value, timeout=10, clicavel=True):
     """Espera até que o elemento esteja presente (ou clicável).
@@ -54,21 +50,21 @@ def gerar_horarios(inicio_h, fim_h, n_acessos):
 def task():
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {url_target}")
-    chrome_options = Options()
-    chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument("--disable-notifications")
-    chrome_options.add_argument("--no-sandbox")
+    # chrome_options = Options()
+    # chrome_options.add_argument("--start-maximized")
+    # chrome_options.add_argument("--disable-notifications")
+    # chrome_options.add_argument("--no-sandbox")
 
-    driver = webdriver.Chrome(options=chrome_options)
-    driver.get(url_target)
+    # driver = webdriver.Chrome(options=chrome_options)
+    # driver.get(url_target)
 
     def task_model(btt):
-        botao = esperar(driver, By.ID, btt, timeout=10, clicavel=True)
-        driver.execute_script(
-            "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao
-        )
-        esperar(driver, By.ID, btt, timeout=5, clicavel=True)
-        botao.click()
+        # botao = esperar(driver, By.ID, btt, timeout=10, clicavel=True)
+        # driver.execute_script(
+        #     "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao
+        # )
+        # esperar(driver, By.ID, btt, timeout=5, clicavel=True)
+        # botao.click()
         registrar_log("SUCESSO", f"{btt} clicado com sucesso")
     
     try:
@@ -84,16 +80,19 @@ def task():
 
     finally:
         time.sleep(2)
-        driver.quit()
+        # driver.quit()
         print("🔒 Navegador fechado.")
 
 def iniciar_agendamentos_diarios():
     """Gera novos horários todos os dias e os agenda novamente."""
-    schedule.clear("execucoes_diarias") # Limpa agendamentos anteriores
+    try:
+        schedule.clear("execucoes_diarias") # Limpa agendamentos anteriores
+    except schedule.ScheduleValueError:
+        pass 
     agendas = []
-    agendas += gerar_horarios(6, 12, acessos_B1)   # manhã
-    agendas += gerar_horarios(12, 17, acessos_B2)  # tarde
-    agendas += gerar_horarios(18, 24, acessos_B3)  # noite
+    agendas += gerar_horarios(6, 16, acessos_H1)   # manhã
+    agendas += gerar_horarios(16, 22, acessos_H2)  # tarde
+    agendas += gerar_horarios(22, 24, acessos_H3)  # noite
 
     for dt in agendas:
         marcacao = dt.strftime("%H:%M")
@@ -118,3 +117,6 @@ def daily_task_loop():
     except KeyboardInterrupt:
         print("\n🛑 Execução interrompida manualmente (CTRL+C).")
         registrar_log("ENCERRADO", "Execução interrompida manualmente")
+
+if __name__ == "__main__":
+    iniciar_agendamentos_diarios()

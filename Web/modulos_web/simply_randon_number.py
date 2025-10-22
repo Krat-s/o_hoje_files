@@ -1,12 +1,25 @@
 import random
 
-numeros = ["4", "5", "6", "7"]
+import random
+
+inicio = 2
+fim = 3
 limite = 1
 
-number_random = random.sample(numeros, limite)
+numeros = list(range(inicio, fim + 1))  
+numeros_aleatorios = random.sample(numeros, limite)
 
-for acao in number_random:
-    gen_num = acao
+numeros2 = list(range(0, 6 + 1))
+numeros_aleatorios2 = random.sample(numeros2, limite)
 
-if __name__ == "__main__":
-    print(gen_num)
+for n in numeros_aleatorios:
+    gen_nc = n
+
+for n2 in numeros_aleatorios2:
+    gen_nh = n2
+
+
+# numero de acessos totais
+# numero de visualizações
+# numero de acessos por horario (3)
+# numerod de acessos por botão

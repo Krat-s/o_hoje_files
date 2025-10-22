@@ -19,9 +19,15 @@ CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
 
 # ------------------------------------------------------------------------- Web_botting
 
-acessos_B1 = int(srn.gen_num)
+acessos_B1 = int(srn.gen_nc)
 acessos_B2 = int(acessos_B1 / 2 + 1)
 acessos_B3 = int(acessos_B2 / 2)
+total_acessos_c = acessos_B1 + acessos_B2 + acessos_B3
+
+acessos_H1 = int(srn.gen_nh / 2)
+acessos_H2 = int(srn.gen_nh / 2 * 2)
+acessos_H3 = int(acessos_H2 / 3)
+total_acessos_h = acessos_H1 + acessos_H2 + acessos_H3
 url_target = "https://ohoje.com"
 botão_1 = "placement_1013993_0"
 botão_2 = "placement_1013994_0_i"
@@ -90,13 +96,25 @@ y_edicao_17 = 121
 x_edicao_capa = 346
 y_edicao_capa = 448
 
+total_acessos = total_acessos_h * total_acessos_c
+
 if __name__ == "__main__":
-    print(f"Centro da tela: ({center_x}, {center_y})")
-    print(f"Edição inicial: {edicao_inicial}")
-    # pg.moveTo(x_data, y_data)
-    stats()
+    # print(f"Centro da tela: ({center_x}, {center_y})")
+    # print(f"Edição inicial: {edicao_inicial}")
+    # # pg.moveTo(x_data, y_data)
+    # stats()
     print(acessos_B1)
     print(acessos_B2)
     print(acessos_B3)
+    print(total_acessos_c)
+    print('..')
+    print(acessos_H1)
+    print(acessos_H2)
+    print(acessos_H3)
+    print(total_acessos_h)
+    print('..')
+    print(total_acessos)
+    
 
 
+ 
