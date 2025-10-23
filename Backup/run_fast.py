@@ -4,7 +4,7 @@ import os
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from Web.modulos_web.simply_randon_number import acao
+from Web.modulos_web.random_number import acao
 
 acessos_B1 = int(acao)
 acessos_B2 = int(acessos_B1 / 2)

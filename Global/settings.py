@@ -6,7 +6,7 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from Web.modulos_web import simply_randon_number as srn
+from Web.modulos_web import random_number as rn
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
@@ -18,20 +18,18 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
 
 # ------------------------------------------------------------------------- Web_botting
-
-acessos_B1 = int(srn.gen_nc)
+acessos_B1 = rn.gerar_numero(0, 3)
 acessos_B2 = int(acessos_B1 / 2 + 1)
 acessos_B3 = int(acessos_B2 / 2)
-total_acessos_c = acessos_B1 + acessos_B2 + acessos_B3
+acessos_H1 = 1
+acessos_H2 = 2
+acessos_H3 = 1
+jackpot = acessos_B1 + acessos_B2 + acessos_B3 * 4 #24 numero máximo de acessos (linha completamente irrelevante)
 
-acessos_H1 = int(srn.gen_nh / 2)
-acessos_H2 = int(srn.gen_nh / 2 * 2)
-acessos_H3 = int(acessos_H2 / 3)
-total_acessos_h = acessos_H1 + acessos_H2 + acessos_H3
 url_target = "https://ohoje.com"
-botão_1 = "placement_1013993_0"
-botão_2 = "placement_1013994_0_i"
-botão_3 = "placement_1026570_0_i"
+botão_1 = "placement_1013993_0" #principal
+botão_2 = "placement_1013994_0_i" #lateral
+botão_3 = "placement_1026570_0_i" #banner rodapé
 
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
@@ -54,6 +52,7 @@ def stats():
     print(".....")
     print("⚙️  Settings loaded ✔️")
     print(f".. Tamanho da tela: {pg.size()}")
+    print(f".. Centro da tela: ({center_x}, {center_y})")
     print(f".. Edição inicial: {edicao_inicial}")
     print(f".. Quantidade de repetições: {quantidade_repeticoes}")
     print(f".. Criando modelo de {total_edicoes} edições")
@@ -96,25 +95,6 @@ y_edicao_17 = 121
 x_edicao_capa = 346
 y_edicao_capa = 448
 
-total_acessos = total_acessos_h * total_acessos_c
-
 if __name__ == "__main__":
-    # print(f"Centro da tela: ({center_x}, {center_y})")
-    # print(f"Edição inicial: {edicao_inicial}")
-    # # pg.moveTo(x_data, y_data)
     # stats()
     print(acessos_B1)
-    print(acessos_B2)
-    print(acessos_B3)
-    print(total_acessos_c)
-    print('..')
-    print(acessos_H1)
-    print(acessos_H2)
-    print(acessos_H3)
-    print(total_acessos_h)
-    print('..')
-    print(total_acessos)
-    
-
-
- 
