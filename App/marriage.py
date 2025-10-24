@@ -159,7 +159,7 @@ def auto_casamento():
         elif opcao == "o miolo":
             time.sleep(5)
             process_casamento_miolo()
-        elif opcao == "miolo completo":
+        elif opcao == "2_7 + miolo":
             time.sleep(5)
             process_casamento_miolo_completo()
         elif opcao == "primeiro caderno":
