@@ -1,10 +1,12 @@
 import pyautogui as pg  
 import time
 import pytesseract
+import os
 
 from PIL import Image, ImageDraw, ImageFont
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+# os.environ["TESSDATA_PREFIX"] = r"C:\Program Files\Tesseract-OCR\tessdata"
+# pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 # Cria uma imagem branca
 img = Image.new("RGB", (300, 100), color=(255, 255, 255))
