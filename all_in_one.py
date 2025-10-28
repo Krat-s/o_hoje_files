@@ -8,7 +8,7 @@ from Mail import gmail as gm
 # 📌 ------------------------------------------ envio de emails
 # gm.auto_emails()
 # 📌 ------------------------------------------ casamento
-# cm.auto_casamento()
+# cm.auto.marriage()
 # 📌 Drive Daily 
 # 📌 ------------------------------------------ cabeçalho
 # cç.auto_billhead()

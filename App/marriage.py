@@ -107,7 +107,7 @@ def process_page(page_number, is_even):
     pg.hotkey('ctrl', 's')
     time.sleep(0.3)
 
-def process_casamento(nome_arquivo, paginas):
+def wedding(nome_arquivo, paginas):
     open_web()
     utl.take_file(nome_arquivo)
     close_and_open_quark()
@@ -118,53 +118,53 @@ def process_casamento(nome_arquivo, paginas):
     pg.hotkey('ctrl', 'f4')
     time.sleep(0.5)
 
-def process_casamento_basico():
-    process_casamento("13_16", [13, 16])
-    process_casamento("14_15", [14, 15])
-    process_casamento("17_20", [17, 20])
+def process_basic():
+    wedding("13_16", [13, 16])
+    wedding("14_15", [14, 15])
+    wedding("17_20", [17, 20])
 
-def process_casamento_cidades():
-    process_casamento("10_11", [10, 11])
-    process_casamento("9_12", [9, 12])
+def process_town():
+    wedding("10_11", [10, 11])
+    wedding("9_12", [9, 12])
 
-def process_casamento_miolo():
-    process_casamento("3_6", [3, 6])
-    process_casamento("4_5", [4, 5])
+def process_crumb():
+    wedding("3_6", [3, 6])
+    wedding("4_5", [4, 5])
 
-def process_casamento_miolo_completo():
-    process_casamento("2_7", [2, 7])    
-    process_casamento("3_6", [3, 6])
-    process_casamento("4_5", [4, 5])
+def process_complete_crumb():
+    wedding("2_7", [2, 7])    
+    wedding("3_6", [3, 6])
+    wedding("4_5", [4, 5])
     
-def process_casamento_capa():
-    process_casamento("1_8", [8, 1])
+def wedding_cape():
+    wedding("1_8", [8, 1])
 
-def process_casamento_primeiro_caderno():
-    process_casamento_miolo_completo()
-    process_casamento_capa()
+def wedding_fist_journal():
+    process_complete_crumb()
+    wedding_cape()
 
 def process_casamento_completo():
-    process_casamento_basico()
-    process_casamento_primeiro_caderno()
+    process_basic()
+    wedding_fist_journal()
 
 # ------------------------------------------------------------------------- Executando 
-def auto_casamento():
+def auto_marriage():
     def fazer_escolha(opcao):
         if opcao == "o básico":
             time.sleep(5)
-            process_casamento_basico()
+            process_basic()
         elif opcao == "cidades":
             time.sleep(5)
-            process_casamento_cidades()
+            process_town()
         elif opcao == "o miolo":
             time.sleep(5)
-            process_casamento_miolo()
+            process_crumb()
         elif opcao == "2_7 + miolo":
             time.sleep(5)
-            process_casamento_miolo_completo()
+            process_complete_crumb()
         elif opcao == "primeiro caderno":
             time.sleep(5)
-            process_casamento_primeiro_caderno()
+            wedding_fist_journal()
         elif opcao == "tudo":
             time.sleep(5)
             process_casamento_completo()         
@@ -208,4 +208,4 @@ def auto_casamento():
     janela.mainloop()
 
 if __name__ == "__main__":
-    auto_casamento()
+    auto_marriage()
