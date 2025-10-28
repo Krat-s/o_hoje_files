@@ -164,7 +164,7 @@ def auto_pastas(pasta_nome, ed, dia_semana, modelo_path):
     pg.hotkey('alt', 'up')
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-def auto_cabecalho():
+def auto_billhead():
     log(f"📦 Gerando edições ({ver})...")
     for item in desync.gerar_edicoes_formatadas():
         #----------------------------------------📌verificar se existe uma forma melhor de chamar as variaveis

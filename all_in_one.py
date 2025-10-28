@@ -6,19 +6,16 @@ from Mail import gmail as gm
 # from Tasks import relatorio as rl
 
 # 📌 ------------------------------------------ envio de emails
-
+# gm.auto_emails()
 # 📌 ------------------------------------------ casamento
-cm.auto_casamento()
-
-def mds ():
-    gm.auto_emails()
-    cç.auto_cabecalho()
-
+# cm.auto_casamento()
+# 📌 Drive Daily 
 # 📌 ------------------------------------------ cabeçalho
+# cç.auto_billhead()
+
 # Importar aplicações
 # 📌 relatório
 # 📌 click_farmer
-# 📌 Drive Daily 
 
 # Gerar interfaçe gráfica de opções de automações
 print('cabo')
