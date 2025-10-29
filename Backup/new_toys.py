@@ -15,10 +15,12 @@ draw = ImageDraw.Draw(img)
 draw.text((10, 30), "Teste OCR 123", fill=(0, 0, 0))
 
 # (Opcional) Salva a imagem pra ver o que foi criado
-img.save("teste_ocr.png")
+img.save("teste_ocr.jpeg")
 
 # Usa o Tesseract para reconhecer o texto da imagem
-texto = pytesseract.image_to_string(img, lang="por")  # use "eng" para inglês
+texto = pytesseract.image_to_string(img, lang="eng")  # use "eng" para inglês
 
 print("🧾 Texto reconhecido pelo OCR:")
 print(texto)
+
+
