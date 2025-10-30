@@ -1,15 +1,22 @@
-import sys
+import pyautogui as pg  
+import time
+import pytesseract
 import os
+import sys
+from PIL import Image, ImageDraw, ImageFont
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
+# Cria uma imagem branca
+img = Image.new("RGB", (300, 100), color=(255, 255, 255))
+draw = ImageDraw.Draw(img)
 
-from Web.modulos_web.random_number import acao
+# Escreve um texto simples
+draw.text((10, 30), "Teste OCR 123", fill=(0, 0, 0))
 
-acessos_B1 = int(acao)
-acessos_B2 = int(acessos_B1 / 2)
-acessos_B3 = int(acessos_B2 / 2 + 1)
+# (Opcional) Salva a imagem pra ver o que foi criado
+img.save("teste_ocr.jpeg")
 
-# print(acessos_B1)
-# print(acessos_B2)
-# print(acessos_B3)
+# Usa o Tesseract para reconhecer o texto da imagem
+texto = pytesseract.image_to_string(img, lang="eng")  # use "eng" para inglês
+
+print("🧾 Texto reconhecido pelo OCR:")
+print(texto)

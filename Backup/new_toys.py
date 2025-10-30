@@ -2,25 +2,45 @@ import pyautogui as pg
 import time
 import pytesseract
 import os
-
+import sys
 from PIL import Image, ImageDraw, ImageFont
 
-os.environ["TESSDATA_PREFIX"] = r"C:\Program Files\Tesseract-OCR\tessdata"
+def get_screen_text(region=None):
+    """Captura a tela (ou região) e retorna o texto detectado."""
+    screenshot = pg.screenshot(region=region)
+    return pytesseract.image_to_string(screenshot)
 
-# Cria uma imagem branca
-img = Image.new("RGB", (300, 100), color=(255, 255, 255))
-draw = ImageDraw.Draw(img)
+def wait_until_text_disappears(text, region=None, check_interval=1):
+    """Espera até que o texto sumir da tela."""
+    print(f"Aguardando '{text}' desaparecer...")
+    img = pg.screenshot(region=region)
+    img = img.convert("L")  # escala de cinza
+    img = img.point(lambda x: 0 if x < 180 else 255)  # binarização
+    text = pytesseract.image_to_string(img)
+   
+    while True:
+        screen_text = get_screen_text(region).lower()
+        if text.lower() not in screen_text:
+            print(f"'{text}' não encontrado, continuando o código.")
+            break
+        time.sleep(check_interval)
 
-# Escreve um texto simples
-draw.text((10, 30), "Teste OCR 123", fill=(0, 0, 0))
+def wait_until_text_appears(text, region=None, check_interval=1):
+    """Espera até que o texto apareça na tela."""
+    print(f"Aguardando '{text}' aparecer...")
+    img = pg.screenshot(region=region)
+    img = img.convert("L")  # escala de cinza
+    img = img.point(lambda x: 0 if x < 180 else 255)  # binarização
+    text = pytesseract.image_to_string(img)
 
-# (Opcional) Salva a imagem pra ver o que foi criado
-img.save("teste_ocr.jpeg")
-
-# Usa o Tesseract para reconhecer o texto da imagem
-texto = pytesseract.image_to_string(img, lang="eng")  # use "eng" para inglês
-
-print("🧾 Texto reconhecido pelo OCR:")
-print(texto)
-
-
+    while True:
+        screen_text = get_screen_text(region).lower()
+        if text.lower() in screen_text:
+            print(f"'{text}' detectado! Continuando...")
+            break
+        time.sleep(check_interval)
+        
+# Exemplo de uso
+print("inicio")
+wait_until_text_disappears("Loading pages", region=(500, 300, 600, 200))
+# wait_until_text_appears("Login successful", region=(400, 400, 500, 200))
