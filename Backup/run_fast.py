@@ -1,22 +1,22 @@
-import pyautogui as pg  
-import time
-import pytesseract
-import os
-import sys
-from PIL import Image, ImageDraw, ImageFont
+import cv2
+import numpy as np
+import pyautogui
 
-# Cria uma imagem branca
-img = Image.new("RGB", (300, 100), color=(255, 255, 255))
-draw = ImageDraw.Draw(img)
+# Faz uma captura da tela inteira
+screenshot = pyautogui.screenshot()
+img = np.array(screenshot)
+img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
-# Escreve um texto simples
-draw.text((10, 30), "Teste OCR 123", fill=(0, 0, 0))
+# Permite selecionar área com o mouse
+r = cv2.selectROI("Selecione a área com o mouse e pressione ENTER", img, False, False)
 
-# (Opcional) Salva a imagem pra ver o que foi criado
-img.save("teste_ocr.jpeg")
+x, y, w, h = map(int, r)
+print(f"Coordenadas selecionadas: (x={x}, y={y}, w={w}, h={h})")
 
-# Usa o Tesseract para reconhecer o texto da imagem
-texto = pytesseract.image_to_string(img, lang="eng")  # use "eng" para inglês
+# Recorta e salva a região
+if w > 0 and h > 0:
+    roi = img[y:y+h, x:x+w]
+    cv2.imwrite("area_selecionada.png", roi)
+    print("🖼️ Imagem salva como 'area_selecionada.png'")
 
-print("🧾 Texto reconhecido pelo OCR:")
-print(texto)
+cv2.destroyAllWindows()

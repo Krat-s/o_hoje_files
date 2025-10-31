@@ -27,20 +27,22 @@ def wait_until_text_disappears(text, region=None, check_interval=1):
 
 def wait_until_text_appears(text, region=None, check_interval=1):
     """Espera até que o texto apareça na tela."""
-    print(f"Aguardando '{text}' aparecer...")
-    img = pg.screenshot(region=region)
-    img = img.convert("L")  # escala de cinza
-    img = img.point(lambda x: 0 if x < 180 else 255)  # binarização
-    text = pytesseract.image_to_string(img)
+    # print(f"Aguardando '{text}' aparecer...")
+    # img = pg.screenshot(region=region)
+    # img = img.convert("L")  # escala de cinza
+    # img = img.point(lambda x: 0 if x < 180 else 255)  # binarização
+    # text = pytesseract.image_to_string(img)
 
     while True:
         screen_text = get_screen_text(region).lower()
         if text.lower() in screen_text:
             print(f"'{text}' detectado! Continuando...")
+            pg.alert('Abobrinha a vista')
             break
         time.sleep(check_interval)
         
 # Exemplo de uso
 print("inicio")
-wait_until_text_disappears("Loading pages", region=(500, 300, 600, 200))
-# wait_until_text_appears("Login successful", region=(400, 400, 500, 200))
+# wait_until_text_disappears("Loading pages", region=(500, 300, 600, 200))
+wait_until_text_appears("ABOBRINHA")
+
