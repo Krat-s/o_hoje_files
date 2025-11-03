@@ -40,9 +40,14 @@ def wait_until_text_appears(text, region=None, check_interval=1):
             pg.alert('Abobrinha a vista')
             break
         time.sleep(check_interval)
-        
+
+
+
+
+region_png_qk_ldg = x=493, y=304, w=123, h=111
+
 # Exemplo de uso
 print("inicio")
 # wait_until_text_disappears("Loading pages", region=(500, 300, 600, 200))
-wait_until_text_appears("ABOBRINHA")
+wait_until_text_appears("ABOBRINHA", region=region_png_qk_ldg)
 
