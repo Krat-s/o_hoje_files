@@ -107,6 +107,19 @@ def process_page(page_number, is_even):
     pg.hotkey('ctrl', 's')
     time.sleep(0.3)
 
+def testPDF():
+    time.sleep(3)
+    pg.rightClick(cfg.center_x, cfg.center_y)
+    pg.moveTo(x=1081, y=702, duration=0.5)
+    time.sleep(1)
+    pg.moveTo(x=1316, y=702, duration=0.5)
+    pg.click()
+    time.sleep(5)
+    pg.press('right')
+    pg.press('backspace', presses=9)
+    pg.press('tab', presses=2)
+    pg.press('enter')
+
 def wedding(nome_arquivo, paginas):
     open_web()
     utl.take_file(nome_arquivo)
@@ -153,21 +166,27 @@ def auto_marriage():
         if opcao == "o básico":
             time.sleep(5)
             process_basic()
+            pg.alert('Automação finalizada')
         elif opcao == "cidades":
             time.sleep(5)
             process_town()
+            pg.alert('Automação finalizada')
         elif opcao == "o miolo":
             time.sleep(5)
             process_crumb()
+            pg.alert('Automação finalizada')
         elif opcao == "2_7 + miolo":
             time.sleep(5)
             process_complete_crumb()
+            pg.alert('Automação finalizada')
         elif opcao == "primeiro caderno":
             time.sleep(5)
             wedding_fist_journal()
+            pg.alert('Automação finalizada')
         elif opcao == "tudo":
             time.sleep(5)
-            process_casamento_completo()         
+            process_casamento_completo()    
+            pg.alert('Automação finalizada')     
         else:
             messagebox.showerror("Erro", "Opção inválida.")
 
@@ -208,4 +227,5 @@ def auto_marriage():
     janela.mainloop()
 
 if __name__ == "__main__":
-    auto_marriage()
+    # auto_marriage()
+    # testPDF()
