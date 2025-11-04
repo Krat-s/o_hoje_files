@@ -48,6 +48,12 @@ quantidade_repeticoes = 1
 edicao_inicial = 8001
 total_edicoes = quantidade_repeticoes * 6
 
+# ------------------------------------------------------------------------- Pytesseract regions
+already_open_r = (489, 280, 98, 103)
+already_open_full_r = (489, 281, 389, 156) 
+quark_icon_c_r = (499, 309, 79, 101)
+quark_loading = (493, 304, 123, 111)
+
 def stats():
     print(".....")
     print("⚙️  Settings loaded ✔️")
