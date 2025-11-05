@@ -14,6 +14,7 @@ from App.modulos_quark.data_formatador import formatar_data
 import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as sy_de
+import Global.tesseract_utils as pyt
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
@@ -124,6 +125,22 @@ def wedding(nome_arquivo, paginas):
     open_web()
     utl.take_file(nome_arquivo)
     close_and_open_quark()
+    check = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=1, timeout=10, on_found=utl.cancel_qk, run_once=True)
+    if check:
+
+         ok = wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=cancel_qk, run_once=True)
+    if ok:
+        print("Evento ocorreu dentro do timeout")
+    else:
+        print("Timeout: texto não apareceu")
+        
+        
+
+
+
+    else: 
+        None
+
     for page_number in paginas:
         is_even = page_number % 2 == 0
         process_page(page_number, is_even)
@@ -227,5 +244,5 @@ def auto_marriage():
     janela.mainloop()
 
 if __name__ == "__main__":
-    # auto_marriage()
+    auto_marriage()
     # testPDF()

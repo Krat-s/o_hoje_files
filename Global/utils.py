@@ -54,7 +54,7 @@ def atalho_endereço():
     windows = verificar_windows()
     return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'l')
 
-# ---------------------------- Funções ----------------------------
+# ---------------------------- Funções gerais ----------------------------
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
 
@@ -134,9 +134,8 @@ def abrir_pasta(endereco):
     max_windows()
     pg.click(cfg.center_x, cfg.center_y)
 
-
-
-
-
-if __name__ == "__main__":
-    print(None)
+# ---------------------------- Funções quark ----------------------------
+def cancel_qk():
+        pg.moveTo(829, 419)
+        time.sleep(0.2)
+        pg.click()

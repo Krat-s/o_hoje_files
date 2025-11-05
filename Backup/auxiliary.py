@@ -44,4 +44,11 @@ def mover_para_percentual(x_percent, y_percent):
 
 # Exemplo de uso
 if __name__ == "__main__":
-    mover_para_percentual(49.48, 23.00)
+
+    mover_para_percentual(60.69, 54.56)
+    time.sleep(1)
+    pg.moveTo(10, 10)
+    time.sleep(1)
+
+    pg.moveTo(829, 419)
+
