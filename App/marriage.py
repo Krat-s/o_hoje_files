@@ -127,19 +127,9 @@ def wedding(nome_arquivo, paginas):
     close_and_open_quark()
     check = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=1, timeout=10, on_found=utl.cancel_qk, run_once=True)
     if check:
-
-         ok = wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=cancel_qk, run_once=True)
-    if ok:
         print("Evento ocorreu dentro do timeout")
     else:
         print("Timeout: texto não apareceu")
-        
-        
-
-
-
-    else: 
-        None
 
     for page_number in paginas:
         is_even = page_number % 2 == 0
@@ -149,9 +139,9 @@ def wedding(nome_arquivo, paginas):
     time.sleep(0.5)
 
 def process_basic():
+    wedding("17_20", [17, 20])
     wedding("13_16", [13, 16])
     wedding("14_15", [14, 15])
-    wedding("17_20", [17, 20])
 
 def process_town():
     wedding("10_11", [10, 11])
