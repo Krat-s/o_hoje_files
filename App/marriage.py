@@ -125,11 +125,12 @@ def wedding(nome_arquivo, paginas):
     open_web()
     utl.take_file(nome_arquivo)
     close_and_open_quark()
-    check = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=1, timeout=10, on_found=utl.cancel_qk, run_once=True)
-    if check:
-        print("Evento ocorreu dentro do timeout")
-    else:
-        print("Timeout: texto não apareceu")
+    # check = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=1, timeout=10, on_found=utl.cancel_qk, run_once=True)
+    # if check:
+    #     print("Evento ocorreu dentro do timeout")
+    # else:
+    #     print("Timeout: texto não apareceu")
+    
 
     for page_number in paginas:
         is_even = page_number % 2 == 0
