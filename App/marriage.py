@@ -125,13 +125,12 @@ def wedding(nome_arquivo, paginas):
     open_web()
     utl.take_file(nome_arquivo)
     close_and_open_quark()
-    # check = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=1, timeout=10, on_found=utl.cancel_qk, run_once=True)
-    # if check:
-    #     print("Evento ocorreu dentro do timeout")
-    # else:
-    #     print("Timeout: texto não apareceu")
-    
+    check = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=1, timeout=10, on_found=utl.cancel_qk, run_once=True)
+    if check:
+        print("Página já está aberta")
 
+    else:
+        print("Página não estava aberta")
     for page_number in paginas:
         is_even = page_number % 2 == 0
         process_page(page_number, is_even)
@@ -140,11 +139,11 @@ def wedding(nome_arquivo, paginas):
     time.sleep(0.5)
 
 def process_basic():
-    wedding("17_20", [17, 20])
-    wedding("13_16", [13, 16])
-    wedding("14_15", [14, 15])
+    wedding("17_20", [17, 17])
 
 def process_town():
+    wedding("13_16", [13, 16])
+    wedding("14_15", [14, 15])
     wedding("10_11", [10, 11])
     wedding("9_12", [9, 12])
 
@@ -235,5 +234,20 @@ def auto_marriage():
     janela.mainloop()
 
 if __name__ == "__main__":
-    auto_marriage()
+    # auto_marriage()
     # testPDF()
+
+
+
+
+  
+
+    
+    ok = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=utl.cancel_qk, run_once=True)
+    if ok:
+        print("Evento ocorreu dentro do timeout")
+    else:
+        print("Timeout: texto não apareceu")
+        
+        
+    
