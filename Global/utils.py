@@ -136,6 +136,17 @@ def abrir_pasta(endereco):
 
 # ---------------------------- Funções quark ----------------------------
 def cancel_qk():
-        pg.moveTo(829, 419)
-        time.sleep(0.2)
-        pg.click()
+    time.sleep(0.2)
+    pg.moveTo(cfg.button_cancel_qk)
+    time.sleep(0.2)
+    pg.click()
+    time.sleep(0.2)
+
+def ok_qk():
+    time.sleep(0.2)
+    pg.moveTo(cfg.button_ok_qk)
+    time.sleep(0.2)
+    pg.click()
+    time.sleep(0.4)
+    pg.press('esc', presses=4)
+    time.sleep(0.2)

@@ -53,6 +53,9 @@ already_open_r = (489, 280, 98, 103)
 already_open_full_r = (489, 281, 389, 156) 
 quark_icon_c_r = (499, 309, 79, 101)
 quark_loading = (493, 304, 123, 111)
+file_not_fond = (465, 232, 477, 210)
+button_cancel_qk = 829, 419
+button_ok_qk = 829, 385
 
 def stats():
     print(".....")
