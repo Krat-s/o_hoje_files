@@ -12,6 +12,7 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 import Global.settings as cfg
+import Global.utils as utl
 
 def get_screen_text(region=None):
     screenshot = pg.screenshot(region=region)
@@ -116,21 +117,56 @@ def start_background_wait(target_fn, *args, callback_on_complete=None, daemon=Tr
     return t
 
 
+# ---- função para verificar e resolver mensagens de erro ----
+def check_file_status():
+    """Verifica se há erros de arquivo usando OCR e retorna um status"""
+    check_open = wait_until_text_appears(
+        "already open", cfg.already_open_full_r,
+        check_interval=0.5, timeout=3,
+        on_found=utl.cancel_qk, run_once=True
+    )
+
+    check_file = wait_until_text_appears(
+        "Arquivo não encontrado", cfg.file_not_fond_close,
+        check_interval=0.5, timeout=3,
+        on_found=utl.ok_qk, run_once=True
+    )
+
+    if check_open:
+        print("Página já estava aberta")
+        time.sleep(cfg.TIMETOCLOSE)
+        return "open"
+        
+    elif check_file:
+        print("Arquivo não encontrado, ignorando e continuando processos...")
+        return "not_found"
+
+    print("Nenhum erro detectado, continuando processos...")
+    return "ok"
+
 
 
 if __name__ == "__main__":
-    def cancel_qk():
-        # pg.moveTo(829, 419)
-        # time.sleep(0.2)
-        # pg.click()
-        print("teste")
-        time.sleep(0.1)
+    # def cancel_qk():
+    #     # pg.moveTo(829, 419)
+    #     # time.sleep(0.2)
+    #     # pg.click()
+    #     print("teste")
+    #     time.sleep(0.1)
 
-    ok = wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=cancel_qk, run_once=True)
-    if ok:
-        print("Evento ocorreu dentro do timeout")
-    else:
-        print("Timeout: texto não apareceu")
-        
-        
+    # ok = wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=utl.cancel_qk, run_once=True)
+    # if ok:
+    #     utl.cancel_qk
+    #     print("Evento ocorreu dentro do timeout")
+    # else:
+    #     print("Timeout: texto não apareceu")
+    time.sleep(2)
+    # pg.moveTo(10, 10, duration=2)
+    # pg.moveTo(100, 100, duration=2)
+    # pg.click()
+    # pg.moveTo(500, 500, duration=2)
+
+
+    check_file_status()
+
     

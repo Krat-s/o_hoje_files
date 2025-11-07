@@ -26,8 +26,19 @@ EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 print("Casamento Loaded ✔️")
 print(f".. CASAMENTO - Process edd: {EDD}")
 print(".....")
+status = pyt.check_file_status()
+
+
 
 # ------------------------------------------------------------------------- Funções
+def error_check():
+    if status == "open":
+        print("Tratamento concluído para arquivo aberto.")
+    if status == "not_found":
+        print("Tratamento concluído para arquivo não encontrado.")
+    else:
+        print("Tudo certo, seguindo...")
+
 def open_web():
     os.startfile(cfg.CAMINHO_WEB + "\\" + EDD)
     time.sleep(0.3)
@@ -60,7 +71,7 @@ def open_paste_page_done():
     pg.press('enter')
     time.sleep(0.2)
     
-def agrupar_e_fechar_agora():
+def cg_close():
     take_tool("v")
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'g')
@@ -92,11 +103,13 @@ def process_page(page_number, is_even):
     open_paste_page_done()
     pg.write(str(page_number))
     confirmancia()
-    time.sleep(5)
-    agrupar_e_fechar_agora()
-    time.sleep(cfg.TIMETOCLOSE)
-    time.sleep(cfg.TIMETOCLOSE)
-    time.sleep(0.3)
+    
+
+    if status:
+
+    time.sleep(cfg.TIMETOOPEN)
+    cg_close()
+    time.sleep(cfg.TIMETOCLOSE + 4)
     pg.hotkey('ctrl', '0')
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'v')
@@ -125,19 +138,10 @@ def wedding(nome_arquivo, paginas):
     open_web()
     utl.take_file(nome_arquivo)
     close_and_open_quark()
+    
     # Na máquina Marketing não há permissão para rodar o código
-    # check_open = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=1.18, on_found=utl.cancel_qk, run_once=True)
-    # check_file = pyt.wait_until_text_appears("Arquivo não encontrado", cfg.file_not_fond, check_interval=0.8, timeout=1.18, on_found=utl.ok_qk, run_once=True)
-    # if check_open:
-    #     print("Página já estava aberta")
-    #     time.sleep(cfg.TEMPO_ABERTURA)
-    # if check_file:
-    #     print("Arquivo não encontrado, ignorando e continuando processos...")
-    # if check_open:
-    #     print("Página já estava aberta")
-    #     time.sleep(cfg.TEMPO_ABERTURA)
-    # else:
-    #     print("Continuando processos...")
+    error_check()
+
     for page_number in paginas:
         is_even = page_number % 2 == 0
         process_page(page_number, is_even)
@@ -147,10 +151,10 @@ def wedding(nome_arquivo, paginas):
 
 def process_basic():
     wedding("17_20", [17, 20])
-    wedding("13_16", [13, 16])
-    wedding("14_15", [14, 15])
 
 def process_town():
+    wedding("13_16", [13, 16])
+    wedding("14_15", [14, 15])
     wedding("10_11", [10, 11])
     wedding("9_12", [9, 12])
 

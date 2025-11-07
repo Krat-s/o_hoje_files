@@ -54,6 +54,7 @@ already_open_full_r = (489, 281, 389, 156)
 quark_icon_c_r = (499, 309, 79, 101)
 quark_loading = (493, 304, 123, 111)
 file_not_fond = (465, 232, 477, 210)
+file_not_fond_close = (500, 260, 363, 142)
 button_cancel_qk = 829, 419
 button_ok_qk = 829, 385
 
@@ -85,8 +86,7 @@ def stats():
 #     y_edicao_capa = 58.07
 
 # ------------------------------------------------------------------------- Tempos de espera
-TEMPO_ABERTURA = 4
-TEMPO_FECHAMENTO = 3
+TIMETOOPEN = 4
 TIMETOCLOSE = 6
 
 # ------------------------------------------------------------------------- Ativar isso se quiser usar posições absolutas(essas funcionam na maquina do comercial)

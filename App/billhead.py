@@ -90,7 +90,7 @@ def fechar_pagina():
     time.sleep(0.2)
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'f4')
-    time.sleep(cfg.TEMPO_FECHAMENTO)
+    time.sleep(cfg.TIMETOCLOSE)
 
 # ---------------------------- AUTODATA ----------------------------
 def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
