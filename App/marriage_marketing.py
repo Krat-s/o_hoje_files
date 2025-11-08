@@ -14,7 +14,6 @@ from App.modulos_quark.data_formatador import formatar_data
 import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as sy_de
-import Global.tesseract_utils as pyt
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
@@ -26,18 +25,8 @@ EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 print("Casamento Loaded ✔️")
 print(f".. CASAMENTO - Process edd: {EDD}")
 print(".....")
-status = pyt.check_file_status()
-
-
 
 # ------------------------------------------------------------------------- Funções
-def error_check():
-    if status == "open":
-        print("Tratamento concluído para arquivo aberto.")
-    if status == "not_found":
-        print("Tratamento concluído para arquivo não encontrado.")
-    else:
-        print("Tudo certo, seguindo...")
 
 def open_web():
     os.startfile(cfg.CAMINHO_WEB + "\\" + EDD)
@@ -126,24 +115,21 @@ def testPDF():
     time.sleep(1)
     pg.moveTo(x=1316, y=702, duration=0.5)
     pg.click()
-    time.sleep(5)
+    time.sleep(2)
     pg.press('right')
     pg.press('backspace', presses=9)
     pg.press('tab', presses=2)
     pg.press('enter')
+    time.sleep(cfg.TIMEEXPPDF)
 
 def wedding(nome_arquivo, paginas):
     open_web()
     utl.take_file(nome_arquivo)
     close_and_open_quark()
-    
-    # Na máquina Marketing não há permissão para rodar o código
-    # error_check()
-
     for page_number in paginas:
         is_even = page_number % 2 == 0
         process_page(page_number, is_even)
-    time.sleep(0.5)
+    time.sleep(1)
     testPDF()
     pg.hotkey('ctrl', 'f4')
     time.sleep(0.5)

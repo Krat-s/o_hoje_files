@@ -88,6 +88,7 @@ def stats():
 # ------------------------------------------------------------------------- Tempos de espera
 TIMETOOPEN = 4
 TIMETOCLOSE = 6
+TIMEEXPPDF = 7
 
 # ------------------------------------------------------------------------- Ativar isso se quiser usar posições absolutas(essas funcionam na maquina do comercial)
 # x_data = 49.48
