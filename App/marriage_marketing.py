@@ -108,19 +108,7 @@ def process_page(page_number, is_even):
     pg.hotkey('ctrl', 's')
     time.sleep(0.3)
 
-def testPDF():
-    time.sleep(3)
-    pg.rightClick(cfg.center_x, cfg.center_y)
-    pg.moveTo(x=1081, y=702, duration=0.5)
-    time.sleep(1)
-    pg.moveTo(x=1316, y=702, duration=0.5)
-    pg.click()
-    time.sleep(2)
-    pg.press('right')
-    pg.press('backspace', presses=9)
-    pg.press('tab', presses=2)
-    pg.press('enter')
-    time.sleep(cfg.TIMEEXPPDF)
+
 
 def wedding(nome_arquivo, paginas):
     open_web()
@@ -130,7 +118,7 @@ def wedding(nome_arquivo, paginas):
         is_even = page_number % 2 == 0
         process_page(page_number, is_even)
     time.sleep(1)
-    testPDF()
+    utl.expdf()
     pg.hotkey('ctrl', 'f4')
     time.sleep(0.5)
 
@@ -230,8 +218,11 @@ def auto_marriage():
     janela.mainloop()
 
 if __name__ == "__main__":
-    auto_marriage()
-    # testPDF()
+    # auto_marriage()
+    utl.expdf()
+                    
+
+
 
 
 
