@@ -135,25 +135,6 @@ def abrir_pasta(endereco):
     pg.click(cfg.center_x, cfg.center_y)
 
 # ---------------------------- Funções quark ----------------------------
-def expdf():
-    time.sleep(3)
-    pg.rightClick(cfg.center_x, cfg.center_y)
-    pg.moveTo(x=1081, y=702, duration=0.5)
-    time.sleep(1)
-    pg.moveTo(x=1316, y=702, duration=0.5)
-    pg.click()
-    time.sleep(2)
-    pg.keyDown('shift')
-    pg.press('tab', presses=3)
-    pg.keyUp('shift')
-    pg.hotkey('alt', 'tab', presses=1)
-    pg.press('right')
-    pg.press('backspace', presses=9)
-    pg.press('tab', presses=2)
-    pg.press('enter')
-    time.sleep(cfg.TIMEEXPPDF)
-
-
 def cancel_qk():
     time.sleep(0.2)
     pg.moveTo(cfg.button_cancel_qk, duration=0.5)
@@ -166,5 +147,24 @@ def ok_qk():
     pg.press('esc')
     time.sleep(0.2)
 
-if __name__ == "__main__":
-    expdf()
+def expdf():
+    pg.hotkey('ctrl', 'shift', 's')
+    time.sleep(0.5)
+    pg.press('enter')
+    time.sleep(0.2)
+    pg.press('left')
+    time.sleep(0.2)
+    pg.press('enter')
+    time.sleep(2)
+    pg.hotkey('alt', 'f')
+    pg.press('e')
+    pg.press('enter')
+    time.sleep(1)
+    pg.press('right')
+    time.sleep(1)
+    pg.press('backspace', presses=9)
+    time.sleep(1)
+    pg.press('tab', presses=2)
+    time.sleep(1)
+    pg.press('enter')
+    time.sleep(cfg.TIMEEXPPDF)

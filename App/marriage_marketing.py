@@ -92,9 +92,7 @@ def process_page(page_number, is_even):
     open_paste_page_done()
     pg.write(str(page_number))
     confirmancia()
-
-
-
+    #Tesseractcheck
     cg_close()
     time.sleep(cfg.TIMETOCLOSE + 4)
     pg.hotkey('ctrl', '0')
@@ -107,8 +105,6 @@ def process_page(page_number, is_even):
         move_page(290, 20)
     pg.hotkey('ctrl', 's')
     time.sleep(0.3)
-
-
 
 def wedding(nome_arquivo, paginas):
     open_web()
@@ -124,12 +120,16 @@ def wedding(nome_arquivo, paginas):
 
 def process_basic():
     wedding("17_20", [17, 20])
-
-def process_town():
     wedding("13_16", [13, 16])
     wedding("14_15", [14, 15])
+
+def process_town():
     wedding("10_11", [10, 11])
     wedding("9_12", [9, 12])
+
+def process_complete_basic():
+    process_basic()
+    process_town()
 
 def process_crumb():
     wedding("3_6", [3, 6])
@@ -154,7 +154,7 @@ def process_all():
 # ------------------------------------------------------------------------- Executando 
 def auto_marriage():
     def fazer_escolha(opcao):
-        if opcao == "o básico":
+        if opcao == "Essencia + Classificados":
             time.sleep(5)
             process_basic()
             pg.alert('Automação finalizada')
@@ -174,6 +174,10 @@ def auto_marriage():
             time.sleep(5)
             wedding_fist_journal()
             pg.alert('Automação finalizada')
+        elif opcao == "basico completo":
+            time.sleep(5)
+            process_complete_basic()    
+            pg.alert('Automação finalizada')  
         elif opcao == "tudo":
             time.sleep(5)
             process_all()    
@@ -196,8 +200,11 @@ def auto_marriage():
     label.pack(pady=10)
 
     # Botões de escolha
-    btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"), **estilo_escolhas)
+    btn_x = tk.Button(janela, text="Essencia + Classificados", command=lambda: fazer_escolha("Essencia + Classificados"), **estilo_escolhas)
     btn_x.pack(pady=5)
+
+    btn_t = tk.Button(janela, text="Básico completo", command=lambda: fazer_escolha("Básico completo"), **estilo_escolhas)
+    btn_t.pack(pady=5)
 
     btn_v = tk.Button(janela, text="Caderno de cidades", command=lambda: fazer_escolha("cidades"), **estilo_escolhas)
     btn_v.pack(pady=5)
@@ -205,11 +212,11 @@ def auto_marriage():
     btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"), **estilo_escolhas)
     btn_y.pack(pady=5)
 
-    btn_z = tk.Button(janela, text="miolo completo", command=lambda: fazer_escolha("2_7 + miolo"), **estilo_escolhas)
-    btn_z.pack(pady=5)
-
     btn_w = tk.Button(janela, text="Primeiro caderno", command=lambda: fazer_escolha("primeiro caderno"), **estilo_escolhas)
     btn_w.pack(pady=5)
+
+    btn_z = tk.Button(janela, text="miolo completo", command=lambda: fazer_escolha("2_7 + miolo"), **estilo_escolhas)
+    btn_z.pack(pady=5)
 
     btn_u = tk.Button(janela, text="Tudo", command=lambda: fazer_escolha("tudo"), **estilo_escolhas)
     btn_u.pack(pady=5)
@@ -218,8 +225,7 @@ def auto_marriage():
     janela.mainloop()
 
 if __name__ == "__main__":
-    # auto_marriage()
-    utl.expdf()
+    auto_marriage()
                     
 
 
