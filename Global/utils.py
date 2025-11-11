@@ -168,3 +168,11 @@ def expdf():
     time.sleep(1)
     pg.press('enter')
     time.sleep(cfg.TIMEEXPPDF)
+
+def error_check():
+    if cfg.status == "open":
+        print("Tratamento concluído para arquivo aberto.")
+    if cfg.status == "not_found":
+        print("Tratamento concluído para arquivo não encontrado.")
+    else:
+        print("Tudo certo, seguindo...")

@@ -7,6 +7,7 @@ raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
 from Web.modulos_web import random_number as rn
+import Global.tesseract_utils as pyt
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
@@ -16,6 +17,11 @@ CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
+
+# ------------------------------------------------------------------------- Tempos de espera
+TIMETOOPEN = 4
+TIMETOCLOSE = 6
+TIMEEXPPDF = 7
 
 # ------------------------------------------------------------------------- Web_botting
 acessos_B1 = rn.gerar_numero(0, 3)
@@ -48,7 +54,7 @@ quantidade_repeticoes = 1
 edicao_inicial = 8001
 total_edicoes = quantidade_repeticoes * 6
 
-# ------------------------------------------------------------------------- Pytesseract regions
+# ------------------------------------------------------------------------- Pytesseract and regions
 already_open_r = (489, 280, 98, 103)
 already_open_full_r = (489, 281, 389, 156) 
 quark_icon_c_r = (499, 309, 79, 101)
@@ -84,11 +90,6 @@ def stats():
 #     y_edicao_17 = 15.40
 #     x_edicao_capa = 18.74
 #     y_edicao_capa = 58.07
-
-# ------------------------------------------------------------------------- Tempos de espera
-TIMETOOPEN = 4
-TIMETOCLOSE = 6
-TIMEEXPPDF = 7
 
 # ------------------------------------------------------------------------- Ativar isso se quiser usar posições absolutas(essas funcionam na maquina do comercial)
 # x_data = 49.48

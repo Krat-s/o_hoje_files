@@ -14,7 +14,6 @@ from App.modulos_quark.data_formatador import formatar_data
 import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as sy_de
-import Global.tesseract_utils as pyt
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
@@ -26,19 +25,9 @@ EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 print("Casamento Loaded ✔️")
 print(f".. CASAMENTO - Process edd: {EDD}")
 print(".....")
-status = pyt.check_file_status()
-
 
 
 # ------------------------------------------------------------------------- Funções
-def error_check():
-    if status == "open":
-        print("Tratamento concluído para arquivo aberto.")
-    if status == "not_found":
-        print("Tratamento concluído para arquivo não encontrado.")
-    else:
-        print("Tudo certo, seguindo...")
-
 def open_web():
     os.startfile(cfg.CAMINHO_WEB + "\\" + EDD)
     time.sleep(0.3)
@@ -103,10 +92,7 @@ def process_page(page_number, is_even):
     open_paste_page_done()
     pg.write(str(page_number))
     confirmancia()
-    
-
-    if status:
-
+    utl.error_check()
     time.sleep(cfg.TIMETOOPEN)
     cg_close()
     time.sleep(cfg.TIMETOCLOSE + 4)
@@ -119,20 +105,7 @@ def process_page(page_number, is_even):
     else: 
         move_page(290, 20)
     pg.hotkey('ctrl', 's')
-    time.sleep(0.3)
-
-def testPDF():
-    time.sleep(3)
-    pg.rightClick(cfg.center_x, cfg.center_y)
-    pg.moveTo(x=1081, y=702, duration=0.5)
     time.sleep(1)
-    pg.moveTo(x=1316, y=702, duration=0.5)
-    pg.click()
-    time.sleep(5)
-    pg.press('right')
-    pg.press('backspace', presses=9)
-    pg.press('tab', presses=2)
-    pg.press('enter')
 
 def wedding(nome_arquivo, paginas):
     open_web()
@@ -140,7 +113,7 @@ def wedding(nome_arquivo, paginas):
     close_and_open_quark()
     
     # Na máquina Marketing não há permissão para rodar o código
-    error_check()
+    utl.error_check()
 
     for page_number in paginas:
         is_even = page_number % 2 == 0
@@ -151,12 +124,16 @@ def wedding(nome_arquivo, paginas):
 
 def process_basic():
     wedding("17_20", [17, 20])
-
-def process_town():
     wedding("13_16", [13, 16])
     wedding("14_15", [14, 15])
+
+def process_town():
     wedding("10_11", [10, 11])
     wedding("9_12", [9, 12])
+
+def process_complete_basic():
+    process_basic()
+    process_town()
 
 def process_crumb():
     wedding("3_6", [3, 6])
@@ -172,16 +149,16 @@ def wedding_cape():
 
 def wedding_fist_journal():
     process_complete_crumb()
-    wedding_cape()
+    # wedding_cape()
 
-def process_casamento_completo():
+def process_all():
     process_basic()
     wedding_fist_journal()
 
 # ------------------------------------------------------------------------- Executando 
 def auto_marriage():
     def fazer_escolha(opcao):
-        if opcao == "o básico":
+        if opcao == "Essencia + Classificados":
             time.sleep(5)
             process_basic()
             pg.alert('Automação finalizada')
@@ -201,9 +178,13 @@ def auto_marriage():
             time.sleep(5)
             wedding_fist_journal()
             pg.alert('Automação finalizada')
+        elif opcao == "basico completo":
+            time.sleep(5)
+            process_complete_basic()    
+            pg.alert('Automação finalizada')  
         elif opcao == "tudo":
             time.sleep(5)
-            process_casamento_completo()    
+            process_all()    
             pg.alert('Automação finalizada')     
         else:
             messagebox.showerror("Erro", "Opção inválida.")
@@ -223,8 +204,11 @@ def auto_marriage():
     label.pack(pady=10)
 
     # Botões de escolha
-    btn_x = tk.Button(janela, text="Básico", command=lambda: fazer_escolha("o básico"), **estilo_escolhas)
+    btn_x = tk.Button(janela, text="Essencia + Classificados", command=lambda: fazer_escolha("Essencia + Classificados"), **estilo_escolhas)
     btn_x.pack(pady=5)
+
+    btn_t = tk.Button(janela, text="Básico completo", command=lambda: fazer_escolha("Básico completo"), **estilo_escolhas)
+    btn_t.pack(pady=5)
 
     btn_v = tk.Button(janela, text="Caderno de cidades", command=lambda: fazer_escolha("cidades"), **estilo_escolhas)
     btn_v.pack(pady=5)
@@ -232,11 +216,11 @@ def auto_marriage():
     btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"), **estilo_escolhas)
     btn_y.pack(pady=5)
 
-    btn_z = tk.Button(janela, text="miolo completo", command=lambda: fazer_escolha("2_7 + miolo"), **estilo_escolhas)
-    btn_z.pack(pady=5)
-
     btn_w = tk.Button(janela, text="Primeiro caderno", command=lambda: fazer_escolha("primeiro caderno"), **estilo_escolhas)
     btn_w.pack(pady=5)
+
+    btn_z = tk.Button(janela, text="miolo completo", command=lambda: fazer_escolha("2_7 + miolo"), **estilo_escolhas)
+    btn_z.pack(pady=5)
 
     btn_u = tk.Button(janela, text="Tudo", command=lambda: fazer_escolha("tudo"), **estilo_escolhas)
     btn_u.pack(pady=5)
@@ -246,19 +230,4 @@ def auto_marriage():
 
 if __name__ == "__main__":
     auto_marriage()
-    # testPDF()
-
-
-
-
-  
-
-    
-    # ok = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=utl.cancel_qk, run_once=True)
-    # if ok:
-    #     print("Evento ocorreu dentro do timeout")
-    # else:
-    #     print("Timeout: texto não apareceu")
-        
-        
-    
+                    

@@ -227,20 +227,3 @@ def auto_marriage():
 if __name__ == "__main__":
     auto_marriage()
                     
-
-
-
-
-
-
-  
-
-    
-    # ok = pyt.wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=utl.cancel_qk, run_once=True)
-    # if ok:
-    #     print("Evento ocorreu dentro do timeout")
-    # else:
-    #     print("Timeout: texto não apareceu")
-        
-        
-    
