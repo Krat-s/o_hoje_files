@@ -1,6 +1,6 @@
 # 📰 O-HOJE Files
 
-Automação de tarefas internas para o jornal O HOJE usando Python. Este projeto facilita ações repetitivas como controle de arquivos, atalhos de teclado e interface gráfica.
+Automação de tarefas internas para o jornal O HOJE usando Python. Este projeto facilita ações repetitivas com controle de arquivos, atalhos de teclado e interface gráfica.
 
 ## 🚀 Funcionalidades
 

@@ -27,12 +27,6 @@ print(f".. CASAMENTO - Process edd: {EDD}")
 print(".....")
 
 # ------------------------------------------------------------------------- Funções
-
-def open_web():
-    os.startfile(cfg.CAMINHO_WEB + "\\" + EDD)
-    time.sleep(0.3)
-    utl.max_windows()
-
 def close_and_open_quark():
     pg.hotkey('alt', 'f4')
     pg.hotkey('win', 's')

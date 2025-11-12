@@ -49,20 +49,6 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
     time.sleep(1)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
-def abrir_sugestão():
-    time.sleep(0.2)
-    pg.press('down')
-    time.sleep(0.2)
-    pg.press('enter')
-    time.sleep(cfg.TEMPO_ABERTURA)
-
-def selecionar_ferramenta(tecla):
-    time.sleep(0.2)
-    pg.click(cfg.center_x, 10)   
-    time.sleep(0.2)
-    pg.press("v")
-    kb.press(tecla)
-
 def preencher_data(data_formatada):
     selecionar_ferramenta("v")
     pg.click(cfg.x_data, cfg.y_data)

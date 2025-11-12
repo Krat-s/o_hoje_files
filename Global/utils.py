@@ -147,28 +147,6 @@ def ok_qk():
     pg.press('esc')
     time.sleep(0.2)
 
-def expdf():
-    pg.hotkey('ctrl', 'shift', 's')
-    time.sleep(0.5)
-    pg.press('enter')
-    time.sleep(0.2)
-    pg.press('left')
-    time.sleep(0.2)
-    pg.press('enter')
-    time.sleep(2)
-    pg.hotkey('alt', 'f')
-    pg.press('e')
-    pg.press('enter')
-    time.sleep(1)
-    pg.press('right')
-    time.sleep(1)
-    pg.press('backspace', presses=9)
-    time.sleep(1)
-    pg.press('tab', presses=2)
-    time.sleep(1)
-    pg.press('enter')
-    time.sleep(cfg.TIMEEXPPDF)
-
 def error_check():
     if cfg.status == "open":
         print("Tratamento concluído para arquivo aberto.")
@@ -176,3 +154,16 @@ def error_check():
         print("Tratamento concluído para arquivo não encontrado.")
     else:
         print("Tudo certo, seguindo...")
+
+# ---------------------------- functions explorer (server journal) ----------------------------
+def open_web():
+    os.startfile(cfg.CAMINHO_WEB + "\\" + cfg.EDD)
+    time.sleep(0.3)
+    max_windows()
+
+def chose_suggestion(QTD=1):
+    time.sleep(0.2)
+    pg.press('down', presses=QTD)
+    time.sleep(0.2)
+    pg.press('enter')
+    time.sleep(cfg.TEMPO_ABERTURA)

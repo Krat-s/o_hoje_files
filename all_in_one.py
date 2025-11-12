@@ -1,4 +1,4 @@
-from App import marriage as cm
+from App import wedding as cm
 from Global import utils as ut
 from App import billhead as cç
 from Mail import gmail as gm

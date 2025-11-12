@@ -1,5 +1,2 @@
 import pyautogui as pg
-
-
-
-pg.moveTo(829, 385)
+import time
