@@ -166,6 +166,4 @@ def chose_suggestion(QTD=1, TEMPO=2):
     pg.press('down', presses=QTD)
     time.sleep(0.2)
     pg.press('enter')
-    time.sleep(float(TEMPO))
-
-
+    time.sleep(int(TEMPO))
