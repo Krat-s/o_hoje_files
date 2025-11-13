@@ -108,4 +108,4 @@ y_edicao_capa = 448
 
 if __name__ == "__main__":
     # stats()
-    print(acessos_B1)
+    # print(acessos_B1)
