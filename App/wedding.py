@@ -229,5 +229,4 @@ def auto_marriage():
     janela.mainloop()
 
 if __name__ == "__main__":
-    # auto_marriage()
-    utl.chose_suggestion(2, 0.2)                    
+    auto_marriage()             
