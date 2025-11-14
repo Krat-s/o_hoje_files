@@ -2,12 +2,15 @@ import pyautogui as pg
 import locale
 import os
 import sys
+from datetime import datetime, timedelta
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
+from App.modulos_quark.data_formatador import formatar_data
 from Web.modulos_web import random_number as rn
 import Global.tesseract_utils as pyt
+import Global.data_edition_sync as sy_de
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
@@ -22,6 +25,16 @@ CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
 TIMETOOPEN = 4
 TIMETOCLOSE = 6
 TIMEEXPPDF = 7
+
+# ------------------------------------------------------------------------- Dados de edição
+quantidade_repeticoes = int(1)
+edicao_inicial = 8001
+total_edicoes = quantidade_repeticoes * 6
+
+# ------------------------------------------------------------------------- wedding
+edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
+data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
+EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 
 # ------------------------------------------------------------------------- Web_botting
 acessos_B1 = rn.gerar_numero(0, 3)
@@ -49,10 +62,6 @@ center_x = screen_width / 2
 center_y = screen_height / 2
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 
-# ------------------------------------------------------------------------- Dados de edição
-quantidade_repeticoes = 1
-edicao_inicial = 8001
-total_edicoes = quantidade_repeticoes * 6
 
 # ------------------------------------------------------------------------- Pytesseract and regions
 already_open_r = (489, 280, 98, 103)

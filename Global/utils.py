@@ -58,12 +58,6 @@ def atalho_endereço():
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
 
-def abrir_software(numero):
-    pg.hotkey('win', 's')
-    pg.hotkey('win', str(numero))
-    pg.press('enter')
-    time.sleep(0.5)
-
 def explorer_esta_aberto() -> bool:
     """
     Verifica se há alguma janela do Explorador de Arquivos aberta.
@@ -134,6 +128,14 @@ def abrir_pasta(endereco):
     max_windows()
     pg.click(cfg.center_x, cfg.center_y)
 
+
+def chose_suggestion(QTD=1, TEMPO=2):
+    time.sleep(0.2)
+    pg.press('down', presses=QTD)
+    time.sleep(0.2)
+    pg.press('enter')
+    time.sleep(int(TEMPO))
+
 # ---------------------------- Funções quark ----------------------------
 def cancel_qk():
     time.sleep(0.2)
@@ -146,6 +148,10 @@ def ok_qk():
     time.sleep(0.2)
     pg.press('esc')
     time.sleep(0.2)
+
+def take_tool(tool):
+    pg.click(cfg.center_x, 10)
+    kb.press(str(tool))
 
 def error_check():
     if cfg.status == "open":
@@ -161,9 +167,4 @@ def open_web():
     time.sleep(0.3)
     max_windows()
 
-def chose_suggestion(QTD=1, TEMPO=2):
-    time.sleep(0.2)
-    pg.press('down', presses=QTD)
-    time.sleep(0.2)
-    pg.press('enter')
-    time.sleep(int(TEMPO))
+

@@ -19,11 +19,8 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
-data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
-EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 print("Casamento Loaded ✔️")
-print(f".. CASAMENTO - Process edd: {EDD}")
+print(f".. CASAMENTO - Process edd: {cfg.EDD}")
 print(".....")
 
 # ------------------------------------------------------------------------- Funções
@@ -32,30 +29,22 @@ def close_and_open_quark():
     pg.hotkey('win', 's')
     pg.hotkey('win', '1')
     time.sleep(4)
-
-def take_tool(tool):
-    pg.click(cfg.center_x, 10)
-    kb.press(str(tool))
-
-def confirmancia():
-    pg.press('down')
-    pg.press('enter')
-    
+   
 def open_paste_page_done():
     pg.press('esc')
-    take_tool("v")
+    utl.take_tool("v")
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
     time.sleep(0.2)
-    kb.write(cfg.CAMINHO_EDD + "\\" + EDD + "\\" + 'Páginas prontas')
+    kb.write(cfg.CAMINHO_EDD + "\\" + cfg.EDD + "\\" + 'Páginas prontas')
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(0.2)
     
 def cg_close():
-    take_tool("v")
+    utl.take_tool("v")
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'g')
     time.sleep(0.2)
@@ -85,7 +74,7 @@ def process_page(page_number, is_even):
     time.sleep(0.3)
     open_paste_page_done()
     pg.write(str(page_number))
-    confirmancia()
+    utl.chose_suggestion(1, cfg.TIMETOOPEN)
     #Tesseractcheck
     cg_close()
     time.sleep(cfg.TIMETOCLOSE + 4)
@@ -101,7 +90,7 @@ def process_page(page_number, is_even):
     time.sleep(0.3)
 
 def wedding(nome_arquivo, paginas):
-    open_web()
+    utl.open_web()
     utl.take_file(nome_arquivo)
     close_and_open_quark()
     for page_number in paginas:
@@ -120,7 +109,7 @@ def process_basic():
 def process_town():
     wedding("10_11", [10, 11])
     wedding("9_12", [9, 12])
-
+    
 def process_complete_basic():
     process_basic()
     process_town()
@@ -168,7 +157,7 @@ def auto_marriage():
             time.sleep(5)
             wedding_fist_journal()
             pg.alert('Automação finalizada')
-        elif opcao == "basico completo":
+        elif opcao == "complete_b":
             time.sleep(5)
             process_complete_basic()    
             pg.alert('Automação finalizada')  
@@ -190,14 +179,14 @@ def auto_marriage():
     estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
 
     # Texto de instrução
-    label = tk.Label(janela, text=f"Edição: {EDD}", **estilo_títulos)
+    label = tk.Label(janela, text=f"Edição: {cfg.EDD}", **estilo_títulos)
     label.pack(pady=10)
 
     # Botões de escolha
     btn_x = tk.Button(janela, text="Essencia + Classificados", command=lambda: fazer_escolha("Essencia + Classificados"), **estilo_escolhas)
     btn_x.pack(pady=5)
 
-    btn_t = tk.Button(janela, text="Básico completo", command=lambda: fazer_escolha("Básico completo"), **estilo_escolhas)
+    btn_t = tk.Button(janela, text="Básico completo", command=lambda: fazer_escolha("complete_b"), **estilo_escolhas)
     btn_t.pack(pady=5)
 
     btn_v = tk.Button(janela, text="Caderno de cidades", command=lambda: fazer_escolha("cidades"), **estilo_escolhas)

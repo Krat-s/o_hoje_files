@@ -15,9 +15,9 @@ DATA_BASE = datetime(2024, 8, 26)  # Segunda-feira
 
 # Parâmetros padrão de geração
 QUANTIDADE_POR_SEMANA = 5
-REPETICOES_PADRAO = cfg.quantidade_repeticoes
+REPETICOES_PADRAO = 1
 
-EDICAO_INI = cfg.edicao_inicial 
+EDICAO_INI = cfg.edicao_inicial
 
 def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     """
@@ -113,10 +113,18 @@ def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_seman
 
 def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
-         
+
+
+edicao_0 = obter_edicao_por_data(datetime.now() + timedelta(days=1))
+data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
+
 if __name__ == "__main__":
-    teste1 = datetime.now() + timedelta(days=1)
-    teste2 = 8001
-    print(obter_edicao_por_data(teste1))
-    print(formatar_data(obter_data_por_edicao(teste2)))
-    print('...')
+    # teste1 = datetime.now() + timedelta(days=1)
+    # teste2 = 8001
+    # print(obter_edicao_por_data(teste1))
+    # print(formatar_data(obter_data_por_edicao(teste2)))
+    # print('...')
+
+
+    # print(EDICAO_INI)
+    print(cfg.acessos_B1)
