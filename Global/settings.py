@@ -9,6 +9,13 @@ sys.path.append(raiz_projeto)
 from Web.modulos_web import random_number as rn
 import Global.tesseract_utils as pyt
 
+from datetime import datetime, timedelta
+from App.modulos_quark.data_formatador import formatar_data
+import Global.data_edition_sync as sy_de
+edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
+data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
+EDD = f"{edicao_0.replace('.', '')} - {data_0}"
+
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
@@ -108,4 +115,4 @@ y_edicao_capa = 448
 
 if __name__ == "__main__":
     # stats()
-    print(acessos_B1)
+    print(EDD)

@@ -5,25 +5,21 @@ import os
 import sys
 import tkinter as tk
 from tkinter import messagebox
-from datetime import datetime, timedelta
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from App.modulos_quark.data_formatador import formatar_data
 import Global.settings as cfg
 import Global.utils as utl
-import Global.data_edition_sync as sy_de
+
 
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
-data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
-EDD = f"{edicao_0.replace('.', '')} - {data_0}"
+
 print("Casamento Loaded ✔️")
-print(f".. CASAMENTO - Process edd: {EDD}")
+print(f".. CASAMENTO - Process edd: {cfg.EDD}")
 print(".....")
 
 # ------------------------------------------------------------------------- Funções
@@ -49,7 +45,7 @@ def open_paste_page_done():
     time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
     time.sleep(0.2)
-    kb.write(cfg.CAMINHO_EDD + "\\" + EDD + "\\" + 'Páginas prontas')
+    kb.write(cfg.CAMINHO_EDD + "\\" + cfg.EDD + "\\" + 'Páginas prontas')
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(0.2)
@@ -101,7 +97,7 @@ def process_page(page_number, is_even):
     time.sleep(0.3)
 
 def wedding(nome_arquivo, paginas):
-    open_web()
+    utl.open_web()
     utl.take_file(nome_arquivo)
     close_and_open_quark()
     for page_number in paginas:
@@ -190,7 +186,7 @@ def auto_marriage():
     estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
 
     # Texto de instrução
-    label = tk.Label(janela, text=f"Edição: {EDD}", **estilo_títulos)
+    label = tk.Label(janela, text=f"Edição: {cfg.EDD}", **estilo_títulos)
     label.pack(pady=10)
 
     # Botões de escolha
