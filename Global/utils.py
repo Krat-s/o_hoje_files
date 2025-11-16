@@ -167,3 +167,10 @@ def chose_suggestion(QTD=1, TEMPO=2):
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(int(TEMPO))
+
+
+
+
+chose_suggestion(2)
+
+

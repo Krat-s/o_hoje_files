@@ -12,7 +12,7 @@ sys.path.append(modulo_path)
 from App.modulos_quark.data_formatador import formatar_data
 from App.modulos_quark.edicao_formatador import gerar_edicoes
 import Global.settings as cfg
-import Global.utils as ut
+import Global.utils as utl
 import Global.data_edition_sync as desync
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
@@ -38,21 +38,21 @@ def pasta_esta_aberta(*nomes):
 
 def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
     if de:
-        ut.ir_para(de)
+        utl.ir_para(de)
     nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.2)
-    ut.ir_para(f"{caminho}\\{nome_pasta}")
+    utl.ir_para(f"{caminho}\\{nome_pasta}")
     pg.hotkey('ctrl', 'v')
     time.sleep(1)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def preencher_data(data_formatada):
-    selecionar_ferramenta("v")
+    utl.selecionar_ferramenta("v")
     pg.click(cfg.x_data, cfg.y_data)
-    selecionar_ferramenta("t")
+    utl.selecionar_ferramenta("t")
     pg.press('t', presses=2)
     time.sleep(0.4)
     pg.hotkey('ctrl', 'a')
@@ -129,23 +129,23 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
 
 def abrir_janela_unica():
     if pasta_esta_aberta("4 Adianto de novas edições"):
-        ut.abrir_pasta(cfg.CAMINHO_MODELO_EDD)
-        ut.ir_para(cfg.CAMINHO_PAGFLIP)
+        utl.abrir_pasta(cfg.CAMINHO_MODELO_EDD)
+        utl.ir_para(cfg.CAMINHO_PAGFLIP)
     elif pasta_esta_aberta("fotos"):
-        ut.abrir_pasta(cfg.CAMINHO_FOTOS)
-        ut.ir_para(cfg.CAMINHO_PAGFLIP)
+        utl.abrir_pasta(cfg.CAMINHO_FOTOS)
+        utl.ir_para(cfg.CAMINHO_PAGFLIP)
     elif pasta_esta_aberta("00 Pagflip"):
-        ut.abrir_pasta(cfg.CAMINHO_PAGFLIP)
+        utl.abrir_pasta(cfg.CAMINHO_PAGFLIP)
     else:
-        ut.abrir_pasta(cfg.CAMINHO_PAGFLIP)
+        utl.abrir_pasta(cfg.CAMINHO_PAGFLIP)
     
 def auto_pastas(pasta_nome, ed, dia_semana, modelo_path):
     abrir_janela_unica()
-    ut.criar_pasta(pasta_nome)
-    ut.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+    utl.criar_pasta(pasta_nome)
+    utl.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
     copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
-    ut.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
-    ut.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD)
+    utl.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+    utl.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD)
     copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, ed, dia_semana, modelo_path)
     pg.hotkey('alt', 'up')
 
@@ -175,7 +175,7 @@ def auto_billhead():
         auto_pastas(pasta_nome, ed, dia_semana, modelo_path)
 
         # -------------------------------------------------------------------------Aplicando autodata
-        ut.open_software(cfg.quark)
+        utl.open_software(cfg.quark)
         selecionar_ferramenta("v")
         autodata_edicao_17(**info) #prepara o local no quark
         autodata_paginas(**info)
