@@ -2,22 +2,22 @@ from datetime import datetime, timedelta
 
 import os
 import sys
+
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-import Global.settings as cfg
 from App.modulos_quark.edicao_formatador import gerar_edicoes, formatar_edicao, formatar_numero
 from App.modulos_quark.data_formatador import formatar_data
+from Global.settings_desync import quantidade_repeticoes, edicao_inicial
 
 # Base fixa para cálculo de data
 EDICAO_BASE = 6496
 DATA_BASE = datetime(2024, 8, 26)  # Segunda-feira
+QUANTIDADE_POR_SEMANA = 5
 
 # Parâmetros padrão de geração
-QUANTIDADE_POR_SEMANA = 5
-REPETICOES_PADRAO = cfg.quantidade_repeticoes
-
-EDICAO_INI = cfg.edicao_inicial 
+REPETICOES_PADRAO = quantidade_repeticoes
+EDICAO_INI = edicao_inicial 
 
 def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     """
@@ -113,10 +113,15 @@ def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_seman
 
 def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
-         
+
+edicao_0 = obter_edicao_por_data(datetime.now() + timedelta(days=1))
+data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
+EDD = f"{edicao_0.replace('.', '')} - {data_0}"
+
 if __name__ == "__main__":
     teste1 = datetime.now() + timedelta(days=1)
     teste2 = 8001
     print(obter_edicao_por_data(teste1))
     print(formatar_data(obter_data_por_edicao(teste2)))
     print('...')
+    # print(EDD)

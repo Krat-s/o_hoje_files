@@ -15,6 +15,7 @@ Automação de tarefas internas para o jornal O HOJE usando Python. Este projeto
 - PyQt5
 - PyAutoGUI
 - Keyboard
+- Tesseract
 
 ## 📦 Instalação
 

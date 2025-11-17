@@ -11,6 +11,9 @@ raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
 import Global.settings as cfg
+import Global.settings_desync as sy_de
+import Global.utils_tesseract as tutl
+
 
 # ---------------------------- Funções passivas ----------------------------
 def verificar_windows() -> str:
@@ -57,12 +60,6 @@ def atalho_endereço():
 # ---------------------------- Funções gerais ----------------------------
 def ajustar_data(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
-
-def abrir_software(numero):
-    pg.hotkey('win', 's')
-    pg.hotkey('win', str(numero))
-    pg.press('enter')
-    time.sleep(0.5)
 
 def explorer_esta_aberto() -> bool:
     """
@@ -148,16 +145,16 @@ def ok_qk():
     time.sleep(0.2)
 
 def error_check():
-    if cfg.status == "open":
+    if tutl.status == "open":
         print("Tratamento concluído para arquivo aberto.")
-    if cfg.status == "not_found":
+    if tutl.status == "not_found":
         print("Tratamento concluído para arquivo não encontrado.")
     else:
         print("Tudo certo, seguindo...")
 
 # ---------------------------- functions explorer (server journal) ----------------------------
 def open_web():
-    os.startfile(cfg.CAMINHO_WEB + "\\" + cfg.EDD)
+    os.startfile(cfg.CAMINHO_WEB + "\\" + sy_de.EDD)
     time.sleep(0.3)
     max_windows()
 
@@ -167,10 +164,4 @@ def chose_suggestion(QTD=1, TEMPO=2):
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(int(TEMPO))
-
-
-
-
-chose_suggestion(2)
-
 

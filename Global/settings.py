@@ -7,14 +7,9 @@ raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
 from Web.modulos_web import random_number as rn
-import Global.tesseract_utils as pyt
-
-from datetime import datetime, timedelta
-from App.modulos_quark.data_formatador import formatar_data
 import Global.data_edition_sync as sy_de
-edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
-data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
-EDD = f"{edicao_0.replace('.', '')} - {data_0}"
+from Global.settings_desync import edicao_inicial, total_edicoes, quantidade_repeticoes
+
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
@@ -55,11 +50,6 @@ screen_width, screen_height = pg.size()
 center_x = screen_width / 2
 center_y = screen_height / 2
 locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
-
-# ------------------------------------------------------------------------- Dados de edição
-quantidade_repeticoes = 1
-edicao_inicial = 8001
-total_edicoes = quantidade_repeticoes * 6
 
 # ------------------------------------------------------------------------- Pytesseract and regions
 already_open_r = (489, 280, 98, 103)
@@ -115,4 +105,4 @@ y_edicao_capa = 448
 
 if __name__ == "__main__":
     # stats()
-    print(EDD)
+    print(sy_de.EDD)

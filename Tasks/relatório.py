@@ -6,7 +6,7 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from Tasks.Modulos import index_numeros as ni
+from modulos_tasks import index_numeros as ni
 
 time.sleep(1)
 pg.PAUSE = 0.3 

@@ -19,17 +19,14 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
-data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
-EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 print("Casamento Loaded ✔️")
-print(f".. CASAMENTO - Process edd: {EDD}")
+print(f".. CASAMENTO - Process edd: {sy_de.EDD}")
 print(".....")
 
 
 # ------------------------------------------------------------------------- Funções
 def open_web():
-    os.startfile(cfg.CAMINHO_WEB + "\\" + EDD)
+    os.startfile(cfg.CAMINHO_WEB + "\\" + sy_de.EDD)
     time.sleep(0.3)
     utl.max_windows()
 
@@ -200,7 +197,7 @@ def auto_marriage():
     estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
 
     # Texto de instrução
-    label = tk.Label(janela, text=f"Edição: {EDD}", **estilo_títulos)
+    label = tk.Label(janela, text=f"Edição: {sy_de.EDD}", **estilo_títulos)
     label.pack(pady=10)
 
     # Botões de escolha
@@ -229,4 +226,5 @@ def auto_marriage():
     janela.mainloop()
 
 if __name__ == "__main__":
-    auto_marriage()             
+    # auto_marriage()             
+    print(sy_de.EDD)
