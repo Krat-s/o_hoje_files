@@ -24,41 +24,22 @@ print(f".. CASAMENTO - Process edd: {sy_de.EDD}")
 print(".....")
 
 
-# ------------------------------------------------------------------------- Funções
-def open_web():
-    os.startfile(cfg.CAMINHO_WEB + "\\" + sy_de.EDD)
-    time.sleep(0.3)
-    utl.max_windows()
-
-def close_and_open_quark():
-    pg.hotkey('alt', 'f4')
-    pg.hotkey('win', 's')
-    pg.hotkey('win', '1')
-    time.sleep(4)
-
-def take_tool(tool):
-    pg.click(cfg.center_x, 10)
-    kb.press(str(tool))
-
-def confirmancia():
-    pg.press('down')
-    pg.press('enter')
-    
+# ------------------------------------------------------------------------- Funções   
 def open_paste_page_done():
     pg.press('esc')
-    take_tool("v")
+    utl.take_tool("v")
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
     time.sleep(0.2)
-    kb.write(cfg.CAMINHO_EDD + "\\" + EDD + "\\" + 'Páginas prontas')
+    kb.write(cfg.CAMINHO_EDD + "\\" + sy_de.EDD + "\\" + 'Páginas prontas')
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(0.2)
     
 def cg_close():
-    take_tool("v")
+    utl.take_tool("v")
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'g')
     time.sleep(0.2)
@@ -88,7 +69,7 @@ def process_page(page_number, is_even):
     time.sleep(0.3)
     open_paste_page_done()
     pg.write(str(page_number))
-    confirmancia()
+    utl.chose_suggestion()
     utl.error_check()
     time.sleep(cfg.TIMETOOPEN)
     cg_close()
@@ -105,9 +86,9 @@ def process_page(page_number, is_even):
     time.sleep(1)
 
 def wedding(nome_arquivo, paginas):
-    open_web()
+    utl.open_web()
     utl.take_file(nome_arquivo)
-    close_and_open_quark()
+    utl.close_and_open_quark()
     
     # Na máquina Marketing não há permissão para rodar o código
     utl.error_check()
@@ -146,7 +127,7 @@ def wedding_cape():
 
 def wedding_fist_journal():
     process_complete_crumb()
-    # wedding_cape()
+    wedding_cape()
 
 def process_all():
     process_basic()

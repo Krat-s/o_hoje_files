@@ -19,9 +19,6 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-edicao_0 = sy_de.obter_edicao_por_data(datetime.now() + timedelta(days=1))
-data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
-EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 print("Wedding_exporting ✔️")
 print(".....")
 
@@ -48,64 +45,67 @@ def expdf():
     pg.press('enter')
     time.sleep(cfg.TIMEEXPPDF)
     
-exorting_pdf()
+def exporting_pdf(file):
     utl.open_web()
+    utl.take_file(file)
+    utl.error_check()
+
 
 def exp_basic():
-    wedding("17_20", [17, 20])
-    wedding("13_16", [13, 16])
-    wedding("14_15", [14, 15])
+    exporting_pdf("17_20")
+    exporting_pdf("13_16")
+    exporting_pdf("14_15")
 
-def process_town():
-    wedding("10_11", [10, 11])
-    wedding("9_12", [9, 12])
+def exp_town():
+    exporting_pdf("10_11")
+    exporting_pdf("9_12")
 
-def process_complete_basic():
-    process_basic()
-    process_town()
+def basic():
+    exp_basic()
+    exp_town()
 
-def process_crumb():
-    wedding("3_6", [3, 6])
-    wedding("4_5", [4, 5])
+def exp_crumb():
+    exporting_pdf("3_6")
+    exporting_pdf("4_5")
 
-def process_complete_crumb():
-    wedding("2_7", [2, 7])    
-    wedding("3_6", [3, 6])
-    wedding("4_5", [4, 5])
+def exp_complete_crumb():
+    exporting_pdf("2_7")    
+    exporting_pdf("3_6")
+    exporting_pdf("4_5")
     
-def wedding_cape():
-    wedding("1_8", [8, 1])
+def exporting_pdf_cape():
+    exporting_pdf("1_8")
 
 def wedding_fist_journal():
-    process_complete_crumb()
+    exp_complete_crumb()
     # wedding_cape()
 
-def process_all():
-    process_basic()
+def exp_all():
+    exp_basic()
     wedding_fist_journal()
 
 # ------------------------------------------------------------------------- Executando 
-def auto_marriage():
+def auto_exporttpdf():
     def fazer_escolha(opcao):
         if opcao == "Essencia + Classificados":
             time.sleep(5)
-            process_basic()
+            exp_basic()
             pg.alert('Automação finalizada')
         elif opcao == "cidades":
             time.sleep(5)
-            process_town()
+            exp_town()
             pg.alert('Automação finalizada')
         elif opcao == "o miolo":
             time.sleep(5)
-            process_crumb()
+            exp_crumb()
             pg.alert('Automação finalizada')
         elif opcao == "2_7 + miolo":
             time.sleep(5)
-            process_complete_crumb()
+            exp_complete_crumb()
             pg.alert('Automação finalizada')
         elif opcao == "primeiro caderno":
             time.sleep(5)
-            wedding_fist_journal()
+            exp_fist_journal()
             pg.alert('Automação finalizada')
         elif opcao == "basico completo":
             time.sleep(5)

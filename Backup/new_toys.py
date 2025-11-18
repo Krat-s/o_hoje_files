@@ -44,7 +44,7 @@ def wait_until_text_appears(text, region=None, check_interval=1):
 
 
 
-region_png_qk_ldg = x=493, y=304, w=123, h=111
+region_png_qk_ldg = 493, 304, 123, 111
 
 # Exemplo de uso
 print("inicio")

@@ -14,7 +14,6 @@ import Global.settings as cfg
 import Global.settings_desync as sy_de
 import Global.utils_tesseract as tutl
 
-
 # ---------------------------- Funções passivas ----------------------------
 def verificar_windows() -> str:
     """
@@ -132,6 +131,10 @@ def abrir_pasta(endereco):
     pg.click(cfg.center_x, cfg.center_y)
 
 # ---------------------------- Funções quark ----------------------------
+def take_tool(tool):
+    pg.click(cfg.center_x, 10)
+    kb.press(str(tool))
+
 def cancel_qk():
     time.sleep(0.2)
     pg.moveTo(cfg.button_cancel_qk, duration=0.5)
@@ -165,3 +168,8 @@ def chose_suggestion(QTD=1, TEMPO=2):
     pg.press('enter')
     time.sleep(int(TEMPO))
 
+def close_and_open_quark():
+    pg.hotkey('alt', 'f4')
+    pg.hotkey('win', 's')
+    pg.hotkey('win', '1')
+    time.sleep(4)
