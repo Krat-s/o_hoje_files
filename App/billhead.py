@@ -21,9 +21,6 @@ pg.FAILSAFE = True
 time.sleep(1)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
-ver = "v1.2.1"
-def log(mensagem): 
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] {mensagem}")
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def pasta_esta_aberta(*nomes):
@@ -50,9 +47,9 @@ def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def preencher_data(data_formatada):
-    utl.selecionar_ferramenta("v")
+    utl.utl.take_tool("v")
     pg.click(cfg.x_data, cfg.y_data)
-    utl.selecionar_ferramenta("t")
+    utl.utl.take_tool("t")
     pg.press('t', presses=2)
     time.sleep(0.4)
     pg.hotkey('ctrl', 'a')
@@ -66,10 +63,10 @@ def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
     kb.write(f"{cfg.CAMINHO_MODELO_EDD}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
-    abrir_sugestão()
+    utl.chose_suggestion(1, cfg.TIMETOOPEN)
     preencher_data(data_formatada)
 
-def fechar_pagina():
+def close_page():
     pg.press('esc', presses=3)
     time.sleep(0.2)
     pg.hotkey('ctrl', 's')
@@ -85,24 +82,26 @@ def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
             continue
         else:
             aplicar_autodata(i, edicao_formatada, dia_semana, data_formatada)
-            fechar_pagina()
+            close_page
+        ()
            
 def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana=None):
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'o')
     pg.write('1')
-    abrir_sugestão()
+    utl.chose_suggestion()
     time.sleep(3)
-    selecionar_ferramenta("v")
+    utl.take_tool("v")
     pg.click(cfg.x_edicao_capa, cfg.y_edicao_capa)
-    selecionar_ferramenta("t")
+    utl.take_tool("t")
     pg.press('t', presses=4)
     pg.press('backspace', presses=5)
     kb.write(f"nº {edicao_formatada} ")
     pg.press('right', presses=2)
     pg.press('backspace')
     kb.write(f"|  {data_formatada}")
-    fechar_pagina()
+    close_page
+()
 
 def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('esc', presses=3)
@@ -113,19 +112,20 @@ def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
     pg.press('enter')
     time.sleep(0.5)
     kb.write('17')
-    abrir_sugestão()
+    utl.chose_suggestion()
     pg.press('esc', presses=3)
     preencher_data(data_formatada)
     time.sleep(0.3)
     pg.press('esc', presses=3)
-    selecionar_ferramenta("v")
+    utl.take_tool("v")
     pg.hotkey('ctrl', '0')
     pg.click(cfg.x_edicao_17, cfg.y_edicao_17)
-    selecionar_ferramenta("t")
+    utl.take_tool("t")
     pg.press('t', presses=4)
     pg.hotkey('ctrl', 'a')
     kb.write(f"Ano 21 - nº {edicao_formatada}")
-    fechar_pagina()
+    close_page
+()
 
 def abrir_janela_unica():
     if pasta_esta_aberta("4 Adianto de novas edições"):
@@ -151,7 +151,6 @@ def auto_pastas(pasta_nome, ed, dia_semana, modelo_path):
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def auto_billhead():
-    log(f"📦 Gerando edições ({ver})...")
     for item in desync.gerar_edicoes_formatadas():
         #----------------------------------------📌verificar se existe uma forma melhor de chamar as variaveis
         ed = item["edicao_formatada"]
@@ -172,16 +171,16 @@ def auto_billhead():
             }
         
         # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
-        auto_pastas(pasta_nome, ed, dia_semana, modelo_path)
+        # auto_pastas(pasta_nome, ed, dia_semana, modelo_path)
 
         # -------------------------------------------------------------------------Aplicando autodata
-        utl.open_software(cfg.quark)
-        selecionar_ferramenta("v")
-        autodata_edicao_17(**info) #prepara o local no quark
-        autodata_paginas(**info)
-        autodata_edicao_1(**info)               
+        # utl.open_software(cfg.quark)
+        # utl.take_tool("v")
+        # autodata_edicao_17(**info) #prepara o local no quark
+        # autodata_paginas(**info)
+        # autodata_edicao_1(**info)               
         
-        log(f"📦 Modelos da edição {ed} gerados. -->> {data_formatada.capitalize()}, {dia_semana}")        
+        utl.log(str("billhead"), ed, pasta_nome)        
 
 if __name__ == "__main__":
     print('hello')
