@@ -20,7 +20,6 @@ pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
-    janelas = Desktop(backend="uia").windows()
 def copiar_modelo_para_pasta(caminho, pasta_nome, de=None):
     if de:
         utl.ir_para(de)
