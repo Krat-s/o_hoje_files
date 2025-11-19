@@ -98,15 +98,17 @@ def explorer_is_open() -> bool:
             return True
     return False
 
-def folder_is_open(nome_pasta: str) -> bool:
+def folder_is_open(nomes: str) -> bool:
     """
     Verifica se uma janela do Explorador de Arquivos com nome específico está aberta.
     """
     janelas = Desktop(backend="uia").windows()
     for janela in janelas:
         if janela.class_name() == "CabinetWClass":
-            if nome_pasta.lower() in janela.window_text().lower():
-                return True
+            titulo = janela.window_text().lower()
+            for nome in nomes:
+                if nome.lower() in titulo:
+                    return True
     return False
 
 def max_windows():
@@ -151,7 +153,7 @@ def create_folder(nome, em=None):
     time.sleep(0.4)
     kb.write(nome)
     pg.press('enter')
-    time.sleep(0.4)
+    time.sleep(1)
 
 def open_folder(endereco):
     os.startfile(endereco)
@@ -196,8 +198,21 @@ def chose_suggestion(QTD=1, TEMPO=2):
     pg.press('enter')
     time.sleep(int(TEMPO))
 
+def close_page():
+    pg.press('esc', presses=3)
+    time.sleep(0.2)
+    pg.hotkey('ctrl', 's')
+    time.sleep(0.2)
+    pg.press('esc', presses=3)
+    pg.hotkey('ctrl', 'f4')
+    time.sleep(cfg.TIMETOCLOSE)
+
 def close_and_open_quark():
     pg.hotkey('alt', 'f4')
     pg.hotkey('win', 's')
     pg.hotkey('win', '1')
     time.sleep(4)
+
+def press_repeat(key, n):
+    for _ in range(n):
+        pg.press(key)

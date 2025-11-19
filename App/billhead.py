@@ -18,46 +18,33 @@ import Global.data_edition_sync as desync
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
-time.sleep(1)
-
-# ---------------------------- FUNÇÕES UTILITÁRIAS ----------------------------
 
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
-def pasta_esta_aberta(*nomes):
     janelas = Desktop(backend="uia").windows()
-    for janela in janelas:
-        if janela.class_name() == "CabinetWClass":
-            titulo = janela.window_text().lower()
-            for nome in nomes:
-                if nome.lower() in titulo:
-                    return True
-    return False
-
-def copiar_modelo_para_pasta(caminho, ed, data_formatada, de=None):
+def copiar_modelo_para_pasta(caminho, pasta_nome, de=None):
     if de:
         utl.ir_para(de)
-    nome_pasta = f"{ed.replace('.', '')} - {data_formatada}"
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
     time.sleep(0.2)
-    utl.ir_para(f"{caminho}\\{nome_pasta}")
+    utl.ir_para(f"{caminho}\\{pasta_nome}")
     pg.hotkey('ctrl', 'v')
     time.sleep(1)
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK)----------------------------
 def preencher_data(data_formatada):
-    utl.utl.take_tool("v")
+    utl.take_tool("v")
     pg.click(cfg.x_data, cfg.y_data)
-    utl.utl.take_tool("t")
-    pg.press('t', presses=2)
+    utl.take_tool("t")
+    utl.press_repeat('t', 2)
     time.sleep(0.4)
     pg.hotkey('ctrl', 'a')
     time.sleep(0.4)
     kb.write(data_formatada)
 
 def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
-    pg.press('esc', presses=3)
+    utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', 'o')
     nome_pasta = f"{edicao_formatada.replace('.', '')} - {dia_semana}"
     kb.write(f"{cfg.CAMINHO_MODELO_EDD}\\{nome_pasta}")
@@ -66,15 +53,6 @@ def aplicar_autodata(numero, edicao_formatada, dia_semana, data_formatada):
     utl.chose_suggestion(1, cfg.TIMETOOPEN)
     preencher_data(data_formatada)
 
-def close_page():
-    pg.press('esc', presses=3)
-    time.sleep(0.2)
-    pg.hotkey('ctrl', 's')
-    time.sleep(0.2)
-    pg.press('esc', presses=3)
-    pg.hotkey('ctrl', 'f4')
-    time.sleep(cfg.TIMETOCLOSE)
-
 # ---------------------------- AUTODATA ----------------------------
 def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
     for i in range(20, 1, -1):
@@ -82,106 +60,113 @@ def autodata_paginas(edicao_formatada, dia_semana, data_formatada):
             continue
         else:
             aplicar_autodata(i, edicao_formatada, dia_semana, data_formatada)
-            close_page
-        ()
+            utl.close_page()
            
 def autodata_edicao_1(edicao_formatada, data_formatada, dia_semana=None):
-    pg.press('esc', presses=3)
+    utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', 'o')
     pg.write('1')
-    utl.chose_suggestion()
-    time.sleep(3)
+    utl.chose_suggestion(1, 3)
     utl.take_tool("v")
     pg.click(cfg.x_edicao_capa, cfg.y_edicao_capa)
     utl.take_tool("t")
-    pg.press('t', presses=4)
-    pg.press('backspace', presses=5)
+    utl.press_repeat('t', 4)
+    utl.press_repeat('backspace', 5)
     kb.write(f"nº {edicao_formatada} ")
-    pg.press('right', presses=2)
+    utl.press_repeat('right', 2)
     pg.press('backspace')
     kb.write(f"|  {data_formatada}")
-    close_page
-()
+    utl.close_page()
 
 def autodata_edicao_17(edicao_formatada, data_formatada, dia_semana):
-    pg.press('esc', presses=3)
+    utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
     kb.write(cfg.CAMINHO_MODELO_EDD + '\\' + f"{edicao_formatada.replace('.', '')} - {dia_semana}")
+    time.sleep(0.3)
     pg.press('enter')
     time.sleep(0.5)
     kb.write('17')
-    utl.chose_suggestion()
-    pg.press('esc', presses=3)
+    utl.chose_suggestion(1, 1)
+    utl.press_repeat('esc', 3)
     preencher_data(data_formatada)
-    time.sleep(0.3)
-    pg.press('esc', presses=3)
+    time.sleep(0.4)
+    utl.press_repeat('esc', 3)
     utl.take_tool("v")
     pg.hotkey('ctrl', '0')
     pg.click(cfg.x_edicao_17, cfg.y_edicao_17)
     utl.take_tool("t")
-    pg.press('t', presses=4)
+    utl.press_repeat('t', 4)
     pg.hotkey('ctrl', 'a')
     kb.write(f"Ano 21 - nº {edicao_formatada}")
-    close_page
-()
+    utl.close_page()
 
 def abrir_janela_unica():
-    if pasta_esta_aberta("4 Adianto de novas edições"):
+    if utl.folder_is_open("4 Adianto de novas edições"):
         utl.abrir_pasta(cfg.CAMINHO_MODELO_EDD)
         utl.ir_para(cfg.CAMINHO_PAGFLIP)
-    elif pasta_esta_aberta("fotos"):
+    elif utl.folder_is_open("fotos"):
         utl.abrir_pasta(cfg.CAMINHO_FOTOS)
         utl.ir_para(cfg.CAMINHO_PAGFLIP)
-    elif pasta_esta_aberta("00 Pagflip"):
+    elif utl.folder_is_open("00 Pagflip"):
         utl.abrir_pasta(cfg.CAMINHO_PAGFLIP)
     else:
         utl.abrir_pasta(cfg.CAMINHO_PAGFLIP)
     
-def auto_pastas(pasta_nome, ed, dia_semana, modelo_path):
-    abrir_janela_unica()
-    utl.criar_pasta(pasta_nome)
-    utl.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
-    copiar_modelo_para_pasta(cfg.CAMINHO_WEB, ed, dia_semana, cfg.CAMINHO_MODELO_WEB)
-    utl.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
-    utl.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-    copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, ed, dia_semana, modelo_path)
-    pg.hotkey('alt', 'up')
+def auto_pastas(pasta_nome, modelo_path):
+    try:
+        abrir_janela_unica()
+        utl.criar_pasta(pasta_nome)
+        utl.criar_pasta(pasta_nome, cfg.CAMINHO_WEB)
+        copiar_modelo_para_pasta(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
+        utl.criar_pasta(pasta_nome, cfg.CAMINHO_FOTOS)
+        utl.criar_pasta(pasta_nome, cfg.CAMINHO_MODELO_EDD)
+        copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
+        pg.hotkey('alt', 'up')
+        utl.log(str("billhead-auto_folder"), "sucesso", f"Pasta {pasta_nome} criada")
+    except Exception as e:
+        erro_msg = f"Erro ao criar pasta: {str(e)}"
+        utl.log(str("billhead-auto_folder"), "ERRO", erro_msg)
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def auto_billhead():
     for item in desync.gerar_edicoes_formatadas():
-        #----------------------------------------📌verificar se existe uma forma melhor de chamar as variaveis
-        ed = item["edicao_formatada"]
-        data_formatada = item["data_formatada"]
-        weekday = item["dia_semana_padrão"]
-        dia_semana = item["dia_semana"]
-        pasta_nome = item["pasta_nome"]
+        try:
+        #     #----------------------------------------📌verificar se existe uma forma melhor de chamar as variaveis
+            ed = item["edicao_formatada"]
+            data_formatada = item["data_formatada"]
+            weekday = item["dia_semana_padrão"]
+            dia_semana = item["dia_semana"]
+            pasta_nome = item["pasta_nome"]
 
-        modelo_path = {
-            0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
-            5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
-            }.get(weekday, r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
+            modelo_path = {
+                0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
+                5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
+                }.get(weekday, r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição')
 
-        info = {
-            "edicao_formatada": ed,
-            "data_formatada": data_formatada,
-            "dia_semana": dia_semana,
-            }
-        
-        # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
-        # auto_pastas(pasta_nome, ed, dia_semana, modelo_path)
+            info = {
+                "edicao_formatada": ed,
+                "dia_semana": dia_semana,
+                "data_formatada": data_formatada,
+                }
+            
+            # ---------------CRIANDO PASTAS, COPIANDO MODELOS E APLICANDO CABEÇALHO--------
+            auto_pastas(pasta_nome, modelo_path)
 
-        # -------------------------------------------------------------------------Aplicando autodata
-        # utl.open_software(cfg.quark)
-        # utl.take_tool("v")
-        # autodata_edicao_17(**info) #prepara o local no quark
-        # autodata_paginas(**info)
-        # autodata_edicao_1(**info)               
-        
-        utl.log(str("billhead"), ed, pasta_nome)        
+            # -------------------------------------------------------------------------Aplicando autodata
+            utl.open_software(cfg.quark)
+            utl.take_tool("v")
+            autodata_edicao_17(**info) #prepara o local no quark
+            autodata_paginas(**info)
+            autodata_edicao_1(**info)               
+            
+            utl.log(str("billhead"), "sucesso", f"Modelos da edição {ed}, {dia_semana} criado")    
+        except Exception as e:
+            erro_msg = f"Erro: {str(e)}"
+            utl.log(str("billhead"), "erro", f"Modelos da edição {ed}, {dia_semana} não criado. {erro_msg}")      
 
 if __name__ == "__main__":
+    time.sleep(1)
     print('hello')
     auto_billhead()
