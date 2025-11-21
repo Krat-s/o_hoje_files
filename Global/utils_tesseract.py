@@ -3,7 +3,6 @@ import time
 import pytesseract
 import os
 import sys
-from PIL import Image, ImageDraw, ImageFont
 import threading
 import pytesseract
 

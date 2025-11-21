@@ -7,6 +7,8 @@ from datetime import datetime, timedelta
 import os
 import sys
 import csv
+import pyperclip
+import time
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
@@ -84,7 +86,6 @@ def atalho_endereço():
     windows = check_windows()
     return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'l')
 
-# ---------------------------- Funções gerais ----------------------------
 def adjust_date(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
 
@@ -134,17 +135,17 @@ def take_file(arquivo):
     time.sleep(0.3)
     kb.press_and_release('enter')
 
-def ir_para(específico=None):
+def go_to(específico=None):
     pg.hotkey(*atalho_endereço())
-    time.sleep(0.2)
+    time.sleep(0.4)
     if específico:
         kb.write(específico) 
     pg.press('enter')
-    time.sleep(0.2)
+    time.sleep(0.4)
 
-def create_folder(nome, em=None):
+def make_folder(nome, em=None):
     if em:
-        ir_para(em)
+        go_to(em)
     time.sleep(0.4)
     max_windows()
     time.sleep(0.4)
@@ -159,6 +160,25 @@ def open_folder(endereco):
     os.startfile(endereco)
     max_windows()
     pg.click(cfg.center_x, cfg.center_y)
+
+def safe_copy():
+    # Antes de copiar, limpa a área de transferência
+    pyperclip.copy("")
+
+    pg.hotkey('ctrl', 'a')
+    time.sleep(0.1)
+    pg.hotkey('ctrl', 'c')
+    time.sleep(0.2)
+
+    conteudo = pyperclip.paste()
+
+    # Checar se o conteúdo provavelmente NÃO é lista de arquivos
+    if "\\" not in conteudo and "/" not in conteudo:
+        raise Exception("Nenhum arquivo selecionado — Ctrl+C copiou apenas o nome da pasta.")
+
+    return True
+
+
 
 # ---------------------------- Funções quark ----------------------------
 def take_tool(tool):
