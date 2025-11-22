@@ -14,7 +14,7 @@ raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
 import Global.settings as cfg
-import Global.settings_desync as sy_de
+import Global.data_edition_sync as sy_de
 import Global.utils_tesseract as tutl
 
 # ---------------------------- Funções passivas ----------------------------

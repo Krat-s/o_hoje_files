@@ -5,12 +5,10 @@ import os
 import sys
 import tkinter as tk
 from tkinter import messagebox
-from datetime import datetime, timedelta
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from App.modulos_quark.data_formatador import formatar_data
 import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as sy_de
@@ -18,11 +16,6 @@ import Global.data_edition_sync as sy_de
 # ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
-
-print("Casamento Loaded ✔️")
-print(f".. CASAMENTO - Process edd: {sy_de.EDD}")
-print(".....")
-
 
 # ------------------------------------------------------------------------- Funções   
 def open_paste_page_done():
@@ -70,7 +63,7 @@ def process_page(page_number, is_even):
     open_paste_page_done()
     pg.write(str(page_number))
     utl.chose_suggestion()
-    utl.error_check()
+    # utl.error_check()
     time.sleep(cfg.TIMETOOPEN)
     cg_close()
     time.sleep(cfg.TIMETOCLOSE + 4)
@@ -91,7 +84,7 @@ def wedding(nome_arquivo, paginas):
     utl.close_and_open_quark()
     
     # Na máquina Marketing não há permissão para rodar o código
-    utl.error_check()
+    # utl.error_check()
 
     for page_number in paginas:
         is_even = page_number % 2 == 0
@@ -109,29 +102,12 @@ def process_town():
     wedding("10_11", [10, 11])
     wedding("9_12", [9, 12])
 
-def process_complete_basic():
-    process_basic()
-    process_town()
-
 def process_crumb():
     wedding("3_6", [3, 6])
     wedding("4_5", [4, 5])
 
-def process_complete_crumb():
-    wedding("2_7", [2, 7])    
-    wedding("3_6", [3, 6])
-    wedding("4_5", [4, 5])
-    
 def wedding_cape():
     wedding("1_8", [8, 1])
-
-def wedding_fist_journal():
-    process_complete_crumb()
-    wedding_cape()
-
-def process_all():
-    process_basic()
-    wedding_fist_journal()
 
 # ------------------------------------------------------------------------- Executando 
 def auto_marriage():
@@ -139,35 +115,42 @@ def auto_marriage():
         if opcao == "Essencia + Classificados":
             time.sleep(5)
             process_basic()
-            pg.alert('Automação finalizada')
+            pg.alert('Essencia + Classificados OK')
         elif opcao == "cidades":
             time.sleep(5)
             process_town()
-            pg.alert('Automação finalizada')
+            pg.alert('Cidades OK')
+        elif opcao == "primeiro caderno":
+            time.sleep(5)
+            wedding("2_7", [2, 7])    
+            process_crumb()
+            wedding_cape()
+            pg.alert('Primeiro caderno OK')
+        elif opcao == "basico completo":
+            time.sleep(5)
+            process_basic()
+            process_town()    
+            pg.alert('Básico completo OK')  
         elif opcao == "o miolo":
             time.sleep(5)
             process_crumb()
-            pg.alert('Automação finalizada')
+            pg.alert('Miolo OK')
         elif opcao == "2_7 + miolo":
             time.sleep(5)
-            process_complete_crumb()
-            pg.alert('Automação finalizada')
-        elif opcao == "primeiro caderno":
-            time.sleep(5)
-            wedding_fist_journal()
-            pg.alert('Automação finalizada')
-        elif opcao == "basico completo":
-            time.sleep(5)
-            process_complete_basic()    
-            pg.alert('Automação finalizada')  
+            wedding("2_7", [2, 7])    
+            process_crumb()
+            pg.alert('2_7 + miolo OK')
         elif opcao == "tudo":
             time.sleep(5)
-            process_all()    
-            pg.alert('Automação finalizada')     
+            process_basic()
+            process_town() 
+            process_crumb()
+            wedding("2_7", [2, 7])    
+            wedding_cape()    
+            pg.alert('Tudo OK')     
         else:
             messagebox.showerror("Erro", "Opção inválida.")
 
-    # Criar janela principal
     janela = tk.Tk() 
     janela.title("Casamento")
     janela.geometry("600x450")
@@ -177,11 +160,9 @@ def auto_marriage():
     estilo_títulos = {"font": ("Helvetica", 19, "bold"), "bg": "#585858", "fg": "white", "width": 30, "borderwidth": 3, "relief": "solid"}
     estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
 
-    # Texto de instrução
     label = tk.Label(janela, text=f"Edição: {sy_de.EDD}", **estilo_títulos)
     label.pack(pady=10)
 
-    # Botões de escolha
     btn_x = tk.Button(janela, text="Essencia + Classificados", command=lambda: fazer_escolha("Essencia + Classificados"), **estilo_escolhas)
     btn_x.pack(pady=5)
 
@@ -203,9 +184,9 @@ def auto_marriage():
     btn_u = tk.Button(janela, text="Tudo", command=lambda: fazer_escolha("tudo"), **estilo_escolhas)
     btn_u.pack(pady=5)
 
-    # Iniciar a interface
     janela.mainloop()
 
 if __name__ == "__main__":
-    # auto_marriage()             
-    print(sy_de.EDD)
+    auto_marriage()
+
+    #Faltando corrigir o check_status na máquina do marketing

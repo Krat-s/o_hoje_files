@@ -10,7 +10,6 @@ from Web.modulos_web import random_number as rn
 import Global.data_edition_sync as sy_de
 from Global.settings_desync import edicao_inicial, total_edicoes, quantidade_repeticoes
 
-
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
