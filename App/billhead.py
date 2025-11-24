@@ -26,16 +26,18 @@ class EdicaoInfo:
 # ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
 def copiar_modelo_para_pasta(caminho, pasta_nome, de=None):
     if de:
-        utl.ir_para(de)
-
+        utl.go_to(de)
+    time.sleep(2)
     pg.click(cfg.center_x, cfg.center_y)
-
-    if not utl.safe_copy():
-        raise Exception("Falha ao copiar arquivos — pasta vazia ou nada selecionado.")
-
-    utl.ir_para(f"{caminho}\\{pasta_nome}")
-    pg.hotkey('ctrl', 'v')
+    pg.hotkey('ctrl', 'a')
     time.sleep(1)
+    pg.hotkey('ctrl', 'c')
+    # utl.safe_copy()
+    # if not utl.safe_copy():
+    #     raise Exception("Falha ao copiar arquivos — p\\192.168.1.249\redacao\arte\00 Pagflipasta vazia ou nada selecionado.")
+    utl.go_to(f"{caminho}\\{pasta_nome}")
+    pg.hotkey('ctrl', 'v')
+    time.sleep(2)
 
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK) ----------------------------
@@ -49,7 +51,6 @@ def preencher_data(info: EdicaoInfo):
     time.sleep(0.4)
     kb.write(info.data_formatada)
 
-
 def aplicar_autodata(numero, info: EdicaoInfo):
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', 'o')
@@ -57,10 +58,8 @@ def aplicar_autodata(numero, info: EdicaoInfo):
     nome_pasta = f"{info.edicao_formatada.replace('.', '')} - {info.dia_semana}"
     kb.write(f"{cfg.CAMINHO_MODELO_EDD}\\{nome_pasta}")
     pg.press('enter')
-
     pg.write(str(numero))
     utl.chose_suggestion(1, cfg.TIMETOOPEN)
-
     preencher_data(info)
 
 
@@ -72,60 +71,45 @@ def autodata_paginas(info: EdicaoInfo):
         aplicar_autodata(i, info)
         utl.close_page()
 
-
 def autodata_edicao_1(info: EdicaoInfo):
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', 'o')
     pg.write('1')
     utl.chose_suggestion(1, 3)
-
     utl.take_tool("v")
     pg.click(cfg.x_edicao_capa, cfg.y_edicao_capa)
-
     utl.take_tool("t")
     utl.press_repeat('t', 4)
     utl.press_repeat('backspace', 5)
-
     kb.write(f"nº {info.edicao_formatada} ")
     utl.press_repeat('right', 2)
     pg.press('backspace')
     kb.write(f"|  {info.data_formatada}")
-
     utl.close_page()
-
 
 def autodata_edicao_17(info: EdicaoInfo):
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
-
     kb.write(cfg.CAMINHO_MODELO_EDD + '\\' +
              f"{info.edicao_formatada.replace('.', '')} - {info.dia_semana}")
-
     time.sleep(0.3)
     pg.press('enter')
     time.sleep(0.5)
-
     kb.write('17')
     utl.chose_suggestion(1, 1)
-
     utl.press_repeat('esc', 3)
     preencher_data(info)
-
     time.sleep(0.4)
     utl.press_repeat('esc', 3)
     utl.take_tool("v")
-
     pg.hotkey('ctrl', '0')
     pg.click(cfg.x_edicao_17, cfg.y_edicao_17)
-
     utl.take_tool("t")
     utl.press_repeat('t', 4)
     pg.hotkey('ctrl', 'a')
-
     kb.write(f"Ano 21 - nº {info.edicao_formatada}")
-
     utl.close_page()
 
 
@@ -133,34 +117,28 @@ def autodata_edicao_17(info: EdicaoInfo):
 def open_main_folder():
     if utl.folder_is_open("4 Adianto de novas edições"):
         utl.open_folder(cfg.CAMINHO_MODELO_EDD)
-        utl.ir_para(cfg.CAMINHO_PAGFLIP)
+        utl.go_to(cfg.CAMINHO_PAGFLIP)
     elif utl.folder_is_open("fotos"):
         utl.open_folder(cfg.CAMINHO_FOTOS)
-        utl.ir_para(cfg.CAMINHO_PAGFLIP)
+        utl.go_to(cfg.CAMINHO_PAGFLIP)
     elif utl.folder_is_open("00 Pagflip"):
         utl.open_folder(cfg.CAMINHO_PAGFLIP)
     else:
         utl.open_folder(cfg.CAMINHO_PAGFLIP)
 
-
 def auto_folders(pasta_nome, modelo_path):
+    try:
         open_main_folder()
-
         utl.make_folder(pasta_nome)
         utl.make_folder(pasta_nome, cfg.CAMINHO_WEB)
-
-        copiar_modelo_para_pasta(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
-
         utl.make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
         utl.make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-
+        copiar_modelo_para_pasta(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
         copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
-
         pg.hotkey('alt', 'up')
-
-    #     utl.log("billhead-auto_folder", "sucesso", f"Pasta {pasta_nome} criada")
-    # except Exception as e:
-    #     utl.log("billhead-auto_folder", "ERRO", f"Erro ao criar pasta: {str(e)}")
+        utl.log("billhead-auto_folder", "sucesso", f"Pasta {pasta_nome} criada")
+    except Exception as e:
+        utl.log("billhead-auto_folder", "ERRO", f"Erro ao criar pasta: {str(e)}")
 
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
@@ -185,7 +163,7 @@ def auto_billhead():
             )
 
             # Criando pastas e copiando
-            print(pasta_nome, modelo_path)
+            # print(pasta_nome, modelo_path)
             auto_folders(pasta_nome, modelo_path)
 
             # Aplicando autodata no Quark
@@ -208,6 +186,6 @@ def auto_billhead():
 
 
 if __name__ == "__main__":
-    time.sleep(1)
+    time.sleep(2)
     print('hello')
     auto_billhead()

@@ -154,7 +154,7 @@ def make_folder(nome, em=None):
     time.sleep(0.4)
     kb.write(nome)
     pg.press('enter')
-    time.sleep(1)
+    time.sleep(1.5)
 
 def open_folder(endereco):
     os.startfile(endereco)
@@ -177,7 +177,6 @@ def safe_copy():
         raise Exception("Nenhum arquivo selecionado — Ctrl+C copiou apenas o nome da pasta.")
 
     return True
-
 
 
 # ---------------------------- Funções quark ----------------------------
