@@ -49,5 +49,7 @@ o_hoje_files/
 ├── README.md # Documentação
 └── .gitignore # Arquivos ignorados pelo Git
 
+Obs: deixar respectivamente disponíveis na barra de tarefas quark, navegador, vs code, explorer
+
 👨‍💻 Autor
 Kratos Messi

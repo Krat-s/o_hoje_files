@@ -39,7 +39,6 @@ def copiar_modelo_para_pasta(caminho, pasta_nome, de=None):
     pg.hotkey('ctrl', 'v')
     time.sleep(2)
 
-
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK) ----------------------------
 def preencher_data(info: EdicaoInfo):
     utl.take_tool("v")
@@ -92,8 +91,7 @@ def autodata_edicao_17(info: EdicaoInfo):
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.3)
-    kb.write(cfg.CAMINHO_MODELO_EDD + '\\' +
-             f"{info.edicao_formatada.replace('.', '')} - {info.dia_semana}")
+    kb.write(cfg.CAMINHO_MODELO_EDD + '\\' + f"{info.edicao_formatada.replace('.', '')} - {info.dia_semana}")
     time.sleep(0.3)
     pg.press('enter')
     time.sleep(0.5)
@@ -163,19 +161,18 @@ def auto_billhead():
             )
 
             # Criando pastas e copiando
-            # print(pasta_nome, modelo_path)
             auto_folders(pasta_nome, modelo_path)
 
-            # Aplicando autodata no Quark
-            # utl.open_software(cfg.quark)
-            # utl.take_tool("v")
+            # ------------------ Aplicando autodata no Quark
+            utl.open_software(cfg.quark)
+            utl.take_tool("v")
 
-            # autodata_edicao_17(info)
-            # autodata_paginas(info)
-            # autodata_edicao_1(info)
+            autodata_edicao_17(info)
+            autodata_paginas(info)
+            autodata_edicao_1(info)
 
-            # utl.log("billhead", "sucesso",
-            #         f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
+            utl.log("billhead", "sucesso",
+                    f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
 
         except Exception as e:
             utl.log(
