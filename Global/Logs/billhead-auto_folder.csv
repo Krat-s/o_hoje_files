@@ -77,3 +77,63 @@ data,hora,status,mensagem
  2025-11-25, 17:14:40,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
  2025-11-25, 17:14:40,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
  2025-11-25, 17:14:40,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2025-11-25, 18:16:14,sucesso,Pasta 6965 - Segunda-feira criada
+ 2025-11-25, 18:23:25,sucesso,Pasta 6966 - Terça-feira criada
+ 2025-11-25, 18:30:35,sucesso,Pasta 6967 - Quarta-feira criada
+ 2025-11-25, 18:37:46,sucesso,Pasta 6968 - Quinta-feira criada
+ 2025-11-25, 18:44:56,sucesso,Pasta 6969 - Sexta-feira criada
+ 2025-11-25, 18:52:07,sucesso,Pasta 6970-1 - Fim de semana criada
+ 2025-11-25, 18:59:17,sucesso,Pasta 6972 - Segunda-feira criada
+ 2025-11-25, 19:06:27,sucesso,Pasta 6973 - Terça-feira criada
+ 2025-11-25, 19:13:38,sucesso,Pasta 6974 - Quarta-feira criada
+ 2025-11-25, 19:20:48,sucesso,Pasta 6975 - Quinta-feira criada
+ 2025-11-25, 19:27:59,sucesso,Pasta 6976 - Sexta-feira criada
+ 2025-11-25, 19:35:09,sucesso,Pasta 6977-8 - Fim de semana criada
+ 2025-11-25, 19:42:19,sucesso,Pasta 6979 - Segunda-feira criada
+ 2025-11-25, 19:49:30,sucesso,Pasta 6980 - Terça-feira criada
+ 2025-11-25, 19:56:40,sucesso,Pasta 6981 - Quarta-feira criada
+ 2025-11-25, 20:03:51,sucesso,Pasta 6982 - Quinta-feira criada
+ 2025-11-25, 20:11:01,sucesso,Pasta 6983 - Sexta-feira criada
+ 2025-11-25, 20:18:11,sucesso,Pasta 6984-5 - Fim de semana criada
+ 2025-11-25, 20:25:22,sucesso,Pasta 6986 - Segunda-feira criada
+ 2025-11-25, 20:32:32,sucesso,Pasta 6987 - Terça-feira criada
+ 2025-11-25, 20:39:43,sucesso,Pasta 6988 - Quarta-feira criada
+ 2025-11-25, 20:46:53,sucesso,Pasta 6989 - Quinta-feira criada
+ 2025-11-25, 20:54:03,sucesso,Pasta 6990 - Sexta-feira criada
+ 2025-11-25, 21:01:14,sucesso,Pasta 6991-2 - Fim de semana criada
+ 2025-11-25, 21:08:24,sucesso,Pasta 6993 - Segunda-feira criada
+ 2025-11-25, 21:15:35,sucesso,Pasta 6994 - Terça-feira criada
+ 2025-11-25, 21:22:45,sucesso,Pasta 6995 - Quarta-feira criada
+ 2025-11-25, 21:29:55,sucesso,Pasta 6996 - Quinta-feira criada
+ 2025-11-25, 21:37:06,sucesso,Pasta 6997 - Sexta-feira criada
+ 2025-11-25, 21:44:16,sucesso,Pasta 6998-9 - Fim de semana criada
+ 2025-11-25, 21:51:27,sucesso,Pasta 7000 - Segunda-feira criada
+ 2025-11-25, 21:58:37,sucesso,Pasta 7001 - Terça-feira criada
+ 2025-11-25, 22:05:47,sucesso,Pasta 7002 - Quarta-feira criada
+ 2025-11-25, 22:12:58,sucesso,Pasta 7003 - Quinta-feira criada
+ 2025-11-25, 22:20:08,sucesso,Pasta 7004 - Sexta-feira criada
+ 2025-11-25, 22:27:19,sucesso,Pasta 7005-6 - Fim de semana criada
+ 2025-11-25, 22:34:29,sucesso,Pasta 7007 - Segunda-feira criada
+ 2025-11-25, 22:41:39,sucesso,Pasta 7008 - Terça-feira criada
+ 2025-11-25, 22:48:50,sucesso,Pasta 7009 - Quarta-feira criada
+ 2025-11-25, 22:56:00,sucesso,Pasta 7010 - Quinta-feira criada
+ 2025-11-25, 23:03:11,sucesso,Pasta 7011 - Sexta-feira criada
+ 2025-11-25, 23:10:21,sucesso,Pasta 7012-3 - Fim de semana criada
+ 2025-11-25, 23:17:32,sucesso,Pasta 7014 - Segunda-feira criada
+ 2025-11-25, 23:24:42,sucesso,Pasta 7015 - Terça-feira criada
+ 2025-11-25, 23:31:52,sucesso,Pasta 7016 - Quarta-feira criada
+ 2025-11-25, 23:39:03,sucesso,Pasta 7017 - Quinta-feira criada
+ 2025-11-25, 23:46:13,sucesso,Pasta 7018 - Sexta-feira criada
+ 2025-11-25, 23:53:24,sucesso,Pasta 7019-20 - Fim de semana criada
+ 2025-11-26, 00:00:34,sucesso,Pasta 7021 - Segunda-feira criada
+ 2025-11-26, 00:07:44,sucesso,Pasta 7022 - Terça-feira criada
+ 2025-11-26, 00:14:55,sucesso,Pasta 7023 - Quarta-feira criada
+ 2025-11-26, 00:22:06,sucesso,Pasta 7024 - Quinta-feira criada
+ 2025-11-26, 00:29:16,sucesso,Pasta 7025 - Sexta-feira criada
+ 2025-11-26, 00:36:27,sucesso,Pasta 7026-7 - Fim de semana criada
+ 2025-11-26, 00:43:37,sucesso,Pasta 7028 - Segunda-feira criada
+ 2025-11-26, 00:50:48,sucesso,Pasta 7029 - Terça-feira criada
+ 2025-11-26, 00:57:59,sucesso,Pasta 7030 - Quarta-feira criada
+ 2025-11-26, 01:05:09,sucesso,Pasta 7031 - Quinta-feira criada
+ 2025-11-26, 01:12:20,sucesso,Pasta 7032 - Sexta-feira criada
+ 2025-11-26, 01:19:30,sucesso,Pasta 7033-4 - Fim de semana criada

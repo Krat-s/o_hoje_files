@@ -6,8 +6,8 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from App.modulos_quark.edicao_formatador import gerar_edicoes, formatar_edicao, formatar_numero
-from App.modulos_quark.data_formatador import formatar_data
+from App.Modulos_quark.edicao_formatador import gerar_edicoes, formatar_edicao, formatar_numero
+from App.Modulos_quark.data_formatador import formatar_data
 from Global.settings_desync import quantidade_repeticoes, edicao_inicial
 
 # Base fixa para cálculo de data
