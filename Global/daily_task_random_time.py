@@ -18,22 +18,6 @@ def esperar(driver, by, value, timeout=10, clicavel=True):
     condicao = EC.element_to_be_clickable if clicavel else EC.presence_of_element_located
     return WebDriverWait(driver, timeout).until(condicao((by, value)))
 
-def registrar_log(status, mensagem=""):
-    """Registra os acessos e resultados em logs_acessos.csv"""
-    caminho_arquivo = os.path.join(os.path.dirname(__file__), "logs_acessos.csv")
-    cabecalho = ["data", "hora", "status", "mensagem"]
-
-    data_agora = datetime.now()
-    linha = [data_agora.strftime("%Y-%m-%d"), data_agora.strftime("%H:%M:%S"), status, mensagem]
-
-    arquivo_existe = os.path.exists(caminho_arquivo)
-
-    with open(caminho_arquivo, mode="a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        if not arquivo_existe:
-            writer.writerow(cabecalho)
-        writer.writerow(linha)
-
 def gerar_horarios(inicio_h, fim_h, n_acessos):
     """Gera horários aleatórios dentro de um intervalo de horas."""
     hoje = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
