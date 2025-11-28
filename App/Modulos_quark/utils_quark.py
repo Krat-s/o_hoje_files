@@ -63,6 +63,15 @@ def cg_close():
     pg.hotkey('ctrl', 'f4')
     time.sleep(cfg.TIMETOCLOSE)
 
+def close_page():
+    pg.press('esc', presses=3)
+    time.sleep(0.2)
+    pg.hotkey('ctrl', 's')
+    time.sleep(2)
+    pg.press('esc', presses=3)
+    pg.hotkey('ctrl', 'f4')
+    time.sleep(cfg.TIMETOCLOSE)
+
 def move_page(left, right):
     pg.hotkey('ctrl', 'shift', 'alt', 'm')
     time.sleep(0.2)
@@ -95,6 +104,7 @@ def process_page(page_number, is_even):
     else: 
         move_page(290, 20)
     pg.hotkey('ctrl', 's')
-    time.sleep(1)
-
+    time.sleep(1.5)
+    pg.hotkey('ctrl', 'f4')
+    time.sleep(0.5)
 # billhead

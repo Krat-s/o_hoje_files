@@ -1,7 +1,7 @@
 import ctypes
 from pywinauto import Desktop
 
-def verificar_windows() -> str:
+def check_windows() -> str:
     """
     Detecta corretamente se é Windows 10 ou 11 usando a API nativa.
     """
@@ -36,24 +36,3 @@ def verificar_windows() -> str:
         return "Windows 10"
     else:
         return f"Windows {major}"
-
-def explorer_esta_aberto() -> bool:
-    """
-    Verifica se há alguma janela do Explorador de Arquivos aberta.
-    """
-    janelas = Desktop(backend="uia").windows()
-    for janela in janelas:
-        if janela.class_name() == "CabinetWClass":
-            return True
-    return False
-
-def janela_esta_aberta(nome_pasta: str) -> bool:
-    """
-    Verifica se uma janela do Explorador de Arquivos com nome específico está aberta.
-    """
-    janelas = Desktop(backend="uia").windows()
-    for janela in janelas:
-        if janela.class_name() == "CabinetWClass":
-            if nome_pasta.lower() in janela.window_text().lower():
-                return True
-    return False
