@@ -1,1 +1,1 @@
-#fazer automação parecido com o cabeçalhjo mas para uma edição específica
+#fazer automação parecido com o cabeçalho mas para uma edição específica

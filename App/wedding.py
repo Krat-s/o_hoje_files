@@ -1,6 +1,5 @@
 import pyautogui as pg
 import time
-import keyboard as kb
 import os
 import sys
 import tkinter as tk
@@ -9,86 +8,25 @@ from tkinter import messagebox
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as sy_de
+import App.modulos_quark.utils_quark as utlq
 
-# ------------------------------------------------------------------------- Constantes
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
-
-# ------------------------------------------------------------------------- Funções   
-def open_paste_page_done():
-    pg.press('esc')
-    utl.take_tool("v")
-    pg.hotkey('ctrl', '0')
-    pg.hotkey('ctrl', 'o')
-    time.sleep(0.2)
-    pg.hotkey('ctrl', 'a')
-    time.sleep(0.2)
-    kb.write(cfg.CAMINHO_EDD + "\\" + sy_de.EDD + "\\" + 'Páginas prontas')
-    time.sleep(0.2)
-    pg.press('enter')
-    time.sleep(0.2)
-    
-def cg_close():
-    utl.take_tool("v")
-    pg.hotkey('ctrl', 'a')
-    pg.hotkey('ctrl', 'g')
-    time.sleep(0.2)
-    pg.hotkey('ctrl', 's')
-    time.sleep(0.2)
-    pg.press('enter')
-    time.sleep(0.2)
-    pg.hotkey('ctrl', 'c')
-    pg.hotkey('ctrl', 'f4')
-    time.sleep(cfg.TIMETOCLOSE)
-
-def move_page(left, right):
-    pg.hotkey('ctrl', 'shift', 'alt', 'm')
-    time.sleep(0.2)
-    kb.write(str(left))
-    time.sleep(0.2)
-    pg.press('tab')
-    time.sleep(0.2)
-    kb.write(str(right))
-    pg.press('enter')
-    time.sleep(0.2)
-    pg.press('down')
-    time.sleep(0.2)
-    pg.press('up')
-    
-def process_page(page_number, is_even):
-    time.sleep(0.3)
-    open_paste_page_done()
-    pg.write(str(page_number))
-    utl.chose_suggestion()
-    # utl.error_check()
-    time.sleep(cfg.TIMETOOPEN)
-    cg_close()
-    time.sleep(cfg.TIMETOCLOSE + 4)
-    pg.hotkey('ctrl', '0')
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.hotkey('ctrl', 'v')
-    time.sleep(5)
-    if is_even: 
-        move_page(10, 20) 
-    else: 
-        move_page(290, 20)
-    pg.hotkey('ctrl', 's')
-    time.sleep(1)
 
 def wedding(nome_arquivo, paginas):
     utl.open_web()
     utl.take_file(nome_arquivo)
     utl.close_and_open_quark()
+    10  20
     
     # Na máquina Marketing não há permissão para rodar o código
     # utl.error_check()
 
     for page_number in paginas:
         is_even = page_number % 2 == 0
-        process_page(page_number, is_even)
+        utlq.process_page(page_number, is_even)
     time.sleep(0.5)
     pg.hotkey('ctrl', 'f4')
     time.sleep(0.5)
@@ -166,7 +104,7 @@ def auto_marriage():
     btn_x = tk.Button(janela, text="Essencia + Classificados", command=lambda: fazer_escolha("Essencia + Classificados"), **estilo_escolhas)
     btn_x.pack(pady=5)
 
-    btn_t = tk.Button(janela, text="Básico completo", command=lambda: fazer_escolha("Básico completo"), **estilo_escolhas)
+    btn_t = tk.Button(janela, text="Básico completo", command=lambda: fazer_escolha("basico completo"), **estilo_escolhas)
     btn_t.pack(pady=5)
 
     btn_v = tk.Button(janela, text="Caderno de cidades", command=lambda: fazer_escolha("cidades"), **estilo_escolhas)

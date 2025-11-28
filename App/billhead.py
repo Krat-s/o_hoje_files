@@ -23,22 +23,6 @@ class EdicaoInfo:
     data_formatada: str
     dia_semana: str
 
-# ---------------------------- EXPLORADOR DE ARQUIVOS ----------------------------
-def copiar_modelo_para_pasta(caminho, pasta_nome, de=None):
-    if de:
-        utl.go_to(de)
-    time.sleep(2)
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.hotkey('ctrl', 'a')
-    time.sleep(1)
-    pg.hotkey('ctrl', 'c')
-    # utl.safe_copy()
-    # if not utl.safe_copy():
-    #     raise Exception("Falha ao copiar arquivos — p\\192.168.1.249\redacao\arte\00 Pagflipasta vazia ou nada selecionado.")
-    utl.go_to(f"{caminho}\\{pasta_nome}")
-    pg.hotkey('ctrl', 'v')
-    time.sleep(2)
-
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK) ----------------------------
 def preencher_data(info: EdicaoInfo):
     utl.take_tool("v")
@@ -131,8 +115,10 @@ def auto_folders(pasta_nome, modelo_path):
         utl.make_folder(pasta_nome, cfg.CAMINHO_WEB)
         utl.make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
         utl.make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-        copiar_modelo_para_pasta(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
-        copiar_modelo_para_pasta(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
+        copy_files
+    (cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
+        copy_files
+    (cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
         pg.hotkey('alt', 'up')
         utl.log("billhead-auto_folder", "sucesso", f"Pasta {pasta_nome} criada")
     except Exception as e:

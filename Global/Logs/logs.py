@@ -1,7 +1,7 @@
 
 import os
 import csv
-from datetime import datetime, timedelta
+from datetime import datetime
 
 def log(script, status, mensagem=""):
     """Registra os acessos e resultados em logs_acessos.csv"""

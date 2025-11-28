@@ -6,7 +6,6 @@ from pywinauto import Desktop
 from datetime import datetime, timedelta
 import os
 import sys
-import csv
 import pyperclip
 import time
 
@@ -95,79 +94,6 @@ def open_software(numero):
     pg.hotkey('win', str(numero))
     pg.press('enter')
     time.sleep(0.5)
-
-def take_file(arquivo):
-    kb.press_and_release('ctrl+f')
-    time.sleep(0.5)
-    kb.write(str(arquivo))
-    time.sleep(2)
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.press('down')
-    time.sleep(0.3)
-    pg.press('down')
-    time.sleep(0.3)
-    kb.press_and_release('enter')
-
-def go_to(específico=None):
-    pg.hotkey(*atalho_endereço())
-    time.sleep(0.4)
-    if específico:
-        kb.write(específico) 
-    pg.press('enter')
-    time.sleep(0.4)
-
-def make_folder(nome, em=None):
-    if em:
-        go_to(em)
-    time.sleep(0.4)
-    max_windows()
-    time.sleep(0.4)
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.hotkey('ctrl', 'shift', 'n')
-    time.sleep(0.4)
-    kb.write(nome)
-    pg.press('enter')
-    time.sleep(1.5)
-
-def open_folder(endereco):
-    os.startfile(endereco)
-    max_windows()
-    pg.click(cfg.center_x, cfg.center_y)
-
-def safe_copy():
-    # Antes de copiar, limpa a área de transferência
-    pyperclip.copy("")
-
-    pg.hotkey('ctrl', 'a')
-    time.sleep(0.1)
-    pg.hotkey('ctrl', 'c')
-    time.sleep(0.2)
-
-    conteudo = pyperclip.paste()
-
-    # Checar se o conteúdo provavelmente NÃO é lista de arquivos
-    if "\\" not in conteudo and "/" not in conteudo:
-        raise Exception("Nenhum arquivo selecionado — Ctrl+C copiou apenas o nome da pasta.")
-
-    return True
-
-
-# ---------------------------- Funções quark ----------------------------
-def take_tool(tool):
-    pg.click(cfg.center_x, 10)
-    kb.press(str(tool))
-
-def cancel_qk():
-    time.sleep(0.2)
-    pg.moveTo(cfg.button_cancel_qk, duration=0.5)
-    time.sleep(0.2)
-    pg.click()
-    time.sleep(0.2)
-
-def ok_qk():
-    time.sleep(0.2)
-    pg.press('esc')
-    time.sleep(0.2)
 
 def error_check():
     if tutl.status == "open":

@@ -19,9 +19,6 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-print("Wedding_exporting ✔️")
-print(".....")
-
 # ------------------------------------------------------------------------- Funções   
 def expdf():
     pg.hotkey('ctrl', 'shift', 's')
