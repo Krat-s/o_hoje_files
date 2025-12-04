@@ -11,6 +11,7 @@ sys.path.append(raiz_projeto)
 import Global.utils as utl
 import Global.data_edition_sync as sy_de
 import App.modulos_quark.utils_quark as utlq
+from Global.FileManager import take_file
 from Global.Logs.logs import log
 
 pg.PAUSE = 0.3 
@@ -19,7 +20,7 @@ pg.FAILSAFE = True
 def wedding(nome_arquivo, paginas):
     try:
         utl.open_web()
-        utl.take_file(nome_arquivo)
+        take_file(nome_arquivo)
         utl.close_and_open_quark()
         
         # Na máquina Marketing não há permissão para rodar o código
@@ -28,11 +29,11 @@ def wedding(nome_arquivo, paginas):
         for page_number in paginas:
             is_even = page_number % 2 == 0
             utlq.process_page(page_number, is_even)
+            log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
+        
     except Exception as e:
         erro_msg = f"Erro ao clicar no botão: {str(e)}"
         log("Wedding", "ERRO", erro_msg) 
-
-        
 
 def process_basic():
     wedding("17_20", [17, 20])
