@@ -5,3 +5,6 @@ data,hora,status,mensagem
  2025-12-03, 22:43:56,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
  2025-12-03, 22:44:02,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
  2025-12-03, 22:44:07,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
+ 2025-12-04, 23:02:15,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
+ 2025-12-04, 23:02:20,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
+ 2025-12-04, 23:02:25,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
