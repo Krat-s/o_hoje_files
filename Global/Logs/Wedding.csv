@@ -8,3 +8,13 @@ data,hora,status,mensagem
  2025-12-04, 23:02:15,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
  2025-12-04, 23:02:20,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
  2025-12-04, 23:02:25,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
+ 2025-12-07, 20:44:24,ERRO,"Erro ao clicar no botão: sequence item 1: expected str instance, int found"
+ 2025-12-07, 20:46:07,ERRO,"Erro ao casar as páginas 17_20: sequence item 1: expected str instance, int found"
+ 2025-12-07, 20:52:30,ERRO,Erro ao casar as páginas 17_20: module 'Global.utils' has no attribute 'take_tool'
+ 2025-12-07, 20:52:42,ERRO,Erro ao casar as páginas 13_16: module 'Global.utils' has no attribute 'take_tool'
+ 2025-12-07, 20:54:22,ERRO,Erro ao casar as páginas 17_20: module 'Global.utils' has no attribute 'take_tool'
+ 2025-12-07, 20:54:26,ERRO,"Erro ao casar as páginas 13_16: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2025-12-07, 20:54:29,ERRO,"Erro ao casar as páginas 14_15: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2025-12-07, 20:58:45,ERRO,Erro ao casar as páginas 17_20: module 'Global.utils' has no attribute 'take_tool'
+ 2025-12-07, 20:58:58,ERRO,Erro ao casar as páginas 13_16: module 'Global.utils' has no attribute 'take_tool'
+ 2025-12-07, 20:59:02,ERRO,"Erro ao casar as páginas 14_15: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."

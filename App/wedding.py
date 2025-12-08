@@ -21,7 +21,7 @@ def wedding(nome_arquivo, paginas):
     # try:
         utl.open_web()
         take_file(nome_arquivo)
-        time.sleep(1)
+        time.sleep(2)
         utl.close_and_open_quark()
         
         # Na máquina Marketing não há permissão para rodar o código
@@ -30,10 +30,10 @@ def wedding(nome_arquivo, paginas):
         for page_number in paginas:
             is_even = page_number % 2 == 0
             utlq.process_page(page_number, is_even)
-            # log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
+    #         log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
         
     # except Exception as e:
-    #     erro_msg = f"Erro ao clicar no botão: {str(e)}"
+    #     erro_msg = f"Erro ao casar as páginas {str(nome_arquivo)}: {str(e)}"
     #     log("Wedding", "ERRO", erro_msg) 
 
 def process_basic():

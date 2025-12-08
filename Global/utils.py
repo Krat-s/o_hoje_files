@@ -59,10 +59,8 @@ def chose_suggestion(QTD=1, TEMPO=2):
 # ------expecífica o bastante para ser separada mas não atiquetável a ponto de entrar em módulo
 def close_and_open_quark():
     pg.hotkey('alt', 'f4')
-    time.sleep(0.5)
-    pg.hotkey('win', 's')
-    time.sleep(0.5)
-    pg.hotkey('win', cfg.quark)
+    time.sleep(0.4)
+    open_software(cfg.quark)
     time.sleep(4)
 
 def adjust_date(data):
@@ -70,13 +68,18 @@ def adjust_date(data):
 
 
 
+if __name__ == "__main__":
+    print("oi")
+    pg.hotkey('win', 's')
+    pg.hotkey('win', '3')
+    time.sleep(2)
 
-print("oi")
-close_and_open_quark()
-# def error_check():
-#     if tutl.status == "open":
-#         print("Tratamento concluído para arquivo aberto.")
-#     if tutl.status == "not_found":
-#         print("Tratamento concluído para arquivo não encontrado.")
-#     else:
-#         print("Tudo certo, seguindo...")
+
+    close_and_open_quark()
+    # def error_check():
+    #     if tutl.status == "open":
+    #         print("Tratamento concluído para arquivo aberto.")
+    #     if tutl.status == "not_found":
+    #         print("Tratamento concluído para arquivo não encontrado.")
+    #     else:
+    #         print("Tudo certo, seguindo...")
