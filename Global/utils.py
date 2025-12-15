@@ -66,14 +66,11 @@ def close_and_open_quark():
 def adjust_date(data):
     return data + timedelta(days=1) if data.weekday() == 6 else data
 
-
-
 if __name__ == "__main__":
     print("oi")
     pg.hotkey('win', 's')
     pg.hotkey('win', '3')
     time.sleep(2)
-
 
     close_and_open_quark()
     # def error_check():

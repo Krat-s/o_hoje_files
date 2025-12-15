@@ -18,8 +18,7 @@ pg.FAILSAFE = True
 # ------------------------------------------------------------------------- FUNÇÕES DE AUTOMAÇÃO 
 def take_emails():
     """Captura os emails de um arquivo no VSCode"""
-    pg.hotkey('win', 's')
-    pg.hotkey('win', '3')  # Verificar se é o app certo (VSCode)
+    ut.open_software(cfg.vscode)  # Verificar se é o app certo (VSCode)
     pg.click(cfg.center_x, cfg.center_y)
     time.sleep(0.3)
     pg.hotkey('ctrl', 'o')
@@ -80,6 +79,7 @@ def auto_rascunhos():
         enviar_para_grafica(ed, "básico")
         enviar_para_grafica(ed, "resto")
         enviar_emails_para_leitores(ed)
+        print(ed)
 
 if __name__ == "__main__":
     print("teste")
