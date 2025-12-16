@@ -23,7 +23,8 @@ def wedding(nome_arquivo, paginas):
         take_file(nome_arquivo)
         time.sleep(2)
         utl.close_and_open_quark()
-        
+        time.sleep(2)
+
         # Na máquina Marketing não há permissão para rodar o código
         # utl.error_check()
 
@@ -37,9 +38,9 @@ def wedding(nome_arquivo, paginas):
     #     log("Wedding", "ERRO", erro_msg) 
 
 def process_basic():
-    wedding("17_20", [17, 20])
     wedding("13_16", [13, 16])
     wedding("14_15", [14, 15])
+    wedding("17_20", [17, 20])
 
 def process_town():
     wedding("10_11", [10, 11])

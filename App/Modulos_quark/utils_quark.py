@@ -39,7 +39,7 @@ def ok_qk():
 # Weeding
 def open_pages_done_folder():
     pg.press('esc')
-    utl.take_tool("v")
+    take_tool("v")
     pg.hotkey('ctrl', '0')
     pg.hotkey('ctrl', 'o')
     time.sleep(0.2)
@@ -51,7 +51,7 @@ def open_pages_done_folder():
     time.sleep(0.2)
     
 def cg_close():
-    utl.take_tool("v")
+    take_tool("v")
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'g')
     time.sleep(0.2)

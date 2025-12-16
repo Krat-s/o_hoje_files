@@ -58,9 +58,10 @@ def chose_suggestion(QTD=1, TEMPO=2):
 
 # ------expecífica o bastante para ser separada mas não atiquetável a ponto de entrar em módulo
 def close_and_open_quark():
-    pg.hotkey('alt', 'f4')
     time.sleep(0.4)
-    open_software(cfg.quark)
+    pg.hotkey('alt', 'f4')
+    time.sleep(0.5)
+    open_software(str(cfg.quark))
     time.sleep(4)
 
 def adjust_date(data):
@@ -69,7 +70,7 @@ def adjust_date(data):
 if __name__ == "__main__":
     print("oi")
     pg.hotkey('win', 's')
-    pg.hotkey('win', '3')
+    pg.hotkey('win', '4')
     time.sleep(2)
 
     close_and_open_quark()
