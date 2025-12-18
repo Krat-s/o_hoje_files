@@ -31,6 +31,8 @@ def wedding(nome_arquivo, paginas):
         for page_number in paginas:
             is_even = page_number % 2 == 0
             utlq.process_page(page_number, is_even)
+            time.sleep(0.5)
+        utlq.save_and_close()
     #         log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
         
     # except Exception as e:

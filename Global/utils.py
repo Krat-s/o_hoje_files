@@ -39,7 +39,9 @@ def max_windows():
 
 def open_software(numero):
     pg.hotkey('win', 's')
+    time.sleep(0.5)
     pg.hotkey('win', str(numero))
+    time.sleep(0.5)
     pg.press('enter')
     time.sleep(0.5)
 

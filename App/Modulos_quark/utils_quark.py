@@ -35,7 +35,6 @@ def ok_qk():
     pg.press('esc')
     time.sleep(0.2)
 
-
 # Weeding
 def open_pages_done_folder():
     pg.press('esc')
@@ -89,7 +88,9 @@ def move_page(left, right):
 def process_page(page_number, is_even):
     time.sleep(0.3)
     open_pages_done_folder()
+    time.sleep(0.2)
     pg.write(str(page_number))
+    time.sleep(0.2)
     utl.chose_suggestion()
     # utl.error_check()
     time.sleep(cfg.TIMETOOPEN)
@@ -103,8 +104,11 @@ def process_page(page_number, is_even):
         move_page(10, 20) 
     else: 
         move_page(290, 20)
+
+def save_and_close():
     pg.hotkey('ctrl', 's')
     time.sleep(1.5)
     pg.hotkey('ctrl', 'f4')
     time.sleep(0.5)
+
 # billhead
