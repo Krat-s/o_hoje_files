@@ -21,9 +21,10 @@ def wedding(nome_arquivo, paginas):
     # try:
         utl.open_web()
         take_file(nome_arquivo)
-        time.sleep(2)
+        time.sleep(5)
+        utl.open_software(2)
         utl.close_and_open_quark()
-        time.sleep(2)
+        time.sleep(1)
 
         # Na máquina Marketing não há permissão para rodar o código
         # utl.error_check()

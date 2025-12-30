@@ -38,12 +38,12 @@ def max_windows():
     kb.press_and_release('x')
 
 def open_software(numero):
-    pg.hotkey('win', 's')
     time.sleep(0.5)
-    pg.hotkey('win', str(numero))
+    kb.press_and_release('win+s')
     time.sleep(0.5)
-    pg.press('enter')
-    time.sleep(0.5)
+    kb.press_and_release(f"win+{numero}")
+
+    pg.hotkey('win', numero)
 
 # ---------------------------- functions explorer (server journal) ----------------------------
 def open_web():
@@ -60,10 +60,9 @@ def chose_suggestion(QTD=1, TEMPO=2):
 
 # ------expecífica o bastante para ser separada mas não atiquetável a ponto de entrar em módulo
 def close_and_open_quark():
-    time.sleep(0.4)
     pg.hotkey('alt', 'f4')
     time.sleep(0.5)
-    open_software(str(cfg.quark))
+    open_software(str(1))
     time.sleep(4)
 
 def adjust_date(data):
@@ -73,7 +72,6 @@ if __name__ == "__main__":
     print("oi")
     pg.hotkey('win', 's')
     pg.hotkey('win', '4')
-    time.sleep(2)
 
     close_and_open_quark()
     # def error_check():
