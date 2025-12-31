@@ -4,6 +4,7 @@ import os
 import sys
 import tkinter as tk
 from tkinter import messagebox
+import keyboard as kb
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
@@ -18,27 +19,29 @@ pg.PAUSE = 0.3
 pg.FAILSAFE = True
 
 def wedding(nome_arquivo, paginas):
-    # try:
+    try:
         utl.open_web()
         take_file(nome_arquivo)
-        time.sleep(5)
-        utl.open_software(2)
-        utl.close_and_open_quark()
+        time.sleep(0.5)
+        kb.press_and_release('alt+f4')
+        time.sleep(2)
+        kb.press_and_release('win+s')
         time.sleep(1)
+        kb.press_and_release(f"win+{(1)}")
+        time.sleep(4)
 
-        # Na máquina Marketing não há permissão para rodar o código
-        # utl.error_check()
+        # utl.error_check() Na máquina Marketing não há permissão para rodar o código
 
         for page_number in paginas:
             is_even = page_number % 2 == 0
             utlq.process_page(page_number, is_even)
             time.sleep(0.5)
         utlq.save_and_close()
-    #         log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
+        log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
         
-    # except Exception as e:
-    #     erro_msg = f"Erro ao casar as páginas {str(nome_arquivo)}: {str(e)}"
-    #     log("Wedding", "ERRO", erro_msg) 
+    except Exception as e:
+        erro_msg = f"Erro ao casar as páginas {str(nome_arquivo)}: {str(e)}"
+        log("Wedding", "ERRO", erro_msg) 
 
 def process_basic():
     wedding("13_16", [13, 16])
@@ -113,11 +116,11 @@ def auto_marriage():
     btn_x = tk.Button(janela, text="Essencia + Classificados", command=lambda: fazer_escolha("Essencia + Classificados"), **estilo_escolhas)
     btn_x.pack(pady=5)
 
-    btn_t = tk.Button(janela, text="Básico completo", command=lambda: fazer_escolha("basico completo"), **estilo_escolhas)
-    btn_t.pack(pady=5)
-
     btn_v = tk.Button(janela, text="Caderno de cidades", command=lambda: fazer_escolha("cidades"), **estilo_escolhas)
     btn_v.pack(pady=5)
+
+    btn_t = tk.Button(janela, text="Básico completo", command=lambda: fazer_escolha("basico completo"), **estilo_escolhas)
+    btn_t.pack(pady=5)
 
     btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"), **estilo_escolhas)
     btn_y.pack(pady=5)

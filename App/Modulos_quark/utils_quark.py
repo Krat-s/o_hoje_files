@@ -6,7 +6,7 @@ import sys
 import tkinter as tk
 from tkinter import messagebox
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(raiz_projeto)
 
 import Global.settings as cfg
@@ -18,7 +18,6 @@ pg.FAILSAFE = True
 
 
 # __UTILS
-
 def take_tool(tool):
     pg.click(cfg.center_x, 10)
     kb.press(str(tool))
@@ -112,3 +111,12 @@ def save_and_close():
     time.sleep(0.5)
 
 # billhead
+
+if __name__ == "__main__":
+    print("oi")
+    pg.hotkey('win', 'e')
+
+    # pg.hotkey('win', 's')
+    # pg.hotkey('win', '4')
+    time.sleep(3)
+    # close_and_open_quark()
