@@ -35,10 +35,6 @@ def formatar_data(data, tipo="completo"):
     elif tipo == "mes":
         return marco_babugado.capitalize() if data.month == 3 else data.strftime("%B").capitalize()
 
-    # Virada de ano
-    if ano_de_data != virada:
-        return f"Fim de semana, {dia_formatado} de dezembro de {ano_de_data} e 1º de janeiro {virada}"
-
     # Mês de março com formatação especial
     if data.month == 3:
         if data.weekday() == 1:
@@ -52,6 +48,11 @@ def formatar_data(data, tipo="completo"):
 
     # Fim de semana genérico
     if eh_fim_de_semana(data):
+         # Virada de ano
+        if ano_de_data != virada and data.weekday() == 6:
+            return f"Domingão"
+        if data.weekday() == 5 and ano_de_data != virada:
+            return f"Fim de semana, {dia_formatado} de dezembro de {ano_de_data} e 1º de janeiro {virada}"
         if mes_de_data != proximo_mes:
             return f"fim de semana, {dia_formatado} de {mes_de_data} e {proximo_dia_formatado} de {proximo_mes} de {ano_de_data}"
         return f"fim de semana, {dia_formatado} e {proximo_dia_formatado} de {mes_de_data} de {ano_de_data}"
@@ -65,7 +66,7 @@ def formatar_data(data, tipo="completo"):
 
 # --------------------testes---------------------
 def main():
-    hoje = datetime(2025, 9, 26)
+    hoje = datetime.now()
     amanha = hoje + timedelta(days=1)
     ontem = hoje - timedelta(days=1)
 
@@ -74,13 +75,43 @@ def main():
         ("Hoje", formatar_data(hoje)),
         ("Amanhã", formatar_data(amanha)),
         ("Virada de mar/abr", formatar_data(datetime(2029, 3, 31))),
-        ("Virada de ano", formatar_data(datetime(2033, 12, 31))),
+        ("Virada de ano 29", formatar_data(datetime(2029, 12, 31))),
+        ("Virada de ano 29", formatar_data(datetime(2030, 1, 1))),
+
+        ("Virada de ano 30", formatar_data(datetime(2030, 12, 31))),
+        ("Virada de ano 30", formatar_data(datetime(2031, 1, 1))),
+
+        ("Virada de ano 31", formatar_data(datetime(2031, 12, 31))),
+        ("Virada de ano 31", formatar_data(datetime(2032, 1, 1))),
+
+        ("Virada de ano 32", formatar_data(datetime(2032, 12, 31))),
+        ("Virada de ano 32", formatar_data(datetime(2033, 1, 1))),
+
+        ("Virada de ano 33 - FDS", formatar_data(datetime(2033, 12, 31))),
+        ("Virada de ano 33", formatar_data(datetime(2034, 1, 1))),
+
+
+        ("Virada de ano 34", formatar_data(datetime(2034, 12, 31))),
+        ("Virada de ano 34", formatar_data(datetime(2035, 1, 1))),
+
+        ("Virada de ano 35", formatar_data(datetime(2035, 12, 31))),
+        ("Virada de ano 36", formatar_data(datetime(2036, 12, 31))),
+        ("Virada de ano 37", formatar_data(datetime(2037, 12, 31))),
+        ("Virada de ano 38", formatar_data(datetime(2038, 12, 31))),
+        ("Virada de ano 39 - FDS", formatar_data(datetime(2039, 12, 31))),
+        ("Virada de ano 40", formatar_data(datetime(2040, 12, 31))),
+
+
+
         ("Virada de mês random", formatar_data(datetime(2025, 5, 31))),
         ("Dia específico", formatar_data(datetime(2028, 5, 25))),
         ("Mês de março", formatar_data(datetime(2025, 3, 15), tipo="mes")),
         ("Data completa", formatar_data(datetime(2025, 6, 10), tipo="completo")),
         ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30))),
-        ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 1), tipo="dia_semana"))
+        ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30), tipo="dia_semana")),
+        ("Debug virada", formatar_data(datetime(2025, 12, 31)))
+
+
     ]
 
     for nome, resultado in testes:
