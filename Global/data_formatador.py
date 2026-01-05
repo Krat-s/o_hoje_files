@@ -10,7 +10,7 @@ terca_babugado = "terça-feira, "
 
 # Função auxiliar para verificar fim de semana
 def eh_fim_de_semana(data):
-    return data.weekday() in [5, 6]  # sábado ou domingo
+    return data.weekday() in [5]  # saturday
 
 # Função principal
 def formatar_data(data, tipo="completo"):
@@ -74,9 +74,9 @@ def main():
         ("Ontem", formatar_data(ontem)),
         ("Hoje", formatar_data(hoje)),
         ("Amanhã", formatar_data(amanha)),
-        ("Virada de mar/abr", formatar_data(datetime(2029, 3, 31))),
-        ("Virada de ano 29", formatar_data(datetime(2029, 12, 31))),
-        ("Virada de ano 29", formatar_data(datetime(2030, 1, 1))),
+        # ("Virada de mar/abr", formatar_data(datetime(2029, 3, 31))),
+        # ("Virada de ano 29", formatar_data(datetime(2029, 12, 31))),
+        # ("Virada de ano 29", formatar_data(datetime(2030, 1, 1))),
 
         ("Virada de ano 30", formatar_data(datetime(2030, 12, 31))),
         ("Virada de ano 30", formatar_data(datetime(2031, 1, 1))),
@@ -103,12 +103,12 @@ def main():
 
 
 
-        ("Virada de mês random", formatar_data(datetime(2025, 5, 31))),
-        ("Dia específico", formatar_data(datetime(2028, 5, 25))),
-        ("Mês de março", formatar_data(datetime(2025, 3, 15), tipo="mes")),
-        ("Data completa", formatar_data(datetime(2025, 6, 10), tipo="completo")),
-        ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30))),
-        ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30), tipo="dia_semana")),
+        # ("Virada de mês random", formatar_data(datetime(2025, 5, 31))),
+        # ("Dia específico", formatar_data(datetime(2028, 5, 25))),
+        # ("Mês de março", formatar_data(datetime(2025, 3, 15), tipo="mes")),
+        # ("Data completa", formatar_data(datetime(2025, 6, 10), tipo="completo")),
+        # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30))),
+        # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30), tipo="dia_semana")),
         ("Debug virada", formatar_data(datetime(2025, 12, 31)))
 
 

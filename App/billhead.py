@@ -1,9 +1,8 @@
 import os
 import sys
-import time
 import pyautogui as pg
-import keyboard as kb
 from dataclasses import dataclass
+import time
 
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
@@ -51,11 +50,14 @@ def open_main_folder():
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
-        make_folder(pasta_nome)
-        make_folder(pasta_nome, cfg.CAMINHO_WEB)
-        make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
+        # make_folder(pasta_nome)
+        # make_folder(pasta_nome, cfg.CAMINHO_WEB)
+        # make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
         make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-        copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
+        time.sleep(1)
+
+        # copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
+        time.sleep(1)
         copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
         pg.hotkey('alt', 'up')
         log("billhead-auto_folder", "sucesso", f"Pasta {pasta_nome} criada")
@@ -94,6 +96,7 @@ def auto_billhead():
             aply_17(info)
             auto_pages(info)
             aply_1(info)
+            # print(info.data_formatada)
 
             log("billhead", "sucesso", 
                     f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
@@ -106,15 +109,19 @@ def auto_billhead():
             )
 
 
-def teste(info: EdicaoInfo):
-    for i in range(20, 1, -1):
-        if i in [17, 18, 19]:
-            continue
-        print(info)
+# def teste(info: EdicaoInfo):
+#     for i in range(20, 1, -1):
+#         if i in [17, 18, 19]:
+#             continue
+#         print(info)
 
 
 if __name__ == "__main__":
-    time.sleep(2)
-    print('hello')
+    # time.sleep(2)
+    # print('hello')
     # auto_billhead()
-    print(EdicaoInfo)
+    auto_billhead()
+
+
+
+##FIX COPY FILES

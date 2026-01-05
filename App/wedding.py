@@ -30,7 +30,7 @@ def wedding(nome_arquivo, paginas):
         kb.press_and_release(f"win+{(1)}")
         time.sleep(4)
 
-        # utl.error_check() Na máquina Marketing não há permissão para rodar o código
+        # utl.error_check() The Marketing machine does not allow the code to run.
 
         for page_number in paginas:
             is_even = page_number % 2 == 0

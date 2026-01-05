@@ -16,7 +16,6 @@ import Global.data_edition_sync as sy_de
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
-
 # __UTILS
 def take_tool(tool):
     pg.click(cfg.center_x, 10)
@@ -69,6 +68,12 @@ def close_page():
     pg.press('esc', presses=3)
     pg.hotkey('ctrl', 'f4')
     time.sleep(cfg.TIMETOCLOSE)
+    
+def save_and_close():
+    pg.hotkey('ctrl', 's')
+    time.sleep(1.5)
+    pg.hotkey('ctrl', 'f4')
+    time.sleep(0.5)
 
 def move_page(left, right):
     pg.hotkey('ctrl', 'shift', 'alt', 'm')
@@ -91,7 +96,7 @@ def process_page(page_number, is_even):
     pg.write(str(page_number))
     time.sleep(0.2)
     utl.chose_suggestion()
-    # utl.error_check()
+    # utl.error_check() make a try exept here, make sure tha way be function normaly in another machine
     time.sleep(cfg.TIMETOOPEN)
     cg_close()
     time.sleep(cfg.TIMETOCLOSE + 4)
@@ -104,17 +109,11 @@ def process_page(page_number, is_even):
     else: 
         move_page(290, 20)
 
-def save_and_close():
-    pg.hotkey('ctrl', 's')
-    time.sleep(1.5)
-    pg.hotkey('ctrl', 'f4')
-    time.sleep(0.5)
-
 # billhead
 
 if __name__ == "__main__":
     print("oi")
-    pg.hotkey('win', 'e')
+    # pg.hotkey('win', 'e')
 
     # pg.hotkey('win', 's')
     # pg.hotkey('win', '4')
