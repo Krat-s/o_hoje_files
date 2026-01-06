@@ -208,3 +208,34 @@ data,hora,status,mensagem
  2026-01-05, 17:56:14,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
  2026-01-05, 17:59:34,ERRO,Erro ao criar pasta: module 'Global.utils' has no attribute 'go_to'
  2026-01-05, 17:59:43,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:00:33,ERRO,Erro ao criar pasta: module 'Global.utils' has no attribute 'go_to'
+ 2026-01-06, 16:00:41,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:00:42,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:00:44,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:00:45,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:03:27,sucesso,Pasta 8001 - Segunda-feira criada
+ 2026-01-06, 16:04:07,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:04:09,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:04:10,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:04:15,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:04:17,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:09:03,sucesso,Pasta 8001 - Segunda-feira criada
+ 2026-01-06, 16:16:18,sucesso,Pasta 8002 - Terça-feira criada
+ 2026-01-06, 16:23:58,sucesso,Pasta 8008 - Segunda-feira criada
+ 2026-01-06, 16:24:40,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:24:43,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:24:46,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:24:49,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:24:52,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:34:56,sucesso,Pasta 8008 - Segunda-feira criada
+ 2026-01-06, 16:34:59,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:52:10,sucesso,Pasta 8015 - Segunda-feira criada
+ 2026-01-06, 16:52:24,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:52:37,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:52:40,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:53:45,sucesso,Pasta 8015 - Segunda-feira criada
+ 2026-01-06, 16:55:48,sucesso,Pasta 8016 - Terça-feira criada
+ 2026-01-06, 16:57:50,sucesso,Pasta 8017 - Quarta-feira criada
+ 2026-01-06, 16:58:02,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:58:05,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-01-06, 16:58:08,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."

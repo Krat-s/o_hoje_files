@@ -12,6 +12,10 @@ sys.path.append(modulo_path)
 import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as desync
+from Global.Logs.logs import log
+
+pg.PAUSE = 0.5
+pg.FAILSAFE = True
 
 def take_file(arquivo):
     kb.press_and_release('ctrl+f')
@@ -27,7 +31,7 @@ def take_file(arquivo):
 
 def copy_files(caminho, pasta_nome, de=None):
     if de:
-        utl.go_to(de)
+        go_to(de)
     time.sleep(2)
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
@@ -36,17 +40,34 @@ def copy_files(caminho, pasta_nome, de=None):
     # utl.safe_copy()
     # if not utl.safe_copy():
     #     raise Exception("Falha ao copiar arquivos — p\\192.168.1.249\redacao\arte\00 Pagflipasta vazia ou nada selecionado.")
-    utl.go_to(f"{caminho}\\{pasta_nome}")
+    go_to(f"{caminho}\\{pasta_nome}")
     pg.hotkey('ctrl', 'v')
-    time.sleep(2)
+    time.sleep(3)
+
+# def safe_copy():
+#     # Antes de copiar, limpa a área de transferência
+#     pyperclip.copy("")
+
+#     pg.hotkey('ctrl', 'a')
+#     time.sleep(0.1)
+#     pg.hotkey('ctrl', 'c')
+#     time.sleep(0.2)
+
+#     conteudo = pyperclip.paste()
+
+#     # Checar se o conteúdo provavelmente NÃO é lista de arquivos
+#     if "\\" not in conteudo and "/" not in conteudo:
+#         raise Exception("Nenhum arquivo selecionado — Ctrl+C copiou apenas o nome da pasta.")
+
+#     return True
 
 def go_to(específico=None):
     pg.hotkey(*utl.atalho_endereço())
-    time.sleep(0.4)
+    time.sleep(0.5)
     if específico:
         kb.write(específico) 
     pg.press('enter')
-    time.sleep(0.4)
+    time.sleep(0.5)
 
 def make_folder(nome, em=None):
     if em:
@@ -90,20 +111,37 @@ def folder_is_open(nomes: str) -> bool:
                     return True
     return False
 
+def open_main_folder():
+    if folder_is_open("4 Adianto de novas edições"):
+        open_folder(cfg.CAMINHO_MODELO_EDD)
+        go_to(cfg.CAMINHO_PAGFLIP)
+    elif folder_is_open("fotos"):
+        open_folder(cfg.CAMINHO_FOTOS)
+        go_to(cfg.CAMINHO_PAGFLIP)
+    elif folder_is_open("00 Pagflip"):
+        open_folder(cfg.CAMINHO_PAGFLIP)
+    else:
+        open_folder(cfg.CAMINHO_PAGFLIP)
 
-# def safe_copy():
-#     # Antes de copiar, limpa a área de transferência
-#     pyperclip.copy("")
+def auto_folders(pasta_nome, modelo_path):
+    try:
+        open_main_folder()
+        make_folder(pasta_nome)
+        make_folder(pasta_nome, cfg.CAMINHO_WEB)
+        make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
+        make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
+        time.sleep(1)
+        copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
+        time.sleep(1)
+        copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
+        pg.hotkey('alt', 'up')
+        time.sleep()
+        log("FileManager", "sucesso", f"Pasta {pasta_nome} criada")
+        log("All_in_one", "sucesso", f"Pasta {pasta_nome} criada")
+        
+    except Exception as e:
+        log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")
+        log("All_in_one", "ERRO", f"Erro ao criar pasta: {str(e)}")
 
-#     pg.hotkey('ctrl', 'a')
-#     time.sleep(0.1)
-#     pg.hotkey('ctrl', 'c')
-#     time.sleep(0.2)
 
-#     conteudo = pyperclip.paste()
 
-#     # Checar se o conteúdo provavelmente NÃO é lista de arquivos
-#     if "\\" not in conteudo and "/" not in conteudo:
-#         raise Exception("Nenhum arquivo selecionado — Ctrl+C copiou apenas o nome da pasta.")
-
-#     return True

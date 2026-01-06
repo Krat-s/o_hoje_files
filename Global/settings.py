@@ -15,7 +15,7 @@ CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
 CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
-CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - Teste'
 CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
 
