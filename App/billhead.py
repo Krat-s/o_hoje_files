@@ -55,7 +55,7 @@ def auto_billhead():
                 r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição'
             )
 
-            # Criando pastas e copiando
+            # Criando modelo de pastas
             auto_folders(pasta_nome, modelo_path)
             time.sleep(1)
 
