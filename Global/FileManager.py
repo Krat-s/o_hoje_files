@@ -27,7 +27,7 @@ def take_file(arquivo):
 
 def copy_files(caminho, pasta_nome, de=None):
     if de:
-        utl.go_to(de)
+        go_to(de)
     time.sleep(2)
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
@@ -36,7 +36,7 @@ def copy_files(caminho, pasta_nome, de=None):
     # utl.safe_copy()
     # if not utl.safe_copy():
     #     raise Exception("Falha ao copiar arquivos — p\\192.168.1.249\redacao\arte\00 Pagflipasta vazia ou nada selecionado.")
-    utl.go_to(f"{caminho}\\{pasta_nome}")
+    go_to(f"{caminho}\\{pasta_nome}")
     pg.hotkey('ctrl', 'v')
     time.sleep(2)
 

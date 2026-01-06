@@ -34,7 +34,7 @@ def autodata_paginas(info: EdicaoInfo):
         auto_pages(i, info)
         utl.close_page()
 
-# ---------------------------- PASTAS ----------------------------
+# ---------------------------- folders ----------------------------
 def open_main_folder():
     if folder_is_open("4 Adianto de novas edições"):
         open_folder(cfg.CAMINHO_MODELO_EDD)
@@ -50,13 +50,12 @@ def open_main_folder():
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
-        # make_folder(pasta_nome)
-        # make_folder(pasta_nome, cfg.CAMINHO_WEB)
-        # make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
+        make_folder(pasta_nome)
+        make_folder(pasta_nome, cfg.CAMINHO_WEB)
+        make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
         make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
         time.sleep(1)
-
-        # copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
+        copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
         time.sleep(1)
         copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
         pg.hotkey('alt', 'up')
@@ -64,8 +63,7 @@ def auto_folders(pasta_nome, modelo_path):
     except Exception as e:
         log("billhead-auto_folder", "ERRO", f"Erro ao criar pasta: {str(e)}")
 
-
-# ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
+# ---------------------------- main execution ----------------------------
 def auto_billhead():
     for item in desync.gerar_edicoes_formatadas():
         try:
