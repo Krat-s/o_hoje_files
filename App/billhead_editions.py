@@ -13,7 +13,7 @@ import Global.data_edition_sync as desync
 from Global.Logs.logs import log
 from Global.FileManager import auto_folders
 from App.modulos_quark.utils_quark import close_page
-from App.billhead import aply_17, aply_1, auto_pages
+from App.billhead import aply_17, aply_1, auto_pages, auto_date_all_non_especial_pages
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -27,15 +27,15 @@ class EdicaoInfo:
     dia_semana: str
 
 # ---------------------------- AUTODATA ----------------------------
-def autodata_paginas(info: EdicaoInfo):
-    for i in range(20, 1, -1):
-        if i in [17, 18, 19]:
-            continue
-        auto_pages(i, info)
-        close_page()
+# def auto_date_all_non_especial_pages(info: EdicaoInfo):
+#     for i in range(20, 1, -1):
+#         if i in [17, 18, 19]:
+#             continue
+#         auto_pages(i, info)
+#         close_page()
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-def auto_billhead():
+def auto_billhead_editions():
     for item in desync.gerar_edicoes_formatadas():
         try:
             info = EdicaoInfo(
@@ -63,7 +63,7 @@ def auto_billhead():
             utl.open_software(cfg.quark)
             
             aply_17(info)
-            autodata_paginas(info)
+            auto_date_all_non_especial_pages(info)
             aply_1(info)
             
             log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
@@ -72,5 +72,6 @@ def auto_billhead():
             log("billhead", "erro", f"Modelos da edição {item['edicao_formatada']}, {item['dia_semana']} não criado. {str(e)}")
 
 if __name__ == "__main__":
-    auto_billhead()
+    # auto_billhead_editions()
+    print("!sda")
 

@@ -9,6 +9,8 @@ modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
 import App.modulos_quark.utils_quark as utlq
+
+from App.modulos_quark.utils_quark import close_page
 import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as desync
@@ -25,7 +27,7 @@ class EdicaoInfo:
     dia_semana: str
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK) ----------------------------
-def preencher_data(info: EdicaoInfo):
+def auto_date(info: EdicaoInfo):
     utlq.take_tool("v")
     pg.click(cfg.x_data, cfg.y_data)
     utlq.take_tool("t")
@@ -38,13 +40,12 @@ def preencher_data(info: EdicaoInfo):
 def auto_pages(numero, info: EdicaoInfo):
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', 'o')
-
     nome_pasta = f"{info.edicao_formatada.replace('.', '')} - {info.dia_semana}"
     kb.write(f"{cfg.CAMINHO_MODELO_EDD}\\{nome_pasta}")
     pg.press('enter')
     pg.write(str(numero))
     utl.chose_suggestion(1, cfg.TIMETOOPEN)
-    preencher_data(info)
+    auto_date(info)
 
 def aply_1(info: EdicaoInfo):
     utl.press_repeat('esc', 3)
@@ -78,7 +79,7 @@ def aply_17(info: EdicaoInfo):
     kb.write('17')
     utl.chose_suggestion(1, 1)
     utl.press_repeat('esc', 3)
-    preencher_data(info)
+    auto_date(info)
     time.sleep(0.4)
     utl.press_repeat('esc', 3)
     utlq.take_tool("v")
@@ -89,3 +90,10 @@ def aply_17(info: EdicaoInfo):
     pg.hotkey('ctrl', 'a')
     kb.write(f"Ano 21 - nº {info.edicao_formatada}")
     utlq.close_page()
+
+def auto_date_all_non_especial_pages(info: EdicaoInfo):
+    for i in range(20, 1, -1):
+        if i in [17, 18, 19]:
+            continue
+        auto_pages(i, info)
+        utlq.close_page()
