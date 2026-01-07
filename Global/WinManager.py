@@ -31,8 +31,10 @@ def check_windows() -> str:
     build = ver_info.dwBuildNumber
 
     if major == 10 and build >= 22000:
+        print("Windows 11")
         return "Windows 11"
     elif major == 10:
+        print("Windows 10")
         return "Windows 10"
     else:
         return f"Windows {major}"

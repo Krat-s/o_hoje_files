@@ -63,35 +63,35 @@ def wedding_cape():
 def auto_marriage():
     def fazer_escolha(opcao):
         if opcao == "Essencia + Classificados":
-            time.sleep(5)
+            time.sleep(3)
             process_basic()
             pg.alert('Essencia + Classificados OK')
         elif opcao == "cidades":
-            time.sleep(5)
+            time.sleep(3)
             process_town()
             pg.alert('Cidades OK')
         elif opcao == "primeiro caderno":
-            time.sleep(5)
+            time.sleep(3)
             wedding("2_7", [2, 7])    
             process_crumb()
             wedding_cape()
             pg.alert('Primeiro caderno OK')
         elif opcao == "basico completo":
-            time.sleep(5)
+            time.sleep(3)
             process_basic()
             process_town()    
             pg.alert('Básico completo OK')  
         elif opcao == "o miolo":
-            time.sleep(5)
+            time.sleep(3)
             process_crumb()
             pg.alert('Miolo OK')
         elif opcao == "2_7 + miolo":
-            time.sleep(5)
+            time.sleep(3)
             wedding("2_7", [2, 7])    
             process_crumb()
             pg.alert('2_7 + miolo OK')
         elif opcao == "tudo":
-            time.sleep(5)
+            time.sleep(3)
             process_basic()
             process_town() 
             process_crumb()

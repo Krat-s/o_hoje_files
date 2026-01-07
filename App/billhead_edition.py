@@ -91,5 +91,3 @@ def aply_17(info: EdicaoInfo):
     utlq.close_page()
 
 
-def teste(info: EdicaoInfo):
-    print(info.edicao_formatada)

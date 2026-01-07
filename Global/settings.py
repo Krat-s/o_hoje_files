@@ -60,6 +60,13 @@ file_not_fond_close = (500, 260, 363, 142)
 button_cancel_qk = 829, 419
 button_ok_qk = 829, 385
 
+x_data = 850
+y_data = 259
+x_edicao_17 = 560
+y_edicao_17 = 121
+x_edicao_capa = 346
+y_edicao_capa = 448
+
 def stats():
     print(".....")
     print("⚙️  Settings loaded ✔️")
@@ -70,13 +77,6 @@ def stats():
     print(f".. Criando modelo de {total_edicoes} edições")
     print(".....")
 
-x_data = 850
-y_data = 259
-x_edicao_17 = 560
-y_edicao_17 = 121
-x_edicao_capa = 346
-y_edicao_capa = 448
-
 if __name__ == "__main__":
-    # stats()
+    stats()
     print(sy_de.EDD)
