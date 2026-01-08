@@ -135,7 +135,6 @@ def auto_folders(pasta_nome, modelo_path):
         time.sleep(1)
         copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
         pg.hotkey('alt', 'up')
-        time.sleep()
         log("FileManager", "sucesso", f"Pasta {pasta_nome} criada")
         log("All_in_one", "sucesso", f"Pasta {pasta_nome} criada")
         

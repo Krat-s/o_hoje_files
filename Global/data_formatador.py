@@ -12,6 +12,9 @@ terca_babugado = "terça-feira, "
 def eh_fim_de_semana(data):
     return data.weekday() in [5]  # saturday
 
+def eh_domingo(data):
+    return data.weekday() in [6]
+
 # Função principal
 def formatar_data(data, tipo="completo"):
     dia = int(data.strftime('%d')) 
@@ -25,6 +28,8 @@ def formatar_data(data, tipo="completo"):
 
     # Tipo: dia da semana
     if tipo == "dia_semana":
+        if eh_domingo(data):
+            return "Domingo"
         if eh_fim_de_semana(data):
             return "Fim de semana"
         if data.weekday() == 1:
@@ -109,7 +114,8 @@ def main():
         # ("Data completa", formatar_data(datetime(2025, 6, 10), tipo="completo")),
         # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30))),
         # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30), tipo="dia_semana")),
-        ("Debug virada", formatar_data(datetime(2025, 12, 31)))
+        ("Debug virada", formatar_data(datetime(2025, 12, 31))),
+        ("Debug domingo", formatar_data(datetime(2026, 1, 4)))
 
 
     ]
