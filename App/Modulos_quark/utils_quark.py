@@ -3,8 +3,6 @@ import time
 import keyboard as kb
 import os
 import sys
-import tkinter as tk
-from tkinter import messagebox
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(raiz_projeto)
@@ -69,12 +67,6 @@ def close_page():
     pg.hotkey('ctrl', 'f4')
     time.sleep(cfg.TIMETOCLOSE)
     
-def save_and_close():
-    pg.hotkey('ctrl', 's')
-    time.sleep(1.5)
-    pg.hotkey('ctrl', 'f4')
-    time.sleep(0.5)
-
 def move_page(left, right):
     pg.hotkey('ctrl', 'shift', 'alt', 'm')
     time.sleep(0.2)

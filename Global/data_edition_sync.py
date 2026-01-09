@@ -75,7 +75,8 @@ def obter_edicao_por_data(data_alvo, edi_inicial=EDICAO_BASE, data_inicial=DATA_
 
     raise ValueError("Data não corresponde a nenhuma edição válida.")
 
-def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
+def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO, one=None):
+    
     resultados = []
     data_atual = obter_data_por_edicao(edicao_inicial)
 
@@ -107,6 +108,21 @@ def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QU
 
     return resultados
 
+def formatar_edicao_unica(edicao_numero):
+    data = obter_data_por_edicao(edicao_numero)
+
+    edicao_formatada = formatar_numero(edicao_numero)
+    dia_semana = formatar_data(data, tipo='dia_semana').capitalize()
+
+    return {
+        "edição_sem_ponto": edicao_formatada.replace('.', ''),
+        "edicao_formatada": edicao_formatada,
+        "data_formatada": formatar_data(data),
+        "dia_semana": dia_semana,
+        "dia_semana_padrão": data.weekday(),
+        "pasta_nome": f"{edicao_formatada.replace('.', '')} - {dia_semana}",
+    }
+
 def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
     for item in gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana, repeticoes):
         fazer_algo(item)
@@ -118,10 +134,10 @@ edicao_0 = obter_edicao_por_data(datetime.now() + timedelta(days=1))
 data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
 EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 
+
 if __name__ == "__main__":
     teste1 = datetime.now() + timedelta(days=1)
     teste2 = 8001
     print(obter_edicao_por_data(teste1))
     print(formatar_data(obter_data_por_edicao(teste2)))
     print('...')
-    # print(EDD)

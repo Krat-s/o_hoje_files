@@ -12,8 +12,7 @@ import Global.utils as utl
 import Global.data_edition_sync as desync
 from Global.Logs.logs import log
 from Global.FileManager import auto_folders
-from App.modulos_quark.utils_quark import close_page
-from App.billhead import aply_17, aply_1, auto_pages, auto_date_all_non_especial_pages
+from App.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -25,14 +24,6 @@ class EdicaoInfo:
     edicao_formatada: str
     data_formatada: str
     dia_semana: str
-
-# ---------------------------- AUTODATA ----------------------------
-# def auto_date_all_non_especial_pages(info: EdicaoInfo):
-#     for i in range(20, 1, -1):
-#         if i in [17, 18, 19]:
-#             continue
-#         auto_pages(i, info)
-#         close_page()
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 def auto_billhead_editions():

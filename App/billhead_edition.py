@@ -19,47 +19,45 @@ pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
 # ---------------------------- DATA CLASS ----------------------------
-target = 7015 #Não pode ser domingo
+target = 7014 #Não pode ser domingo
 target_data = desync.obter_data_formatada(target)
 target_weekday = formatar_data(desync.obter_data_por_edicao(target), tipo="dia_semana")
 pasta_nome = str(f"{target} - {target_weekday}")
-target_weekday_standard = formatar_data(desync.obter_data_por_edicao(target))
+target_weekday_standard = desync.obter_data_por_edicao(target).weekday()
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 
 @dataclass
 class EdicaoInfo:
-    edicao_formatada: str
-    data_formatada: str
-    dia_semana: str
-    target_weekday: str
-
-def teste(dad):
-    print(dad)
+  def __init__(self, edicao_formatada):
+        self.edicao_formatada = edicao_formatada
 
 def auto_billhead_edition():  
     try:     
-        info = EdicaoInfo(
-                edicao_formatada=target,
-                data_formatada=target_data,
-                dia_semana=target_weekday,
-                target_weekday=target_weekday
-            )
+        # info = {
+        #         "edicao_formatada": "{target}",
+        #         data_formatada=target_data,
+        #         dia_semana=target_weekday,
+        #         target_weekday=target_weekday_standard
+        #     }
+        info = EdicaoInfo("6500")
 
         modelo_path = {
             0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
-        }.get(weekday()), r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição'
+        }.get(
+            target_weekday_standard,
+            r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição'
         )
 
-        # # Criando pastas e copiando
+        # Criando pastas e copiando
         # auto_folders(pasta_nome, modelo_path)
         # time.sleep(1)
 
         # # ------------------ Aplicando autodata no Quark
         # utl.open_software(cfg.quark)
         
-        # aply_17(info)
+        # aply_17(info.edicao_formatada)
         # auto_date_all_non_especial_pages(EdicaoInfo)
         # aply_1(info)
         
@@ -70,9 +68,13 @@ def auto_billhead_edition():
         # print(target_weekday_standard)
         print()
         print(modelo_path)
+        # print(info.edicao_formatada)
 
+        # edinfo = desync.formatar_edicao_unica(target)
+        # print(edinfo)
+        print(info.edicao_formatada)
 
-
+        # print(desync.gerar_edicoes_formatadas(target, repeticoes=0 [0]))
 
     except Exception as e:
         # log("billhead", "erro", f"Modelos da edição {item['edicao_formatada']}, {item['dia_semana']} não criado. {str(e)}")
