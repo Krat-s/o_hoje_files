@@ -9,6 +9,7 @@ sys.path.append(raiz_projeto)
 from Global.edicao_formatador import gerar_edicoes, formatar_edicao, formatar_numero
 from Global.data_formatador import formatar_data
 from Global.settings_edition_request import quantidade_repeticoes, edicao_inicial
+from Global.edition_info import EdicaoInfo
 
 # Base fixa para cálculo de data
 EDICAO_BASE = 6496
@@ -75,27 +76,43 @@ def obter_edicao_por_data(data_alvo, edi_inicial=EDICAO_BASE, data_inicial=DATA_
 
     raise ValueError("Data não corresponde a nenhuma edição válida.")
 
-def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO, one=None):
+def formatar_edicao_unica(edicao_numero: int) -> EdicaoInfo:
+    data = obter_data_por_edicao(edicao_numero)
+
+    edicao_formatada = formatar_numero(edicao_numero)
+    dia_semana = formatar_data(data, tipo='dia_semana').capitalize()
+
+    return EdicaoInfo(
+        edicao_sem_ponto=edicao_formatada.replace('.', ''),
+        edicao_formatada=edicao_formatada,
+        data_formatada=formatar_data(data),
+        dia_semana=dia_semana,
+        dia_semana_padrão=data.weekday(),
+        pasta_nome=f"{edicao_formatada.replace('.', '')} - {dia_semana}",
+    )
+
+def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
     
-    resultados = []
+    resultados: list[EdicaoInfo] = []
     data_atual = obter_data_por_edicao(edicao_inicial)
 
     for _ in range(repeticoes):
         edicoes = gerar_edicoes(edicao_inicial, quantidade_por_semana)
 
         for ed in edicoes:
+            ed = ed
             dia_semana = formatar_data(data_atual, tipo='dia_semana').capitalize()
             pasta_nome = f"{ed.replace('.', '')} - {dia_semana.capitalize()}"
-            ed = ed
+            edicao_sem_ponto = ed.replace('.', '')
 
-            info = {
-                "edição_sem_ponto": ed.replace('.', ''),
-                "edicao_formatada": ed,
-                "data_formatada": formatar_data(data_atual),
-                "dia_semana": dia_semana,
-                "dia_semana_padrão": data_atual.weekday(),
-                "pasta_nome": pasta_nome,
-            }
+            info = EdicaoInfo(
+                edicao_sem_ponto=edicao_sem_ponto,
+                edicao_formatada=ed,
+                data_formatada=formatar_data(data_atual),
+                dia_semana=dia_semana,
+                dia_semana_padrão=data_atual.weekday(),
+                pasta_nome=pasta_nome,
+            )
 
             resultados.append(info)
 
@@ -108,20 +125,6 @@ def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QU
 
     return resultados
 
-def formatar_edicao_unica(edicao_numero):
-    data = obter_data_por_edicao(edicao_numero)
-
-    edicao_formatada = formatar_numero(edicao_numero)
-    dia_semana = formatar_data(data, tipo='dia_semana').capitalize()
-
-    return {
-        "edição_sem_ponto": edicao_formatada.replace('.', ''),
-        "edicao_formatada": edicao_formatada,
-        "data_formatada": formatar_data(data),
-        "dia_semana": dia_semana,
-        "dia_semana_padrão": data.weekday(),
-        "pasta_nome": f"{edicao_formatada.replace('.', '')} - {dia_semana}",
-    }
 
 def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
     for item in gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana, repeticoes):

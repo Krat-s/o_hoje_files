@@ -14,20 +14,19 @@ from App.modulos_quark.utils_quark import close_page
 import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as desync
+from typing import Protocol
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
-# ---------------------------- DATA CLASS ----------------------------
-@dataclass
-class EdicaoInfo:
+# ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK) ----------------------------
+class EdicaoQuarkLike(Protocol):
     edicao_formatada: str
     data_formatada: str
     dia_semana: str
 
-# ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK) ----------------------------
-def auto_date(info: EdicaoInfo):
+def auto_date(info: EdicaoQuarkLike):
     utlq.take_tool("v")
     pg.click(cfg.x_data, cfg.y_data)
     utlq.take_tool("t")
@@ -37,7 +36,7 @@ def auto_date(info: EdicaoInfo):
     time.sleep(0.4)
     kb.write(info.data_formatada)
 
-def auto_pages(numero, info: EdicaoInfo):
+def auto_pages(numero, info: EdicaoQuarkLike):
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', 'o')
     nome_pasta = f"{info.edicao_formatada.replace('.', '')} - {info.dia_semana}"
@@ -47,7 +46,7 @@ def auto_pages(numero, info: EdicaoInfo):
     utl.chose_suggestion(1, cfg.TIMETOOPEN)
     auto_date(info)
 
-def aply_1(info: EdicaoInfo):
+def aply_1(info: EdicaoQuarkLike):
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', 'o')
     pg.write('1')
@@ -63,7 +62,7 @@ def aply_1(info: EdicaoInfo):
     kb.write(f"|  {info.data_formatada}")
     utlq.close_page()
 
-def aply_17(info: EdicaoInfo):
+def aply_17(info: EdicaoQuarkLike):
     time.sleep(0.3)
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', '0')
@@ -91,7 +90,7 @@ def aply_17(info: EdicaoInfo):
     kb.write(f"Ano 21 - nº {info.edicao_formatada}")
     utlq.close_page()
 
-def auto_date_all_non_especial_pages(info: EdicaoInfo):
+def auto_date_all_non_especial_pages(info: EdicaoQuarkLike):
     for i in range(20, 1, -1):
         if i in [17, 18, 19]:
             continue

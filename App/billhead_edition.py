@@ -27,20 +27,20 @@ target_weekday_standard = desync.obter_data_por_edicao(target).weekday()
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
 
-@dataclass
-class EdicaoInfo:
-  def __init__(self, edicao_formatada):
-        self.edicao_formatada = edicao_formatada
+# @dataclass
+# class EdicaoInfo:
+#   def __init__(self, edicao_formatada):
+#         self.edicao_formatada = edicao_formatada
 
 def auto_billhead_edition():  
     try:     
-        # info = {
-        #         "edicao_formatada": "{target}",
-        #         data_formatada=target_data,
-        #         dia_semana=target_weekday,
-        #         target_weekday=target_weekday_standard
-        #     }
-        info = EdicaoInfo("6500")
+        info = desync.formatar_edicao_unica(7014)
+        #                     "edicao_formatada": ,
+        #                     "data_formatada": target_data,
+        #                     "dia_semana": target_weekday,
+        #                     "target_weekday": target_weekday_standard
+        #                 }
+
 
         modelo_path = {
             0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
@@ -80,7 +80,15 @@ def auto_billhead_edition():
         # log("billhead", "erro", f"Modelos da edição {item['edicao_formatada']}, {item['dia_semana']} não criado. {str(e)}")
         print(e)
 
+# def teste():
+#     for item in desync.gerar_edicoes_formatadas():
+#         item = 
+#         print()
+
+
+
 
 if __name__ == "__main__":
     auto_billhead_edition()
+    # teste()
 
