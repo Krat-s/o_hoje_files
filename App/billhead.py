@@ -63,7 +63,7 @@ def aply_1(info: EdicaoQuarkLike):
     utlq.close_page()
 
 def aply_17(info: EdicaoQuarkLike):
-    time.sleep(0.3)
+    time.sleep(2)
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', '0')
     time.sleep(0.3)

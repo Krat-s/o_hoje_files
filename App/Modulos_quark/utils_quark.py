@@ -9,7 +9,7 @@ sys.path.append(raiz_projeto)
 
 import Global.settings as cfg
 import Global.utils as utl
-import Global.data_edition_sync as sy_de
+import Global.data_edition_sync as desync
 
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
@@ -40,7 +40,7 @@ def open_pages_done_folder():
     time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
     time.sleep(0.2)
-    kb.write(cfg.CAMINHO_EDD + "\\" + sy_de.EDD + "\\" + 'Páginas prontas')
+    kb.write(cfg.CAMINHO_EDD + "\\" + desync.EDD + "\\" + 'Páginas prontas')
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(0.2)
@@ -68,6 +68,7 @@ def close_page():
     time.sleep(cfg.TIMETOCLOSE)
     
 def move_page(left, right):
+    time.sleep(1)
     pg.hotkey('ctrl', 'shift', 'alt', 'm')
     time.sleep(0.2)
     kb.write(str(left))

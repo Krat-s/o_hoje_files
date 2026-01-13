@@ -14,7 +14,6 @@ from Global.FileManager import auto_folders
 from App.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
 from Global.edition_info import EdicaoInfo
 
-
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
@@ -43,9 +42,9 @@ def auto_billhead_editions():
             
             log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
 
-            print(modelo_path)
-            print("............")
-            print(info)
+            # print(modelo_path)
+            # print("............")
+            # print(info)
 
         except Exception as e:
             log("billhead", "erro", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
