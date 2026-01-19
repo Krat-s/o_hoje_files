@@ -12,7 +12,7 @@ import Global.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as desync
 from App.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
-from Global.FileManager import auto_folders
+from Global.FileManager import auto_folders, auto_folder
 from Global.data_formatador import formatar_data
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
@@ -32,35 +32,30 @@ target_weekday_standard = desync.obter_data_por_edicao(target).weekday()
 #   def __init__(self, edicao_formatada):
 #         self.edicao_formatada = edicao_formatada
 
-def auto_billhead_edition():  
-    try:     
-        info = desync.formatar_edicao_unica(7014)
-        #                     "edicao_formatada": ,
-        #                     "data_formatada": target_data,
-        #                     "dia_semana": target_weekday,
-        #                     "target_weekday": target_weekday_standard
-        #                 }
+def auto_billhead_edition():
+    try:
+        info = desync.formatar_edicao_unica(target)
 
 
         modelo_path = {
             0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
             5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
         }.get(
-            target_weekday_standard,
+            info.dia_semana_padrão,
             r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição'
         )
 
         # Criando pastas e copiando
-        # auto_folders(pasta_nome, modelo_path)
-        # time.sleep(1)
+        auto_folder(info.pasta_nome, modelo_path)
+        time.sleep(1)
 
         # # ------------------ Aplicando autodata no Quark
-        # utl.open_software(cfg.quark)
-        
-        # aply_17(info.edicao_formatada)
-        # auto_date_all_non_especial_pages(EdicaoInfo)
-        # aply_1(info)
-        
+        utl.open_software(cfg.quark)
+
+        aply_17(info)
+        auto_date_all_non_especial_pages(info)
+        aply_1(info)
+
         # log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
         # print(target_data)
         # print(target_weekday)
@@ -82,7 +77,7 @@ def auto_billhead_edition():
 
 # def teste():
 #     for item in desync.gerar_edicoes_formatadas():
-#         item = 
+#         item =
 #         print()
 
 

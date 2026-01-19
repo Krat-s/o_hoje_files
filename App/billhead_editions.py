@@ -42,10 +42,6 @@ def auto_billhead_editions():
             
             log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
 
-            # print(modelo_path)
-            # print("............")
-            # print(info)
-
         except Exception as e:
             log("billhead", "erro", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
 

@@ -123,6 +123,13 @@ def open_main_folder():
     else:
         open_folder(cfg.CAMINHO_PAGFLIP)
 
+def auto_folder(pasta_nome, modelo_path):
+        open_main_folder()
+        make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
+        time.sleep(1)
+        copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
+        pg.hotkey('alt', "up")
+
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
