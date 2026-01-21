@@ -3,7 +3,6 @@ import sys
 import time
 import pyautogui as pg
 import keyboard as kb
-from dataclasses import dataclass
 from pywinauto import Desktop
 from typing import Iterable
 import pyperclip
@@ -13,7 +12,6 @@ sys.path.append(modulo_path)
 
 import Global.settings as cfg
 import Global.utils as utl
-import Global.data_edition_sync as desync
 from Global.Logs.logs import log
 
 pg.PAUSE = 0.5
@@ -35,33 +33,14 @@ def copy_files(caminho, pasta_nome, de=None):
     if de:
         go_to(de)
     time.sleep(2)
+    pyperclip.copy("")
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
     time.sleep(1)
     pg.hotkey('ctrl', 'c')
-    # utl.safe_copy()
-    # if not utl.safe_copy():
-    #     raise Exception("Falha ao copiar arquivos — p\\192.168.1.249\redacao\arte\00 Pagflipasta vazia ou nada selecionado.")
     go_to(f"{caminho}\\{pasta_nome}")
     pg.hotkey('ctrl', 'v')
-    time.sleep(3)
-
-def safe_copy():
-    # Antes de copiar, limpa a área de transferência
-    pyperclip.copy("")
-
-    pg.hotkey('ctrl', 'a')
-    time.sleep(0.1)
-    pg.hotkey('ctrl', 'c')
-    time.sleep(0.2)
-
-    conteudo = pyperclip.paste()
-
-    # Checar se o conteúdo provavelmente NÃO é lista de arquivos
-    if "\\" not in conteudo and "/" not in conteudo:
-        raise Exception("Nenhum arquivo selecionado — Ctrl+C copiou apenas o nome da pasta.")
-
-    return True
+    time.sleep(4)
 
 def go_to(específico=None):
     pg.hotkey(*utl.atalho_endereço())
@@ -89,7 +68,6 @@ def open_folder(endereco):
     utl.max_windows()
     pg.click(cfg.center_x, cfg.center_y)
 
-# Verificações do explores
 def explorer_is_open() -> bool:
     """
     Verifica se há alguma janela do Explorador de Arquivos aberta.
@@ -99,7 +77,6 @@ def explorer_is_open() -> bool:
         if janela.class_name() == "CabinetWClass":
             return True
     return False
-
 
 def get_explorer_texts(janela) -> list[str]:
     textos = []
@@ -125,14 +102,8 @@ def get_explorer_texts(janela) -> list[str]:
 
     return textos
 
-
 def folder_is_open(folder_names: Iterable[str]) -> bool:
-    """
-    Verifica se alguma janela do Explorer contém
-    uma pasta com o nome informado (Win10 / Win11).
-    """
     desktop = Desktop(backend="uia")
-
     nomes = [n.lower() for n in folder_names]
 
     for janela in desktop.windows(class_name="CabinetWClass"):
@@ -168,19 +139,16 @@ def open_main_folder():
     else:
         open_folder(cfg.CAMINHO_PAGFLIP)
 
-def auto_folder(pasta_nome, modelo_path):
-        open_main_folder()
-        make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-        time.sleep(1)
-        copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
-        pg.hotkey('alt', "up")
-
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
+        time.sleep(1)
         make_folder(pasta_nome)
+        time.sleep(1)
         make_folder(pasta_nome, cfg.CAMINHO_WEB)
+        time.sleep(1)
         make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
+        time.sleep(1)
         make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
         time.sleep(1)
         copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
@@ -194,15 +162,3 @@ def auto_folders(pasta_nome, modelo_path):
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")
         log("All_in_one", "ERRO", f"Erro ao criar pasta: {str(e)}")
-
-
-def teste(pasta_nome):
-    open_main_folder()
-    make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-    time.sleep(1)
-    copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira')
-    pg.hotkey('alt', 'up')
-
-
-if __name__ == "__main__":
-    teste("ptest")  #Testar com o safe copy
