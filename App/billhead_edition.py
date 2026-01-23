@@ -12,12 +12,13 @@ import Global.data_edition_sync as desync
 from App.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
 from Global.FileManager import auto_folders
 from Global.data_formatador import formatar_data
-from Global.Logs import logs
+from Global.Logs.logs import log
+
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
-# ---------------------------- DATA CLASS ----------------------------
+# ---------------------------- vari ----------------------------
 target = 8000
 target_data = desync.obter_data_formatada(target)
 target_weekday = formatar_data(desync.obter_data_por_edicao(target), tipo="dia_semana")
@@ -44,11 +45,13 @@ def auto_billhead_edition():
         auto_date_all_non_especial_pages(info)
         aply_1(info)
 
-        logs.log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} criado")
+        log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} criado")
+        log("All_in_one", "sucesso", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} criado")
         pg.alert("Automação encerrada")
 
     except Exception as e:
-        logs.log("billhead", "erro", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} não criado. {str(e)}")
+        log("billhead", "erro", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} não criado. {str(e)}")
+        log("All_in_one", "erro", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} não criado. {str(e)}")
 
 if __name__ == "__main__":
     auto_billhead_edition()

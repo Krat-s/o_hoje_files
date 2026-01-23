@@ -18,11 +18,13 @@ pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
 def take_file(arquivo):
+    time.sleep(0.5)
     kb.press_and_release('ctrl+f')
     time.sleep(0.5)
     kb.write(str(arquivo))
     time.sleep(2)
     pg.click(cfg.center_x, cfg.center_y)
+    time.sleep(0.5)
     pg.press('down')
     time.sleep(0.3)
     pg.press('down')

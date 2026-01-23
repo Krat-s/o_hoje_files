@@ -39,11 +39,13 @@ def wedding(nome_arquivo, paginas):
             time.sleep(0.5)
         utlq.close_page()
         log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
-        
+        log("All_in_one", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
+    
     except Exception as e:
         erro_msg = f"Erro ao casar as páginas {str(nome_arquivo)}: {str(e)}"
         log("Wedding", "ERRO", erro_msg) 
-
+        log("All_in_one", "ERRO", erro_msg)
+        
 def process_basic():
     wedding("13_16", [13, 16])
     wedding("14_15", [14, 15])
