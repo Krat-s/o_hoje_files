@@ -18,15 +18,14 @@ from Global.Logs.logs import log
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
-# ---------------------------- vari ----------------------------
+# ---------------------------- var ----------------------------
 target = 8000
 target_data = desync.obter_data_formatada(target)
 target_weekday = formatar_data(desync.obter_data_por_edicao(target), tipo="dia_semana")
 pasta_nome = str(f"{target} - {target_weekday}")
 target_weekday_standard = desync.obter_data_por_edicao(target).weekday()
 
-# ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-
+# ---------------------------- main ----------------------------
 def auto_billhead_edition():
     try:
         info = desync.formatar_edicao_unica(target)
