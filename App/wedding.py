@@ -128,11 +128,11 @@ def auto_marriage():
     btn_y = tk.Button(janela, text="Miolo", command=lambda: fazer_escolha("o miolo"), **estilo_escolhas)
     btn_y.pack(pady=5)
 
+    btn_z = tk.Button(janela, text="2_7 + miolo", command=lambda: fazer_escolha("2_7 + miolo"), **estilo_escolhas)
+    btn_z.pack(pady=5)
+    
     btn_w = tk.Button(janela, text="Primeiro caderno", command=lambda: fazer_escolha("primeiro caderno"), **estilo_escolhas)
     btn_w.pack(pady=5)
-
-    btn_z = tk.Button(janela, text="miolo completo", command=lambda: fazer_escolha("2_7 + miolo"), **estilo_escolhas)
-    btn_z.pack(pady=5)
 
     btn_u = tk.Button(janela, text="Tudo", command=lambda: fazer_escolha("tudo"), **estilo_escolhas)
     btn_u.pack(pady=5)
