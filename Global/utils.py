@@ -15,7 +15,7 @@ sys.path.append(raiz_projeto)
 import Global.settings as cfg
 import Global.data_edition_sync as sy_de
 from Global.WinManager import check_windows
-import Global.utils_tesseract as tutl
+import Global.waits_tesseract as tutl
 
 
 # Functions

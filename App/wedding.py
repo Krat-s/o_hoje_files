@@ -1,10 +1,11 @@
-import pyautogui as pg
 import time
 import os
 import sys
+
+import pyautogui as pg
+import keyboard as kb
 import tkinter as tk
 from tkinter import messagebox
-import keyboard as kb
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
@@ -57,9 +58,9 @@ def process_town():
 
 def process_crumb():
     wedding("3_6", [3, 6])
-    wedding("4_5", [4, 5])
 
 def wedding_cape():
+    wedding("4_5", [4, 5])
     wedding("1_8", [8, 1])
 
 # ------------------------------------------------------------------------- Executando 

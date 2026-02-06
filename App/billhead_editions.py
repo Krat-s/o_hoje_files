@@ -1,7 +1,8 @@
 import os
 import sys
-import pyautogui as pg
 import time
+
+import pyautogui as pg
 
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
