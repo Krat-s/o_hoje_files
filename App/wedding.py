@@ -58,9 +58,9 @@ def process_town():
 
 def process_crumb():
     wedding("3_6", [3, 6])
+    wedding("4_5", [4, 5])
 
 def wedding_cape():
-    wedding("4_5", [4, 5])
     wedding("1_8", [8, 1])
 
 # ------------------------------------------------------------------------- Executando 
@@ -108,7 +108,7 @@ def auto_marriage():
     janela = tk.Tk() 
     janela.title("Casamento")
     janela.geometry("600x450")
-    janela.configure(bg="#747474")
+    janela.configure(bg="#4B2A6A")
     janela.iconbitmap(r'App\archives\favicon.ico')
 
     estilo_títulos = {"font": ("Helvetica", 19, "bold"), "bg": "#585858", "fg": "white", "width": 30, "borderwidth": 3, "relief": "solid"}
