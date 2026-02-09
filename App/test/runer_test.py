@@ -16,7 +16,7 @@ import Global.data_edition_sync as sy_de
 import App.modulos_quark.utils_quark as utlq
 from Global.FileManager import take_file
 from Global.Logs.logs import log
-from Global.waits_until import wait_explorer_open, wait_folder_open
+from Global.waits_checks import wait_explorer_open, wait_folder_open
 from Global.FileManager import auto_folders
 import Global.FileManager as fm
 
@@ -46,6 +46,3 @@ def open_main_folder():
     else:
         fm.open_folder(cfg.CAMINHO_PAGFLIP)
 
-
-wait_explorer_open()
-# wait_folder_open('00 Pagflip', 10)
