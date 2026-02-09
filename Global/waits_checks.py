@@ -17,6 +17,7 @@ def wait_explorer_open(timeout=10):
         timeout=timeout
     )
 
+
 def wait_folder_open(nome_pasta, timeout=10):
     nome = nome_pasta.lower()
 
@@ -44,6 +45,7 @@ def image_visible(path, timeout=10):
         lambda: pg.locateOnScreen(path) is not None,
         timeout
     )
+
 
 def wait_image(image_path, timeout=10, confidence=0.9):
     return wait_until(

@@ -13,23 +13,27 @@ sys.path.append(modulo_path)
 import Global.settings as cfg
 import Global.utils as utl
 from Global.Logs.logs import log
+import Global.waits_checks as wc
+from Global.waits_tesseract import wait_until_img_appears
+
 
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
+
 def take_file(arquivo):
-    time.sleep(0.5)
+    wc.wait_explorer_open()
     kb.press_and_release('ctrl+f')
     time.sleep(0.5)
     kb.write(str(arquivo))
-    time.sleep(2)
+    wait_until_img_appears(r"C:\Users\terravista.JORNALOHOJE\Documents\GitHub\o_hoje_files\Backup\Prints\(11, 5, 27, 24) selecionado em17h28.png", region=(11, 5, 27, 24), check_interval=1, timeout=15, on_found=None, run_once=False)
     pg.click(cfg.center_x, cfg.center_y)
-    time.sleep(0.5)
     pg.press('down')
     time.sleep(0.3)
     pg.press('down')
     time.sleep(0.3)
     kb.press_and_release('enter')
+
 
 def copy_files(caminho, pasta_nome, de=None):
     if de:
@@ -44,6 +48,7 @@ def copy_files(caminho, pasta_nome, de=None):
     pg.hotkey('ctrl', 'v')
     time.sleep(4)
 
+
 def go_to(específico=None):
     pg.hotkey(*utl.atalho_endereço())
     time.sleep(0.5)
@@ -51,6 +56,7 @@ def go_to(específico=None):
         kb.write(específico) 
     pg.press('enter')
     time.sleep(0.8)
+
 
 def make_folder(nome, em=None):
     if em:
@@ -65,10 +71,13 @@ def make_folder(nome, em=None):
     pg.press('enter')
     time.sleep(1.5)
 
+
 def open_folder(endereco):
     os.startfile(endereco)
+    wc.wait_folder_open(endereco)
     utl.max_windows()
     pg.click(cfg.center_x, cfg.center_y)
+
 
 def explorer_is_open() -> bool:
     """
@@ -79,6 +88,7 @@ def explorer_is_open() -> bool:
         if janela.class_name() == "CabinetWClass":
             return True
     return False
+
 
 def get_explorer_texts(janela) -> list[str]:
     textos = []
@@ -104,6 +114,7 @@ def get_explorer_texts(janela) -> list[str]:
 
     return textos
 
+
 def folder_is_open(folder_names: Iterable[str]) -> bool:
     desktop = Desktop(backend="uia")
     nomes = [n.lower() for n in folder_names]
@@ -115,31 +126,29 @@ def folder_is_open(folder_names: Iterable[str]) -> bool:
             for nome in nomes:
                 if nome in texto:
                     return True
-
+                
     return False
+
 
 def open_main_folder():
     if folder_is_open(["00 - Teste"]):
-        print("teste")
         open_folder(cfg.CAMINHO_MODELO_EDD)
         go_to(cfg.CAMINHO_PAGFLIP)
         pass
     elif folder_is_open(["4 Adianto de novas edições"]):
-        print("4 adianto")
         open_folder(cfg.CAMINHO_MODELO_EDD_0)
         go_to(cfg.CAMINHO_PAGFLIP)
     elif folder_is_open(["fotos"]):
         open_folder(cfg.CAMINHO_FOTOS)
-        print("fotos")
         go_to(cfg.CAMINHO_PAGFLIP)
     elif folder_is_open(["web"]):
-        print("web")
         open_folder(cfg.CAMINHO_WEB)
         go_to(cfg.CAMINHO_PAGFLIP)
     elif folder_is_open(["00 Pagflip"]):
         open_folder(cfg.CAMINHO_PAGFLIP)
     else:
         open_folder(cfg.CAMINHO_PAGFLIP)
+
 
 def auto_folders(pasta_nome, modelo_path):
     try:
@@ -164,3 +173,7 @@ def auto_folders(pasta_nome, modelo_path):
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")
         log("All_in_one", "ERRO", f"Erro ao criar pasta: {str(e)}")
+
+if __name__ == "__main__":
+    take_file(17)
+    

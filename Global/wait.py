@@ -9,7 +9,6 @@ def wait_until(condition_fn, timeout=10, interval=0.2, on_timeout=None):
     while time.time() - start < timeout:
         try:
             if condition_fn():
-                print("safe")
                 return True
         except Exception:
             pass

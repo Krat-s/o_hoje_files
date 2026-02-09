@@ -41,10 +41,12 @@ def auto_billhead_editions():
             auto_date_all_non_especial_pages(info)
             aply_1(info)
             
-            log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
+            log("billhead", "SUCESSO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
+            log("All_in_one", "SUCESSO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado") 
 
         except Exception as e:
             log("billhead", "erro", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
+            log("All_in_one", "ERRO", e)
 
 if __name__ == "__main__":
     auto_billhead_editions()

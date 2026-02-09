@@ -71,6 +71,7 @@ def get_image(img_path, region=None, confidence=0.8):
 def wait_until_img_appears(img_path, region=None, check_interval=1, timeout=None, on_found=None, run_once=False):
     deadline = None if timeout is None else _current_time() + timeout
     executed = False
+    time.sleep(0.5)
     while True:
         if get_image(img_path, region):
             if on_found and (not run_once or not executed):
@@ -149,21 +150,22 @@ if __name__ == "__main__":
         # pg.moveTo(829, 419)
         # time.sleep(0.2)
         # pg.click()
-        print("teste")
+        print("Imagem Localizada")
         time.sleep(0.1)
 
-    ok = wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=cancel_qk, run_once=True)
-    if ok:
-        cancel_qk()
-        print("Evento ocorreu dentro do timeout")
-    else:
-        print("Timeout: texto não apareceu")
-    time.sleep(2)
-    pg.moveTo(10, 10, duration=2)
-    pg.moveTo(100, 100, duration=2)
-    pg.click()
-    pg.moveTo(500, 500, duration=2)
+    # ok = wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=cancel_qk, run_once=True)
+    # if ok:
+    #     cancel_qk()
+    #     print("Evento ocorreu dentro do timeout")
+    # else:
+    #     print("Timeout: texto não apareceu")
+    # time.sleep(2)
+    # pg.moveTo(10, 10, duration=2)
+    # pg.moveTo(100, 100, duration=2)
+    # pg.click()
+    # pg.moveTo(500, 500, duration=2)
 
 
-    cancel_qk()
+    # cancel_qk()
+    
 
