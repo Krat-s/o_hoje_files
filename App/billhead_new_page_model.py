@@ -15,7 +15,7 @@ pg.FAILSAFE = True
 
 
 
-#detectar onde ocorreu a mudança, qual dia da semana do modelo foi alterado, ou fazer menu de escolha para decidir se eu mudo só em modelos de edições específicas
+#Pedir imput de qual página e escolher em qual versão mudou (se foi em todas ou no fim de semana ou segunda)
 #Pegar parte da página que mudou o modelo sem cabeçalho 
 #loop - abrir pasta por pasta a página em que mudou no adianto de edições
 #tirar tudo, fora as datas

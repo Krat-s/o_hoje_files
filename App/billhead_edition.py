@@ -19,7 +19,8 @@ pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
 # ---------------------------- var ----------------------------
-target = 8000
+target = 7999 #Não está ajustando edições de fim de semana direito
+# =========================(boot_assistance_need)==================================
 target_data = desync.obter_data_formatada(target)
 target_weekday = formatar_data(desync.obter_data_por_edicao(target), tipo="dia_semana")
 pasta_nome = str(f"{target} - {target_weekday}")
@@ -37,16 +38,19 @@ def auto_billhead_edition():
             r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição'
         )
 
-        auto_folders(info.pasta_nome, modelo_path)
-        time.sleep(1)
-        utl.open_software(cfg.quark)
-        aply_17(info)
-        auto_date_all_non_especial_pages(info)
-        aply_1(info)
+        # auto_folders(info.pasta_nome, modelo_path)
+        # time.sleep(1)
+        # utl.open_software(cfg.quark)
+        # aply_17(info)
+        # auto_date_all_non_especial_pages(info)
+        # aply_1(info)
 
-        log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} criado")
-        log("All_in_one", "sucesso", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} criado")
-        pg.alert("Automação encerrada")
+        # log("billhead", "sucesso", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} criado")
+        # log("All_in_one", "sucesso", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} criado")
+        # pg.alert("Automação encerrada")
+        print(target)
+        print(target_weekday)
+
 
     except Exception as e:
         log("billhead", "erro", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} não criado. {str(e)}")

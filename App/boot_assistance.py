@@ -1,0 +1,1 @@
+# Pegar a edição inicial imputada, verificar existência de arquivos. Decidir apagar última semana ou não, adcionar valor faltando da edição para cair em uma segunda-feira, (no caso da billhead )
