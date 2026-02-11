@@ -35,17 +35,17 @@ def take_file(arquivo):
     kb.press_and_release('enter')
 
 
-def copy_files(caminho, pasta_nome, de=None):
-    if de:
-        go_to(de)
-    time.sleep(2)
+def copy_files(caminho, folder_name, origin=None, source_folder_name=None):
+    if origin:
+        go_to(origin)
+    wc.wait_folder_open(source_folder_name)
     pyperclip.copy("")
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'a')
-    time.sleep(1)
+    time.sleep(0.5)
     pg.hotkey('ctrl', 'c')
-    go_to(f"{caminho}\\{pasta_nome}")
-    pg.hotkey('ctrl', 'v')
+    go_to(f"{caminho}\\{folder_name}")
+    pg.hotkey('ctrl', 'v')                  
     time.sleep(4)
 
 
@@ -58,23 +58,23 @@ def go_to(específico=None):
     time.sleep(0.8)
 
 
-def make_folder(nome, em=None):
-    if em:
-        go_to(em)
+def make_folder(name_folder, in_local=None):
+    if in_local:
+        go_to(in_local)
     time.sleep(0.4)
     utl.max_windows()
     time.sleep(0.4)
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
     time.sleep(0.4)
-    kb.write(nome)
+    kb.write(name_folder)
     pg.press('enter')
     time.sleep(1.5)
 
 
 def open_folder(endereco):
     os.startfile(endereco)
-    wc.wait_folder_open(endereco)
+    wc.wait_explorer_open()
     utl.max_windows()
     pg.click(cfg.center_x, cfg.center_y)
 
@@ -153,18 +153,18 @@ def open_main_folder():
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
-        time.sleep(1)
-        make_folder(pasta_nome)
+        # time.sleep(1)
+        # make_folder(pasta_nome)
         time.sleep(1)
         make_folder(pasta_nome, cfg.CAMINHO_WEB)
         time.sleep(1)
-        make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
-        time.sleep(1)
-        make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-        time.sleep(1)
-        copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
-        time.sleep(1)
-        copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
+        # make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
+        # time.sleep(1)
+        # make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
+        # time.sleep(1)
+        copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB, '00 - Modelo')
+        # time.sleep(1)
+        # copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path, '00 - Teste')
         time.sleep(1)
         pg.hotkey('alt', 'up')
         log("FileManager", "sucesso", f"Pasta {pasta_nome} criada")

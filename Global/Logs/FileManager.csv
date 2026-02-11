@@ -149,3 +149,25 @@ data,hora,status,mensagem
  2026-01-31, 03:08:02,sucesso,Pasta 7066 - Quinta-feira criada
  2026-01-31, 03:16:04,sucesso,Pasta 7067 - Sexta-feira criada
  2026-01-31, 03:24:06,sucesso,Pasta 7068-9 - Fim de semana criada
+ 2026-02-10, 17:28:43,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:28:57,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:29:11,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:29:26,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:35:02,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:35:17,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:35:31,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:35:46,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:35:58,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:36:10,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:36:23,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:36:35,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:36:47,ERRO,Erro ao criar pasta: Timeout aguardando condndo condição.
+ 2026-02-10, 17:37:00,ERRO,Erro ao criar pasta: Timeout aguardaição.
+ 2026-02-10, 17:49:14,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:53:36,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:53:50,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:54:04,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:54:23,ERRO,Erro ao criar pasta: Timeout aguardando condição.
+ 2026-02-10, 17:55:28,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-02-10, 17:58:00,sucesso,Pasta 8001 - Segunda-feira criada
+ 2026-02-10, 17:58:07,ERRO,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
