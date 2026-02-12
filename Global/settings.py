@@ -41,9 +41,9 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
-opera = 2 # Navegador padrão
+opera = 2 # any browser
 vscode = 3
-explorer = 4
+explorer = 4 
 
 # ------------------------------------------------------------------------- Configurações gerais
 screen_width, screen_height = pg.size()
