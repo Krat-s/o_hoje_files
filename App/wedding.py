@@ -22,7 +22,7 @@ pg.FAILSAFE = True
 def wedding(nome_arquivo, paginas):
     try:
         utl.open_software(1)
-        utl.open_web()
+        utl.open_web_day_0()
         take_file(nome_arquivo)
         time.sleep(0.5)
         kb.press_and_release('alt+f4')

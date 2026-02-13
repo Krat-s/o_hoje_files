@@ -44,7 +44,7 @@ def open_software(numero):
     kb.press_and_release(f"win+{str(numero)}")
 
 # ---------------------------- functions explorer (server journal) ----------------------------
-def open_web():
+def open_web_day_0():
     os.startfile(cfg.CAMINHO_WEB + "\\" + sy_de.EDD)
     time.sleep(0.3)
     max_windows()
