@@ -175,5 +175,5 @@ def auto_folders(pasta_nome, modelo_path):
         log("All_in_one", "ERRO", f"Erro ao criar pasta: {str(e)}")
 
 if __name__ == "__main__":
-    take_file(17)
-    
+    # take_file(17)
+    make_folder('Sopa de feijão')

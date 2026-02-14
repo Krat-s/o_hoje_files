@@ -144,3 +144,4 @@ if __name__ == "__main__":
     print(obter_edicao_por_data(teste1))
     print(formatar_data(obter_data_por_edicao(teste2)))
     print('...')
+    

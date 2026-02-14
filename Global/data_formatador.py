@@ -1,4 +1,6 @@
 import locale
+import time
+import pyautogui as pg
 from datetime import datetime, timedelta
 
 # Configura o locale para português do Brasil
@@ -70,6 +72,8 @@ def formatar_data(data, tipo="completo"):
     return f"{data.strftime('%A')}, {dia_formatado} de {mes_de_data} de {ano_de_data}"
 
 # --------------------testes---------------------
+hoje = datetime.now()
+amanha = hoje + timedelta(days=1)
 def main():
     hoje = datetime.now()
     amanha = hoje + timedelta(days=1)
@@ -115,9 +119,7 @@ def main():
         # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30))),
         # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30), tipo="dia_semana")),
         ("Debug virada", formatar_data(datetime(2025, 12, 31))),
-        ("Debug domingo", formatar_data(datetime(2026, 1, 4)))
-
-
+        ("Debug domingo", formatar_data(datetime(2026, 1, 4)))  
     ]
 
     for nome, resultado in testes:
@@ -125,4 +127,3 @@ def main():
 
 if __name__ == "__main__":  
     main()
-    

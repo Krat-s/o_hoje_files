@@ -18,7 +18,7 @@ pg.FAILSAFE = True
 
 def process_daily():
     pg.click(cfg.center_x, cfg.center_y)
-    #pega
+    print('tt')
 
 
 def att_model(editoria):
@@ -30,20 +30,22 @@ def att_model(editoria):
     process_daily()
 
 
+def open_drive():
+    utl.open_software(cfg.opera)
+    time.sleep(1)
+    pg.hotkey('ctrl', 't')
+    kb.write('https://drive.google.com/drive/u/0/home')
+    pg.press('enter')
+    time.sleep(1)
+    pg.press('/')
+    kb.write('Redação')
+    pg.press('enter')
+    pg.click(cfg.center_x, cfg.center_y)
+    att_model(str('editoria'))
 
 
 
 
-
-utl.open_software(cfg.opera)
-time.sleep(1)
-pg.hotkey('ctrl', 't')
-kb.write('drive')
-pg.press('enter')
-time.sleep(1)
-pg.press('/')
-kb.write('Redação')
-pg.press('enter')
-pg.click(cfg.center_x, cfg.center_y)
-att_model(str('editoria'))
-
+if __name__ == "__main__":
+    open_drive()
+    att_model(str('0 - esportes'))
