@@ -23,9 +23,9 @@ pg.FAILSAFE = True
 
 URL_DRIVE = 'https://drive.google.com/drive/home?hl=pt-br'
 
-def open_Brownser(btt):
+def open_Brownser():
     chrome_options = Options()
-    driver = webdriver.Operax(options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get(URL_DRIVE)
 
     try:
@@ -34,8 +34,11 @@ def open_Brownser(btt):
         # driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao)
         # time.sleep(1)
         # botao.click()
+        if
+            Faça login
+            
         print("✅ Botão clicado com sucesso!")
-        open_Brownser()
+        # open_Brownser()
     except Exception as e:
         print(f"⚠️ Erro ao clicar no botão: {e}")
 
