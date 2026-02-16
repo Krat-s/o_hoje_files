@@ -41,6 +41,10 @@ def formatar_data(data, tipo="completo"):
     # Tipo: mês
     elif tipo == "mes":
         return marco_babugado.capitalize() if data.month == 3 else data.strftime("%B").capitalize()
+    
+    # Tipo: dia
+    elif tipo == "dia":
+        return f'{dia_formatado} e {proximo_dia_formatado}' if data.weekday() == 5 else dia_formatado
 
     # Mês de março com formatação especial
     if data.month == 3:
@@ -119,7 +123,7 @@ def main():
         # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30))),
         # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30), tipo="dia_semana")),
         ("Debug virada", formatar_data(datetime(2025, 12, 31))),
-        ("Debug domingo", formatar_data(datetime(2026, 1, 4)))  
+        ("Debug domingo", formatar_data(datetime(2026, 1, 3), tipo="dia"))  
     ]
 
     for nome, resultado in testes:
