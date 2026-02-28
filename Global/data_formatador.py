@@ -63,10 +63,12 @@ def formatar_data(data, tipo="completo"):
         if ano_de_data != virada and data.weekday() == 6:
             return f"Domingão"
         if data.weekday() == 5 and ano_de_data != virada:
-            return f"Fim de semana, {dia_formatado} de dezembro de {ano_de_data} e 1º de janeiro {virada}"
+            return f"Fim de sEmana, {dia_formatado} de dezembro de {ano_de_data} e 1º de janeiro {virada}"
+        # if mes_de_data != proximo_mes and mes_de_data == 2:
+        #     return f"Virada de março para abril, {dia_formatado} de março e {proximo_dia_formatado} de abril de {ano_de_data}"
         if mes_de_data != proximo_mes:
-            return f"fim de semana, {dia_formatado} de {mes_de_data} e {proximo_dia_formatado} de {proximo_mes} de {ano_de_data}"
-        return f"fim de semana, {dia_formatado} e {proximo_dia_formatado} de {mes_de_data} de {ano_de_data}"
+            return f"fim de semanA, {dia_formatado} de {mes_de_data} e {proximo_dia_formatado} de {proximo_mes} de {ano_de_data}"
+        return f"fim de semAna, {dia_formatado} e {proximo_dia_formatado} de {mes_de_data} de {ano_de_data}"
 
     # Terça-feira genérica
     if data.weekday() == 1:
@@ -123,7 +125,9 @@ def main():
         # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30))),
         # ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30), tipo="dia_semana")),
         ("Debug virada", formatar_data(datetime(2025, 12, 31))),
-        ("Debug domingo", formatar_data(datetime(2026, 1, 3), tipo="dia"))  
+        ("Debug domingo", formatar_data(datetime(2026, 1, 3), tipo="dia")),
+        ("Debug março", formatar_data(amanha))
+
     ]
 
     for nome, resultado in testes:
