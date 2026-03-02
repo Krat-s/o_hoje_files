@@ -44,8 +44,9 @@ def auto_billhead_editions():
             log("All_in_one", "SUCESSO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado") 
 
         except Exception as e:
-            log("billhead", "erro", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
-            log("All_in_one", "ERRO", e)
+            log("billhead", "ERRO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
+            log("All_in_one", "ERRO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
 
 if __name__ == "__main__":
+    print('auto_billhead_editions')
     auto_billhead_editions()

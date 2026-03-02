@@ -20,6 +20,32 @@ from Global.waits_tesseract import wait_until_img_appears
 pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
+def open_folder(endereco):
+    os.startfile(endereco)
+    wc.wait_explorer_open()
+    utl.max_windows()
+    pg.click(cfg.center_x, cfg.center_y)
+
+def go_to(específico=None):
+    pg.hotkey(*utl.atalho_endereço())
+    time.sleep(0.5)
+    if específico:
+        kb.write(específico) 
+    pg.press('enter')
+    time.sleep(0.8)
+
+def make_folder(name_folder, in_local=None):
+    if in_local:
+        go_to(in_local)
+    time.sleep(0.4)
+    utl.max_windows()
+    time.sleep(0.4)
+    pg.click(cfg.center_x, cfg.center_y)
+    pg.hotkey('ctrl', 'shift', 'n')
+    time.sleep(0.4)
+    kb.write(name_folder)
+    pg.press('enter')
+    time.sleep(2.5)
 
 def take_file(arquivo):
     wc.wait_explorer_open()
@@ -34,50 +60,21 @@ def take_file(arquivo):
     time.sleep(0.3)
     kb.press_and_release('enter')
 
-
-def copy_files(caminho, folder_name, origin=None, source_folder_name=None):
-    if origin:
-        go_to(origin)
-    wc.wait_folder_open(source_folder_name)
-    pyperclip.copy("")
-    pg.click(cfg.center_x, cfg.center_y)
+def copy_files(caminho, folder_name, _from=None):
+    if _from:
+        go_to(_from)
+    time.sleep(0.5)
+    utl.max_windows()
+    pg.click(cfg.center_x, cfg.center_y + 100)
+    time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
-    time.sleep(0.5)
+    time.sleep(0.3)
     pg.hotkey('ctrl', 'c')
-    go_to(f"{caminho}\\{folder_name}")
-    pg.hotkey('ctrl', 'v')                  
-    time.sleep(4)
-
-
-def go_to(específico=None):
-    pg.hotkey(*utl.atalho_endereço())
     time.sleep(0.5)
-    if específico:
-        kb.write(específico) 
-    pg.press('enter')
-    time.sleep(0.8)
-
-
-def make_folder(name_folder, in_local=None):
-    if in_local:
-        go_to(in_local)
-    time.sleep(0.4)
-    utl.max_windows()
-    time.sleep(0.4)
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.hotkey('ctrl', 'shift', 'n')
-    time.sleep(0.4)
-    kb.write(name_folder)
-    pg.press('enter')
-    time.sleep(1.5)
-
-
-def open_folder(endereco):
-    os.startfile(endereco)
-    wc.wait_explorer_open()
-    utl.max_windows()
-    pg.click(cfg.center_x, cfg.center_y)
-
+    go_to(f"{caminho}\\{folder_name}")
+    wc.wait_folder_open(folder_name)
+    pg.hotkey('ctrl', 'v')
+    time.sleep(4)
 
 def explorer_is_open() -> bool:
     """
@@ -129,7 +126,6 @@ def folder_is_open(folder_names: Iterable[str]) -> bool:
                 
     return False
 
-
 def open_main_folder():
     if folder_is_open(["00 - Teste"]):
         open_folder(cfg.CAMINHO_MODELO_EDD)
@@ -152,20 +148,17 @@ def open_main_folder():
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
-        time.sleep(1)
         make_folder(pasta_nome)
-        time.sleep(1)
-        make_folder(pasta_nome, cfg.CAMINHO_WEB)
-        time.sleep(1)
+
         make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
-        time.sleep(1)
+        
+        make_folder(pasta_nome, cfg.CAMINHO_WEB)
+        copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB)
+
         make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-        time.sleep(1)
-        copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB, '00 - Modelo')
-        time.sleep(1)
-        copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path, '00 - Teste')
-        time.sleep(1)
+        copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
         pg.hotkey('alt', 'up')
+        
         log("FileManager", "sucesso", f"Pasta {pasta_nome} criada")
         log("All_in_one", "sucesso", f"Pasta {pasta_nome} criada")
         
