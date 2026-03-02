@@ -175,4 +175,5 @@ def auto_folders(pasta_nome, modelo_path):
 
 if __name__ == "__main__":
     # take_file(17)
-    make_folder('Sopa de feijão')
+    # make_folder('Sopa de feijão')
+    open_main_folder()
