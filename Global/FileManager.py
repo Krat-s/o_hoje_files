@@ -134,7 +134,6 @@ def open_main_folder():
     if folder_is_open(["00 - Teste"]):
         open_folder(cfg.CAMINHO_MODELO_EDD)
         go_to(cfg.CAMINHO_PAGFLIP)
-        pass
     elif folder_is_open(["4 Adianto de novas edições"]):
         open_folder(cfg.CAMINHO_MODELO_EDD_0)
         go_to(cfg.CAMINHO_PAGFLIP)
@@ -153,18 +152,18 @@ def open_main_folder():
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
-        # time.sleep(1)
-        # make_folder(pasta_nome)
+        time.sleep(1)
+        make_folder(pasta_nome)
         time.sleep(1)
         make_folder(pasta_nome, cfg.CAMINHO_WEB)
         time.sleep(1)
-        # make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
-        # time.sleep(1)
-        # make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
-        # time.sleep(1)
+        make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
+        time.sleep(1)
+        make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
+        time.sleep(1)
         copy_files(cfg.CAMINHO_WEB, pasta_nome, cfg.CAMINHO_MODELO_WEB, '00 - Modelo')
-        # time.sleep(1)
-        # copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path, '00 - Teste')
+        time.sleep(1)
+        copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path, '00 - Teste')
         time.sleep(1)
         pg.hotkey('alt', 'up')
         log("FileManager", "sucesso", f"Pasta {pasta_nome} criada")
