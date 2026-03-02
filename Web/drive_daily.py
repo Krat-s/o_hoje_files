@@ -23,6 +23,8 @@ pg.FAILSAFE = True
 
 URL_DRIVE = 'https://drive.google.com/drive/home?hl=pt-br'
 
+ontem = datetime.now() - timedelta(days=1)
+
 def open_Brownser():
     chrome_options = Options()
     driver = webdriver.Chrome(options=chrome_options)
@@ -35,6 +37,7 @@ def open_Brownser():
         # time.sleep(1)
         # botao.click()
         if
+        
             Faça login
             
         print("✅ Botão clicado com sucesso!")
@@ -58,7 +61,7 @@ def att_model(editoria):
     kb.write(editoria)
     pg.press('enter')
     time.sleep(1)
-    kb.write(f'{fd.formatar_data(datetime.now(), tipo="dia_semana")}')
+    kb.write(f'{fd.formatar_data(ontem, tipo="dia_semana")}')
     process_daily()
 
 
