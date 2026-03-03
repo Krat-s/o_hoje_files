@@ -45,6 +45,7 @@ def make_folder(name_folder, in_local=None):
     time.sleep(0.4)
     kb.write(name_folder)
     pg.press('enter')
+    pg.press('esc', presses=3)
     time.sleep(2.5)
 
 def take_file(arquivo):
