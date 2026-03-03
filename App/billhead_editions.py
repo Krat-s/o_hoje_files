@@ -33,6 +33,7 @@ def auto_billhead_editions():
                 weekday,
                 r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição'
             )
+
             auto_folders(pasta_nome, modelo_path)
             time.sleep(1)
             
@@ -41,12 +42,15 @@ def auto_billhead_editions():
             auto_date_all_non_especial_pages(info)
             aply_1(info)
             log("billhead", "SUCESSO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
-            log("All_in_one", "SUCESSO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado") 
+            log("All_in_one", "SUCESSO", f"billhead_editions: modelos da edição {info.edicao_formatada}, {info.dia_semana} criado") 
+
 
         except Exception as e:
-            log("billhead", "ERRO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
-            log("All_in_one", "ERRO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
+            log("billhead_editions", "ERRO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
+            log("All_in_one", "ERRO", f"billhead_editions: modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
+
 
 if __name__ == "__main__":
     print('auto_billhead_editions')
     auto_billhead_editions()
+

@@ -999,3 +999,12 @@ ed at most 2 arguments, got 3"
  2026-03-02, 18:41:22,SUCESSO,"Modelos da edição 7.060, Sexta-feira criado"
  2026-03-02, 18:42:06,ERRO,Erro ao criar pasta: Timeout aguardando condição.
  2026-03-02, 18:49:04,SUCESSO,"Modelos da edição 7.061-2, Fim de semana criado"
+ 2026-03-03, 15:50:54,SUCESSO,FileManager: Open_main_folder
+ 2026-03-03, 15:51:42,ERRO,"FileManager: erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-03, 15:58:48,SUCESSO,FileManager: Open_main_folder
+ 2026-03-03, 15:59:46,SUCESSO,FileManager: pasta 7056 - Segunda-feira criada
+ 2026-03-03, 16:20:15,SUCESSO,FileManager: Open_main_folder
+ 2026-03-03, 16:21:18,ERRO,FileManager: erro ao criar pasta: Timeout aguardando condição.
+ 2026-03-03, 16:24:09,ERRO,"billhead_editions: modelos da edição 7.056, Segunda-feira não criado. PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-03, 16:24:43,SUCESSO,FileManager: Open_main_folder
+ 2026-03-03, 16:26:37,SUCESSO,FileManager: Open_main_folder

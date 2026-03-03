@@ -45,6 +45,7 @@ def make_folder(name_folder, in_local=None):
     time.sleep(0.4)
     kb.write(name_folder)
     pg.press('enter')
+    time.sleep(0.5)
     pg.press('esc', presses=3)
     time.sleep(2.5)
 
@@ -128,23 +129,28 @@ def folder_is_open(folder_names: Iterable[str]) -> bool:
     return False
 
 def open_main_folder():
-    if folder_is_open(["00 - Teste"]):
-        open_folder(cfg.CAMINHO_MODELO_EDD)
-        go_to(cfg.CAMINHO_PAGFLIP)
-    elif folder_is_open(["4 Adianto de novas edições"]):
-        open_folder(cfg.CAMINHO_MODELO_EDD_0)
-        go_to(cfg.CAMINHO_PAGFLIP)
-    elif folder_is_open(["fotos"]):
-        open_folder(cfg.CAMINHO_FOTOS)
-        go_to(cfg.CAMINHO_PAGFLIP)
-    elif folder_is_open(["web"]):
-        open_folder(cfg.CAMINHO_WEB)
-        go_to(cfg.CAMINHO_PAGFLIP)
-    elif folder_is_open(["00 Pagflip"]):
-        open_folder(cfg.CAMINHO_PAGFLIP)
-    else:
-        open_folder(cfg.CAMINHO_PAGFLIP)
+    try:
+        if folder_is_open(["00 - Teste"]):
+            open_folder(cfg.CAMINHO_MODELO_EDD)
+            go_to(cfg.CAMINHO_PAGFLIP)
+        elif folder_is_open(["4 Adianto de novas edições"]):
+            open_folder(cfg.CAMINHO_MODELO_EDD_0)
+            go_to(cfg.CAMINHO_PAGFLIP)
+        elif folder_is_open(["fotos"]):
+            open_folder(cfg.CAMINHO_FOTOS)
+            go_to(cfg.CAMINHO_PAGFLIP)
+        elif folder_is_open(["web"]):
+            open_folder(cfg.CAMINHO_WEB)
+            go_to(cfg.CAMINHO_PAGFLIP)
+        elif folder_is_open(["00 Pagflip"]):
+            open_folder(cfg.CAMINHO_PAGFLIP)
+        else:
+            open_folder(cfg.CAMINHO_PAGFLIP)
 
+        log("All_in_one", "SUCESSO", f"FileManager: Open_main_folder")
+        
+    except Exception as e:
+        log("All_in_one", "ERRO", f"FileManager: Open_main_folder: {str(e)}")
 
 def auto_folders(pasta_nome, modelo_path):
     try:
@@ -160,12 +166,12 @@ def auto_folders(pasta_nome, modelo_path):
         copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
         pg.hotkey('alt', 'up')
         
-        log("FileManager", "sucesso", f"Pasta {pasta_nome} criada")
-        log("All_in_one", "sucesso", f"Pasta {pasta_nome} criada")
+        log("FileManager", "SUCESSO", f"Pasta {pasta_nome} criada")
+        log("All_in_one", "SUCESSO", f"FileManager: pasta {pasta_nome} criada")
         
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")
-        log("All_in_one", "ERRO", f"Erro ao criar pasta: {str(e)}")
+        log("All_in_one", "ERRO", f"FileManager: erro ao criar pasta: {str(e)}")
 
 if __name__ == "__main__":
     # take_file(17)
