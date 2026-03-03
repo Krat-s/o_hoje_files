@@ -53,4 +53,3 @@ def auto_billhead_editions():
 if __name__ == "__main__":
     print('auto_billhead_editions')
     auto_billhead_editions()
-

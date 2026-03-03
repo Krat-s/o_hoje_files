@@ -1008,3 +1008,5 @@ ed at most 2 arguments, got 3"
  2026-03-03, 16:24:09,ERRO,"billhead_editions: modelos da edição 7.056, Segunda-feira não criado. PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
  2026-03-03, 16:24:43,SUCESSO,FileManager: Open_main_folder
  2026-03-03, 16:26:37,SUCESSO,FileManager: Open_main_folder
+ 2026-03-03, 16:34:19,SUCESSO,FileManager: Open_main_folder
+ 2026-03-03, 16:35:17,SUCESSO,FileManager: pasta 7056 - Segunda-feira criada
