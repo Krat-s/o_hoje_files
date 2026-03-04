@@ -1072,3 +1072,160 @@ ed at most 2 arguments, got 3"
  2026-03-04, 01:01:41,SUCESSO,FileManager: Open_main_folder
  2026-03-04, 01:02:24,ERRO,FileManager: erro ao criar pasta: 7068-9 - Fim de semana: Timeout aguardando condição.
  2026-03-04, 01:09:31,SUCESSO,"billhead_editions: modelos da edição 7.068-9, Fim de semana criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.057, Terça-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.058, Quarta-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.059, Quinta-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.060, Sexta-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.061-2, Fim de semana criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.063, Segunda-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.064, Terça-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.065, Quarta-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.066, Quinta-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.067, Sexta-feira criado"
+ 2026-03-04, 15:15:14,SUCESSO,"billhead_editions: modelos da edição 7.068-9, Fim de semana criado"
+ 2026-03-04, 15:16:37,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 15:17:54,SUCESSO,FileManager-auto_folders: pasta 7056 - Segunda-feira criada
+ 2026-03-04, 15:25:00,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 15:25:03,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 15:26:35,ERRO,FileManager-auto_folders: erro ao criar pasta: 7057 - Terça-feira: Timeout aguardando condição.
+ 2026-03-04, 15:26:55,ERRO,"billhead_editions: modelos da edição 7.057, Terça-feira não criado. PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 15:26:59,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 15:33:04,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 15:34:21,SUCESSO,FileManager-auto_folders: pasta 7056 - Segunda-feira criada
+ 2026-03-04, 15:34:21,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 15:34:23,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:13:54,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:14:43,ERRO,"FileManager-auto_folders: erro ao criar pasta: 7056 - Segunda-feira: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:14:43,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 16:14:47,ERRO,"FileManager-auto_folders: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:28:54,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:29:13,ERRO,"FileManager-auto_folders: erro ao criar pasta: 7056 - Segunda-feira: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:29:13,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 16:32:15,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:32:43,ERRO,"FileManager-auto_folders: erro ao criar pasta: 7056 - Segunda-feira: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:32:43,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 16:36:54,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:37:11,SUCESSO,FileManager-auto_folders: pasta 7056 - Segunda-feira criada
+ 2026-03-04, 16:37:11,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 16:37:19,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:37:36,SUCESSO,FileManager-auto_folders: pasta 7057 - Terça-feira criada
+ 2026-03-04, 16:37:36,SUCESSO,"billhead_editions: modelos da edição 7.057, Terça-feira criado"
+ 2026-03-04, 16:37:44,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:38:01,SUCESSO,FileManager-auto_folders: pasta 7058 - Quarta-feira criada
+ 2026-03-04, 16:38:01,SUCESSO,"billhead_editions: modelos da edição 7.058, Quarta-feira criado"
+ 2026-03-04, 16:38:09,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:38:26,SUCESSO,FileManager-auto_folders: pasta 7059 - Quinta-feira criada
+ 2026-03-04, 16:38:26,SUCESSO,"billhead_editions: modelos da edição 7.059, Quinta-feira criado"
+ 2026-03-04, 16:38:35,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:38:51,SUCESSO,FileManager-auto_folders: pasta 7060 - Sexta-feira criada
+ 2026-03-04, 16:38:51,SUCESSO,"billhead_editions: modelos da edição 7.060, Sexta-feira criado"
+ 2026-03-04, 16:39:01,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:39:18,SUCESSO,FileManager-auto_folders: pasta 7061-2 - Fim de semana criada
+ 2026-03-04, 16:39:18,SUCESSO,"billhead_editions: modelos da edição 7.061-2, Fim de semana criado"
+ 2026-03-04, 16:39:29,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:39:46,SUCESSO,FileManager-auto_folders: pasta 7063 - Segunda-feira criada
+ 2026-03-04, 16:39:46,SUCESSO,"billhead_editions: modelos da edição 7.063, Segunda-feira criado"
+ 2026-03-04, 16:39:57,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:40:15,SUCESSO,FileManager-auto_folders: pasta 7064 - Terça-feira criada
+ 2026-03-04, 16:40:15,SUCESSO,"billhead_editions: modelos da edição 7.064, Terça-feira criado"
+ 2026-03-04, 16:40:26,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:40:44,SUCESSO,FileManager-auto_folders: pasta 7065 - Quarta-feira criada
+ 2026-03-04, 16:40:44,SUCESSO,"billhead_editions: modelos da edição 7.065, Quarta-feira criado"
+ 2026-03-04, 16:40:57,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:41:03,ERRO,"FileManager-auto_folders: erro ao criar pasta: 7066 - Quinta-feira: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:41:03,SUCESSO,"billhead_editions: modelos da edição 7.066, Quinta-feira criado"
+ 2026-03-04, 16:41:12,ERRO,"FileManager-auto_folders: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:41:12,ERRO,"FileManager-auto_folders: erro ao criar pasta: 7067 - Sexta-feira: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:41:12,SUCESSO,"billhead_editions: modelos da edição 7.067, Sexta-feira criado"
+ 2026-03-04, 16:41:16,ERRO,"FileManager-auto_folders: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:41:16,ERRO,"FileManager-auto_folders: erro ao criar pasta: 7068-9 - Fim de semana: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+ 2026-03-04, 16:41:16,SUCESSO,"billhead_editions: modelos da edição 7.068-9, Fim de semana criado"
+ 2026-03-04, 16:54:31,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 16:54:46,SUCESSO,FileManager-auto_folders: pasta 7056 - Segunda-feira criada
+ 2026-03-04, 16:54:46,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 16:57:14,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:14:37,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:14:49,SUCESSO,FileManager-auto_folders: pasta 7056 - Segunda-feira criada
+ 2026-03-04, 17:14:49,SUCESSO,"billhead_editions: modelos da edição 7.056, Segunda-feira criado"
+ 2026-03-04, 17:14:52,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:15:03,SUCESSO,FileManager-auto_folders: pasta 7057 - Terça-feira criada
+ 2026-03-04, 17:15:03,SUCESSO,"billhead_editions: modelos da edição 7.057, Terça-feira criado"
+ 2026-03-04, 17:15:07,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:15:18,SUCESSO,FileManager-auto_folders: pasta 7058 - Quarta-feira criada
+ 2026-03-04, 17:15:18,SUCESSO,"billhead_editions: modelos da edição 7.058, Quarta-feira criado"
+ 2026-03-04, 17:15:21,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:15:32,SUCESSO,FileManager-auto_folders: pasta 7059 - Quinta-feira criada
+ 2026-03-04, 17:15:32,SUCESSO,"billhead_editions: modelos da edição 7.059, Quinta-feira criado"
+ 2026-03-04, 17:15:36,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:15:47,SUCESSO,FileManager-auto_folders: pasta 7060 - Sexta-feira criada
+ 2026-03-04, 17:15:47,SUCESSO,"billhead_editions: modelos da edição 7.060, Sexta-feira criado"
+ 2026-03-04, 17:15:49,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:16:00,SUCESSO,FileManager-auto_folders: pasta 7061-2 - Fim de semana criada
+ 2026-03-04, 17:16:00,SUCESSO,"billhead_editions: modelos da edição 7.061-2, Fim de semana criado"
+ 2026-03-04, 17:16:03,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:16:14,SUCESSO,FileManager-auto_folders: pasta 7063 - Segunda-feira criada
+ 2026-03-04, 17:16:14,SUCESSO,"billhead_editions: modelos da edição 7.063, Segunda-feira criado"
+ 2026-03-04, 17:16:18,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:16:29,SUCESSO,FileManager-auto_folders: pasta 7064 - Terça-feira criada
+ 2026-03-04, 17:16:29,SUCESSO,"billhead_editions: modelos da edição 7.064, Terça-feira criado"
+ 2026-03-04, 17:16:32,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:16:43,SUCESSO,FileManager-auto_folders: pasta 7065 - Quarta-feira criada
+ 2026-03-04, 17:16:43,SUCESSO,"billhead_editions: modelos da edição 7.065, Quarta-feira criado"
+ 2026-03-04, 17:16:47,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:16:58,SUCESSO,FileManager-auto_folders: pasta 7066 - Quinta-feira criada
+ 2026-03-04, 17:16:58,SUCESSO,"billhead_editions: modelos da edição 7.066, Quinta-feira criado"
+ 2026-03-04, 17:17:01,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:17:13,SUCESSO,FileManager-auto_folders: pasta 7067 - Sexta-feira criada
+ 2026-03-04, 17:17:13,SUCESSO,"billhead_editions: modelos da edição 7.067, Sexta-feira criado"
+ 2026-03-04, 17:17:16,SUCESSO,FileManager: Open_main_folder
+ 2026-03-04, 17:17:27,SUCESSO,FileManager-auto_folders: pasta 7068-9 - Fim de semana criada
+ 2026-03-04, 17:17:27,SUCESSO,"billhead_editions: modelos da edição 7.068-9, Fim de semana criado"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.056, Segunda-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.057, Terça-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.058, Quarta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.059, Quinta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.060, Sexta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.061-2, Fim de semana não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.063, Segunda-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.064, Terça-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.065, Quarta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.066, Quinta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.067, Sexta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:57:17,ERRO,"billhead_editions: modelos da edição 7.068-9, Fim de semana não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.056, Segunda-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.057, Terça-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.058, Quarta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.059, Quinta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.060, Sexta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.061-2, Fim de semana não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.063, Segunda-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.064, Terça-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.065, Quarta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.066, Quinta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.067, Sexta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 17:59:07,ERRO,"billhead_editions: modelos da edição 7.068-9, Fim de semana não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.056, Segunda-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.057, Terça-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.058, Quarta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.059, Quinta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.060, Sexta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.061-2, Fim de semana não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.063, Segunda-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.064, Terça-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.065, Quarta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.066, Quinta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.067, Sexta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:04,ERRO,"billhead_editions: modelos da edição 7.068-9, Fim de semana não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.056, Segunda-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.057, Terça-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.058, Quarta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.059, Quinta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.060, Sexta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.061-2, Fim de semana não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.063, Segunda-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.064, Terça-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.065, Quarta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.066, Quinta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.067, Sexta-feira não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"
+ 2026-03-04, 18:00:24,ERRO,"billhead_editions: modelos da edição 7.068-9, Fim de semana não criado. 'EdicaoInfo' object has no attribute 'dia_semana_pxadrão'"

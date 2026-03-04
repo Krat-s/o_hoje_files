@@ -31,7 +31,7 @@ def open_main_folder():
         pass
     elif fm.folder_is_open(["4 Adianto de novas edições"]):
         print("4 adianto")
-        fm.open_folder(cfg.CAMINHO_MODELO_EDD_0)
+        fm.open_folder(cfg.CAMINHO_MODELO_EDD)
         fm.go_to(cfg.CAMINHO_PAGFLIP)
     elif fm.folder_is_open(["fotos"]):
         fm.open_folder(cfg.CAMINHO_FOTOS)

@@ -1,14 +1,18 @@
 import pyautogui as pg
 import keyword as kb
 import os
+import time
 
 from Global.wait import wait_until
 from pywinauto import Desktop
 import Global.waits_tesseract as tutl
 
+pg.PAUSE = 0.5
+pg.FAILSAFE = True
 
 #-------------------Explorer-waits
-def wait_explorer_open(timeout=10):
+def wait_explorer_open(min=0.3, timeout=10):
+    time.sleep(min)
     return wait_until(
         lambda: any(
             w.class_name() == "CabinetWClass"
@@ -67,3 +71,13 @@ def text_visible(text, timeout=10):
         lambda: text.lower() in tutl.read_screen().lower(),
         timeout
     )
+
+
+
+# _Verificar funções repetidas de waits
+def explorer_is_open() -> bool:
+    janelas = Desktop(backend="uia").windows()
+    for janela in janelas:
+        if janela.class_name() == "CabinetWClass":
+            return True
+    return False

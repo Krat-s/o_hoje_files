@@ -146,24 +146,28 @@ def check_file_status():
 
 
 if __name__ == "__main__":
-    def cancel_qk():
-        # pg.moveTo(829, 419)
-        # time.sleep(0.2)
-        # pg.click()
-        print("Imagem Localizada")
-        time.sleep(0.1)
+    # def cancel_qk():
+    #     pg.moveTo(829, 419)
+    #     time.sleep(0.2)
+    #     pg.click()
+    #     print("Imagem Localizada")
+    #     time.sleep(0.1)
+    #     wait_until_text_appears('Este destino já contém uma pasta chamada '), timeout=3, on_found=pg.press()
+    
 
-    # ok = wait_until_text_appears("already open", cfg.already_open_full_r, check_interval=0.8, timeout=10, on_found=cancel_qk, run_once=True)
     # if ok:
     #     cancel_qk()
     #     print("Evento ocorreu dentro do timeout")
     # else:
     #     print("Timeout: texto não apareceu")
-    # time.sleep(2)
+
+    time.sleep(2)
     # pg.moveTo(10, 10, duration=2)
     # pg.moveTo(100, 100, duration=2)
     # pg.click()
     # pg.moveTo(500, 500, duration=2)
+
+    
 
 
     # cancel_qk()

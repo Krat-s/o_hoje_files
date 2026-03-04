@@ -16,28 +16,25 @@ from Global.Logs.logs import log
 import Global.waits_checks as wc
 from Global.waits_tesseract import wait_until_img_appears
 
-
-pg.PAUSE = 0.5
+pg.PAUSE = 0.8
 pg.FAILSAFE = True
 
 def open_folder(endereco):
     os.startfile(endereco)
     wc.wait_explorer_open()
     utl.max_windows()
-    pg.click(cfg.center_x, cfg.center_y)
 
 def go_to(específico=None):
     pg.hotkey(*utl.atalho_endereço())
-    time.sleep(0.5)
+    time.sleep(0.2)
     if específico:
         kb.write(específico) 
     pg.press('enter')
-    time.sleep(0.8)
+    time.sleep(1)
 
 def make_folder(name_folder, in_local=None):
     if in_local:
         go_to(in_local)
-    time.sleep(0.4)
     utl.max_windows()
     time.sleep(1)
     pg.click(cfg.center_x, cfg.center_y)
@@ -45,21 +42,22 @@ def make_folder(name_folder, in_local=None):
     time.sleep(0.4)
     kb.write(name_folder)
     pg.press('enter')
+    time.sleep(1)
+    pg.press('s')
     time.sleep(0.5)
     pg.press('esc', presses=3)
+    pg.press('f5')
     time.sleep(2.5)
 
 def take_file(arquivo):
-    wc.wait_explorer_open()
+    wc.wait_explorer_open(15)
     kb.press_and_release('ctrl+f')
     time.sleep(0.5)
     kb.write(str(arquivo))
     wait_until_img_appears(r"C:\Users\terravista.JORNALOHOJE\Documents\GitHub\o_hoje_files\Backup\Prints\(11, 5, 27, 24) selecionado em17h28.png", region=(11, 5, 27, 24), check_interval=1, timeout=15, on_found=None, run_once=False)
     pg.click(cfg.center_x, cfg.center_y)
     pg.press('down')
-    time.sleep(0.3)
     pg.press('down')
-    time.sleep(0.3)
     kb.press_and_release('enter')
 
 def copy_files(caminho, folder_name, _from=None):
@@ -68,25 +66,14 @@ def copy_files(caminho, folder_name, _from=None):
     time.sleep(0.5)
     utl.max_windows()
     pg.click(cfg.center_x, cfg.center_y + 100)
-    time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
-    time.sleep(0.3)
     pg.hotkey('ctrl', 'c')
     time.sleep(0.5)
     go_to(f"{caminho}\\{folder_name}")
-    wc.wait_folder_open(folder_name)
+    wc.wait_folder_open(folder_name, timeout=20)
     pg.hotkey('ctrl', 'v')
+    pg.hotkey('alt', 's')
     time.sleep(4)
-
-def explorer_is_open() -> bool:
-    """
-    Verifica se há alguma janela do Explorador de Arquivos aberta.
-    """
-    janelas = Desktop(backend="uia").windows()
-    for janela in janelas:
-        if janela.class_name() == "CabinetWClass":
-            return True
-    return False
 
 
 def get_explorer_texts(janela) -> list[str]:
@@ -128,9 +115,10 @@ def folder_is_open(folder_names: Iterable[str]) -> bool:
                 
     return False
 
+
 def open_main_folder():
     try:
-        if folder_is_open(["00 - Teste"]):
+        if folder_is_open(["00 - modelo"]):
             open_folder(cfg.CAMINHO_MODELO_EDD)
             go_to(cfg.CAMINHO_PAGFLIP)
         elif folder_is_open(["4 Adianto de novas edições"]):
@@ -150,7 +138,8 @@ def open_main_folder():
         log("All_in_one", "SUCESSO", f"FileManager: Open_main_folder")
         
     except Exception as e:
-        log("All_in_one", "ERRO", f"FileManager: Open_main_folder: {str(e)}")
+        log("All_in_one", "ERRO", f"FileManager-auto_folders: {str(e)}")
+
 
 def auto_folders(pasta_nome, modelo_path):
     try:
@@ -167,13 +156,13 @@ def auto_folders(pasta_nome, modelo_path):
         pg.hotkey('alt', 'up')
         
         log("FileManager", "SUCESSO", f"Pasta {pasta_nome} criada")
-        log("All_in_one", "SUCESSO", f"FileManager: pasta {pasta_nome} criada")
+        log("All_in_one", "SUCESSO", f"FileManager-auto_folders: pasta {pasta_nome} criada")
         
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")
-        log("All_in_one", "ERRO", f"FileManager: erro ao criar pasta: {pasta_nome}: {str(e)}")
+        log("All_in_one", "ERRO", f"FileManager-auto_folders: erro ao criar pasta: {pasta_nome}: {str(e)}")
 
 if __name__ == "__main__":
     # take_file(17)
     # make_folder('Sopa de feijão')
-    print(pasta_nome := "Teste")
+    print("FM")

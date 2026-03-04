@@ -23,7 +23,7 @@ pg.FAILSAFE = True
 def auto_billhead_editions():
     for info in desync.gerar_edicoes_formatadas():
         try:
-            weekday = info.dia_semana_padrão
+            weekday = info.dia_semana_pxadrão
             pasta_nome = info.pasta_nome
 
             modelo_path = {
@@ -41,15 +41,14 @@ def auto_billhead_editions():
             aply_17(info)
             auto_date_all_non_especial_pages(info)
             aply_1(info)
+
             log("billhead", "SUCESSO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
             log("All_in_one", "SUCESSO", f"billhead_editions: modelos da edição {info.edicao_formatada}, {info.dia_semana} criado") 
-
 
         except Exception as e:
             log("billhead_editions", "ERRO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
             log("All_in_one", "ERRO", f"billhead_editions: modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
 
-
 if __name__ == "__main__":
-    print('auto_billhead_editions')
+    print('auto_billhead_editions iniciado')
     auto_billhead_editions()
