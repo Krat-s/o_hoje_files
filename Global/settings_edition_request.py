@@ -6,7 +6,7 @@ sys.path.append(raiz_projeto)
 
 from Global.Logs.logs import log
 
-quantidade_repeticoes = 1
+quantidade_repeticoes = 2
 edicao_inicial = 7056
 
 total_edicoes = quantidade_repeticoes * 6

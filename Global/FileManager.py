@@ -39,7 +39,7 @@ def make_folder(name_folder, in_local=None):
         go_to(in_local)
     time.sleep(0.4)
     utl.max_windows()
-    time.sleep(0.4)
+    time.sleep(1)
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
     time.sleep(0.4)
@@ -171,9 +171,9 @@ def auto_folders(pasta_nome, modelo_path):
         
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")
-        log("All_in_one", "ERRO", f"FileManager: erro ao criar pasta: {str(e)}")
+        log("All_in_one", "ERRO", f"FileManager: erro ao criar pasta: {pasta_nome}: {str(e)}")
 
 if __name__ == "__main__":
     # take_file(17)
     # make_folder('Sopa de feijão')
-    open_main_folder()
+    print(pasta_nome := "Teste")
