@@ -23,7 +23,7 @@ pg.FAILSAFE = True
 def auto_billhead_editions():
     for info in desync.gerar_edicoes_formatadas():
         try:
-            weekday = info.dia_semana_pxadrão
+            weekday = info.dia_semana_padrão
             pasta_nome = info.pasta_nome
 
             modelo_path = {
