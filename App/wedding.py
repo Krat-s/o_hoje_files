@@ -141,6 +141,9 @@ def auto_marriage():
     janela.mainloop()
 
 if __name__ == "__main__":
-    auto_marriage()
+    # auto_marriage()
 
     #Faltando corrigir o check_status na máquina do marketing 
+    utl.open_software(1)
+    utl.open_web_day_0()
+    take_file('13_16')

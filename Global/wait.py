@@ -1,6 +1,6 @@
 import time
 
-def wait_until(condition_fn, timeout=10, interval=0.2, on_timeout=None):
+def wait_until(condition_fn, timeout=10, interval=0.2, on_timeout=None, condition=None):
     """
     Espera até que condition_fn retorne True ou até estourar o timeout.
     """
@@ -9,6 +9,8 @@ def wait_until(condition_fn, timeout=10, interval=0.2, on_timeout=None):
     while time.time() - start < timeout:
         try:
             if condition_fn():
+                print(f'condição: {condition} confirmada')
+                time.sleep(0.5)
                 return True
         except Exception:
             pass
@@ -18,4 +20,4 @@ def wait_until(condition_fn, timeout=10, interval=0.2, on_timeout=None):
     if on_timeout:
         on_timeout()
 
-    raise TimeoutError("Timeout aguardando condição.")
+    raise TimeoutError(f"Timeout aguardando condição: {condition}")

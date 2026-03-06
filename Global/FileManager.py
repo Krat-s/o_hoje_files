@@ -5,7 +5,6 @@ import pyautogui as pg
 import keyboard as kb
 from pywinauto import Desktop
 from typing import Iterable
-import pyperclip
 
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
@@ -14,15 +13,17 @@ import Global.settings as cfg
 import Global.utils as utl
 from Global.Logs.logs import log
 import Global.waits_checks as wc
-from Global.waits_tesseract import wait_until_img_appears
 
 pg.PAUSE = 0.8
 pg.FAILSAFE = True
+
+
 
 def open_folder(endereco):
     os.startfile(endereco)
     wc.wait_explorer_open()
     utl.max_windows()
+
 
 def go_to(específico=None):
     pg.hotkey(*utl.atalho_endereço())
@@ -31,6 +32,7 @@ def go_to(específico=None):
         kb.write(específico) 
     pg.press('enter')
     time.sleep(1)
+
 
 def make_folder(name_folder, in_local=None):
     if in_local:
@@ -49,12 +51,13 @@ def make_folder(name_folder, in_local=None):
     pg.press('f5')
     time.sleep(2.5)
 
+
 def take_file(arquivo):
-    wc.wait_explorer_open(15)
+    wc.wait_explorer_open(0.5, 15)
     kb.press_and_release('ctrl+f')
     time.sleep(0.5)
     kb.write(str(arquivo))
-    wait_until_img_appears(r"C:\Users\terravista.JORNALOHOJE\Documents\GitHub\o_hoje_files\Backup\Prints\(11, 5, 27, 24) selecionado em17h28.png", region=(11, 5, 27, 24), check_interval=1, timeout=15, on_found=None, run_once=False)
+    wc.wait_image(r"C:\Users\terravista.JORNALOHOJE\Documents\GitHub\o_hoje_files\Backup\Prints\(11, 5, 27, 24) selecionado em17h28.png", timeout=15)
     pg.click(cfg.center_x, cfg.center_y)
     pg.press('down')
     pg.press('down')

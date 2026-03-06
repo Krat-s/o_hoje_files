@@ -1,23 +1,20 @@
 import pyautogui as pg  
 import time
 import pytesseract
-import os
-import sys
 import threading
 
-import os
-import sys
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
-import Global.settings as cfg
-import Global.utils as utl
+import settings as cfg
+import utils as utl
+
 
 def get_screen_text(region=None):
     screenshot = pg.screenshot(region=region)
     return pytesseract.image_to_string(screenshot)
 
+
 def _current_time():
     return time.monotonic()
+
 
 def wait_until_text_appears(text, region=None, check_interval=1, timeout=None, on_found=None, run_once=False):
     """Espera até o texto aparecer. Retorna True se encontrado, False se timeout.
@@ -45,8 +42,10 @@ def wait_until_text_appears(text, region=None, check_interval=1, timeout=None, o
                 executed = True
             return True
         if deadline is not None and _current_time() > deadline:
+            print(  f"Timeout aguardando texto: '{text}'")
             return False
         time.sleep(check_interval)
+
 
 def wait_until_text_disappears(text, region=None, check_interval=1, timeout=None):
     """Espera até o texto desaparecer. Retorna True se desapareceu, False se timeout."""
@@ -59,16 +58,19 @@ def wait_until_text_disappears(text, region=None, check_interval=1, timeout=None
             return False
         time.sleep(check_interval)
 
+
 def get_image(img_path, region=None, confidence=0.8):
     """Retorna True se a imagem (arquivo) for encontrada na tela."""
     try:
         loc = pg.locateOnScreen(img_path, region=region, confidence=confidence)
         return loc is not None
     except Exception as e:
-        print(f"Erro ao localizar imagem: {e}")
+        print(f"Tesseract: Erro ao localizar imagem: {e}")
         return False
 
+
 def wait_until_img_appears(img_path, region=None, check_interval=1, timeout=None, on_found=None, run_once=False):
+    '''Espera até que a imagem apareça na tela dentro do timeout. Essa função permite executar outros comandos caso a imagem seja encontrada, False se timeout.'''
     deadline = None if timeout is None else _current_time() + timeout
     executed = False
     time.sleep(0.5)
@@ -116,6 +118,7 @@ def start_background_wait(target_fn, *args, callback_on_complete=None, daemon=Tr
     return t
 
 
+
 # ---- função para verificar e resolver mensagens de erro ----
 def check_file_status():
     """Verifica se há erros de arquivo usando OCR e retorna um status"""
@@ -160,12 +163,13 @@ if __name__ == "__main__":
     #     print("Evento ocorreu dentro do timeout")
     # else:
     #     print("Timeout: texto não apareceu")
-
-    time.sleep(2)
-    # pg.moveTo(10, 10, duration=2)
-    # pg.moveTo(100, 100, duration=2)
-    # pg.click()
-    # pg.moveTo(500, 500, duration=2)
+    # cancel = lambda: print("Imagem Localizada")
+    # wait_until_text_appears(
+    #     "already open",
+    #     check_interval=0.5, timeout=5,
+    #     on_found=cancel, run_once=True
+    # )
+    utl.open_software(cfg.explorer)
 
     
 
