@@ -36,9 +36,10 @@ def open_Brownser():
         # driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao)
         # time.sleep(1)
         # botao.click()
-        if
+        if #login_successful_condition:  # Substitua por uma condição que verifique se o login foi bem-sucedido
         
-            Faça login
+            # Aguarde um pouco para garantir que a página esteja totalmente carregada
+            # Execute o código para mover as pastas
             
         print("✅ Botão clicado com sucesso!")
         # open_Brownser()

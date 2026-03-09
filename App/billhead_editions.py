@@ -35,7 +35,6 @@ def auto_billhead_editions():
             )
 
             auto_folders(pasta_nome, modelo_path)
-            time.sleep(1)
             
             utl.open_software(cfg.quark)
             aply_17(info)

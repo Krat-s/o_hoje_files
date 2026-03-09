@@ -62,6 +62,7 @@ def take_file(arquivo):
     pg.press('down')
     pg.press('down')
     kb.press_and_release('enter')
+    time.sleep(0.5)
 
 def copy_files(caminho, folder_name, _from=None):
     if _from:
@@ -160,6 +161,7 @@ def auto_folders(pasta_nome, modelo_path):
         
         log("FileManager", "SUCESSO", f"Pasta {pasta_nome} criada")
         log("All_in_one", "SUCESSO", f"FileManager-auto_folders: pasta {pasta_nome} criada")
+        time.sleep(1)
         
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")

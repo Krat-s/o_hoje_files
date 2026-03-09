@@ -7,7 +7,6 @@ import time
 
 '''pretend to be a automation for bot clicking in site, manual adjust'''
 
-# Configurações
 URL_JORNAL = "https://ohoje.com"
 BOTAO_ID_1 = "placement_1013993_0" #Principal
 BOTAO_ID_2 = "placement_1013994_0_i" #Lateral

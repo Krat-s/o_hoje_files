@@ -1,9 +1,13 @@
 import os
+import sys
 
 import pyautogui as pg
 import time
 
-from wait import wait_until
+modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(modulo_path)
+
+from Global.wait import wait_until
 from pywinauto import Desktop
 
 
