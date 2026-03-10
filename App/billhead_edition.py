@@ -6,12 +6,12 @@ import pyautogui as pg
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
-import Global.settings as cfg
+import Global.settings.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as desync
 from App.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
-from Global.FileManager import auto_folders
-from Global.data_formatador import formatar_data
+from Global.file_manager import auto_folders
+from Global.module.data_formatador import formatar_data
 from Global.Logs.logs import log
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------

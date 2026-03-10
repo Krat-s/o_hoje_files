@@ -9,7 +9,7 @@ from typing import Iterable
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
-import Global.settings as cfg
+import Global.settings.settings as cfg
 import Global.utils as utl
 from Global.Logs.logs import log
 import Global.waits_checks as wc
@@ -63,6 +63,7 @@ def take_file(arquivo):
     pg.press('down')
     kb.press_and_release('enter')
     time.sleep(0.5)
+
 
 def copy_files(caminho, folder_name, _from=None):
     if _from:
@@ -166,8 +167,3 @@ def auto_folders(pasta_nome, modelo_path):
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")
         log("All_in_one", "ERRO", f"FileManager-auto_folders: erro ao criar pasta: {pasta_nome}: {str(e)}")
-
-if __name__ == "__main__":
-    # take_file(17)
-    # make_folder('Sopa de feijão')
-    print("FM")

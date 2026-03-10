@@ -16,7 +16,7 @@ QTD_CB2 = int(QTD_CB1 / 2)
 QTD_CB3 = int(QTD_CB2 / 2 + 1)
 
 # Função que cada navegador executa
-def abrir_navegador_e_clickar(btt):
+def open_browser_and_click(btt):
     chrome_options = Options()
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(URL_JORNAL)
@@ -33,43 +33,47 @@ def abrir_navegador_e_clickar(btt):
         print(f"⚠️ Erro ao clicar no botão: {e}")
 
     finally:
-        time.sleep(5)  # Tempo para visualizar o resultado
+        time.sleep(5)
         driver.quit()
 
-# Cria e inicia as threads do Principal
-threads = []
-for _ in range(QTD_CB1):
-    t = Thread(target=abrir_navegador_e_clickar(BOTAO_ID_1))
-    t.start()
-    threads.append(t)
 
-# Aguarda todas as threads terminarem
-for t in threads:
-    t.join()
+def clickar_button_1():
+    '''Creates and starts Main threads'''
+    threads = []
+    for _ in range(QTD_CB1):
+        t = Thread(target=open_browser_and_click(BOTAO_ID_1))
+        t.start()
+        threads.append(t)
 
-print("🏁 Botão 1 clickado")
+    # Aguarda todas as threads terminarem
+    for t in threads:
+        t.join()
+    print("🏁 Botão 1 clickado")
 
-# Cria e inicia as threads do lateral
-threads = []
-for _ in range(QTD_CB2):
-    t = Thread(target=abrir_navegador_e_clickar(BOTAO_ID_2))
-    t.start()
-    threads.append(t)
-for t in threads:
-    t.join()
 
-print("🏁 Botão 2 clickado")
+def clickar_button_2():
+    threads = []
+    for _ in range(QTD_CB2):
+        t = Thread(target=open_browser_and_click(BOTAO_ID_2))
+        t.start()
+        threads.append(t)
+        
+    for t in threads:
+        t.join()
+    print("🏁 Botão 2 clickado")
 
-# Cria e inicia as threads do lateral
-threads = []
-for _ in range(QTD_CB3):
-    t = Thread(target=abrir_navegador_e_clickar(BOTAO_ID_3))
-    t.start()
-    threads.append(t)
-for t in threads:
-    t.join()
 
-print("🏁 Botão 3 clickado")
+def clickar_button_3():
+    threads = []
+    for _ in range(QTD_CB3):
+        t = Thread(target=open_browser_and_click(BOTAO_ID_3))
+        t.start()
+        threads.append(t)
+    for t in threads:
+        t.join()
+    print("🏁 Botão 3 clickado")
 
+
+clickar_button_3()
 
 

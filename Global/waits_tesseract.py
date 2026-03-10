@@ -1,11 +1,11 @@
-import pyautogui as pg  
 import time
+import pyautogui as pg  
 import pytesseract
 import threading
 
-import settings as cfg
+import settings.settings as cfg
 import utils as utl
-
+from Logs.logs import log
 
 def get_screen_text(region=None):
     screenshot = pg.screenshot(region=region)
@@ -38,7 +38,7 @@ def wait_until_text_appears(text, region=None, check_interval=1, timeout=None, o
                 try:
                     on_found() # chama a função de callback sem argumentos
                 except Exception as e:
-                    print(f"Erro no callback on_found: {e}")
+                    log("WaitsTesseract", "ERRO", f"Erro na função {__name__} callback on_found: {e}")
                 executed = True
             return True
         if deadline is not None and _current_time() > deadline:
@@ -118,7 +118,6 @@ def start_background_wait(target_fn, *args, callback_on_complete=None, daemon=Tr
     return t
 
 
-
 # ---- função para verificar e resolver mensagens de erro ----
 def check_file_status():
     """Verifica se há erros de arquivo usando OCR e retorna um status"""
@@ -148,32 +147,9 @@ def check_file_status():
 
 
 
-if __name__ == "__main__":
-    # def cancel_qk():
-    #     pg.moveTo(829, 419)
-    #     time.sleep(0.2)
-    #     pg.click()
-    #     print("Imagem Localizada")
-    #     time.sleep(0.1)
-    #     wait_until_text_appears('Este destino já contém uma pasta chamada '), timeout=3, on_found=pg.press()
-    
+def outra_funcao():
+    print(f"Nome: {outra_funcao.__name__}")
+    log("relatorio", "sucesso", f"!")
 
-    # if ok:
-    #     cancel_qk()
-    #     print("Evento ocorreu dentro do timeout")
-    # else:
-    #     print("Timeout: texto não apareceu")
-    # cancel = lambda: print("Imagem Localizada")
-    # wait_until_text_appears(
-    #     "already open",
-    #     check_interval=0.5, timeout=5,
-    #     on_found=cancel, run_once=True
-    # )
-    utl.open_software(cfg.explorer)
-
-    
-
-
-    # cancel_qk()
-    
-
+outra_funcao()
+# Saída: Nome: outra_funcao

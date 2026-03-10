@@ -13,7 +13,7 @@ sys.path.append(raiz_projeto)
 import Global.utils as utl
 import Global.data_edition_sync as sy_de
 import App.modulos_quark.utils_quark as utlq
-from Global.FileManager import take_file
+from Global.file_manager import take_file
 from Global.Logs.logs import log
 
 pg.PAUSE = 0.3 

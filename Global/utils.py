@@ -9,9 +9,9 @@ import time
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-import Global.settings as cfg
+import Global.settings.settings as cfg
 import Global.data_edition_sync as sy_de
-from Global.WinManager import check_windows
+from Global.settings.win_manager import check_windows
 
 
 def press_repeat(key, n):
@@ -37,6 +37,8 @@ def open_software(numero):
     kb.press_and_release('win+s')
     time.sleep(0.5)
     kb.press_and_release(f"win+{str(numero)}")
+    time.sleep(0.5)
+
 
 
 # ---------------------------- functions explorer (server journal) ----------------------------

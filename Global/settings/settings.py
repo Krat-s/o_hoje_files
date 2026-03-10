@@ -3,12 +3,12 @@ import locale
 import os
 import sys
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(raiz_projeto)
 
-from Web.modulos_web import random_number as rn
+from Web.modules_web import random_number as rn
 import Global.data_edition_sync as sy_de
-from Global.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
+from Global.settings.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'

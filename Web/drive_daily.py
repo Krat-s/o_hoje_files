@@ -13,9 +13,9 @@ sys.path.append(raiz_path)
 import pyautogui as pg
 import keyboard as kb
 import Global.utils as utl
-import Global.settings as cfg
+import Global.settings.settings as cfg
 import Global.data_edition_sync as sy_de
-import Global.data_formatador as fd
+import Global.module.data_formatador as fd
 
 
 pg.PAUSE = 0.5

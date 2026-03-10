@@ -11,7 +11,7 @@ sys.path.append(modulo_path)
 import App.modulos_quark.utils_quark as utlq
 
 from App.modulos_quark.utils_quark import close_page
-import Global.settings as cfg
+import Global.settings.settings as cfg
 import Global.utils as utl
 import Global.data_edition_sync as desync
 from typing import Protocol

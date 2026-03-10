@@ -1,35 +1,31 @@
+import os
+import sys
 import time
 import keyboard as kb
 import pyautogui as pg
-import os
-import sys
 
 raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_path)
 
-import Global.settings as cfg
+import Global.settings.settings as cfg
 import Global.utils as ut
 import Global.data_edition_sync as desync
 
-# ------------------------------------------------------------------------- CONFIGURAÇÕES
-pg.PAUSE = 0.4
+# ------------------------------------------------------------------------- Settings
+pg.PAUSE = 0.7
 pg.FAILSAFE = True
 
-# ------------------------------------------------------------------------- FUNÇÕES DE AUTOMAÇÃO 
-def take_emails():
+# ------------------------------------------------------------------------- Functions 
+def take_receivers():
     """Captura os emails de um arquivo no VSCode"""
     ut.open_software(cfg.vscode)  # Verificar se é o app certo (VSCode)
-    time.sleep(1.5)
+    time.sleep(1.2)
     pg.click(cfg.center_x, cfg.center_y)
-    time.sleep(0.3)
     pg.hotkey('ctrl', 'o')
-    time.sleep(0.3)
-    pg.write('ar')
-    time.sleep(0.3)
+    pg.write('archives')
     pg.press('down')
-    time.sleep(0.3)
     pg.press('enter')
-    pg.write('ema')
+    pg.write('emails_alterado')
     pg.press('down')
     pg.press('enter')
     time.sleep(0.5)
@@ -39,6 +35,7 @@ def take_emails():
     time.sleep(0.5)
     pg.hotkey('ctrl', 'f4')
 
+
 def shortcut_send_emails():
     """Atalho para abrir campo de envio no Gmail"""
     pg.press('esc')
@@ -47,7 +44,8 @@ def shortcut_send_emails():
     pg.hotkey('ctrl', 'shift', 'b')
     time.sleep(0.5)
 
-def enviar_emails_para_leitores(edicao):
+
+def send_emails_to_readers(edicao):
     """Simula envio de emails com conteúdo da edição"""
     shortcut_send_emails()
     pg.hotkey('ctrl', 'v')
@@ -58,7 +56,8 @@ def enviar_emails_para_leitores(edicao):
     pg.press('esc')
     time.sleep(1)
 
-def enviar_para_grafica(edicao, parte):
+
+def send_for_graphic(edicao, parte):
     """Simula envio para gráfica com parte específica da edição"""
     pg.press('c')
     shortcut_send_emails()
@@ -72,17 +71,13 @@ def enviar_para_grafica(edicao, parte):
     pg.press('esc')
     time.sleep(1)
 
-def auto_rascunhos():
+
+def auto_drafts():
+    take_receivers()
+    ut.open_software(cfg.opera)
     for info in desync.gerar_edicoes_formatadas():
         ed = info.edicao_formatada
-        enviar_para_grafica(ed, "básico")
-        enviar_para_grafica(ed, "resto")
-        enviar_emails_para_leitores(ed)
-        time.sleep(2)
-        
-
-if __name__ == "__main__":
-    time.sleep(2)
-    take_emails()
-    ut.open_software(cfg.opera) 
-    auto_rascunhos()
+        send_for_graphic(ed, "básico")
+        send_for_graphic(ed, "resto")
+        send_emails_to_readers(ed)
+        time.sleep(1)

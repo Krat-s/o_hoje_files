@@ -1,4 +1,4 @@
-from ..relatório import quantidade_de_numeros
+from Tasks.report import quantidade_de_numeros
 
 def formatar_numero(num):
     """Formata número com ponto como separador de milhar: 6794 → 6.794"""
@@ -16,6 +16,7 @@ def gerar_n(inicial):
         inicial += 1
 
     return edicoes
+
 
 # 🧪 Teste didático
 if __name__ == "__main__":

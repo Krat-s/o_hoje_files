@@ -1,0 +1,10 @@
+data,hora,origem,status,mensagem
+2026-03-10,17:52:01,outra_funcao,sucesso,!
+2026-03-10,17:54:04,outra_funcao,sucesso,!
+2026-03-10,17:54:53,sucesso,outra_funcao,!
+2026-03-10,17:57:12,sucesso,outra_funcao,!
+2026-03-10,17:57:34,sucesso,"outra_funcao, sucesso",!
+2026-03-10,17:59:15,sucesso,"waits_tesseract.py, outra_funcao",!
+2026-03-10,17:59:28,sucesso,waits_tesseract.py - outra_funcao,!
+2026-03-10,18:00:17,sucesso,!,waits_tesseract.py - outra_funcao
+2026-03-10,18:01:03,sucesso,!,waits_tesseract.py >> outra_funcao
