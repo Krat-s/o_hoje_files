@@ -6,8 +6,8 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from Global.module.edicao_formatador import gerar_edicoes, formatar_edicao, formatar_numero
-from Global.module.data_formatador import formatar_data
+from Global.module.edition_formatter import gerar_edicoes, formatar_edicao, formatar_numero
+from Global.module.data_formatter import formatar_data
 from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from Global.module.edition_info import EdicaoInfo
 

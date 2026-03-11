@@ -6,7 +6,7 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(raiz_projeto)
 
-from Web.modules_web import random_number as rn
+from Global.module.gen_randon_numbers import random_number as rn
 import Global.data_edition_sync as sy_de
 from Global.settings.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
 
@@ -26,7 +26,7 @@ TIMETOCLOSE = 6
 TIMEEXPPDF = 7
 
 # ------------------------------------------------------------------------- Web_botting
-acessos_B1 = rn.gerar_numero(0, 3)
+acessos_B1 = rn.generate_number(0, 3)
 acessos_B2 = int(acessos_B1 / 2 + 1)
 acessos_B3 = int(acessos_B2 / 2)
 acessos_H1 = 1
@@ -78,6 +78,8 @@ def stats():
     print(f".. Criando modelo de {total_edicoes} edições")
     print(".....")
 
+
 if __name__ == "__main__":
     stats()
     print(sy_de.EDD)
+

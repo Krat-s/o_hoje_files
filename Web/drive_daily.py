@@ -15,7 +15,7 @@ import keyboard as kb
 import Global.utils as utl
 import Global.settings.settings as cfg
 import Global.data_edition_sync as sy_de
-import Global.module.data_formatador as fd
+import Global.module.data_formatter as fd
 
 
 pg.PAUSE = 0.5

@@ -1,9 +1,7 @@
 import locale
-import time
-import pyautogui as pg
 from datetime import datetime, timedelta
 
-# Configura o locale para português do Brasil
+# Configura o locale para português do Brasil (não parece estar certo, talvez considere remover esa libração para evitar confusões)
 locale.setlocale(locale.LC_TIME, "pt_BR.utf8")
 
 # Variáveis auxiliares
@@ -12,10 +10,11 @@ terca_babugado = "terça-feira"
 
 # Função auxiliar para verificar fim de semana
 def saturday_(data):
-    return data.weekday() in [5]  # saturday
+    return data.weekday() in [5] 
 
-def eh_domingo(data):
+def sunday_(data):
     return data.weekday() in [6]
+
 
 # Função principal
 def formatar_data(data, tipo="completo"):
@@ -30,7 +29,7 @@ def formatar_data(data, tipo="completo"):
 
     # Tipo: dia da semana
     if tipo == "dia_semana":
-        if eh_domingo(data):
+        if sunday_(data):
             return "Domingo"
         if saturday_(data):
             return "Fim de semana"
@@ -120,8 +119,6 @@ def main():
         ("Virada de ano 38", formatar_data(datetime(2038, 12, 31))),
         ("Virada de ano 39", formatar_data(datetime(2039, 12, 31))),
         ("Virada de ano 40", formatar_data(datetime(2040, 12, 31))),
-
-
 
         ("Virada de mês random", formatar_data(datetime(2025, 5, 31))),
         ("Dia específico", formatar_data(datetime(2028, 5, 25))),

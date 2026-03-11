@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from threading import Thread
 import time
@@ -74,6 +73,8 @@ def clickar_button_3():
     print("🏁 Botão 3 clickado")
 
 
-clickar_button_3()
 
-
+if __name__ == "__main__":
+    clickar_button_3()
+    clickar_button_2()
+    clickar_button_1()
