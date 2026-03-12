@@ -6,7 +6,7 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(raiz_projeto)
 
-from Global.module.gen_randon_numbers import random_number as rn
+from Global.module import gen_randon_numbers as rn
 import Global.data_edition_sync as sy_de
 from Global.settings.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
 

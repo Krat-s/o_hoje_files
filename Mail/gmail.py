@@ -10,6 +10,7 @@ sys.path.append(raiz_path)
 import Global.settings.settings as cfg
 import Global.utils as ut
 import Global.data_edition_sync as desync
+from Global.Logs.logs import log
 
 # ------------------------------------------------------------------------- Settings
 pg.PAUSE = 0.7
@@ -17,23 +18,32 @@ pg.FAILSAFE = True
 
 # ------------------------------------------------------------------------- Functions 
 def take_receivers():
-    """Captura os emails de um arquivo no VSCode"""
-    ut.open_software(cfg.vscode)  # Verificar se é o app certo (VSCode)
-    time.sleep(1.2)
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.hotkey('ctrl', 'o')
-    pg.write('archives')
-    pg.press('down')
-    pg.press('enter')
-    pg.write('emails_alterado')
-    pg.press('down')
-    pg.press('enter')
-    time.sleep(0.5)
-    pg.click(cfg.center_x, cfg.center_y)
-    pg.hotkey('ctrl', 'a')
-    pg.hotkey('ctrl', 'c')
-    time.sleep(0.5)
-    pg.hotkey('ctrl', 'f4')
+    """Capture emails from a file in VSCode"""
+    try:
+        ut.open_software(cfg.vscode)  # Check if it's the right app (VSCode)
+        time.sleep(1.2)
+        pg.click(cfg.center_x, cfg.center_y)
+        pg.hotkey('ctrl', 'o')
+        pg.write('archives')
+        pg.press('down')
+        pg.press('enter')
+        pg.write('emails_alterado')
+        pg.press('down')
+        pg.press('enter')
+        time.sleep(0.5)
+        pg.click(cfg.center_x, cfg.center_y)
+        pg.hotkey('ctrl', 'a')
+        pg.hotkey('ctrl', 'c')
+        time.sleep(0.5)
+        pg.hotkey('ctrl', 'f4')
+        
+        log("All_in_one", "SUCESSO", "Emails copiados")
+        log("gmail", "SUCESSO", "Emails copiados")
+
+    except Exception as e:
+        erro_msg = f"Falha ao pegar emails: {str(e)}"
+        log("All_in_one", "ERRO", erro_msg)
+        log("gmail", "ERRO", erro_msg)
 
 
 def shortcut_send_emails():
@@ -47,29 +57,47 @@ def shortcut_send_emails():
 
 def send_emails_to_readers(edicao):
     """Simula envio de emails com conteúdo da edição"""
-    shortcut_send_emails()
-    pg.hotkey('ctrl', 'v')
-    time.sleep(0.9)  
-    pg.press('tab')
-    time.sleep(0.3)  
-    kb.write(f"Segue edição {edicao} do jornal O Hoje")
-    pg.press('esc')
-    time.sleep(1)
+    try:    
+        shortcut_send_emails()
+        pg.hotkey('ctrl', 'v')
+        time.sleep(0.9)  
+        pg.press('tab')
+        time.sleep(0.3)  
+        kb.write(f"Segue edição {edicao} do jornal O Hoje")
+        pg.press('esc')
+        time.sleep(1)
+
+        log("All_in_one", "SUCESSO", "Rascunhos para leitore criados")
+        log("gmail", "SUCESSO", "Rascunhos para leitores criados")
+
+    except Exception as e:
+        erro_msg = f"Falha ao criar rascunhos para leitores: {str(e)}"
+        log("All_in_one", "ERRO", erro_msg)
+        log("gmail", "ERRO", erro_msg)
 
 
 def send_for_graphic(edicao, parte):
     """Simula envio para gráfica com parte específica da edição"""
-    pg.press('c')
-    shortcut_send_emails()
-    kb.write('contas')
-    pg.press('enter')
-    pg.write('grafica')
-    pg.press('enter')
-    time.sleep(0.3)
-    pg.press('tab')
-    kb.write(f"Segue {parte} da edição {edicao}")
-    pg.press('esc')
-    time.sleep(1)
+    try: 
+        pg.press('c')
+        shortcut_send_emails()
+        kb.write('contas')
+        pg.press('enter')
+        pg.write('grafica')
+        pg.press('enter')
+        time.sleep(0.3)
+        pg.press('tab')
+        kb.write(f"Segue {parte} da edição {edicao}")
+        pg.press('esc')
+        time.sleep(1)
+
+        log("All_in_one", "SUCESSO", "Rascunhos para gráfica criados")
+        log("gmail", "SUCESSO", "Rascunhos para gráfica criados")
+
+    except Exception as e:
+        erro_msg = f"Falha ao criar rascunhos da gráfica: {str(e)}"
+        log("All_in_one", "ERRO", erro_msg)
+        log("gmail", "ERRO", erro_msg)
 
 
 def auto_drafts():

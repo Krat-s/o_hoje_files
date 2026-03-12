@@ -3,7 +3,7 @@ import csv
 import inspect  # Importe o módulo inspect
 from datetime import datetime
 
-def log(script, status, message=""):
+def log(report_name_file, status, message=""):
     '''Registra o status das operaçõesm na pasta logs, cria o arquivo .csv, caso não exista'''
     
     # --- NOVIDADE ---
@@ -17,11 +17,10 @@ def log(script, status, message=""):
     except AttributeError:
         name_func = "unknown"
         name_arc = "unknown"
-    # -----------------
 
     pasta_logs = os.path.join(os.path.dirname(__file__), "..", 'Logs')
     os.makedirs(pasta_logs, exist_ok=True)
-    caminho_arquivo = os.path.join(pasta_logs, f"{script}.csv")
+    caminho_arquivo = os.path.join(pasta_logs, f"{report_name_file}.csv")
 
     cabecalho = ["data", "hora", "status", "origem", "função", "message"]
 

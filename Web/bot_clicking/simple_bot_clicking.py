@@ -14,6 +14,7 @@ QTD_CB1 = 7
 QTD_CB2 = int(QTD_CB1 / 2)
 QTD_CB3 = int(QTD_CB2 / 2 + 1)
 
+
 # Função que cada navegador executa
 def open_browser_and_click(btt):
     chrome_options = Options()

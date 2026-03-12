@@ -39,14 +39,15 @@ def wedding(nome_arquivo, paginas):
             utlq.process_page(page_number, is_even)
             time.sleep(0.5)
         utlq.close_page()
-        log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
         log("All_in_one", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
+        log("Wedding", "SUCESSO", f"Paginas {nome_arquivo} casadas") 
     
     except Exception as e:
         erro_msg = f"Erro ao casar as páginas {str(nome_arquivo)}: {str(e)}"
-        log("Wedding", "ERRO", erro_msg) 
-        log("All_in_one", "ERRO", erro_msg)
+        log("All_in_one", "ERRO", erro_msg) 
+        log("Wedding", "ERRO", erro_msg)
         
+# ------------------------------------------------------------------------- quick weddings
 def process_basic():
     wedding("13_16", [13, 16])
     wedding("14_15", [14, 15])
@@ -140,9 +141,8 @@ def auto_marriage():
 
     janela.mainloop()
 
+
+
 if __name__ == "__main__":
     auto_marriage()
     #Faltando corrigir o check_status na máquina do marketing 
-    # utl.open_software(1)
-    # utl.open_web_day_0()
-    # take_file('13_16')

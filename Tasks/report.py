@@ -17,16 +17,16 @@ edicao_inicial = 36500
 quantidade_de_numeros = 5
 
 
-
-
 def vigencia(dia):
     open_software(5)
     for i in range (25):
         pg.write(str(dia))
         pg.press("tab")
 
+
 def pedidos():
     ni.gerar_n(36400)
+
 
 if __name__ == "__main__":
     print(ni.gerar_n(37000))

@@ -1,4 +1,5 @@
-data,hora,status,origem,função,mensagem
-2026-03-11,15:40:37,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
-2026-03-11,15:40:37,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
-2026-03-11,15:40:37,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+data,hora,status,origem,função,message
+2026-03-12,17:32:46,ERRO,wedding.py,wedding,Erro ao casar as páginas 13_16: Timeout aguardando condição: 'Image found'
+2026-03-12,17:34:28,SUCESSO,wedding.py,<module>,Paginas casadas
+2026-03-12,17:34:55,SUCESSO,wedding.py,<module>,Paginas casadas
+2026-03-12,17:35:07,SUCESSO,wedding.py,<module>,Paginas casadas
