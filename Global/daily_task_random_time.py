@@ -2,26 +2,32 @@ import os
 import time
 import schedule
 
+from module.schedule_manager import start_daily_schedules
 from Logs.logs import log
-from Web.bot_clicking.boost_ad import click_task
 
-def daily_task_loop():
-    """Maintains continuous execution of automation (generates new schedules every day)."""
+
+def daily_task_loop(task_function):
+    """Maintains continuous execution of automation (generates new schedules every day).
+    Função start_daily_schedules permite mudar os horários diários
+    """
     print("🚀 Loop de tarefas iniciado. Pressione CTRL+C ou crie 'parar.txt' para encerrar.")
-    start_daily_schedules(click_task)
-    schedule.every().day.at("00:01").do(start_daily_schedules).tag("regenerate_hours")
+    start_daily_schedules(task_function)
+    schedule.every().day.at("00:02").do(start_daily_schedules).tag("regenerate_hours")
 
     try:
         while True:
             caminho_parar = os.path.join(os.path.dirname(__file__), "parar.txt")
             if os.path.exists(caminho_parar):
                 print("🛑 Arquivo de parada detectado. Encerrando...")
+                log("All_in_one", "ENCERRADO", "Encerrado via arquivo parar.txt")
                 log("daily_task_loop", "ENCERRADO", "Encerrado via arquivo parar.txt")
                 break
             schedule.run_pending()
             time.sleep(30)
+
     except KeyboardInterrupt:
         print("\n🛑 Execução interrompida manualmente (CTRL+C).")
+        log("All_in_one", "ENCERRADO", "Execução interrompida manualmente")
         log("daily_task_loop", "ENCERRADO", "Execução interrompida manualmente")
 
 

@@ -1,0 +1,2 @@
+data,hora,status,origem,função,message
+2026-03-13,17:02:07,ERRO,schedule_manager.py,start_daily_schedules,Erro ao agewndar tarefas: the first argument must be callable

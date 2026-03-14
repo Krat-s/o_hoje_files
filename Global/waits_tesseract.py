@@ -7,6 +7,8 @@ import settings.settings as cfg
 import utils as utl
 from Logs.logs import log
 
+
+
 def get_screen_text(region=None):
     screenshot = pg.screenshot(region=region)
     return pytesseract.image_to_string(screenshot)
@@ -17,9 +19,7 @@ def _current_time():
 
 
 def wait_until_text_appears(text, region=None, check_interval=1, timeout=None, on_found=None, run_once=False):
-    """Espera até o texto aparecer. Retorna True se encontrado, False se timeout.
-    on_found: função chamada quando encontrado: on_found() ou on_found(match_text) se quiser.
-    run_once: se True, on_found só é executado na primeira detecção (útil se for chamada repetidamente)."""
+    """Waits until text appears, returns False if timeout."""
 
     # text: string a procurar
     # region: tupla (x, y, w, h) ou None para tela inteira
@@ -29,26 +29,38 @@ def wait_until_text_appears(text, region=None, check_interval=1, timeout=None, o
     # run_once: se True, garante que on_found seja executado apenas uma vez durante essa chamada
 
     deadline = None if timeout is None else _current_time() + timeout
-    executed = False # flag para controlar execução do callback quando run_once=True
+    executed = False # flag to control callback execution when run_once=True
+
     while True:
         screen_text = get_screen_text(region).lower()
+
         if text.lower() in screen_text:
+
+            log("All_in_One", "SUCESSO", f"Text found: {text}")
+            log("Waits_tesseract", "SUCESSO", f"Text found: {text}")
+
             if on_found and (not run_once or not executed):
-                # se existir um callback e ou não estamos limitando a execução ou ainda não executamos
+                # if there is a callback and either we are not limiting the execution or we have not executed it yet
                 try:
-                    on_found() # chama a função de callback sem argumentos
+                    on_found() # calls the callback function without arguments
+                    log("All_in_One", "SUCESSO", f"Callback on_found executado para o texto: {text}")
+                    log("Waits_tesseract", "SUCESSO", f"Callback on_found executado para o texto: {text}")  
                 except Exception as e:
-                    log("WaitsTesseract", "ERRO", f"Erro na função {__name__} callback on_found: {e}")
+                    log("All_in_One", "ERRO", f"Erro na função {__name__} callback on_found: {e}")
+                    log("Waits_tesseract", "ERRO", f"Erro na função {__name__} callback on_found: {e}")
                 executed = True
             return True
+        
         if deadline is not None and _current_time() > deadline:
-            print(  f"Timeout aguardando texto: '{text}'")
+            log("All_in_One", "ERRO", f"Timeout aguardando texto: '{text}'")
+            log("Waits_tesseract", "ERRO", f"Timeout aguardando texto: '{text}'")
+            print(f"Timeout aguardando texto: '{text}'")
             return False
         time.sleep(check_interval)
 
 
 def wait_until_text_disappears(text, region=None, check_interval=1, timeout=None):
-    """Espera até o texto desaparecer. Retorna True se desapareceu, False se timeout."""
+    """Wait until the text disappears. Returns True if gone, False if timeout."""
     deadline = None if timeout is None else _current_time() + timeout
     while True:
         screen_text = get_screen_text(region).lower()
@@ -60,20 +72,22 @@ def wait_until_text_disappears(text, region=None, check_interval=1, timeout=None
 
 
 def get_image(img_path, region=None, confidence=0.8):
-    """Retorna True se a imagem (arquivo) for encontrada na tela."""
+    """Returns True if the image (file) is found on the screen."""
     try:
         loc = pg.locateOnScreen(img_path, region=region, confidence=confidence)
         return loc is not None
     except Exception as e:
-        print(f"Tesseract: Erro ao localizar imagem: {e}")
+        log("All_in_One", "ERRO", f"Tesseract: Erro ao localizar imagem: {e}")
+        log("Waits_tesseract", "ERRO", f"Tesseract: Erro ao localizar imagem: {e}")
         return False
 
 
 def wait_until_img_appears(img_path, region=None, check_interval=1, timeout=None, on_found=None, run_once=False):
-    '''Espera até que a imagem apareça na tela dentro do timeout. Essa função permite executar outros comandos caso a imagem seja encontrada, False se timeout.'''
+    '''Wait until the image appears on the screen within the timeout. This function allows you to execute other commands if the image is found, False if timeout.'''
     deadline = None if timeout is None else _current_time() + timeout
     executed = False
     time.sleep(0.5)
+
     while True:
         if get_image(img_path, region):
             if on_found and (not run_once or not executed):
@@ -87,6 +101,7 @@ def wait_until_img_appears(img_path, region=None, check_interval=1, timeout=None
             return False
         time.sleep(check_interval)
 
+
 def wait_until_img_disappears(img_path, region=None, check_interval=1, timeout=None):
     deadline = None if timeout is None else _current_time() + timeout
     while True:
@@ -98,8 +113,8 @@ def wait_until_img_disappears(img_path, region=None, check_interval=1, timeout=N
 
 # ---- execução não bloqueante (background) ----
 def start_background_wait(target_fn, *args, callback_on_complete=None, daemon=True):
-    """Executa target_fn(*args) em thread e chama callback_on_complete(result) quando terminar.
-    target_fn deve retornar um valor (True/False)."""
+    """Executes target_fn(*args) in thread and calls callback_on_complete(result) when finished.
+    target_fn must return a value (True/False)."""
     def _worker():
         result = None
         try:
@@ -116,6 +131,8 @@ def start_background_wait(target_fn, *args, callback_on_complete=None, daemon=Tr
     t = threading.Thread(target=_worker, daemon=daemon)
     t.start()
     return t
+    #Tenho uma ideia de onde usar esse daqui mas caso não precise tenho que apagar depois, então deixo aqui por enquanto. Ele é basicamente para rodar as funções de espera sem bloquear o restante do código, e quando a função terminar ele pode chamar um callback com o resultado (True/False) para tomar alguma ação dependendo do resultado da espera.
+
 
 
 # ---- função para verificar e resolver mensagens de erro ----
@@ -144,12 +161,3 @@ def check_file_status():
 
     print("Nenhum erro detectado, continuando processos...")
     return "ok"
-
-
-
-def outra_funcao():
-    print(f"Nome: {outra_funcao.__name__}")
-    log("relatorio", "sucesso", f"!")
-
-outra_funcao()
-# Saída: Nome: outra_funcao

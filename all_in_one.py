@@ -40,6 +40,7 @@ def auto_billhead_editions_():
 # 📌 Gerar interfaçe gráfica de opções de automações
 
 if __name__ == "__main__":
-    auto_drafts_()
-    auto_marriage_()
-    auto_billhead_editions_()
+    # auto_drafts_()
+    # auto_marriage_()
+    # auto_billhead_editions_()
+    print('All in one rodando...')

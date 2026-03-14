@@ -39,3 +39,4 @@ data,hora,status,origem,função,message
 2026-03-12,22:27:18,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
 2026-03-12,22:29:04,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
 2026-03-12,22:30:50,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-03-13,17:02:07,ERRO,schedule_manager.py,start_daily_schedules,Erro ao agewndar tarefas: the first argument must be callable
