@@ -6,12 +6,16 @@ current_minute = (time.localtime().tm_min)
 
 current_time_day = f"{current_hour:02d}:{current_minute:02d}"
 
+pg.PAUSE = 0.3 
+pg.FAILSAFE = True
 
 def shootdown():
-    for _ in range(15):
+    for _ in range(5):
+        pg.click()
         pg.hotkey('alt', 'f4', presses=2)
         print(f"Current time: {current_time_day}")
-        pg.hotkey('alt', 'f4')
+        pg.press('enter')
+        pg.hotkey('alt', 'tab')
 
 
 def record_something(for_minutes):
@@ -21,6 +25,12 @@ def record_something(for_minutes):
     time.sleep(for_minutes * 60)
     pg.hotkey('alt', 'f9')
 
+    print(f"Current time: {current_time_day}")
+
+    pg.click(500, 500)
+    shootdown()
 
 
-record_something(1)
+horas = 2 * 60
+
+record_something(0 * 60 + 1)
