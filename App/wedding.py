@@ -145,4 +145,4 @@ def auto_marriage():
 
 if __name__ == "__main__":
     auto_marriage()
-    #Faltando corrigir o check_status na máquina do marketing 
+    #Faltando corrigir o check_status na máquina do marketing
