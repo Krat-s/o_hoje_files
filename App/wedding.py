@@ -1,7 +1,7 @@
-import time
 import os
 import sys
 
+import time
 import pyautogui as pg
 import keyboard as kb
 import tkinter as tk

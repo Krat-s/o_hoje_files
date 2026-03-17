@@ -39,6 +39,11 @@ botão_1 = "placement_1013993_0" #principal
 botão_2 = "placement_1013994_0_i" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
 
+adon_3 = "placement_1013993_0" #addon banner principal
+adon_2 = "d-block block-ads" #addon rodapé
+adon_1 = "d-block block-ads" #addon lateral
+
+
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
 opera = 2 # any browser
