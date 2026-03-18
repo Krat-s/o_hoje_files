@@ -19,6 +19,7 @@ from Global.Logs.logs import log
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
 
+
 def wedding(nome_arquivo, paginas):
     try:
         utl.open_software(1)
@@ -47,6 +48,8 @@ def wedding(nome_arquivo, paginas):
         log("All_in_one", "ERRO", erro_msg) 
         log("Wedding", "ERRO", erro_msg)
         
+    
+
 # ------------------------------------------------------------------------- quick weddings
 def process_basic():
     wedding("13_16", [13, 16])

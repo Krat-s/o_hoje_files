@@ -19,6 +19,8 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS'
+
 
 # ------------------------------------------------------------------------- Tempos de espera
 TIMETOOPEN = 4
@@ -39,9 +41,21 @@ botão_1 = "placement_1013993_0" #principal
 botão_2 = "placement_1013994_0_i" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
 
-adon_3 = "placement_1013993_0" #addon banner principal
-adon_2 = "d-block block-ads" #addon rodapé
+
 adon_1 = "d-block block-ads" #addon lateral
+adon_1_pi = 39095
+adon_1_client = "GOV"
+adon_1_name = f'Width ({adon_1_client}) - {adon_1_pi}'
+
+adon_2 = "d-block block-ads" #addon rodapé
+adon_2_pi = 39141
+adon_2_client = "GOV"
+adon_2_name = f'Halfpage ({adon_2_client}) - {adon_2_pi}'
+
+adon_3 = "placement_1013993_0" #addon banner principal
+adon_3_pi = 00000
+adon_3_client = "SECOM"
+adon_3_full_name = f'Main {adon_3_client} - {adon_3_pi}'
 
 
 # ------------------------------------------------------------------------- Barra de tarefas
@@ -87,4 +101,3 @@ def stats():
 if __name__ == "__main__":
     stats()
     print(sy_de.EDD)
-

@@ -57,7 +57,7 @@ def chose_suggestion(QTD=1, TEMPO=2):
 
 
 if __name__ == "__main__":
-    # print("oi")
+    print("Utils testing")
     # pg.hotkey('win', 'e')
 
     # pg.hotkey('win', 's')
@@ -72,4 +72,3 @@ if __name__ == "__main__":
     # #         print("Tratamento concluído para arquivo não encontrado.")
     # #     else:
     # #         print("Tudo certo, seguindo...")
-    print_fullscreen()
