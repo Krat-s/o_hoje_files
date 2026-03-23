@@ -33,6 +33,8 @@ def print_task():
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--Zoom-level=0.75")
+
 
     try:
         driver = webdriver.Chrome(options=chrome_options)
@@ -46,21 +48,14 @@ def print_task():
 
     def button_print(adon):
         try: 
-            botao = wait_d(driver, By.ID, adon, timeout=15, clicavel=True)
+            botao = wait_d(driver, By.CSS_SELECTOR, adon, timeout=15, clicavel=True)
             driver.execute_script(
                 "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao
             )
-            wait_d(driver, By.ID, adon, timeout=10, clicavel=True)
-            time.sleep(0.5)
-            
-            
-            pg.screenshot(f"{adon}_print.png")
-            
 
             time.sleep(0.5)
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
-            # cheackar se o clique resultou em algo esperado (ex: nova janela, mudança de elemento, etc) e logar o resultado
             
         except Exception as e:
                 erro_msg = f"Falha ao salvar imagem: {str(e)}"
@@ -69,9 +64,9 @@ def print_task():
     
 
     try:
-        button_print(cfg.adon_1)
         button_print(cfg.adon_2)
-        button_print(cfg.adon_3)
+        # button_print(cfg.adon_2)
+        # button_print(cfg.adon_3)
 
     except Exception as e:
         erro_msg = f"Falha ao salvar imagem: {str(e)}"
@@ -85,22 +80,24 @@ def print_task():
         log("print_ad", "RELATÓRIO", "Drive fechado após execução da tarefa")
 
 
-def auto_print(name_ad):
-    
-    os.makedirs(f'{pasta_destino_}\\{name_ad}', exist_ok=True)
-    # caminho_arquivo = os.path.join(pasta_destino_, f"{adon_1}.png")
-    # file_exists = os.path.exists(caminho_arquivo)
-
-    # if file_exists:
-    #     log("print_ad", "AVISO", f"O arquivo {adon_1}.png já existe. Ele será substituído.")
-
-    # print_task()
-    # os.startfile(pasta_destino_)
 
 if __name__ == "__main__":
-    # pg.screenshot(f"{adon_1}_print.png")
-    # print_task(adon_1)
-    # print_task(adon_2)
-    # print_task(adon_3)
-    auto_print(str(cfg.adon_1_name) + str(cfg.adon_1_pi))
+    print_task()
 
+
+
+
+
+
+# def auto_print(name_ad, adon):
+    
+#     os.makedirs(f'{pasta_destino_}\\{name_ad}', exist_ok=True)
+#     pg.screenshot(f"{adon}_print.png")
+#     # caminho_arquivo = os.path.join(pasta_destino_, f"{adon_1}.png")
+#     # file_exists = os.path.exists(caminho_arquivo)
+
+#     # if file_exists:
+#     #     log("print_ad", "AVISO", f"O arquivo {adon_1}.png já existe. Ele será substituído.")
+
+#     # print_task()
+#     # os.startfile(pasta_destino_)

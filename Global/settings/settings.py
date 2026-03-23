@@ -1,5 +1,7 @@
+
 import pyautogui as pg
 import locale
+
 import os
 import sys
 
@@ -34,25 +36,24 @@ acessos_B3 = int(acessos_B2 / 2)
 acessos_H1 = 1
 acessos_H2 = 2
 acessos_H3 = 1
-jackpot = acessos_B1 + acessos_B2 + acessos_B3 * 4 #24 numero máximo de acessos (linha completamente irrelevante)
 
 url_target = "https://ohoje.com"
-botão_1 = "placement_1013993_0" #principal
-botão_2 = "placement_1013994_0_i" #lateral
+botão_1 = str("ads-728 mx-auto") #principal
+botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
-adon_1 = "d-block block-ads" #addon lateral
+adon_1 = "img.ads-728.mx-auto" #addon Halfpage
 adon_1_pi = 39095
 adon_1_client = "GOV"
 adon_1_name = f'Width ({adon_1_client}) - {adon_1_pi}'
 
-adon_2 = "d-block block-ads" #addon rodapé
+adon_2 = "section.block-ads img.ads-728.mx-auto[alt='Publicidade']" #addon Width
 adon_2_pi = 39141
 adon_2_client = "GOV"
 adon_2_name = f'Halfpage ({adon_2_client}) - {adon_2_pi}'
 
-adon_3 = "placement_1013993_0" #addon banner principal
+adon_3 = "aa" #addon banner principal
 adon_3_pi = 00000
 adon_3_client = "SECOM"
 adon_3_full_name = f'Main {adon_3_client} - {adon_3_pi}'

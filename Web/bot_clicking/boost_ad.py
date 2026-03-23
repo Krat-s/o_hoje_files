@@ -1,14 +1,17 @@
 import time
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from __init__ import raiz_projeto
 from Global.settings.settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
-
 from Global.Logs.logs import log
+
+import pyautogui as pg
+
+
 
 def wait_d(driver, by, value, timeout=10, clicavel=True):
     """Espera até que o elemento esteja presente (ou clicável).
@@ -41,7 +44,7 @@ def click_task():
             driver.execute_script(
                 "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao
             )
-            time.sleep(0.5)
+            time.sleep(0.0)
             wait_d(driver, By.ID, btt, timeout=10, clicavel=True)
             time.sleep(0.5)
         log("All_in_one", "SUCESSO", f"{btt} visualizado {n_view * 3} vezes")
@@ -76,9 +79,15 @@ def click_task():
         erro_msg = f"Falha ao clicar no botão: {str(e)}"
         log("All_in_one", "ERRO", erro_msg)
         log("boost_ad", "ERRO", erro_msg)
-
+    
     finally:
         time.sleep(2)
         driver.quit()
         log("All_in_one", "RELATÓRIO", "Drive fechado após execução da tarefa")
         log("boost_ad", "RELATÓRIO", "Drive fechado após execução da tarefa")
+
+
+
+if __name__ == "__main__":
+    click_task()
+    print('cabo')
