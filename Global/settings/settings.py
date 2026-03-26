@@ -53,7 +53,7 @@ adon_2_pi = 39141
 adon_2_client = "GOV"
 adon_2_name = f'Halfpage ({adon_2_client}) - {adon_2_pi}'
 
-adon_3 = "aa" #addon banner principal
+adon_3 = "section.block-ads img.ads-980.mx-auto[alt='Publicidade']" #addon banner principal
 adon_3_pi = 00000
 adon_3_client = "SECOM"
 adon_3_full_name = f'Main {adon_3_client} - {adon_3_pi}'

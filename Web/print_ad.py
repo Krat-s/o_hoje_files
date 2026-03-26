@@ -1,7 +1,6 @@
 import os
 import sys
 
-import pyautogui as pg
 import time
 
 from selenium import webdriver
@@ -26,15 +25,13 @@ def wait_d(driver, by, value, timeout=10, clicavel=True):
     return WebDriverWait(driver, timeout).until(condicao((by, value)))
 
 
-def print_task():
+def print_task(adon_):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--Zoom-level=0.75")
-
 
     try:
         driver = webdriver.Chrome(options=chrome_options)
@@ -44,7 +41,12 @@ def print_task():
         log("print_ad", "ERRO", erro_msg)
         return
     driver.get(cfg.url_target)
-    
+    # tempo de espera e zoom out
+    wait_d(driver, By.TAG_NAME, "body", timeout=15)
+    driver.set_window_size(1920, 1200)
+    wait_d(driver, By.CSS_SELECTOR, adon_, timeout=15, clicavel=False)
+    driver.execute_script("document.body.style.zoom='75%'")
+    time.sleep(1)
 
     def button_print(adon):
         try: 
@@ -64,9 +66,7 @@ def print_task():
     
 
     try:
-        button_print(cfg.adon_2)
-        # button_print(cfg.adon_2)
-        # button_print(cfg.adon_3)
+        button_print(adon_)
 
     except Exception as e:
         erro_msg = f"Falha ao salvar imagem: {str(e)}"
@@ -82,7 +82,7 @@ def print_task():
 
 
 if __name__ == "__main__":
-    print_task()
+    print_task(cfg.adon_3)
 
 
 
