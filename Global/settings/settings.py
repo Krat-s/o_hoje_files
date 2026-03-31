@@ -29,7 +29,7 @@ TIMETOOPEN = 4
 TIMETOCLOSE = 6
 TIMEEXPPDF = 7
 
-# ------------------------------------------------------------------------- Web_botting
+# ------------------------------------------------------------------------- Web
 acessos_B1 = rn.generate_number(0, 3)
 acessos_B2 = int(acessos_B1 / 2 + 1)
 acessos_B3 = int(acessos_B2 / 2)
@@ -43,20 +43,20 @@ botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
-adon_1 = "img.ads-728.mx-auto" #addon Halfpage
-adon_1_pi = 39095
-adon_1_client = "GOV"
-adon_1_folder_name = f'Width ({adon_1_client}) - {adon_1_pi}'
+ad_1 = "section.block-ads img.ads-980.mx-auto[alt='Publicidade']" #addon banner principal
+ad_1_pi = 15165482
+ad_1_client = "SECOM"
+ad_1_folder = f'Principal ({ad_1_client}) - {ad_1_pi}'
 
-adon_2 = "section.block-ads img.ads-728.mx-auto[alt='Publicidade']" #addon Width
-adon_2_pi = 39141
-adon_2_client = "GOV"
-adon_2_folder_name = f'Halfpage ({adon_2_client}) - {adon_2_pi}'
+ad_2 = "img.ads-728.mx-auto" #addon Halfpage
+ad_2_pi = 39095
+ad_2_client = "GOV"
+ad_2_folder = f'Width ({ad_2_client}) - {ad_2_pi}'
 
-adon_3 = "section.block-ads img.ads-980.mx-auto[alt='Publicidade']" #addon banner principal
-adon_3_pi = 00000
-adon_3_client = "SECOM"
-adon_3_folder_name = f'Main {adon_3_client} - {adon_3_pi}'
+ad_3 = "section.block-ads img.ads-738.mx-auto[alt='Publicidade']" #addon Width
+ad_3_pi = 39141
+ad_3_client = "GOV"
+ad_3_folder = f'Halfpage ({ad_3_client}) - {ad_3_pi}'
 
 
 # ------------------------------------------------------------------------- Barra de tarefas

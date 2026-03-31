@@ -2,7 +2,9 @@ import os
 import sys
 
 import time
+import pyautogui as pg
 
+from pyautogui import screenshot
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -14,8 +16,7 @@ sys.path.append(raiz_projeto)
 
 import Global.settings.settings as cfg
 from Global.Logs.logs import log
-
-pasta_destino_ = f"{cfg.CAMINHO_PRINTS}\\Auto-prints" 
+from Global.utils import max_windows
 
 
 def wait_d(driver, by, value, timeout=10, clicavel=True):
@@ -24,6 +25,10 @@ def wait_d(driver, by, value, timeout=10, clicavel=True):
     condicao = EC.element_to_be_clickable if clicavel else EC.presence_of_element_located
     return WebDriverWait(driver, timeout).until(condicao((by, value)))
 
+def make_folder(name_folder):
+    caminho_completo = os.path.join(cfg.CAMINHO_PRINTS, name_folder)
+    os.makedirs(caminho_completo, exist_ok=True)
+    return caminho_completo
 
 def print_task(adon_, adon_name_folder):
     """Abre o navegador, clica no botão e registra o resultado."""
@@ -35,6 +40,7 @@ def print_task(adon_, adon_name_folder):
 
     try:
         driver = webdriver.Chrome(options=chrome_options)
+        max_windows()
     except Exception as e:
         erro_msg = f"Falha ao iniciar ChromeDriver: {str(e)}"
         log("All_in_one", "ERRO", erro_msg)
@@ -44,7 +50,6 @@ def print_task(adon_, adon_name_folder):
 
     # tempo de espera e zoom out
     wait_d(driver, By.TAG_NAME, "body", timeout=15)
-    driver.set_window_size(1920, 1200)
     wait_d(driver, By.CSS_SELECTOR, adon_, timeout=15, clicavel=False)
     driver.execute_script("document.body.style.zoom='75%'")
     time.sleep(1)
@@ -57,7 +62,8 @@ def print_task(adon_, adon_name_folder):
             )
 
             time.sleep(0.5)
-            botao.screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{adon_name_folder}.png")
+            make_folder(adon_name_folder)
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}asda.png", allScreens=True)
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
             
@@ -83,9 +89,14 @@ def print_task(adon_, adon_name_folder):
 
 
 
-if __name__ == "__main__":
-    print_task(cfg.adon_3, cfg.adon_3_folder)
 
+if __name__ == "__main__":
+    # make_folder(cfg.ad_1_folder)
+    # print_task(cfg.ad_1, cfg.ad_1_folder)
+    make_folder(cfg.ad_3_folder)
+    screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.ad_3_folder}asda.png", allScreens=True)
+
+     
 
 
 
