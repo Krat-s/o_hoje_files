@@ -25,7 +25,7 @@ def wait_d(driver, by, value, timeout=10, clicavel=True):
     return WebDriverWait(driver, timeout).until(condicao((by, value)))
 
 
-def print_task(adon_):
+def print_task(adon_, adon_name_folder):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")
     chrome_options = Options()
@@ -41,6 +41,7 @@ def print_task(adon_):
         log("print_ad", "ERRO", erro_msg)
         return
     driver.get(cfg.url_target)
+
     # tempo de espera e zoom out
     wait_d(driver, By.TAG_NAME, "body", timeout=15)
     driver.set_window_size(1920, 1200)
@@ -56,6 +57,7 @@ def print_task(adon_):
             )
 
             time.sleep(0.5)
+            botao.screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{adon_name_folder}.png")
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
             
@@ -82,7 +84,7 @@ def print_task(adon_):
 
 
 if __name__ == "__main__":
-    print_task(cfg.adon_3)
+    print_task(cfg.adon_3, cfg.adon_3_folder)
 
 
 

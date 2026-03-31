@@ -21,7 +21,7 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS'
+CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\Auto-prints'
 
 
 # ------------------------------------------------------------------------- Tempos de espera
@@ -46,17 +46,17 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 adon_1 = "img.ads-728.mx-auto" #addon Halfpage
 adon_1_pi = 39095
 adon_1_client = "GOV"
-adon_1_name = f'Width ({adon_1_client}) - {adon_1_pi}'
+adon_1_folder_name = f'Width ({adon_1_client}) - {adon_1_pi}'
 
 adon_2 = "section.block-ads img.ads-728.mx-auto[alt='Publicidade']" #addon Width
 adon_2_pi = 39141
 adon_2_client = "GOV"
-adon_2_name = f'Halfpage ({adon_2_client}) - {adon_2_pi}'
+adon_2_folder_name = f'Halfpage ({adon_2_client}) - {adon_2_pi}'
 
 adon_3 = "section.block-ads img.ads-980.mx-auto[alt='Publicidade']" #addon banner principal
 adon_3_pi = 00000
 adon_3_client = "SECOM"
-adon_3_full_name = f'Main {adon_3_client} - {adon_3_pi}'
+adon_3_folder_name = f'Main {adon_3_client} - {adon_3_pi}'
 
 
 # ------------------------------------------------------------------------- Barra de tarefas
