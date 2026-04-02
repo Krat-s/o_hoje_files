@@ -43,18 +43,19 @@ botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
-ad_1 = "section.block-ads img.ads-980.mx-auto[alt='Publicidade']" #addon banner principal
-ad_1_pi = 15165482
-ad_1_client = "SECOM"
+
+ad_1 = "section.block-ads:first-child img.ads-980.mx-auto[alt='Publicidade']" #addon banner principal
+ad_1_pi = 00000
+ad_1_client = "000"
 ad_1_folder = f'Principal ({ad_1_client}) - {ad_1_pi}'
 
-ad_2 = "img.ads-728.mx-auto" #addon Halfpage
-ad_2_pi = 39095
-ad_2_client = "GOV"
+ad_2 = "section:nth-child(3) [alt='Publicidade']" #addon Width
+ad_2_pi = 39438
+ad_2_client = "Pref.Luiziânia"
 ad_2_folder = f'Width ({ad_2_client}) - {ad_2_pi}'
 
-ad_3 = "section.block-ads img.ads-738.mx-auto[alt='Publicidade']" #addon Width
-ad_3_pi = 39141
+ad_3 = "section:nth-child(1) [alt='Publicidade']"  #addon Halfpage
+ad_3_pi = 39454
 ad_3_client = "GOV"
 ad_3_folder = f'Halfpage ({ad_3_client}) - {ad_3_pi}'
 

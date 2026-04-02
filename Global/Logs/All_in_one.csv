@@ -699,3 +699,17 @@ Stacktrace:
 2026-03-31,17:22:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-03-31,17:22:49,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
 2026-03-31,17:22:53,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:30:33,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\quarta-feira, 1º de abril de 2026.png'"
+2026-04-01,17:30:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:31:35,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,17:31:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:50:44,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,17:50:48,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:05:23,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:05:29,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:11:05,SUCESSO,print_ad.py,button_print,section:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:11:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:12:32,SUCESSO,print_ad.py,button_print,section:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:12:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:13:08,SUCESSO,print_ad.py,button_print,section:nth-child(3) [alt='Publicidade'] printado
+2026-04-01,18:13:12,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

@@ -52,6 +52,12 @@ def make_folder(name_folder, in_local=None):
     time.sleep(2.5)
 
 
+def make_folder_(name_folder):
+    caminho_completo = os.path.join(cfg.CAMINHO_PRINTS, name_folder)
+    os.makedirs(caminho_completo, exist_ok=True)
+    return caminho_completo
+
+
 def take_file(arquivo):
     wc.wait_explorer_open(0.5, 15)
     kb.press_and_release('ctrl+f')
