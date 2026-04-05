@@ -49,19 +49,20 @@ def print_task(adon_, adon_name_folder):
     # tempo de espera e zoom out
     wait_d(driver, By.TAG_NAME, "body", timeout=15)
     wait_d(driver, By.CSS_SELECTOR, adon_, timeout=15, clicavel=False)
+
     driver.execute_script("document.body.style.zoom='75%'")
     time.sleep(1)
 
     def button_print(adon):
         try: 
-            botao = wait_d(driver, By.CSS_SELECTOR, adon, timeout=15, clicavel=True)
+            ad = wait_d(driver, By.CSS_SELECTOR, adon_, timeout=15, clicavel=True)
             driver.execute_script(
-                "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao
+                "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", ad
             )
             time.sleep(0.5)
 
-            # fm.make_folder_(adon_name_folder)
-            # screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{df.formatar_data(df.hoje)}.png", allScreens=True)
+            fm.make_folder_(adon_name_folder)
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{df.formatar_data(df.hoje)}.png", allScreens=True)
 
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
@@ -91,7 +92,7 @@ def print_task(adon_, adon_name_folder):
 
 if __name__ == "__main__":
     # print_task(cfg.ad_1, cfg.ad_1_folder) #Principal
-    # print_task(cfg.ad_2, cfg.ad_2_folder) #Width
+    print_task(cfg.ad_2, cfg.ad_2_folder) #Width
     print_task(cfg.ad_3, cfg.ad_3_folder) #Halfpage
 
     # print_task(cfg.ad_0, cfg.ad_0_folder)
