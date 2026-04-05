@@ -43,21 +43,25 @@ botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
-ad_1 = "section.block-ads img.ads-980.mx-auto[alt='Publicidade']" #addon banner principal
-ad_1_pi = 15165482
-ad_1_client = "SECOM"
+#addon banner principal
+ad_1_pi = 00000
+ad_1 = "section.block-ads:nth-child() img[alt='Publicidade']" 
+ad_1_client = ""
 ad_1_folder = f'Principal ({ad_1_client}) - {ad_1_pi}'
 
-ad_2 = "img.ads-728.mx-auto" #addon Halfpage
-ad_2_pi = 39095
-ad_2_client = "GOV"
+#addon Width
+ad_2_pi = 39438
+ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
+ad_2_client = "Pref.Luiziânia"
 ad_2_folder = f'Width ({ad_2_client}) - {ad_2_pi}'
+ad_2_link = str("https://www.luziania.go.gov.br")
 
-ad_3 = "section.block-ads img.ads-738.mx-auto[alt='Publicidade']" #addon Width
-ad_3_pi = 39141
+#addon Halfpage
+ad_3_pi = 39454
+ad_3 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
+ad_3_link = "https://ohoje.com/wp-content/uploads/2026/04/Banner_GERAL_970X250-8.gif?v=1775155356"
 ad_3_client = "GOV"
 ad_3_folder = f'Halfpage ({ad_3_client}) - {ad_3_pi}'
-
 
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
@@ -102,3 +106,9 @@ def stats():
 if __name__ == "__main__":
     stats()
     print(sy_de.EDD)
+
+
+
+
+
+   

@@ -16,7 +16,8 @@ sys.path.append(raiz_projeto)
 import Global.settings.settings as cfg
 from Global.Logs.logs import log
 from Global.utils import max_windows
-from Global.module import data_formatter as df
+import Global.file_manager as fm
+import Global.module.data_formatter as df
 
 
 def wait_d(driver, by, value, timeout=10, clicavel=True):
@@ -25,11 +26,6 @@ def wait_d(driver, by, value, timeout=10, clicavel=True):
     condicao = EC.element_to_be_clickable if clicavel else EC.presence_of_element_located
     return WebDriverWait(driver, timeout).until(condicao((by, value)))
 
-
-def make_folder(name_folder):
-    caminho_completo = os.path.join(cfg.CAMINHO_PRINTS, name_folder)
-    os.makedirs(caminho_completo, exist_ok=True)
-    return caminho_completo
 
 
 def print_task(adon_, adon_name_folder):
@@ -55,21 +51,22 @@ def print_task(adon_, adon_name_folder):
     # tempo de espera e zoom out
     wait_d(driver, By.TAG_NAME, "body", timeout=15)
     wait_d(driver, By.CSS_SELECTOR, adon_, timeout=15, clicavel=False)
+
     driver.execute_script("document.body.style.zoom='75%'")
     time.sleep(1)
 
 
     def button_print(adon):
         try: 
-            botao = wait_d(driver, By.CSS_SELECTOR, adon, timeout=15, clicavel=True)
+            ad = wait_d(driver, By.CSS_SELECTOR, adon_, timeout=15, clicavel=True)
             driver.execute_script(
-                "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao
+                "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", ad
             )
-
             time.sleep(0.5)
 
-            make_folder(adon_name_folder)
+            fm.make_folder_(adon_name_folder)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{df.formatar_data(df.hoje)}.png", allScreens=True)
+
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
             
@@ -95,4 +92,9 @@ def print_task(adon_, adon_name_folder):
 
 
 if __name__ == "__main__":
-    print_task(cfg.ad_1, cfg.ad_1_folder)
+    # print_task(cfg.ad_1, cfg.ad_1_folder) #Principal
+    print_task(cfg.ad_2, cfg.ad_2_folder) #Width
+    print_task(cfg.ad_3, cfg.ad_3_folder) #Halfpage
+
+    # print_task(cfg.ad_0, cfg.ad_0_folder)
+
