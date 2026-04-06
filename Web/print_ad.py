@@ -2,6 +2,7 @@ import os
 import sys
 
 import time
+from datetime import datetime, timedelta
 
 from pyautogui import screenshot
 from selenium import webdriver
@@ -17,8 +18,8 @@ import Global.settings.settings as cfg
 from Global.Logs.logs import log
 from Global.utils import max_windows
 import Global.file_manager as fm
-import Global.module.data_formatter as df
 
+screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
 
 def wait_d(driver, by, value, timeout=10, clicavel=True):
     """Espera até que o elemento esteja presente (ou clicável).
@@ -65,7 +66,7 @@ def print_task(adon_, adon_name_folder):
             time.sleep(0.5)
 
             fm.make_folder_(adon_name_folder)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{df.formatar_data(df.hoje)}.png", allScreens=True)
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
 
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
@@ -92,8 +93,6 @@ def print_task(adon_, adon_name_folder):
 
 if __name__ == "__main__":
     # print_task(cfg.ad_1, cfg.ad_1_folder) #Principal
-    print_task(cfg.ad_2, cfg.ad_2_folder) #Width
-    print_task(cfg.ad_3, cfg.ad_3_folder) #Halfpage
-
-    # print_task(cfg.ad_0, cfg.ad_0_folder)
-
+    # print_task(cfg.ad_2, cfg.ad_2_folder) #Width
+    # print_task(cfg.ad_3, cfg.ad_3_folder) #Halfpage
+    screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.ad_2_folder}\\{screen_date}.png")
