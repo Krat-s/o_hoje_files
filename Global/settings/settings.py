@@ -107,7 +107,7 @@ def stats():
 if __name__ == "__main__":
     # stats()
     # print(sy_de.EDD)
-    os.startfile(CAMINHO_WEB + "\\" + sy_de.EDD)
+    print('sdfa')
 
 
 

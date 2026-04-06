@@ -90,7 +90,6 @@ def print_task(adon_, adon_name_folder):
         log("print_ad", "RELATÓRIO", "Drive fechado após execução da tarefa")
 
 
-
 if __name__ == "__main__":
     # print_task(cfg.ad_1, cfg.ad_1_folder) #Principal
     print_task(cfg.ad_2, cfg.ad_2_folder) #Width
