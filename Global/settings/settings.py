@@ -1,4 +1,3 @@
-
 import pyautogui as pg
 import locale
 
@@ -21,7 +20,9 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\Auto-prints'
+# CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\Auto-prints'
+CAMINHO_PRINTS = r'\\C:\Users\Matheus.sousa\Downloads'
+
 
 
 # ------------------------------------------------------------------------- Tempos de espera
@@ -104,8 +105,9 @@ def stats():
 
 
 if __name__ == "__main__":
-    stats()
-    print(sy_de.EDD)
+    # stats()
+    # print(sy_de.EDD)
+    os.startfile(CAMINHO_WEB + "\\" + sy_de.EDD)
 
 
 

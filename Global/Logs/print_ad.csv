@@ -431,3 +431,9 @@ Stacktrace:
 2026-04-05,18:26:49,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-04-05,18:26:58,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
 2026-04-05,18:27:02,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:51:26,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-05,20:51:32,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:56:27,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-05,20:56:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:56:39,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-05,20:56:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
