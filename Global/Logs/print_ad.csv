@@ -437,3 +437,45 @@ Stacktrace:
 2026-04-05,20:56:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-04-05,20:56:39,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
 2026-04-05,20:56:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:25:17,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-06,15:25:22,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:25:29,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-06,15:25:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:34:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,15:34:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:34:42,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,15:34:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:32:33,ERRO,print_ad.py,button_print,Falha ao salvar imagem: unknown file extension: 
+2026-04-06,17:32:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:44:59,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:45:03,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:46:12,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:46:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:47:00,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06Teste.png'
+2026-04-06,17:47:04,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:47:46,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:47:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:48:34,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:48:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:49:11,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:49:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:49:53,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:49:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:50:20,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026 | 04 | 06.png'
+2026-04-06,17:50:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:50:56,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026\\04\\06.png'
+2026-04-06,17:51:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:51:23,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:51:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:52:01,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:52:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:52:59,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  4  |  6.png'
+2026-04-06,17:53:03,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:53:42,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:53:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:54:17,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:54:21,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:57:39,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,17:57:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:58:38,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,17:58:42,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

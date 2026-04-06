@@ -1,8 +1,7 @@
-import pyautogui as pg
-import locale
-
 import os
 import sys
+import locale
+import pyautogui as pg
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(raiz_projeto)
@@ -10,6 +9,7 @@ sys.path.append(raiz_projeto)
 from Global.module import gen_randon_numbers as rn
 import Global.data_edition_sync as sy_de
 from Global.settings.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
+
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
@@ -20,15 +20,14 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-# CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\Auto-prints'
-CAMINHO_PRINTS = r'\\C:\Users\Matheus.sousa\Downloads'
-
+CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\Auto-prints'
 
 
 # ------------------------------------------------------------------------- Tempos de espera
 TIMETOOPEN = 4
 TIMETOCLOSE = 6
 TIMEEXPPDF = 7
+
 
 # ------------------------------------------------------------------------- Web
 acessos_B1 = rn.generate_number(0, 3)
