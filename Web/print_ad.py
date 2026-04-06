@@ -66,7 +66,7 @@ def print_task(adon_, adon_name_folder):
             time.sleep(0.5)
 
             fm.make_folder_(adon_name_folder)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png", allScreens=True)
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
 
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
@@ -96,4 +96,4 @@ if __name__ == "__main__":
     # print_task(cfg.ad_1, cfg.ad_1_folder) #Principal
     # print_task(cfg.ad_2, cfg.ad_2_folder) #Width
     # print_task(cfg.ad_3, cfg.ad_3_folder) #Halfpage
-    screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.ad_2_folder}\\{screen_date}.png", allScreens=True)
+    screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.ad_2_folder}\\{screen_date}.png")
