@@ -28,7 +28,6 @@ def wait_d(driver, by, value, timeout=10, clicavel=True):
     return WebDriverWait(driver, timeout).until(condicao((by, value)))
 
 
-
 def print_task(adon_, adon_name_folder):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")
@@ -91,8 +90,10 @@ def print_task(adon_, adon_name_folder):
         log("print_ad", "RELATÓRIO", "Drive fechado após execução da tarefa")
 
 
+def run_print_ad(ad=None, folder=None):
+    print_task(ad, folder)
+
 if __name__ == "__main__":
     # print_task(cfg.ad_1, cfg.ad_1_folder) #Principal
-    # print_task(cfg.ad_2, cfg.ad_2_folder) #Width
-    # print_task(cfg.ad_3, cfg.ad_3_folder) #Halfpage
-    screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.ad_2_folder}\\{screen_date}.png")
+    print_task(cfg.ad_2, cfg.ad_2_folder) #Width
+    print_task(cfg.ad_3, cfg.ad_3_folder) #Halfpage
