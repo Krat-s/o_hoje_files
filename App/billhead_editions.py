@@ -20,29 +20,32 @@ pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
 # ---------------------------- EXECUÇÃO PRINCIPAL ----------------------------
-def auto_billhead_editions():
-    for info in desync.gerar_edicoes_formatadas():
+from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
+
+def auto_billhead_editions(edicao_inicial=edicao_inicial, quantidade_repeticoes=quantidade_repeticoes):
+    for info in desync.gerar_edicoes_formatadas(edicao_inicial, quantidade_repeticoes):
         try:
-            weekday = info.dia_semana_padrão
-            pasta_nome = info.pasta_nome
+            # weekday = info.dia_semana_padrão
+            # pasta_nome = info.pasta_nome
 
-            modelo_path = {
-                0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
-                5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
-            }.get(
-                weekday,
-                r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição'
-            )
+            # modelo_path = {
+            #     0: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
+            #     5: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
+            # }.get(
+            #     weekday,
+            #     r'\\192.168.1.249\redacao\arte\01 Projeto\1 - k Modelo da edição'
+            # )
 
-            auto_folders(pasta_nome, modelo_path)
+            # auto_folders(pasta_nome, modelo_path)
             
-            utl.open_software(cfg.quark)
-            aply_17(info)
-            auto_date_all_non_especial_pages(info)
-            aply_1(info)
+            # utl.open_software(cfg.quark)
+            # aply_17(info)
+            # auto_date_all_non_especial_pages(info)
+            # aply_1(info)
 
-            log("billhead", "SUCESSO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
-            log("All_in_one", "SUCESSO", f"billhead_editions: modelos da edição {info.edicao_formatada}, {info.dia_semana} criado") 
+            # log("billhead", "SUCESSO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
+            # log("All_in_one", "SUCESSO", f"billhead_editions: modelos da edição {info.edicao_formatada}, {info.dia_semana} criado")
+            print(f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} criado") 
 
         except Exception as e:
             log("billhead_editions", "ERRO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")

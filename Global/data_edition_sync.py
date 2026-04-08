@@ -91,7 +91,7 @@ def formatar_edicao_unica(edicao_numero: int) -> EdicaoInfo:
         pasta_nome=f"{edicao_formatada.replace('.', '')} - {dia_semana}",
     )
 
-def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
+def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, repeticoes=REPETICOES_PADRAO, quantidade_por_semana=QUANTIDADE_POR_SEMANA):
     
     resultados: list[EdicaoInfo] = []
     data_atual = obter_data_por_edicao(edicao_inicial)

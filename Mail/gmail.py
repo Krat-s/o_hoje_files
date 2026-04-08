@@ -100,12 +100,23 @@ def send_for_graphic(edicao, parte):
         log("gmail", "ERRO", erro_msg)
 
 
-def auto_drafts():
+def auto_drafts(ed=None, qnt=None):
     take_receivers()
     ut.open_software(cfg.opera)
-    for info in desync.gerar_edicoes_formatadas():
-        ed = info.edicao_formatada
-        send_for_graphic(ed, "básico")
-        send_for_graphic(ed, "resto")
-        send_emails_to_readers(ed)
-        time.sleep(1)
+
+    if ed is None or qnt is None:
+        for info in desync.gerar_edicoes_formatadas():
+            ed = info.edicao_formatada
+            send_for_graphic(ed, "básico")
+            send_for_graphic(ed, "resto")
+            send_emails_to_readers(ed)
+            time.sleep(1)
+
+    else:
+        for info in desync.gerar_edicoes_formatadas(ed, qnt):
+
+            ed = info.edicao_formatada
+            send_for_graphic(ed, "básico")
+            send_for_graphic(ed, "resto")
+            send_emails_to_readers(ed)
+            time.sleep(1)

@@ -44,7 +44,7 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
 #addon banner principal
-ad_1_pi = 00000
+ad_1_pi = None
 ad_1 = "section.block-ads:nth-child() img[alt='Publicidade']" 
 ad_1_client = ""
 ad_1_folder = f'Principal ({ad_1_client}) - {ad_1_pi}'

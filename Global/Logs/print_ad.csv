@@ -499,3 +499,17 @@ Stacktrace:
 2026-04-07,16:52:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-04-07,16:52:50,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
 2026-04-07,16:52:54,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:06:12,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:06:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:06:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:06:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:09:10,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:09:14,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:11:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:11:34,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:14:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:14:40,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:35:01,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:35:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:35:16,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:35:20,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

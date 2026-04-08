@@ -23,6 +23,7 @@ def open_folder(endereco):
     os.startfile(endereco)
     wc.wait_explorer_open()
     utl.max_windows()
+    time.sleep(0.5)
 
 
 def go_to(específico=None):
@@ -127,10 +128,13 @@ def folder_is_open(folder_names: Iterable[str]) -> bool:
     return False
 
 
-def open_main_folder():
+def open_main_folder(folder_name=None):
     try:
         if folder_is_open(["00 - modelo"]):
             open_folder(cfg.CAMINHO_MODELO_EDD)
+            go_to(cfg.CAMINHO_PAGFLIP)
+        elif folder_is_open([f'{folder_name}']):
+            open_folder(cfg.CAMINHO_MODELO_EDD_0)
             go_to(cfg.CAMINHO_PAGFLIP)
         elif folder_is_open(["4 Adianto de novas edições"]):
             open_folder(cfg.CAMINHO_MODELO_EDD_0)
@@ -165,10 +169,13 @@ def auto_folders(pasta_nome, modelo_path):
         make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
         copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
         pg.hotkey('alt', 'up')
+        open_main_folder(pasta_nome)
+        open_main_folder()
         
         log("FileManager", "SUCESSO", f"Pasta {pasta_nome} criada")
         log("All_in_one", "SUCESSO", f"FileManager-auto_folders: pasta {pasta_nome} criada")
         time.sleep(1)
+        
         
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")
