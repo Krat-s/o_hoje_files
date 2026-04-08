@@ -2,7 +2,7 @@ import os
 import sys
 
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from pyautogui import screenshot
 from selenium import webdriver
@@ -19,6 +19,7 @@ from Global.Logs.logs import log
 from Global.utils import max_windows
 import Global.file_manager as fm
 
+
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
 
 def wait_d(driver, by, value, timeout=10, clicavel=True):
@@ -28,7 +29,7 @@ def wait_d(driver, by, value, timeout=10, clicavel=True):
     return WebDriverWait(driver, timeout).until(condicao((by, value)))
 
 
-def print_task(adon_, adon_name_folder):
+def print_task(adon, adon_name_folder):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")
     chrome_options = Options()
@@ -50,7 +51,7 @@ def print_task(adon_, adon_name_folder):
 
     # tempo de espera e zoom out
     wait_d(driver, By.TAG_NAME, "body", timeout=15)
-    wait_d(driver, By.CSS_SELECTOR, adon_, timeout=15, clicavel=False)
+    wait_d(driver, By.CSS_SELECTOR, adon, timeout=15, clicavel=False)
 
     driver.execute_script("document.body.style.zoom='75%'")
     time.sleep(1)
@@ -58,7 +59,7 @@ def print_task(adon_, adon_name_folder):
 
     def button_print(adon):
         try: 
-            ad = wait_d(driver, By.CSS_SELECTOR, adon_, timeout=15, clicavel=True)
+            ad = wait_d(driver, By.CSS_SELECTOR, adon, timeout=15, clicavel=True)
             driver.execute_script(
                 "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", ad
             )
@@ -76,7 +77,7 @@ def print_task(adon_, adon_name_folder):
                 log("print_ad", "ERRO", erro_msg)
     
     try:
-        button_print(adon_)
+        button_print(adon)
 
     except Exception as e:
         erro_msg = f"Falha ao salvar imagem: {str(e)}"

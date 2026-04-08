@@ -5,12 +5,14 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from __init__ import raiz_projeto
+import os
+import sys
+
+main_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+raiz_projeto = sys.path.append(main_folder)
+
 from Global.settings.settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
 from Global.Logs.logs import log
-
-import pyautogui as pg
-
 
 
 def wait_d(driver, by, value, timeout=10, clicavel=True):
