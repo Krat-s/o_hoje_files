@@ -20,6 +20,7 @@ pg.FAILSAFE = True
 
 
 def open_folder(endereco):
+    time.sleep(0.2)
     os.startfile(endereco)
     wc.wait_explorer_open()
     utl.max_windows()
@@ -42,8 +43,9 @@ def make_folder(name_folder, in_local=None):
     time.sleep(1)
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
-    time.sleep(0.4)
+    time.sleep(1)
     kb.write(name_folder)
+    time.sleep(1)
     pg.press('enter')
     time.sleep(1)
     pg.press('s')
@@ -128,13 +130,10 @@ def folder_is_open(folder_names: Iterable[str]) -> bool:
     return False
 
 
-def open_main_folder(folder_name=None):
+def open_main_folder():
     try:
         if folder_is_open(["00 - modelo"]):
             open_folder(cfg.CAMINHO_MODELO_EDD)
-            go_to(cfg.CAMINHO_PAGFLIP)
-        elif folder_is_open([f'{folder_name}']):
-            open_folder(cfg.CAMINHO_MODELO_EDD_0)
             go_to(cfg.CAMINHO_PAGFLIP)
         elif folder_is_open(["4 Adianto de novas edições"]):
             open_folder(cfg.CAMINHO_MODELO_EDD_0)
@@ -159,6 +158,7 @@ def open_main_folder(folder_name=None):
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
+
         make_folder(pasta_nome)
 
         make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
@@ -168,8 +168,9 @@ def auto_folders(pasta_nome, modelo_path):
 
         make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
         copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
+        time.sleep(0.5)
         pg.hotkey('alt', 'up')
-        open_main_folder(pasta_nome)
+        time.sleep(0.5)
         open_main_folder()
         
         log("FileManager", "SUCESSO", f"Pasta {pasta_nome} criada")

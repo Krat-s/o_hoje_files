@@ -47,8 +47,8 @@ def auto_print_():
 # 📌 click_farmer
 # 📌 Gerar interfaçe gráfica de opções de automações
 
-ed_ini = 7000
-qtd = 10
+ed_ini = 7091
+qtd = 3
 
 if __name__ == "__main__":
     print('All in one rodando...')

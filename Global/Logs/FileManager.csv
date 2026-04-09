@@ -23,3 +23,21 @@ data,hora,status,origem,função,message
 2026-04-08,02:36:18,SUCESSO,file_manager.py,auto_folders,Pasta 7115 - Quinta-feira criada
 2026-04-08,02:45:01,SUCESSO,file_manager.py,auto_folders,Pasta 7116 - Sexta-feira criada
 2026-04-08,02:53:45,SUCESSO,file_manager.py,auto_folders,Pasta 7117-8 - Fim de semana criada
+2026-04-08,23:31:39,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-08,23:41:30,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-08,23:51:22,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:01:14,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:11:06,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:20:58,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:30:49,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:40:41,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:50:33,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:00:25,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:10:17,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:20:09,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:30:01,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:39:53,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:49:45,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:59:37,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,02:09:29,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,02:19:21,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
