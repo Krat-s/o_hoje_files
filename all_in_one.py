@@ -2,7 +2,7 @@ from App import wedding as cm
 from App.billhead_editions import auto_billhead_editions
 from Mail.gmail import auto_drafts
 from Web.print_ad import auto_print_all_ads
-
+from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 
 
 # 📌 ------------------------------------------ envio de emails
@@ -22,7 +22,6 @@ def auto_marriage_():
         print(f"Erro no casamento: {e}")
 
 
-from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 
 # 📌 ------------------------------------------ cabeçalho
 def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
@@ -40,6 +39,8 @@ def auto_print_():
    except Exception as e:
        print(f"Erro ao imprimir anúncios: {e}")
 
+
+
 # Importar aplicações
 # 📌 Drive Daily
 # 📌 billhead_variables
@@ -55,5 +56,4 @@ if __name__ == "__main__":
     # auto_print_()
     # auto_marriage_()
     # auto_drafts_(ed_ini, qtd)
-    # auto_billhead_editions_()
     auto_billhead_editions_(ed_ini, qtd)

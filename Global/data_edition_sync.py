@@ -140,8 +140,8 @@ EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 
 if __name__ == "__main__":
     teste1 = datetime.now() + timedelta(days=1)
-    teste2 = 8001
+    # teste2 = 8091
     print(obter_edicao_por_data(teste1))
-    print(formatar_data(obter_data_por_edicao(teste2)))
+    # print(formatar_data(obter_data_por_edicao(teste2)))
     print('...')
     

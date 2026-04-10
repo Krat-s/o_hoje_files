@@ -513,3 +513,7 @@ Stacktrace:
 2026-04-08,16:35:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-04-08,16:35:16,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
 2026-04-08,16:35:20,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-09,15:53:37,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-09,15:53:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-09,15:53:52,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-09,15:53:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
