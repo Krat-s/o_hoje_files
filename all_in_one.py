@@ -26,7 +26,7 @@ def auto_marriage_():
 # 📌 ------------------------------------------ cabeçalho
 def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
     try:
-        auto_billhead_editions(edicao_inicial=ed, quantidade_repeticoes=qnt )
+        auto_billhead_editions(edicao_inicial=ed, quantidade_repeticoes=qnt)
     except Exception as e:
         print(f"Erro ao enviar fazer o cabeçalho: {e}")
 
