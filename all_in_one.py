@@ -5,6 +5,7 @@ from Web.print_ad import auto_print_all_ads
 from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 
 
+
 # 📌 ------------------------------------------ envio de emails
 def auto_drafts_(ed=None, qnt=None):
     try:
@@ -53,7 +54,7 @@ qtd = 3
 
 if __name__ == "__main__":
     print('All in one rodando...')
-    # auto_print_()
+    auto_print_()
     # auto_marriage_()
     # auto_drafts_(ed_ini, qtd)
-    auto_billhead_editions_(ed_ini, qtd)
+    # auto_billhead_editions_(ed_ini, qtd)

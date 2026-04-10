@@ -72,9 +72,9 @@ def formatar_data(data, tipo="completo"):
             return f"Virada de fevereiro para março, {dia_formatado} de março e {proximo_dia_formatado} de abril de {ano_de_data}"
         
         if mes_de_data != proximo_mes:
-            return f"fim de semanA, {dia_formatado} de {mes_de_data} e {proximo_dia_formatado} de {proximo_mes} de {ano_de_data}".replace('Ã§', 'ç')
+            return f"fim de semana, {dia_formatado} de {mes_de_data} e {proximo_dia_formatado} de {proximo_mes} de {ano_de_data}".replace('Ã§', 'ç')
         
-        return f"fim de semAna, {dia_formatado} e {proximo_dia_formatado} de {mes_de_data} de {ano_de_data}"
+        return f"fim de semana, {dia_formatado} e {proximo_dia_formatado} de {mes_de_data} de {ano_de_data}"
 
     if data.weekday() == 1:
         return f"{terca_babugado}, {dia_formatado} de {mes_de_data} de {ano_de_data}"
@@ -128,7 +128,7 @@ def main():
         ("Debug 30/09/2025", formatar_data(datetime(2025, 9, 30), tipo="dia_semana")),
 
         ("Debug virada", formatar_data(datetime(2025, 12, 31))),
-        ("Debug domingo", formatar_data(datetime(2026, 1, 3), tipo="dia")),
+        ("Debug domingo", formatar_data(datetime(2026, 3, 1), tipo="dia")),
         ("Debug março", formatar_data(datetime(2026, 2, 28))),
         ("Debug março para abril", formatar_data(datetime(2029, 3, 31)))
 

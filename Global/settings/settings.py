@@ -20,7 +20,7 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\Auto-prints'
+CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\00 - Auto-prints'
 
 
 # ------------------------------------------------------------------------- Tempos de espera
@@ -50,7 +50,7 @@ ad_1_client = ""
 ad_1_folder = f'Principal  -  {ad_1_client}  -  {ad_1_pi}'
 
 #addon Width
-ad_2_pi = 39438
+ad_2_pi = None
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
 ad_2_client = "Pref.Luiziânia"
 ad_2_folder = f'Width  -  {ad_2_client}  -  {ad_2_pi}'
@@ -100,13 +100,13 @@ def stats():
     print(f".. Edição inicial: {edicao_inicial}")
     print(f".. Quantidade de repetições: {quantidade_repeticoes}")
     print(f".. Criando modelo de {total_edicoes} edições")
+    print(f".. Última edição: {total_edicoes + edicao_inicial}")
     print(".....")
 
 
 if __name__ == "__main__":
-    # stats()
+    stats()
     # print(sy_de.EDD)
-    print('sdfa')
 
 
 
