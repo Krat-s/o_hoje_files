@@ -172,6 +172,7 @@ def auto_folders(pasta_nome, modelo_path):
         pg.hotkey('alt', 'up')
         time.sleep(0.5)
         open_main_folder()
+        pg.hotkey('alt', 'f4')
         
         log("FileManager", "SUCESSO", f"Pasta {pasta_nome} criada")
         log("All_in_one", "SUCESSO", f"FileManager-auto_folders: pasta {pasta_nome} criada")
