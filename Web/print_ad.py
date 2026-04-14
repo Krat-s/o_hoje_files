@@ -1,6 +1,3 @@
-import os
-import sys
-
 import time
 from datetime import datetime
 
@@ -8,8 +5,9 @@ from pyautogui import screenshot
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
+import os
+import sys
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
@@ -18,15 +16,11 @@ import Global.settings.settings as cfg
 from Global.Logs.logs import log
 from Global.utils import max_windows
 import Global.file_manager as fm
+from Web.modules.web_diver import wait_d
+
 
 
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
-
-def wait_d(driver, by, value, timeout=10, clicavel=True):
-    """Espera até que o elemento esteja presente (ou clicável).
-    Retorna o elemento encontrado."""
-    condicao = EC.element_to_be_clickable if clicavel else EC.presence_of_element_located
-    return WebDriverWait(driver, timeout).until(condicao((by, value)))
 
 
 def print_task(adon, adon_name_folder):
@@ -48,8 +42,6 @@ def print_task(adon, adon_name_folder):
         return
     driver.get(cfg.url_target)
 
-
-    # tempo de espera e zoom out
     wait_d(driver, By.TAG_NAME, "body", timeout=15)
     wait_d(driver, By.CSS_SELECTOR, adon, timeout=15, clicavel=False)
 
