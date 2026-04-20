@@ -226,3 +226,24 @@ data,hora,status,origem,função,message
 2026-04-16,22:54:56,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
 2026-04-16,22:57:04,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
 2026-04-16,22:59:12,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-17,22:37:26,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-17,22:39:12,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-17,22:40:58,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-17,22:42:44,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-17,22:44:31,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-17,22:46:17,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-17,22:48:03,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-17,22:49:49,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-17,22:51:35,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-19,19:30:23,ERRO,wedding.py,wedding,"Erro ao casar as páginas 13_16: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:29,ERRO,wedding.py,wedding,"Erro ao casar as páginas 14_15: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:35,ERRO,wedding.py,wedding,"Erro ao casar as páginas 17_20: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:40,ERRO,wedding.py,wedding,"Erro ao casar as páginas 10_11: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:46,ERRO,wedding.py,wedding,"Erro ao casar as páginas 9_12: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:52,ERRO,wedding.py,wedding,"Erro ao casar as páginas 3_6: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:58,ERRO,wedding.py,wedding,"Erro ao casar as páginas 4_5: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:31:03,ERRO,wedding.py,wedding,"Erro ao casar as páginas 2_7: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:31:09,ERRO,wedding.py,wedding,"Erro ao casar as páginas 1_8: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,21:24:04,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-19,21:25:50,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-19,21:27:36,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
