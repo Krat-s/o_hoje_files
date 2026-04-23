@@ -1431,3 +1431,19 @@ Stacktrace:
 2026-04-23,02:57:38,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7117-8 - Fim de semana criada
 2026-04-23,03:05:56,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.117-8, Fim de semana criado"
 2026-04-23,15:33:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-23,16:39:47,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:39:51,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:43:46,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:43:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:44:34,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:44:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:45:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:45:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:46:15,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:46:19,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:47:40,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:47:44,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:58:43,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:58:47,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,17:00:53,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,17:00:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

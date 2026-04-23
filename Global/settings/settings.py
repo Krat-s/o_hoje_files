@@ -44,14 +44,14 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
 #addon banner principal
-ad_1_pi = None
-ad_1 = "section:nth-child(2) img[alt='Publicidade']" 
+ad_1_pi = 39710
+ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
 ad_1_client = "GOV"
 ad_1_folder = f'Principal  -  {ad_1_client}  -  {ad_1_pi}'
 
 
 #addon Width
-ad_2_pi = 39710
+ad_2_pi = None
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
 ad_2_client = "Pref.Luiziânia"
 ad_2_folder = f'Width  -  {ad_2_client}  -  {ad_2_pi}'

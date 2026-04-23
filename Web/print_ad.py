@@ -59,12 +59,12 @@ def print_task(adon, adon_name_folder, gif=None):
             
             fm.make_folder_(adon_name_folder)
             if gif is not None:
-                time.sleep(2)
-                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - 1.png")
-                time.sleep(4)
-                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - 2.png")
-                time.sleep(4)
-                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - 3.png")
+                time.sleep(1)
+                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame1.png")
+                time.sleep(3.5)
+                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame2.png")
+                time.sleep(3.5)
+                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame3.png")
             else:
                 screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
 
@@ -117,18 +117,7 @@ def auto_print_all_ads(gif=None):
         autoprint(3, gif)
 
 
-
-
-adon_var = {
-            1: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
-            2: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
-        }
-
-
-
-
 if __name__ == "__main__":
     print('Print ad rodando...')
     auto_print_all_ads(gif=True)
-
-
+    print('Print ad finalizado.')
