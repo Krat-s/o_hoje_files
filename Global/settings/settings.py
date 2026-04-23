@@ -45,19 +45,23 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 #addon banner principal
 ad_1_pi = None
-ad_1 = "section.block-ads:nth-child() img[alt='Publicidade']" 
-ad_1_client = ""
+ad_1 = "section:nth-child(2) img[alt='Publicidade']" 
+ad_1_client = "GOV"
 ad_1_folder = f'Principal  -  {ad_1_client}  -  {ad_1_pi}'
 
+
 #addon Width
-ad_2_pi = None
+ad_2_pi = 39710
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
 ad_2_client = "Pref.Luiziânia"
 ad_2_folder = f'Width  -  {ad_2_client}  -  {ad_2_pi}'
 ad_2_link = str("https://www.luziania.go.gov.br")
 
+
+
+
 #addon Halfpage
-ad_3_pi = 39454
+ad_3_pi = None
 ad_3 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
 ad_3_link = "https://ohoje.com/wp-content/uploads/2026/04/Banner_GERAL_970X250-8.gif?v=1775155356"
 ad_3_client = "GOV"

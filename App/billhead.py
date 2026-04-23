@@ -88,7 +88,7 @@ def aply_17(info: EdicaoQuarkLike):
     utlq.take_tool("t")
     utl.press_repeat('t', 4)
     pg.hotkey('ctrl', 'a')
-    kb.write(f"Ano 21 - nº {info.edicao_formatada}")
+    kb.write(f"Ano 22 - nº {info.edicao_formatada}")
     utlq.close_page()
 
 def auto_date_all_non_especial_pages(info: EdicaoQuarkLike):

@@ -19,11 +19,12 @@ import Global.file_manager as fm
 from Web.modules.web_diver import wait_d
 
 
-
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
 
+#
 
-def print_task(adon, adon_name_folder):
+
+def print_task(adon, adon_name_folder, gif=None):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")
     chrome_options = Options()
@@ -55,10 +56,17 @@ def print_task(adon, adon_name_folder):
             driver.execute_script(
                 "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", ad
             )
-            time.sleep(0.5)
-
+            
             fm.make_folder_(adon_name_folder)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
+            if gif is not None:
+                time.sleep(2)
+                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - 1.png")
+                time.sleep(4)
+                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - 2.png")
+                time.sleep(4)
+                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - 3.png")
+            else:
+                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
 
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
@@ -83,36 +91,44 @@ def print_task(adon, adon_name_folder):
         log("print_ad", "RELATÓRIO", "Drive fechado após execução da tarefa")
 
 
-# ------------------manual trigger 
-def autoprint(NUM):
-    if NUM == 1:
-        print_task(cfg.ad_1, cfg.ad_1_folder)
-    elif NUM == 2:
-        print_task(cfg.ad_2, cfg.ad_2_folder)
-    elif NUM == 3:
-        print_task(cfg.ad_3, cfg.ad_3_folder)
-
-def auto_print_all_ads():
-    '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
-    if cfg.ad_1_pi != None:
-        autoprint(1)
-
-    if cfg.ad_2_pi != None:
-        autoprint(2)
-
-    if cfg.ad_3_pi != None:
-        autoprint(3)
-
 # ------n8n trigger
 def run_print_ad(ad=None, folder=None):
     print_task(ad, folder)
 
 
+# ------------------manual trigger 
+def autoprint(NUM, gif=None):
+    if NUM == 1:
+        print_task(cfg.ad_1, cfg.ad_1_folder, gif)
+    elif NUM == 2:
+        print_task(cfg.ad_2, cfg.ad_2_folder, gif)
+    elif NUM == 3:
+        print_task(cfg.ad_3, cfg.ad_3_folder, gif)
+
+def auto_print_all_ads(gif=None):
+    '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
+    if cfg.ad_1_pi != None:
+        autoprint(1, gif)
+
+    if cfg.ad_2_pi != None:
+        autoprint(2, gif)
+
+    if cfg.ad_3_pi != None:
+        autoprint(3, gif)
+
+
+
+
+adon_var = {
+            1: r'\\192.168.1.249\redacao\arte\01 Projeto\3 - k Modelo de Segunda-feira',
+            2: r'\\192.168.1.249\redacao\arte\01 Projeto\2 - k Modelo de Fim de semana',
+        }
+
+
+
+
 if __name__ == "__main__":
     print('Print ad rodando...')
-    # print_task(cfg.ad_1, cfg.ad_1_folder) #Principal
-    # print_task(cfg.ad_2, cfg.ad_2_folder) #Width
-    # print_task(cfg.ad_3, cfg.ad_3_folder) #Halfpage
-    # autoprint(1)
-    # autoprint(2)
-    # autoprint(3)
+    auto_print_all_ads(gif=True)
+
+
