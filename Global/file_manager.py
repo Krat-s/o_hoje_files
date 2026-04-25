@@ -20,9 +20,11 @@ pg.FAILSAFE = True
 
 
 def open_folder(endereco):
+    time.sleep(0.2)
     os.startfile(endereco)
     wc.wait_explorer_open()
     utl.max_windows()
+    time.sleep(0.5)
 
 
 def go_to(específico=None):
@@ -41,8 +43,9 @@ def make_folder(name_folder, in_local=None):
     time.sleep(1)
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
-    time.sleep(0.4)
+    time.sleep(1)
     kb.write(name_folder)
+    time.sleep(1)
     pg.press('enter')
     time.sleep(1)
     pg.press('s')
@@ -50,6 +53,12 @@ def make_folder(name_folder, in_local=None):
     pg.press('esc', presses=3)
     pg.press('f5')
     time.sleep(2.5)
+
+
+def make_folder_(name_folder):
+    caminho_completo = os.path.join(cfg.CAMINHO_PRINTS, name_folder)
+    os.makedirs(caminho_completo, exist_ok=True)
+    return caminho_completo
 
 
 def take_file(arquivo):
@@ -149,6 +158,7 @@ def open_main_folder():
 def auto_folders(pasta_nome, modelo_path):
     try:
         open_main_folder()
+
         make_folder(pasta_nome)
 
         make_folder(pasta_nome, cfg.CAMINHO_FOTOS)
@@ -158,11 +168,16 @@ def auto_folders(pasta_nome, modelo_path):
 
         make_folder(pasta_nome, cfg.CAMINHO_MODELO_EDD)
         copy_files(cfg.CAMINHO_MODELO_EDD, pasta_nome, modelo_path)
+        time.sleep(0.5)
         pg.hotkey('alt', 'up')
+        time.sleep(0.5)
+        open_main_folder()
+        pg.hotkey('alt', 'f4')
         
         log("FileManager", "SUCESSO", f"Pasta {pasta_nome} criada")
         log("All_in_one", "SUCESSO", f"FileManager-auto_folders: pasta {pasta_nome} criada")
         time.sleep(1)
+        
         
     except Exception as e:
         log("FileManager", "ERRO", f"Erro ao criar pasta: {str(e)}")

@@ -14,6 +14,7 @@ import Global.data_edition_sync as sy_de
 from Global.settings.win_manager import check_windows
 
 
+
 def press_repeat(key, n):
     for _ in range(n):
         pg.press(key)
@@ -23,7 +24,6 @@ def atalho_endereço():
     ''''Retorna o atalho correto para a barra de endereço do Explorador de Arquivos'''
     windows = check_windows()
     return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'l')
-
 
 
 def max_windows():
@@ -57,18 +57,18 @@ def chose_suggestion(QTD=1, TEMPO=2):
 
 
 if __name__ == "__main__":
-    print("oi")
-    pg.hotkey('win', 'e')
+    print("Utils testing")
+    # pg.hotkey('win', 'e')
 
-    pg.hotkey('win', 's')
-    pg.hotkey('win', '4')
-    time.sleep(3)
-    open_software(cfg.quark)
-    # close_and_open_quark()
-    # def error_check():
-    #     if tutl.status == "open":
-    #         print("Tratamento concluído para arquivo aberto.")
-    #     if tutl.status == "not_found":
-    #         print("Tratamento concluído para arquivo não encontrado.")
-    #     else:
-    #         print("Tudo certo, seguindo...")
+    # pg.hotkey('win', 's')
+    # pg.hotkey('win', '4')
+    # time.sleep(3)
+    # open_software(cfg.quark)
+    # # close_and_open_quark()
+    # # def error_check():
+    # #     if tutl.status == "open":
+    # #         print("Tratamento concluído para arquivo aberto.")
+    # #     if tutl.status == "not_found":
+    # #         print("Tratamento concluído para arquivo não encontrado.")
+    # #     else:
+    # #         print("Tudo certo, seguindo...")

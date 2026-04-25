@@ -1,0 +1,188 @@
+data,hora,status,origem,função,message
+2026-03-19,16:50:42,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,16:50:46,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:22:45,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:22:49,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:35:31,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:35:31,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:35:31,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:35:31,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:35:35,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:37:58,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:38:02,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:39:38,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:39:42,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:42:21,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:42:21,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:42:21,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:42:21,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:42:25,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:49:39,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-19,17:49:44,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:52:02,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:52:06,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:52:55,ERRO,boost_ad.py,click_task,Falha ao clicar no botão: Object of type type is not JSON serializable
+2026-03-19,17:52:59,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:54:39,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:54:43,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:55:14,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-19,17:55:18,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,18:00:02,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-19,18:00:07,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,18:02:09,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-19,18:02:14,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-20,17:22:35,SUCESSO,boost_ad.py,button_view,ads-728 mx-auto visualizado 0 vezes
+2026-03-20,17:22:35,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.81)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655924332]
+	chromedriver!(No symbol) [0x7ff6559d78b6]
+	chromedriver!(No symbol) [0x7ff6559f3eb2]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:22:39,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa

@@ -49,3 +49,1401 @@ data,hora,status,origem,função,message
 2026-03-13,22:38:49,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
 2026-03-13,22:40:35,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
 2026-03-13,22:42:21,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-03-16,22:27:23,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-16,22:29:09,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-16,22:30:55,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-16,22:32:41,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-16,22:34:27,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-16,22:51:26,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-16,22:53:12,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-16,22:54:58,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-17,22:00:00,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-17,22:01:47,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-17,22:03:33,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-17,22:05:19,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-17,22:07:05,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-17,22:48:51,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-17,22:50:37,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-17,22:52:23,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-18,22:29:28,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-18,22:31:14,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-18,22:33:00,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-18,22:34:46,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-18,22:36:33,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-18,23:13:17,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-19,16:50:42,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,16:50:46,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:22:45,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:22:49,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:35:31,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:35:31,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:35:31,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:35:31,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:35:35,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:37:58,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:38:02,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:39:38,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:39:42,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:42:21,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:42:21,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:42:21,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:42:21,SUCESSO,boost_ad.py,button_view,p-3 pb-0 visualizado 0 vezes
+2026-03-19,17:42:25,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:49:39,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-19,17:49:44,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:52:02,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:52:06,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:52:55,ERRO,boost_ad.py,click_task,Falha ao clicar no botão: Object of type type is not JSON serializable
+2026-03-19,17:52:59,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:54:39,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b2e93045+14585]
+	chromedriver!GetHandleVerifier [0x7ff6b2e930b0+145f0]
+	chromedriver!(No symbol) [0x7ff6b2bfdb7d]
+	chromedriver!(No symbol) [0x7ff6b2c573ae]
+	chromedriver!(No symbol) [0x7ff6b2c576bc]
+	chromedriver!(No symbol) [0x7ff6b2ca7a57]
+	chromedriver!(No symbol) [0x7ff6b2ca45af]
+	chromedriver!(No symbol) [0x7ff6b2c49a18]
+	chromedriver!(No symbol) [0x7ff6b2c4a8f3]
+	chromedriver!GetHandleVerifier [0x7ff6b319ac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff6b319536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff6b31b7d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff6b2eaf445+30985]
+	chromedriver!GetHandleVerifier [0x7ff6b2eb84dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff6b2e9c7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff6b2e81387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-19,17:54:43,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,17:55:14,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-19,17:55:18,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,18:00:02,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-19,18:00:07,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,18:02:09,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-19,18:02:14,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-19,22:50:34,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-19,22:52:20,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-19,22:54:06,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-19,22:55:52,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-19,22:57:38,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-19,23:09:37,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-19,23:11:23,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-19,23:13:09,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-20,17:17:18,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: javascript error: arguments[0].scrollIntoView is not a function
+  (Session info: chrome=146.0.7680.81)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958faf]
+	chromedriver!(No symbol) [0x7ff6559f59b1]
+	chromedriver!(No symbol) [0x7ff6559d069a]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:17:18,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: javascript error: arguments[0].scrollIntoView is not a function
+  (Session info: chrome=146.0.7680.81)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958faf]
+	chromedriver!(No symbol) [0x7ff6559f59b1]
+	chromedriver!(No symbol) [0x7ff6559d069a]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:17:18,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: javascript error: arguments[0].scrollIntoView is not a function
+  (Session info: chrome=146.0.7680.81)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958faf]
+	chromedriver!(No symbol) [0x7ff6559f59b1]
+	chromedriver!(No symbol) [0x7ff6559d069a]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:17:22,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:20:54,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:20:54,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:20:54,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:20:58,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:22:35,SUCESSO,boost_ad.py,button_view,ads-728 mx-auto visualizado 0 vezes
+2026-03-20,17:22:35,ERRO,boost_ad.py,click_task,"Falha ao clicar no botão: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.81)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655924332]
+	chromedriver!(No symbol) [0x7ff6559d78b6]
+	chromedriver!(No symbol) [0x7ff6559f3eb2]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:22:39,RELATÓRIO,boost_ad.py,click_task,Drive fechado após execução da tarefa
+2026-03-20,17:23:11,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:23:13,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:23:15,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:23:19,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:32:30,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff6559a73ae]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:32:45,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff6559a73ae]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:33:00,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff6559a73ae]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:33:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:34:41,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: Unable to locate an element with the xpath expression https://ohoje.com/wp-content/uploads/2026/03/BANNER-WEB-300X600PX.gif?v=1773948786 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string 'https://ohoje.com/wp-content/uploads/2026/03/BANNER-WEB-300X600PX.gif?v=1773948786' is not a valid XPath expression.
+  (Session info: chrome=146.0.7680.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958c15]
+	chromedriver!(No symbol) [0x7ff655958cdf]
+	chromedriver!(No symbol) [0x7ff6559a6b2e]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:34:41,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: Unable to locate an element with the xpath expression ads-980 mx-auto because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string 'ads-980 mx-auto' is not a valid XPath expression.
+  (Session info: chrome=146.0.7680.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958c15]
+	chromedriver!(No symbol) [0x7ff655958cdf]
+	chromedriver!(No symbol) [0x7ff6559a6b2e]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:34:41,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: Unable to locate an element with the xpath expression ads-728 mx-auto because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string 'ads-728 mx-auto' is not a valid XPath expression.
+  (Session info: chrome=146.0.7680.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958c15]
+	chromedriver!(No symbol) [0x7ff655958cdf]
+	chromedriver!(No symbol) [0x7ff6559a6b2e]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:34:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:37:44,SUCESSO,print_ad.py,button_print,.ads-728.mx-auto printado
+2026-03-20,17:37:48,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:38:04,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=146.0.7680.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958c15]
+	chromedriver!(No symbol) [0x7ff655958cdf]
+	chromedriver!(No symbol) [0x7ff6559a6b2e]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:38:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:38:41,SUCESSO,print_ad.py,button_print,ads-728.mx-auto printado
+2026-03-20,17:38:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:39:38,SUCESSO,print_ad.py,button_print,ads-728.mx-auto printado
+2026-03-20,17:39:42,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:52:33,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:52:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:53:42,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:53:47,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:54:10,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:54:14,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:55:28,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:55:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:57:54,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff6559a73ae]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:57:59,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,18:02:28,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,18:02:32,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,18:03:06,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,18:03:11,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,18:06:04,SUCESSO,print_ad.py,button_print,section.block-ads img[alt='Publicidade'] printado
+2026-03-20,18:06:08,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,22:30:29,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-20,22:32:15,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-20,22:34:01,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-20,22:35:47,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-20,22:37:33,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-20,22:46:04,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-20,22:47:51,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-20,22:49:37,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-20,22:51:23,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-20,22:53:09,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-20,23:10:23,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-20,23:12:09,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-20,23:13:55,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-22,19:23:16,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-22,19:25:02,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-22,19:26:48,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-22,19:28:35,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-22,19:30:21,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-22,20:14:28,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-22,20:16:14,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-22,20:18:00,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-23,23:13:26,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-23,23:15:12,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-23,23:16:58,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-23,23:18:45,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-23,23:20:31,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-23,23:22:17,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-23,23:24:03,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-23,23:25:49,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-23,23:27:35,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-03-24,22:02:57,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-24,22:04:43,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-24,22:06:29,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-24,22:08:15,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-24,22:10:01,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-24,22:47:09,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-24,22:48:55,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-24,22:50:41,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-25,22:11:23,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-25,22:13:09,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-25,22:14:56,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-25,22:16:42,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-25,22:18:28,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-25,22:47:59,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-25,22:49:45,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-25,22:51:31,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-26,17:29:35,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-26,17:29:40,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-26,17:32:05,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-26,17:32:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-26,17:32:24,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-26,17:32:29,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-26,22:26:13,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-26,22:27:59,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-26,22:29:45,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-26,22:31:31,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-26,22:33:17,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-26,22:35:03,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-26,22:36:49,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-26,22:38:35,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-26,22:40:21,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-03-27,22:38:27,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-27,22:40:13,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-27,22:41:59,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-27,22:43:45,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-27,22:45:31,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-27,22:47:18,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-27,22:49:04,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-27,22:50:50,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-27,22:52:36,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-03-29,20:04:10,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-29,20:05:56,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-29,20:07:42,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-29,20:09:28,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-29,20:11:14,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-29,20:13:01,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-29,20:14:47,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-29,20:16:33,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-03-29,20:20:36,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-29,20:22:22,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-29,20:24:08,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-29,20:25:54,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-29,20:27:40,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-29,20:29:26,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-29,20:31:12,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-29,20:32:58,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-03-30,17:37:56,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-30,17:38:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-30,22:20:21,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-03-30,22:22:07,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-03-30,22:23:53,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-03-30,22:25:39,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-03-30,23:01:44,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-03-30,23:03:30,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-03-30,23:05:16,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-03-31,15:56:09,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,15:56:13,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,15:57:03,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,15:57:07,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,15:58:13,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,15:58:17,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,16:00:50,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,16:00:55,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,16:01:46,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,16:01:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:05:08,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:05:12,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:06:41,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:06:45,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:07:39,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:07:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:08:06,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:08:10,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:15:27,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:15:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:21:34,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:21:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:22:23,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:22:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:22:49,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:22:53,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,20:50:41,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,20:50:45,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,20:52:03,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,20:52:07,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,20:52:42,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,20:52:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,20:54:52,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,20:54:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,21:21:56,ERRO,print_ad.py,button_print,Falha ao salvar imagem: formatar_data() got multiple values for argument 'data'
+2026-03-31,21:22:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,21:23:22,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,21:23:26,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,22:08:31,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,22:08:35,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:30:33,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\quarta-feira, 1º de abril de 2026.png'"
+2026-04-01,17:30:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:31:35,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,17:31:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:50:44,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,17:50:48,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:05:23,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:05:29,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:11:05,SUCESSO,print_ad.py,button_print,section:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:11:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:12:32,SUCESSO,print_ad.py,button_print,section:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:12:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:13:08,SUCESSO,print_ad.py,button_print,section:nth-child(3) [alt='Publicidade'] printado
+2026-04-01,18:13:12,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,22:55:50,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-01,22:57:36,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-01,22:59:22,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-01,23:01:08,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-01,23:02:54,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-01,23:04:40,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-01,23:06:26,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-01,23:08:12,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-02,15:28:46,SUCESSO,print_ad.py,button_print,section:nth-child(3) [alt='Publicidade'] printado
+2026-04-02,15:28:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,15:41:42,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) [alt='Publicidade'] printado
+2026-04-02,15:41:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:04:12,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff769d929c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff769aba0d0+14e90]
+	chromedriver!(No symbol) [0x7ff76981db2d]
+	chromedriver!(No symbol) [0x7ff769825ab1]
+	chromedriver!(No symbol) [0x7ff769828bc5]
+	chromedriver!(No symbol) [0x7ff769828c8f]
+	chromedriver!(No symbol) [0x7ff76987631e]
+	chromedriver!(No symbol) [0x7ff769876eac]
+	chromedriver!(No symbol) [0x7ff7698c6fe7]
+	chromedriver!(No symbol) [0x7ff7698c3b9b]
+	chromedriver!(No symbol) [0x7ff769869298]
+	chromedriver!(No symbol) [0x7ff76986a183]
+	chromedriver!GetHandleVerifier [0x7ff769dbde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff769db8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff769dd9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff769ad6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff769adfacc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff769ac3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff769ac37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff769aa7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffd542de8d7+17]
+	ntdll!RtlUserThreadStart [0x7ffd54cac48c+2c]
+"
+2026-04-02,18:04:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:04:27,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff769d929c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff769aba0d0+14e90]
+	chromedriver!(No symbol) [0x7ff76981db2d]
+	chromedriver!(No symbol) [0x7ff769825ab1]
+	chromedriver!(No symbol) [0x7ff769828bc5]
+	chromedriver!(No symbol) [0x7ff769828c8f]
+	chromedriver!(No symbol) [0x7ff76987631e]
+	chromedriver!(No symbol) [0x7ff769876eac]
+	chromedriver!(No symbol) [0x7ff7698c6fe7]
+	chromedriver!(No symbol) [0x7ff7698c3b9b]
+	chromedriver!(No symbol) [0x7ff769869298]
+	chromedriver!(No symbol) [0x7ff76986a183]
+	chromedriver!GetHandleVerifier [0x7ff769dbde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff769db8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff769dd9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff769ad6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff769adfacc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff769ac3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff769ac37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff769aa7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffd542de8d7+17]
+	ntdll!RtlUserThreadStart [0x7ffd54cac48c+2c]
+"
+2026-04-02,18:04:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:14:58,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-02,18:15:02,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:17:41,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-02,18:17:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:17:56,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-02,18:18:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:18:23,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-02,18:18:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:18:45,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-02,18:18:49,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,22:56:49,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-02,22:58:35,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-02,23:00:21,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-02,23:02:07,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-02,23:03:53,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-02,23:05:39,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-02,23:07:25,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-02,23:09:11,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-03,20:37:01,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-03,20:38:47,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-03,20:40:33,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-03,20:42:19,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-03,20:44:05,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-03,20:45:51,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-03,20:47:37,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-03,20:49:23,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-05,18:26:44,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-05,18:26:49,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,18:26:58,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-05,18:27:02,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:20:37,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-05,20:22:23,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-05,20:24:10,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-05,20:25:56,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-05,20:27:42,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-05,20:51:26,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-05,20:51:32,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:56:27,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-05,20:56:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:56:39,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-05,20:56:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:25:17,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-06,15:25:22,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:25:29,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-06,15:25:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:34:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,15:34:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:34:42,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,15:34:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:32:33,ERRO,print_ad.py,button_print,Falha ao salvar imagem: unknown file extension: 
+2026-04-06,17:32:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:44:59,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:45:03,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:46:12,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:46:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:47:00,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06Teste.png'
+2026-04-06,17:47:04,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:47:46,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:47:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:48:34,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:48:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:49:11,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:49:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:49:53,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:49:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:50:20,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026 | 04 | 06.png'
+2026-04-06,17:50:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:50:56,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026\\04\\06.png'
+2026-04-06,17:51:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:51:23,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:51:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:52:01,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:52:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:52:59,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  4  |  6.png'
+2026-04-06,17:53:03,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:53:42,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:53:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:54:17,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:54:21,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:57:39,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,17:57:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:58:38,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,17:58:42,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,22:16:12,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,22:16:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,22:16:26,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,22:16:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,23:15:22,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,23:15:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,23:21:46,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,23:21:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,23:30:43,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,23:30:47,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,23:36:51,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,23:36:55,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,00:07:30,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-07,00:07:34,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,00:19:33,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-07,00:19:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,16:52:37,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-07,16:52:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,16:52:50,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-07,16:52:54,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,21:54:27,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-07,21:56:13,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-07,21:57:59,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-07,21:59:45,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-07,22:01:32,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-07,22:49:13,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-07,22:50:59,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-07,22:52:45,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-07,23:37:09,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-07,23:38:17,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7091 - Segunda-feira criada
+2026-04-07,23:45:24,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.091, Segunda-feira criado"
+2026-04-07,23:45:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-07,23:46:35,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7092 - Terça-feira criada
+2026-04-07,23:53:43,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.092, Terça-feira criado"
+2026-04-07,23:53:46,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-07,23:54:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7093 - Quarta-feira criada
+2026-04-08,00:02:01,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.093, Quarta-feira criado"
+2026-04-08,00:02:06,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,00:03:14,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7094 - Quinta-feira criada
+2026-04-08,00:10:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.094, Quinta-feira criado"
+2026-04-08,00:10:27,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,00:11:35,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7095 - Sexta-feira criada
+2026-04-08,00:18:42,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.095, Sexta-feira criado"
+2026-04-08,00:18:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,00:19:57,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7096-7 - Fim de semana criada
+2026-04-08,00:27:04,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.096-7, Fim de semana criado"
+2026-04-08,00:27:12,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,00:28:20,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7098 - Segunda-feira criada
+2026-04-08,00:35:27,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.098, Segunda-feira criado"
+2026-04-08,00:35:37,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,00:36:44,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7099 - Terça-feira criada
+2026-04-08,00:43:52,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.099, Terça-feira criado"
+2026-04-08,00:44:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,00:45:10,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7100 - Quarta-feira criada
+2026-04-08,00:52:18,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.100, Quarta-feira criado"
+2026-04-08,00:52:30,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,00:53:37,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7101 - Quinta-feira criada
+2026-04-08,01:00:45,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.101, Quinta-feira criado"
+2026-04-08,01:00:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,01:02:06,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7102 - Sexta-feira criada
+2026-04-08,01:09:13,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.102, Sexta-feira criado"
+2026-04-08,01:09:27,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,01:10:35,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7103-4 - Fim de semana criada
+2026-04-08,01:17:43,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.103-4, Fim de semana criado"
+2026-04-08,01:17:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,01:19:06,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7105 - Segunda-feira criada
+2026-04-08,01:26:13,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.105, Segunda-feira criado"
+2026-04-08,01:26:30,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,01:27:38,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7106 - Terça-feira criada
+2026-04-08,01:34:46,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.106, Terça-feira criado"
+2026-04-08,01:35:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,01:36:12,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7107 - Quarta-feira criada
+2026-04-08,01:43:19,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.107, Quarta-feira criado"
+2026-04-08,01:43:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,01:44:30,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7108 - Quinta-feira criada
+2026-04-08,01:51:38,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.108, Quinta-feira criado"
+2026-04-08,01:51:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,01:53:05,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7109 - Sexta-feira criada
+2026-04-08,02:00:12,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.109, Sexta-feira criado"
+2026-04-08,02:00:33,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,02:01:41,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7110-1 - Fim de semana criada
+2026-04-08,02:08:49,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.110-1, Fim de semana criado"
+2026-04-08,02:09:11,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,02:10:19,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7112 - Segunda-feira criada
+2026-04-08,02:17:26,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.112, Segunda-feira criado"
+2026-04-08,02:17:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,02:18:57,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7113 - Terça-feira criada
+2026-04-08,02:26:05,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.113, Terça-feira criado"
+2026-04-08,02:26:29,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,02:27:37,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7114 - Quarta-feira criada
+2026-04-08,02:34:44,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.114, Quarta-feira criado"
+2026-04-08,02:35:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,02:36:18,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7115 - Quinta-feira criada
+2026-04-08,02:43:25,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.115, Quinta-feira criado"
+2026-04-08,02:43:52,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,02:45:01,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7116 - Sexta-feira criada
+2026-04-08,02:52:08,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.116, Sexta-feira criado"
+2026-04-08,02:52:36,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,02:53:45,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7117-8 - Fim de semana criada
+2026-04-08,03:00:52,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.117-8, Fim de semana criado"
+2026-04-08,16:06:12,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:06:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:06:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:06:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:09:10,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:09:14,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:11:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:11:34,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:14:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:14:40,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:35:01,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:35:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:35:16,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:35:20,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,17:28:40,ERRO,gmail.py,take_receivers,"Falha ao pegar emails: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-08,21:56:31,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-08,21:58:39,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-08,22:00:47,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-08,22:02:55,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-08,22:05:03,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-08,22:15:09,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-08,22:17:17,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-08,22:19:25,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-08,23:30:07,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,23:31:39,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7091 - Segunda-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-08,23:39:55,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.091, Segunda-feira criado"
+2026-04-08,23:39:59,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,23:41:30,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7092 - Terça-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-08,23:49:46,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.092, Terça-feira criado"
+2026-04-08,23:49:51,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-08,23:51:22,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7093 - Quarta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-08,23:59:38,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.093, Quarta-feira criado"
+2026-04-08,23:59:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,00:01:14,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7094 - Quinta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:09:30,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.094, Quinta-feira criado"
+2026-04-09,00:09:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,00:11:06,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7095 - Sexta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:19:22,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.095, Sexta-feira criado"
+2026-04-09,00:19:27,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,00:20:58,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7096-7 - Fim de semana: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:29:14,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.096-7, Fim de semana criado"
+2026-04-09,00:29:18,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,00:30:49,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7098 - Segunda-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:39:05,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.098, Segunda-feira criado"
+2026-04-09,00:39:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,00:40:41,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7099 - Terça-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:48:58,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.099, Terça-feira criado"
+2026-04-09,00:49:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,00:50:33,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7100 - Quarta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,00:58:50,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.100, Quarta-feira criado"
+2026-04-09,00:58:54,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,01:00:25,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7101 - Quinta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:08:41,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.101, Quinta-feira criado"
+2026-04-09,01:08:46,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,01:10:17,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7102 - Sexta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:18:33,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.102, Sexta-feira criado"
+2026-04-09,01:18:38,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,01:20:09,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7103-4 - Fim de semana: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:28:25,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.103-4, Fim de semana criado"
+2026-04-09,01:28:30,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,01:30:01,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7105 - Segunda-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:38:17,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.105, Segunda-feira criado"
+2026-04-09,01:38:22,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,01:39:53,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7106 - Terça-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:48:09,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.106, Terça-feira criado"
+2026-04-09,01:48:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,01:49:45,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7107 - Quarta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,01:58:01,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.107, Quarta-feira criado"
+2026-04-09,01:58:06,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,01:59:37,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7108 - Quinta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,02:07:53,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.108, Quinta-feira criado"
+2026-04-09,02:07:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,02:09:29,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7109 - Sexta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,02:17:45,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.109, Sexta-feira criado"
+2026-04-09,02:17:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,02:19:21,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7110-1 - Fim de semana: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,02:27:37,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.110-1, Fim de semana criado"
+2026-04-09,15:39:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,15:42:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,15:46:46,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,15:48:15,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,15:48:15,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7091 - Segunda-feira criada
+2026-04-09,15:48:17,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.091, Segunda-feira criado"
+2026-04-09,15:48:21,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,15:49:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,15:49:50,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7092 - Terça-feira criada
+2026-04-09,15:49:52,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.092, Terça-feira criado"
+2026-04-09,15:49:56,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,15:53:37,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-09,15:53:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-09,15:53:52,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-09,15:53:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-09,16:35:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,16:36:54,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,16:36:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 8091 - Fim de semana criada
+2026-04-09,16:44:03,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.091, Fim de semana criado"
+2026-04-09,16:44:07,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,17:11:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.091, Segunda-feira criado"
+2026-04-09,17:11:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.092, Terça-feira criado"
+2026-04-09,17:11:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.093, Quarta-feira criado"
+2026-04-09,17:11:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.094, Quinta-feira criado"
+2026-04-09,17:11:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.095, Sexta-feira criado"
+2026-04-09,17:11:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.096-7, Fim de semana criado"
+2026-04-09,17:11:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.091, Fim de semana criado"
+2026-04-09,17:11:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.092, Domingo criado"
+2026-04-09,17:11:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.093, Terça-feira criado"
+2026-04-09,17:11:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.094, Quarta-feira criado"
+2026-04-09,17:11:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.095, Quinta-feira criado"
+2026-04-09,17:11:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.096-7, Sexta-feira criado"
+2026-04-09,17:11:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.098, Domingo criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.099, Domingo criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.100, Terça-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.101, Quarta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.102, Quinta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.103-4, Sexta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.105, Domingo criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.106, Domingo criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.107, Terça-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.108, Quarta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.109, Quinta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.110-1, Sexta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.112, Domingo criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.113, Domingo criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.114, Terça-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.115, Quarta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.116, Quinta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 8.117-8, Sexta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.091, Segunda-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.092, Terça-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.093, Quarta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.094, Quinta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.095, Sexta-feira criado"
+2026-04-09,17:11:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.096-7, Fim de semana criado"
+2026-04-09,17:12:15,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.091, Segunda-feira criado"
+2026-04-09,17:12:15,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.092, Terça-feira criado"
+2026-04-09,17:12:15,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.093, Quarta-feira criado"
+2026-04-09,17:12:15,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.094, Quinta-feira criado"
+2026-04-09,17:12:15,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.095, Sexta-feira criado"
+2026-04-09,17:12:15,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.096-7, Fim de semana criado"
+2026-04-09,17:24:29,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,17:25:59,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,17:25:59,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7091 - Segunda-feira criada
+2026-04-09,17:34:17,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.091, Segunda-feira criado"
+2026-04-09,17:34:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,17:58:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:00:00,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7091 - Segunda-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-04-09,18:08:18,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.091, Segunda-feira criado"
+2026-04-09,18:08:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:09:52,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:09:52,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7092 - Terça-feira criada
+2026-04-09,18:18:10,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.092, Terça-feira criado"
+2026-04-09,18:18:16,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:19:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:19:45,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7093 - Quarta-feira criada
+2026-04-09,18:28:03,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.093, Quarta-feira criado"
+2026-04-09,18:28:09,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:29:39,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:29:39,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7094 - Quinta-feira criada
+2026-04-09,18:37:57,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.094, Quinta-feira criado"
+2026-04-09,18:38:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:39:32,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:39:32,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7095 - Sexta-feira criada
+2026-04-09,18:47:50,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.095, Sexta-feira criado"
+2026-04-09,18:47:56,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:49:26,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:49:26,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7096-7 - Fim de semana criada
+2026-04-09,18:57:44,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.096-7, Fim de semana criado"
+2026-04-09,18:57:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:59:20,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,18:59:20,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7098 - Segunda-feira criada
+2026-04-09,19:07:38,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.098, Segunda-feira criado"
+2026-04-09,19:07:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:09:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:09:14,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7099 - Terça-feira criada
+2026-04-09,19:17:32,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.099, Terça-feira criado"
+2026-04-09,19:17:39,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:19:09,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:19:09,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7100 - Quarta-feira criada
+2026-04-09,19:27:27,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.100, Quarta-feira criado"
+2026-04-09,19:27:34,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:29:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:29:03,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7101 - Quinta-feira criada
+2026-04-09,19:37:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.101, Quinta-feira criado"
+2026-04-09,19:37:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:38:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:38:58,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7102 - Sexta-feira criada
+2026-04-09,19:47:16,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.102, Sexta-feira criado"
+2026-04-09,19:47:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:48:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:48:53,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7103-4 - Fim de semana criada
+2026-04-09,19:57:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.103-4, Fim de semana criado"
+2026-04-09,19:57:19,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:58:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,19:58:49,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7105 - Segunda-feira criada
+2026-04-09,20:07:07,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.105, Segunda-feira criado"
+2026-04-09,20:07:15,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:08:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:08:45,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7106 - Terça-feira criada
+2026-04-09,20:17:03,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.106, Terça-feira criado"
+2026-04-09,20:17:11,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:18:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:18:40,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7107 - Quarta-feira criada
+2026-04-09,20:26:58,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.107, Quarta-feira criado"
+2026-04-09,20:27:07,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:28:37,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:28:37,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7108 - Quinta-feira criada
+2026-04-09,20:36:55,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.108, Quinta-feira criado"
+2026-04-09,20:37:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:38:33,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:38:33,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7109 - Sexta-feira criada
+2026-04-09,20:46:51,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.109, Sexta-feira criado"
+2026-04-09,20:47:00,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:48:30,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-09,20:48:30,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7110-1 - Fim de semana criada
+2026-04-09,20:56:48,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.110-1, Fim de semana criado"
+2026-04-09,21:57:06,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-09,21:59:14,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-09,22:01:23,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-09,22:03:31,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-09,22:05:39,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-09,22:37:01,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-09,22:39:10,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-09,22:41:18,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-10,15:30:36,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-10,15:30:40,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-10,18:00:33,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:02:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:02:03,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7112 - Segunda-feira criada
+2026-04-10,18:10:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.112, Segunda-feira criado"
+2026-04-10,18:10:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:11:52,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:11:53,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7113 - Terça-feira criada
+2026-04-10,18:20:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.113, Terça-feira criado"
+2026-04-10,18:20:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:21:42,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:21:43,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7114 - Quarta-feira criada
+2026-04-10,18:30:01,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.114, Quarta-feira criado"
+2026-04-10,18:30:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:31:32,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:31:33,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7115 - Quinta-feira criada
+2026-04-10,18:39:51,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.115, Quinta-feira criado"
+2026-04-10,18:39:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:41:22,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:41:23,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7116 - Sexta-feira criada
+2026-04-10,18:49:41,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.116, Sexta-feira criado"
+2026-04-10,18:49:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:51:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,18:51:13,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7117-8 - Fim de semana criada
+2026-04-10,18:59:31,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.117-8, Fim de semana criado"
+2026-04-10,18:59:33,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:01:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:01:03,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7119 - Segunda-feira criada
+2026-04-10,19:09:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.119, Segunda-feira criado"
+2026-04-10,19:09:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:10:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:10:53,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7120 - Terça-feira criada
+2026-04-10,19:19:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.120, Terça-feira criado"
+2026-04-10,19:19:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:20:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:20:43,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7121 - Quarta-feira criada
+2026-04-10,19:29:01,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.121, Quarta-feira criado"
+2026-04-10,19:29:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:30:33,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:30:34,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7122 - Quinta-feira criada
+2026-04-10,19:38:51,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.122, Quinta-feira criado"
+2026-04-10,19:38:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:40:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:40:24,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7123 - Sexta-feira criada
+2026-04-10,19:48:41,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.123, Sexta-feira criado"
+2026-04-10,19:48:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:50:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,19:50:14,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7124-5 - Fim de semana criada
+2026-04-10,19:58:32,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.124-5, Fim de semana criado"
+2026-04-10,19:58:34,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:00:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:00:04,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7126 - Segunda-feira criada
+2026-04-10,20:08:22,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.126, Segunda-feira criado"
+2026-04-10,20:08:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:09:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:09:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7127 - Terça-feira criada
+2026-04-10,20:18:12,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.127, Terça-feira criado"
+2026-04-10,20:18:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:19:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:19:44,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7128 - Quarta-feira criada
+2026-04-10,20:28:02,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.128, Quarta-feira criado"
+2026-04-10,20:28:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:29:33,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:29:34,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7129 - Quinta-feira criada
+2026-04-10,20:37:52,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.129, Quinta-feira criado"
+2026-04-10,20:37:54,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:39:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:39:24,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7130 - Sexta-feira criada
+2026-04-10,20:47:42,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.130, Sexta-feira criado"
+2026-04-10,20:47:44,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:49:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-10,20:49:14,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7131-2 - Fim de semana criada
+2026-04-10,20:57:32,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.131-2, Fim de semana criado"
+2026-04-10,21:25:12,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-10,21:27:20,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-10,21:29:28,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-10,21:31:36,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-10,21:33:44,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-10,21:35:52,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-10,21:38:00,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-10,21:40:08,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-10,21:42:16,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-12,19:38:02,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-12,19:40:10,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-12,19:42:18,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-12,19:44:26,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-12,19:46:34,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-12,20:39:54,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-12,20:42:03,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-12,20:44:11,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-15,22:09:02,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-15,22:11:10,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-15,22:13:18,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-15,22:15:26,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-15,22:17:34,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-15,22:19:42,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-15,22:21:50,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-15,22:23:58,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-15,22:26:06,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-16,22:42:08,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-16,22:44:16,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-16,22:46:24,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-16,22:48:32,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-16,22:50:40,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-16,22:52:48,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-16,22:54:56,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-16,22:57:04,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-16,22:59:12,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-17,22:37:26,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-17,22:39:12,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-17,22:40:58,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-17,22:42:44,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-17,22:44:31,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-17,22:46:17,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-17,22:48:03,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-17,22:49:49,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-17,22:51:35,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-19,19:30:23,ERRO,wedding.py,wedding,"Erro ao casar as páginas 13_16: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:29,ERRO,wedding.py,wedding,"Erro ao casar as páginas 14_15: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:35,ERRO,wedding.py,wedding,"Erro ao casar as páginas 17_20: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:40,ERRO,wedding.py,wedding,"Erro ao casar as páginas 10_11: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:46,ERRO,wedding.py,wedding,"Erro ao casar as páginas 9_12: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:52,ERRO,wedding.py,wedding,"Erro ao casar as páginas 3_6: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:30:58,ERRO,wedding.py,wedding,"Erro ao casar as páginas 4_5: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:31:03,ERRO,wedding.py,wedding,"Erro ao casar as páginas 2_7: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,19:31:09,ERRO,wedding.py,wedding,"Erro ao casar as páginas 1_8: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-04-19,21:24:04,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-19,21:25:50,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-19,21:27:36,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-20,21:56:15,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-20,21:58:01,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-20,21:59:47,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-20,22:01:33,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-20,22:03:19,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-20,22:05:06,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-20,22:06:52,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-20,22:08:38,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-20,22:10:24,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-21,20:30:36,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-21,20:32:23,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-21,20:34:09,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-21,20:35:55,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-21,20:37:41,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-21,20:39:27,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-21,20:41:13,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-21,20:42:59,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-21,20:44:45,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-22,17:42:49,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-22,17:42:54,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-22,22:40:53,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-04-22,22:42:39,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-04-22,22:44:25,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-04-22,22:46:11,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-04-22,22:47:57,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-04-22,22:49:43,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-04-22,22:51:29,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-04-22,22:53:15,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-04-22,22:55:02,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-04-23,00:07:18,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:08:48,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:08:49,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7098 - Segunda-feira criada
+2026-04-23,00:17:07,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.098, Segunda-feira criado"
+2026-04-23,00:17:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:18:44,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:18:45,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7099 - Terça-feira criada
+2026-04-23,00:27:03,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.099, Terça-feira criado"
+2026-04-23,00:27:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:28:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:28:40,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7100 - Quarta-feira criada
+2026-04-23,00:36:58,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.100, Quarta-feira criado"
+2026-04-23,00:37:06,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:38:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:38:36,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7101 - Quinta-feira criada
+2026-04-23,00:46:54,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.101, Quinta-feira criado"
+2026-04-23,00:47:01,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:48:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:48:32,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7102 - Sexta-feira criada
+2026-04-23,00:56:50,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.102, Sexta-feira criado"
+2026-04-23,00:56:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:58:27,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,00:58:27,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7103-4 - Fim de semana criada
+2026-04-23,01:06:45,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.103-4, Fim de semana criado"
+2026-04-23,01:06:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:08:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:08:23,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7105 - Segunda-feira criada
+2026-04-23,01:16:41,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.105, Segunda-feira criado"
+2026-04-23,01:16:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:18:18,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:18:19,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7106 - Terça-feira criada
+2026-04-23,01:26:37,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.106, Terça-feira criado"
+2026-04-23,01:26:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:28:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:28:15,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7107 - Quarta-feira criada
+2026-04-23,01:36:33,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.107, Quarta-feira criado"
+2026-04-23,01:36:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:38:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:38:11,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7108 - Quinta-feira criada
+2026-04-23,01:46:29,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.108, Quinta-feira criado"
+2026-04-23,01:46:36,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:48:06,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:48:07,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7109 - Sexta-feira criada
+2026-04-23,01:56:25,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.109, Sexta-feira criado"
+2026-04-23,01:56:32,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:58:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,01:58:02,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7110-1 - Fim de semana criada
+2026-04-23,02:06:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.110-1, Fim de semana criado"
+2026-04-23,02:06:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:07:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:07:58,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7112 - Segunda-feira criada
+2026-04-23,02:16:16,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.112, Segunda-feira criado"
+2026-04-23,02:16:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:17:54,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:17:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7113 - Terça-feira criada
+2026-04-23,02:26:12,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.113, Terça-feira criado"
+2026-04-23,02:26:20,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:27:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:27:51,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7114 - Quarta-feira criada
+2026-04-23,02:36:09,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.114, Quarta-feira criado"
+2026-04-23,02:36:16,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:37:46,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:37:46,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7115 - Quinta-feira criada
+2026-04-23,02:46:04,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.115, Quinta-feira criado"
+2026-04-23,02:46:12,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:47:41,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:47:42,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7116 - Sexta-feira criada
+2026-04-23,02:56:00,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.116, Sexta-feira criado"
+2026-04-23,02:56:08,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:57:37,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-04-23,02:57:38,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7117-8 - Fim de semana criada
+2026-04-23,03:05:56,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.117-8, Fim de semana criado"
+2026-04-23,15:33:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-23,16:39:47,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:39:51,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:43:46,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:43:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:44:34,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:44:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:45:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:45:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:46:15,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:46:19,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:47:40,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:47:44,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:58:43,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:58:47,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,17:00:53,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,17:00:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

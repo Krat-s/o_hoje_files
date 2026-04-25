@@ -1,0 +1,540 @@
+data,hora,status,origem,função,message
+2026-03-20,17:17:18,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: javascript error: arguments[0].scrollIntoView is not a function
+  (Session info: chrome=146.0.7680.81)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958faf]
+	chromedriver!(No symbol) [0x7ff6559f59b1]
+	chromedriver!(No symbol) [0x7ff6559d069a]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:17:18,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: javascript error: arguments[0].scrollIntoView is not a function
+  (Session info: chrome=146.0.7680.81)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958faf]
+	chromedriver!(No symbol) [0x7ff6559f59b1]
+	chromedriver!(No symbol) [0x7ff6559d069a]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:17:18,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: javascript error: arguments[0].scrollIntoView is not a function
+  (Session info: chrome=146.0.7680.81)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958faf]
+	chromedriver!(No symbol) [0x7ff6559f59b1]
+	chromedriver!(No symbol) [0x7ff6559d069a]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:17:22,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:20:54,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:20:54,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:20:54,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:20:58,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:23:11,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:23:13,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:23:15,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:23:19,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:32:30,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff6559a73ae]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:32:45,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff6559a73ae]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:33:00,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff6559a73ae]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:33:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:34:41,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: Unable to locate an element with the xpath expression https://ohoje.com/wp-content/uploads/2026/03/BANNER-WEB-300X600PX.gif?v=1773948786 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string 'https://ohoje.com/wp-content/uploads/2026/03/BANNER-WEB-300X600PX.gif?v=1773948786' is not a valid XPath expression.
+  (Session info: chrome=146.0.7680.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958c15]
+	chromedriver!(No symbol) [0x7ff655958cdf]
+	chromedriver!(No symbol) [0x7ff6559a6b2e]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:34:41,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: Unable to locate an element with the xpath expression ads-980 mx-auto because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string 'ads-980 mx-auto' is not a valid XPath expression.
+  (Session info: chrome=146.0.7680.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958c15]
+	chromedriver!(No symbol) [0x7ff655958cdf]
+	chromedriver!(No symbol) [0x7ff6559a6b2e]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:34:41,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: Unable to locate an element with the xpath expression ads-728 mx-auto because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string 'ads-728 mx-auto' is not a valid XPath expression.
+  (Session info: chrome=146.0.7680.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958c15]
+	chromedriver!(No symbol) [0x7ff655958cdf]
+	chromedriver!(No symbol) [0x7ff6559a6b2e]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:34:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:37:44,SUCESSO,print_ad.py,button_print,.ads-728.mx-auto printado
+2026-03-20,17:37:48,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:38:04,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=146.0.7680.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff655955af1]
+	chromedriver!(No symbol) [0x7ff655958c15]
+	chromedriver!(No symbol) [0x7ff655958cdf]
+	chromedriver!(No symbol) [0x7ff6559a6b2e]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:38:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:38:41,SUCESSO,print_ad.py,button_print,ads-728.mx-auto printado
+2026-03-20,17:38:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:39:38,SUCESSO,print_ad.py,button_print,ads-728.mx-auto printado
+2026-03-20,17:39:42,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:52:33,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:52:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:53:42,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:53:47,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:54:10,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:54:14,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:55:28,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,17:55:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,17:57:54,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff655be3045+14585]
+	chromedriver!GetHandleVerifier [0x7ff655be30b0+145f0]
+	chromedriver!(No symbol) [0x7ff65594db7d]
+	chromedriver!(No symbol) [0x7ff6559a73ae]
+	chromedriver!(No symbol) [0x7ff6559a76bc]
+	chromedriver!(No symbol) [0x7ff6559f7a57]
+	chromedriver!(No symbol) [0x7ff6559f45af]
+	chromedriver!(No symbol) [0x7ff655999a18]
+	chromedriver!(No symbol) [0x7ff65599a8f3]
+	chromedriver!GetHandleVerifier [0x7ff655eeac5d+31c19d]
+	chromedriver!GetHandleVerifier [0x7ff655ee536d+3168ad]
+	chromedriver!GetHandleVerifier [0x7ff655f07d8a+3392ca]
+	chromedriver!GetHandleVerifier [0x7ff655bff445+30985]
+	chromedriver!GetHandleVerifier [0x7ff655c084dc+39a1c]
+	chromedriver!GetHandleVerifier [0x7ff655bec634+1db74]
+	chromedriver!GetHandleVerifier [0x7ff655bec7e6+1dd26]
+	chromedriver!GetHandleVerifier [0x7ff655bd1387+28c7]
+	KERNEL32!BaseThreadInitThunk [0x7ff9b61be8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff9b646c48c+2c]
+"
+2026-03-20,17:57:59,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,18:02:28,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,18:02:32,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,18:03:06,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: Compound class names are not allowed.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+"
+2026-03-20,18:03:11,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-20,18:06:04,SUCESSO,print_ad.py,button_print,section.block-ads img[alt='Publicidade'] printado
+2026-03-20,18:06:08,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-26,17:29:35,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-26,17:29:40,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-26,17:32:05,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-26,17:32:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-26,17:32:24,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-26,17:32:29,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-30,17:37:56,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-30,17:38:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,15:56:09,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,15:56:13,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,15:57:03,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,15:57:07,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,15:58:13,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,15:58:17,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,16:00:50,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,16:00:55,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,16:01:46,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,16:01:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:05:08,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:05:12,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:06:41,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:06:45,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:07:39,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:07:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:08:06,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:08:10,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:15:27,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:15:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:21:34,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:21:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:22:23,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:22:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-03-31,17:22:49,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-03-31,17:22:53,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:30:33,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\quarta-feira, 1º de abril de 2026.png'"
+2026-04-01,17:30:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:31:35,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,17:31:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,17:50:44,SUCESSO,print_ad.py,button_print,section.block-ads img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,17:50:48,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:05:23,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:05:29,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:11:05,SUCESSO,print_ad.py,button_print,section:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:11:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:12:32,SUCESSO,print_ad.py,button_print,section:nth-child(3) img.ads-980.mx-auto[alt='Publicidade'] printado
+2026-04-01,18:12:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-01,18:13:08,SUCESSO,print_ad.py,button_print,section:nth-child(3) [alt='Publicidade'] printado
+2026-04-01,18:13:12,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,15:28:46,SUCESSO,print_ad.py,button_print,section:nth-child(3) [alt='Publicidade'] printado
+2026-04-02,15:28:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,15:41:42,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) [alt='Publicidade'] printado
+2026-04-02,15:41:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:04:12,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff769d929c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff769aba0d0+14e90]
+	chromedriver!(No symbol) [0x7ff76981db2d]
+	chromedriver!(No symbol) [0x7ff769825ab1]
+	chromedriver!(No symbol) [0x7ff769828bc5]
+	chromedriver!(No symbol) [0x7ff769828c8f]
+	chromedriver!(No symbol) [0x7ff76987631e]
+	chromedriver!(No symbol) [0x7ff769876eac]
+	chromedriver!(No symbol) [0x7ff7698c6fe7]
+	chromedriver!(No symbol) [0x7ff7698c3b9b]
+	chromedriver!(No symbol) [0x7ff769869298]
+	chromedriver!(No symbol) [0x7ff76986a183]
+	chromedriver!GetHandleVerifier [0x7ff769dbde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff769db8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff769dd9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff769ad6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff769adfacc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff769ac3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff769ac37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff769aa7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffd542de8d7+17]
+	ntdll!RtlUserThreadStart [0x7ffd54cac48c+2c]
+"
+2026-04-02,18:04:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:04:27,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff769d929c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff769aba0d0+14e90]
+	chromedriver!(No symbol) [0x7ff76981db2d]
+	chromedriver!(No symbol) [0x7ff769825ab1]
+	chromedriver!(No symbol) [0x7ff769828bc5]
+	chromedriver!(No symbol) [0x7ff769828c8f]
+	chromedriver!(No symbol) [0x7ff76987631e]
+	chromedriver!(No symbol) [0x7ff769876eac]
+	chromedriver!(No symbol) [0x7ff7698c6fe7]
+	chromedriver!(No symbol) [0x7ff7698c3b9b]
+	chromedriver!(No symbol) [0x7ff769869298]
+	chromedriver!(No symbol) [0x7ff76986a183]
+	chromedriver!GetHandleVerifier [0x7ff769dbde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff769db8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff769dd9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff769ad6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff769adfacc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff769ac3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff769ac37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff769aa7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffd542de8d7+17]
+	ntdll!RtlUserThreadStart [0x7ffd54cac48c+2c]
+"
+2026-04-02,18:04:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:14:58,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-02,18:15:02,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:17:41,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-02,18:17:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:17:56,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-02,18:18:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:18:23,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-02,18:18:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-02,18:18:45,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-02,18:18:49,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,18:26:44,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-05,18:26:49,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,18:26:58,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-05,18:27:02,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:51:26,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-05,20:51:32,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:56:27,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-05,20:56:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-05,20:56:39,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-05,20:56:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:25:17,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-06,15:25:22,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:25:29,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [WinError 53] O caminho da rede não foi encontrado: '\\\\C:\\Users\\'
+2026-04-06,15:25:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:34:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,15:34:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,15:34:42,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,15:34:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:32:33,ERRO,print_ad.py,button_print,Falha ao salvar imagem: unknown file extension: 
+2026-04-06,17:32:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:44:59,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:45:03,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:46:12,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:46:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:47:00,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06Teste.png'
+2026-04-06,17:47:04,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:47:46,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:47:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:48:34,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:48:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:49:11,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:49:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:49:53,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:49:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:50:20,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026 | 04 | 06.png'
+2026-04-06,17:50:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:50:56,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026\\04\\06.png'
+2026-04-06,17:51:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:51:23,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:51:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:52:01,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,17:52:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:52:59,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  4  |  6.png'
+2026-04-06,17:53:03,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:53:42,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:53:46,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:54:17,ERRO,print_ad.py,button_print,Falha ao salvar imagem: [Errno 22] Invalid argument: '\\\\192.168.1.249\\comercial\\PRINTS\\Auto-prints\\Halfpage (GOV) - 39454\\2026  |  04  |  06.png'
+2026-04-06,17:54:21,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:57:39,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,17:57:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,17:58:38,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,17:58:42,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,22:16:12,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,22:16:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,22:16:26,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-06,22:16:31,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,23:15:22,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,23:15:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,23:21:46,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,23:21:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,23:30:43,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,23:30:47,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-06,23:36:51,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-06,23:36:55,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,00:07:30,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-07,00:07:34,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,00:19:33,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-07,00:19:37,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,16:52:37,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-07,16:52:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-07,16:52:50,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-07,16:52:54,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:06:12,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:06:16,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:06:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:06:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:09:10,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:09:14,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:11:29,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:11:34,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:14:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:14:40,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:35:01,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-08,16:35:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-08,16:35:16,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-08,16:35:20,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-09,15:53:37,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-09,15:53:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-09,15:53:52,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-09,15:53:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-10,15:30:36,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(3) img[alt='Publicidade'] printado
+2026-04-10,15:30:40,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-22,17:42:49,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-22,17:42:54,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,15:33:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(5) img[alt='Publicidade'] printado
+2026-04-23,16:39:47,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:39:51,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:43:46,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:43:50,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:44:34,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:44:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:45:35,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:45:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:46:15,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:46:19,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:47:40,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:47:44,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,16:58:43,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,16:58:47,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-23,17:00:53,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-23,17:00:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

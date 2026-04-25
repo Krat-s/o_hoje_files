@@ -1,7 +1,7 @@
-import time
 import os
 import sys
 
+import time
 import pyautogui as pg
 import keyboard as kb
 import tkinter as tk
@@ -18,6 +18,7 @@ from Global.Logs.logs import log
 
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
+
 
 def wedding(nome_arquivo, paginas):
     try:
@@ -47,6 +48,8 @@ def wedding(nome_arquivo, paginas):
         log("All_in_one", "ERRO", erro_msg) 
         log("Wedding", "ERRO", erro_msg)
         
+    
+
 # ------------------------------------------------------------------------- quick weddings
 def process_basic():
     wedding("13_16", [13, 16])
@@ -145,4 +148,4 @@ def auto_marriage():
 
 if __name__ == "__main__":
     auto_marriage()
-    #Faltando corrigir o check_status na máquina do marketing 
+    #Faltando corrigir o check_status na máquina do marketing

@@ -12,4 +12,5 @@ edicao_inicial = 7091
 total_edicoes = quantidade_repeticoes * 6
 edição_final = total_edicoes + edicao_inicial
 
-log("edition_info", "Registro", f"{total_edicoes} criadas, última edição: {edição_final}")
+
+log("edition_info", "Registro", f"{total_edicoes} criadas, última edição: {edição_final + edicao_inicial}")

@@ -1,0 +1,2 @@
+data,hora,status,origem,função,message
+2026-04-08,17:28:40,ERRO,gmail.py,take_receivers,"Falha ao pegar emails: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."

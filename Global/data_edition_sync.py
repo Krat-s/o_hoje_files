@@ -91,7 +91,7 @@ def formatar_edicao_unica(edicao_numero: int) -> EdicaoInfo:
         pasta_nome=f"{edicao_formatada.replace('.', '')} - {dia_semana}",
     )
 
-def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
+def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, repeticoes=REPETICOES_PADRAO, quantidade_por_semana=QUANTIDADE_POR_SEMANA):
     
     resultados: list[EdicaoInfo] = []
     data_atual = obter_data_por_edicao(edicao_inicial)
@@ -140,8 +140,8 @@ EDD = f"{edicao_0.replace('.', '')} - {data_0}"
 
 if __name__ == "__main__":
     teste1 = datetime.now() + timedelta(days=1)
-    teste2 = 8001
+    # teste2 = 8091
     print(obter_edicao_por_data(teste1))
-    print(formatar_data(obter_data_por_edicao(teste2)))
+    # print(formatar_data(obter_data_por_edicao(teste2)))
     print('...')
     

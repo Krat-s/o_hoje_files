@@ -1,7 +1,7 @@
-import pyautogui as pg
-import locale
 import os
 import sys
+import locale
+import pyautogui as pg
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(raiz_projeto)
@@ -9,6 +9,7 @@ sys.path.append(raiz_projeto)
 from Global.module import gen_randon_numbers as rn
 import Global.data_edition_sync as sy_de
 from Global.settings.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
+
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
@@ -19,25 +20,52 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\00 - Auto-prints'
+
 
 # ------------------------------------------------------------------------- Tempos de espera
 TIMETOOPEN = 4
 TIMETOCLOSE = 6
 TIMEEXPPDF = 7
 
-# ------------------------------------------------------------------------- Web_botting
+
+# ------------------------------------------------------------------------- Web
 acessos_B1 = rn.generate_number(0, 3)
 acessos_B2 = int(acessos_B1 / 2 + 1)
 acessos_B3 = int(acessos_B2 / 2)
 acessos_H1 = 1
 acessos_H2 = 2
 acessos_H3 = 1
-jackpot = acessos_B1 + acessos_B2 + acessos_B3 * 4 #24 numero máximo de acessos (linha completamente irrelevante)
 
 url_target = "https://ohoje.com"
-botão_1 = "placement_1013993_0" #principal
-botão_2 = "placement_1013994_0_i" #lateral
+botão_1 = str("ads-728 mx-auto") #principal
+botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
+
+
+#addon banner principal
+ad_1_pi = 39710
+ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
+ad_1_client = "GOV"
+ad_1_folder = f'Principal  -  {ad_1_client}  -  {ad_1_pi}'
+
+
+#addon Width
+ad_2_pi = None
+ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
+ad_2_client = "Pref.Luiziânia"
+ad_2_folder = f'Width  -  {ad_2_client}  -  {ad_2_pi}'
+ad_2_link = str("https://www.luziania.go.gov.br")
+
+
+
+
+#addon Halfpage
+ad_3_pi = None
+ad_3 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
+ad_3_link = "https://ohoje.com/wp-content/uploads/2026/04/Banner_GERAL_970X250-8.gif?v=1775155356"
+ad_3_client = "GOV"
+ad_3_folder = f'Halfpage  -  {ad_3_client}  -  {ad_3_pi}'
 
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
@@ -76,10 +104,16 @@ def stats():
     print(f".. Edição inicial: {edicao_inicial}")
     print(f".. Quantidade de repetições: {quantidade_repeticoes}")
     print(f".. Criando modelo de {total_edicoes} edições")
+    print(f".. Última edição: {total_edicoes + edicao_inicial}")
     print(".....")
 
 
 if __name__ == "__main__":
     stats()
-    print(sy_de.EDD)
+    # print(sy_de.EDD)
 
+
+
+
+
+   

@@ -1,17 +1,19 @@
 from App import wedding as cm
-from Global import utils as ut
 from App.billhead_editions import auto_billhead_editions
 from Mail.gmail import auto_drafts
-# from Mail import gmail as gm
-# from Tasks import relatorio as rl
+from Web.print_ad import auto_print_all_ads
+from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
+from Backup.shutdawns import sleep_computer
+
 
 
 # 📌 ------------------------------------------ envio de emails
-def auto_drafts_():
+def auto_drafts_(ed=None, qnt=None):
     try:
-        auto_drafts()
+        auto_drafts(ed=ed, qnt=qnt)
     except Exception as e:
         print(f"Erro ao enviar emails: {e}")
+
 
 
 # 📌 ------------------------------------------ casamento
@@ -22,14 +24,22 @@ def auto_marriage_():
         print(f"Erro no casamento: {e}")
 
 
+
 # 📌 ------------------------------------------ cabeçalho
-def auto_billhead_editions_():
+def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
     try:
-        auto_billhead_editions()
+        auto_billhead_editions(edicao_inicial=ed, quantidade_repeticoes=qnt)
     except Exception as e:
         print(f"Erro ao enviar fazer o cabeçalho: {e}")
 
 
+
+# 📌 ------------------------------------------ print
+def auto_print_():
+   try:
+       auto_print_all_ads()
+   except Exception as e:
+       print(f"Erro ao imprimir anúncios: {e}")
 
 
 # Importar aplicações
@@ -39,8 +49,14 @@ def auto_billhead_editions_():
 # 📌 click_farmer
 # 📌 Gerar interfaçe gráfica de opções de automações
 
+ed_ini = 7098
+qtd = 3
+
 if __name__ == "__main__":
-    # auto_drafts_()
-    # auto_marriage_()
-    # auto_billhead_editions_()
     print('All in one rodando...')
+    # auto_print_()
+    # auto_marriage_()
+    # auto_drafts_(ed_ini, qtd)
+    auto_billhead_editions_(ed_ini, qtd)
+    # sleep_computer()
+

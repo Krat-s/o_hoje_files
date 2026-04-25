@@ -10,6 +10,8 @@ from selenium.webdriver.chrome.options import Options
 raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_path)
 
+from Web.modules.web_diver import wait_d
+
 import pyautogui as pg
 import keyboard as kb
 import Global.utils as utl
@@ -18,43 +20,59 @@ import Global.data_edition_sync as sy_de
 import Global.module.data_formatter as fd
 
 
-pg.PAUSE = 0.5
+pg.PAUSE = 0.8
 pg.FAILSAFE = True
 
 URL_DRIVE = 'https://drive.google.com/drive/home?hl=pt-br'
 
 ontem = datetime.now() - timedelta(days=1)
+idlogin = "identifierId"
+user = "ohojepdf@gmail.com" 
+key = "456452462"
 
-def open_Brownser():
+def auto_drive():
     chrome_options = Options()
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(URL_DRIVE)
-
+    wait_d(driver, By.TAG_NAME, "body", timeout=15)
+    
     try:
-        # time.sleep(3)
-        # botao = driver.find_element(By.ID, btt)
-        # driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", botao)
+        time.sleep(1)
+        pg.write(user)
+        pg.press('enter')
+        time.sleep(5)
+        pg.write(key)
+        pg.press('enter')
+
+        time.sleep(3)
+        # user = driver.find_element(By.ID, idlogin)
+        # driver.execute_script("arguments[0].click({behavior: 'smooth', block: 'center'});", user)
         # time.sleep(1)
         # botao.click()
-        if #login_successful_condition:  # Substitua por uma condição que verifique se o login foi bem-sucedido
+        # if #login_successful_condition:  # Substitua por uma condição que verifique se o login foi bem-sucedido
+
+    except Exception as e:
+        print(f"⚠️ Erro ao clicar no botão: {e}")
+
+    finally:
+        time.sleep(50)  # Tempo para visualizar o resultado
+        # driver.quit()
+
+def login():
+    
+   
         
             # Aguarde um pouco para garantir que a página esteja totalmente carregada
             # Execute o código para mover as pastas
             
         print("✅ Botão clicado com sucesso!")
-        # open_Brownser()
-    except Exception as e:
-        print(f"⚠️ Erro ao clicar no botão: {e}")
-
-    finally:
-        time.sleep(5)  # Tempo para visualizar o resultado
-        driver.quit()
 
 
 
 def process_daily():
     pg.click(cfg.center_x, cfg.center_y)
     print('tt')
+
 
 
 def att_model(editoria):
@@ -64,6 +82,7 @@ def att_model(editoria):
     time.sleep(1)
     kb.write(f'{fd.formatar_data(ontem, tipo="dia_semana")}')
     process_daily()
+
 
 
 def open_drive():
@@ -89,8 +108,10 @@ def main_drive_bot():
     att_model(str('2 - Política'))
     att_model(str('1 - Cidades - Economia'))
 
+
+
 if __name__ == "__main__":
     # open_drive()
     # att_model(str('0 - esportes'))
     # print(str(fd.formatar_data(datetime.now(), tipo='dia')))
-    open_Brownser()
+    auto_drive()
