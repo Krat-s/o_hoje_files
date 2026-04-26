@@ -1,7 +1,7 @@
 import time
 from datetime import datetime
 
-from pyautogui import screenshot
+# import pyautogui as pg 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -60,13 +60,13 @@ def print_task(adon, adon_name_folder, gif=None):
             fm.make_folder_(adon_name_folder)
             if gif is not None:
                 time.sleep(1)
-                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame1.png")
-                time.sleep(3.5)
-                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame2.png")
-                time.sleep(3.5)
-                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame3.png")
-            else:
-                screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
+            #     pg.screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame1.png")
+            #     time.sleep(3.5)
+            #     pg.screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame2.png")
+            #     time.sleep(3.5)
+            #     pg.screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame3.png")
+            # else:
+            #     pg.screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
 
             log("All_in_one", "SUCESSO", f"{adon} printado")
             log("print_ad", "SUCESSO", f"{adon} printado")
@@ -119,5 +119,7 @@ def auto_print_all_ads(gif=None):
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    auto_print_all_ads(gif=True)
+    # auto_print_all_ads(gif=True)
     print('Print ad finalizado.')
+    import pyautogui as ase
+    ase.moveTo(11, 11)
