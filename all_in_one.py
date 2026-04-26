@@ -57,6 +57,7 @@ if __name__ == "__main__":
     # auto_print_()
     # auto_marriage_()
     # auto_drafts_(ed_ini, qtd)
-    auto_billhead_editions_(ed_ini, qtd)
+    # auto_billhead_editions_(ed_ini, qtd)
     # sleep_computer()
+    # print(asd)
 
