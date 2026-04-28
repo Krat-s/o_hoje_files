@@ -119,7 +119,5 @@ def auto_print_all_ads(gif=None):
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    # auto_print_all_ads(gif=True)
+    auto_print_all_ads(gif=True)
     print('Print ad finalizado.')
-    import pyautogui as ase
-    ase.moveTo(11, 11)
