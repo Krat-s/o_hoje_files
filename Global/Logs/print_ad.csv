@@ -542,3 +542,33 @@ Stacktrace:
 2026-04-28,15:47:32,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-04-28,17:12:37,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
 2026-04-28,17:12:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-28,17:26:56,ERRO,print_ad.py,button_print,"Falha ao salvar imagem: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=147.0.7727.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff74572a8e5+14e45]
+	chromedriver!GetHandleVerifier [0x7ff74572a950+14eb0]
+	chromedriver!(No symbol) [0x7ff74549d6ed]
+	chromedriver!(No symbol) [0x7ff745489ec9]
+	chromedriver!(No symbol) [0x7ff745489bb1]
+	chromedriver!(No symbol) [0x7ff7454877e1]
+	chromedriver!(No symbol) [0x7ff74548811f]
+	chromedriver!(No symbol) [0x7ff7454a4f57]
+	chromedriver!(No symbol) [0x7ff7454a8b2f]
+	chromedriver!(No symbol) [0x7ff745545c1d]
+	chromedriver!(No symbol) [0x7ff74552002a]
+	chromedriver!(No symbol) [0x7ff74554483b]
+	chromedriver!(No symbol) [0x7ff7454e90e8]
+	chromedriver!(No symbol) [0x7ff7454e9fc3]
+	chromedriver!GetHandleVerifier [0x7ff745a40149+32a6a9]
+	chromedriver!GetHandleVerifier [0x7ff745a3a715+324c75]
+	chromedriver!GetHandleVerifier [0x7ff745a5c012+346572]
+	chromedriver!GetHandleVerifier [0x7ff745747cb5+32215]
+	chromedriver!GetHandleVerifier [0x7ff74575087c+3addc]
+	chromedriver!GetHandleVerifier [0x7ff7457340e4+1e644]
+	chromedriver!GetHandleVerifier [0x7ff745734296+1e7f6]
+	chromedriver!GetHandleVerifier [0x7ff745718737+2c97]
+	KERNEL32!BaseThreadInitThunk [0x7ff805bce8d7+17]
+	ntdll!RtlUserThreadStart [0x7ff80704c3fc+2c]
+"
+2026-04-28,17:27:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
