@@ -54,7 +54,7 @@ qtd = 3
 
 if __name__ == "__main__":
     print('All in one rodando...')
-    # auto_print_()
+    auto_print_()
     auto_marriage_()
     # auto_drafts_(ed_ini, qtd)
     # auto_billhead_editions_(ed_ini, qtd)

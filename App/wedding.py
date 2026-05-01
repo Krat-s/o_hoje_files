@@ -54,7 +54,7 @@ def wedding(nome_arquivo, paginas):
 def process_basic():
     wedding("13_16", [13, 16])
     wedding("14_15", [14, 15])
-    wedding("17_20", [17, 20])
+    # wedding("17_20", [17, 20])
 
 def process_town():
     wedding("10_11", [10, 11])

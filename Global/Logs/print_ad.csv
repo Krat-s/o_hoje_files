@@ -572,3 +572,15 @@ Stacktrace:
 	ntdll!RtlUserThreadStart [0x7ff80704c3fc+2c]
 "
 2026-04-28,17:27:00,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-28,17:58:52,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-28,17:58:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-28,17:59:36,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-28,17:59:40,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-28,18:00:10,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-28,18:00:14,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-28,18:01:47,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-28,18:01:52,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-29,15:13:01,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-29,15:13:06,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-04-30,16:49:24,SUCESSO,print_ad.py,button_print,section.block-ads:nth-child(2) img[alt='Publicidade'] printado
+2026-04-30,16:49:29,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
