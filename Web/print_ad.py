@@ -115,8 +115,11 @@ def auto_print_all_ads(gif=None):
     if cfg.ad_3_pi != None:
         autoprint(3, gif)
 
+    if cfg.ad_4_pi != None:
+        autoprint(4, gif)
+
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    auto_print_all_ads(gif=True)
+    auto_print_all_ads()
     print('Print ad finalizado.')
