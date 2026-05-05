@@ -44,11 +44,10 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
 #addon banner principal
-ad_1_pi = 39710
+ad_1_pi = 39852
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
-ad_1_client = "GOV"
+ad_1_client = "Prefeitura de Goiânia"
 ad_1_folder = f'Principal  -  {ad_1_client}  -  {ad_1_pi}'
-
 
 #addon Width
 ad_2_pi = None
@@ -57,15 +56,20 @@ ad_2_client = "Pref.Luiziânia"
 ad_2_folder = f'Width  -  {ad_2_client}  -  {ad_2_pi}'
 ad_2_link = str("https://www.luziania.go.gov.br")
 
-
-
-
 #addon Halfpage
-ad_3_pi = None
+ad_3_pi = 39307
 ad_3 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
 ad_3_link = "https://ohoje.com/wp-content/uploads/2026/04/Banner_GERAL_970X250-8.gif?v=1775155356"
 ad_3_client = "GOV"
 ad_3_folder = f'Halfpage  -  {ad_3_client}  -  {ad_3_pi}'
+
+#addon Midle retangle
+ad_4_pi = 39849
+ad_4 = "section.block-ads:nth-child(3) div:nth-child(3) img[alt='Publicidade']"  
+ad_4_link = "https://ohoje.com/wp-content/uploads/2026/04/Banner_GERAL_970X250-8.gif?v=1775155356"
+ad_4_client = "OAB"
+ad_4_folder = f'Halfpage  -  {ad_4_client}  -  {ad_4_pi}'
+
 
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
