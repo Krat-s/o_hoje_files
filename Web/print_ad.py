@@ -114,6 +114,9 @@ def auto_print_all_ads(gif=None):
 
     if cfg.ad_3_pi != None:
         autoprint(3, gif)
+    
+    if cfg.ad_4_pi != None:
+        autoprint(4, gif)
 
     if cfg.ad_4_pi != None:
         autoprint(4, gif)
