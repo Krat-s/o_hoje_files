@@ -43,32 +43,41 @@ botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
+#Prints settings
 #addon banner principal
 ad_1_pi = None
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
 ad_1_client = "Prefeitura de Goiânia"
-ad_1_folder = f'Principal  -  {ad_1_client}  -  {ad_1_pi}'
+ad_1_folder = f'{ad_1_pi}  -  Principal  -  {ad_1_client}'
+ad_1_link = str("")
 
 #addon Width
 ad_2_pi = None
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
 ad_2_client = "Pref.Luiziânia"
-ad_2_folder = f'Width  -  {ad_2_client}  -  {ad_2_pi}'
+ad_2_folder = f'{ad_2_pi}  -  Width  -  {ad_2_client}'
 ad_2_link = str("")
 
 #addon Halfpage
 ad_3_pi = 39307
-ad_3 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
+ad_3 = ".sidebar-capa > div:nth-child(3) section img[alt='Publicidade']"  
 ad_3_link = ""
 ad_3_client = "GOV"
 ad_3_folder = f'{ad_3_pi}  -  Halfpage  -  {ad_3_client}'
+ad_3_link = str('')
 
 # #addon MIDDLE RETANGLE
-# ad_4_pi = 39849
-# ad_4 = "section.block-ads:nth-child(3) div:nth-child(3) img[alt='Publicidade']"  
-# ad_4_link = ""
-# ad_4_client = "OAB"
-# ad_4_folder = f'MIDDLE RETANGLE  -  {ad_4_client}  -  {ad_4_pi}'
+ad_4_pi = None
+ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
+ad_4_client = ""
+ad_4_folder = f'{ad_4_pi}  -  MIDDLE RETANGLE  -  {ad_4_client}'
+
+#alt addon
+alt_pi = 39885 
+alt_ad = ad_3
+alt_client = "GOV"
+alt_name_folder = f'{alt_pi}  -  Halfpage  -  {alt_client}'
+
 
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
