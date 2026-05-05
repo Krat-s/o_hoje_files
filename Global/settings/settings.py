@@ -61,7 +61,7 @@ ad_3_pi = 39307
 ad_3 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
 ad_3_link = ""
 ad_3_client = "GOV"
-ad_3_folder = f'Halfpage  -  {ad_3_client}  -  {ad_3_pi}'
+ad_3_folder = f'{ad_3_pi}  -  Halfpage  -  {ad_3_client}'
 
 # #addon MIDDLE RETANGLE
 # ad_4_pi = 39849
