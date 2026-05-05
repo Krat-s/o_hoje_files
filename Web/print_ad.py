@@ -102,6 +102,8 @@ def autoprint(NUM, gif=None):
         print_task(cfg.ad_2, cfg.ad_2_folder, gif)
     elif NUM == 3:
         print_task(cfg.ad_3, cfg.ad_3_folder, gif)
+    elif NUM == 4:
+        print_task(cfg.ad_4, cfg.ad_4_folder, gif)
 
 
 def auto_print_all_ads(gif=None):
@@ -115,9 +117,6 @@ def auto_print_all_ads(gif=None):
     if cfg.ad_3_pi != None:
         autoprint(3, gif)
     
-    if cfg.ad_4_pi != None:
-        autoprint(4, gif)
-
     if cfg.ad_4_pi != None:
         autoprint(4, gif)
 
