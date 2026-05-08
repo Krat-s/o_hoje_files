@@ -59,8 +59,9 @@ def print_task(adon, adon_name_folder, gif=None, alt=None):
             window.scrollTo({top: y});
             """, ad
         )
-        
+        time.sleep(2)
         fm.make_folder_(adon_name_folder)
+
         if gif is not None:
             time.sleep(1)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame1.png")
@@ -68,15 +69,24 @@ def print_task(adon, adon_name_folder, gif=None, alt=None):
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame2.png")
             time.sleep(3.5)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame3.png")
+
+        if alt is not None:
+            time.sleep(1)
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame1.png")
+            time.sleep(350)
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame2.png")
+            time.sleep(150)
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame3.png")
+
         else:
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
-        if alt is not None:
-            pg.press('f5')
-            time.sleep(4)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.alt_name_folder}\\{screen_date}1.png")
-            pg.press('f5')
-            time.sleep(4)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.alt_name_folder}\\{screen_date}2.png")
+        # if alt is not None:
+        #     time.sleep(4)
+        #     screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.alt_name_folder}\\{screen_date}1.png")
+        #     time.sleep(160)
+        #     pg.press('f5')
+        #     time.sleep(4)
+        #     screenshot(f"{cfg.CAMINHO_PRINTS}\\{cfg.alt_name_folder}\\{screen_date}2.png")
     
     try:
         button_print(adon)
@@ -107,8 +117,11 @@ def autoprint(NUM, gif=None, alt=None):
         print_task(cfg.ad_2, cfg.ad_2_folder, gif, alt)
     elif NUM == 3:
         print_task(cfg.ad_3, cfg.ad_3_folder, gif, alt)
-    # elif NUM == 4:
-    #     print_task(cfg.ad_4, cfg.ad_4_folder, gif, alt)
+    elif NUM == 4:
+        print_task(cfg.ad_4, cfg.ad_4_folder, gif, alt)
+    elif NUM == 5:
+        print_task(cfg.alt_ad, cfg.alt_name_folder, gif, alt)
+
 
 
 def auto_print_all_ads(gif=None, alt=None):
@@ -124,12 +137,17 @@ def auto_print_all_ads(gif=None, alt=None):
     
     if cfg.ad_4_pi != None:
         autoprint(4, gif, alt)
+
     if alt is not None:
-        autoprint(cfg.alt_ad, gif, alt)
+        autoprint(5, gif, alt)
 
 
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    auto_print_all_ads()
+    # autoprint(3)
+    autoprint(5)
+
+    # auto_print_all_ads()
     print('Print ad finalizado.')
+    

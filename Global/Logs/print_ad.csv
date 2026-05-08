@@ -606,3 +606,9 @@ Stacktrace:
 2026-05-05,18:09:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-05-05,18:09:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-05-05,18:10:10,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,15:32:10,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,15:37:50,ERRO,print_ad.py,print_task,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\PRINTS\\00 - Auto-prints\\39885  -  Halfpage  -  GOV\\2026 - 05 - 061.png'
+2026-05-06,15:37:55,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,16:01:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,16:02:45,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,16:05:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

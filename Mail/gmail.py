@@ -13,7 +13,7 @@ import Global.data_edition_sync as desync
 from Global.Logs.logs import log
 
 # ------------------------------------------------------------------------- Settings
-pg.PAUSE = 0.7
+pg.PAUSE = 1
 pg.FAILSAFE = True
 
 # ------------------------------------------------------------------------- Functions 
@@ -24,8 +24,9 @@ def take_receivers():
         time.sleep(1.2)
         pg.click(cfg.center_x, cfg.center_y)
         pg.hotkey('ctrl', 'o')
-        pg.write('archives')
-        pg.press('down')
+        pg.write('Mail')
+        pg.press('enter')
+        pg.write('Archives')
         pg.press('enter')
         pg.write('emails_alterado')
         pg.press('down')
@@ -83,7 +84,12 @@ def send_for_graphic(edicao, parte):
         shortcut_send_emails()
         kb.write('contas')
         pg.press('enter')
+        time.sleep(1)
         pg.write('grafica')
+        pg.press('enter')
+        time.sleep(1)
+        kb.write9('Carlossandre1269@gmail.com')
+        time.sleep(1)
         pg.press('enter')
         time.sleep(0.3)
         pg.press('tab')

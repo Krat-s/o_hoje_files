@@ -1567,3 +1567,184 @@ Stacktrace:
 2026-05-05,18:09:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-05-05,18:09:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-05-05,18:10:10,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-05,22:12:20,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-05-05,22:14:07,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-05-05,22:15:53,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-05-05,22:17:39,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-05-05,22:19:25,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-05-05,22:21:11,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-05-05,22:22:57,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-05-05,22:55:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,22:57:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,22:57:11,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7119 - Segunda-feira criada
+2026-05-05,23:05:29,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.119, Segunda-feira criado"
+2026-05-05,23:05:34,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:07:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:07:03,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7120 - Terça-feira criada
+2026-05-05,23:15:22,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.120, Terça-feira criado"
+2026-05-05,23:15:25,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:16:55,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:16:56,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7121 - Quarta-feira criada
+2026-05-05,23:25:14,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.121, Quarta-feira criado"
+2026-05-05,23:25:20,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:26:54,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:26:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7122 - Quinta-feira criada
+2026-05-05,23:35:13,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.122, Quinta-feira criado"
+2026-05-05,23:35:22,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:36:51,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:36:52,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7123 - Sexta-feira criada
+2026-05-05,23:45:10,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.123, Sexta-feira criado"
+2026-05-05,23:45:19,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:46:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:46:50,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7124-5 - Fim de semana criada
+2026-05-05,23:55:08,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.124-5, Fim de semana criado"
+2026-05-05,23:55:17,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:56:47,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-05,23:56:48,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7126 - Segunda-feira criada
+2026-05-06,00:05:06,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.126, Segunda-feira criado"
+2026-05-06,00:05:15,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:06:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:06:46,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7127 - Terça-feira criada
+2026-05-06,00:15:04,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.127, Terça-feira criado"
+2026-05-06,00:15:12,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:16:41,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:16:42,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7128 - Quarta-feira criada
+2026-05-06,00:25:00,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.128, Quarta-feira criado"
+2026-05-06,00:25:08,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:26:37,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:26:38,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7129 - Quinta-feira criada
+2026-05-06,00:34:56,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.129, Quinta-feira criado"
+2026-05-06,00:35:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:36:34,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:36:34,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7130 - Sexta-feira criada
+2026-05-06,00:44:53,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.130, Sexta-feira criado"
+2026-05-06,00:45:00,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:46:30,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:46:31,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7131-2 - Fim de semana criada
+2026-05-06,00:54:49,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.131-2, Fim de semana criado"
+2026-05-06,00:54:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:56:26,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,00:56:27,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7133 - Segunda-feira criada
+2026-05-06,01:04:45,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.133, Segunda-feira criado"
+2026-05-06,01:04:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:06:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:06:24,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7134 - Terça-feira criada
+2026-05-06,01:14:42,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.134, Terça-feira criado"
+2026-05-06,01:14:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:16:19,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:16:20,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7135 - Quarta-feira criada
+2026-05-06,01:24:38,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.135, Quarta-feira criado"
+2026-05-06,01:24:46,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:26:16,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:26:16,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7136 - Quinta-feira criada
+2026-05-06,01:34:35,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.136, Quinta-feira criado"
+2026-05-06,01:34:42,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:36:12,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:36:13,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7137 - Sexta-feira criada
+2026-05-06,01:44:31,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.137, Sexta-feira criado"
+2026-05-06,01:44:38,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:46:08,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:46:09,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7138-9 - Fim de semana criada
+2026-05-06,01:54:27,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.138-9, Fim de semana criado"
+2026-05-06,01:54:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:56:05,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,01:56:05,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7140 - Segunda-feira criada
+2026-05-06,02:04:24,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.140, Segunda-feira criado"
+2026-05-06,02:04:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:06:01,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:06:02,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7141 - Terça-feira criada
+2026-05-06,02:14:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.141, Terça-feira criado"
+2026-05-06,02:14:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:15:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:15:58,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7142 - Quarta-feira criada
+2026-05-06,02:24:16,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.142, Quarta-feira criado"
+2026-05-06,02:24:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:25:54,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:25:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7143 - Quinta-feira criada
+2026-05-06,02:34:13,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.143, Quinta-feira criado"
+2026-05-06,02:34:20,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:35:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:35:51,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7144 - Sexta-feira criada
+2026-05-06,02:44:09,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.144, Sexta-feira criado"
+2026-05-06,02:44:17,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:45:47,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,02:45:47,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7145-6 - Fim de semana criada
+2026-05-06,02:54:06,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.145-6, Fim de semana criado"
+2026-05-06,15:32:10,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,15:37:50,ERRO,print_ad.py,print_task,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\PRINTS\\00 - Auto-prints\\39885  -  Halfpage  -  GOV\\2026 - 05 - 061.png'
+2026-05-06,15:37:55,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,16:01:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,16:02:45,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,16:05:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-06,18:34:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,18:35:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,18:35:41,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7119 - Segunda-feira criada
+2026-05-06,18:43:59,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.119, Segunda-feira criado"
+2026-05-06,18:44:01,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,18:45:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,18:45:32,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7120 - Terça-feira criada
+2026-05-06,18:53:50,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.120, Terça-feira criado"
+2026-05-06,18:53:52,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,18:55:22,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,18:55:23,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7121 - Quarta-feira criada
+2026-05-06,19:03:41,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.121, Quarta-feira criado"
+2026-05-06,19:03:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,19:05:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,19:05:14,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7122 - Quinta-feira criada
+2026-05-06,19:13:32,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.122, Quinta-feira criado"
+2026-05-06,19:13:34,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,19:15:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,19:15:05,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7123 - Sexta-feira criada
+2026-05-06,19:23:23,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.123, Sexta-feira criado"
+2026-05-06,19:23:25,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,19:24:55,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-05-06,19:24:56,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7124-5 - Fim de semana criada
+2026-05-06,19:33:14,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.124-5, Fim de semana criado"
+2026-05-06,21:53:16,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-05-06,21:55:24,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-05-06,21:57:32,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-05-06,21:59:40,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-05-06,22:01:48,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-05-06,22:03:57,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-05-06,22:06:05,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-05-06,22:08:13,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-05-06,22:10:21,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-05-06,22:19:23,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-06,22:19:34,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:19:44,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:19:52,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:20:03,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:20:13,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:20:21,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:20:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:20:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:20:50,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:21:00,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:21:10,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:21:18,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:21:29,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:21:39,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:21:47,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:21:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:22:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:22:16,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:38:59,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-06,22:40:33,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-06,22:40:46,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:40:57,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:41:07,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:41:19,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:41:30,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:41:40,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:41:52,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:42:03,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:42:14,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:42:26,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:42:37,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:42:47,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:42:59,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:43:10,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:43:20,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-06,22:43:32,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:43:43,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:43:53,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados

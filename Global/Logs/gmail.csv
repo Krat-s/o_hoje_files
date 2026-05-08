@@ -1,2 +1,41 @@
 data,hora,status,origem,função,message
 2026-04-08,17:28:40,ERRO,gmail.py,take_receivers,"Falha ao pegar emails: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-06,22:19:23,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-06,22:19:34,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:19:44,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:19:52,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:20:03,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:20:13,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:20:21,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:20:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:20:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:20:50,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:21:00,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:21:10,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:21:18,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:21:29,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:21:39,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:21:47,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:21:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:22:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-06,22:22:16,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:38:59,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-06,22:40:33,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-06,22:40:46,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:40:57,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:41:07,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:41:19,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:41:30,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:41:40,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:41:52,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:42:03,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:42:14,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:42:26,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:42:37,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:42:47,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:42:59,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:43:10,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:43:20,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-06,22:43:32,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:43:43,ERRO,gmail.py,send_for_graphic,Falha ao criar rascunhos da gráfica: module 'keyboard' has no attribute 'write9'
+2026-05-06,22:43:53,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
