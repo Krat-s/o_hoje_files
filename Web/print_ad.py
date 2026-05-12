@@ -60,9 +60,10 @@ def print_task(adon, adon_name_folder, gif=None, alt=None):
             """, ad
         )
         time.sleep(2)
-        fm.make_folder_(adon_name_folder)
+        fm.make_folder_print(adon_name_folder)
 
         if gif is not None:
+            fm.make_folder(f'frames - {adon_name_folder}', in_local=f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}")
             time.sleep(1)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame1.png")
             time.sleep(3.5)

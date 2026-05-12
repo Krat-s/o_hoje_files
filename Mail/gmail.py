@@ -85,13 +85,15 @@ def send_for_graphic(edicao, parte):
         kb.write('contas')
         pg.press('enter')
         time.sleep(1)
-        pg.write('grafica')
+        kb.write('gráfica')
         pg.press('enter')
         time.sleep(1)
-        kb.write9('Carlossandre1269@gmail.com')
-        time.sleep(1)
+        kb.write('grafica')
         pg.press('enter')
-        time.sleep(0.3)
+        time.sleep(1)
+        kb.write('carlossandre1269@gm')
+        pg.press('enter')
+        time.sleep(1)
         pg.press('tab')
         kb.write(f"Segue {parte} da edição {edicao}")
         pg.press('esc')
@@ -113,16 +115,29 @@ def auto_drafts(ed=None, qnt=None):
     if ed is None or qnt is None:
         for info in desync.gerar_edicoes_formatadas():
             ed = info.edicao_formatada
-            send_for_graphic(ed, "básico")
-            send_for_graphic(ed, "resto")
-            send_emails_to_readers(ed)
-            time.sleep(1)
+            weekday = info.dia_semana_padrão 
+            if weekday == 1:
+                send_for_graphic(ed, "completo")
+                send_emails_to_readers(ed)
+                time.sleep(1)
+            else:
+                send_for_graphic(ed, "básico")
+                send_for_graphic(ed, "resto")
+                send_emails_to_readers(ed)
+                time.sleep(1)
+            print(weekday)
 
     else:
         for info in desync.gerar_edicoes_formatadas(ed, qnt):
 
             ed = info.edicao_formatada
-            send_for_graphic(ed, "básico")
-            send_for_graphic(ed, "resto")
-            send_emails_to_readers(ed)
-            time.sleep(1)
+            weekday = info.dia_semana_padrão
+            if weekday == 5:
+                send_for_graphic(ed, "completo")
+                send_emails_to_readers(ed)
+                time.sleep(1)
+            else:
+                send_for_graphic(ed, "básico")
+                send_for_graphic(ed, "resto")
+                send_emails_to_readers(ed)
+                time.sleep(1)

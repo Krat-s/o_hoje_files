@@ -29,56 +29,6 @@ TIMETOCLOSE = 6
 TIMEEXPPDF = 7
 
 
-# ------------------------------------------------------------------------- Web
-acessos_B1 = rn.generate_number(0, 3)
-acessos_B2 = int(acessos_B1 / 2 + 1)
-acessos_B3 = int(acessos_B2 / 2)
-acessos_H1 = 1
-acessos_H2 = 2
-acessos_H3 = 1
-
-url_target = "https://ohoje.com"
-botão_1 = str("ads-728 mx-auto") #principal
-botão_2 = "p-3 pb-0" #lateral
-botão_3 = "placement_1026570_0_i" #banner rodapé
-
-
-#Prints settings
-#addon banner principal
-ad_1_pi = None
-ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
-ad_1_client = "Prefeitura de Goiânia"
-ad_1_folder = f'{ad_1_pi}  -  Principal  -  {ad_1_client}'
-ad_1_link = str("")
-
-#addon Width
-ad_2_pi = None
-ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
-ad_2_client = "Pref.Luiziânia"
-ad_2_folder = f'{ad_2_pi}  -  Width  -  {ad_2_client}'
-ad_2_link = str("")
-
-#addon Halfpage
-ad_3_pi = 39307
-ad_3 = ".sidebar-capa > div:nth-child(3) section img[alt='Publicidade']"  
-ad_3_link = ""
-ad_3_client = "GOV"
-ad_3_folder = f'{ad_3_pi}  -  Halfpage  -  {ad_3_client}'
-ad_3_link = str('')
-
-# #addon MIDDLE RETANGLE
-ad_4_pi = None
-ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_client = ""
-ad_4_folder = f'{ad_4_pi}  -  MIDDLE RETANGLE  -  {ad_4_client}'
-
-#alt addon
-alt_pi = 39885 
-alt_ad = ad_3
-alt_client = "GOV"
-alt_name_folder = f'{alt_pi}  -  Halfpage  -  {alt_client}'
-
-
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
 opera = 2 # any browser
@@ -108,6 +58,59 @@ y_edicao_17 = 121
 x_edicao_capa = 346
 y_edicao_capa = 448
 
+
+
+# ------------------------------------------------------------------------- Web
+acessos_B1 = rn.generate_number(0, 3)
+acessos_B2 = int(acessos_B1 / 2 + 1)
+acessos_B3 = int(acessos_B2 / 2)
+acessos_H1 = 1
+acessos_H2 = 2
+acessos_H3 = 1
+
+url_target = "https://ohoje.com"
+botão_1 = str("ads-728 mx-auto") #principal
+botão_2 = "p-3 pb-0" #lateral
+botão_3 = "placement_1026570_0_i" #banner rodapé
+
+
+#Prints settings
+#addon banner principal
+ad_1_pi = None
+ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
+ad_1_client = "Prefeitura de Goiânia"
+ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
+ad_1_link = str("")
+
+#addon Width
+ad_2_pi = None
+ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
+ad_2_client = "Pref.Luiziânia"
+ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
+ad_2_link = str("")
+
+#addon Halfpage
+ad_3_pi = 39307
+ad_3 = ".sidebar-capa > div:nth-child(3) section img[alt='Publicidade']"  
+ad_3_link = ""
+ad_3_client = "GOV"
+ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
+ad_3_link = str('')
+
+# #addon MIDDLE RETANGLE
+ad_4_pi = None
+ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
+ad_4_client = ""
+ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
+
+#alt addon
+alt_pi = 39885 
+alt_ad = ad_3
+alt_client = "GOV"
+alt_name_folder = f'{alt_pi} - Halfpage - {alt_client}'
+
+
+
 def stats():
     print(".....")
     print("⚙️  Settings loaded ✔️")
@@ -122,10 +125,4 @@ def stats():
 
 if __name__ == "__main__":
     stats()
-    # print(sy_de.EDD)
-
-
-
-
-
-   
+    # print(sy_de.EDD)  
