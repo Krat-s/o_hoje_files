@@ -80,27 +80,27 @@ ad_1_pi = None
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
 ad_1_client = "Prefeitura de Goiânia"
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
-ad_1_link = str("")
+ad_1_link = str('')
 
 #addon Width
 ad_2_pi = None
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
 ad_2_client = "Pref.Luiziânia"
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
-ad_2_link = str("")
+ad_2_link = str('')
 
 #addon Halfpage
-ad_3_pi = 39307
+ad_3_pi = None
 ad_3 = ".sidebar-capa > div:nth-child(3) section img[alt='Publicidade']"  
 ad_3_link = ""
-ad_3_client = "GOV"
+ad_3_client = ""
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
 ad_3_link = str('')
 
 # #addon MIDDLE RETANGLE
 ad_4_pi = None
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_client = ""
+ad_4_client = ''
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 
 #alt addon

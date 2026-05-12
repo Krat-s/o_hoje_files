@@ -615,3 +615,12 @@ Stacktrace:
 2026-05-10,21:11:48,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-05-10,21:13:58,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-05-11,15:28:42,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-12,15:10:45,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-12,15:13:26,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-12,15:21:07,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-12,15:21:11,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-12,15:24:43,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-12,15:38:34,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-12,15:43:14,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-12,15:44:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-12,16:12:33,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

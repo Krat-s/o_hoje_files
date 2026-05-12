@@ -102,3 +102,21 @@ data,hora,status,origem,função,message
 2026-05-11,18:01:18,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
 2026-05-11,18:01:34,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
 2026-05-11,18:01:44,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-11,22:32:21,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-11,22:32:40,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:32:57,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:33:07,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-11,22:33:25,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:33:42,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:33:52,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-11,22:34:10,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:34:27,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:34:38,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-11,22:34:56,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:35:13,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:35:23,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-11,22:35:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:35:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:36:08,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-05-11,22:36:26,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-11,22:36:36,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
