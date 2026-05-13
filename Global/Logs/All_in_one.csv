@@ -1886,3 +1886,39 @@ Stacktrace:
 2026-05-12,21:21:03,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
 2026-05-12,21:22:50,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
 2026-05-12,21:24:36,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-05-13,15:15:57,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-05-13,15:32:09,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-13,15:32:28,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:32:28,ERRO,gmail.py,send_for_graphic,"Falha ao criar rascunhos da gráfica: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-13,15:32:28,ERRO,gmail.py,send_emails_to_readers,"Falha ao criar rascunhos para leitores: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-13,15:32:29,ERRO,gmail.py,send_for_graphic,"Falha ao criar rascunhos da gráfica: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-13,15:32:29,ERRO,gmail.py,send_for_graphic,"Falha ao criar rascunhos da gráfica: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-13,15:32:29,ERRO,gmail.py,send_emails_to_readers,"Falha ao criar rascunhos para leitores: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-13,15:32:30,ERRO,gmail.py,send_for_graphic,"Falha ao criar rascunhos da gráfica: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-13,15:32:30,ERRO,gmail.py,send_for_graphic,"Falha ao criar rascunhos da gráfica: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-13,15:32:30,ERRO,gmail.py,send_emails_to_readers,"Falha ao criar rascunhos para leitores: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-05-13,15:35:46,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-13,15:36:08,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:37:44,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-13,15:38:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:38:28,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:38:38,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-13,15:39:00,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:40:14,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-05-13,15:40:40,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:41:05,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:41:16,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-13,15:41:42,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:42:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:42:17,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-13,15:42:43,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:43:08,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:43:18,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-13,15:43:44,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:44:09,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:44:20,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-13,15:44:46,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:45:11,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:45:21,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-05-13,15:45:47,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-05-13,15:45:57,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados

@@ -76,24 +76,23 @@ def send_emails_to_readers(edicao):
         log("All_in_one", "ERRO", erro_msg)
         log("gmail", "ERRO", erro_msg)
 
+def sendto(nome):
+    time.sleep(1)
+    kb.write(nome)
+    time.sleep(1)
+    pg.press('enter')
+    time.sleep(1)
+
 
 def send_for_graphic(edicao, parte):
     """Simula envio para gráfica com parte específica da edição"""
     try: 
         pg.press('c')
         shortcut_send_emails()
-        kb.write('contas')
-        pg.press('enter')
-        time.sleep(1)
-        kb.write('gráfica')
-        pg.press('enter')
-        time.sleep(1)
-        kb.write('grafica')
-        pg.press('enter')
-        time.sleep(1)
-        kb.write('carlossandre1269@gm')
-        pg.press('enter')
-        time.sleep(1)
+        sendto('gráfica')
+        sendto('carlossandre1269@gm')
+        sendto('graficaohoje@gmail.com')
+        sendto('contasapagar@ohoje.com.br')
         pg.press('tab')
         kb.write(f"Segue {parte} da edição {edicao}")
         pg.press('esc')

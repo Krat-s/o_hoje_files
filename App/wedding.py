@@ -143,6 +143,7 @@ def auto_marriage():
     btn_u.pack(pady=5)
 
     janela.mainloop()
+    janela.destroy()
 
 
 

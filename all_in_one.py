@@ -4,7 +4,8 @@ from Mail.gmail import auto_drafts
 from Web.print_ad import auto_print_all_ads
 from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from Backup.shutdawns import sleep_computer
-
+import tkinter as tk
+from tkinter import messagebox
 
 
 # 📌 ------------------------------------------ envio de emails
@@ -46,6 +47,7 @@ def auto_print_():
        print(f"Erro ao imprimir anúncios: {e}")
 
 
+
 # Importar aplicações
 # 📌 Drive Daily
 # 📌 billhead_variables
@@ -53,13 +55,56 @@ def auto_print_():
 # 📌 click_farmer
 # 📌 Gerar interfaçe gráfica de opções de automações
 
+# 📌 ------------------------------------------ Escolhas
+def all_in_one_():
+    def fazer_escolha(opcao):
+        if opcao == "Casamento":
+            auto_marriage_()
+            janela.destroy()
+        elif opcao == "Billhead":
+            auto_billhead_editions_(ed_ini, qtd)
+            janela.destroy()
+        elif opcao == "Rascunhos":
+            auto_drafts_(ed_ini, qtd)
+            janela.destroy()
+        elif opcao == "Print":
+            auto_print_()
+            janela.destroy()
+        elif opcao == "Desligar":
+            janela.destroy()
+            sleep_computer()
+        else:
+            messagebox.showerror("Erro", "Opção inválida.")
+
+    janela = tk.Tk() 
+    janela.title("Kratos Api")
+    janela.geometry("400x350")
+    janela.configure(bg="#32395F")
+    janela.iconbitmap(r'App\archives\favicon.ico')
+
+    estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#12162B", "fg": "white", "width": 30, "borderwidth": 3, "relief": "raised"}
+
+    btn_x = tk.Button(janela, text="Casamento da edição atual", command=lambda: fazer_escolha("Casamento"), **estilo_escolhas)
+    btn_x.pack(pady=5)
+
+    btn_v = tk.Button(janela, text="Cabeçalho das páginas", command=lambda: fazer_escolha("Billhead"), **estilo_escolhas)
+    btn_v.pack(pady=5)
+
+    btn_t = tk.Button(janela, text="Rascunhos no Gmail", command=lambda: fazer_escolha("Rascunhos"), **estilo_escolhas)
+    btn_t.pack(pady=5)
+
+    btn_y = tk.Button(janela, text="Print de anúncios", command=lambda: fazer_escolha("Print"), **estilo_escolhas)
+    btn_y.pack(pady=5)
+
+    btn_z = tk.Button(janela, text="Desligar tudo", command=lambda: fazer_escolha("Desligar"), **estilo_escolhas)
+    btn_z.pack(pady=5)
+
+    janela.mainloop()
+
 ed_ini = 7119
 qtd = 1
 
+
 if __name__ == "__main__":
-    print('All in one rodando...')
-    auto_print_()
-    # auto_marriage_()
-    # auto_drafts_(ed_ini, qtd)
-    # auto_billhead_editions_(ed_ini, qtd)
-    # sleep_computer()
+    print('All in one executando...')
+    all_in_one_()
