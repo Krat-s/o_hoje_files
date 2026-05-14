@@ -105,7 +105,8 @@ def auto_marriage():
             process_crumb()
             wedding("2_7", [2, 7])    
             wedding_cape()    
-            pg.alert('Tudo OK')     
+            janela.destroy()
+            pg.alert('Tudo OK')
         else:
             messagebox.showerror("Erro", "Opção inválida.")
 
