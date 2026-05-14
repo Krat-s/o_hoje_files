@@ -55,6 +55,7 @@ def auto_print_():
 # 📌 click_farmer
 # 📌 Gerar interfaçe gráfica de opções de automações
 
+
 # 📌 ------------------------------------------ Escolhas
 def all_in_one_():
     def fazer_escolha(opcao):
@@ -101,8 +102,8 @@ def all_in_one_():
 
     janela.mainloop()
 
-ed_ini = 7119
-qtd = 1
+ed_ini = 7126
+qtd = 5
 
 
 if __name__ == "__main__":

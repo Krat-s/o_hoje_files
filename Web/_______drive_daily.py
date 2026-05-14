@@ -19,53 +19,43 @@ import Global.settings.settings as cfg
 import Global.data_edition_sync as sy_de
 import Global.module.data_formatter as fd
 
-
 pg.PAUSE = 0.8
 pg.FAILSAFE = True
 
 URL_DRIVE = 'https://drive.google.com/drive/home?hl=pt-br'
-
 ontem = datetime.now() - timedelta(days=1)
-idlogin = "identifierId"
-user = "ohojepdf@gmail.com" 
-key = "456452462"
+
 
 def auto_drive():
+
     chrome_options = Options()
+
+    CHROME_ARGS = [
+        r'--user-data-dir=C:\Users\terravista.JORNALOHOJE\AppData\Local\Google\Chrome\User Data',
+        '--profile-directory=Default',
+        '--start-maximized',
+        '--disable-blink-features=AutomationControlled',
+        '--disable-extensions',
+    ]
+
+    for arg in CHROME_ARGS:
+        chrome_options.add_argument(arg)
+
+    chrome_options.add_experimental_option(
+        "excludeSwitches",
+        ["enable-automation"]
+    )
+
+    chrome_options.add_experimental_option(
+        "useAutomationExtension",
+        False
+    )
+  
     driver = webdriver.Chrome(options=chrome_options)
+  
+    time.sleep(5)
+
     driver.get(URL_DRIVE)
-    wait_d(driver, By.TAG_NAME, "body", timeout=15)
-    
-    try:
-        time.sleep(1)
-        pg.write(user)
-        pg.press('enter')
-        time.sleep(5)
-        pg.write(key)
-        pg.press('enter')
-
-        time.sleep(3)
-        # user = driver.find_element(By.ID, idlogin)
-        # driver.execute_script("arguments[0].click({behavior: 'smooth', block: 'center'});", user)
-        # time.sleep(1)
-        # botao.click()
-        # if #login_successful_condition:  # Substitua por uma condição que verifique se o login foi bem-sucedido
-
-    except Exception as e:
-        print(f"⚠️ Erro ao clicar no botão: {e}")
-
-    finally:
-        time.sleep(50)  # Tempo para visualizar o resultado
-        # driver.quit()
-
-def login():
-    
-   
-        
-            # Aguarde um pouco para garantir que a página esteja totalmente carregada
-            # Execute o código para mover as pastas
-            
-        print("✅ Botão clicado com sucesso!")
 
 
 
@@ -115,3 +105,4 @@ if __name__ == "__main__":
     # att_model(str('0 - esportes'))
     # print(str(fd.formatar_data(datetime.now(), tipo='dia')))
     auto_drive()
+    # main_drive_bot()
