@@ -31,8 +31,9 @@ def auto_drive():
     chrome_options = Options()
 
     CHROME_ARGS = [
-        r'--user-data-dir=C:\Users\terravista.JORNALOHOJE\AppData\Local\Google\Chrome\User Data',
-        '--profile-directory=Default',
+        # r'--user-data-dir=C:\Users\terravista.JORNALOHOJE\AppData\Local\Google\Chrome\User Data',
+        # '--profile-directory=Default',
+        r'--user-data-dir=C:\chrome_automation',
         '--start-maximized',
         '--disable-blink-features=AutomationControlled',
         '--disable-extensions',
