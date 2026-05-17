@@ -133,6 +133,6 @@ def auto_print_all_ads(gif=None, alt=None):
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    time.sleep(60 * 60 * 2)
+    # time.sleep(60 * 60 * 2)
     auto_print_all_ads()
     print('Print ad finalizado.')
