@@ -8,43 +8,44 @@ import tkinter as tk
 from tkinter import messagebox
 
 
-# 📌 ------------------------------------------ envio de emails
+
+# 📌 ------------------------------------------ making drafts
 def auto_drafts_(ed=None, qnt=None):
     try:
         auto_drafts(ed=ed, qnt=qnt)
         print('Rascunhos para leitores e gráfica criados.')
     except Exception as e:
-        print(f"Erro ao enviar emails: {e}")
+        print(f'Erro ao criar rascunhos: {e}')
 
 
 
-# 📌 ------------------------------------------ casamento
+# 📌 ------------------------------------------ Wedding
 def auto_marriage_():
     try:
         cm.auto_marriage()
         print('Casamento finalizado.')
     except Exception as e:
-        print(f"Erro no casamento: {e}")
+        print(f'Erro no casamento: {e}')
 
 
 
-# 📌 ------------------------------------------ cabeçalho
+# 📌 ------------------------------------------ making billhead
 def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
     try:
         auto_billhead_editions(edicao_inicial=ed, quantidade_repeticoes=qnt)
         print('Cabeçalho finalizado.')
     except Exception as e:
-        print(f"Erro ao enviar fazer o cabeçalho: {e}")
+        print(f'Erro ao fazer o cabeçalho: {e}')
 
 
 
-# 📌 ------------------------------------------ print
+# 📌 ------------------------------------------ print ads
 def auto_print_():
    try:
        auto_print_all_ads()
        print('Print de anúncios finalizado.')
    except Exception as e:
-       print(f"Erro ao imprimir anúncios: {e}")
+       print(f'Erro ao printar anúncios: {e}')
 
 
 

@@ -1,7 +1,6 @@
 import time
 from datetime import datetime
 
-import pyautogui as pg
 from pyautogui import screenshot 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -70,16 +69,16 @@ def print_task(adon, adon_name_folder, gif=None, alt=None):
             time.sleep(3.5)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 3.png")
 
-        if alt is not None:
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
-            alt_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\alt"
-            os.makedirs(alt_folder, exist_ok=True)
-            time.sleep(1)
-            screenshot(f"{alt_folder}\\{screen_date} - frame 1.png")
-            time.sleep(350)
-            screenshot(f"{alt_folder}\\{screen_date} - frame 2.png")
-            time.sleep(150)
-            screenshot(f"{alt_folder}\\{screen_date} - frame 3.png")
+        # if cfg.alt_pi is not None:
+        #     alt_folder = f"{cfg.CAMINHO_PRINTS}\\{cfg.alt_name_folder}"
+        #     os.makedirs(alt_folder, exist_ok=True)
+        #     screenshot(f"{alt_folder}\\{screen_date}.png")
+        #     time.sleep(1)
+        #     screenshot(f"{alt_folder}\\{screen_date} - frame 1.png")
+        #     # time.sleep(60 * 6)
+        #     screenshot(f"{alt_folder}\\{screen_date} - frame 2.png")
+        #     # time.sleep(60 * 3)
+        #     screenshot(f"{alt_folder}\\{screen_date} - frame 3.png")
 
         else:
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
@@ -128,6 +127,9 @@ def auto_print_all_ads(gif=None, alt=None):
         print_task(cfg.ad_4, cfg.ad_4_folder, gif, alt)
 
     if cfg.alt_pi is not None:
+        print('Printando anúncio alternativo...')
+        time.sleep(5)
+        print('...')
         print_task(cfg.alt_ad, cfg.alt_name_folder, gif, alt)
 
 
