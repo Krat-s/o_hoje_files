@@ -22,7 +22,7 @@ from Web.modules.web_diver import wait_d
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
 
 
-def print_task(adon, adon_name_folder, gif=None, alt=None):
+def print_task(adon, adon_name_folder, gif=None):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")
     chrome_options = Options()
@@ -69,17 +69,6 @@ def print_task(adon, adon_name_folder, gif=None, alt=None):
             time.sleep(3.5)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 3.png")
 
-        # if cfg.alt_pi is not None:
-        #     alt_folder = f"{cfg.CAMINHO_PRINTS}\\{cfg.alt_name_folder}"
-        #     os.makedirs(alt_folder, exist_ok=True)
-        #     screenshot(f"{alt_folder}\\{screen_date}.png")
-        #     time.sleep(1)
-        #     screenshot(f"{alt_folder}\\{screen_date} - frame 1.png")
-        #     # time.sleep(60 * 6)
-        #     screenshot(f"{alt_folder}\\{screen_date} - frame 2.png")
-        #     # time.sleep(60 * 3)
-        #     screenshot(f"{alt_folder}\\{screen_date} - frame 3.png")
-
         else:
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
             frames_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\frames"
@@ -112,29 +101,30 @@ def run_print_ad(ad=None, folder=None):
 
 
 # ------------------manual trigger 
-def auto_print_all_ads(gif=None, alt=None):
+def auto_print_all_ads(gif=None):
     '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
     if cfg.ad_1_pi != None:
-        print_task(cfg.ad_1, cfg.ad_1_folder, gif, alt)
+        print_task(cfg.ad_1, cfg.ad_1_folder, gif)
 
     if cfg.ad_2_pi != None:
-        print_task(cfg.ad_2, cfg.ad_2_folder, gif, alt)
+        print_task(cfg.ad_2, cfg.ad_2_folder, gif)
 
     if cfg.ad_3_pi != None:
-        print_task(cfg.ad_3, cfg.ad_3_folder, gif, alt)
+        print_task(cfg.ad_3, cfg.ad_3_folder, gif)
 
     if cfg.ad_4_pi != None:
-        print_task(cfg.ad_4, cfg.ad_4_folder, gif, alt)
+        print_task(cfg.ad_4, cfg.ad_4_folder, gif)
 
     if cfg.alt_pi is not None:
         print('Printando anúncio alternativo...')
-        time.sleep(5)
-        print('...')
-        print_task(cfg.alt_ad, cfg.alt_name_folder, gif, alt)
+        time.sleep(60* 6)
+        print_task(cfg.alt_ad, cfg.alt_name_folder, gif)
+        time.sleep(60)
+        print_task(cfg.alt_ad, f'{cfg.alt_name_folder}_retry', gif)
+
 
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    # time.sleep(60 * 60 * 2)
     auto_print_all_ads()
     print('Print ad finalizado.')
