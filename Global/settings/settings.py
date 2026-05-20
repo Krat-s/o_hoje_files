@@ -100,7 +100,7 @@ ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
 
 #alt addon (when have two ads from the same localization)
-alt_pi = 40083 
+alt_pi = None 
 alt_ad = ad_3
 alt_client = "GOV"
 alt_name_folder = f'{alt_pi} - Halfpage - {alt_client}'

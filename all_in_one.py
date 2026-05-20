@@ -70,8 +70,8 @@ def all_in_one_():
             auto_drafts_(ed_ini, qtd)
             janela.destroy()
         elif opcao == "Print":
-            auto_print_()
             janela.destroy()
+            auto_print_()
         elif opcao == "Desligar":
             janela.destroy()
             sleep_computer()
