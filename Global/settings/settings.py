@@ -80,6 +80,7 @@ ad_1_pi = None
 ad_1_client = "Prefeitura de Goiânia"
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
+ad_1_link = "https://ohoje.com/wp-content/uploads/2026/05/300x500.gif"
 
 # addon Width (rodapé?)
 ad_2_pi = None
@@ -91,7 +92,7 @@ ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']"
 ad_3_pi = 39885
 ad_3_client = "GOV"
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
-ad_3 = ".sidebar-capa > div:nth-child(3) section img[alt='Publicidade']"  
+ad_3 = ".sidebar-capa > div:nth-child(2) section img[alt='Publicidade']"  
 
 # addon Middle retangle (quadrado?)
 ad_4_pi = None
@@ -100,7 +101,7 @@ ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
 
 #alt addon (when have two ads from the same localization)
-alt_pi = None 
+alt_pi = None
 alt_ad = ad_3
 alt_client = "GOV"
 alt_name_folder = f'{alt_pi} - Halfpage - {alt_client}'
