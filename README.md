@@ -1,55 +1,55 @@
 # 📰 O-HOJE Files
 
-Automação de tarefas internas para o jornal O HOJE usando Python. Este projeto facilita ações repetitivas com controle de arquivos, atalhos de teclado e interface gráfica.
+Automation of internal tasks for the newspaper O HOJE using Python. This project facilitates repetitive actions with file control, keyboard shortcuts and graphical interface.
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-- Automação com `pyautogui` e `keyboard`
-- Interface gráfica com `PyQt5`
-- Organização de arquivos e pastas
-- Atalhos personalizados para produtividade
+-Automation with `pyautogui` and `keyboard`
+-Graphical interface with `PyQt5`
+-Organization of files and folders
+-Custom shortcuts for productivity
 
-## 🛠️ Tecnologias usadas
+## 🛠️ Technologies used
 
-- Python 3.11+
-- PyQt5
-- PyAutoGUI
-- Keyboard
-- Tesseract
+-Python 3.11+
+-PyQt5
+-PyAutoGUI
+-Keyboard
+-Tesseract
 
-## 📦 Instalação
+## 📦 Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/seu-usuario/o_hoje_files.git
-   cd o_hoje_files
+   git Clone https://github.com/your user/today files.git
+   cd The today files
    ```
 
-2. Crie o ambiente virtual:
-   Bash
+2. Create the virtual environment:
+   bash
    python -m venv venv
 
-3. Ative o ambiente:
+3. Activate the environment:
    Windows:
-   Bash
+   bash
    .\venv\Scripts\activate
 
    Linux/MacOS:
    source venv/bin/activate
 
-4. Instale as dependencias:
+4. Install the dependencies:
    pip install -r requirements.txt
 
-📂 Estrutura do projeto
+📂 Project structure
 o_hoje_files/
-├── venv/ # Ambiente virtual (ignorado pelo Git)
-├── main.py # Código principal
-├── requirements.txt # Dependências
-├── README.md # Documentação
-└── .gitignore # Arquivos ignorados pelo Git
+├── venv/# Virtual environment (ignored by Git)
+├── main.py # Main code
+├── requirements.txt # Dependencies
+├── README.md # Documentation
+└── .gitignore # Files ignored by Git
 
-Obs: deixar respectivamente disponíveis na barra de tarefas quark, navegador, vs code, explorer
+Note: leave respectively available in the quark taskbar, browser, vs code, explorer
 
-👨‍💻 Autor
+👨‍💻 Author
 Kratos Messi

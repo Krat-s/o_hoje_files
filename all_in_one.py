@@ -2,6 +2,7 @@ from App import wedding as cm
 from App.billhead_editions import auto_billhead_editions
 from Mail.gmail import auto_drafts
 from Web.print_ad import auto_print_all_ads
+from Web.print_ad_by_link import auto_print_by_link_all_ads
 from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from Backup.shutdawns import sleep_computer
 import tkinter as tk
@@ -47,6 +48,13 @@ def auto_print_():
    except Exception as e:
        print(f'Erro ao printar anúncios: {e}')
 
+def auto_print_by_link_():
+   try:
+       auto_print_by_link_all_ads()
+       print('Print de anúncios finalizado.')
+   except Exception as e:
+       print(f'Erro ao printar anúncios: {e}')
+
 
 
 # Importar aplicações
@@ -72,6 +80,9 @@ def all_in_one_():
         elif opcao == "Print":
             janela.destroy()
             auto_print_()
+        elif opcao == "print por link":
+            janela.destroy()
+            auto_print_by_link_()
         elif opcao == "Desligar":
             janela.destroy()
             sleep_computer()
@@ -98,6 +109,9 @@ def all_in_one_():
     btn_y = tk.Button(janela, text="Print de anúncios", command=lambda: fazer_escolha("Print"), **estilo_escolhas)
     btn_y.pack(pady=5)
 
+    btn_z2 = tk.Button(janela, text="Print de anúncio por link", command=lambda: fazer_escolha("print por link"), **estilo_escolhas)
+    btn_z2.pack(pady=5)
+    
     btn_z = tk.Button(janela, text="Desligar tudo", command=lambda: fazer_escolha("Desligar"), **estilo_escolhas)
     btn_z.pack(pady=5)
 

@@ -38,3 +38,6 @@ Thumbs.db
 *.bak
 *.swp
 *.tmp
+
+# Ignorar arquivos de teste
+Backup/
