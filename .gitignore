@@ -30,6 +30,7 @@ build/
 # VSCode
 .vscode/
 
+
 # Arquivos do sistema
 .DS_Store
 Thumbs.db
@@ -38,3 +39,4 @@ Thumbs.db
 *.bak
 *.swp
 *.tmp
+.Backup/
