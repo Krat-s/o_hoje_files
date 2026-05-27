@@ -5,6 +5,7 @@ from Web.print_ad import auto_print_all_ads
 from Web.print_ad_by_link import auto_print_by_link_all_ads
 from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from Backup.shutdawns import sleep_computer
+    
 import tkinter as tk
 from tkinter import messagebox
 
@@ -118,7 +119,7 @@ def all_in_one_():
     janela.mainloop()
 
 ed_ini = 7126
-qtd = 5
+qtd = 512
 
 
 if __name__ == "__main__":
