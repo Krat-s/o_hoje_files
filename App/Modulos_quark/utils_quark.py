@@ -7,9 +7,9 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(raiz_projeto)
 
-import Global.settings.settings as cfg
-import Global.utils as utl
-import Global.data_edition_sync as desync
+import config.settings.settings as cfg
+import config.utils as utl
+import config.core.data_edition_sync as desync
 
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True

@@ -3,7 +3,7 @@ from App.billhead_editions import auto_billhead_editions
 from Mail.gmail import auto_drafts
 from Web.print_ad import auto_print_all_ads
 from Web.print_ad_by_link import auto_print_by_link_all_ads
-from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
+from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from Backup.shutdawns import sleep_computer
 import tkinter as tk
 from tkinter import messagebox

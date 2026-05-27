@@ -14,10 +14,10 @@ from Web.modules.web_diver import wait_d
 
 import pyautogui as pg
 import keyboard as kb
-import Global.utils as utl
-import Global.settings.settings as cfg
-import Global.data_edition_sync as sy_de
-import Global.module.data_formatter as fd
+import config.utils as utl
+import config.settings.settings as cfg
+import config.core.data_edition_sync as sy_de
+import config.core.data_formatter as fd
 
 pg.PAUSE = 0.8
 pg.FAILSAFE = True

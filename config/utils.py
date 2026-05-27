@@ -9,9 +9,9 @@ import time
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-import Global.settings.settings as cfg
-import Global.data_edition_sync as sy_de
-from Global.settings.win_manager import check_windows
+import config.settings.settings as cfg
+import config.core.data_edition_sync as sy_de
+from config.settings.win_manager import check_windows
 
 
 

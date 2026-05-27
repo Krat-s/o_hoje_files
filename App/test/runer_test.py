@@ -10,15 +10,15 @@ from tkinter import messagebox
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(raiz_projeto)
 
-import Global.settings.settings as cfg
-import Global.utils as utl
-import Global.data_edition_sync as sy_de
+import config.settings.settings as cfg
+import config.utils as utl
+import config.core.data_edition_sync as sy_de
 import App.modulos_quark.utils_quark as utlq
-from Global.file_manager import take_file
-from Global.Logs.logs import log
-from Global.waits_checks import wait_explorer_open, wait_folder_open
-from Global.file_manager import auto_folders
-import Global.file_manager as fm
+from config.file_manager import take_file
+from config.storage.Logs.logs import log
+from config.waits_checks import wait_explorer_open, wait_folder_open
+from config.file_manager import auto_folders
+import config.file_manager as fm
 
 
 

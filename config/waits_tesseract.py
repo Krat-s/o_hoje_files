@@ -5,7 +5,7 @@ import threading
 
 import settings.settings as cfg
 import utils as utl
-from Logs.logs import log
+from config.storage.Logs.logs import log
 
 
 

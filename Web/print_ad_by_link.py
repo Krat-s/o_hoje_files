@@ -12,10 +12,10 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-import Global.settings.settings as cfg
-from Global.Logs.logs import log
-from Global.utils import max_windows
-import Global.file_manager as fm
+import config.settings.settings as cfg
+from config.storage.Logs.logs import log
+from config.utils import max_windows
+import config.file_manager as fm
 from Web.modules.web_diver import wait_d
 
 

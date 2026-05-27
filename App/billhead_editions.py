@@ -7,14 +7,14 @@ import pyautogui as pg
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
-import Global.settings.settings as cfg
-import Global.utils as utl
-import Global.data_edition_sync as desync
-from Global.Logs.logs import log
-from Global.file_manager import auto_folders
+import config.settings.settings as cfg
+import config.utils as utl
+import config.core.data_edition_sync as desync
+from config.storage.Logs.logs import log
+from config.file_manager import auto_folders
 from App.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
-from Global.module.edition_info import EdicaoInfo
-from Global.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
+from config.core.edition_info import EdicaoInfo
+from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5

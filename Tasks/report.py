@@ -6,7 +6,7 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-from Global.utils import open_software
+from config.utils import open_software
 from Tasks.module_tasks import index_numbers as ni
 
 time.sleep(1)
