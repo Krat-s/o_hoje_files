@@ -20,7 +20,7 @@ from Web.modules.web_diver import wait_d
 
 
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
- 
+
 
 def print_task(adon, adon_name_folder, gif=None):
     """Abre o navegador, clica no botão e registra o resultado."""
@@ -30,37 +30,38 @@ def print_task(adon, adon_name_folder, gif=None):
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--no-sandbox")
 
-    driver = webdriver.Chrome(options=chrome_options)
-    max_windows()
+    try:
+        driver = webdriver.Chrome(options=chrome_options)
+        max_windows()
+
+    except Exception as e:
+        erro_msg = f"Falha ao iniciar ChromeDriver: {str(e)}"
+        log("All_in_one", "ERRO", erro_msg)
+        log("print_ad", "ERRO", erro_msg)
+        return
     driver.get(cfg.url_target)
 
     wait_d(driver, By.TAG_NAME, "body",)
-    
-    try:    
-        wait_d(driver, By.LINK_TEXT, adon, clicavel=False)
-    except TimeoutError:
-        print(f"⏳ Anúncio '{adon}' não encontrado. Tentando novamente em 6 minutos...")
-        # for attempt in range(3):
-        #     print(f"⏳ Tentativa {attempt + 1} de acessar o anúncio...")
-        #     time.sleep(60 * 6)
-        #     wait_d(driver, By.LINK_TEXT, adon, clicavel=False)
-        #     return True
-
-    print(f"✅ Anúncio '{adon}' encontrado. Preparando para printar...")    
-    driver.execute_script("document.body.style.zoom='75%'")
+    wait_d(driver, By.LINK_TEXT, adon)
+    print(  f"✅ Anúncio encontrado: {adon}")
     time.sleep(0.5)
 
     def button_print(adon):
-        ad = wait_d(driver, By.LINK_TEXT, adon, clicavel=True)
+        print('1')
+        ad = wait_d(driver, By.LINK_TEXT, adon)
+        print('2')
+
         driver.execute_script(
             """
+            document.body.style.zoom='125%';
             const element = arguments[0];
-            const yOffset = -300;
+            const yOffset = -10;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({top: y});
             """, ad
         )
-        time.sleep(0.5)
+
+        time.sleep(2)
         fm.make_folder_print(adon_name_folder)
         
         if gif is not None:
@@ -104,30 +105,31 @@ def run_print_ad(ad=None, folder=None):
 
 
 # ------------------manual trigger 
-def auto_print_by_link_all_ads(gif=None):
+def auto_print_all_ads(gif=None):
     '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
     if cfg.ad_1_pi != None:
-        print_task(cfg.ad_1_link, cfg.ad_1_folder, gif)
+        print_task(cfg.ad_1, cfg.ad_1_folder, gif)
 
     if cfg.ad_2_pi != None:
-        print_task(cfg.ad_2_link, cfg.ad_2_folder, gif)
+        print_task(cfg.ad_2, cfg.ad_2_folder, gif)
 
     if cfg.ad_3_pi != None:
-        print_task(cfg.ad_3_link, cfg.ad_3_folder, gif)
+        print('Printando anúncio 3...')
+        print_task(cfg.ad_3, cfg.ad_3_folder, gif)
 
     if cfg.ad_4_pi != None:
-        print_task(cfg.ad_4_link, cfg.ad_4_folder, gif)
+        print_task(cfg.ad_4, cfg.ad_4_folder, gif)
 
-    if cfg.ad_alt_pi is not None:
+    if cfg.ad_alt_pi != None:
         print('Printando anúncio alternativo...')
         time.sleep(60* 6)
-        print_task(cfg.ad_alt_ad, cfg.ad_alt_name_folder, gif)
+        print_task(cfg.ad_alt, cfg.ad_alt_folder, gif)
         time.sleep(60)
-        print_task(cfg.ad_alt_ad, f'{cfg.ad_alt_name_folder}_retry', gif)
+        print_task(cfg.ad_alt_ad, f'{cfg.ad_alt_folder}_retry', gif)
 
 
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    auto_print_by_link_all_ads()
+    auto_print_all_ads()
     print('Print ad finalizado.')

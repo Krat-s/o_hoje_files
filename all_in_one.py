@@ -2,7 +2,7 @@ from App import wedding as cm
 from App.billhead_editions import auto_billhead_editions
 from Mail.gmail import auto_drafts
 from Web.print_ad import auto_print_all_ads
-from Web.print_ad_by_link import auto_print_by_link_all_ads
+# from Web.print_ad_by_link import auto_print_by_link_all_ads
 from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from Backup.shutdawns import sleep_computer
     
@@ -118,9 +118,8 @@ def all_in_one_():
 
     janela.mainloop()
 
-ed_ini = 7126
-qtd = 512
-
+ed_ini = 7140
+qtd = 1
 
 if __name__ == "__main__":
     print('All in one executando...')

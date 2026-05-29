@@ -77,39 +77,39 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 # ------------------------------------------------------------------------- Prints settings
 # addon banner principal
 ad_1_pi = None
-ad_1_client = "Prefeitura de Goiânia"
+ad_1_client = ""
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
 ad_1_link = "https://ohoje.com/wp-content/uploads/2026/05/300x500.gif"
 
 # addon Width (rodapé?)
 ad_2_pi = None
-ad_2_client = "Pref.Luiziânia"
+ad_2_client = ''
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
-ad_2_link = ""
+ad_2_link = ''
 
 
 # addon Halfpage
-ad_3_pi = 39885 #CARRO DE SOM
-ad_3_client = "GOV"
+ad_3_pi = 40083
+ad_3_client = 'GOV'
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
-ad_3 = ".sidebar-capa > div:nth-child(2) section img[alt='Publicidade']"
-ad_3_link = ""  
+ad_3 = "div:nth-child(2) img[alt='Publicidade']"
+ad_3_link = 'https://saude.goiania.go.gov.br/'  
 
 # addon Middle retangle (quadrado?)
 ad_4_pi = None
 ad_4_client = ''
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_link = ""
+ad_4_link = ''
 
 #alt addon (when have two ads from the same localization)
-ad_alt_pi = 40083
+ad_alt_pi = None
+ad_alt_client = ''
+ad_alt_folder = f'{ad_alt_pi} - Halfpage - {ad_alt_client}'
 ad_alt_ad = ad_3
-ad_alt_client = "GOV"
-ad_alt_name_folder = f'{ad_alt_pi} - Halfpage - {ad_alt_client}'
-ad_alt_link = "https://saude.goiania.go.gov.br/"
+ad_alt_link = ''
 
 
 

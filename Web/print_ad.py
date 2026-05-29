@@ -42,22 +42,26 @@ def print_task(adon, adon_name_folder, gif=None):
     driver.get(cfg.url_target)
 
     wait_d(driver, By.TAG_NAME, "body",)
-    wait_d(driver, By.CSS_SELECTOR, adon, clicavel=False)
-
-    driver.execute_script("document.body.style.zoom='75%'")
+    wait_d(driver, By.CSS_SELECTOR, adon)
+    print(  f"✅ Anúncio encontrado: {adon}")
     time.sleep(0.5)
 
     def button_print(adon):
-        ad = wait_d(driver, By.CSS_SELECTOR, adon, clicavel=True)
+        print('1')
+        ad = wait_d(driver, By.CSS_SELECTOR, adon)
+        print('2')
+
         driver.execute_script(
             """
+            document.body.style.zoom='125%';
             const element = arguments[0];
-            const yOffset = -300;
+            const yOffset = -10;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({top: y});
             """, ad
         )
-        time.sleep(0.5)
+
+        time.sleep(2)
         fm.make_folder_print(adon_name_folder)
         
         if gif is not None:
@@ -110,17 +114,18 @@ def auto_print_all_ads(gif=None):
         print_task(cfg.ad_2, cfg.ad_2_folder, gif)
 
     if cfg.ad_3_pi != None:
+        print('Printando anúncio 3...')
         print_task(cfg.ad_3, cfg.ad_3_folder, gif)
 
     if cfg.ad_4_pi != None:
         print_task(cfg.ad_4, cfg.ad_4_folder, gif)
 
-    if cfg.alt_pi is not None:
+    if cfg.ad_alt_pi != None:
         print('Printando anúncio alternativo...')
         time.sleep(60* 6)
-        print_task(cfg.alt_ad, cfg.alt_name_folder, gif)
+        print_task(cfg.ad_alt, cfg.ad_alt_folder, gif)
         time.sleep(60)
-        print_task(cfg.alt_ad, f'{cfg.alt_name_folder}_retry', gif)
+        print_task(cfg.ad_alt_ad, f'{cfg.ad_alt_folder}_retry', gif)
 
 
 
