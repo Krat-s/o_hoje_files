@@ -1,10 +1,10 @@
-# Ambiente virtual
+# Virtual environment
 venv/
 ENV/
 env/
 .venv/
 
-# Cache do Python
+# Python Cache 
 __pycache__/
 *.py[cod]
 *.pyo
@@ -17,11 +17,11 @@ build/
 *.manifest
 *.spec
 
-# Arquivos de log e banco local
+# log archieves and local databases
 *.log
 *.sqlite3
 
-# Arquivos de configuração e ambiente
+# settings files and env 
 .env
 *.ini
 *.cfg
@@ -30,15 +30,15 @@ build/
 # VSCode
 .vscode/
 
-# Arquivos do sistema
+# sistem files
 .DS_Store
 Thumbs.db
 
-# Arquivos temporários
+# Temporary files
 *.bak
 *.swp
 *.tmp
 
-# Ignorar arquivos de teste
+# Test files
 Backup/
 .Backup/

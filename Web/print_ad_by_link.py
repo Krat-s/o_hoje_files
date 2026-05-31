@@ -105,7 +105,7 @@ def run_print_ad(ad=None, folder=None):
 
 
 # ------------------manual trigger 
-def auto_print_all_ads(gif=None):
+def auto_print_by_link_all_ads(gif=None):
     '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
     if cfg.ad_1_pi != None:
         print_task(cfg.ad_1, cfg.ad_1_folder, gif)
@@ -131,5 +131,5 @@ def auto_print_all_ads(gif=None):
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    auto_print_all_ads()
+    auto_print_by_link_all_ads()
     print('Print ad finalizado.')
