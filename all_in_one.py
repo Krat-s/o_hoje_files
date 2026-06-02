@@ -15,9 +15,8 @@ from tkinter import messagebox
 def auto_drafts_(ed=None, qnt=None):
     try:
         auto_drafts(ed=ed, qnt=qnt)
-        print('Rascunhos para leitores e gráfica criados.')
     except Exception as e:
-        print(f'Erro ao criar rascunhos: {e}')
+        print(f'Error creating drafts: {e}')
 
 
 
@@ -25,9 +24,8 @@ def auto_drafts_(ed=None, qnt=None):
 def auto_marriage_():
     try:
         cm.auto_marriage()
-        print('Casamento finalizado.')
     except Exception as e:
-        print(f'Erro no casamento: {e}')
+        print(f'Error in marriage: {e}')
 
 
 
@@ -35,9 +33,8 @@ def auto_marriage_():
 def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
     try:
         auto_billhead_editions(edicao_inicial=ed, quantidade_repeticoes=qnt)
-        print('Cabeçalho finalizado.')
     except Exception as e:
-        print(f'Erro ao fazer o cabeçalho: {e}')
+        print(f'Error creating billhead: {e}')
 
 
 
@@ -45,16 +42,14 @@ def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
 def auto_print_():
    try:
        auto_print_all_ads()
-       print('Print de anúncios finalizado.')
    except Exception as e:
-       print(f'Erro ao printar anúncios: {e}')
+       print(f'Error printing ads: {e}')
 
 def auto_print_by_link_():
    try:
        auto_print_by_link_all_ads()
-       print('Print de anúncios finalizado.')
    except Exception as e:
-       print(f'Erro ao printar anúncios: {e}')
+       print(f'Error printing ads by link: {e}')
 
 
 

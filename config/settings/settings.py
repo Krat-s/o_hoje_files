@@ -76,26 +76,26 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 # ------------------------------------------------------------------------- Prints settings
 # addon banner principal
-ad_1_pi = None
-ad_1_client = ""
+ad_1_pi = 40135
+ad_1_client = "BRAZIL AÇUCAREIRA"
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
-ad_1_link = "https://ohoje.com/wp-content/uploads/2026/05/300x500.gif"
+ad_1_link = 'a[href*="https://ohoje.com/2026/05/22/brasil-acucareira-acelera-expansao-nacional-com-logistica-propria-e-operacao-24-horas/"]'
 
 # addon Width (rodapé?)
-ad_2_pi = None
-ad_2_client = ''
+ad_2_pi = 40270
+# ad_2_pi = None
+ad_2_client = 'LUIZIÂNIA'
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
-ad_2_link = ''
-
+ad_2_link = 'a[href*="https://www.luziania.go.gov.br/"]'
 
 # addon Halfpage
-ad_3_pi = 40083
-ad_3_client = 'GOV'
+ad_3_pi = None
+ad_3_client = ''
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
 ad_3 = "div:nth-child(2) img[alt='Publicidade']"
-ad_3_link = 'https://saude.goiania.go.gov.br/'  
+ad_3_link = ''  
 
 # addon Middle retangle (quadrado?)
 ad_4_pi = None
