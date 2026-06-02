@@ -125,10 +125,12 @@ def auto_print_by_link_all_ads(gif=None):
         print_task(cfg.ad_alt_link, cfg.ad_alt_folder, gif)
         time.sleep(60)
         print_task(cfg.ad_alt_link, f'{cfg.ad_alt_folder}_retry', gif)
+V10 20
 
 
 
 if __name__ == "__main__":
-    print('Print ad rodando...')
+    print('Print ad rodando...')V290    20
+    
     auto_print_by_link_all_ads()
     print('Print ad finalizado.')
