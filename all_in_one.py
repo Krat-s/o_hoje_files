@@ -79,13 +79,11 @@ def all_in_one_():
         elif opcao == "print por link":
             janela.destroy()
             auto_print_by_link_()
-        elif opcao == "Desligar":V290   20
-
+        elif opcao == "Desligar":
             janela.destroy()
             sleep_computer()
         else:
-            messagebox.showerror("EV10  20" \
-            "rro", "Opção inválida.")
+            messagebox.showerror("Erro", "Opção inválida.")
 
     janela = tk.Tk() 
     janela.title("Kratos Api")

@@ -91,12 +91,11 @@ ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']"
 ad_2_link = 'a[href*="https://www.luziania.go.gov.br/"]'
 
 # addon Halfpage
-ad_3_pi = NoneV10   20
-
+ad_3_pi = None
 ad_3_client = ''
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
 ad_3 = "div:nth-child(2) img[alt='Publicidade']"
-ad_3_link = ''  V290    20
+ad_3_link = ''
 
 
 # addon Middle retangle (quadrado?)
