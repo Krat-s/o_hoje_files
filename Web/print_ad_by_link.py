@@ -29,6 +29,9 @@ def print_task(adon_link, adon_name_folder, gif=None):
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--no-sandbox")
+    # chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+    # chrome_options.add_argument("--disable-features=PrivacySandboxSettings4")
+    # chrome_options.add_argument("--disable-features=TrackingProtection3pcd")
 
     try:
         driver = webdriver.Chrome(options=chrome_options)
@@ -130,6 +133,6 @@ def auto_print_by_link_all_ads(gif=None):
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    time.sleep(60 * 60 * 1)
+    # time.sleep(60 * 60 * 1)
     auto_print_by_link_all_ads()
     print('Print ad finalizado.')
