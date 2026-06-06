@@ -29,9 +29,6 @@ def print_task(adon_link, adon_name_folder, gif=None):
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--no-sandbox")
-    # chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-    # chrome_options.add_argument("--disable-features=PrivacySandboxSettings4")
-    # chrome_options.add_argument("--disable-features=TrackingProtection3pcd")
 
     try:
         driver = webdriver.Chrome(options=chrome_options)
@@ -45,7 +42,7 @@ def print_task(adon_link, adon_name_folder, gif=None):
     driver.get(cfg.url_target)
 
     wait_d(driver, By.TAG_NAME, "body",)
-    wait_d(driver, By.CSS_SELECTOR, adon_link)
+    # wait_d(driver, By.CSS_SELECTOR, adon_link)
     print(  f"✅ Anúncio encontrado")
     time.sleep(0.5)
 
@@ -56,9 +53,9 @@ def print_task(adon_link, adon_name_folder, gif=None):
 
         driver.execute_script(
             """
-            document.body.style.zoom='75%';
+            document.body.style.zoom='70%';
             const element = arguments[0];
-            const yOffset = -300;
+            const yOffset = -250;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({top: y});
             """, ad
