@@ -180,3 +180,10 @@ data,hora,status,origem,função,message
 2026-05-27,02:24:27,SUCESSO,file_manager.py,auto_folders,Pasta 7147 - Segunda-feira criada
 2026-05-27,02:36:28,SUCESSO,file_manager.py,auto_folders,Pasta 7148 - Terça-feira criada
 2026-05-27,02:48:28,SUCESSO,file_manager.py,auto_folders,Pasta 7149 - Quarta-feira criada
+2026-06-07,16:21:34,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-06-07,16:24:25,SUCESSO,file_manager.py,auto_folders,Pasta 7147 - Segunda-feira criada
+2026-06-07,16:36:18,SUCESSO,file_manager.py,auto_folders,Pasta 7148 - Terça-feira criada
+2026-06-07,16:48:12,SUCESSO,file_manager.py,auto_folders,Pasta 7149 - Quarta-feira criada
+2026-06-07,17:00:05,SUCESSO,file_manager.py,auto_folders,Pasta 7150 - Quinta-feira criada
+2026-06-07,17:11:59,SUCESSO,file_manager.py,auto_folders,Pasta 7151 - Sexta-feira criada
+2026-06-07,17:23:52,SUCESSO,file_manager.py,auto_folders,Pasta 7152-3 - Fim de semana criada

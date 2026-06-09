@@ -2435,3 +2435,50 @@ Stacktrace:
 2026-06-05,15:20:23,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
 2026-06-05,17:43:12,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
 2026-06-05,17:43:35,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-05,22:46:55,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-06-05,22:49:20,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-06-05,22:51:46,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-06-05,22:54:11,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-06-05,22:56:36,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-06-05,22:59:01,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-06-05,23:01:26,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-06-05,23:03:51,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-06-05,23:06:17,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-06-06,00:39:06,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-06,01:39:24,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-07,16:13:23,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-07,16:20:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,16:21:34,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7140 - Segunda-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-06-07,16:22:38,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,16:24:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,16:24:25,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7147 - Segunda-feira criada
+2026-06-07,16:34:28,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.147, Segunda-feira criado"
+2026-06-07,16:34:32,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,16:36:17,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,16:36:18,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7148 - Terça-feira criada
+2026-06-07,16:46:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.148, Terça-feira criado"
+2026-06-07,16:46:25,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,16:48:11,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,16:48:12,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7149 - Quarta-feira criada
+2026-06-07,16:58:14,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.149, Quarta-feira criado"
+2026-06-07,16:58:18,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,17:00:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,17:00:05,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7150 - Quinta-feira criada
+2026-06-07,17:10:08,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.150, Quinta-feira criado"
+2026-06-07,17:10:12,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,17:11:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,17:11:59,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7151 - Sexta-feira criada
+2026-06-07,17:22:01,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.151, Sexta-feira criado"
+2026-06-07,17:22:05,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,17:23:51,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-07,17:23:52,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7152-3 - Fim de semana criada
+2026-06-07,17:33:55,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.152-3, Fim de semana criado"
+2026-06-07,20:20:17,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-06-07,20:22:42,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-06-07,20:25:07,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-06-07,20:27:32,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-06-07,20:29:56,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-06-07,20:32:21,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-06-07,20:34:46,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-06-07,20:37:11,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-06-07,20:39:36,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
