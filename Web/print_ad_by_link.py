@@ -47,9 +47,8 @@ def print_task(adon_link, adon_name_folder, gif=None):
     time.sleep(0.5)
 
     def button_print(adon_link):
-        print('1')
+        print(f"🖨️ Imprimindo anúncio: {adon_name_folder}")
         ad = wait_d(driver, By.CSS_SELECTOR, adon_link)
-        print('2')
 
         driver.execute_script(
             """
