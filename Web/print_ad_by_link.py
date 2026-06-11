@@ -54,7 +54,7 @@ def print_task(adon_link, adon_name_folder, gif=None):
             """
             document.body.style.zoom='70%';
             const element = arguments[0];
-            const yOffset = -250;
+            const yOffset = -220;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({top: y});
             """, ad
