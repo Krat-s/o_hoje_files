@@ -81,7 +81,7 @@ def all_in_one_():
             auto_print_by_link_()
         elif opcao == "Desligar":
             janela.destroy()
-            sleep_computer()
+            # sleep_computer()
         else:
             messagebox.showerror("Erro", "Opção inválida.")
 

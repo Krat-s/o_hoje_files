@@ -2518,3 +2518,87 @@ Stacktrace:
 2026-06-11,15:33:19,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
 2026-06-11,15:33:35,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
 2026-06-11,15:33:50,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:29:55,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:30:11,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:30:27,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:31:21,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:32:40,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:32:56,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:34:15,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:34:31,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:34:58,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:35:05,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: javascript error: yOffset is not defined
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff74180fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff74180fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7413478fd]
+	chromedriver!(No symbol) [0x7ff74134f861]
+	chromedriver!(No symbol) [0x7ff741352bbf]
+	chromedriver!(No symbol) [0x7ff7413efe68]
+	chromedriver!(No symbol) [0x7ff7413c9d7a]
+	chromedriver!(No symbol) [0x7ff7413eeaeb]
+	chromedriver!(No symbol) [0x7ff741393a58]
+	chromedriver!(No symbol) [0x7ff741394953]
+	chromedriver!GetHandleVerifier [0x7ff741dd5511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff741dcf8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff741df3205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff74182cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff74183562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff741819984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff741819b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff7417fca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ffe5274e957+17]
+	ntdll!RtlUserThreadStart [0x7ffe53ac7c1c+2c]
+"
+2026-06-11,17:35:09,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:35:16,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: javascript error: yOffset is not defined
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff74180fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff74180fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7413478fd]
+	chromedriver!(No symbol) [0x7ff74134f861]
+	chromedriver!(No symbol) [0x7ff741352bbf]
+	chromedriver!(No symbol) [0x7ff7413efe68]
+	chromedriver!(No symbol) [0x7ff7413c9d7a]
+	chromedriver!(No symbol) [0x7ff7413eeaeb]
+	chromedriver!(No symbol) [0x7ff741393a58]
+	chromedriver!(No symbol) [0x7ff741394953]
+	chromedriver!GetHandleVerifier [0x7ff741dd5511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff741dcf8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff741df3205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff74182cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff74183562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff741819984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff741819b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff7417fca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ffe5274e957+17]
+	ntdll!RtlUserThreadStart [0x7ffe53ac7c1c+2c]
+"
+2026-06-11,17:35:21,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,17:35:27,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: javascript error: yOffset is not defined
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff74180fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff74180fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7413478fd]
+	chromedriver!(No symbol) [0x7ff74134f861]
+	chromedriver!(No symbol) [0x7ff741352bbf]
+	chromedriver!(No symbol) [0x7ff7413efe68]
+	chromedriver!(No symbol) [0x7ff7413c9d7a]
+	chromedriver!(No symbol) [0x7ff7413eeaeb]
+	chromedriver!(No symbol) [0x7ff741393a58]
+	chromedriver!(No symbol) [0x7ff741394953]
+	chromedriver!GetHandleVerifier [0x7ff741dd5511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff741dcf8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff741df3205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff74182cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff74183562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff741819984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff741819b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff7417fca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ffe5274e957+17]
+	ntdll!RtlUserThreadStart [0x7ffe53ac7c1c+2c]
+"
+2026-06-11,17:35:31,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa

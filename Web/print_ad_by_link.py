@@ -52,9 +52,9 @@ def print_task(adon_link, adon_name_folder, gif=None):
 
         driver.execute_script(
             """
-            document.body.style.zoom='70%';
+            document.body.style.zoom='80%';
             const element = arguments[0];
-            const yOffset = -220;
+            
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({top: y});
             """, ad
