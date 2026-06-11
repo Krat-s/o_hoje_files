@@ -7,10 +7,10 @@ import pyautogui as pg
 raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_path)
 
-import Global.settings.settings as cfg
-import Global.utils as ut
-import Global.data_edition_sync as desync
-from Global.Logs.logs import log
+import config.settings.settings as cfg
+import config.utils as ut
+import config.core.data_edition_sync as desync
+from config.storage.Logs.logs import log
 
 # ------------------------------------------------------------------------- Settings
 pg.PAUSE = 1
@@ -77,22 +77,20 @@ def send_emails_to_readers(edicao):
         log("gmail", "ERRO", erro_msg)
 
 def sendto(nome):
-    time.sleep(1)
     kb.write(nome)
-    time.sleep(1)
     pg.press('enter')
-    time.sleep(1)
 
 
 def send_for_graphic(edicao, parte):
     """Simula envio para gráfica com parte específica da edição"""
     try: 
-        pg.press('c')
         shortcut_send_emails()
-        sendto('gráfica')
         sendto('carlossandre1269@gm')
-        sendto('graficaohoje@gmail.com')
         sendto('contasapagar@ohoje.com.br')
+        sendto('gráfica')
+        pg.write('grafica')
+        pg.press('down')
+        pg.press('enter')
         pg.press('tab')
         kb.write(f"Segue {parte} da edição {edicao}")
         pg.press('esc')

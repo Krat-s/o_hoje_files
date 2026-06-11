@@ -2,8 +2,8 @@ import os
 import time
 import schedule
 
-from module.schedule_manager import start_daily_schedules
-from Logs.logs import log
+from core.schedule_manager import start_daily_schedules
+from config.storage.Logs.logs import log
 
 
 def daily_task_loop(task_function):

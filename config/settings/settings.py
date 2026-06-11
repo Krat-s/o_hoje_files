@@ -6,9 +6,9 @@ import pyautogui as pg
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(raiz_projeto)
 
-from Global.module import gen_randon_numbers as rn
-import Global.data_edition_sync as sy_de
-from Global.settings.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
+from config.core import gen_randon_numbers as rn
+import config.core.data_edition_sync as sy_de
+from config.settings.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
 
 
 # ------------------------------------------------------------------------- Caminhos de rede
@@ -74,40 +74,45 @@ botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
-#Prints settings
-#addon banner principal
-ad_1_pi = None
-ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
-ad_1_client = "Prefeitura de Goiânia"
+# ------------------------------------------------------------------------- Prints settings
+# addon banner principal 40135
+ad_1_pi = 40135 
+# ad_1_pi = None 
+ad_1_client = "BRAZIL AÇUCAREIRA"
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
-ad_1_link = str('')
+ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
+ad_1_link = 'a[href*="https://ohoje.com/2026/05/22/brasil-acucareira-acelera-expansao-nacional-com-logistica-propria-e-operacao-24-horas/"]'
 
-#addon Width
+# addon Width (rodapé?)
 ad_2_pi = None
-ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
-ad_2_client = "Pref.Luiziânia"
+ad_2_client = ''
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
-ad_2_link = str('')
+ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
+ad_2_link = 'a[href*="https://www.luziania.go.gov.br/"]'
 
-#addon Halfpage
-ad_3_pi = None
-ad_3 = ".sidebar-capa > div:nth-child(3) section img[alt='Publicidade']"  
-ad_3_link = ""
-ad_3_client = ""
+
+# addon Halfpage (03 a 30)
+# ad_3_pi = None
+ad_3_pi = 40347
+ad_3_client = 'GOV'
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
-ad_3_link = str('')
+ad_3 = "div:nth-child(2) img[alt='Publicidade']"
+ad_3_link = "iframe[src*='B35895622.448422967']"
 
-# #addon MIDDLE RETANGLE
-ad_4_pi = None
-ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_client = ''
+
+# addon Middle retangle (quadrado?)
+ad_4_pi = 40405 # 10 a 13/6
+ad_4_client = 'Câmara de Goiânia'
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
+ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
+ad_4_link = 'a[href*="https://www.goiania.go.leg.br/"]'
 
-#alt addon
-alt_pi = 39885 
-alt_ad = ad_3
-alt_client = "GOV"
-alt_name_folder = f'{alt_pi} - Halfpage - {alt_client}'
+#alt addon (when have two ads from the same localization)
+ad_alt_pi = None
+ad_alt_client = ''
+ad_alt_folder = f'{ad_alt_pi} - Halfpage - {ad_alt_client}'
+ad_alt_ad = ad_3
+ad_alt_link = ''
 
 
 

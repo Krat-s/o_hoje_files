@@ -9,10 +9,10 @@ from typing import Iterable
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
-import Global.settings.settings as cfg
-import Global.utils as utl
-from Global.Logs.logs import log
-import Global.waits_checks as wc
+import config.settings.settings as cfg
+import config.utils as utl
+from config.storage.Logs.logs import log
+import config.waits_checks as wc
 
 pg.PAUSE = 0.8
 pg.FAILSAFE = True

@@ -7,7 +7,7 @@ import time
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
-from Global.wait import wait_until
+from config.wait import wait_until
 from pywinauto import Desktop
 
 
