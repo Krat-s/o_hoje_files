@@ -53,9 +53,9 @@ def print_task(adon_link, adon_name_folder, gif=None):
         time.sleep(3)
         driver.execute_script(
             """
-            document.body.style.zoom='70%';
+            document.body.style.zoom='100%';
             const element = arguments[0];
-            const yOffset = +150;
+            const yOffset = -1;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({top: y});
             """, ad
@@ -131,5 +131,6 @@ def auto_print_by_link_all_ads(gif=None):
 if __name__ == "__main__":
     print('Print ad rodando...')
   
-    auto_print_by_link_all_ads()
+    # auto_print_by_link_all_ads()
+    print_task(cfg.ad_4_link, cfg.ad_4_folder)
     print('Print ad finalizado.')

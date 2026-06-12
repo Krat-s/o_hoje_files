@@ -902,3 +902,61 @@ Stacktrace:
 	ntdll!RtlUserThreadStart [0x7ff9008a7c1c+2c]
 "
 2026-06-11,20:00:36,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-12,16:18:31,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-12,16:19:29,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-12,16:19:58,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-12,16:20:04,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff72a08fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff72a08fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff729bc78fd]
+	chromedriver!(No symbol) [0x7ff729bcf861]
+	chromedriver!(No symbol) [0x7ff729bd2825]
+	chromedriver!(No symbol) [0x7ff729bd28ef]
+	chromedriver!(No symbol) [0x7ff729c20bfa]
+	chromedriver!(No symbol) [0x7ff729c2177c]
+	chromedriver!(No symbol) [0x7ff729c71ef7]
+	chromedriver!(No symbol) [0x7ff729c6eaeb]
+	chromedriver!(No symbol) [0x7ff729c13a58]
+	chromedriver!(No symbol) [0x7ff729c14953]
+	chromedriver!GetHandleVerifier [0x7ff72a655511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff72a64f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff72a673205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff72a0acc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff72a0b562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff72a099984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff72a099b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff72a07ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff8ffbce957+17]
+	ntdll!RtlUserThreadStart [0x7ff9008a7c1c+2c]
+"
+2026-06-12,16:20:08,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-12,17:27:17,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-12,17:30:52,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff72a08fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff72a08fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff729bc78fd]
+	chromedriver!(No symbol) [0x7ff729bcf861]
+	chromedriver!(No symbol) [0x7ff729bd2825]
+	chromedriver!(No symbol) [0x7ff729bd28ef]
+	chromedriver!(No symbol) [0x7ff729c20bfa]
+	chromedriver!(No symbol) [0x7ff729c2177c]
+	chromedriver!(No symbol) [0x7ff729c71ef7]
+	chromedriver!(No symbol) [0x7ff729c6eaeb]
+	chromedriver!(No symbol) [0x7ff729c13a58]
+	chromedriver!(No symbol) [0x7ff729c14953]
+	chromedriver!GetHandleVerifier [0x7ff72a655511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff72a64f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff72a673205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff72a0acc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff72a0b562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff72a099984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff72a099b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff72a07ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff8ffbce957+17]
+	ntdll!RtlUserThreadStart [0x7ff9008a7c1c+2c]
+"
+2026-06-12,17:30:57,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa

@@ -76,8 +76,8 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 # ------------------------------------------------------------------------- Prints settings
 # addon banner principal 40135
-# ad_1_pi = 40135 
-ad_1_pi = None 
+# ad_1_pi = None 
+ad_1_pi = 40135 
 ad_1_client = "BRAZIL AÇUCAREIRA"
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
@@ -92,8 +92,8 @@ ad_2_link = 'a[href*="https://www.luziania.go.gov.br/"]'
 
 
 # addon Halfpage (03 a 30)
-ad_3_pi = None
-# ad_3_pi = 40347
+# ad_3_pi = None
+ad_3_pi = 40347
 ad_3_client = 'GOV'
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
 ad_3 = "div:nth-child(2) img[alt='Publicidade']"
@@ -105,7 +105,7 @@ ad_4_pi = 40405 # 10 a 13/6
 ad_4_client = 'Câmara de Goiânia'
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_link = 'img[src*="https://ohoje.com/wp-content/uploads/2026/06/CGA-0006-26-WEBBANNER-250x250-1.gif" [alt="Publicidade"]]'
+ad_4_link = 'img[src*="https://ohoje.com/wp-content/uploads/2026/06/CGA-0006-26-WEBBANNER-250x250-1.gif" alt="Publicidade"]'
 
 #alt addon (when have two ads from the same localization)
 ad_alt_pi = None
