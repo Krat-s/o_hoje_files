@@ -786,3 +786,119 @@ Stacktrace:
 	ntdll!RtlUserThreadStart [0x7ffe53ac7c1c+2c]
 "
 2026-06-11,17:35:31,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:29:53,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:30:29,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:30:53,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:31:09,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:31:34,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:32:42,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:32:59,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:33:17,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:35:04,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:36:15,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ba38fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff6ba38fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff6b9ec78fd]
+	chromedriver!(No symbol) [0x7ff6b9f21479]
+	chromedriver!(No symbol) [0x7ff6b9f2177c]
+	chromedriver!(No symbol) [0x7ff6b9f71ef7]
+	chromedriver!(No symbol) [0x7ff6b9f6eaeb]
+	chromedriver!(No symbol) [0x7ff6b9f13a58]
+	chromedriver!(No symbol) [0x7ff6b9f14953]
+	chromedriver!GetHandleVerifier [0x7ff6ba955511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff6ba94f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff6ba973205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff6ba3acc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff6ba3b562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff6ba399984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff6ba399b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff6ba37ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff8ffbce957+17]
+	ntdll!RtlUserThreadStart [0x7ff9008a7c1c+2c]
+"
+2026-06-11,19:36:19,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:39:11,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:39:52,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:40:29,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:41:21,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ba38fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff6ba38fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff6b9ec78fd]
+	chromedriver!(No symbol) [0x7ff6b9ecf861]
+	chromedriver!(No symbol) [0x7ff6b9ed2825]
+	chromedriver!(No symbol) [0x7ff6b9ed28ef]
+	chromedriver!(No symbol) [0x7ff6b9f20bfa]
+	chromedriver!(No symbol) [0x7ff6b9f2177c]
+	chromedriver!(No symbol) [0x7ff6b9f71ef7]
+	chromedriver!(No symbol) [0x7ff6b9f6eaeb]
+	chromedriver!(No symbol) [0x7ff6b9f13a58]
+	chromedriver!(No symbol) [0x7ff6b9f14953]
+	chromedriver!GetHandleVerifier [0x7ff6ba955511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff6ba94f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff6ba973205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff6ba3acc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff6ba3b562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff6ba399984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff6ba399b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff6ba37ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff8ffbce957+17]
+	ntdll!RtlUserThreadStart [0x7ff9008a7c1c+2c]
+"
+2026-06-11,19:41:25,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,19:55:53,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ba38fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff6ba38fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff6b9ec78fd]
+	chromedriver!(No symbol) [0x7ff6b9ecf861]
+	chromedriver!(No symbol) [0x7ff6b9ed2825]
+	chromedriver!(No symbol) [0x7ff6b9ed28ef]
+	chromedriver!(No symbol) [0x7ff6b9f20bfa]
+	chromedriver!(No symbol) [0x7ff6b9f2177c]
+	chromedriver!(No symbol) [0x7ff6b9f71ef7]
+	chromedriver!(No symbol) [0x7ff6b9f6eaeb]
+	chromedriver!(No symbol) [0x7ff6b9f13a58]
+	chromedriver!(No symbol) [0x7ff6b9f14953]
+	chromedriver!GetHandleVerifier [0x7ff6ba955511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff6ba94f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff6ba973205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff6ba3acc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff6ba3b562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff6ba399984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff6ba399b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff6ba37ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff8ffbce957+17]
+	ntdll!RtlUserThreadStart [0x7ff9008a7c1c+2c]
+"
+2026-06-11,19:55:57,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-11,20:00:31,ERRO,print_ad_by_link.py,print_task,"Falha ao salvar imagem: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ba38fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff6ba38fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff6b9ec78fd]
+	chromedriver!(No symbol) [0x7ff6b9ecf861]
+	chromedriver!(No symbol) [0x7ff6b9ed2825]
+	chromedriver!(No symbol) [0x7ff6b9ed28ef]
+	chromedriver!(No symbol) [0x7ff6b9f20bfa]
+	chromedriver!(No symbol) [0x7ff6b9f2177c]
+	chromedriver!(No symbol) [0x7ff6b9f71ef7]
+	chromedriver!(No symbol) [0x7ff6b9f6eaeb]
+	chromedriver!(No symbol) [0x7ff6b9f13a58]
+	chromedriver!(No symbol) [0x7ff6b9f14953]
+	chromedriver!GetHandleVerifier [0x7ff6ba955511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff6ba94f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff6ba973205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff6ba3acc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff6ba3b562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff6ba399984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff6ba399b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff6ba37ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff8ffbce957+17]
+	ntdll!RtlUserThreadStart [0x7ff9008a7c1c+2c]
+"
+2026-06-11,20:00:36,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa

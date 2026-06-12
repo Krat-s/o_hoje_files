@@ -50,17 +50,18 @@ def print_task(adon_link, adon_name_folder, gif=None):
         print(f"🖨️ Imprimindo anúncio: {adon_name_folder}")
         ad = wait_d(driver, By.CSS_SELECTOR, adon_link)
 
+        time.sleep(3)
         driver.execute_script(
             """
-            document.body.style.zoom='80%';
+            document.body.style.zoom='70%';
             const element = arguments[0];
-            
+            const yOffset = +150;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({top: y});
             """, ad
         )
+        time.sleep(8)
 
-        time.sleep(2)
         fm.make_folder_print(adon_name_folder)
         
         if gif is not None:

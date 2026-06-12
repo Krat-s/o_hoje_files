@@ -585,3 +585,12 @@ data,hora,status,origem,função,message
 2026-06-10,23:35:40,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
 2026-06-10,23:38:05,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
 2026-06-10,23:40:30,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-06-11,23:29:48,ERRO,wedding.py,wedding,Erro ao casar as páginas 13_16: Timeout aguardando condição: 'Image found'
+2026-06-11,23:30:07,ERRO,wedding.py,wedding,Erro ao casar as páginas 14_15: Timeout aguardando condição: 'Image found'
+2026-06-11,23:30:26,ERRO,wedding.py,wedding,Erro ao casar as páginas 17_20: Timeout aguardando condição: 'Image found'
+2026-06-11,23:30:45,ERRO,wedding.py,wedding,Erro ao casar as páginas 10_11: Timeout aguardando condição: 'Image found'
+2026-06-11,23:31:05,ERRO,wedding.py,wedding,Erro ao casar as páginas 9_12: Timeout aguardando condição: 'Image found'
+2026-06-11,23:31:24,ERRO,wedding.py,wedding,Erro ao casar as páginas 3_6: Timeout aguardando condição: 'Image found'
+2026-06-11,23:31:43,ERRO,wedding.py,wedding,Erro ao casar as páginas 4_5: Timeout aguardando condição: 'Image found'
+2026-06-11,23:32:02,ERRO,wedding.py,wedding,Erro ao casar as páginas 2_7: Timeout aguardando condição: 'Image found'
+2026-06-11,23:32:21,ERRO,wedding.py,wedding,Erro ao casar as páginas 1_8: Timeout aguardando condição: 'Image found'
