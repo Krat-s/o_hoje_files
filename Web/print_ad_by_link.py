@@ -60,29 +60,37 @@ def print_task(adon_link, adon_name_folder, gif=None):
             window.scrollTo({top: y});
             """, ad
         )
+        # print(driver.execute_script("""
+        # const r = arguments[0].getBoundingClientRect();
+        # return {
+        #     top: r.top,
+        #     bottom: r.bottom,
+        #     pageY: window.pageYOffset
+        # };
+        # """, ad))
         time.sleep(8)
 
-        fm.make_folder_print(adon_name_folder)
+        # fm.make_folder_print(adon_name_folder)
         
-        if gif is not None:
-            fm.make_folder(f'frames - {adon_name_folder}', in_local=f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}")
-            time.sleep(1)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 1.png")
-            time.sleep(3.5)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 2.png")
-            time.sleep(3.5)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 3.png")
+        # if gif is not None:
+        #     fm.make_folder(f'frames - {adon_name_folder}', in_local=f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}")
+        #     time.sleep(1)
+        #     screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 1.png")
+        #     time.sleep(3.5)
+        #     screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 2.png")
+        #     time.sleep(3.5)
+        #     screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 3.png")
 
-        else:
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
-            frames_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\frames"
-            os.makedirs(frames_folder, exist_ok=True)
-            time.sleep(1.5)
-            screenshot(f"{frames_folder}\\{screen_date} - frame 1.png")
-            time.sleep(1.5)
-            screenshot(f"{frames_folder}\\{screen_date} - frame 2.png")
-            time.sleep(1.5)
-            screenshot(f"{frames_folder}\\{screen_date} - frame 3.png")           
+        # else:
+        #     screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
+        #     frames_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\frames"
+        #     os.makedirs(frames_folder, exist_ok=True)
+        #     time.sleep(1.5)
+        #     screenshot(f"{frames_folder}\\{screen_date} - frame 1.png")
+        #     time.sleep(1.5)
+        #     screenshot(f"{frames_folder}\\{screen_date} - frame 2.png")
+        #     time.sleep(1.5)
+        #     screenshot(f"{frames_folder}\\{screen_date} - frame 3.png")           
     
     try:
         button_print(adon_link)
