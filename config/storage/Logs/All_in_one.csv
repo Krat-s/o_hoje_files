@@ -2785,3 +2785,6 @@ Stacktrace:
 	ntdll!RtlUserThreadStart [0x7ff9008a7c1c+2c]
 "
 2026-06-12,17:30:57,RELATÓRIO,print_ad_by_link.py,print_task,Drive fechado após execução da tarefa
+2026-06-12,23:35:56,ERRO,wedding.py,wedding,Erro ao casar as páginas 13_16: Timeout aguardando condição: 'Image found'
+2026-06-12,23:36:16,ERRO,wedding.py,wedding,Erro ao casar as páginas 14_15: Timeout aguardando condição: 'Image found'
+2026-06-12,23:36:35,ERRO,wedding.py,wedding,Erro ao casar as páginas 17_20: Timeout aguardando condição: 'Image found'
