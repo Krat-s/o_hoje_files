@@ -597,3 +597,4 @@ data,hora,status,origem,função,message
 2026-06-12,23:35:56,ERRO,wedding.py,wedding,Erro ao casar as páginas 13_16: Timeout aguardando condição: 'Image found'
 2026-06-12,23:36:16,ERRO,wedding.py,wedding,Erro ao casar as páginas 14_15: Timeout aguardando condição: 'Image found'
 2026-06-12,23:36:35,ERRO,wedding.py,wedding,Erro ao casar as páginas 17_20: Timeout aguardando condição: 'Image found'
+2026-06-14,21:07:30,ERRO,wedding.py,wedding,"Erro ao casar as páginas 13_16: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."

@@ -66,7 +66,7 @@ def take_file(arquivo):
     kb.press_and_release('ctrl+f')
     time.sleep(0.5)
     kb.write(str(arquivo))
-    wc.wait_image(r"C:\Users\terravista.JORNALOHOJE\Documents\GitHub\o_hoje_files\Backup\Prints\(11, 5, 27, 24) selecionado em17h28.png", timeout=15)
+    time.sleep(1.5)
     pg.click(cfg.center_x, cfg.center_y)
     pg.press('down')
     pg.press('down')
