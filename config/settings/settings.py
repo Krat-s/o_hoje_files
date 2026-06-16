@@ -101,11 +101,11 @@ ad_3_link = "iframe[src*='B35895622.448422967']"
 
 
 # addon Middle retangle (quadrado?)
-ad_4_pi = 40405 # 10 a 13/6
+ad_4_pi = None
 ad_4_client = 'Câmara de Goiânia'
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_link = 'img[src*="https://ohoje.com/wp-content/uploads/2026/06/CGA-0006-26-WEBBANNER-250x250-1.gif" alt="Publicidade"]'
+ad_4_link = 'img[src*="https:"]'
 
 #alt addon (when have two ads from the same localization)
 ad_alt_pi = None
