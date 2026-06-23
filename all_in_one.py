@@ -1,8 +1,11 @@
+import pyautogui as pg
+import time
+
 from App import wedding as cm
 from App.billhead_editions import auto_billhead_editions
 from Mail.gmail import auto_drafts
-from Web.print_ad import auto_print_all_ads
-from Web.print_ad_by_link import auto_print_by_link_all_ads
+from Web.print_ad_by_selector import auto_print_all_ads
+from Web.print_ad import auto_prints_all_ads
 from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 # from Backup.shutdawns import sleep_computer
     
@@ -37,7 +40,6 @@ def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
         print(f'Error creating billhead: {e}')
 
 
-
 # 📌 ------------------------------------------ print ads
 def auto_print_():
    try:
@@ -47,11 +49,17 @@ def auto_print_():
 
 def auto_print_by_link_():
    try:
-       auto_print_by_link_all_ads()
+       auto_prints_all_ads()
    except Exception as e:
        print(f'Error printing ads by link: {e}')
 
-
+# from config.core import schedule_manager as sm
+# # 📌 ------------------------------------------ Sredule
+# def scredule_function_():
+#     try:
+#        sm.schedule_function(auto_prints_all_ads())
+#     except Exception as e:
+#        print(f'Error printing ads: {e}')
 
 # Importar aplicações
 # 📌 Drive Daily
@@ -79,6 +87,12 @@ def all_in_one_():
         elif opcao == "print por link":
             janela.destroy()
             auto_print_by_link_()
+        elif opcao == "week_duty":
+            janela.destroy()
+            qtd = pg.prompt("Quantas edições deseja adiantar?")
+            auto_drafts_(ed_ini, qtd)
+            auto_billhead_editions_(ed_ini, qtd)
+            time.sleep(1)
         elif opcao == "Desligar":
             janela.destroy()
             # sleep_computer()
@@ -107,13 +121,16 @@ def all_in_one_():
 
     btn_z2 = tk.Button(janela, text="Print de anúncio por link", command=lambda: fazer_escolha("print por link"), **estilo_escolhas)
     btn_z2.pack(pady=5)
-    
-    btn_z = tk.Button(janela, text="Desligar tudo", command=lambda: fazer_escolha("Desligar"), **estilo_escolhas)
-    btn_z.pack(pady=5)
+
+    btn_z3 = tk.Button(janela, text="Adianto semanal", command=lambda: fazer_escolha("week_duty"), **estilo_escolhas)
+    btn_z3.pack(pady=5)
+
+    btn_z4 = tk.Button(janela, text="Desligar tudo", command=lambda: fazer_escolha("Desligar"), **estilo_escolhas)
+    btn_z4.pack(pady=5)
 
     janela.mainloop()
 
-ed_ini = 7161
+ed_ini = 7168
 qtd = 1
 
 if __name__ == "__main__":

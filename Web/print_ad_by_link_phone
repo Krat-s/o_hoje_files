@@ -22,13 +22,19 @@ from Web.modules.web_diver import wait_d
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
 
 
-def print_task(adon_link, adon_name_folder, gif=None):
+def print_task_phone(adon_link, adon_name_folder, gif=None):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")
+    print(f"📅 data: {screen_date}")
+
     chrome_options = Options()
-    chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument("--disable-notifications")
-    chrome_options.add_argument("--no-sandbox")
+    mobile_emulation = {
+    "deviceName": "iPhone 14 Pro"
+    }
+    chrome_options.add_experimental_option(
+    "mobileEmulation",
+    mobile_emulation
+    )
 
     try:
         driver = webdriver.Chrome(options=chrome_options)
@@ -109,36 +115,36 @@ def print_task(adon_link, adon_name_folder, gif=None):
 
 # ------n8n trigger
 def run_print_ad(ad=None, folder=None):
-    print_task(ad, folder)
+    print_task_phone(ad, folder)
 
 
 # ------------------manual trigger 
-def auto_print_by_link_all_ads(gif=None):
+def auto_prints_all_ads(gif=None):
     '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
     if cfg.ad_1_pi != None:
-        print_task(cfg.ad_1_link, cfg.ad_1_folder, gif)
+        print_task_phone(cfg.ad_1_link, cfg.ad_1_folder, gif)
 
     if cfg.ad_2_pi != None:
-        print_task(cfg.ad_2_link, cfg.ad_2_folder, gif)
+        print_task_phone(cfg.ad_2_link, cfg.ad_2_folder, gif)
 
     if cfg.ad_3_pi != None:
-        print_task(cfg.ad_3_link, cfg.ad_3_folder, gif)
+        print_task_phone(cfg.ad_3_link, cfg.ad_3_folder, gif)
 
     if cfg.ad_4_pi != None:
-        print_task(cfg.ad_4_link, cfg.ad_4_folder, gif)
+        print_task_phone(cfg.ad_4_link, cfg.ad_4_folder, gif)
 
     if cfg.ad_alt_pi != None:
         print('Printando anúncio alternativo...')
         time.sleep(60* 6)
-        print_task(cfg.ad_alt_link, cfg.ad_alt_folder, gif)
+        print_task_phone(cfg.ad_alt_link, cfg.ad_alt_folder, gif)
         time.sleep(60)
-        print_task(cfg.ad_alt_link, f'{cfg.ad_alt_folder}_retry', gif)
+        print_task_phone(cfg.ad_alt_link, f'{cfg.ad_alt_folder}_retry', gif)
 
 
 
 if __name__ == "__main__":
     print('Print ad rodando...')
   
-    # auto_print_by_link_all_ads()
-    print_task(cfg.ad_4_link, cfg.ad_4_folder)
+    # auto_prints_all_ads()
+    # print_task_phone(cfg.ad_4_link, cfg.ad_4_folder)
     print('Print ad finalizado.')

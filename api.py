@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from Web.print_ad import run_print_ad
+from Web.print_ad_by_selector import run_print_ad
 import config.settings.settings as cfg # temporary
 
 app = FastAPI()
@@ -8,6 +8,5 @@ app = FastAPI()
 def print_ad():
     run_print_ad(cfg.ad_2, cfg.ad_2_folder)
     print('Ad printed susssccessfully')
-    return {"message": "Ad printed successfully"}V290    2020
-    V10 20
+    return {"message": "Ad printed successfully"}
     
