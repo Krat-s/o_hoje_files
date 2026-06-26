@@ -3020,3 +3020,680 @@ Stacktrace:
 2026-06-24,23:30:31,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
 2026-06-25,16:50:22,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-06-25,16:50:44,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-06-25,21:59:44,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-06-25,22:02:09,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-06-25,22:04:33,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-06-25,22:06:58,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-06-25,22:09:23,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-06-25,22:11:48,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-06-25,22:14:13,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-06-25,22:16:37,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-06-25,22:19:02,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-06-25,23:07:50,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-06-25,23:22:32,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-06-25,23:22:47,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:23:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:23:12,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:23:27,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:23:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:23:51,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:24:06,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:24:20,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:24:30,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:24:45,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:24:59,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:25:09,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:25:25,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:25:39,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:25:49,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:26:04,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:26:14,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:26:29,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:26:43,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:26:53,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:27:08,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:27:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:27:33,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:27:48,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:28:02,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:28:12,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:28:27,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:28:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:28:51,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:29:06,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:29:20,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:29:31,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:29:46,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:29:56,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:30:11,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:30:25,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:30:35,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:30:50,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:31:04,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:31:14,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:31:29,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:31:43,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:31:54,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:32:09,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:32:23,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:32:33,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:32:48,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:33:02,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:33:12,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:33:27,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:33:38,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:33:53,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:34:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:34:17,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:34:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:34:46,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:34:56,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:35:11,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:35:25,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:35:35,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:35:50,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:36:04,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:36:15,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:36:30,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:36:44,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:36:54,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:37:09,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:37:19,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:37:34,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:37:48,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:37:59,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:38:14,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:38:28,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:38:38,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:38:53,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:39:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:39:17,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:39:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:39:46,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:39:56,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:40:11,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:40:26,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:40:36,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:40:51,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:41:01,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:41:16,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:41:30,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:41:40,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:41:55,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:42:09,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:42:20,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:42:35,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:42:49,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:42:59,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:43:14,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:43:28,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:43:38,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:43:53,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:44:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:44:17,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:44:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:44:43,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:44:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:45:12,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:45:22,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:45:37,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:45:51,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:46:01,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:46:16,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:46:30,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:46:41,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:46:56,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:47:10,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:47:20,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:47:35,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:47:49,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:47:59,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:48:14,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:48:24,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:48:39,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:48:54,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:49:04,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:49:19,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:49:33,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:49:43,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:49:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:50:12,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:50:22,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:50:37,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:50:51,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:51:02,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:51:17,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:51:31,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:51:41,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:51:56,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:52:06,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:52:21,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:52:35,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:52:45,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:53:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:53:15,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:53:25,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:53:40,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:53:54,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:54:04,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:54:19,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:54:33,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:54:43,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:54:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:55:12,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:55:23,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:55:38,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:55:48,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:56:03,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:56:17,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:56:27,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:56:42,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:56:56,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:57:07,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:57:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:57:36,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:57:46,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:58:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:58:15,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:58:25,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:58:40,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:58:54,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:59:04,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:59:19,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:59:30,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-25,23:59:45,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-25,23:59:59,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:00:09,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:00:24,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:00:38,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:00:48,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:01:03,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:01:17,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:01:28,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:01:43,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:01:57,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:02:07,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:02:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:02:36,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:02:46,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:03:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:03:11,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:03:26,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:03:40,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:03:51,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:04:06,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:04:20,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:04:30,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:04:45,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:04:59,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:05:09,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:05:24,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:05:38,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:05:49,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:06:04,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:06:18,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:06:28,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:06:43,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:06:53,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:07:08,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:07:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:07:32,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:07:47,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:08:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:08:12,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:08:27,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:08:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:08:51,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:09:06,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:09:20,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:09:30,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:09:45,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:09:59,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:10:10,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:10:25,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:10:35,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:10:50,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:11:04,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:11:14,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:11:29,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:11:43,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:11:53,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:12:08,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:12:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:12:33,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:12:48,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:13:02,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:13:12,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:13:27,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:13:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:13:51,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:14:06,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:14:17,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:14:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:14:46,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:14:56,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:15:11,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:15:25,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:15:35,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:15:50,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:16:04,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:16:14,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:16:29,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:16:44,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:16:54,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:17:09,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:17:23,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:17:33,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:17:48,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:17:58,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:18:13,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:18:27,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:18:38,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:18:53,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:19:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:19:17,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:19:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:19:46,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:19:56,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:20:11,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:20:25,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:20:35,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:20:50,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:21:05,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:21:15,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:21:30,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:21:40,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:21:55,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:22:09,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:22:19,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:22:34,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:22:48,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:22:59,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:23:14,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:23:28,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:23:38,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:23:53,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:24:07,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:24:17,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:24:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:24:46,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:24:57,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:25:12,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:25:22,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:25:37,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:25:51,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:26:01,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:26:16,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:26:30,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:26:40,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:26:55,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:27:10,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:27:20,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:27:35,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:27:49,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:27:59,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:28:14,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:28:28,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:28:38,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:28:53,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:29:04,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:29:19,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:29:33,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:29:43,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:29:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:30:12,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:30:22,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:30:37,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:30:51,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:31:01,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:31:16,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:31:31,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:31:41,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:31:56,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:32:10,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:32:20,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:32:35,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:32:45,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:33:00,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:33:14,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:33:25,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:33:40,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:33:54,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:34:04,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:34:19,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:34:33,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:34:43,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:34:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:35:12,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:35:22,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:35:38,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:35:52,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:36:02,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:36:17,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:36:27,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:36:42,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:36:56,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:37:06,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:37:21,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:37:35,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:37:46,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:38:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:38:15,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:38:25,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:38:40,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:38:54,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:39:04,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:39:19,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:39:33,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:39:43,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:39:59,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:40:09,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:40:24,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:40:38,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:40:48,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:41:03,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:41:17,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:41:27,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:41:42,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:41:56,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:42:07,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:42:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:42:36,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:42:46,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:43:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:43:15,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:43:25,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:43:40,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-06-26,00:43:50,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitore criados
+2026-06-26,00:43:59,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,00:45:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,00:45:46,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7168 - Segunda-feira criada
+2026-06-26,00:55:48,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.168, Segunda-feira criado"
+2026-06-26,00:55:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,00:57:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,00:57:44,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7169 - Terça-feira criada
+2026-06-26,01:07:46,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.169, Terça-feira criado"
+2026-06-26,01:07:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:09:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:09:41,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7170 - Quarta-feira criada
+2026-06-26,01:19:43,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.170, Quarta-feira criado"
+2026-06-26,01:19:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:21:07,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7171 - Quinta-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-06-26,01:31:09,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.171, Quinta-feira criado"
+2026-06-26,01:31:15,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:33:01,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:33:02,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7172 - Sexta-feira criada
+2026-06-26,01:43:04,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.172, Sexta-feira criado"
+2026-06-26,01:43:11,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:44:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:44:58,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7173-4 - Fim de semana criada
+2026-06-26,01:55:00,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.173-4, Fim de semana criado"
+2026-06-26,01:55:06,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:56:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,01:56:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7175 - Segunda-feira criada
+2026-06-26,02:06:56,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.175, Segunda-feira criado"
+2026-06-26,02:07:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:08:48,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:08:49,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7176 - Terça-feira criada
+2026-06-26,02:18:51,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.176, Terça-feira criado"
+2026-06-26,02:18:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:20:44,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:20:45,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7177 - Quarta-feira criada
+2026-06-26,02:30:47,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.177, Quarta-feira criado"
+2026-06-26,02:30:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:32:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:32:41,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7178 - Quinta-feira criada
+2026-06-26,02:42:43,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.178, Quinta-feira criado"
+2026-06-26,02:42:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:44:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:44:36,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7179 - Sexta-feira criada
+2026-06-26,02:54:38,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.179, Sexta-feira criado"
+2026-06-26,02:54:44,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:56:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,02:56:32,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7180-1 - Fim de semana criada
+2026-06-26,03:06:34,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.180-1, Fim de semana criado"
+2026-06-26,03:06:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:08:26,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:08:27,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7182 - Segunda-feira criada
+2026-06-26,03:18:30,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.182, Segunda-feira criado"
+2026-06-26,03:18:36,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:20:22,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:20:23,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7183 - Terça-feira criada
+2026-06-26,03:30:25,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.183, Terça-feira criado"
+2026-06-26,03:30:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:32:18,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:32:19,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7184 - Quarta-feira criada
+2026-06-26,03:42:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.184, Quarta-feira criado"
+2026-06-26,03:42:27,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:44:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:44:14,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7185 - Quinta-feira criada
+2026-06-26,03:54:17,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.185, Quinta-feira criado"
+2026-06-26,03:54:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:56:09,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,03:56:10,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7186 - Sexta-feira criada
+2026-06-26,04:06:12,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.186, Sexta-feira criado"
+2026-06-26,04:06:19,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:08:05,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:08:06,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7187-8 - Fim de semana criada
+2026-06-26,04:18:08,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.187-8, Fim de semana criado"
+2026-06-26,04:18:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:20:01,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:20:02,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7189 - Segunda-feira criada
+2026-06-26,04:30:04,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.189, Segunda-feira criado"
+2026-06-26,04:30:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:31:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:31:58,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7190 - Terça-feira criada
+2026-06-26,04:42:00,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.190, Terça-feira criado"
+2026-06-26,04:42:06,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:43:52,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:43:53,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7191 - Quarta-feira criada
+2026-06-26,04:53:55,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.191, Quarta-feira criado"
+2026-06-26,04:54:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:55:48,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,04:55:49,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7192 - Quinta-feira criada
+2026-06-26,05:05:51,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.192, Quinta-feira criado"
+2026-06-26,05:05:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:07:44,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:07:45,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7193 - Sexta-feira criada
+2026-06-26,05:17:47,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.193, Sexta-feira criado"
+2026-06-26,05:17:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:19:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:19:41,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7194-5 - Fim de semana criada
+2026-06-26,05:29:43,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.194-5, Fim de semana criado"
+2026-06-26,05:29:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:31:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:31:36,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7196 - Segunda-feira criada
+2026-06-26,05:41:39,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.196, Segunda-feira criado"
+2026-06-26,05:41:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:43:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:43:32,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7197 - Terça-feira criada
+2026-06-26,05:53:34,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.197, Terça-feira criado"
+2026-06-26,05:53:41,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:55:27,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,05:55:28,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7198 - Quarta-feira criada
+2026-06-26,06:05:30,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.198, Quarta-feira criado"
+2026-06-26,06:05:36,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:07:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:07:24,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7199 - Quinta-feira criada
+2026-06-26,06:17:26,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.199, Quinta-feira criado"
+2026-06-26,06:17:32,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:19:18,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:19:19,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7200 - Sexta-feira criada
+2026-06-26,06:29:22,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.200, Sexta-feira criado"
+2026-06-26,06:29:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:31:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:31:15,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7201-2 - Fim de semana criada
+2026-06-26,06:41:18,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.201-2, Fim de semana criado"
+2026-06-26,06:41:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:43:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:43:11,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7203 - Segunda-feira criada
+2026-06-26,06:53:13,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.203, Segunda-feira criado"
+2026-06-26,06:53:20,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:55:06,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,06:55:07,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7204 - Terça-feira criada
+2026-06-26,07:05:09,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.204, Terça-feira criado"
+2026-06-26,07:05:15,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:07:02,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:07:03,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7205 - Quarta-feira criada
+2026-06-26,07:17:05,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.205, Quarta-feira criado"
+2026-06-26,07:17:11,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:18:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:18:59,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7206 - Quinta-feira criada
+2026-06-26,07:29:01,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.206, Quinta-feira criado"
+2026-06-26,07:29:07,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:30:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:30:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7207 - Sexta-feira criada
+2026-06-26,07:40:56,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.207, Sexta-feira criado"
+2026-06-26,07:41:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:42:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:42:50,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7208-9 - Fim de semana criada
+2026-06-26,07:52:52,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.208-9, Fim de semana criado"
+2026-06-26,07:52:59,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:54:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,07:54:46,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7210 - Segunda-feira criada
+2026-06-26,08:04:48,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.210, Segunda-feira criado"
+2026-06-26,08:04:54,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:06:41,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:06:42,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7211 - Terça-feira criada
+2026-06-26,08:16:44,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.211, Terça-feira criado"
+2026-06-26,08:16:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:18:36,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:18:37,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7212 - Quarta-feira criada
+2026-06-26,08:28:40,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.212, Quarta-feira criado"
+2026-06-26,08:28:46,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:30:32,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:30:33,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7213 - Quinta-feira criada
+2026-06-26,08:40:35,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.213, Quinta-feira criado"
+2026-06-26,08:40:42,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:42:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:42:29,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7214 - Sexta-feira criada
+2026-06-26,08:52:31,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.214, Sexta-feira criado"
+2026-06-26,08:52:38,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:54:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,08:54:25,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7215-6 - Fim de semana criada
+2026-06-26,09:04:27,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.215-6, Fim de semana criado"
+2026-06-26,09:04:33,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:06:20,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:06:21,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7217 - Segunda-feira criada
+2026-06-26,09:16:23,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.217, Segunda-feira criado"
+2026-06-26,09:16:29,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:18:15,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:18:16,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7218 - Terça-feira criada
+2026-06-26,09:28:19,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.218, Terça-feira criado"
+2026-06-26,09:28:25,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:30:11,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:30:12,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7219 - Quarta-feira criada
+2026-06-26,09:40:14,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.219, Quarta-feira criado"
+2026-06-26,09:40:21,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:42:07,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:42:08,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7220 - Quinta-feira criada
+2026-06-26,09:52:10,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.220, Quinta-feira criado"
+2026-06-26,09:52:16,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:54:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,09:54:04,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7221 - Sexta-feira criada
+2026-06-26,10:04:06,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.221, Sexta-feira criado"
+2026-06-26,10:04:12,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:05:58,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:06:00,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7222-3 - Fim de semana criada
+2026-06-26,10:16:02,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.222-3, Fim de semana criado"
+2026-06-26,10:16:08,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:17:54,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:17:55,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7224 - Segunda-feira criada
+2026-06-26,10:27:58,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.224, Segunda-feira criado"
+2026-06-26,10:28:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:29:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:29:51,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7225 - Terça-feira criada
+2026-06-26,10:39:53,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.225, Terça-feira criado"
+2026-06-26,10:40:00,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:41:46,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:41:47,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7226 - Quarta-feira criada
+2026-06-26,10:51:49,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.226, Quarta-feira criado"
+2026-06-26,10:51:55,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:53:42,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,10:53:43,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7227 - Quinta-feira criada
+2026-06-26,11:03:45,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.227, Quinta-feira criado"
+2026-06-26,11:03:51,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:05:37,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:05:38,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7228 - Sexta-feira criada
+2026-06-26,11:15:41,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.228, Sexta-feira criado"
+2026-06-26,11:15:47,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:17:33,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:17:34,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7229-30 - Fim de semana criada
+2026-06-26,11:27:37,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.229-30, Fim de semana criado"
+2026-06-26,11:27:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:29:29,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:29:30,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7231 - Segunda-feira criada
+2026-06-26,11:39:32,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.231, Segunda-feira criado"
+2026-06-26,11:39:39,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:41:25,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:41:26,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7232 - Terça-feira criada
+2026-06-26,11:51:28,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.232, Terça-feira criado"
+2026-06-26,11:51:34,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:53:21,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,11:53:22,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7233 - Quarta-feira criada
+2026-06-26,12:03:24,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.233, Quarta-feira criado"
+2026-06-26,12:03:30,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:05:17,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:05:18,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7234 - Quinta-feira criada
+2026-06-26,12:15:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.234, Quinta-feira criado"
+2026-06-26,12:15:26,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:17:12,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:17:13,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7235 - Sexta-feira criada
+2026-06-26,12:27:16,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.235, Sexta-feira criado"
+2026-06-26,12:27:22,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:29:08,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:29:09,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7236-7 - Fim de semana criada
+2026-06-26,12:39:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.236-7, Fim de semana criado"
+2026-06-26,12:39:18,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:41:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:41:05,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7238 - Segunda-feira criada
+2026-06-26,12:51:07,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.238, Segunda-feira criado"
+2026-06-26,12:51:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:53:00,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,12:53:01,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7239 - Terça-feira criada
+2026-06-26,13:03:03,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.239, Terça-feira criado"
+2026-06-26,13:03:09,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:04:55,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:04:56,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7240 - Quarta-feira criada
+2026-06-26,13:14:59,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.240, Quarta-feira criado"
+2026-06-26,13:15:05,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:16:51,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:16:52,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7241 - Quinta-feira criada
+2026-06-26,13:26:54,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.241, Quinta-feira criado"
+2026-06-26,13:27:01,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:28:47,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:28:48,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7242 - Sexta-feira criada
+2026-06-26,13:38:50,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.242, Sexta-feira criado"
+2026-06-26,13:38:56,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:40:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:40:44,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7243-4 - Fim de semana criada
+2026-06-26,13:50:46,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.243-4, Fim de semana criado"
+2026-06-26,13:50:52,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:52:39,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,13:52:40,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7245 - Segunda-feira criada
+2026-06-26,14:02:42,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.245, Segunda-feira criado"
+2026-06-26,14:02:48,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:04:34,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:04:35,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7246 - Terça-feira criada
+2026-06-26,14:14:38,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.246, Terça-feira criado"
+2026-06-26,14:14:44,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:16:30,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:16:31,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7247 - Quarta-feira criada
+2026-06-26,14:26:33,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.247, Quarta-feira criado"
+2026-06-26,14:26:40,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:28:26,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:28:27,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7248 - Quinta-feira criada
+2026-06-26,14:38:29,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.248, Quinta-feira criado"
+2026-06-26,14:38:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:40:22,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:40:23,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7249 - Sexta-feira criada
+2026-06-26,14:50:25,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.249, Sexta-feira criado"
+2026-06-26,14:50:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:52:17,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,14:52:18,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7250-1 - Fim de semana criada
+2026-06-26,15:02:21,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.250-1, Fim de semana criado"
+2026-06-26,15:02:27,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,15:04:13,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,15:04:14,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7252 - Segunda-feira criada
+2026-06-26,15:14:16,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.252, Segunda-feira criado"
+2026-06-26,15:14:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder

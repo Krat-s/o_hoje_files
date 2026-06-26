@@ -89,9 +89,10 @@ def all_in_one_():
             auto_print_by_link_()
         elif opcao == "week_duty":
             janela.destroy()
-            qtd = pg.prompt("Quantas edições deseja adiantar?")
-            auto_drafts_(ed_ini, qtd)
-            auto_billhead_editions_(ed_ini, qtd)
+            sem = pg.prompt("Quantas edições deseja adiantar?")
+            semanal = qtd + int(sem) * 7
+            auto_drafts_(ed_ini, int(semanal))
+            auto_billhead_editions_(ed_ini, int(semanal))
             time.sleep(1)
         elif opcao == "Desligar":
             janela.destroy()
