@@ -3697,3 +3697,4 @@ Stacktrace:
 2026-06-26,15:04:14,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7252 - Segunda-feira criada
 2026-06-26,15:14:16,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.252, Segunda-feira criado"
 2026-06-26,15:14:23,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-06-26,19:11:17,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
