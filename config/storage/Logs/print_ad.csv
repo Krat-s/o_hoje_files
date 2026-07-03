@@ -1104,3 +1104,50 @@ Stacktrace:
 2026-06-28,16:49:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-06-29,18:16:38,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-06-30,23:31:39,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-02,18:46:30,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff613903fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff613904000+14980]
+	chromedriver!(No symbol) [0x7ff61344793d]
+	chromedriver!(No symbol) [0x7ff6134a1aad]
+	chromedriver!(No symbol) [0x7ff6134a1dac]
+	chromedriver!(No symbol) [0x7ff6134f27d7]
+	chromedriver!(No symbol) [0x7ff6134ef39b]
+	chromedriver!(No symbol) [0x7ff61349401c]
+	chromedriver!(No symbol) [0x7ff613494f43]
+	chromedriver!GetHandleVerifier [0x7ff613ee7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff613ee1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff613f07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff613921dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff61392a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff61390d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff61390d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6138f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffbcbe7e957+17]
+	ntdll!RtlUserThreadStart [0x7ffbcdf07c1c+2c]
+"
+2026-07-02,18:46:34,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-02,18:49:24,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff613903fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff613904000+14980]
+	chromedriver!(No symbol) [0x7ff61344793d]
+	chromedriver!(No symbol) [0x7ff6134a1aad]
+	chromedriver!(No symbol) [0x7ff6134a1dac]
+	chromedriver!(No symbol) [0x7ff6134f27d7]
+	chromedriver!(No symbol) [0x7ff6134ef39b]
+	chromedriver!(No symbol) [0x7ff61349401c]
+	chromedriver!(No symbol) [0x7ff613494f43]
+	chromedriver!GetHandleVerifier [0x7ff613ee7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff613ee1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff613f07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff613921dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff61392a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff61390d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff61390d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6138f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffbcbe7e957+17]
+	ntdll!RtlUserThreadStart [0x7ffbcdf07c1c+2c]
+"
+2026-07-02,18:49:29,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-02,18:53:45,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

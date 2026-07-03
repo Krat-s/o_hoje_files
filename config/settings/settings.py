@@ -88,12 +88,12 @@ ad_2_pi = None
 ad_2_client = ''
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
-ad_2_link = 'a[href*="https://www.luziania.go.gov.br/"]'
+ad_2_link = 'a[href*="https://www.goiania.go.leg.br/"]'
 
 
 # addon Halfpage (03 a 30)
 # ad_3_pi = None
-ad_3_pi = 40347
+ad_3_pi = None
 ad_3_client = 'GOV'
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
 ad_3 = "div:nth-child(2) img[alt='Publicidade']"
@@ -101,11 +101,11 @@ ad_3_link = "iframe[src*='B35895622.448422967']"
 
 
 # addon Middle retangle (quadrado?)
-ad_4_pi = None
+ad_4_pi = 40676
 ad_4_client = 'Câmara de Goiânia'
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_link = 'img[src*="https:"]'
+ad_4_link = 'a[href*="https://www.goiania.go.leg.br/"]'
 
 #alt addon (when have two ads from the same localization)
 ad_alt_pi = None

@@ -3819,3 +3819,59 @@ Stacktrace:
 2026-07-02,03:14:39,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
 2026-07-02,03:14:40,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7187-8 - Fim de semana criada
 2026-07-02,03:24:42,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.187-8, Fim de semana criado"
+2026-07-02,18:46:30,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff613903fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff613904000+14980]
+	chromedriver!(No symbol) [0x7ff61344793d]
+	chromedriver!(No symbol) [0x7ff6134a1aad]
+	chromedriver!(No symbol) [0x7ff6134a1dac]
+	chromedriver!(No symbol) [0x7ff6134f27d7]
+	chromedriver!(No symbol) [0x7ff6134ef39b]
+	chromedriver!(No symbol) [0x7ff61349401c]
+	chromedriver!(No symbol) [0x7ff613494f43]
+	chromedriver!GetHandleVerifier [0x7ff613ee7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff613ee1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff613f07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff613921dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff61392a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff61390d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff61390d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6138f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffbcbe7e957+17]
+	ntdll!RtlUserThreadStart [0x7ffbcdf07c1c+2c]
+"
+2026-07-02,18:46:34,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-02,18:49:24,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff613903fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff613904000+14980]
+	chromedriver!(No symbol) [0x7ff61344793d]
+	chromedriver!(No symbol) [0x7ff6134a1aad]
+	chromedriver!(No symbol) [0x7ff6134a1dac]
+	chromedriver!(No symbol) [0x7ff6134f27d7]
+	chromedriver!(No symbol) [0x7ff6134ef39b]
+	chromedriver!(No symbol) [0x7ff61349401c]
+	chromedriver!(No symbol) [0x7ff613494f43]
+	chromedriver!GetHandleVerifier [0x7ff613ee7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff613ee1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff613f07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff613921dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff61392a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff61390d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff61390d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6138f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffbcbe7e957+17]
+	ntdll!RtlUserThreadStart [0x7ffbcdf07c1c+2c]
+"
+2026-07-02,18:49:29,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-02,18:53:45,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-02,23:18:30,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-07-02,23:20:55,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-07-02,23:23:20,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-07-02,23:25:45,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-07-02,23:28:09,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-07-02,23:30:34,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-07-02,23:32:59,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-07-02,23:35:24,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-07-02,23:37:48,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
