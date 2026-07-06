@@ -140,7 +140,6 @@ def auto_prints_all_ads(gif=None):
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-  
-    # auto_print_by_link_all_ads()
-    print_task(cfg.ad_4_link, cfg.ad_4_folder)
+    time.sleep(60 * 60 * 2)
+    auto_prints_all_ads()
     print('Print ad finalizado.')

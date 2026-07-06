@@ -90,7 +90,7 @@ def all_in_one_():
         elif opcao == "week_duty":
             janela.destroy()
             sem = pg.prompt("Quantas edições deseja adiantar?")
-            semanal = qtd + int(sem) * 7
+            semanal = int(sem) * 7
             auto_drafts_(ed_ini, int(semanal))
             auto_billhead_editions_(ed_ini, int(semanal))
             time.sleep(1)
