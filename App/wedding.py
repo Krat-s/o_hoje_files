@@ -12,7 +12,7 @@ sys.path.append(raiz_projeto)
 
 import config.utils as utl
 import config.core.data_edition_sync as sy_de
-import App.modulos_quark.utils_quark as utlq
+import App.Modulos_quark.utils_quark as utlq
 from config.file_manager import take_file
 from config.storage.Logs.logs import log
 
