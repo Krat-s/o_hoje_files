@@ -136,6 +136,4 @@ qtd = 3
 
 if __name__ == "__main__":
     print('All in one executando...')
-    all_in_one_()290    20
-    V10 20
-    
+    all_in_one_()
