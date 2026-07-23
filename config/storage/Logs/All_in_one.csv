@@ -4866,3 +4866,75 @@ Stacktrace:
 2026-07-21,23:25:35,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
 2026-07-21,23:28:00,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
 2026-07-21,23:30:25,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-07-22,00:20:18,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,00:22:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,00:22:05,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7189 - Segunda-feira criada
+2026-07-22,00:32:07,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.189, Segunda-feira criado"
+2026-07-22,00:32:11,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,00:33:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,00:33:58,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7190 - Terça-feira criada
+2026-07-22,00:44:00,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.190, Terça-feira criado"
+2026-07-22,00:44:04,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,00:45:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,00:45:51,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7191 - Quarta-feira criada
+2026-07-22,00:55:53,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.191, Quarta-feira criado"
+2026-07-22,00:55:57,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,00:57:43,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,00:57:44,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7192 - Quinta-feira criada
+2026-07-22,01:07:46,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.192, Quinta-feira criado"
+2026-07-22,01:07:50,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:09:36,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:09:37,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7193 - Sexta-feira criada
+2026-07-22,01:19:39,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.193, Sexta-feira criado"
+2026-07-22,01:19:42,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:21:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:21:29,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7194-5 - Fim de semana criada
+2026-07-22,01:31:31,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.194-5, Fim de semana criado"
+2026-07-22,01:31:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:33:21,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:33:22,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7196 - Segunda-feira criada
+2026-07-22,01:43:24,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.196, Segunda-feira criado"
+2026-07-22,01:43:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:45:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:45:15,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7197 - Terça-feira criada
+2026-07-22,01:55:17,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.197, Terça-feira criado"
+2026-07-22,01:55:21,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:57:07,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,01:57:08,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7198 - Quarta-feira criada
+2026-07-22,02:07:10,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.198, Quarta-feira criado"
+2026-07-22,02:07:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:09:00,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:09:01,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7199 - Quinta-feira criada
+2026-07-22,02:19:03,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.199, Quinta-feira criado"
+2026-07-22,02:19:07,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:20:53,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:20:54,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7200 - Sexta-feira criada
+2026-07-22,02:30:56,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.200, Sexta-feira criado"
+2026-07-22,02:31:00,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:32:46,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:32:47,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7201-2 - Fim de semana criada
+2026-07-22,02:42:49,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.201-2, Fim de semana criado"
+2026-07-22,02:42:52,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:44:38,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:44:39,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7203 - Segunda-feira criada
+2026-07-22,02:54:42,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.203, Segunda-feira criado"
+2026-07-22,02:54:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:56:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,02:56:32,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7204 - Terça-feira criada
+2026-07-22,03:06:34,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.204, Terça-feira criado"
+2026-07-22,03:06:38,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,03:08:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,03:08:25,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7205 - Quarta-feira criada
+2026-07-22,03:18:27,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.205, Quarta-feira criado"
+2026-07-22,03:18:31,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,03:20:17,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,03:20:18,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7206 - Quinta-feira criada
+2026-07-22,03:30:20,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.206, Quinta-feira criado"
+2026-07-22,03:30:24,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,03:32:10,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,03:32:11,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7207 - Sexta-feira criada
+2026-07-22,03:42:13,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.207, Sexta-feira criado"
+2026-07-22,03:42:17,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,03:44:03,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-07-22,03:44:04,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7208-9 - Fim de semana criada
+2026-07-22,03:54:06,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.208-9, Fim de semana criado"
