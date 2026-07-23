@@ -117,8 +117,8 @@ def all_in_one_():
     btn_t = tk.Button(janela, text="Rascunhos no Gmail", command=lambda: fazer_escolha("Rascunhos"), **estilo_escolhas)
     btn_t.pack(pady=5)
 
-    btn_y = tk.Button(janela, text="Print de anúncios", command=lambda: fazer_escolha("Print"), **estilo_escolhas)
-    btn_y.pack(pady=5)
+    # btn_y = tk.Button(janela, text="Print de anúncios", command=lambda: fazer_escolha("Print"), **estilo_escolhas)
+    # btn_y.pack(pady=5)
 
     btn_z2 = tk.Button(janela, text="Print de anúncio por link", command=lambda: fazer_escolha("print por link"), **estilo_escolhas)
     btn_z2.pack(pady=5)

@@ -20,7 +20,7 @@ CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
 CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\00 - Auto-prints'
+CAMINHO_PRINTS = r'\\192.168.1.249\comercial\COMERCIAL\PRINTS\00 - Auto-prints'
 
 
 # ------------------------------------------------------------------------- Tempos de espera
@@ -93,14 +93,14 @@ ad_2_link = 'a[href*="https://www.goiania.go.leg.br/"]'
 
 # addon Halfpage (03 a 30)
 # ad_3_pi = None
-ad_3_pi = None
-ad_3_client = 'GOV'
+ad_3_pi = 40994
+ad_3_client = 'EQUATORIAL'
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
 ad_3 = "div:nth-child(2) img[alt='Publicidade']"
-ad_3_link = "iframe[src*='B35895622.448422967']"
+# ad_3_link = "iframe[src*='B35895622.448422967']"
+ad_3_link = 'a[href*="https://trabalhometroequatorialgo.com.br/?periodo=Tri+1+2026"]'
 
-
-# addon Middle retangle (quadrado?)
+# addon Middle retangle (?)
 ad_4_pi = 40676
 ad_4_client = 'Câmara de Goiânia'
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
