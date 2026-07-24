@@ -145,6 +145,6 @@ def auto_prints_all_ads(gif=None):
 if __name__ == "__main__":
     print('Print ad rodando...')
   
-    # auto_prints_all_ads()
+    auto_prints_all_ads()
     # print_task_phone(cfg.ad_4_link, cfg.ad_4_folder)
     print('Print ad finalizado.')
