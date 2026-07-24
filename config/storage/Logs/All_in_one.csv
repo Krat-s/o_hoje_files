@@ -4998,3 +4998,27 @@ Stacktrace:
 2026-07-24,00:27:55,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
 2026-07-24,00:30:20,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
 2026-07-24,00:32:45,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-07-24,02:10:53,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-24,02:11:09,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff77f370d25+155a5]
+	chromedriver!GetHandleVerifier [0x7ff77f370d80+15600]
+	chromedriver!(No symbol) [0x7ff77eec594d]
+	chromedriver!(No symbol) [0x7ff77ef208e9]
+	chromedriver!(No symbol) [0x7ff77ef20bec]
+	chromedriver!(No symbol) [0x7ff77ef71437]
+	chromedriver!(No symbol) [0x7ff77ef6e01b]
+	chromedriver!(No symbol) [0x7ff77ef12e6c]
+	chromedriver!(No symbol) [0x7ff77ef13d93]
+	chromedriver!GetHandleVerifier [0x7ff77f956431+5facb1]
+	chromedriver!GetHandleVerifier [0x7ff77f950a9b+5f531b]
+	chromedriver!GetHandleVerifier [0x7ff77f975865+61a0e5]
+	chromedriver!GetHandleVerifier [0x7ff77f38dace+3234e]
+	chromedriver!GetHandleVerifier [0x7ff77f39661c+3ae9c]
+	chromedriver!GetHandleVerifier [0x7ff77f37ab74+1f3f4]
+	chromedriver!GetHandleVerifier [0x7ff77f37ad04+1f584]
+	chromedriver!GetHandleVerifier [0x7ff77f35d9d7+2257]
+	KERNEL32!BaseThreadInitThunk [0x7ffcf762e957+17]
+	ntdll!RtlUserThreadStart [0x7ffcf884ad6c+2c]
+"
+2026-07-24,02:11:13,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
