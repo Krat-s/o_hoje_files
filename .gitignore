@@ -25,7 +25,6 @@ build/
 .env
 *.ini
 *.cfg
-*.toml
 
 # VSCode
 .vscode/
