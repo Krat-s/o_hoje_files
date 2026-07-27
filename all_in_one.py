@@ -131,8 +131,8 @@ def all_in_one_():
 
     janela.mainloop()
 
-ed_ini = 7189
-qtd = 3
+ed_ini = 7196
+qtd = 2
 
 if __name__ == "__main__":
     print('All in one executando...')
