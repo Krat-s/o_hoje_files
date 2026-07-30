@@ -100,7 +100,7 @@ ad_3 = "div:nth-child(2) img[alt='Publicidade']"
 ad_3_link = 'a[href*="https://trabalhometroequatorialgo.com.br/?periodo=Tri+1+2026"]'
 
 # addon Middle retangle (?)
-ad_4_pi = 40676
+ad_4_pi = None
 ad_4_client = 'Câmara de Goiânia'
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  

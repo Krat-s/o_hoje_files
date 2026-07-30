@@ -1394,3 +1394,30 @@ Stacktrace:
 	ntdll!RtlUserThreadStart [0x7ffffcd0ad6c+2c]
 "
 2026-07-29,16:19:01,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-30,15:36:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-30,15:36:48,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-30,15:36:52,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=150.0.7871.187); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6aab80d25+155a5]
+	chromedriver!GetHandleVerifier [0x7ff6aab80d80+15600]
+	chromedriver!(No symbol) [0x7ff6aa6d594d]
+	chromedriver!(No symbol) [0x7ff6aa6c1102]
+	chromedriver!(No symbol) [0x7ff6aa6e704c]
+	chromedriver!(No symbol) [0x7ff6aa760790]
+	chromedriver!(No symbol) [0x7ff6aa77d902]
+	chromedriver!(No symbol) [0x7ff6aa722e6c]
+	chromedriver!(No symbol) [0x7ff6aa723d93]
+	chromedriver!GetHandleVerifier [0x7ff6ab166431+5facb1]
+	chromedriver!GetHandleVerifier [0x7ff6ab160a9b+5f531b]
+	chromedriver!GetHandleVerifier [0x7ff6ab185865+61a0e5]
+	chromedriver!GetHandleVerifier [0x7ff6aab9dace+3234e]
+	chromedriver!GetHandleVerifier [0x7ff6aaba661c+3ae9c]
+	chromedriver!GetHandleVerifier [0x7ff6aab8ab74+1f3f4]
+	chromedriver!GetHandleVerifier [0x7ff6aab8ad04+1f584]
+	chromedriver!GetHandleVerifier [0x7ff6aab6d9d7+2257]
+	KERNEL32!BaseThreadInitThunk [0x7ff8c215e957+17]
+	ntdll!RtlUserThreadStart [0x7ff8c448ad6c+2c]
+"
+2026-07-30,15:36:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
