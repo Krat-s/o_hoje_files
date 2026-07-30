@@ -8,7 +8,6 @@ sys.path.append(raiz_projeto)
 
 from config.core import gen_randon_numbers as rn
 import config.core.data_edition_sync as sy_de
-from config.settings.settings_edition_request import edicao_inicial, total_edicoes, quantidade_repeticoes
 
 
 # ------------------------------------------------------------------------- Caminhos de rede
@@ -121,10 +120,6 @@ def stats():
     print("⚙️  Settings loaded ✔️")
     print(f".. Tamanho da tela: {pg.size()}")
     print(f".. Centro da tela: ({center_x}, {center_y})")
-    print(f".. Edição inicial: {edicao_inicial}")
-    print(f".. Quantidade de repetições: {quantidade_repeticoes}")
-    print(f".. Criando modelo de {total_edicoes} edições")
-    print(f".. Última edição: {total_edicoes + edicao_inicial}")
     print(".....")
 
 

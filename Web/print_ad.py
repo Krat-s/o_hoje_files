@@ -21,7 +21,6 @@ from Web.modules.web_diver import wait_d
 
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
 
-
 def print_task(adon_link, adon_name_folder, gif=None):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")

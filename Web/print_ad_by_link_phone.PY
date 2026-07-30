@@ -53,7 +53,7 @@ def print_task_phone(adon_link, adon_name_folder, gif=None):
     time.sleep(0.5)
 
     def button_print(adon_link):
-        print(f"🖨️ Imprimindo anúncio: {adon_name_folder}")
+        print(f"🖨️ print: {adon_name_folder}")
         ad = wait_d(driver, By.CSS_SELECTOR, adon_link)
 
         time.sleep(3)
@@ -79,7 +79,7 @@ def print_task_phone(adon_link, adon_name_folder, gif=None):
         fm.make_folder_print(adon_name_folder)
         
         if gif is not None:
-            fm.make_folder(f'frames - {adon_name_folder}', in_local=f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}")
+            fm.make_folder(f'frames - phone model - {adon_name_folder}', in_local=f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}")
             time.sleep(1)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 1.png")
             time.sleep(3.5)
@@ -89,7 +89,7 @@ def print_task_phone(adon_link, adon_name_folder, gif=None):
 
         else:
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
-            frames_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\frames"
+            frames_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\frames - phone model - {adon_name_folder}"
             os.makedirs(frames_folder, exist_ok=True)
             time.sleep(1.5)
             screenshot(f"{frames_folder}\\{screen_date} - frame 1.png")
