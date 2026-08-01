@@ -1421,3 +1421,4 @@ Stacktrace:
 	ntdll!RtlUserThreadStart [0x7ff8c448ad6c+2c]
 "
 2026-07-30,15:36:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-07-31,15:37:27,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
