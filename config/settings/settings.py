@@ -74,8 +74,7 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 
 # ------------------------------------------------------------------------- Prints settings
-# addon banner principal 40135
-# ad_1_pi = None 
+# addon banner principal
 ad_1_pi = None
 ad_1_client = ""
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
@@ -91,7 +90,6 @@ ad_2_link = 'a[href*="https://www.goiania.go.leg.br/"]'
 
 
 # addon Halfpage (03 a 30)
-# ad_3_pi = None
 ad_3_pi = 40994
 ad_3_client = 'EQUATORIAL'
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
@@ -100,11 +98,13 @@ ad_3 = "div:nth-child(2) img[alt='Publicidade']"
 ad_3_link = 'a[href*="https://trabalhometroequatorialgo.com.br/?periodo=Tri+1+2026"]'
 
 # addon Middle retangle (?)
-ad_4_pi = None
-ad_4_client = 'Câmara de Goiânia'
+ad_4_pi = 41112
+ad_4_client = 'CAMPANHA-OBRIGAADO-ADVOGADO'
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_link = 'a[href*="https://www.goiania.go.leg.br/"]'
+ad_4_link = 'a[href*="https://www.oabgo.org.br"]'
+# ad_4_link = 'img[src*="https://ohoje.com/wp-content/uploads/2026/07/Campanha_Obrigado_Advogado_O-Hoje_250x250.gif"]'
+
 
 #alt addon (when have two ads from the same localization)
 ad_alt_pi = None
