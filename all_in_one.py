@@ -4,7 +4,6 @@ import time
 from App import wedding as cm
 from App.billhead_editions import auto_billhead_editions
 from Mail.gmail import auto_drafts
-from Web.print_ad_by_selector import auto_print_all_ads
 from Web.print_ad import auto_prints_all_ads
 from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 # from Backup.shutdawns import sleep_computer
@@ -41,12 +40,6 @@ def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
 
 
 # 📌 ------------------------------------------ print ads
-def auto_print_():
-   try:
-       auto_print_all_ads()
-   except Exception as e:
-       print(f'Error printing ads: {e}')
-
 def auto_print_by_link_():
    try:
        auto_prints_all_ads()
@@ -81,10 +74,7 @@ def all_in_one_():
         elif opcao == "Rascunhos":
             auto_drafts_(ed_ini, qtd)
             janela.destroy()
-        elif opcao == "Print":
-            janela.destroy()
-            auto_print_()
-        elif opcao == "print por link":
+        elif opcao == "print de anuncios":
             janela.destroy()
             auto_print_by_link_()
         elif opcao == "week_duty":
