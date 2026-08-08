@@ -74,7 +74,7 @@ def all_in_one_():
         elif opcao == "Rascunhos":
             auto_drafts_(ed_ini, qtd)
             janela.destroy()
-        elif opcao == "print de anuncios":
+        elif opcao == "ad-print":
             janela.destroy()
             auto_print_by_link_()
         elif opcao == "week_duty":
@@ -107,10 +107,7 @@ def all_in_one_():
     btn_t = tk.Button(janela, text="Rascunhos no Gmail", command=lambda: fazer_escolha("Rascunhos"), **estilo_escolhas)
     btn_t.pack(pady=5)
 
-    # btn_y = tk.Button(janela, text="Print de anúncios", command=lambda: fazer_escolha("Print"), **estilo_escolhas)
-    # btn_y.pack(pady=5)
-
-    btn_z2 = tk.Button(janela, text="Print de anúncio por link", command=lambda: fazer_escolha("print por link"), **estilo_escolhas)
+    btn_z2 = tk.Button(janela, text="Print de anúncios", command=lambda: fazer_escolha("ad-print"), **estilo_escolhas)
     btn_z2.pack(pady=5)
 
     btn_z3 = tk.Button(janela, text="Adianto semanal", command=lambda: fazer_escolha("week_duty"), **estilo_escolhas)

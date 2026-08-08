@@ -82,11 +82,11 @@ ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']"
 ad_1_link = 'a[href*="https://ohoje.com/2026/05/22/brasil-acucareira-acelera-expansao-nacional-com-logistica-propria-e-operacao-24-horas/"]'
 
 # addon Width (rodapé?)
-ad_2_pi = None
-ad_2_client = ''
+ad_2_pi = 41180
+ad_2_client = 'PREF LUIZIÂNIA'
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
-ad_2_link = 'a[href*="https://www.goiania.go.leg.br/"]'
+ad_2_link = 'a[href*="https://www.luziania.go.gov.br/"]'
 
 
 # addon Halfpage (03 a 30)
