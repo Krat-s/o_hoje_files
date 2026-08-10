@@ -12,7 +12,7 @@ import config.core.data_edition_sync as desync
 from departments.editorial.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
 from config.file_manager import auto_folders
 from config.core.data_formatter import formatar_data
-from config.storage.Logs.logs import log
+from departments.logging.logs import log
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------
 pg.PAUSE = 0.5

@@ -12,7 +12,7 @@ main_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'
 raiz_projeto = sys.path.append(main_folder)
 
 from config.settings.settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
-from config.storage.Logs.logs import log
+from departments.logging.logs import log
 
 
 def wait_d(driver, by, value, timeout=10, clicavel=True):

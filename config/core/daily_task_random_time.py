@@ -3,7 +3,7 @@ import time
 import schedule
 
 from core.schedule_manager import start_daily_schedules
-from config.storage.Logs.logs import log
+from departments.logging.logs import log
 
 
 def daily_task_loop(task_function):

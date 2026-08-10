@@ -9,7 +9,7 @@ sys.path.append(raiz_projeto)
 
 from config.core.gen_randon_numbers import generate_hours
 from config.settings.settings import acessos_H1, acessos_H2, acessos_H3
-from config.storage.Logs.logs import log
+from departments.logging.logs import log
 
 
 

@@ -7,3 +7,5 @@ CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
 CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\00 - Auto-prints'
+
+WAYPOINT_EMAILS = r'\\192.168.1.249\comercial\PRINTS\00 - Auto-prints'

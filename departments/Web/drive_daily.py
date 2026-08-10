@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_path)
 
-from Web.modules.web_diver import wait_d
+from departments.Web.modules.web_diver import wait_d
 
 import pyautogui as pg
 import keyboard as kb

@@ -4,7 +4,7 @@ import time
 from departments.editorial import wedding as cm
 from departments.editorial.billhead_editions import auto_billhead_editions
 from departments.Mail.gmail import auto_drafts
-from Web.print_ad import auto_prints_all_ads
+from departments.Web.print_ad import auto_prints_all_ads
 from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 # from Backup.shutdawns import sleep_computer
     
@@ -94,7 +94,7 @@ def all_in_one_():
     janela.title("Kratos Api")
     janela.geometry("400x350")
     janela.configure(bg="#32395F")
-    janela.iconbitmap(r'App\archives\favicon.ico')
+    janela.iconbitmap(r'archives\favicon.ico')
 
     estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#12162B", "fg": "white", "width": 30, "borderwidth": 3, "relief": "raised"}
 

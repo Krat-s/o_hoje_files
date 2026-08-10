@@ -13,10 +13,10 @@ raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
 import config.settings.settings as cfg
-from config.storage.Logs.logs import log
+from departments.logging.logs import log
 from config.utils import max_windows
 import config.file_manager as fm
-from Web.modules.web_diver import wait_d
+from departments.Web.modules.web_diver import wait_d
 
 
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'

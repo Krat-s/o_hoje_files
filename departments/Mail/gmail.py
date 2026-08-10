@@ -10,7 +10,7 @@ sys.path.append(raiz_path)
 import config.settings.settings as cfg
 import config.utils as ut
 import config.core.data_edition_sync as desync
-from config.storage.Logs.logs import log
+from departments.logging.logs import log
 
 # ------------------------------------------------------------------------- Settings
 pg.PAUSE = 1
@@ -24,11 +24,7 @@ def take_receivers():
         time.sleep(1.2)
         pg.click(cfg.center_x, cfg.center_y)
         pg.hotkey('ctrl', 'o')
-        pg.write('Mail')
-        pg.press('enter')
-        pg.write('Archives')
-        pg.press('enter')
-        pg.write('emails_alterado')
+        pg.write('archives\\emails_alterado.csv')
         pg.press('down')
         pg.press('enter')
         time.sleep(0.5)
@@ -107,34 +103,34 @@ def send_for_graphic(edicao, parte):
 
 def auto_drafts(ed=None, qnt=None):
     take_receivers()
-    ut.open_software(cfg.opera)
+    # ut.open_software(cfg.opera)
 
-    if ed is None or qnt is None:
-        for info in desync.gerar_edicoes_formatadas():
-            ed = info.edicao_formatada
-            weekday = info.dia_semana_padrão 
-            if weekday == 1:
-                send_for_graphic(ed, "completo")
-                send_emails_to_readers(ed)
-                time.sleep(1)
-            else:
-                send_for_graphic(ed, "básico")
-                send_for_graphic(ed, "resto")
-                send_emails_to_readers(ed)
-                time.sleep(1)
-            print(weekday)
+    # if ed is None or qnt is None:
+    #     for info in desync.gerar_edicoes_formatadas():
+    #         ed = info.edicao_formatada
+    #         weekday = info.dia_semana_padrão 
+    #         if weekday == 1:
+    #             send_for_graphic(ed, "completo")
+    #             send_emails_to_readers(ed)
+    #             time.sleep(1)
+    #         else:
+    #             send_for_graphic(ed, "básico")
+    #             send_for_graphic(ed, "resto")
+    #             send_emails_to_readers(ed)
+    #             time.sleep(1)
+    #         print(weekday)
 
-    else:
-        for info in desync.gerar_edicoes_formatadas(ed, qnt):
+    # else:
+    #     for info in desync.gerar_edicoes_formatadas(ed, qnt):
 
-            ed = info.edicao_formatada
-            weekday = info.dia_semana_padrão
-            if weekday == 5:
-                send_for_graphic(ed, "completo")
-                send_emails_to_readers(ed)
-                time.sleep(1)
-            else:
-                send_for_graphic(ed, "básico")
-                send_for_graphic(ed, "resto")
-                send_emails_to_readers(ed)
-                time.sleep(1)
+    #         ed = info.edicao_formatada
+    #         weekday = info.dia_semana_padrão
+    #         if weekday == 5:
+    #             send_for_graphic(ed, "completo")
+    #             send_emails_to_readers(ed)
+    #             time.sleep(1)
+    #         else:
+    #             send_for_graphic(ed, "básico")
+    #             send_for_graphic(ed, "resto")
+    #             send_emails_to_readers(ed)
+    #             time.sleep(1)

@@ -11,7 +11,7 @@ sys.path.append(modulo_path)
 
 import config.settings.settings as cfg
 import config.utils as utl
-from config.storage.Logs.logs import log
+from departments.logging.logs import log
 import config.waits_checks as wc
 
 pg.PAUSE = 0.8
