@@ -8,9 +8,9 @@ from dataclasses import dataclass
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
-import App.modulos_quark.utils_quark as utlq
+import departments.editorial.modulos_quark.utils_quark as utlq
 
-from App.modulos_quark.utils_quark import close_page
+from departments.editorial.modulos_quark.utils_quark import close_page
 import config.settings.settings as cfg
 import config.utils as utl
 import config.core.data_edition_sync as desync

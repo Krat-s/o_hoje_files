@@ -12,7 +12,7 @@ import config.utils as utl
 import config.core.data_edition_sync as desync
 from config.storage.Logs.logs import log
 from config.file_manager import auto_folders
-from App.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
+from departments.editorial.billhead import aply_17, aply_1, auto_date_all_non_especial_pages
 from config.core.edition_info import EdicaoInfo
 from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 

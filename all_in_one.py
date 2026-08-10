@@ -1,9 +1,9 @@
 import pyautogui as pg
 import time
 
-from App import wedding as cm
-from App.billhead_editions import auto_billhead_editions
-from Mail.gmail import auto_drafts
+from departments.editorial import wedding as cm
+from departments.editorial.billhead_editions import auto_billhead_editions
+from departments.Mail.gmail import auto_drafts
 from Web.print_ad import auto_prints_all_ads
 from config.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 # from Backup.shutdawns import sleep_computer
