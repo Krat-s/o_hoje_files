@@ -114,7 +114,7 @@ def auto_marriage():
     janela.title("Casamento")
     janela.geometry("600x450")
     janela.configure(bg="#4B2A6A")
-    janela.iconbitmap(r'App\archives\favicon.ico')
+    janela.iconbitmap(r'archives\\favicon.ico')
 
     estilo_títulos = {"font": ("Helvetica", 19, "bold"), "bg": "#585858", "fg": "white", "width": 30, "borderwidth": 3, "relief": "solid"}
     estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858", "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
