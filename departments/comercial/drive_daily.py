@@ -10,14 +10,14 @@ from selenium.webdriver.chrome.options import Options
 raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_path)
 
-from departments.Web.modules.web_diver import wait_d
+from shared.automation.web_diver import wait_d
 
 import pyautogui as pg
 import keyboard as kb
-import config.utils as utl
-import config.settings.settings as cfg
-import config.core.data_edition_sync as sy_de
-import config.core.data_formatter as fd
+import shared.utils as utl
+import settings.settings.settings as cfg
+import shared.data_sync.data_edition_sync as sy_de
+import shared.data_sync.data_formatter as fd
 
 pg.PAUSE = 0.8
 pg.FAILSAFE = True

@@ -4,8 +4,8 @@ import pytesseract
 import threading
 
 import settings.settings as cfg
-import utils as utl
-from departments.logging.logs import log
+import shared.utils as utl
+from shared.logging.logs import log
 
 
 

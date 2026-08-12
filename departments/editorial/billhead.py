@@ -11,9 +11,9 @@ sys.path.append(modulo_path)
 import departments.editorial.modulos_quark.utils_quark as utlq
 
 from departments.editorial.modulos_quark.utils_quark import close_page
-import config.settings.settings as cfg
-import config.utils as utl
-import config.core.data_edition_sync as desync
+import settings.settings.settings as cfg
+import shared.utils as utl
+import shared.data_sync.data_edition_sync as desync
 from typing import Protocol
 
 # ---------------------------- CONFIGURAÇÕES ----------------------------

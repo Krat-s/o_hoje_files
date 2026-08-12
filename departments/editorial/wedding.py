@@ -10,11 +10,11 @@ from tkinter import messagebox
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-import config.utils as utl
-import config.core.data_edition_sync as sy_de
+import shared.utils as utl
+import shared.data_sync.data_edition_sync as sy_de
 import departments.editorial.modulos_quark.utils_quark as utlq
-from config.file_manager import take_file
-from departments.logging.logs import log
+from shared.file_manager import take_file
+from shared.logging.logs import log
 
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True

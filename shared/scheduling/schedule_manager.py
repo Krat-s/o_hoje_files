@@ -7,9 +7,9 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(raiz_projeto)
 
-from config.core.gen_randon_numbers import generate_hours
-from config.settings.settings import acessos_H1, acessos_H2, acessos_H3
-from departments.logging.logs import log
+from shared.gen_randon_numbers import generate_hours
+from settings.settings.settings import acessos_H1, acessos_H2, acessos_H3
+from shared.logging.logs import log
 
 
 

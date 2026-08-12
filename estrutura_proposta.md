@@ -6,7 +6,7 @@
 o_hoje_files/
 │
 ├── departments/
-│   ├── editorial/                      # era App/
+│   ├── editorial/
 │   │   ├── __init__.py
 │   │   ├── billhead.py
 │   │   ├── billhead_edition.py
@@ -15,20 +15,17 @@ o_hoje_files/
 │   │   ├── boot_assistance.py
 │   │   ├── wedding.py
 │   │   ├── wedding_exporting_pdf.py
-│   │   ├── modulos_quark/
-│   │   │   ├── __init__.py
-│   │   │   └── utils_quark.py
-│   │   └── tests/                      # era App/test/ (únicos testes reais do projeto)
-│   │       ├── runer_test.py
-│   │       ├── teste_billhead.py
-│   │       └── teste_billhead_editions.py
+│   │   └── modulos_quark/
+│   │       ├── __init__.py
+│   │       └── utils_quark.py
 │   │
-│   ├── comercial/                       # era Web/
+│   │
+│   ├── comercial/
 │   │   ├── __init__.py
 │   │   ├── drive_daily.py
 │   │   ├── print_ad.py
 │   │   ├── print_ad_by_selector.py
-│   │   ├── print_ad_by_link_phone.py    # renomeado: faltava a extensão .py
+│   │   ├── print_ad_by_link_phone.py
 │   │   └── bot_clicking/
 │   │       ├── __init__.py
 │   │       ├── boost_ad.py
@@ -53,7 +50,7 @@ o_hoje_files/
 │   │   ├── waits_checks.py              # era config/waits_checks.py
 │   │   ├── waits_tesseract.py           # era config/waits_tesseract.py
 │   │   ├── win_manager.py               # era config/settings/win_manager.py
-│   │   └── web_driver.py                # era Web/modules/web_diver.py (usado só no comercial hoje, mas é lib genérica de Selenium — sobe pra shared para os próximos departamentos reaproveitarem)
+│   │   └── web_driver.py                # era Web/modules/web_diver.py
 │   ├── data_sync/
 │   │   ├── data_edition_sync.py         # era config/core/data_edition_sync.py
 │   │   ├── data_formatter.py            # era config/core/data_formatter.py

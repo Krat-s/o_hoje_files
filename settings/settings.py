@@ -6,8 +6,8 @@ import pyautogui as pg
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(raiz_projeto)
 
-from config.core import gen_randon_numbers as rn
-import config.core.data_edition_sync as sy_de
+from shared import gen_randon_numbers as rn
+import shared.data_sync.data_edition_sync as sy_de
 
 
 # ------------------------------------------------------------------------- Caminhos de rede

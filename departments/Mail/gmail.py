@@ -7,10 +7,10 @@ import pyautogui as pg
 raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_path)
 
-import config.settings.settings as cfg
-import config.utils as ut
-import config.core.data_edition_sync as desync
-from departments.logging.logs import log
+import settings.settings.settings as cfg
+import shared.utils as ut
+import shared.data_sync.data_edition_sync as desync
+from shared.logging.logs import log
 
 # ------------------------------------------------------------------------- Settings
 pg.PAUSE = 1
