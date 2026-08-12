@@ -1,0 +1,2 @@
+data,hora,status,origem,função,message
+2026-08-11,22:41:23,INFO,logs.py,<module>,Iniciando o script.
