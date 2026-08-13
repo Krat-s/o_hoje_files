@@ -9,7 +9,7 @@ import time
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-import settings.settings.settings as cfg
+import settings.settings as cfg
 import shared.data_sync.data_edition_sync as sy_de
 from shared.automation.win_manager import check_windows
 

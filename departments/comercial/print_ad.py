@@ -12,7 +12,7 @@ import sys
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(raiz_projeto)
 
-import settings.settings.settings as cfg
+import settings.settings as cfg
 from shared.logging.logs import log
 from shared.utils import max_windows
 import shared.file_manager as fm

@@ -8,7 +8,7 @@ sys.path.append(raiz_projeto)
 
 from shared.data_sync.edition_formatter import gerar_edicoes, formatar_edicao, formatar_numero
 from shared.data_sync.data_formatter import formatar_data
-from settings.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
+from settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from shared.edition_info import EdicaoInfo
 
 # Base fixa para cálculo de data

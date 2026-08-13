@@ -5,7 +5,7 @@ from departments.editorial import wedding as cm
 from departments.editorial.billhead_editions import auto_billhead_editions
 from departments.mail.gmail import auto_drafts
 from departments.comercial.print_ad import auto_prints_all_ads
-from settings.settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
+from settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 # from Backup.shutdawns import sleep_computer
     
 import tkinter as tk
