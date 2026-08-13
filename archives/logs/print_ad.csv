@@ -1516,3 +1516,40 @@ Stacktrace:
 2026-08-12,18:57:22,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-08-12,18:57:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-08-12,18:57:59,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-08-13,15:57:39,ERRO,print_ad.py,print_task,"Falha ao iniciar ChromeDriver: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))"
+2026-08-13,15:58:13,ERRO,print_ad.py,print_task,Falha ao salvar imagem: screen grab failed
+2026-08-13,15:58:17,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-08-13,15:58:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-08-13,15:59:55,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: unknown error: cannot determine loading status
+from target frame detached: received Inspector.detached event
+  (Session info: chrome=151.0.7922.137)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6b03fabb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff6b03fac10+15210]
+	chromedriver!(No symbol) [0x7ff6aff25d6d]
+	chromedriver!(No symbol) [0x7ff6aff144a1]
+	chromedriver!(No symbol) [0x7ff6aff134af]
+	chromedriver!(No symbol) [0x7ff6aff12cbb]
+	chromedriver!(No symbol) [0x7ff6aff12971]
+	chromedriver!(No symbol) [0x7ff6aff10641]
+	chromedriver!(No symbol) [0x7ff6aff10f7f]
+	chromedriver!(No symbol) [0x7ff6aff20af4]
+	chromedriver!(No symbol) [0x7ff6aff36e87]
+	chromedriver!(No symbol) [0x7ff6aff3edea]
+	chromedriver!(No symbol) [0x7ff6aff11741]
+	chromedriver!(No symbol) [0x7ff6aff36660]
+	chromedriver!(No symbol) [0x7ff6affcef33]
+	chromedriver!(No symbol) [0x7ff6aff737cc]
+	chromedriver!(No symbol) [0x7ff6aff746f3]
+	chromedriver!GetHandleVerifier [0x7ff6b0a1b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff6b0a15ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff6b0a3bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff6b0418ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff6b042147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff6b0404d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff6b0404ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff6b03e7d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7fff3c0accb7+17]
+	ntdll!RtlUserThreadStart [0x7fff3c5ead6c+2c]
+"
+2026-08-13,15:59:59,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
