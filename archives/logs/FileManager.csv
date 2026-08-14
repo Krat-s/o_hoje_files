@@ -1,6 +1,0 @@
-data,hora,status,origem,função,message
-2026-08-13,18:43:38,SUCESSO,file_manager.py,auto_folders,Pasta 7210 - Segunda-feira criada
-2026-08-13,22:32:35,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
-2026-08-13,22:44:35,SUCESSO,file_manager.py,auto_folders,Pasta 7211 - Terça-feira criada
-2026-08-13,22:56:28,SUCESSO,file_manager.py,auto_folders,Pasta 7212 - Quarta-feira criada
-2026-08-13,23:08:21,SUCESSO,file_manager.py,auto_folders,Pasta 7213 - Quinta-feira criada

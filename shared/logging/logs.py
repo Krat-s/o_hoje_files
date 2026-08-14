@@ -18,7 +18,7 @@ def log(report_name_file, status, message=""):
         name_func = "unknown"
         name_arc = "unknown"
 
-    pasta_logs = os.path.join(os.path.dirname(__file__), "..", "..", 'archives', 'logs')
+    pasta_logs = os.path.join(os.path.dirname(__file__), "..", "..", 'storage', 'logs')
     os.makedirs(pasta_logs, exist_ok=True)
     caminho_arquivo = os.path.join(pasta_logs, f"{report_name_file}.csv")
 
