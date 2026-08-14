@@ -94,7 +94,7 @@ def all_in_one_():
     janela.title("Kratos Api")
     janela.geometry("400x350")
     janela.configure(bg="#32395F")
-    janela.iconbitmap(r'archives\\favicon.ico')
+    janela.iconbitmap(r'storage\\img\\favicon.ico')
 
     estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#12162B", "fg": "white", "width": 30, "borderwidth": 3, "relief": "raised"}
 

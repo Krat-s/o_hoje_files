@@ -6,7 +6,7 @@ import pyautogui as pg
 modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(modulo_path)
 
-import settings.settings.settings as cfg
+import settings.settings as cfg
 import shared.utils as utl
 import shared.data_sync.data_edition_sync as desync
 from departments.editorial.billhead import aply_17, aply_1, auto_date_all_non_especial_pages

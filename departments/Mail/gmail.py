@@ -24,7 +24,7 @@ def take_receivers():
         time.sleep(1.2)
         pg.click(cfg.center_x, cfg.center_y)
         pg.hotkey('ctrl', 'o')
-        pg.write('archives\\emails_alterado.csv')
+        pg.write('archives\\data\\emails_alterado.csv')
         pg.press('down')
         pg.press('enter')
         time.sleep(0.5)

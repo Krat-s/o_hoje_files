@@ -40,8 +40,3 @@ def log(report_name_file, status, message=""):
         if not file_exists:
             writer.writerow(cabecalho)
         writer.writerow(linha)
-
-try:
-    log("log_geral", "INFO", "Iniciando o script.")
-except Exception as e:
-    print(f'Error creating log: {e}')
