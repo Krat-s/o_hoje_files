@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-
 @dataclass
 class EdicaoInfo:
     edicao_sem_ponto: str

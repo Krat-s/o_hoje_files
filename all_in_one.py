@@ -46,6 +46,8 @@ def auto_print_by_link_():
    except Exception as e:
        print(f'Error printing ads by link: {e}')
 
+
+
 # from config.core import schedule_manager as sm
 # # 📌 ------------------------------------------ Sredule
 # def scredule_function_():
@@ -53,8 +55,6 @@ def auto_print_by_link_():
 #        sm.schedule_function(auto_prints_all_ads())
 #     except Exception as e:
 #        print(f'Error printing ads: {e}')
-
-# Importar aplicações
 # 📌 Drive Daily
 # 📌 billhead_variables
 # 📌 relatório

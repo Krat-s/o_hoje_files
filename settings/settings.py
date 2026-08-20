@@ -115,14 +115,5 @@ ad_alt_link = ''
 
 
 
-def stats():
-    print(".....")
-    print("⚙️  Settings loaded ✔️")
-    print(f".. Tamanho da tela: {pg.size()}")
-    print(f".. Centro da tela: ({center_x}, {center_y})")
-    print(".....")
-
-
 if __name__ == "__main__":
-    stats()
-    # print(sy_de.EDD)  
+    print(sy_de.EDD)  

@@ -48,7 +48,7 @@ def open_web_day_0():
     max_windows()
 
 
-def chose_suggestion(QTD=1, TEMPO=2):
+def choise_suggestion(QTD=1, TEMPO=2):
     time.sleep(0.2)
     pg.press('down', presses=QTD)
     time.sleep(0.2)

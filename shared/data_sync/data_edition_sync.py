@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 import os
 import sys
@@ -11,18 +11,19 @@ from shared.data_sync.data_formatter import formatar_data
 from settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from shared.edition_info import EdicaoInfo
 
-# Base fixa para cálculo de data
+# Fixed basis for date calculation
 EDICAO_BASE = 6496
 DATA_BASE = datetime(2024, 8, 26)  # Segunda-feira
-QUANTIDADE_POR_SEMANA = 5
 
-# Parâmetros padrão de geração
+# Default generation parameters
+QUANTIDADE_POR_SEMANA = 5
 REPETICOES_PADRAO = quantidade_repeticoes
 EDICAO_INI = edicao_inicial 
 
+
 def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     """
-    Retorna a data formatada para a edição informada
+    Returns the formatted date for the informed edition
     """
     if edi_numero < edi_inicial:
         raise ValueError("O número da edição não pode ser menor que a edição inicial.")
@@ -38,14 +39,14 @@ def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA
 
 def obter_edicao_por_data(data_alvo, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     """
-    Retorna a edição formatada para a data informada
+    Returns the edition formatted for the given date
     """
     if data_alvo < data_inicial:
         raise ValueError("A data não pode ser anterior à data inicial.")
 
     weekday = data_alvo.weekday() 
 
-    # 1) Fim de semana? retrocede até sexta e formata o range
+    #1) Weekend? go back to sixth and format the range
     if weekday >= 5:
         # quantos dias volto para chegar à sexta (4)
         days_to_friday = weekday - 4
@@ -133,10 +134,17 @@ def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_seman
 def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
 
+
+#### Date_fundation
+def calc_old(nasc):
+    h = date.today()
+    return h.year - nasc.year - ((h.month, h.day) < (nasc.month, nasc.day))
+
+
+enterprise_age = calc_old(date(2004, 4, 22))
 edicao_0 = obter_edicao_por_data(datetime.now() + timedelta(days=1))
 data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
 EDD = f"{edicao_0.replace('.', '')} - {data_0}"
-
 
 if __name__ == "__main__":
     teste1 = datetime.now() + timedelta(days=1)
@@ -144,4 +152,7 @@ if __name__ == "__main__":
     print(obter_edicao_por_data(teste1))
     # print(formatar_data(obter_data_por_edicao(teste2)))
     print('...')
+
+    # print(years_old3)
+    print(f'enterprise_age: {enterprise_age}')
     
