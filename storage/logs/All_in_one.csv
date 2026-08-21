@@ -5929,3 +5929,43 @@ Stacktrace:
 2026-08-20,17:32:31,ERRO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.217, Segunda-feira não criado. PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
 2026-08-20,17:52:39,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
 2026-08-20,17:54:30,ERRO,file_manager.py,auto_folders,FileManager-auto_folders: erro ao criar pasta: 7217 - Segunda-feira: Timeout aguardando condição: 'Specific folder is open'
+2026-08-20,18:55:22,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,18:57:07,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,18:57:08,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7217 - Segunda-feira criada
+2026-08-20,19:07:11,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.217, Segunda-feira criado"
+2026-08-20,19:07:14,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:21:12,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:22:38,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:22:39,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7217 - Segunda-feira criada
+2026-08-20,19:24:15,ERRO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.217, Segunda-feira não criado. PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-08-20,19:24:17,ERRO,file_manager.py,open_main_folder,"FileManager-auto_folders: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-08-20,19:24:18,ERRO,file_manager.py,auto_folders,"FileManager-auto_folders: erro ao criar pasta: 7218 - Terça-feira: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-08-20,19:24:22,ERRO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.218, Terça-feira não criado. PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-08-20,19:24:28,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:24:41,ERRO,file_manager.py,auto_folders,"FileManager-auto_folders: erro ao criar pasta: 7219 - Quarta-feira: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-08-20,19:28:09,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:29:35,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:29:36,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7224 - Segunda-feira criada
+2026-08-20,19:40:14,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.224, Segunda-feira criado"
+2026-08-20,19:40:19,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:41:45,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:41:46,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7225 - Terça-feira criada
+2026-08-20,19:52:24,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.225, Terça-feira criado"
+2026-08-20,19:52:29,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:53:55,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,19:53:56,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7226 - Quarta-feira criada
+2026-08-20,20:04:34,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.226, Quarta-feira criado"
+2026-08-20,20:04:39,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,20:06:05,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,20:06:06,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7227 - Quinta-feira criada
+2026-08-20,20:16:43,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.227, Quinta-feira criado"
+2026-08-20,20:16:49,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,20:18:15,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,20:18:16,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7228 - Sexta-feira criada
+2026-08-20,20:28:53,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.228, Sexta-feira criado"
+2026-08-20,20:28:59,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,20:30:25,SUCESSO,file_manager.py,open_main_folder,FileManager: Open_main_folder
+2026-08-20,20:30:26,SUCESSO,file_manager.py,auto_folders,FileManager-auto_folders: pasta 7229-30 - Fim de semana criada
+2026-08-20,20:41:04,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.229-30, Fim de semana criado"
+2026-08-20,23:32:44,ERRO,wedding.py,wedding,Erro ao casar as páginas 13_16: module 'shared.utils' has no attribute 'chose_suggestion'
+2026-08-20,23:33:10,ERRO,wedding.py,wedding,Erro ao casar as páginas 14_15: module 'shared.utils' has no attribute 'chose_suggestion'

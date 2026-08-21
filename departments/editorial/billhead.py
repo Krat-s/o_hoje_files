@@ -45,6 +45,7 @@ def auto_pages(numero, info: EdicaoQuarkLike):
     pg.write(str(numero))
     utl.choise_suggestion(1, cfg.TIMETOOPEN)
     auto_date(info)
+    time.sleep(2)
 
 def aply_1(info: EdicaoQuarkLike):
     utl.press_repeat('esc', 3)
@@ -61,6 +62,7 @@ def aply_1(info: EdicaoQuarkLike):
     pg.press('backspace')
     kb.write(f"|  {info.data_formatada}")
     utlq.close_page()
+    time.sleep(2)
 
 def aply_17(info: EdicaoQuarkLike):
     time.sleep(2)
@@ -83,14 +85,13 @@ def aply_17(info: EdicaoQuarkLike):
     time.sleep(4)
     utl.press_repeat('esc', 3)
     utlq.take_tool("v")
-    pg.hotkey('ctrl', '0')
-    time.sleep(1)
     pg.click(cfg.x_edicao_17, cfg.y_edicao_17)
     utlq.take_tool("t")
     utl.press_repeat('t', 4)
     pg.hotkey('ctrl', 'a')
     kb.write(f"Ano {desync.enterprise_age} - nº {info.edicao_formatada}")
     utlq.close_page()
+    time.sleep(2)
 
 def auto_date_all_non_especial_pages(info: EdicaoQuarkLike):
     for i in range(20, 1, -1):

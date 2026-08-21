@@ -1083,3 +1083,5 @@ data,hora,status,origem,função,message
 2026-08-19,23:19:33,ERRO,wedding.py,wedding,Erro ao casar as páginas 4_5: module 'shared.utils' has no attribute 'chose_suggestion'
 2026-08-19,23:19:58,ERRO,wedding.py,wedding,Erro ao casar as páginas 2_7: module 'shared.utils' has no attribute 'chose_suggestion'
 2026-08-19,23:20:22,ERRO,wedding.py,wedding,Erro ao casar as páginas 1_8: module 'shared.utils' has no attribute 'chose_suggestion'
+2026-08-20,23:32:44,ERRO,wedding.py,wedding,Erro ao casar as páginas 13_16: module 'shared.utils' has no attribute 'chose_suggestion'
+2026-08-20,23:33:10,ERRO,wedding.py,wedding,Erro ao casar as páginas 14_15: module 'shared.utils' has no attribute 'chose_suggestion'

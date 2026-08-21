@@ -52,8 +52,8 @@ button_ok_qk = 829, 385
 
 x_data = 850
 y_data = 259
-x_edicao_17 = 560
-y_edicao_17 = 121
+x_edicao_17 = 1631
+y_edicao_17 = 260
 x_edicao_capa = 346
 y_edicao_capa = 448
 
@@ -82,7 +82,7 @@ ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']"
 ad_1_link = 'a[href*="https://ohoje.com/2026/05/22/brasil-acucareira-acelera-expansao-nacional-com-logistica-propria-e-operacao-24-horas/"]'
 
 # addon Width (rodapé?)
-ad_2_pi = 41180
+ad_2_pi = None
 ad_2_client = 'PREF LUIZIÂNIA'
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
@@ -98,7 +98,7 @@ ad_3 = "div:nth-child(2) img[alt='Publicidade']"
 ad_3_link = 'a[href*="https://trabalhometroequatorialgo.com.br/?periodo=Tri+1+2026"]'
 
 # addon Middle retangle (?)
-ad_4_pi = 41112
+ad_4_pi = None
 ad_4_client = 'CAMPANHA-OBRIGAADO-ADVOGADO'
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  

@@ -405,3 +405,13 @@ data,hora,status,origem,função,message
 2026-08-15,04:05:44,SUCESSO,file_manager.py,auto_folders,Pasta 7243-4 - Fim de semana criada
 2026-08-20,17:27:33,SUCESSO,file_manager.py,auto_folders,Pasta 7217 - Segunda-feira criada
 2026-08-20,17:54:30,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-08-20,18:57:08,SUCESSO,file_manager.py,auto_folders,Pasta 7217 - Segunda-feira criada
+2026-08-20,19:22:39,SUCESSO,file_manager.py,auto_folders,Pasta 7217 - Segunda-feira criada
+2026-08-20,19:24:18,ERRO,file_manager.py,auto_folders,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-08-20,19:24:41,ERRO,file_manager.py,auto_folders,"Erro ao criar pasta: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-08-20,19:29:36,SUCESSO,file_manager.py,auto_folders,Pasta 7224 - Segunda-feira criada
+2026-08-20,19:41:46,SUCESSO,file_manager.py,auto_folders,Pasta 7225 - Terça-feira criada
+2026-08-20,19:53:56,SUCESSO,file_manager.py,auto_folders,Pasta 7226 - Quarta-feira criada
+2026-08-20,20:06:06,SUCESSO,file_manager.py,auto_folders,Pasta 7227 - Quinta-feira criada
+2026-08-20,20:18:16,SUCESSO,file_manager.py,auto_folders,Pasta 7228 - Sexta-feira criada
+2026-08-20,20:30:26,SUCESSO,file_manager.py,auto_folders,Pasta 7229-30 - Fim de semana criada

@@ -24,7 +24,6 @@ def open_folder(endereco):
     os.startfile(endereco)
     wc.wait_explorer_open()
     utl.max_windows()
-    time.sleep(0.5)
 
 
 def go_to(específico=None):
@@ -40,16 +39,11 @@ def make_folder(name_folder, in_local=None):
     if in_local:
         go_to(in_local)
     utl.max_windows()
-    time.sleep(1)
     pg.click(cfg.center_x, cfg.center_y)
     pg.hotkey('ctrl', 'shift', 'n')
-    time.sleep(1)
     kb.write(name_folder)
-    time.sleep(1)
     pg.press('enter')
-    time.sleep(1)
     pg.press('s')
-    time.sleep(0.5)
     pg.press('esc', presses=3)
     pg.press('f5')
     time.sleep(2.5)
@@ -77,17 +71,15 @@ def take_file(arquivo):
 def copy_files(caminho, folder_name, _from=None):
     if _from:
         go_to(_from)
-    time.sleep(0.5)
     utl.max_windows()
     pg.click(cfg.center_x, cfg.center_y + 100)
     pg.hotkey('ctrl', 'a')
     pg.hotkey('ctrl', 'c')
-    time.sleep(0.5)
     go_to(f"{caminho}\\{folder_name}")
     wc.wait_folder_open(folder_name, timeout=20)
     pg.hotkey('ctrl', 'v')
     pg.hotkey('alt', 's')
-    time.sleep(4)
+    time.sleep(3)
 
 
 def get_explorer_texts(janela) -> list[str]:

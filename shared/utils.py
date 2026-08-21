@@ -30,6 +30,7 @@ def max_windows():
     kb.press_and_release('alt+space')
     time.sleep(0.2)
     kb.press_and_release('x')
+    time.sleep(0.5)
 
 
 def open_software(numero):
