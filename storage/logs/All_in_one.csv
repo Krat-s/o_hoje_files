@@ -5969,3 +5969,4 @@ Stacktrace:
 2026-08-20,20:41:04,SUCESSO,billhead_editions.py,auto_billhead_editions,"billhead_editions: modelos da edição 7.229-30, Fim de semana criado"
 2026-08-20,23:32:44,ERRO,wedding.py,wedding,Erro ao casar as páginas 13_16: module 'shared.utils' has no attribute 'chose_suggestion'
 2026-08-20,23:33:10,ERRO,wedding.py,wedding,Erro ao casar as páginas 14_15: module 'shared.utils' has no attribute 'chose_suggestion'
+2026-08-21,16:24:59,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
