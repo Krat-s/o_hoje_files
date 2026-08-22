@@ -88,7 +88,7 @@ def process_page(page_number, is_even):
     time.sleep(0.2)
     pg.write(str(page_number))
     time.sleep(0.2)
-    utl.chose_suggestion()
+    utl.choise_suggestion()
     # utl.error_check() make a try exept here, make sure tha way be function normaly in another machine
     time.sleep(cfg.TIMETOOPEN)
     cg_close()
