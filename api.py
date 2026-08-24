@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from Web.print_ad_by_selector import run_print_ad
-import settings.settings.settings as cfg # temporary
+from departments.commercial.print_ad import run_print_ad
+import settings.settings as cfg # temporary
 
 app = FastAPI()
 
