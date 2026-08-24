@@ -5970,3 +5970,12 @@ Stacktrace:
 2026-08-20,23:32:44,ERRO,wedding.py,wedding,Erro ao casar as páginas 13_16: module 'shared.utils' has no attribute 'chose_suggestion'
 2026-08-20,23:33:10,ERRO,wedding.py,wedding,Erro ao casar as páginas 14_15: module 'shared.utils' has no attribute 'chose_suggestion'
 2026-08-21,16:24:59,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-08-21,22:17:17,SUCESSO,wedding.py,wedding,Paginas 13_16 casadas
+2026-08-21,22:19:42,SUCESSO,wedding.py,wedding,Paginas 14_15 casadas
+2026-08-21,22:22:07,SUCESSO,wedding.py,wedding,Paginas 17_20 casadas
+2026-08-21,22:24:32,SUCESSO,wedding.py,wedding,Paginas 10_11 casadas
+2026-08-21,22:26:57,SUCESSO,wedding.py,wedding,Paginas 9_12 casadas
+2026-08-21,22:29:22,SUCESSO,wedding.py,wedding,Paginas 3_6 casadas
+2026-08-21,22:31:47,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
+2026-08-21,22:34:12,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
+2026-08-22,16:45:23,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
