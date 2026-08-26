@@ -15,8 +15,8 @@ from shared.automation.win_manager import check_windows
 
 
 
-def press_repeat(key, n):
-    for _ in range(n):
+def press_repeat(key, presses):
+    for _ in range(presses):
         pg.press(key)
 
 
