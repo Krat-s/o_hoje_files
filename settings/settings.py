@@ -67,7 +67,9 @@ acessos_H1 = 1
 acessos_H2 = 2
 acessos_H3 = 1
 
+
 url_target = "https://ohoje.com"
+url_target_intagram = "https://www.instagram.com"
 botão_1 = str("ads-728 mx-auto") #principal
 botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé

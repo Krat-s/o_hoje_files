@@ -1,3 +1,4 @@
+import pyautogui as pg
 import time
 from datetime import datetime
 
@@ -21,7 +22,7 @@ from shared.automation.web_diver import wait_d
 
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
 
-def print_task(adon_link, adon_name_folder, gif=None):
+def print_task(adon_link, adon_name_folder, gif=None, insta=None):
     """Abre o navegador, clica no botão e registra o resultado."""
     print(f"🌐 Acessando {cfg.url_target}")
     print(f"📅 data: {screen_date}")
@@ -61,14 +62,7 @@ def print_task(adon_link, adon_name_folder, gif=None):
             window.scrollTo({top: y});
             """, ad
         )
-        # print(driver.execute_script("""
-        # const r = arguments[0].getBoundingClientRect();
-        # return {
-        #     top: r.top,
-        #     bottom: r.bottom,
-        #     pageY: window.pageYOffset
-        # };
-        # """, ad))
+
         time.sleep(2)
 
         fm.make_folder_print(adon_name_folder)
@@ -81,6 +75,18 @@ def print_task(adon_link, adon_name_folder, gif=None):
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 2.png")
             time.sleep(3.5)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 3.png")
+
+        elif insta is not None:
+            time.sleep(0.3)
+            pg.hotkey('ctrl', 'l')
+            time.sleep(0.3)
+            pg.write(f"{cfg.url_target_intagram}/{insta}")
+            time.sleep(0.3)
+            pg.press('enter')
+            time.sleep(2)
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
+
+
 
         else:
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
