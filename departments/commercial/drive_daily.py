@@ -15,7 +15,7 @@ from shared.automation.web_diver import wait_d
 import pyautogui as pg
 import keyboard as kb
 import shared.utils as utl
-import settings.settings.settings as cfg
+import settings.settings as cfg
 import shared.data_sync.data_edition_sync as sy_de
 import shared.data_sync.data_formatter as fd
 

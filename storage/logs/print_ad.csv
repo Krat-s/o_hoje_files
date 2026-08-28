@@ -1759,3 +1759,32 @@ Stacktrace:
 2026-08-20,17:20:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-08-21,16:24:59,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-08-22,16:45:23,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-08-28,16:37:01,ERRO,print_ad.py,print_task,Falha ao salvar imagem: screen grab failed
+2026-08-28,16:37:06,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-08-28,16:42:14,ERRO,print_ad.py,print_task,Falha ao salvar imagem: screen grab failed
+2026-08-28,16:42:18,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-08-28,16:43:30,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=151.0.7922.174); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff68929abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff68929ac10+15210]
+	chromedriver!(No symbol) [0x7ff688dc5d6d]
+	chromedriver!(No symbol) [0x7ff688db15c2]
+	chromedriver!(No symbol) [0x7ff688dd74a1]
+	chromedriver!(No symbol) [0x7ff688e51320]
+	chromedriver!(No symbol) [0x7ff688e6e4f2]
+	chromedriver!(No symbol) [0x7ff688e137cc]
+	chromedriver!(No symbol) [0x7ff688e146f3]
+	chromedriver!GetHandleVerifier [0x7ff6898bb79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff6898b5ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff6898dbcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff6892b8ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff6892c147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff6892a4d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff6892a4ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff689287d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffa2dbbccb7+17]
+	ntdll!RtlUserThreadStart [0x7ffa2ec6ad6c+2c]
+"
+2026-08-28,16:44:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

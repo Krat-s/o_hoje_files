@@ -76,16 +76,17 @@ def print_task(adon_link, adon_name_folder, gif=None, insta=None):
             time.sleep(3.5)
             screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 3.png")
 
-        elif insta is not None:
-            time.sleep(0.3)
+
+        if insta is not None:
+            print('intagram print')
+            time.sleep(.5)
             pg.hotkey('ctrl', 'l')
-            time.sleep(0.3)
+            time.sleep(.5)
             pg.write(f"{cfg.url_target_intagram}/{insta}")
-            time.sleep(0.3)
+            time.sleep(.3)
             pg.press('enter')
             time.sleep(2)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
-
+            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\Instagram - {screen_date}.png")
 
 
         else:
@@ -120,19 +121,19 @@ def run_print_ad(ad=None, folder=None):
 
 
 # ------------------manual trigger 
-def auto_prints_all_ads(gif=None):
+def auto_prints_all_ads(gif=None, insta=None):
     '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
     if cfg.ad_1_pi != None:
-        print_task(cfg.ad_1_link, cfg.ad_1_folder, gif)
+        print_task(cfg.ad_1_link, cfg.ad_1_folder, gif, insta)
 
     if cfg.ad_2_pi != None:
-        print_task(cfg.ad_2_link, cfg.ad_2_folder, gif)
+        print_task(cfg.ad_2_link, cfg.ad_2_folder, gif, insta)
 
     if cfg.ad_3_pi != None:
-        print_task(cfg.ad_3_link, cfg.ad_3_folder, gif)
+        print_task(cfg.ad_3_link, cfg.ad_3_folder, gif, insta)
 
     if cfg.ad_4_pi != None:
-        print_task(cfg.ad_4_link, cfg.ad_4_folder, gif)
+        print_task(cfg.ad_4_link, cfg.ad_4_folder, gif, insta)
 
     if cfg.ad_alt_pi != None:
         print('Printando anúncio alternativo...')

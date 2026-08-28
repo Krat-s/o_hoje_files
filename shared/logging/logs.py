@@ -1,6 +1,6 @@
 import os
 import csv
-import inspect  # Importe o módulo inspect
+import inspect
 from datetime import datetime
 
 def log(report_name_file, status, message=""):
