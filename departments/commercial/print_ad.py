@@ -146,6 +146,7 @@ def auto_prints_all_ads(gif=None, insta=None):
 
 if __name__ == "__main__":
     print('Print ad rodando...')
-    time.sleep(60 * 60 * 3)
-    auto_prints_all_ads()
-    print('Print ad finalizado.')
+    # time.sleep(60 * 60 * 3)
+    # auto_prints_all_ads()
+    # print('Print ad finalizado.')
+    check = input("Deseja executar a função de print de anúncios? (s/n): ")

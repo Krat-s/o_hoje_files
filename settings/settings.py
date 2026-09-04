@@ -69,7 +69,7 @@ acessos_H3 = 1
 
 
 url_target = "https://ohoje.com"
-url_target_intagram = "https://www.instagram.com"
+url_target_intagram = "https://www.instagram.com/g.ohoje/"
 botão_1 = str("ads-728 mx-auto") #principal
 botão_2 = "p-3 pb-0" #lateral
 botão_3 = "placement_1026570_0_i" #banner rodapé
@@ -77,11 +77,11 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 
 # ------------------------------------------------------------------------- Prints settings
 # addon banner principal
-ad_1_pi = 41401
+ad_1_pi = 99999
 ad_1_client = "Ministério da Cultura"
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
-ad_1_link = 'a[href*="https://bileto.sympla.com.br/event/123942/d/400367"]'
+ad_1_link = 'a[href*="https://ohoje.com/2026/09/03/cerrado-galeria-oferece-oficina-gratuita-para-jovens-neste-sabado-em-goiania-saiba-como-participar/"]'
 ad_1_insta = 'p/DcjYJk3p7yz/'
 
 # addon Width (rodapé?)
