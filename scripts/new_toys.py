@@ -49,5 +49,8 @@ region_png_qk_ldg = 493, 304, 123, 111
 # Exemplo de uso
 print("inicio")
 # wait_until_text_disappears("Loading pages", region=(500, 300, 600, 200))
-wait_until_text_appears("ABOBRINHA", region=region_png_qk_ldg)
+
+# wait_until_text_appears("ABOBRINHA", region=region_png_qk_ldg)
+
+
 
