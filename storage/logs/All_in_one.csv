@@ -6178,3 +6178,45 @@ Stacktrace:
 2026-09-03,23:05:09,SUCESSO,wedding.py,wedding,Paginas 4_5 casadas
 2026-09-03,23:07:34,SUCESSO,wedding.py,wedding,Paginas 2_7 casadas
 2026-09-03,23:09:59,SUCESSO,wedding.py,wedding,Paginas 1_8 casadas
+2026-09-04,16:57:44,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,16:59:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:23:15,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:35:20,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-09-04,17:35:24,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:35:52,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
+2026-09-04,17:35:56,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:41:50,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: [Errno 2] No such file or directory: ""\\\\192.168.1.249\\comercial\\COMERCIAL\\PRINTS\\00 - Auto-prints\\99999 - Principal - Ministério da Cultura\\'gifs'\\2026 - 09 - 04 - frame 1.png"""
+2026-09-04,17:41:55,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:43:07,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:44:36,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: [Errno 2] No such file or directory: ""\\\\192.168.1.249\\comercial\\COMERCIAL\\PRINTS\\00 - Auto-prints\\99999 - Principal - Ministério da Cultura\\'gifs'\\2026 - 09 - 04 - gif 1.png"""
+2026-09-04,17:44:41,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:45:24,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: [Errno 2] No such file or directory: ""\\\\192.168.1.249\\comercial\\COMERCIAL\\PRINTS\\00 - Auto-prints\\99999 - Principal - Ministério da Cultura\\'gifs'\\2026 - 09 - 04 - gif 1.png"""
+2026-09-04,17:45:28,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:49:53,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:52:05,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:53:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-04,17:53:54,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=152.0.7977.82); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff63450e035+5745]
+	chromedriver!(No symbol) [0x7ff634436a90]
+	chromedriver!(No symbol) [0x7ff634265d7d]
+	chromedriver!(No symbol) [0x7ff634251632]
+	chromedriver!(No symbol) [0x7ff6342773ac]
+	chromedriver!(No symbol) [0x7ff6342f0bd0]
+	chromedriver!(No symbol) [0x7ff63430dddd]
+	chromedriver!(No symbol) [0x7ff6342b2e4b]
+	chromedriver!(No symbol) [0x7ff6342b3d83]
+	chromedriver!GetHandleVerifier [0x7ff634922f8b+41a69b]
+	chromedriver!GetHandleVerifier [0x7ff634950132+447842]
+	chromedriver!GetHandleVerifier [0x7ff634943e7e+43b58e]
+	chromedriver!GetHandleVerifier [0x7ff634603f5e+fb66e]
+	chromedriver!(No symbol) [0x7ff63444419c]
+	chromedriver!(No symbol) [0x7ff63443fdd4]
+	chromedriver!(No symbol) [0x7ff63443ff64]
+	chromedriver!(No symbol) [0x7ff63442a91c]
+	KERNEL32!BaseThreadInitThunk [0x7fff1810ccb7+17]
+	ntdll!RtlUserThreadStart [0x7fff1968ad6c+2c]
+"
+2026-09-04,17:53:58,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

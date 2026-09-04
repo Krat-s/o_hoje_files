@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 import os
 import sys
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(raiz_projeto)
 
 import settings.settings as cfg
@@ -68,37 +68,41 @@ def print_task(adon_link, adon_name_folder, gif=None, insta=None):
         fm.make_folder_print(adon_name_folder)
         
         if gif is not None:
-            fm.make_folder(f'frames - {adon_name_folder}', in_local=f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}")
-            time.sleep(1)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 1.png")
-            time.sleep(3.5)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 2.png")
-            time.sleep(3.5)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date} - frame 3.png")
+            print('gif print')
+            # gifs_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\gifs"
+            # os.makedirs(gifs_folder, exist_ok=True)
+            # time.sleep(1.5)
+            # screenshot(f"{gifs_folder}\\{screen_date} - gif 1.png")
+            # time.sleep(3.5)
+            # screenshot(f"{gifs_folder}\\{screen_date} - gif 2.png")
+            # time.sleep(3.5)
+            # screenshot(f"{gifs_folder}\\{screen_date} - gif 3.png")
 
 
         if insta is not None:
             print('intagram print')
-            time.sleep(.5)
-            pg.hotkey('ctrl', 'l')
-            time.sleep(.5)
-            pg.write(f"{cfg.url_target_intagram}/{insta}")
-            time.sleep(.3)
-            pg.press('enter')
-            time.sleep(2)
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\Instagram - {screen_date}.png")
+            # time.sleep(.5)
+            # pg.hotkey('ctrl', 'l')
+            # time.sleep(.5)
+            # pg.write(f"{cfg.url_target_intagram}")
+            # time.sleep(.5)
+            # pg.press('enter')
+            # time.sleep(3)
+            # screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\Instagram - {screen_date}.png")
 
 
         else:
-            screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
-            frames_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\frames"
-            os.makedirs(frames_folder, exist_ok=True)
-            time.sleep(1.5)
-            screenshot(f"{frames_folder}\\{screen_date} - frame 1.png")
-            time.sleep(1.5)
-            screenshot(f"{frames_folder}\\{screen_date} - frame 2.png")
-            time.sleep(1.5)
-            screenshot(f"{frames_folder}\\{screen_date} - frame 3.png")           
+            print('print normal')
+            # screenshot(f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\{screen_date}.png")
+
+            # frames_folder = f"{cfg.CAMINHO_PRINTS}\\{adon_name_folder}\\frames"
+            # os.makedirs(frames_folder, exist_ok=True)
+            # time.sleep(1)
+            # screenshot(f"{frames_folder}\\{screen_date} - frame 1.png")
+            # time.sleep(.5)
+            # screenshot(f"{frames_folder}\\{screen_date} - frame 2.png")
+            # time.sleep(.5)
+            # screenshot(f"{frames_folder}\\{screen_date} - frame 3.png")           
     
     try:
         button_print(adon_link)
@@ -124,29 +128,28 @@ def run_print_ad(ad=None, folder=None):
 def auto_prints_all_ads(gif=None, insta=None):
     '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
     if cfg.ad_1_pi != None:
-        print_task(cfg.ad_1_link, cfg.ad_1_folder, gif, insta)
+        print_task(cfg.ad_1_link, cfg.ad_1_folder, cfg.gif_1)
 
     if cfg.ad_2_pi != None:
-        print_task(cfg.ad_2_link, cfg.ad_2_folder, gif, insta)
+        print_task(cfg.ad_2_link, cfg.ad_2_folder, cfg.gif_2, insta)
 
     if cfg.ad_3_pi != None:
-        print_task(cfg.ad_3_link, cfg.ad_3_folder, gif, insta)
+        print_task(cfg.ad_3_link, cfg.ad_3_folder, cfg.gif_3, insta)
 
     if cfg.ad_4_pi != None:
-        print_task(cfg.ad_4_link, cfg.ad_4_folder, gif, insta)
+        print_task(cfg.ad_4_link, cfg.ad_4_folder, cfg.gif_4, insta)
 
     if cfg.ad_alt_pi != None:
         print('Printando anúncio alternativo...')
         time.sleep(60* 6)
-        print_task(cfg.ad_alt_link, cfg.ad_alt_folder, gif)
+        print_task(cfg.ad_alt_link, cfg.ad_alt_folder, cfg.gif_alt)
         time.sleep(60)
-        print_task(cfg.ad_alt_link, f'{cfg.ad_alt_folder}_retry', gif)
+        print_task(cfg.ad_alt_link, f'{cfg.ad_alt_folder}_retry', cfg.gif_alt)
 
 
 
 if __name__ == "__main__":
     print('Print ad rodando...')
     # time.sleep(60 * 60 * 3)
-    # auto_prints_all_ads()
+    auto_prints_all_ads()
     # print('Print ad finalizado.')
-    check = input("Deseja executar a função de print de anúncios? (s/n): ")

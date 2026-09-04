@@ -83,6 +83,7 @@ ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
 ad_1_link = 'a[href*="https://ohoje.com/2026/09/03/cerrado-galeria-oferece-oficina-gratuita-para-jovens-neste-sabado-em-goiania-saiba-como-participar/"]'
 ad_1_insta = 'p/DcjYJk3p7yz/'
+gif_1 = None
 
 # addon Width (rodapé?)
 ad_2_pi = None
