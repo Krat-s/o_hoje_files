@@ -78,12 +78,13 @@ botão_3 = "placement_1026570_0_i" #banner rodapé
 # ------------------------------------------------------------------------- Prints settings
 # addon banner principal
 ad_1_pi = 99999
-ad_1_client = "Ministério da Cultura"
+ad_1_client = ""
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
-ad_1_link = 'a[href*="https://ohoje.com/2026/09/03/cerrado-galeria-oferece-oficina-gratuita-para-jovens-neste-sabado-em-goiania-saiba-como-participar/"]'
-ad_1_insta = 'p/DcjYJk3p7yz/'
-gif_1 = None
+ad_1_link = 'a[href*="https://ohoje.com/wp-content/uploads/2026/09/Documento-A4-Placa-Aviso-Area-interditada-1-768x543.webp"]'
+ad_1_gif = None
+ad_1_insta = None
+
 
 # addon Width (rodapé?)
 ad_2_pi = None
@@ -91,6 +92,7 @@ ad_2_client = 'PREF LUIZIÂNIA'
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
 ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
 ad_2_link = 'a[href*="https://www.luziania.go.gov.br/"]'
+ad_2_gif = None
 ad_2_insta = ''
 
 # addon Halfpage (03 a 30)
@@ -98,18 +100,18 @@ ad_3_pi = None
 ad_3_client = ''
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
 ad_3 = "div:nth-child(2) img[alt='Publicidade']"
-# ad_3_link = "iframe[src*='B35895622.448422967']"
-ad_3_link = 'a[href*="https://trabalhometroequatorialgo.com.br/?periodo=Tri+1+2026"]'
+ad_3_link = "iframe[src*='']"
+ad_3_gif = None
 ad_3_insta = ''
 
 # addon Middle retangle (?)
 ad_4_pi = None
-ad_4_client = 'CAMPANHA-OBRIGAADO-ADVOGADO'
+ad_4_client = ''
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
 ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
-ad_4_link = 'a[href*="https://www.oabgo.org.br"]'
+ad_4_link = 'a[href*=""]'
+ad_4_gif = None
 ad_4_insta = ''
-# ad_4_link = 'img[src*="https://ohoje.com/wp-content/uploads/2026/07/Campanha_Obrigado_Advogado_O-Hoje_250x250.gif"]'
 
 
 #alt addon (when have two ads from the same localization)
