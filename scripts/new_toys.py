@@ -50,7 +50,11 @@ region_png_qk_ldg = 493, 304, 123, 111
 print("inicio")
 # wait_until_text_disappears("Loading pages", region=(500, 300, 600, 200))
 
+
 # wait_until_text_appears("ABOBRINHA", region=region_png_qk_ldg)
 
 
 
+if __name__ == "__main__":
+    print('início' *5)  
+    print("Aguardando 'ABOBRINHA' aparecer na tela...")
