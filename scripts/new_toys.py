@@ -1,14 +1,16 @@
-import pyautogui as pg  
+import pyautogui as pg
 import time
 import pytesseract
 import os
 import sys
 from PIL import Image, ImageDraw, ImageFont
 
+
 def get_screen_text(region=None):
     """Captura a tela (ou região) e retorna o texto detectado."""
     screenshot = pg.screenshot(region=region)
     return pytesseract.image_to_string(screenshot)
+
 
 def wait_until_text_disappears(text, region=None, check_interval=1):
     """Espera até que o texto sumir da tela."""
@@ -17,13 +19,14 @@ def wait_until_text_disappears(text, region=None, check_interval=1):
     img = img.convert("L")  # escala de cinza
     img = img.point(lambda x: 0 if x < 180 else 255)  # binarização
     text = pytesseract.image_to_string(img)
-   
+
     while True:
         screen_text = get_screen_text(region).lower()
         if text.lower() not in screen_text:
             print(f"'{text}' não encontrado, continuando o código.")
             break
         time.sleep(check_interval)
+
 
 def wait_until_text_appears(text, region=None, check_interval=1):
     """Espera até que o texto apareça na tela."""
@@ -42,8 +45,6 @@ def wait_until_text_appears(text, region=None, check_interval=1):
         time.sleep(check_interval)
 
 
-
-
 region_png_qk_ldg = 493, 304, 123, 111
 
 # Exemplo de uso
@@ -54,7 +55,6 @@ print("inicio")
 # wait_until_text_appears("ABOBRINHA", region=region_png_qk_ldg)
 
 
-
 if __name__ == "__main__":
-    print('início' *5)  
+    print('início' * 5)
     print("Aguardando 'ABOBRINHA' aparecer na tela...")
