@@ -7,9 +7,6 @@ import keyboard as kb
 import tkinter as tk
 from tkinter import messagebox
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
-
 import shared.utils as utl
 import shared.data_sync.data_edition_sync as sy_de
 import departments.editorial.modulos_quark.utils_quark as utlq
@@ -18,7 +15,6 @@ from shared.logging.logs import log
 
 pg.PAUSE = 0.3 
 pg.FAILSAFE = True
-
 
 def wedding(nome_arquivo, paginas):
     try:
@@ -145,8 +141,6 @@ def auto_marriage():
 
     janela.mainloop()
     janela.destroy()
-
-
 
 if __name__ == "__main__":
     auto_marriage()

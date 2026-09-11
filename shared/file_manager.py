@@ -6,9 +6,6 @@ import keyboard as kb
 from pywinauto import Desktop
 from typing import Iterable
 
-modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(modulo_path)
-
 import settings.settings as cfg
 import shared.utils as utl
 from shared.logging.logs import log
@@ -17,14 +14,11 @@ import shared.automation.waits_checks as wc
 pg.PAUSE = 0.8
 pg.FAILSAFE = True
 
-
-
 def open_folder(endereco):
     time.sleep(0.2)
     os.startfile(endereco)
     wc.wait_explorer_open()
     utl.max_windows()
-
 
 def go_to(específico=None):
     pg.hotkey(*utl.atalho_endereço())
@@ -33,7 +27,6 @@ def go_to(específico=None):
         kb.write(específico) 
     pg.press('enter')
     time.sleep(1)
-
 
 def make_folder(name_folder, in_local=None):
     if in_local:
@@ -48,12 +41,10 @@ def make_folder(name_folder, in_local=None):
     pg.press('f5')
     time.sleep(2.5)
 
-
 def make_folder_print(name_folder):
     caminho_completo = os.path.join(cfg.CAMINHO_PRINTS, name_folder)
     os.makedirs(caminho_completo, exist_ok=True)
     return caminho_completo
-
 
 def take_file(arquivo):
     wc.wait_explorer_open(0.5, 15)
@@ -67,7 +58,6 @@ def take_file(arquivo):
     kb.press_and_release('enter')
     time.sleep(0.5)
 
-
 def copy_files(caminho, folder_name, _from=None):
     if _from:
         go_to(_from)
@@ -80,7 +70,6 @@ def copy_files(caminho, folder_name, _from=None):
     pg.hotkey('ctrl', 'v')
     pg.hotkey('alt', 's')
     time.sleep(3)
-
 
 def get_explorer_texts(janela) -> list[str]:
     textos = []
@@ -106,7 +95,6 @@ def get_explorer_texts(janela) -> list[str]:
 
     return textos
 
-
 def folder_is_open(folder_names: Iterable[str]) -> bool:
     desktop = Desktop(backend="uia")
     nomes = [n.lower() for n in folder_names]
@@ -120,7 +108,6 @@ def folder_is_open(folder_names: Iterable[str]) -> bool:
                     return True
                 
     return False
-
 
 def open_main_folder():
     try:
@@ -145,7 +132,6 @@ def open_main_folder():
         
     except Exception as e:
         log("All_in_one", "ERRO", f"FileManager-auto_folders: {str(e)}")
-
 
 def auto_folders(pasta_nome, modelo_path):
     try:

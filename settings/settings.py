@@ -3,12 +3,8 @@ import sys
 import locale
 import pyautogui as pg
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
-sys.path.append(raiz_projeto)
-
 from shared import gen_randon_numbers as rn
 import shared.data_sync.data_edition_sync as sy_de
-
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
@@ -21,18 +17,16 @@ CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de nova
 CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
 CAMINHO_PRINTS = r'\\192.168.1.249\comercial\COMERCIAL\PRINTS\00 - Auto-prints'
 
-
 # ------------------------------------------------------------------------- Tempos de espera
 TIMETOOPEN = 4
 TIMETOCLOSE = 6
 TIMEEXPPDF = 7
 
-
 # ------------------------------------------------------------------------- Barra de tarefas
 quark = 1
-opera = 2 # any browser
+opera = 2  # any browser
 vscode = 3
-explorer = 4 
+explorer = 4
 
 # ------------------------------------------------------------------------- Configurações gerais
 screen_width, screen_height = pg.size()
@@ -42,7 +36,7 @@ locale.setlocale(locale.LC_TIME, "pt_BR.utf-8")
 
 # ------------------------------------------------------------------------- Pytesseract and regions
 already_open_r = (489, 280, 98, 103)
-already_open_full_r = (489, 281, 389, 156) 
+already_open_full_r = (489, 281, 389, 156)
 quark_icon_c_r = (499, 309, 79, 101)
 quark_loading = (493, 304, 123, 111)
 file_not_fond = (465, 232, 477, 210)
@@ -57,8 +51,6 @@ y_edicao_17 = 260
 x_edicao_capa = 346
 y_edicao_capa = 448
 
-
-
 # ------------------------------------------------------------------------- Web
 acessos_B1 = rn.generate_number(0, 3)
 acessos_B2 = int(acessos_B1 / 2 + 1)
@@ -67,30 +59,27 @@ acessos_H1 = 1
 acessos_H2 = 2
 acessos_H3 = 1
 
-
 url_target = "https://ohoje.com"
 url_target_intagram = "https://www.instagram.com/g.ohoje/"
-botão_1 = str("ads-728 mx-auto") #principal
-botão_2 = "p-3 pb-0" #lateral
-botão_3 = "placement_1026570_0_i" #banner rodapé
-
+botão_1 = str("ads-728 mx-auto")  # principal
+botão_2 = "p-3 pb-0"  # lateral
+botão_3 = "placement_1026570_0_i"  # banner rodapé
 
 # ------------------------------------------------------------------------- Prints settings
 # addon banner principal
 ad_1_pi = 99999
 ad_1_client = ""
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
-ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']" 
+ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']"
 ad_1_link = 'a[href*="https://ohoje.com/wp-content/uploads/2026/09/Documento-A4-Placa-Aviso-Area-interditada-1-768x543.webp"]'
-ad_1_gif = None
+ad_1_gif = ''
 ad_1_insta = None
-
 
 # addon Width (rodapé?)
 ad_2_pi = None
 ad_2_client = 'PREF LUIZIÂNIA'
 ad_2_folder = f'{ad_2_pi} - Width - {ad_2_client}'
-ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']" 
+ad_2 = f"section.block-ads:nth-child(5) img[alt='Publicidade']"
 ad_2_link = 'a[href*="https://www.luziania.go.gov.br/"]'
 ad_2_gif = None
 ad_2_insta = ''
@@ -108,20 +97,19 @@ ad_3_insta = ''
 ad_4_pi = None
 ad_4_client = ''
 ad_4_folder = f'{ad_4_pi} - MIDDLE RETANGLE - {ad_4_client}'
-ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"  
+ad_4 = "section.block-ads:nth-child(3) img[alt='Publicidade']"
 ad_4_link = 'a[href*=""]'
 ad_4_gif = None
 ad_4_insta = ''
 
-
-#alt addon (when have two ads from the same localization)
+# alt addon (when have two ads from the same localization)
 ad_alt_pi = None
 ad_alt_client = ''
 ad_alt_folder = f'{ad_alt_pi} - Halfpage - {ad_alt_client}'
 ad_alt_ad = ad_3
 ad_alt_link = ''
-
-
+ad_alt_gif = None
+ad_alt_insta = ''
 
 if __name__ == "__main__":
-    print(sy_de.EDD)  
+    print(sy_de.EDD)

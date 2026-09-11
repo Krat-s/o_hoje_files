@@ -4,9 +4,6 @@ import time
 import keyboard as kb
 import pyautogui as pg
 
-raiz_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_path)
-
 import settings.settings as cfg
 import shared.utils as ut
 import shared.data_sync.data_edition_sync as desync
@@ -42,7 +39,6 @@ def take_receivers():
         log("All_in_one", "ERRO", erro_msg)
         log("gmail", "ERRO", erro_msg)
 
-
 def shortcut_send_emails():
     """Atalho para abrir campo de envio no Gmail"""
     pg.press('esc')
@@ -50,7 +46,6 @@ def shortcut_send_emails():
     time.sleep(1.5)
     pg.hotkey('ctrl', 'shift', 'b')
     time.sleep(0.5)
-
 
 def send_emails_to_readers(edicao):
     """Simula envio de emails com conteúdo da edição"""
@@ -76,7 +71,6 @@ def sendto(nome):
     kb.write(nome)
     pg.press('enter')
 
-
 def send_for_graphic(edicao, parte):
     """Simula envio para gráfica com parte específica da edição"""
     try: 
@@ -99,7 +93,6 @@ def send_for_graphic(edicao, parte):
         erro_msg = f"Falha ao criar rascunhos da gráfica: {str(e)}"
         log("All_in_one", "ERRO", erro_msg)
         log("gmail", "ERRO", erro_msg)
-
 
 def auto_drafts(ed=None, qnt=None):
     take_receivers()

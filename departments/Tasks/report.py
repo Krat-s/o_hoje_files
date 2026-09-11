@@ -3,9 +3,6 @@ import time
 import os
 import sys
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
-
 from shared.utils import open_software
 from departments.Tasks.module_tasks import index_numbers as ni
 
@@ -16,17 +13,14 @@ pg.FAILSAFE = True
 edicao_inicial = 36500
 quantidade_de_numeros = 5
 
-
 def vigencia(dia):
     open_software(5)
     for i in range (25):
         pg.write(str(dia))
         pg.press("tab")
 
-
 def pedidos():
     ni.gerar_n(36400)
-
 
 if __name__ == "__main__":
     print(ni.gerar_n(37000))

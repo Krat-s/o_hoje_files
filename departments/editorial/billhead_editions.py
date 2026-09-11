@@ -4,9 +4,6 @@ import time
 
 import pyautogui as pg
 
-modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(modulo_path)
-
 import settings.settings as cfg
 import shared.utils as utl
 import shared.data_sync.data_edition_sync as desync
@@ -51,8 +48,6 @@ def auto_billhead_editions(edicao_inicial=edicao_inicial, quantidade_repeticoes=
         except Exception as e:
             log("billhead_editions", "ERRO", f"Modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
             log("All_in_one", "ERRO", f"billhead_editions: modelos da edição {info.edicao_formatada}, {info.dia_semana} não criado. {str(e)}")
-
-
 
 if __name__ == "__main__":
     print('auto_billhead_editions iniciado')

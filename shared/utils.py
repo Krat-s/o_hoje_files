@@ -6,32 +6,24 @@ import os
 import sys
 import time
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
-
 import settings.settings as cfg
 import shared.data_sync.data_edition_sync as sy_de
 from shared.automation.win_manager import check_windows
 
-
-
 def press_repeat(key, presses):
     for _ in range(presses):
         pg.press(key)
-
 
 def atalho_endereço():
     ''''Retorna o atalho correto para a barra de endereço do Explorador de Arquivos'''
     windows = check_windows()
     return ('ctrl', 'l') if "Windows 11" in windows else ('ctrl', 'l')
 
-
 def max_windows():
     kb.press_and_release('alt+space')
     time.sleep(0.2)
     kb.press_and_release('x')
     time.sleep(0.5)
-
 
 def open_software(numero):
     time.sleep(0.5)
@@ -40,14 +32,11 @@ def open_software(numero):
     kb.press_and_release(f"win+{str(numero)}")
     time.sleep(0.5)
 
-
-
 # ---------------------------- functions explorer (server journal) ----------------------------
 def open_web_day_0():
     os.startfile(cfg.CAMINHO_WEB + "\\" + sy_de.EDD)
     time.sleep(0.3)
     max_windows()
-
 
 def choise_suggestion(QTD=1, TEMPO=2):
     time.sleep(0.2)
@@ -55,7 +44,6 @@ def choise_suggestion(QTD=1, TEMPO=2):
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(int(TEMPO))
-
 
 if __name__ == "__main__":
     print("Utils testing")

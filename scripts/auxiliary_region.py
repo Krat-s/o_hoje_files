@@ -7,7 +7,6 @@ import sys
 from datetime import datetime
 
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
 
 pasta_destino = f"{raiz_projeto}\\Backup\\Prints" 
 os.makedirs(pasta_destino, exist_ok=True)  

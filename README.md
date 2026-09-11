@@ -4,7 +4,6 @@ Automation of internal tasks for the newspaper O HOJE using Python. This project
 
 ## 🚀 Features
 
--Automation with `pyautogui` and `keyboard`
 -Graphical interface with `PyQt5`
 -Organization of files and folders
 -Custom shortcuts for productivity
@@ -16,6 +15,7 @@ Automation of internal tasks for the newspaper O HOJE using Python. This project
 -PyAutoGUI
 -Keyboard
 -Tesseract
+-Selenium
 
 ## 📦 Installation
 
@@ -27,25 +27,27 @@ Automation of internal tasks for the newspaper O HOJE using Python. This project
    ```
 
 2. Create the virtual environment:
-   bash
+   ```bash
    python -m venv venv
-
+   ```
 3. Activate the environment:
    Windows:
-   bash
-   .\venv\Scripts\activate
 
-   Linux/MacOS:
+   ```bash
+   .\venv\Scripts\activate
+   ```
+
+   Linux / MacOS:
    source venv/bin/activate
 
 4. Install the dependencies:
-   pip install -r requirements.txt
+   pip install -e .
 
 📂 Project structure
 o_hoje_files/
-├── venv/# Virtual environment (ignored by Git)
-├── main.py # Main code
-├── requirements.txt # Dependencies
+├── venv/# Virtual environment
+├── all_in_one.py # Main code
+├── pyproject.toml # Dependencies
 ├── README.md # Documentation
 └── .gitignore # Files ignored by Git
 

@@ -4,14 +4,9 @@ from datetime import datetime
 import os
 import sys
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-sys.path.append(raiz_projeto)
-
 from shared.gen_randon_numbers import generate_hours
-from settings.settings.settings import acessos_H1, acessos_H2, acessos_H3
+from settings.settings import acessos_H1, acessos_H2, acessos_H3
 from shared.logging.logs import log
-
-
 
 def start_daily_schedules(task_function_):
     """Generates new schedules every day and schedules them again."""

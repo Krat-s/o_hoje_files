@@ -3,9 +3,6 @@ from datetime import date, datetime, timedelta
 import os
 import sys
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-sys.path.append(raiz_projeto)
-
 from shared.data_sync.edition_formatter import gerar_edicoes, formatar_edicao, formatar_numero
 from shared.data_sync.data_formatter import formatar_data
 from settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
@@ -19,7 +16,6 @@ DATA_BASE = datetime(2024, 8, 26)  # Segunda-feira
 QUANTIDADE_POR_SEMANA = 5
 REPETICOES_PADRAO = quantidade_repeticoes
 EDICAO_INI = edicao_inicial 
-
 
 def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     """
@@ -126,7 +122,6 @@ def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, repeticoes=REPETICOES_PA
 
     return resultados
 
-
 def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
     for item in gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana, repeticoes):
         fazer_algo(item)
@@ -134,12 +129,10 @@ def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_seman
 def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
 
-
 #### Date_fundation
 def calc_old(nasc):
     h = date.today()
     return h.year - nasc.year - ((h.month, h.day) < (nasc.month, nasc.day))
-
 
 enterprise_age = calc_old(date(2004, 4, 22))
 edicao_0 = obter_edicao_por_data(datetime.now() + timedelta(days=1))

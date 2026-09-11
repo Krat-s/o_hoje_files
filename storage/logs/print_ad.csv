@@ -1849,3 +1849,11 @@ Stacktrace:
 2026-09-08,16:24:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-09-08,16:27:18,ERRO,print_ad.py,print_task,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\COMERCIAL\\PRINTS\\00 - Auto-prints\\99999 - Principal - \\2026 - 09 - 08.png'
 2026-09-08,16:27:20,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-11,16:22:23,ERRO,print_ad.py,print_task,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\COMERCIAL\\PRINTS\\00 - Auto-prints\\99999 - Principal - \\2026 - 09 - 11.png'
+2026-09-11,16:22:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-11,16:46:22,ERRO,print_ad.py,print_task,Falha ao salvar imagem: screen grab failed
+2026-09-11,16:46:24,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-11,16:50:51,ERRO,print_ad.py,print_task,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\COMERCIAL\\PRINTS\\00 - Auto-prints\\99999 - Principal - \\2026 - 09 - 11.png'
+2026-09-11,16:50:53,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-09-11,16:52:23,ERRO,print_ad.py,print_task,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\COMERCIAL\\PRINTS\\00 - Auto-prints\\99999 - Principal - \\2026 - 09 - 11.png'
+2026-09-11,16:52:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

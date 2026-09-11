@@ -3,9 +3,6 @@ import sys
 import time
 import pyautogui as pg
 
-modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(modulo_path)
-
 import settings.settings as cfg
 import shared.utils as utl
 import shared.data_sync.data_edition_sync as desync
@@ -50,7 +47,6 @@ def auto_billhead_edition():
         # pg.alert("Automação encerrada")
         print(target)
         print(target_weekday)
-
 
     except Exception as e:
         log("billhead", "erro", f"Modelos da edição {info.edicao_formatada} - {info.dia_semana} não criado. {str(e)}")

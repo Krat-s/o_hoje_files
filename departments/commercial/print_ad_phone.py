@@ -9,18 +9,13 @@ from selenium.webdriver.chrome.options import Options
 import os
 import sys
 
-raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(raiz_projeto)
-
 import settings.settings as cfg
 from shared.logging.logs import log
 from shared.utils import max_windows
 import shared.file_manager as fm
 from shared.automation.web_diver import wait_d
 
-
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
-
 
 def print_task_phone(adon_link, adon_name_folder, gif=None):
     """Abre o navegador, clica no botão e registra o resultado."""
@@ -117,7 +112,6 @@ def print_task_phone(adon_link, adon_name_folder, gif=None):
 def run_print_ad(ad=None, folder=None):
     print_task_phone(ad, folder)
 
-
 # ------------------manual trigger 
 def auto_prints_all_ads(gif=None):
     '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
@@ -139,8 +133,6 @@ def auto_prints_all_ads(gif=None):
         print_task_phone(cfg.ad_alt_link, cfg.ad_alt_folder, gif)
         time.sleep(60)
         print_task_phone(cfg.ad_alt_link, f'{cfg.ad_alt_folder}_retry', gif)
-
-
 
 if __name__ == "__main__":
     print('Print ad rodando...')

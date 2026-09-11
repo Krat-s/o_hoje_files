@@ -5,9 +5,6 @@ import pyautogui as pg
 import keyboard as kb
 from dataclasses import dataclass
 
-modulo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(modulo_path)
-
 import departments.editorial.modulos_quark.utils_quark as utlq
 
 from departments.editorial.modulos_quark.utils_quark import close_page

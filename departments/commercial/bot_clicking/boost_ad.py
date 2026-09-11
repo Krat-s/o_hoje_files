@@ -8,19 +8,14 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 import sys
 
-main_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-raiz_projeto = sys.path.append(main_folder)
-
-from settings.settings.settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
+from settings.settings import url_target, botão_1, botão_2, botão_3, acessos_B1, acessos_B2, acessos_B3
 from shared.logging.logs import log
-
 
 def wait_d(driver, by, value, timeout=10, clicavel=True):
     """Espera até que o elemento esteja presente (ou clicável).
     Retorna o elemento encontrado."""
     condicao = EC.element_to_be_clickable if clicavel else EC.presence_of_element_located
     return WebDriverWait(driver, timeout).until(condicao((by, value)))
-
 
 def click_task():
     """Abre o navegador, clica no botão e registra o resultado."""
@@ -87,8 +82,6 @@ def click_task():
         driver.quit()
         log("All_in_one", "RELATÓRIO", "Drive fechado após execução da tarefa")
         log("boost_ad", "RELATÓRIO", "Drive fechado após execução da tarefa")
-
-
 
 if __name__ == "__main__":
     click_task()

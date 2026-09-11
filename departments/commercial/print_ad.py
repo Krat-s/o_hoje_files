@@ -12,10 +12,6 @@ from selenium import webdriver
 from datetime import datetime
 from shared.automation.web_diver import wait_d
 
-raiz_projeto = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '..', '..'))
-sys.path.append(raiz_projeto)
-
 screen_date = f'{datetime.now().strftime("%Y - %m - %d")}'
 
 
