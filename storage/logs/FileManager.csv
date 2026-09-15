@@ -433,3 +433,27 @@ data,hora,status,origem,função,message
 2026-08-25,02:18:42,SUCESSO,file_manager.py,auto_folders,Pasta 7248 - Quinta-feira criada
 2026-08-25,02:30:50,SUCESSO,file_manager.py,auto_folders,Pasta 7249 - Sexta-feira criada
 2026-08-25,02:42:57,SUCESSO,file_manager.py,auto_folders,Pasta 7250-1 - Fim de semana criada
+2026-09-14,23:19:34,ERRO,file_manager.py,auto_folders,Erro ao criar pasta: Timeout aguardando condição: 'Specific folder is open'
+2026-09-14,23:31:43,SUCESSO,file_manager.py,auto_folders,Pasta 7253 - Terça-feira criada
+2026-09-14,23:43:53,SUCESSO,file_manager.py,auto_folders,Pasta 7254 - Quarta-feira criada
+2026-09-14,23:56:02,SUCESSO,file_manager.py,auto_folders,Pasta 7255 - Quinta-feira criada
+2026-09-15,00:08:12,SUCESSO,file_manager.py,auto_folders,Pasta 7256 - Sexta-feira criada
+2026-09-15,00:20:22,SUCESSO,file_manager.py,auto_folders,Pasta 7257-8 - Fim de semana criada
+2026-09-15,00:32:32,SUCESSO,file_manager.py,auto_folders,Pasta 7259 - Segunda-feira criada
+2026-09-15,00:44:42,SUCESSO,file_manager.py,auto_folders,Pasta 7260 - Terça-feira criada
+2026-09-15,00:56:51,SUCESSO,file_manager.py,auto_folders,Pasta 7261 - Quarta-feira criada
+2026-09-15,01:09:01,SUCESSO,file_manager.py,auto_folders,Pasta 7262 - Quinta-feira criada
+2026-09-15,01:21:11,SUCESSO,file_manager.py,auto_folders,Pasta 7263 - Sexta-feira criada
+2026-09-15,01:33:20,SUCESSO,file_manager.py,auto_folders,Pasta 7264-5 - Fim de semana criada
+2026-09-15,01:45:30,SUCESSO,file_manager.py,auto_folders,Pasta 7266 - Segunda-feira criada
+2026-09-15,01:57:39,SUCESSO,file_manager.py,auto_folders,Pasta 7267 - Terça-feira criada
+2026-09-15,02:09:49,SUCESSO,file_manager.py,auto_folders,Pasta 7268 - Quarta-feira criada
+2026-09-15,02:21:59,SUCESSO,file_manager.py,auto_folders,Pasta 7269 - Quinta-feira criada
+2026-09-15,02:34:08,SUCESSO,file_manager.py,auto_folders,Pasta 7270 - Sexta-feira criada
+2026-09-15,02:46:18,SUCESSO,file_manager.py,auto_folders,Pasta 7271-2 - Fim de semana criada
+2026-09-15,02:58:27,SUCESSO,file_manager.py,auto_folders,Pasta 7273 - Segunda-feira criada
+2026-09-15,03:10:37,SUCESSO,file_manager.py,auto_folders,Pasta 7274 - Terça-feira criada
+2026-09-15,03:22:47,SUCESSO,file_manager.py,auto_folders,Pasta 7275 - Quarta-feira criada
+2026-09-15,03:34:56,SUCESSO,file_manager.py,auto_folders,Pasta 7276 - Quinta-feira criada
+2026-09-15,03:47:06,SUCESSO,file_manager.py,auto_folders,Pasta 7277 - Sexta-feira criada
+2026-09-15,03:59:15,SUCESSO,file_manager.py,auto_folders,Pasta 7278-9 - Fim de semana criada

@@ -7,10 +7,9 @@ from departments.mail.gmail import auto_drafts
 from departments.commercial.print_ad import auto_prints_all_ads
 from settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 # from Backup.shutdawns import sleep_computer
-    
+
 import tkinter as tk
 from tkinter import messagebox
-
 
 
 # 📌 ------------------------------------------ making drafts
@@ -21,14 +20,12 @@ def auto_drafts_(ed=None, qnt=None):
         print(f'Error creating drafts: {e}')
 
 
-
 # 📌 ------------------------------------------ Wedding
 def auto_marriage_():
     try:
         cm.auto_marriage()
     except Exception as e:
         print(f'Error in marriage: {e}')
-
 
 
 # 📌 ------------------------------------------ making billhead
@@ -41,11 +38,10 @@ def auto_billhead_editions_(ed=edicao_inicial, qnt=quantidade_repeticoes):
 
 # 📌 ------------------------------------------ print ads
 def auto_print_by_link_():
-   try:
-       auto_prints_all_ads()
-   except Exception as e:
-       print(f'Error printing ads by link: {e}')
-
+    try:
+        auto_prints_all_ads()
+    except Exception as e:
+        print(f'Error printing ads by link: {e}')
 
 
 # from config.core import schedule_manager as sm
@@ -90,38 +86,46 @@ def all_in_one_():
         else:
             messagebox.showerror("Erro", "Opção inválida.")
 
-    janela = tk.Tk() 
+    janela = tk.Tk()
     janela.title("Kratos Api")
     janela.geometry("400x350")
     janela.configure(bg="#32395F")
     janela.iconbitmap(r'storage\\img\\favicon.ico')
 
-    estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#12162B", "fg": "white", "width": 30, "borderwidth": 3, "relief": "raised"}
+    estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#12162B",
+                       "fg": "white", "width": 30, "borderwidth": 3, "relief": "raised"}
 
-    btn_x = tk.Button(janela, text="Casamento da edição atual", command=lambda: fazer_escolha("Casamento"), **estilo_escolhas)
+    btn_x = tk.Button(janela, text="Casamento da edição atual",
+                      command=lambda: fazer_escolha("Casamento"), **estilo_escolhas)
     btn_x.pack(pady=5)
 
-    btn_v = tk.Button(janela, text="Cabeçalho das páginas", command=lambda: fazer_escolha("Billhead"), **estilo_escolhas)
+    btn_v = tk.Button(janela, text="Cabeçalho das páginas",
+                      command=lambda: fazer_escolha("Billhead"), **estilo_escolhas)
     btn_v.pack(pady=5)
 
-    btn_t = tk.Button(janela, text="Rascunhos no Gmail", command=lambda: fazer_escolha("Rascunhos"), **estilo_escolhas)
+    btn_t = tk.Button(janela, text="Rascunhos no Gmail",
+                      command=lambda: fazer_escolha("Rascunhos"), **estilo_escolhas)
     btn_t.pack(pady=5)
 
-    btn_z2 = tk.Button(janela, text="Print de anúncios", command=lambda: fazer_escolha("ad-print"), **estilo_escolhas)
+    btn_z2 = tk.Button(janela, text="Print de anúncios",
+                       command=lambda: fazer_escolha("ad-print"), **estilo_escolhas)
     btn_z2.pack(pady=5)
 
-    btn_z3 = tk.Button(janela, text="Adianto semanal", command=lambda: fazer_escolha("week_duty"), **estilo_escolhas)
+    btn_z3 = tk.Button(janela, text="Adianto semanal", command=lambda: fazer_escolha(
+        "week_duty"), **estilo_escolhas)
     btn_z3.pack(pady=5)
 
-    btn_z4 = tk.Button(janela, text="Desligar tudo", command=lambda: fazer_escolha("Desligar"), **estilo_escolhas)
+    btn_z4 = tk.Button(janela, text="Desligar tudo", command=lambda: fazer_escolha(
+        "Desligar"), **estilo_escolhas)
     btn_z4.pack(pady=5)
 
     janela.mainloop()
 
-ed_ini = 7231
-qtd = 3
+
+ed_ini = 7252
+qtd = 4
 
 if __name__ == "__main__":
     print('All in one executando...')
-    
+
     all_in_one_()

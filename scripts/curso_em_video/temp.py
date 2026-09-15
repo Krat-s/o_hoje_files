@@ -52,17 +52,16 @@ import datetime
 # ------------------------------  # 4 D3
 
 
-def somar_numeros():
-    n1 = input("Digite um número: ")
-    n2 = input("Digite outro número: ")
-    soma = float(n1) + float(n2)
-    if soma.is_integer():
-        print(f"A soma de {n1} e {n2} é {int(soma)}.")
-        return int(soma)
-    print(f"A soma de {n1} e {n2} é {soma}.")
+# def somar_numeros():
+#     n1 = input("Digite um número: ")
+#     n2 = input("Digite outro número: ")
+#     soma = float(n1) + float(n2)
+#     if soma.is_integer():
+#         print(f"A soma de {n1} e {n2} é {int(soma)}.")
+#         return int(soma)
+#     print(f"A soma de {n1} e {n2} é {soma}.")
 
 
-somar_numeros()
-
-
-# ------------------------------ # D
+# ------------------------------ # Início dos exercícios do curso em vídeo
+def exercício_001():
+    print("Exercício 001: Olá, Mundo!")
