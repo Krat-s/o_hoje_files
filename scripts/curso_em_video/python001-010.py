@@ -12,7 +12,7 @@ def exercício_003():
     n2 = input("Digite outro número: ")
     soma = float(n1) + float(n2)
     if soma.is_integer():
-        print(f"A soma de {n1} e {n2} é {int(soma)}.")
+        print("A soma de {} e {} é {}.".format(n1, n2, int(soma)))
         return int(soma)
     print("A soma de {} e {} é {}!".format(n1, n2, soma))
 
@@ -36,10 +36,4 @@ def exercício_004():
     print("É um número? {}".format(info.isnumeric()))
 
 
-# def exercício_004():
-#     dia = input("Digite o dia do seu nascimento: ")
-#     mes = input("Digite o mês do seu nascimento: ")
-#     ano = input("Digite o ano do seu nascimento: ")
-#     print("Você nasceu em {}/{}/{}.".format(dia, mes, ano))
-
-exercício_003()
+exercício_004()
