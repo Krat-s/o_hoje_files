@@ -53,15 +53,48 @@ import datetime
 
 
 # def somar_numeros():
-#     n1 = input("Digite um número: ")
-#     n2 = input("Digite outro número: ")
-#     soma = float(n1) + float(n2)
-#     if soma.is_integer():
-#         print(f"A soma de {n1} e {n2} é {int(soma)}.")
-#         return int(soma)
-#     print(f"A soma de {n1} e {n2} é {soma}.")
+# n1 = input("Digite um número: ")
+# n2 = input("Digite outro número: ")
+# soma = float(n1) + float(n2)
+# if soma.is_integer():
+#     print(f"A soma de {n1} e {n2} é {int(soma)}.")
+#     return int(soma)
+# print(f"A soma de {n1} e {n2} é {soma}.")
 
 
-# ------------------------------ # Início dos exercícios do curso em vídeo
-def exercício_001():
-    print("Exercício 001: Olá, Mundo!")
+# -----PRECEDENCIA
+# 1 ()
+# 2 ** --potencias
+# 3 *, /, // divisão inteira, % resto
+# 4 +, -
+
+def raiz_quadrada(x):
+    r = x ** (1/2)
+    return (r)
+
+
+def raiz_cubica(x):
+    r = x ** (1/3)
+    return (r)
+
+
+def printexemplos():
+    n = 1500
+    n2 = 1500
+    s = n2 + n
+    m = n * n2
+    d = n2 / n2
+    di = n2 // n
+    e = n ** n2
+    print('exemplos {}'.format(n))
+    print('exemplos {:20}!'.format(n))
+    print('exemplos {:>20}!'.format(n))
+    print('exemplos {:<20}!'.format(n))
+    print('exemplos {:^20}!'.format(n))
+    print('exemplos {:.^20}!'.format(n))
+    print('exemplos {:=^20}!'.format(n))
+    print('A soma de é {} o produto é {} e a divisão é {:.3f}'.format(s, m, d))
+    print('Divisão inteira é {}, e potência'.format(di, e))
+
+
+printexemplos()
