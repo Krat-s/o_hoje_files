@@ -64,13 +64,13 @@ def exercício_007():
     nota1 = float(input("Digite a primeira nota: "))
     nota2 = float(input("Digite a segunda nota: "))
     media = (nota1 + nota2) / 2
-    print('A média da nota é: {}'.format(media))
+    print('A média da nota é: {:.1f}'.format(media).replace('.0', ''))
 
 
 def exercício_008():
-    metros = int(input('Digite a distância em metros: '))
-    print('A distancia de {}M em centimetros é; {} e em milímetros é: {}'.format(
-        metros, metros * 100, metros * 1000))
+    medida = float(input('Digite a distância em metros: '))
+    print('A distancia de {} M corresponde à  \n {} quilômetros \n {} hectômetros \n {} decâmetros \n {} Metros \n {} centimetros \n {} milímetros'.format(
+        medida, medida / 1000, medida / 100, medida / 10, medida, medida * 10, medida * 100).replace('.0', ''))
 
 
 def exercício_009():
@@ -78,41 +78,15 @@ def exercício_009():
     print("===" * 10 + '\n    Tabuada do {}:\n'.format(n) + "===" * 10)
     for i in range(1, 11):
         multiplo = n * i
-        print('     {} | {:>5} : {:>5}'.format(n, i, multiplo))
+        print('  {} x{:>5}:{:>5}'.format(n, i, multiplo))
 
     print("==="*10)
 
 
 def exercício_010():
     n = float(input("Digite quantos reais você tem: "))
-    dolar = n / 3.27
-    print('Você pode comprar $ {:.3} Dolares'.format(dolar))
+    dolar = n / 5.14
+    print('Você pode comprar $ {:.3} dolares'.format(dolar))
 
 
-def exercício_011():
-    l = float(input('digite quantos metros de altura a parede tem:'))
-    a = float(input('digite quantos metros de largura a parede tem:'))
-    area = l * a
-    qtdness = area / 2
-    print('A área da parede tem {:.0f}M². A quantidade de tinha necessária é {:.1f}L:'.format(
-        area, qtdness))
-
-
-def exercício_012():
-    preco = float(input('Digite qual o valor do protuto: '))
-    porcentagem = int(input('Digite o desconto em porcentagem: '))
-    descontocalc = preco - (preco * porcentagem / 100)
-    print('O valor total de {} de desconto, em um produto de R$ {} reais é de R$ {:.2f}'.format(
-        porcentagem, preco, descontocalc))
-
-
-def exercício_013():
-    preco = float(input('Digite qual o valor do serviço: '))
-    porcentagem = float(input('Digite a porcentagem de aumento: '))
-    descontocalc = preco + (preco * porcentagem / 100)
-    print(descontocalc)
-    print(
-        f'O novo salário é de R$ {str(descontocalc).replace('.00', '').replace('.0', '')} reais')
-
-
-exercício_005()
+exercício_010()
