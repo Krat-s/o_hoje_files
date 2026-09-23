@@ -31,8 +31,10 @@ def exercício_014():
         c, f))
 
 
-def exercício_014():
-    aa
+def exercício_015():
+    qntdias = float(input('Por quantos dias alugado? ')) * 60
+    qntkmr = float(input('Quantos quilômetros rodados? ')) * 0.15
+    print('O valor do aluguel é: R$ {:.2f}'.format(qntdias + qntkmr))
 
 
 exercício_015()
