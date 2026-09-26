@@ -1,3 +1,6 @@
+import random
+
+
 def exercício_011():
     l = float(input('digite quantos metros de altura a parede tem:'))
     a = float(input('digite quantos metros de largura a parede tem:'))
@@ -37,4 +40,13 @@ def exercício_015():
     print('O valor do aluguel é: R$ {:.2f}'.format(qntdias + qntkmr))
 
 
-exercício_015()
+def exercício_016():
+    import math
+    n = float(input('Digite um número '))
+    # x = round(n)
+    x = math.trunc(n)
+
+    print('O número real que digitou é: {}'.format(x))
+
+
+exercício_016()
