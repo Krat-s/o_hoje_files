@@ -129,4 +129,3 @@ if __name__ == "__main__":
     print('All in one executando...')
 
     all_in_one_()
-v290    20
