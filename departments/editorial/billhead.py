@@ -18,10 +18,13 @@ pg.PAUSE = 0.5
 pg.FAILSAFE = True
 
 # ---------------------------- FUNÇÕES UTILITÁRIAS (QUARK) ----------------------------
+
+
 class EdicaoQuarkLike(Protocol):
     edicao_formatada: str
     data_formatada: str
     dia_semana: str
+
 
 def auto_date(info: EdicaoQuarkLike):
     utlq.take_tool("v")
@@ -33,6 +36,7 @@ def auto_date(info: EdicaoQuarkLike):
     time.sleep(0.4)
     kb.write(info.data_formatada)
 
+
 def auto_pages(numero, info: EdicaoQuarkLike):
     utl.press_repeat('esc', 3)
     pg.hotkey('ctrl', 'o')
@@ -43,6 +47,7 @@ def auto_pages(numero, info: EdicaoQuarkLike):
     utl.choise_suggestion(1, cfg.TIMETOOPEN)
     auto_date(info)
     time.sleep(2)
+
 
 def aply_1(info: EdicaoQuarkLike):
     utl.press_repeat('esc', 3)
@@ -61,6 +66,7 @@ def aply_1(info: EdicaoQuarkLike):
     utlq.close_page()
     time.sleep(2)
 
+
 def aply_17(info: EdicaoQuarkLike):
     time.sleep(2)
     utl.press_repeat('esc', 3)
@@ -70,7 +76,8 @@ def aply_17(info: EdicaoQuarkLike):
     time.sleep(0.3)
     pg.hotkey('ctrl', 'o')
     time.sleep(0.5)
-    kb.write(cfg.CAMINHO_MODELO_EDD + '\\' + f"{info.edicao_formatada.replace('.', '')} - {info.dia_semana}")
+    kb.write(cfg.CAMINHO_MODELO_EDD + '\\' +
+             f"{info.edicao_formatada.replace('.', '')} - {info.dia_semana}")
     time.sleep(0.5)
     pg.press('enter')
     time.sleep(0.5)
@@ -86,9 +93,10 @@ def aply_17(info: EdicaoQuarkLike):
     utlq.take_tool("t")
     utl.press_repeat('t', 4)
     pg.hotkey('ctrl', 'a')
-    kb.write(f"Ano {desync.enterprise_age} - nº {info.edicao_formatada}")
+    kb.write(f"Ano {desync.enterprise_age}  |  nº {info.edicao_formatada}")
     utlq.close_page()
     time.sleep(2)
+
 
 def auto_date_all_non_especial_pages(info: EdicaoQuarkLike):
     for i in range(20, 1, -1):

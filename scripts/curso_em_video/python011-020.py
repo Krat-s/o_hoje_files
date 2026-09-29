@@ -1,4 +1,5 @@
 import random
+import math
 
 
 def exercício_011():
@@ -41,12 +42,14 @@ def exercício_015():
 
 
 def exercício_016():
-    import math
-    n = float(input('Digite um número '))
-    # x = round(n)
-    x = math.trunc(n)
+    n = float(input('Digite um número ').replace(',', '.'))
+    print('O número natural que digitou é: {}'.format(math.trunc(n)))
 
-    print('O número real que digitou é: {}'.format(x))
+
+def exercício_017():
+    cat_oposto = float(input('Digite o valor do cateto oposto '))
+    cat_adjacente = float(input('Digite o valor do cateto adjacente '))
+    if cat_oposto or cat_adjacente == None
 
 
 exercício_016()
