@@ -49,7 +49,31 @@ def exercício_016():
 def exercício_017():
     cat_oposto = float(input('Digite o valor do cateto oposto '))
     cat_adjacente = float(input('Digite o valor do cateto adjacente '))
-    if cat_oposto or cat_adjacente == None
+    hypotenusa = math.hypot(cat_oposto, cat_adjacente)
+
+    if cat_oposto or cat_adjacente != None:
+        print('A soma da hipotenusa é: {}'.format(hypotenusa))
+    else:
+        print('erro')
 
 
-exercício_016()
+def exercício_018():
+    angulo = float(input('Digite o valor do ângulo '))
+    seno = math.sin(angulo)
+    cosseno = math.cos(angulo)
+    tangente = math.tan(angulo)
+    print('O valor de Seno é: {:.2f}, O cosseno é: {:.2f}, e a tangênte é: {:.2f}'.format(
+        seno, cosseno, tangente))
+
+
+def exercício_019():
+    n_sorteado = random.randrange(1, 5)
+    for x in range(1, 5):
+        nome = str(input('Digite o nome de um aluno '))
+        if x == n_sorteado:
+            novon = nome
+            pass
+    print('O Aluno sorteado é: {}'.format(novon))
+
+
+exercício_019()
