@@ -60,27 +60,27 @@ def auto_print_by_link_():
 
 # 📌 ------------------------------------------ Escolhas
 def all_in_one_():
-    def fazer_escolha(opcao):
-        if opcao == "Casamento":
+    def choise(option):
+        if option == "Casamento":
             auto_marriage_()
             janela.destroy()
-        elif opcao == "Billhead":
+        elif option == "Billhead":
             auto_billhead_editions_(ed_ini, qtd)
             janela.destroy()
-        elif opcao == "Rascunhos":
+        elif option == "Rascunhos":
             auto_drafts_(ed_ini, qtd)
             janela.destroy()
-        elif opcao == "ad-print":
+        elif option == "ad-print":
             janela.destroy()
             auto_print_by_link_()
-        elif opcao == "week_duty":
+        elif option == "week_duty":
             janela.destroy()
             sem = pg.prompt("Quantas edições deseja adiantar?")
             semanal = int(sem) * 7
             auto_drafts_(ed_ini, int(semanal))
             auto_billhead_editions_(ed_ini, int(semanal))
             time.sleep(1)
-        elif opcao == "Desligar":
+        elif option == "Desligar":
             janela.destroy()
             # sleep_computer()
         else:
@@ -96,26 +96,26 @@ def all_in_one_():
                        "fg": "white", "width": 30, "borderwidth": 3, "relief": "raised"}
 
     btn_x = tk.Button(janela, text="Casamento da edição atual",
-                      command=lambda: fazer_escolha("Casamento"), **estilo_escolhas)
+                      command=lambda: choise("Casamento"), **estilo_escolhas)
     btn_x.pack(pady=5)
 
     btn_v = tk.Button(janela, text="Cabeçalho das páginas",
-                      command=lambda: fazer_escolha("Billhead"), **estilo_escolhas)
+                      command=lambda: choise("Billhead"), **estilo_escolhas)
     btn_v.pack(pady=5)
 
     btn_t = tk.Button(janela, text="Rascunhos no Gmail",
-                      command=lambda: fazer_escolha("Rascunhos"), **estilo_escolhas)
+                      command=lambda: choise("Rascunhos"), **estilo_escolhas)
     btn_t.pack(pady=5)
 
     btn_z2 = tk.Button(janela, text="Print de anúncios",
-                       command=lambda: fazer_escolha("ad-print"), **estilo_escolhas)
+                       command=lambda: choise("ad-print"), **estilo_escolhas)
     btn_z2.pack(pady=5)
 
-    btn_z3 = tk.Button(janela, text="Adianto semanal", command=lambda: fazer_escolha(
+    btn_z3 = tk.Button(janela, text="Adianto semanal", command=lambda: choise(
         "week_duty"), **estilo_escolhas)
     btn_z3.pack(pady=5)
 
-    btn_z4 = tk.Button(janela, text="Desligar tudo", command=lambda: fazer_escolha(
+    btn_z4 = tk.Button(janela, text="Desligar tudo", command=lambda: choise(
         "Desligar"), **estilo_escolhas)
     btn_z4.pack(pady=5)
 
