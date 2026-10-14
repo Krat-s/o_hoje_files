@@ -147,16 +147,15 @@ enterprise_age = calc_old(date(2004, 4, 22))
 
 
 def day_zero_info():
-    intervalo = time(4, 0)
 
-    momento_atual = datetime.now()
+    momento_atual = datetime.now() + timedelta(days=1)
+    intervalo = time(4, 0)
 
     if momento_atual.time() <= intervalo:
         momento_atual = momento_atual - timedelta(days=1)
 
     edicao_0 = obter_edicao_por_data(momento_atual)
     data_0 = formatar_data(momento_atual, tipo="dia_semana").capitalize()
-
     return f"{edicao_0.replace('.', '')} - {data_0}"
 
 
