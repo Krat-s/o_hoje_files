@@ -122,7 +122,8 @@ def auto_marriage():
     estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#585858",
                        "fg": "white", "width": 20, "borderwidth": 3, "relief": "raised"}
 
-    label = tk.Label(janela, text=f"Edição: {sy_de.EDD}", **estilo_títulos)
+    label = tk.Label(
+        janela, text=f"Edição: {sy_de.EDITION_ZERO}", **estilo_títulos)
     label.pack(pady=10)
 
     btn_x = tk.Button(janela, text="Essencia + Classificados",
