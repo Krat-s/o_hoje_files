@@ -92,31 +92,31 @@ def all_in_one_():
     janela.configure(bg="#32395F")
     janela.iconbitmap(r'storage\\img\\favicon.ico')
 
-    estilo_escolhas = {"font": ("Noto sans", 14), "bg": "#12162B",
-                       "fg": "white", "width": 30, "borderwidth": 3, "relief": "raised"}
+    style_button = {"font": ("Noto sans", 14), "bg": "#12162B",
+                    "fg": "white", "width": 30, "borderwidth": 3, "relief": "raised"}
 
     btn_x = tk.Button(janela, text="Casamento da edição atual",
-                      command=lambda: choise("Casamento"), **estilo_escolhas)
+                      command=lambda: choise("Casamento"), **style_button)
     btn_x.pack(pady=5)
 
     btn_v = tk.Button(janela, text="Cabeçalho das páginas",
-                      command=lambda: choise("Billhead"), **estilo_escolhas)
+                      command=lambda: choise("Billhead"), **style_button)
     btn_v.pack(pady=5)
 
     btn_t = tk.Button(janela, text="Rascunhos no Gmail",
-                      command=lambda: choise("Rascunhos"), **estilo_escolhas)
+                      command=lambda: choise("Rascunhos"), **style_button)
     btn_t.pack(pady=5)
 
     btn_z2 = tk.Button(janela, text="Print de anúncios",
-                       command=lambda: choise("ad-print"), **estilo_escolhas)
+                       command=lambda: choise("ad-print"), **style_button)
     btn_z2.pack(pady=5)
 
     btn_z3 = tk.Button(janela, text="Adianto semanal", command=lambda: choise(
-        "week_duty"), **estilo_escolhas)
+        "week_duty"), **style_button)
     btn_z3.pack(pady=5)
 
     btn_z4 = tk.Button(janela, text="Desligar tudo", command=lambda: choise(
-        "Desligar"), **estilo_escolhas)
+        "Desligar"), **style_button)
     btn_z4.pack(pady=5)
 
     janela.mainloop()
