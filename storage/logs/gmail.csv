@@ -1259,3 +1259,79 @@ data,hora,status,origem,função,message
 2026-07-07,02:46:42,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
 2026-08-10,17:34:00,ERRO,gmail.py,take_receivers,"Falha ao pegar emails: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED."
 2026-08-10,17:36:15,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-10-15,00:49:56,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-10-15,00:51:10,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-10-15,00:53:33,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-10-15,00:54:06,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-10-15,00:54:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,00:55:28,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-10-15,00:56:08,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-10-15,00:57:23,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-10-15,00:57:39,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,00:57:53,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,00:58:03,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,00:58:18,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,00:58:32,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,00:58:43,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,00:58:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,00:59:12,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,00:59:22,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,00:59:37,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,00:59:51,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:00:02,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:00:17,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:00:31,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:00:41,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:00:56,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:01:07,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:01:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:01:36,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:01:46,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:02:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:02:15,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:02:26,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:02:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:02:55,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:03:05,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:03:20,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:03:34,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:03:45,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:04:00,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:04:14,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:04:24,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:04:39,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:04:49,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:05:05,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:05:19,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:05:29,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:05:44,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:05:58,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:06:08,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:06:23,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:06:38,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:06:48,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:07:03,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:07:17,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:07:27,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:07:42,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:07:57,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:08:07,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:08:22,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:08:32,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:08:47,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:09:01,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:09:12,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:09:27,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:09:41,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:09:51,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:10:06,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:10:20,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:10:31,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:10:46,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:11:00,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:11:10,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:11:25,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:11:39,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:11:50,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-10-15,01:12:05,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
+2026-10-15,01:12:15,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados

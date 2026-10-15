@@ -7,7 +7,7 @@ import sys
 import time
 
 import settings.settings as cfg
-import shared.data_sync.data_edition_sync as sy_de
+import shared.data_sync.data_edition_sync as desync
 from shared.automation.win_manager import check_windows
 
 
@@ -40,7 +40,7 @@ def open_software(numero):
 
 
 def open_web_day_0():
-    os.startfile(cfg.CAMINHO_WEB + "\\" + sy_de.EDITION_ZERO)
+    os.startfile(cfg.CAMINHO_WEB + "\\" + desync.EDITION_ZERO)
     time.sleep(0.3)
     max_windows()
 
