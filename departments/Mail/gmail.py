@@ -1,5 +1,3 @@
-import os
-import sys
 import time
 import keyboard as kb
 import pyautogui as pg

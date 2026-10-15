@@ -1,5 +1,4 @@
 import time
-
 import pyautogui as pg
 
 import settings.settings as cfg

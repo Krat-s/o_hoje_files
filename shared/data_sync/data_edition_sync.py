@@ -1,5 +1,4 @@
 from datetime import date, datetime, time, timedelta
-import time as tm
 
 from shared.data_sync.edition_formatter import gerar_edicoes, formatar_edicao, formatar_numero
 from shared.data_sync.data_formatter import formatar_data

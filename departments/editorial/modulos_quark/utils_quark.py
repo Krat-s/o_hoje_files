@@ -32,8 +32,8 @@ def ok_qk():
     pg.press('esc')
     time.sleep(0.2)
 
-# Weeding
 
+# -------------------- for Weeding
 
 def open_pages_done_folder():
     pg.press('esc')
@@ -43,8 +43,7 @@ def open_pages_done_folder():
     time.sleep(0.2)
     pg.hotkey('ctrl', 'a')
     time.sleep(0.2)
-    kb.write(cfg.CAMINHO_EDD + "\\" +
-             desync.EDITION_ZERO + "\\" + 'Páginas prontas')
+    kb.write(cfg.CAMINHO_EDD + "\\" + desync.EDITION_ZERO + "\\" + 'Páginas prontas')
     time.sleep(0.2)
     pg.press('enter')
     time.sleep(0.2)
@@ -110,11 +109,8 @@ def process_page(page_number, is_even):
     else:
         move_page(290, 20)
 
-# billhead
-
 
 if __name__ == "__main__":
-    print("oi")
     # pg.hotkey('win', 'e')
 
     # pg.hotkey('win', 's')

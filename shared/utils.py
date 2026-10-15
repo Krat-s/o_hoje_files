@@ -1,9 +1,7 @@
 import pyautogui as pg
 import keyboard as kb
 import time
-from datetime import timedelta
 import os
-import sys
 import time
 
 import settings.settings as cfg

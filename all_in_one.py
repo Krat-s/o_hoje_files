@@ -111,12 +111,12 @@ def all_in_one_():
                        command=lambda: choise("ad-print"), **style_button)
     btn_z2.pack(pady=5)
 
-    btn_z3 = tk.Button(janela, text="Adianto semanal", command=lambda: choise(
-        "week_duty"), **style_button)
+    btn_z3 = tk.Button(janela, text="Adianto semanal",
+                       command=lambda: choise("week_duty"), **style_button)
     btn_z3.pack(pady=5)
 
-    btn_z4 = tk.Button(janela, text="Desligar tudo", command=lambda: choise(
-        "Desligar"), **style_button)
+    btn_z4 = tk.Button(janela, text="Desligar tudo",
+                       command=lambda: choise("Desligar"), **style_button)
     btn_z4.pack(pady=5)
 
     janela.mainloop()

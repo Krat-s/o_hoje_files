@@ -1,12 +1,11 @@
 import time
-import pyautogui as pg  
+import pyautogui as pg
 import pytesseract
 import threading
 
 import settings.settings as cfg
 import shared.utils as utl
 from shared.logging.logs import log
-
 
 
 def get_screen_text(region=None):
@@ -29,7 +28,7 @@ def wait_until_text_appears(text, region=None, check_interval=1, timeout=None, o
     # run_once: se True, garante que on_found seja executado apenas uma vez durante essa chamada
 
     deadline = None if timeout is None else _current_time() + timeout
-    executed = False # flag to control callback execution when run_once=True
+    executed = False  # flag to control callback execution when run_once=True
 
     while True:
         screen_text = get_screen_text(region).lower()
@@ -42,15 +41,15 @@ def wait_until_text_appears(text, region=None, check_interval=1, timeout=None, o
             if on_found and (not run_once or not executed):
                 # if there is a callback and either we are not limiting the execution or we have not executed it yet
                 try:
-                    on_found() # calls the callback function without arguments
+                    on_found()  # calls the callback function without arguments
                     log("All_in_One", "SUCESSO", f"Callback on_found executado para o texto: {text}")
-                    log("Waits_tesseract", "SUCESSO", f"Callback on_found executado para o texto: {text}")  
+                    log("Waits_tesseract", "SUCESSO", f"Callback on_found executado para o texto: {text}")
                 except Exception as e:
                     log("All_in_One", "ERRO", f"Erro na função {__name__} callback on_found: {e}")
                     log("Waits_tesseract", "ERRO", f"Erro na função {__name__} callback on_found: {e}")
                 executed = True
             return True
-        
+
         if deadline is not None and _current_time() > deadline:
             log("All_in_One", "ERRO", f"Timeout aguardando texto: '{text}'")
             log("Waits_tesseract", "ERRO", f"Timeout aguardando texto: '{text}'")
@@ -112,6 +111,8 @@ def wait_until_img_disappears(img_path, region=None, check_interval=1, timeout=N
         time.sleep(check_interval)
 
 # ---- execução não bloqueante (background) ----
+
+
 def start_background_wait(target_fn, *args, callback_on_complete=None, daemon=True):
     """Executes target_fn(*args) in thread and calls callback_on_complete(result) when finished.
     target_fn must return a value (True/False)."""
@@ -131,8 +132,7 @@ def start_background_wait(target_fn, *args, callback_on_complete=None, daemon=Tr
     t = threading.Thread(target=_worker, daemon=daemon)
     t.start()
     return t
-    #Tenho uma ideia de onde usar esse daqui mas caso não precise tenho que apagar depois, então deixo aqui por enquanto. Ele é basicamente para rodar as funções de espera sem bloquear o restante do código, e quando a função terminar ele pode chamar um callback com o resultado (True/False) para tomar alguma ação dependendo do resultado da espera.
-
+    # Tenho uma ideia de onde usar esse daqui mas caso não precise tenho que apagar depois, então deixo aqui por enquanto. Ele é basicamente para rodar as funções de espera sem bloquear o restante do código, e quando a função terminar ele pode chamar um callback com o resultado (True/False) para tomar alguma ação dependendo do resultado da espera.
 
 
 # ---- função para verificar e resolver mensagens de erro ----
@@ -154,7 +154,7 @@ def check_file_status():
         print("Página já estava aberta")
         time.sleep(cfg.TIMETOCLOSE)
         return "open"
-        
+
     elif check_file:
         print("Arquivo não encontrado, ignorando e continuando processos...")
         return "not_found"
