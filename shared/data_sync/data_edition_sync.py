@@ -1,7 +1,4 @@
-from datetime import date, datetime, timedelta
-
-import os
-import sys
+from datetime import date, datetime, time, timedelta
 
 from shared.data_sync.edition_formatter import gerar_edicoes, formatar_edicao, formatar_numero
 from shared.data_sync.data_formatter import formatar_data
@@ -15,14 +12,16 @@ DATA_BASE = datetime(2024, 8, 26)  # Segunda-feira
 # Default generation parameters
 QUANTIDADE_POR_SEMANA = 5
 REPETICOES_PADRAO = quantidade_repeticoes
-EDICAO_INI = edicao_inicial 
+EDICAO_INI = edicao_inicial
+
 
 def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     """
     Returns the formatted date for the informed edition
     """
     if edi_numero < edi_inicial:
-        raise ValueError("O número da edição não pode ser menor que a edição inicial.")
+        raise ValueError(
+            "O número da edição não pode ser menor que a edição inicial.")
 
     diff = edi_numero - edi_inicial
     ciclos = diff // 7
@@ -33,6 +32,7 @@ def obter_data_por_edicao(edi_numero, edi_inicial=EDICAO_BASE, data_inicial=DATA
 
     return data_inicial + timedelta(days=offset_total)
 
+
 def obter_edicao_por_data(data_alvo, edi_inicial=EDICAO_BASE, data_inicial=DATA_BASE):
     """
     Returns the edition formatted for the given date
@@ -40,9 +40,9 @@ def obter_edicao_por_data(data_alvo, edi_inicial=EDICAO_BASE, data_inicial=DATA_
     if data_alvo < data_inicial:
         raise ValueError("A data não pode ser anterior à data inicial.")
 
-    weekday = data_alvo.weekday() 
+    weekday = data_alvo.weekday()
 
-    #1) Weekend? go back to sixth and format the range
+    # 1) Weekend? go back to sixth and format the range
     if weekday >= 5:
         # quantos dias volto para chegar à sexta (4)
         days_to_friday = weekday - 4
@@ -73,6 +73,7 @@ def obter_edicao_por_data(data_alvo, edi_inicial=EDICAO_BASE, data_inicial=DATA_
 
     raise ValueError("Data não corresponde a nenhuma edição válida.")
 
+
 def formatar_edicao_unica(edicao_numero: int) -> EdicaoInfo:
     data = obter_data_por_edicao(edicao_numero)
 
@@ -88,8 +89,9 @@ def formatar_edicao_unica(edicao_numero: int) -> EdicaoInfo:
         pasta_nome=f"{edicao_formatada.replace('.', '')} - {dia_semana}",
     )
 
+
 def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, repeticoes=REPETICOES_PADRAO, quantidade_por_semana=QUANTIDADE_POR_SEMANA):
-    
+
     resultados: list[EdicaoInfo] = []
     data_atual = obter_data_por_edicao(edicao_inicial)
 
@@ -98,7 +100,8 @@ def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, repeticoes=REPETICOES_PA
 
         for ed in edicoes:
             ed = ed
-            dia_semana = formatar_data(data_atual, tipo='dia_semana').capitalize()
+            dia_semana = formatar_data(
+                data_atual, tipo='dia_semana').capitalize()
             pasta_nome = f"{ed.replace('.', '')} - {dia_semana.capitalize()}"
             edicao_sem_ponto = ed.replace('.', '')
 
@@ -117,35 +120,55 @@ def gerar_edicoes_formatadas(edicao_inicial=EDICAO_INI, repeticoes=REPETICOES_PA
             data_atual = obter_data_por_edicao(num)
             passo = 2 if '-' in ed else 1
             data_atual += timedelta(days=passo)
-        
+
         edicao_inicial += quantidade_por_semana + 2
 
     return resultados
+
 
 def para_cada_edicao(fazer_algo, edicao_inicial=EDICAO_INI, quantidade_por_semana=QUANTIDADE_POR_SEMANA, repeticoes=REPETICOES_PADRAO):
     for item in gerar_edicoes_formatadas(edicao_inicial, quantidade_por_semana, repeticoes):
         fazer_algo(item)
 
+
 def obter_data_formatada(nume):
     return formatar_data(obter_data_por_edicao(nume)).capitalize()
 
-#### Date_fundation
+# Date_fundation
+
+
 def calc_old(nasc):
     h = date.today()
     return h.year - nasc.year - ((h.month, h.day) < (nasc.month, nasc.day))
 
+
 enterprise_age = calc_old(date(2004, 4, 22))
-edicao_0 = obter_edicao_por_data(datetime.now() + timedelta(days=1))
-data_0 = formatar_data(datetime.now() + timedelta(days=1), tipo="dia_semana")
-EDD = f"{edicao_0.replace('.', '')} - {data_0}"
+
+
+def day_zero_info():
+
+    momento_atual = datetime.now() + timedelta(days=1)
+    intervalo = time(4, 0)
+
+    if momento_atual.time() <= intervalo:
+        momento_atual = momento_atual - timedelta(days=1)
+
+    edicao_0 = obter_edicao_por_data(momento_atual)
+    data_0 = formatar_data(momento_atual, tipo="dia_semana").capitalize()
+    return f"{edicao_0.replace('.', '')} - {data_0}"
+
+
+EDITION_ZERO = day_zero_info()
+
 
 if __name__ == "__main__":
-    teste1 = datetime.now() + timedelta(days=1)
-    # teste2 = 8091
-    print(obter_edicao_por_data(teste1))
-    # print(formatar_data(obter_data_por_edicao(teste2)))
-    print('...')
+    # teste1 = datetime.now() + timedelta(days=1)
+    # # teste2 = 8091
+    # print(obter_edicao_por_data(teste1))
+    # # print(formatar_data(obter_data_por_edicao(teste2)))
+    # print('...')
 
-    # print(years_old3)
-    print(f'enterprise_age: {enterprise_age}')
-    
+    # # print(years_old3)
+    # print(f'enterprise_age: {enterprise_age}')
+
+    print(f'EDICAO_BASE: {EDITION_ZERO}')

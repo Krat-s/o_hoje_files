@@ -1,29 +1,29 @@
 import pyautogui as pg
 import time
-import os
-import sys
 
 from shared.utils import open_software
-from departments.Tasks.module_tasks import index_numbers as ni
+from departments.tasks.module_tasks import index_numbers as ni
 
 time.sleep(1)
-pg.PAUSE = 0.3 
+pg.PAUSE = 0.3
 pg.FAILSAFE = True
 
 edicao_inicial = 36500
 quantidade_de_numeros = 5
 
+
 def vigencia(dia):
     open_software(5)
-    for i in range (25):
+    for i in range(25):
         pg.write(str(dia))
         pg.press("tab")
+
 
 def pedidos():
     ni.gerar_n(36400)
 
+
 if __name__ == "__main__":
     print(ni.gerar_n(37000))
 
-##ainda trabalhando em um relatório para o comercial, preciso gerar números e linkar as informações com o banco de dados --- preciso de acesso ao banco de dados para isso, e também preciso de um modelo do relatório para saber quais informações precisam ser linkadas.
-
+# ainda trabalhando em um relatório para o comercial, preciso gerar números e linkar as informações com o banco de dados --- preciso de acesso ao banco de dados para isso, e também preciso de um modelo do relatório para saber quais informações precisam ser linkadas.

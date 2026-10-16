@@ -1,5 +1,3 @@
-import os
-import sys
 import time
 import keyboard as kb
 import pyautogui as pg
@@ -13,7 +11,9 @@ from shared.logging.logs import log
 pg.PAUSE = 1
 pg.FAILSAFE = True
 
-# ------------------------------------------------------------------------- Functions 
+# ------------------------------------------------------------------------- Functions
+
+
 def take_receivers():
     """Capture emails from a file in VSCode"""
     try:
@@ -21,8 +21,7 @@ def take_receivers():
         time.sleep(1.2)
         pg.click(cfg.center_x, cfg.center_y)
         pg.hotkey('ctrl', 'o')
-        pg.write('archives\\data\\emails_alterado.csv')
-        pg.press('down')
+        pg.write('storage\\data\\emails_alterado.csv')
         pg.press('enter')
         time.sleep(0.5)
         pg.click(cfg.center_x, cfg.center_y)
@@ -30,7 +29,7 @@ def take_receivers():
         pg.hotkey('ctrl', 'c')
         time.sleep(0.5)
         pg.hotkey('ctrl', 'f4')
-        
+
         log("All_in_one", "SUCESSO", "Emails copiados")
         log("gmail", "SUCESSO", "Emails copiados")
 
@@ -38,6 +37,7 @@ def take_receivers():
         erro_msg = f"Falha ao pegar emails: {str(e)}"
         log("All_in_one", "ERRO", erro_msg)
         log("gmail", "ERRO", erro_msg)
+
 
 def shortcut_send_emails():
     """Atalho para abrir campo de envio no Gmail"""
@@ -47,14 +47,15 @@ def shortcut_send_emails():
     pg.hotkey('ctrl', 'shift', 'b')
     time.sleep(0.5)
 
+
 def send_emails_to_readers(edicao):
     """Simula envio de emails com conteúdo da edição"""
-    try:    
+    try:
         shortcut_send_emails()
         pg.hotkey('ctrl', 'v')
-        time.sleep(0.9)  
+        time.sleep(0.9)
         pg.press('tab')
-        time.sleep(0.3)  
+        time.sleep(0.3)
         kb.write(f"Segue edição {edicao} do jornal O Hoje")
         pg.press('esc')
         time.sleep(1)
@@ -67,13 +68,15 @@ def send_emails_to_readers(edicao):
         log("All_in_one", "ERRO", erro_msg)
         log("gmail", "ERRO", erro_msg)
 
+
 def sendto(nome):
     kb.write(nome)
     pg.press('enter')
 
+
 def send_for_graphic(edicao, parte):
     """Simula envio para gráfica com parte específica da edição"""
-    try: 
+    try:
         shortcut_send_emails()
         sendto('carlossandre1269@gm')
         sendto('contasapagar@ohoje.com.br')
@@ -94,36 +97,37 @@ def send_for_graphic(edicao, parte):
         log("All_in_one", "ERRO", erro_msg)
         log("gmail", "ERRO", erro_msg)
 
+
 def auto_drafts(ed=None, qnt=None):
     take_receivers()
-    # ut.open_software(cfg.opera)
+    ut.open_software(cfg.opera)
 
-    # if ed is None or qnt is None:
-    #     for info in desync.gerar_edicoes_formatadas():
-    #         ed = info.edicao_formatada
-    #         weekday = info.dia_semana_padrão 
-    #         if weekday == 1:
-    #             send_for_graphic(ed, "completo")
-    #             send_emails_to_readers(ed)
-    #             time.sleep(1)
-    #         else:
-    #             send_for_graphic(ed, "básico")
-    #             send_for_graphic(ed, "resto")
-    #             send_emails_to_readers(ed)
-    #             time.sleep(1)
-    #         print(weekday)
+    if ed is None or qnt is None:
+        for info in desync.gerar_edicoes_formatadas():
+            ed = info.edicao_formatada
+            weekday = info.dia_semana_padrão
+            if weekday == 1:
+                send_for_graphic(ed, "completo")
+                send_emails_to_readers(ed)
+                time.sleep(1)
+            else:
+                send_for_graphic(ed, "básico")
+                send_for_graphic(ed, "resto")
+                send_emails_to_readers(ed)
+                time.sleep(1)
+            print(weekday)
 
-    # else:
-    #     for info in desync.gerar_edicoes_formatadas(ed, qnt):
+    else:
+        for info in desync.gerar_edicoes_formatadas(ed, qnt):
 
-    #         ed = info.edicao_formatada
-    #         weekday = info.dia_semana_padrão
-    #         if weekday == 5:
-    #             send_for_graphic(ed, "completo")
-    #             send_emails_to_readers(ed)
-    #             time.sleep(1)
-    #         else:
-    #             send_for_graphic(ed, "básico")
-    #             send_for_graphic(ed, "resto")
-    #             send_emails_to_readers(ed)
-    #             time.sleep(1)
+            ed = info.edicao_formatada
+            weekday = info.dia_semana_padrão
+            if weekday == 5:
+                send_for_graphic(ed, "completo")
+                send_emails_to_readers(ed)
+                time.sleep(1)
+            else:
+                send_for_graphic(ed, "básico")
+                send_for_graphic(ed, "resto")
+                send_emails_to_readers(ed)
+                time.sleep(1)

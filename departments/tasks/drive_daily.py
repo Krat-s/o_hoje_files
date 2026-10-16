@@ -1,5 +1,3 @@
-import os
-import sys
 import time
 from datetime import datetime, timedelta
 from selenium import webdriver
@@ -21,6 +19,7 @@ pg.FAILSAFE = True
 
 URL_DRIVE = 'https://drive.google.com/drive/home?hl=pt-br'
 ontem = datetime.now() - timedelta(days=1)
+
 
 def auto_drive():
 
@@ -47,16 +46,18 @@ def auto_drive():
         "useAutomationExtension",
         False
     )
-  
+
     driver = webdriver.Chrome(options=chrome_options)
-  
+
     time.sleep(5)
 
     driver.get(URL_DRIVE)
 
+
 def process_daily():
     pg.click(cfg.center_x, cfg.center_y)
     print('tt')
+
 
 def att_model(editoria):
     pg.press('/')
@@ -65,6 +66,7 @@ def att_model(editoria):
     time.sleep(1)
     kb.write(f'{fd.formatar_data(ontem, tipo="dia_semana")}')
     process_daily()
+
 
 def open_drive():
     utl.open_software(cfg.opera)
@@ -78,7 +80,7 @@ def open_drive():
     kb.write('Redação')
     pg.press('enter')
     pg.click(cfg.center_x, cfg.center_y)
-    
+
 
 def main_drive_bot():
     open_drive()
@@ -87,6 +89,7 @@ def main_drive_bot():
     att_model(str('4 - Negócios e Concursos'))
     att_model(str('2 - Política'))
     att_model(str('1 - Cidades - Economia'))
+
 
 if __name__ == "__main__":
     # open_drive()

@@ -1,10 +1,8 @@
-import os
-import sys
 import locale
 import pyautogui as pg
 
 from shared import gen_randon_numbers as rn
-import shared.data_sync.data_edition_sync as sy_de
+import shared.data_sync.data_edition_sync as desync
 
 # ------------------------------------------------------------------------- Caminhos de rede
 CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
@@ -112,4 +110,4 @@ ad_alt_gif = None
 ad_alt_insta = ''
 
 if __name__ == "__main__":
-    print(sy_de.EDD)
+    print(desync.EDD)
