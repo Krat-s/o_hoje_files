@@ -51,7 +51,7 @@ o_hoje_files/
 ├── README.md # Documentation
 └── .gitignore # Files ignored by Git
 
-Note: leave respectively available in the quark taskbar, browser, vs code, explorer
+Note: leave respectively available in the taskbar; quark, browser, vs code, explorer
 
 👨‍💻 Author
 Kratos Messi

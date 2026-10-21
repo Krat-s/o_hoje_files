@@ -14,7 +14,7 @@ from watchdog.events import FileSystemEventHandler
 
 # ==================== CONFIGURAÇÃO ====================
 # Pasta onde os arquivos chegam (os originais FICAM aqui, intocados)
-PASTA_PARA_MONITORAR = r"C:\Users\terravista.JORNALOHOJE\Downloads\converter_word"
+PASTA_PARA_MONITORAR = r"C:\Users\terravista.JORNALOHOJE\Downloads\word_para_converter"
 
 # Pasta onde os convertidos (M1 - ..., M2 - ...) são gravados.
 # Precisa ser DIFERENTE da pasta monitorada.
@@ -47,7 +47,7 @@ FORMATO = "doc97"
 # True  = se o arquivo já chegar como .doc, só copia (com o prefixo M) sem
 #         reconverter. Só vale quando FORMATO = "doc97".
 # False = converte tudo, inclusive .doc.
-REPASSAR_DOC_SEM_CONVERTER = True
+REPASSAR_DOC_SEM_CONVERTER = False
 # ======================================================
 
 FORMATOS_LIBREOFFICE = {
@@ -137,10 +137,10 @@ def aguardar_arquivo_estavel(caminho, tentativas=60):
 
 
 def proximo_numero():
-    """Próximo número M disponível, lendo a pasta de SAÍDA."""
+    """Próximo número F disponível, lendo a pasta de SAÍDA."""
     maior = 0
     for nome in os.listdir(PASTA_SAIDA):
-        m = re.match(r"^M(\d+) - ", nome)
+        m = re.match(r"^F(\d+) - ", nome)
         if m:
             maior = max(maior, int(m.group(1)))
     return maior + 1
@@ -223,7 +223,7 @@ def processar(caminho_origem):
             fonte = converter_com_libreoffice(caminho_origem, tmp)
 
         numero = proximo_numero()
-        nome_final = f"M{numero} - {nome_base}.{EXT_SAIDA}"
+        nome_final = f"F{numero} - {nome_base}.{EXT_SAIDA}"
         destino_final = os.path.join(PASTA_SAIDA, nome_final)
         destino_parcial = destino_final + ".part"
 
