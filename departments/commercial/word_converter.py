@@ -23,7 +23,7 @@ PASTA_SAIDA = r"C:\Users\terravista.JORNALOHOJE\Downloads\word_convertidos"
 # Motor de conversão:
 #   "libreoffice" -> usa o LibreOffice (não precisa de Word)
 #   "word"        -> usa o Microsoft Word instalado (precisa: pip install pywin32)
-MOTOR = "libreoffice"
+MOTOR = "word"
 
 CAMINHO_LIBREOFFICE = r"C:\Program Files\LibreOffice\program\soffice.exe"
 
