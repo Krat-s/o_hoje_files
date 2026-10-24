@@ -110,7 +110,7 @@ def auto_marriage():
 
     janela = tk.Tk()
     janela.title("Casamento")
-    janela.geometry("600x450")
+    janela.geometry("600x700")
     janela.configure(bg="#4B2A6A")
     janela.iconbitmap(r'storage\\img\\favicon.ico')
 

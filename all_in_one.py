@@ -1,11 +1,12 @@
 import pyautogui as pg
 import time
 
+from settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 from departments.editorial import wedding as cm
 from departments.editorial.billhead_editions import auto_billhead_editions
 from departments.mail.gmail import auto_drafts
+# from departments.commercial.word_converter import _watch_folder_converter
 from departments.commercial.print_ad import auto_prints_all_ads
-from settings.settings_edition_request import quantidade_repeticoes, edicao_inicial
 # from Backup.shutdawns import sleep_computer
 
 import tkinter as tk
@@ -44,6 +45,14 @@ def auto_print_by_link_():
         print(f'Error printing ads by link: {e}')
 
 
+# 📌 ------------------------------------------ converter word
+# def auto_watch_folder():
+#     try:
+#         _watch_folder_converter()
+#     except Exception as e:
+#         print(f'Error watching folder: {e}')
+
+
 # from config.core import schedule_manager as sm
 # # 📌 ------------------------------------------ Sredule
 # def scredule_function_():
@@ -80,15 +89,16 @@ def all_in_one_():
             auto_drafts_(ed_ini, int(semanal))
             auto_billhead_editions_(ed_ini, int(semanal))
             time.sleep(1)
-        elif option == "Desligar":
+        elif option == "monitorar_conversao":
             janela.destroy()
+            # auto_watch_folder()
             # sleep_computer()
         else:
             messagebox.showerror("Erro", "Opção inválida.")
 
     janela = tk.Tk()
     janela.title("Kratos Api")
-    janela.geometry("400x350")
+    janela.geometry("600x700")
     janela.configure(bg="#32395F")
     janela.iconbitmap(r'storage\\img\\favicon.ico')
 
@@ -115,8 +125,8 @@ def all_in_one_():
                        command=lambda: choise("week_duty"), **style_button)
     btn_z3.pack(pady=5)
 
-    btn_z4 = tk.Button(janela, text="Desligar tudo",
-                       command=lambda: choise("Desligar"), **style_button)
+    btn_z4 = tk.Button(janela, text="Monitorar pasta de conversão",
+                       command=lambda: choise("monitorar_conversao"), **style_button)
     btn_z4.pack(pady=5)
 
     janela.mainloop()

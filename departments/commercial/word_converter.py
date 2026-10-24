@@ -140,7 +140,7 @@ def proximo_numero():
     """Próximo número F disponível, lendo a pasta de SAÍDA."""
     maior = 0
     for nome in os.listdir(PASTA_SAIDA):
-        m = re.match(r"^F(\d+) - ", nome)
+        m = re.match(r"^M(\d+) - ", nome)
         if m:
             maior = max(maior, int(m.group(1)))
     return maior + 1
@@ -223,7 +223,7 @@ def processar(caminho_origem):
             fonte = converter_com_libreoffice(caminho_origem, tmp)
 
         numero = proximo_numero()
-        nome_final = f"F{numero} - {nome_base}.{EXT_SAIDA}"
+        nome_final = f"M{numero} - {nome_base}.{EXT_SAIDA}"
         destino_final = os.path.join(PASTA_SAIDA, nome_final)
         destino_parcial = destino_final + ".part"
 
@@ -288,41 +288,45 @@ class Handler(FileSystemEventHandler):
             self._enfileirar(event.dest_path)
 
 
+def _whatc_folder_converter():
+        pasta_in = os.path.normcase(os.path.abspath(PASTA_PARA_MONITORAR))
+        pasta_out = os.path.normcase(os.path.abspath(PASTA_SAIDA))
+        if pasta_in == pasta_out:
+            raise SystemExit(
+                "ERRO: PASTA_SAIDA não pode ser igual a PASTA_PARA_MONITORAR "
+                "(isso causaria um loop infinito)."
+            )
+
+        os.makedirs(PASTA_PARA_MONITORAR, exist_ok=True)
+        os.makedirs(PASTA_SAIDA, exist_ok=True)
+
+        if MOTOR == "libreoffice" and not os.path.exists(CAMINHO_LIBREOFFICE):
+            print(f"⚠️ LibreOffice não encontrado em '{CAMINHO_LIBREOFFICE}'.")
+
+        threading.Thread(target=worker, daemon=True).start()
+
+        # Arquivos que já estavam na pasta ao iniciar (os já processados são pulados)
+        for nome in os.listdir(PASTA_PARA_MONITORAR):
+            Handler()._enfileirar(os.path.join(PASTA_PARA_MONITORAR, nome))
+
+        observer = Observer()
+        observer.schedule(Handler(), path=PASTA_PARA_MONITORAR, recursive=False)
+        observer.start()
+
+        print(f"🚀 Monitorando: {PASTA_PARA_MONITORAR}")
+        print(f"📂 Saída:       {PASTA_SAIDA}")
+        print(f"Motor: {MOTOR} | Formato de saída: {FORMATO} (.{EXT_SAIDA})")
+        print(f"Entradas aceitas: {', '.join(sorted(EXTENSOES_ENTRADA))}")
+        print("Pressione Ctrl+C para encerrar.")
+
+        try:
+            while True:
+                time.sleep(1)
+        except KeyboardInterrupt:
+            observer.stop()
+            print("\n🛑 Monitoramento encerrado.")
+        observer.join()
+
+
 if __name__ == "__main__":
-    pasta_in = os.path.normcase(os.path.abspath(PASTA_PARA_MONITORAR))
-    pasta_out = os.path.normcase(os.path.abspath(PASTA_SAIDA))
-    if pasta_in == pasta_out:
-        raise SystemExit(
-            "ERRO: PASTA_SAIDA não pode ser igual a PASTA_PARA_MONITORAR "
-            "(isso causaria um loop infinito)."
-        )
-
-    os.makedirs(PASTA_PARA_MONITORAR, exist_ok=True)
-    os.makedirs(PASTA_SAIDA, exist_ok=True)
-
-    if MOTOR == "libreoffice" and not os.path.exists(CAMINHO_LIBREOFFICE):
-        print(f"⚠️ LibreOffice não encontrado em '{CAMINHO_LIBREOFFICE}'.")
-
-    threading.Thread(target=worker, daemon=True).start()
-
-    # Arquivos que já estavam na pasta ao iniciar (os já processados são pulados)
-    for nome in os.listdir(PASTA_PARA_MONITORAR):
-        Handler()._enfileirar(os.path.join(PASTA_PARA_MONITORAR, nome))
-
-    observer = Observer()
-    observer.schedule(Handler(), path=PASTA_PARA_MONITORAR, recursive=False)
-    observer.start()
-
-    print(f"🚀 Monitorando: {PASTA_PARA_MONITORAR}")
-    print(f"📂 Saída:       {PASTA_SAIDA}")
-    print(f"Motor: {MOTOR} | Formato de saída: {FORMATO} (.{EXT_SAIDA})")
-    print(f"Entradas aceitas: {', '.join(sorted(EXTENSOES_ENTRADA))}")
-    print("Pressione Ctrl+C para encerrar.")
-
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        observer.stop()
-        print("\n🛑 Monitoramento encerrado.")
-    observer.join()
+    _whatc_folder_converter()
