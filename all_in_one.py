@@ -5,7 +5,7 @@ from settings.settings_edition_request import quantidade_repeticoes, edicao_inic
 from departments.editorial import wedding as cm
 from departments.editorial.billhead_editions import auto_billhead_editions
 from departments.mail.gmail import auto_drafts
-# from departments.commercial.word_converter import _watch_folder_converter
+from departments.commercial.word_converter import _watch_folder_converter
 from departments.commercial.print_ad import auto_prints_all_ads
 # from Backup.shutdawns import sleep_computer
 
@@ -46,16 +46,16 @@ def auto_print_by_link_():
 
 
 # 📌 ------------------------------------------ converter word
-# def auto_watch_folder():
-#     try:
-#         _watch_folder_converter()
-#     except Exception as e:
-#         print(f'Error watching folder: {e}')
+def auto_watch_folder():
+    try:
+        _watch_folder_converter()
+    except Exception as e:
+        print(f'Error watching folder: {e}')
 
 
-# from config.core import schedule_manager as sm
 # # 📌 ------------------------------------------ Sredule
 # def scredule_function_():
+# from config.core import schedule_manager as sm
 #     try:
 #        sm.schedule_function(auto_prints_all_ads())
 #     except Exception as e:
@@ -91,7 +91,7 @@ def all_in_one_():
             time.sleep(1)
         elif option == "monitorar_conversao":
             janela.destroy()
-            # auto_watch_folder()
+            auto_watch_folder()
             # sleep_computer()
         else:
             messagebox.showerror("Erro", "Opção inválida.")

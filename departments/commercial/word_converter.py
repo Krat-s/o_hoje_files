@@ -14,11 +14,11 @@ from watchdog.events import FileSystemEventHandler
 
 # ==================== CONFIGURAÇÃO ====================
 # Pasta onde os arquivos chegam (os originais FICAM aqui, intocados)
-PASTA_PARA_MONITORAR = r"C:\Users\terravista.JORNALOHOJE\Downloads\word_para_converter"
+PASTA_PARA_MONITORAR = r"C:\Users\terravista.JORNALOHOJE\Downloads\0 - word_para_converter"
 
 # Pasta onde os convertidos (M1 - ..., M2 - ...) são gravados.
 # Precisa ser DIFERENTE da pasta monitorada.
-PASTA_SAIDA = r"C:\Users\terravista.JORNALOHOJE\Downloads\word_convertidos"
+PASTA_SAIDA = r"C:\Users\terravista.JORNALOHOJE\Downloads"
 
 # Motor de conversão:
 #   "libreoffice" -> usa o LibreOffice (não precisa de Word)
@@ -287,8 +287,11 @@ class Handler(FileSystemEventHandler):
         if not event.is_directory:
             self._enfileirar(event.dest_path)
 
+def testar_monitoramento():
+    print("🚀 Testando monitoramento da pasta de conversão de Word...")
 
-def _whatc_folder_converter():
+def _watch_folder_converter():
+        print("🚀 Iniciando monitoramento da pasta de conversão de Word...")
         pasta_in = os.path.normcase(os.path.abspath(PASTA_PARA_MONITORAR))
         pasta_out = os.path.normcase(os.path.abspath(PASTA_SAIDA))
         if pasta_in == pasta_out:
@@ -329,4 +332,4 @@ def _whatc_folder_converter():
 
 
 if __name__ == "__main__":
-    _whatc_folder_converter()
+    _watch_folder_converter()
