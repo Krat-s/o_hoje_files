@@ -1857,3 +1857,29 @@ Stacktrace:
 2026-09-11,16:50:53,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-09-11,16:52:23,ERRO,print_ad.py,print_task,Falha ao salvar imagem: [Errno 2] No such file or directory: '\\\\192.168.1.249\\comercial\\COMERCIAL\\PRINTS\\00 - Auto-prints\\99999 - Principal - \\2026 - 09 - 11.png'
 2026-09-11,16:52:25,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-10-29,18:39:04,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-10-29,21:21:06,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff6b25abe65]
+	(No symbol) [0x7ff6b24b35f0]
+	(No symbol) [0x7ff6b23226d3]
+	(No symbol) [0x7ff6b2b2d8e1]
+	(No symbol) [0x7ff6b2b2db3c]
+	(No symbol) [0x7ff6b2b5bbb7]
+	(No symbol) [0x7ff6b2356661]
+	(No symbol) [0x7ff6b233b969]
+	(No symbol) [0x7ff6b233cca3]
+	(No symbol) [0x7ff6b2a25af1]
+	(No symbol) [0x7ff6b2a467f7]
+	(No symbol) [0x7ff6b2a3ce20]
+	(No symbol) [0x7ff6b26cff8e]
+	(No symbol) [0x7ff6b24c2865]
+	(No symbol) [0x7ff6b24bd1d4]
+	(No symbol) [0x7ff6b24bd364]
+	(No symbol) [0x7ff6b24a644c]
+	(No symbol) [0x7ffcef4adda7]
+	(No symbol) [0x7ffcf031ee4c]
+"
+2026-10-29,21:21:08,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-10-30,16:48:24,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa

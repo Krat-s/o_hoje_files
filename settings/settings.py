@@ -65,7 +65,7 @@ botão_3 = "placement_1026570_0_i"  # banner rodapé
 
 # ------------------------------------------------------------------------- Prints settings
 # addon banner principal
-ad_1_pi = 99999
+ad_1_pi = None
 ad_1_client = ""
 ad_1_folder = f'{ad_1_pi} - Principal - {ad_1_client}'
 ad_1 = "section.block-ads:nth-child(2) img[alt='Publicidade']"
@@ -83,11 +83,12 @@ ad_2_gif = None
 ad_2_insta = ''
 
 # addon Halfpage (03 a 30)
-ad_3_pi = None
-ad_3_client = ''
+ad_3_pi = 99999
+ad_3_client = "GDF"
 ad_3_folder = f'{ad_3_pi} - Halfpage - {ad_3_client}'
 ad_3 = "div:nth-child(2) img[alt='Publicidade']"
-ad_3_link = "iframe[src*='']"
+# ad_3_link = "iframe[src*='']"
+ad_3_link = 'a[href*="https://amamentabrasilia.saude.df.gov.br/"]' 
 ad_3_gif = None
 ad_3_insta = ''
 
