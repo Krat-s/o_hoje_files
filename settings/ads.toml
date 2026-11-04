@@ -1,0 +1,52 @@
+# Campos PI são strings. Use "" quando não houver anúncio:
+# uma string vazia é avaliada como False no Python.
+
+[[ads]]
+id = "ad_1"
+pi = ""
+client = ""
+position = "Principal"
+selector = "section.block-ads:nth-child(2) img[alt='Publicidade']"
+link_selector = 'a[href*="https://ohoje.com/wp-content/uploads/2026/09/Documento-A4-Placa-Aviso-Area-interditada-1-768x543.webp"]'
+gif = ""
+instagram = ""
+
+[[ads]]
+id = "ad_2"
+pi = "144847"
+client = "GDF"
+position = "Width"
+selector = "section.block-ads:nth-child(5) img[alt='Publicidade']"
+link_selector = 'a[href*="https://amamentabrasilia.saude.df.gov.br/"]'
+gif = ""
+instagram = ""
+
+[[ads]]
+id = "ad_3"
+pi = ""
+client = ""
+position = "Halfpage"
+selector = "div:nth-child(2) img[alt='Publicidade']"
+link_selector = "iframe[src*='']"
+gif = ""
+instagram = ""
+
+[[ads]]
+id = "ad_4"
+pi = ""
+client = ""
+position = "MIDDLE RECTANGLE"
+selector = "section.block-ads:nth-child(3) img[alt='Publicidade']"
+link_selector = 'a[href*=""]'
+gif = ""
+instagram = ""
+
+[[ads]]
+id = "ad_alt"
+pi = ""
+client = ""
+position = "Halfpage"
+selector = "div:nth-child(2) img[alt='Publicidade']"
+link_selector = ""
+gif = ""
+instagram = ""

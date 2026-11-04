@@ -115,19 +115,19 @@ def run_print_ad(ad=None, folder=None):
 # ------------------manual trigger 
 def auto_prints_all_ads(gif=None):
     '''verifica quais anúncios estão configurados e executa a função de print para cada um deles'''
-    if cfg.ad_1_pi != None:
+    if cfg.ad_1_pi:
         print_task_phone(cfg.ad_1_link, cfg.ad_1_folder, gif)
 
-    if cfg.ad_2_pi != None:
+    if cfg.ad_2_pi:
         print_task_phone(cfg.ad_2_link, cfg.ad_2_folder, gif)
 
-    if cfg.ad_3_pi != None:
+    if cfg.ad_3_pi:
         print_task_phone(cfg.ad_3_link, cfg.ad_3_folder, gif)
 
-    if cfg.ad_4_pi != None:
+    if cfg.ad_4_pi:
         print_task_phone(cfg.ad_4_link, cfg.ad_4_folder, gif)
 
-    if cfg.ad_alt_pi != None:
+    if cfg.ad_alt_pi:
         print('Printando anúncio alternativo...')
         time.sleep(60* 6)
         print_task_phone(cfg.ad_alt_link, cfg.ad_alt_folder, gif)

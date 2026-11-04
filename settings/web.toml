@@ -1,0 +1,15 @@
+[site]
+target_url = "https://ohoje.com"
+instagram_url = "https://www.instagram.com/g.ohoje/"
+
+[selectors]
+button_1 = "ads-728 mx-auto"
+button_2 = "p-3 pb-0"
+button_3 = "placement_1026570_0_i"
+
+[access_counts]
+b1_min = 0
+b1_max = 3
+h1 = 1
+h2 = 2
+h3 = 1

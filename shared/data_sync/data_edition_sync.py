@@ -162,13 +162,10 @@ EDITION_ZERO = day_zero_info()
 
 
 if __name__ == "__main__":
+    # print(f'EDICAO_BASE: {EDITION_ZERO}') 
+    print(EDICAO_INI)
     # teste1 = datetime.now() + timedelta(days=1)
-    # # teste2 = 8091
+    # teste2 = 8085
     # print(obter_edicao_por_data(teste1))
-    # # print(formatar_data(obter_data_por_edicao(teste2)))
-    # print('...')
-
-    # # print(years_old3)
+    # print(formatar_data(obter_data_por_edicao(teste2)))
     # print(f'enterprise_age: {enterprise_age}')
-
-    print(f'EDICAO_BASE: {EDITION_ZERO}')
