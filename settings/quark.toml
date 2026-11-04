@@ -1,0 +1,17 @@
+[ocr_regions]
+already_open = [489, 280, 98, 103]
+already_open_full = [489, 281, 389, 156]
+quark_icon = [499, 309, 79, 101]
+quark_loading = [493, 304, 123, 111]
+file_not_found = [465, 232, 477, 210]
+file_not_found_close = [500, 260, 363, 142]
+
+[click_positions]
+button_cancel = [829, 419]
+button_ok = [829, 385]
+data_x = 850
+data_y = 259
+edition_17_x = 1631
+edition_17_y = 260
+edition_cover_x = 346
+edition_cover_y = 448

@@ -1,11 +1,21 @@
-CAMINHO_FOTOS = r'\\192.168.1.249\fotos'
-CAMINHO_WEB = r'\\192.168.1.249\redacao\web'
-CAMINHO_MODELO_WEB = r'\\192.168.1.249\redacao\web\00 - Modelo'
-CAMINHO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip'
-CAMINHO_MODELO_PAGFLIP = r'\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
-CAMINHO_EDD = r'\\192.168.1.249\redacao\diagramacao\edicao'
-CAMINHO_MODELO_EDD = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
-CAMINHO_MODELO_EDD_0 = r'\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
-CAMINHO_PRINTS = r'\\192.168.1.249\comercial\PRINTS\00 - Auto-prints'
+[network]
+photos = '\\192.168.1.249\fotos'
+web = '\\192.168.1.249\redacao\web'
+pagflip = '\\192.168.1.249\redacao\arte\00 Pagflip'
+edd = '\\192.168.1.249\redacao\diagramacao\edicao'
 
-WAYPOINT_EMAILS = r'\\192.168.1.249\comercial\PRINTS\00 - Auto-prints'
+[templates]
+web = '\\192.168.1.249\redacao\web\00 - Modelo'
+pagflip = '\\192.168.1.249\redacao\arte\00 Pagflip\00 - Modelo'
+edd = '\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições\00 - modelo'
+edd_base = '\\192.168.1.249\redacao\arte\01 Projeto\4 Adianto de novas edições'
+
+[prints]
+output = '\\192.168.1.249\comercial\COMERCIAL\PRINTS\00 - Auto-prints'
+
+# Configurações compartilhadas de identificação da barra de tarefas.
+[taskbar]
+quark = 1
+opera = 2
+vscode = 3
+explorer = 4
