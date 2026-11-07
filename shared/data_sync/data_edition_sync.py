@@ -162,8 +162,7 @@ EDITION_ZERO = day_zero_info()
 
 
 if __name__ == "__main__":
-    # print(f'EDICAO_BASE: {EDITION_ZERO}') 
-    print(EDICAO_INI)
+    print(f'EDICAO_BASE: {EDITION_ZERO}')
     # teste1 = datetime.now() + timedelta(days=1)
     # teste2 = 8085
     # print(obter_edicao_por_data(teste1))

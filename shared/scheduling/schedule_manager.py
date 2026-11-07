@@ -9,7 +9,7 @@ from shared.logging.logs import log
 
 
 def wait_Idle_session_timeout():
-    # Define os horários de início e fim do bloqueio
+    # Espera até que o horário atual esteja fora do intervalo de bloqueio (23:57 - 00:03). Para evitar que o script seja executado durante o reset do servidor.
     inicio_bloqueio = time(23, 57)  # 23:57
     fim_bloqueio = time(0, 3)       # 00:03
 
@@ -21,7 +21,7 @@ def wait_Idle_session_timeout():
         if agora >= inicio_bloqueio or agora <= fim_bloqueio:
             print(
                 f"[{datetime.now().strftime('%H:%M:%S')}] Dentro do horário de pausa. Aguardando...")
-            tm.sleep(30)  # Verifica novamente a cada 30 segundos
+            tm.sleep(10) 
         else:
             print("Fora do horário de pausa. Continuando a execução do script...")
             break

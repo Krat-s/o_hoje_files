@@ -4,6 +4,7 @@ import keyboard as kb
 import tkinter as tk
 from tkinter import messagebox
 
+from shared.scheduling.schedule_manager import wait_Idle_session_timeout
 import shared.utils as utl
 import shared.data_sync.data_edition_sync as sy_de
 import departments.editorial.modulos_quark.utils_quark as utlq
@@ -16,6 +17,8 @@ pg.FAILSAFE = True
 
 def wedding(nome_arquivo, paginas):
     try:
+        print(f"Casando as páginas {nome_arquivo}...")
+        wait_Idle_session_timeout()
         utl.open_software(1)
         utl.open_web_day_0()
         take_file(nome_arquivo)
