@@ -3,11 +3,11 @@
 
 [[ads]]
 id = "ad_1"
-pi = ""
-client = ""
+pi = "42392"
+client = "FMMDE (MAIS MOTIVOS)"
 position = "Principal"
 selector = "section.block-ads:nth-child(2) img[alt='Publicidade']"
-link_selector = 'a[href*="https://ohoje.com/wp-content/uploads/2026/09/Documento-A4-Placa-Aviso-Area-interditada-1-768x543.webp"]'
+link_selector = 'a[href*="https://www.goiania.go.gov.br/agora/goiania-e-numero-1-do-brasil-em-qualidade-da-educacao"]'
 gif = ""
 instagram = ""
 
