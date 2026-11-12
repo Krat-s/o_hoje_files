@@ -133,7 +133,7 @@ def all_in_one_():
     janela.mainloop()
 
 
-ed_ini = 7280
+ed_ini = 7308
 qtd = 4
 
 if __name__ == "__main__":

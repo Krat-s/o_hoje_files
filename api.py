@@ -9,4 +9,3 @@ def print_ad():
     run_print_ad(cfg.ad_2, cfg.ad_2_folder)
     print('Ad printed susssccessfully')
     return {"message": "Ad printed successfully"}
-    
