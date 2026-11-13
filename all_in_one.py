@@ -85,10 +85,10 @@ def all_in_one_():
             auto_print_by_link_()
         elif option == "week_duty":
             janela.destroy()
-            sem = pg.prompt("Quantas edições deseja adiantar?")
-            semanal = int(sem) * 7
-            auto_drafts_(ed_ini, int(semanal))
-            auto_billhead_editions_(ed_ini, int(semanal))
+            # sem = pg.prompt("Quantas edições deseja adiantar?")
+            # semanal = int(sem) * 7
+            # auto_drafts_(ed_ini, int(semanal))
+            # auto_billhead_editions_(ed_ini, int(semanal))
             time.sleep(1)
         elif option == "monitorar_conversao":
             janela.destroy()
@@ -138,6 +138,5 @@ qtd = 4
 
 if __name__ == "__main__":
     print('All in one executando...')
-
-    all_in_one_()
     
+    all_in_one_()
