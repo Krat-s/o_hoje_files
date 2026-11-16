@@ -1404,3 +1404,7 @@ data,hora,status,origem,função,message
 2026-11-13,00:22:11,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
 2026-11-13,00:22:26,SUCESSO,gmail.py,send_for_graphic,Rascunhos para gráfica criados
 2026-11-13,00:22:36,SUCESSO,gmail.py,send_emails_to_readers,Rascunhos para leitores criados
+2026-11-15,22:35:14,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-11-15,22:36:18,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-11-15,22:36:40,SUCESSO,gmail.py,take_receivers,Emails copiados
+2026-11-15,22:37:01,SUCESSO,gmail.py,take_receivers,Emails copiados

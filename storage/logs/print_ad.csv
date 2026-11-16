@@ -1904,3 +1904,53 @@ Symbols not available. Dumping unresolved backtrace:
 2026-11-12,15:38:42,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-11-13,00:27:12,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
 2026-11-13,00:27:35,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-11-13,18:47:17,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff75e5fd655]
+	(No symbol) [0x7ff75e4f4790]
+	(No symbol) [0x7ff75e362fb3]
+	(No symbol) [0x7ff75eba61e1]
+	(No symbol) [0x7ff75eba643c]
+	(No symbol) [0x7ff75ebd4337]
+	(No symbol) [0x7ff75e396bf1]
+	(No symbol) [0x7ff75e37c109]
+	(No symbol) [0x7ff75e37d433]
+	(No symbol) [0x7ff75ea97041]
+	(No symbol) [0x7ff75eab5c76]
+	(No symbol) [0x7ff75eaac340]
+	(No symbol) [0x7ff75e72c9be]
+	(No symbol) [0x7ff75e502fa5]
+	(No symbol) [0x7ff75e4fe2d4]
+	(No symbol) [0x7ff75e4fe464]
+	(No symbol) [0x7ff75e4e731c]
+	(No symbol) [0x7ff94500dda7]
+	(No symbol) [0x7ff945ab9c5c]
+"
+2026-11-13,18:47:19,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-11-13,18:47:42,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-11-15,19:28:42,ERRO,print_ad.py,print_task,"Falha ao salvar imagem: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	(No symbol) [0x7ff6e8ced655]
+	(No symbol) [0x7ff6e8be4790]
+	(No symbol) [0x7ff6e8a52fb3]
+	(No symbol) [0x7ff6e92961e1]
+	(No symbol) [0x7ff6e929643c]
+	(No symbol) [0x7ff6e92c4337]
+	(No symbol) [0x7ff6e8a86bf1]
+	(No symbol) [0x7ff6e8a6c109]
+	(No symbol) [0x7ff6e8a6d433]
+	(No symbol) [0x7ff6e9187041]
+	(No symbol) [0x7ff6e91a5c76]
+	(No symbol) [0x7ff6e919c340]
+	(No symbol) [0x7ff6e8e1c9be]
+	(No symbol) [0x7ff6e8bf2fa5]
+	(No symbol) [0x7ff6e8bee2d4]
+	(No symbol) [0x7ff6e8bee464]
+	(No symbol) [0x7ff6e8bd731c]
+	(No symbol) [0x7ff94500dda7]
+	(No symbol) [0x7ff945ab9c5c]
+"
+2026-11-15,19:28:44,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
+2026-11-15,19:29:09,RELATÓRIO,print_ad.py,print_task,Drive fechado após execução da tarefa
